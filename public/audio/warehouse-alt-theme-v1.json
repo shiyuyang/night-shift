@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "music_v1",
+  "prompt": "Instrumental restrained pixel survival horror game ambience for night patrol in an abandoned hospital. No vocals, speech, jump scare blasts, bright melody or trailer drums. Leave clear space for streamer speech and actual gameplay footsteps. Loopable sustained beginning and end, no outro. Locked pharmacy stores on a second patrol. Dry restrained plucked strings, tiny glass resonance and shelf-like wooden creaks used musically, uneven low bass swells and subtle tape warble. Dusty enclosed suspense, no literal footsteps or monster cries.",
+  "requested_duration": 48,
+  "file": "warehouse-alt-theme-v1.mp3"
+}

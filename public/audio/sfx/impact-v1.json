@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. One blunt physical hit against a clothed torso, low thud with cloth movement. Short restrained startled grunt, no words. Not a cinematic explosion.",
+  "requested_duration": 0.8,
+  "file": "impact-v1.mp3"
+}

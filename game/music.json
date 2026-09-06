@@ -1,0 +1,89 @@
+[
+  {
+    "id": "ward",
+    "file": "/audio/ward-exploration-v3.mp3",
+    "theme": 0,
+    "opusFile": "/audio/ward-exploration-v3.opus",
+    "mixGain": 0.4395,
+    "prompt": "Instrumental atmospheric survival horror game exploration score. Abandoned hospital at 2 AM. Slow dark ambient, uneasy sub bass drone, bowed metal harmonics, distant detuned upright piano single notes, airy tape hiss, fragile reverberant texture, cold sparse room tone, no vocals, no speech, no melody hook, no drums or beat drop. Ominous and restrained, space for streamer speech and game footsteps. Quiet consistent intensity, no loud stingers. Designed for repeated background playback with sustained beginning and end, not a song outro.",
+    "measuredLufs": -14.36
+  },
+  {
+    "id": "pursuit",
+    "file": "/audio/ward-pursuit-v3.mp3",
+    "theme": -1,
+    "opusFile": "/audio/ward-pursuit-v3.opus",
+    "measuredLufs": -17.14,
+    "mixGain": 0.6053
+  },
+  {
+    "id": "warehouse",
+    "file": "/audio/warehouse-theme-v1.mp3",
+    "theme": 1,
+    "duration": 40,
+    "prompt": "Instrumental understated survival horror game score. No vocals, speech, bright melody, EDM or cinematic trailer drums. Leave space for footsteps and streamer speech. Abandoned medicine warehouse. Dry wooden knocks, distant rattling shelves, sparse detuned plucked strings and dusty tape flutter over uneasy low drones. Hollow, cramped and unpredictable. No big stingers. Sustained loopable beginning and end, no song outro.",
+    "opusFile": "/audio/warehouse-theme-v1.opus",
+    "mixGain": 1.2546,
+    "measuredLufs": -23.47
+  },
+  {
+    "id": "plant",
+    "file": "/audio/plant-theme-v1.mp3",
+    "theme": 2,
+    "duration": 40,
+    "prompt": "Instrumental understated survival horror game score. No vocals, speech, bright melody, EDM or cinematic trailer drums. Leave space for footsteps and streamer speech. Underground power machinery room. Deep electrical hum, slow asymmetric mechanical pulses, bowed steel resonance, dissonant analog oscillators. Oppressive industrial dread, not action music. Sustained loopable beginning and end, no song outro.",
+    "opusFile": "/audio/plant-theme-v1.opus",
+    "mixGain": 1.2823,
+    "measuredLufs": -23.66
+  },
+  {
+    "id": "power",
+    "file": "/audio/power-theme-v1.mp3",
+    "theme": -1,
+    "duration": 8,
+    "prompt": "Instrumental understated survival horror game score. No vocals, speech, bright melody, EDM or cinematic trailer drums. Leave space for footsteps and streamer speech. Exactly eight seconds of emergency power startup tension. Begin with low throbbing electrical suspense. Gradually tighten dissonant strings and accelerating muted mechanical pulses. Final three seconds intensely claustrophobic rising pressure. Abrupt clean cutoff at eight seconds, no resolution or trailing outro. No huge volume jumps.",
+    "opusFile": "/audio/power-theme-v1.opus",
+    "measuredLufs": -21.85,
+    "mixGain": 1.0411
+  },
+  {
+    "id": "menu",
+    "theme": -2,
+    "file": "/audio/menu-theme-v1.mp3",
+    "duration": 48,
+    "prompt": "Instrumental restrained pixel survival horror game ambience for night patrol in an abandoned hospital. No vocals, speech, jump scare blasts, bright melody or trailer drums. Leave clear space for streamer speech and actual gameplay footsteps. Loopable sustained beginning and end, no outro. Night duty reception desk, empty corridors beyond. Sparse detuned piano with long hollow reverb, dusty tape room tone, low unease and a distant muted clock-like rhythm. Slow, intimate anticipation, no pursuit.",
+    "opusFile": "/audio/menu-theme-v1.opus",
+    "mixGain": 0.9716,
+    "measuredLufs": -21.25
+  },
+  {
+    "id": "ward-alt",
+    "theme": 0,
+    "file": "/audio/ward-alt-theme-v1.mp3",
+    "duration": 48,
+    "prompt": "Instrumental restrained pixel survival horror game ambience for night patrol in an abandoned hospital. No vocals, speech, jump scare blasts, bright melody or trailer drums. Leave clear space for streamer speech and actual gameplay footsteps. Loopable sustained beginning and end, no outro. Isolation ward after visiting hours. Fragile bowed glass harmonics, low breathing-like air ventilation without human voices, muffled detuned celesta intervals and long empty-room reverb. Cold fragile dread, very sparse pacing.",
+    "opusFile": "/audio/ward-alt-theme-v1.opus",
+    "mixGain": 1.1535,
+    "measuredLufs": -22.74
+  },
+  {
+    "id": "warehouse-alt",
+    "theme": 1,
+    "file": "/audio/warehouse-alt-theme-v1.mp3",
+    "duration": 48,
+    "prompt": "Instrumental restrained pixel survival horror game ambience for night patrol in an abandoned hospital. No vocals, speech, jump scare blasts, bright melody or trailer drums. Leave clear space for streamer speech and actual gameplay footsteps. Loopable sustained beginning and end, no outro. Locked pharmacy stores on a second patrol. Dry restrained plucked strings, tiny glass resonance and shelf-like wooden creaks used musically, uneven low bass swells and subtle tape warble. Dusty enclosed suspense, no literal footsteps or monster cries.",
+    "opusFile": "/audio/warehouse-alt-theme-v1.opus",
+    "mixGain": 1.3428,
+    "measuredLufs": -24.06
+  },
+  {
+    "id": "plant-alt",
+    "theme": 2,
+    "file": "/audio/plant-alt-theme-v1.mp3",
+    "duration": 48,
+    "prompt": "Instrumental restrained pixel survival horror game ambience for night patrol in an abandoned hospital. No vocals, speech, jump scare blasts, bright melody or trailer drums. Leave clear space for streamer speech and actual gameplay footsteps. Loopable sustained beginning and end, no outro. Basement maintenance corridor on a later shift. Unstable transformer drone, distant water pipe resonance, very slow broken mechanical rhythm and low bowed metal clusters. Industrial hospital machinery slowly failing, tense but quiet, no action beat.",
+    "opusFile": "/audio/plant-alt-theme-v1.opus",
+    "mixGain": 1.2445,
+    "measuredLufs": -23.4
+  }
+]

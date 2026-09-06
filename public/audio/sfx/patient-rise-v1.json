@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "An adult crying hospital patient suddenly inhales sharply and gasps while rising, a ragged breath and hospital gown rustle building to an abrupt silence. No words, no music. Immediate onset isolated horror game warning, duration under one second.",
+  "requested_duration": 0.8,
+  "file": "patient-rise-v1.mp3"
+}

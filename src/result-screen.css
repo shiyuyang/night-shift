@@ -1,0 +1,24 @@
+/* The frozen room remains the backdrop. Only the whole scene is dimmed. */
+#result-screen{--result-ink:#c5cbb1;--result-muted:#89988c;background:#030709a8;padding:clamp(20px,5vh,64px) 7vw;animation:result-dim .65s ease-out both;text-shadow:2px 2px #020607}
+#result-screen[data-outcome=lost]{--result-ink:#bb7464;--result-muted:#927f78;background:#080305c9}
+#result-screen .result-document{width:min(700px,100%);max-width:none;max-height:100%;min-width:0;min-height:0;padding:12px 10px;background:none;border:0;box-shadow:none;overflow:auto;animation:result-arrive .55s .2s both}
+#result-screen .document-head{padding:0;border:0;color:var(--result-muted);font-size:12px;letter-spacing:3px}
+#result-screen #result-title{margin:24px 0 28px;font-size:clamp(24px,3vw,44px);line-height:1.55;letter-spacing:3px;color:var(--result-ink);text-shadow:2px 2px #020607}
+#result-screen #run-result{border:0;padding:0;margin:0 0 32px}
+#result-screen #run-result h3{font-size:14px;letter-spacing:2px;color:var(--result-muted);margin:0}
+#result-screen .result-stats{background:none;border:0;padding:0;margin:28px 0 22px;gap:24px}
+#result-screen .result-stats span{font-size:12px;gap:10px;color:var(--result-muted)}
+#result-screen .result-stats b{font-size:clamp(22px,2vw,32px);color:var(--result-ink)}
+#result-screen #run-result p{font-size:12px;color:var(--result-muted)}
+#result-screen .result-actions{gap:12px 24px}
+#result-screen .result-actions button{position:relative;min-width:0;margin:0;padding:12px 0 12px 18px;border:0;background:none;box-shadow:none;color:var(--result-muted);font-size:14px;text-shadow:2px 2px #020607}
+#result-screen .result-actions button:hover,#result-screen .result-actions button:focus-visible{color:var(--result-ink);background:none;box-shadow:none;outline:2px dotted var(--result-muted);outline-offset:4px}
+#result-screen .result-actions button::before{content:'';position:absolute;left:0;top:calc(50% - 3px);width:6px;height:6px;background:currentColor;opacity:0}
+#result-screen .result-actions button:hover::before,#result-screen .result-actions button:focus-visible::before{opacity:1}
+#result-screen[data-outcome=lost] #result-title{animation:result-signal .9s .25s steps(1,end) both}
+@keyframes result-dim{from{background-color:transparent} }
+@keyframes result-arrive{from{opacity:0}to{opacity:1}}
+@keyframes result-signal{0%,24%,48%{opacity:.18;transform:translateX(-2px)}12%,36%,60%,100%{opacity:1;transform:none}}
+@media(min-width:2400px) and (min-height:1200px){#result-screen .result-document{width:960px}#result-screen .document-head,#result-screen #run-result h3,#result-screen .result-stats span,#result-screen #run-result p,#result-screen .result-actions button{font-size:20px}#result-screen .result-stats b{font-size:40px}}
+@media(max-width:540px),(max-height:550px){#result-screen{padding:20px 8vw}#result-screen #result-title{margin:16px 0;font-size:24px}#result-screen .result-stats{gap:12px;margin:20px 0}#result-screen #run-result{margin-bottom:16px}#result-screen .result-actions{gap:4px 16px}#result-screen .document-head{letter-spacing:1px}}
+@media(prefers-reduced-motion:reduce){#result-screen,#result-screen .result-document,#result-screen[data-outcome=lost] #result-title{animation:none}}

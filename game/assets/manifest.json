@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "render": {
+    "width": 640,
+    "height": 384,
+    "worldUnitsPerPixel": 1,
+    "tilePixels": 24
+  },
+  "sprites": {
+    "watchman": {
+      "file": "/assets/watchman-sheet-v4.png",
+      "columns": 4,
+      "rows": 4,
+      "framePixels": 56,
+      "directions": [
+        "down",
+        "right",
+        "up",
+        "left"
+      ],
+      "idleColumn": 1,
+      "sourceRows": [
+        {
+          "y": 0,
+          "height": 376
+        },
+        {
+          "y": 376,
+          "height": 372
+        },
+        {
+          "y": 748,
+          "height": 372
+        },
+        {
+          "y": 1120,
+          "height": 380
+        }
+      ],
+      "deliveryFile": "/assets/watchman-sheet-v4.webp"
+    },
+    "patient": {
+      "file": "/assets/patient-sheet-v4.png",
+      "columns": 4,
+      "rows": 4,
+      "framePixels": 64,
+      "directions": [
+        "down",
+        "right",
+        "up",
+        "left"
+      ],
+      "idleColumn": 1,
+      "sourceRows": [
+        {
+          "y": 0,
+          "height": 288
+        },
+        {
+          "y": 288,
+          "height": 292
+        },
+        {
+          "y": 580,
+          "height": 312
+        },
+        {
+          "y": 892,
+          "height": 338
+        }
+      ],
+      "deliveryFile": "/assets/patient-sheet-v4.webp"
+    }
+  }
+}

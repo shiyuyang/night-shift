@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. One relieved quiet human exhale, catching breath, subdued and dry. No speech.",
+  "requested_duration": 0.7,
+  "file": "recover-v1.mp3"
+}

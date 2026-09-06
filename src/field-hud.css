@@ -1,0 +1,99 @@
+/* Independent HUD zones, positioned against the actual game viewport. */
+#play-hud{--hud-inset:clamp(16px,4%,56px)}
+#play-hud .screen-heading{left:var(--hud-inset);right:var(--hud-inset)}
+#play-hud .game-hud{display:none}
+#play-hud .status-panel{left:var(--hud-inset);right:auto;top:64px;bottom:auto;transform:none;width:210px;max-width:30%;padding:8px 10px;gap:5px;border:0;border-left:3px solid #6c7967;border-bottom:2px solid #35463f;box-shadow:2px 2px #040b0e;background:repeating-linear-gradient(0deg,#101b1de8 0 3px,#142021e8 3px 4px);font:12px NightPixel,monospace}
+.monitor-label{display:flex;justify-content:space-between;color:#8d9a87;font-size:10px;letter-spacing:2px}.monitor-label i{width:5px;height:5px;background:#a6b08d;align-self:center}
+.status-panel .vital-row{grid-template-columns:62px 1fr;gap:3px 6px}.status-panel .vital-row>small{font-size:10px}.status-panel .vital-row:nth-of-type(2){display:none}.status-panel[data-stamina-active=true] .vital-row:nth-of-type(2){display:grid}.status-panel .pixel-segments{height:8px;gap:2px}
+#play-hud .status-panel[data-danger=true]{border-left-color:#a76650}.status-panel[data-danger=true] .monitor-label i{background:#b96850}.status-panel[data-healing=true] .monitor-label i{background:#d1d8a7}
+#mission-hud{position:absolute;right:var(--hud-inset);top:64px;width:180px;max-width:28%;padding:7px 10px;background:#10191bd9;border-top:2px solid #7d755c;color:#aeb49a;font:12px NightPixel,monospace;z-index:22}
+#mission-hud>small{font-size:10px;letter-spacing:2px;color:#958b73}#mission-hud .minor-status{display:flex;flex-direction:column-reverse;gap:5px;border:0;font-size:12px;margin:5px 0;padding:0}#mission-hud .minor-status span:first-child{font-size:10px;color:#8d9a86}
+#mission-hud .key-slot{position:relative;display:flex;flex-direction:row;justify-content:flex-start;gap:6px;width:auto;min-height:24px;padding:0;border:0;background:none;box-shadow:none;font-size:11px}#mission-hud .key-slot svg{width:19px;height:19px}#mission-hud .key-slot>b{position:static;font-size:12px;margin-left:auto}
+#play-hud .phase-hud{left:50%;right:auto;top:24px;bottom:auto;transform:translateX(-50%);align-items:center;text-align:center;width:35%;max-width:35%;gap:0;opacity:.8}#play-hud .phase-hud #run-phase{font-size:11px;color:#b0a181}#play-hud .phase-hud #objective{display:none}
+#play-hud .field-belt{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:22;padding:0;background:none;border:0;max-width:90%}
+.game-wrap #play-hud .field-belt .inventory-hud{position:static;transform:none;gap:10px;margin:0;align-items:center}
+#play-hud .field-belt .item-slot{width:64px;min-height:68px;padding:13px 5px 5px;gap:4px;background:#10191be8;border:0;border-top:2px solid #696e57;border-bottom:3px solid #35473e;box-shadow:2px 2px #030b0e;font:11px NightPixel,monospace}
+#play-hud .field-belt .item-slot svg{width:24px;height:24px;color:#bdb58e}#play-hud .field-belt .item-slot>b{font-size:14px;top:3px;right:6px}#play-hud .field-belt .item-slot kbd{color:#a3ad97}#play-hud .field-belt .item-slot[data-available=true]::before{display:none}
+#play-hud .field-belt .item-slot[data-used=true],#play-hud .field-belt .item-slot[data-received=true]{background:#394735;border-bottom-color:#c9cba3;color:#e3dabc}
+#play-hud .field-belt .item-slot[data-received=true]::after{content:'+1';position:absolute;top:-23px;left:0;right:0;color:#e3dabc;font:16px NightPixel,monospace;text-shadow:2px 2px #071015}
+#play-hud #game-message{position:absolute;left:50%;right:auto;top:auto;bottom:120px;transform:translateX(-50%);width:max-content;max-width:min(720px,76%);margin:0;padding:8px 22px;border:0;box-shadow:none;background:linear-gradient(90deg,transparent,#071015e8 18%,#071015e8 82%,transparent);font:24px/1.5 NightPixel,monospace;color:#d6ccb1;letter-spacing:1px;text-align:center;text-shadow:1px 0 #d6ccb1,2px 2px #03080b,-1px -1px #03080b;z-index:23;pointer-events:none}
+.message-title,.message-detail{display:block}.message-detail{font-size:14px;line-height:1.5;margin-top:5px;color:#aab69e;letter-spacing:1px}
+#receipt-message{position:absolute;right:var(--hud-inset);top:34%;width:230px;max-width:27%;display:flex;gap:10px;align-items:flex-start;padding:12px 10px;background:linear-gradient(90deg,#152124ef,#111b1dd9);border-left:3px solid #999475;border-bottom:2px solid #465344;color:#d7d9b4;font:18px/1.5 NightPixel,monospace;text-shadow:1px 0 #d7d9b4,2px 2px #040c10;z-index:23;pointer-events:none}
+#receipt-message .message-copy{min-width:0;overflow-wrap:anywhere}.receipt-mark{flex:none;margin-top:3px;color:#bcb68b}.receipt-mark svg{display:block;width:26px;height:26px;image-rendering:pixelated}#receipt-message .message-detail{text-shadow:1px 1px #03080b}
+body[data-ui=title] #mission-hud,body[data-ui=title] #receipt-message,body[data-ui=title] .field-belt,.run-ended #mission-hud,.run-ended #receipt-message,.run-ended #game-message,.run-ended .field-belt{visibility:hidden}
+.teaching #receipt-message{visibility:hidden}
+/* Portrait keeps controls and receipts outside the image, in separate rows. */
+.game-wrap[data-presentation=portrait] #play-hud .status-panel{left:12px;right:auto;top:calc(var(--play-top) - 108px);bottom:auto;transform:none;width:46%;max-width:none;padding:7px 8px;gap:3px}
+.game-wrap[data-presentation=portrait] #mission-hud{right:12px;top:calc(var(--play-top) - 108px);width:42%;max-width:none;padding:7px 8px}
+.game-wrap[data-presentation=portrait] #play-hud .phase-hud{left:50%;right:auto;top:calc(var(--play-top) - 24px);bottom:auto;width:50%;max-width:50%}
+.game-wrap[data-presentation=portrait] #receipt-message{top:calc(var(--play-top) + var(--play-height) + 10px);right:auto;left:50%;transform:translateX(-50%);width:330px;max-width:calc(100% - 24px);min-height:74px;padding:8px 12px;font-size:18px}
+.game-wrap[data-presentation=portrait] #play-hud .field-belt{top:calc(var(--play-top) + var(--play-height) + 100px);bottom:auto;left:50%}
+.game-wrap[data-presentation=portrait] #play-hud #game-message{top:auto;bottom:calc(100% - var(--play-top) - var(--play-height) + 12px);max-width:92%;max-height:none;overflow:visible;font-size:18px;line-height:1.5;padding:5px 12px}
+@media(max-height:550px) and (min-aspect-ratio:1/1){#play-hud .screen-heading{top:8px}#play-hud .status-panel{top:44px;width:180px;max-width:28%;padding:5px 7px;gap:3px;font-size:10px}.status-panel .vital-row{grid-template-columns:54px 1fr}.status-panel .vital-row>small{font-size:9px}.monitor-label{font-size:9px}#mission-hud{top:44px;width:150px;padding:5px 7px;font-size:10px}#mission-hud .minor-status{font-size:10px;gap:2px}#play-hud .phase-hud{top:12px}#receipt-message{top:34%;width:190px;padding:7px;gap:6px;font-size:16px}.receipt-mark svg{width:20px;height:20px}#receipt-message .message-detail{font-size:12px}#play-hud .field-belt{bottom:8px}#play-hud .field-belt .item-slot{width:52px;min-height:53px;font-size:10px;padding:11px 4px 4px}#play-hud .field-belt .item-slot svg{width:19px;height:19px}#play-hud #game-message{bottom:88px;font-size:16px;max-width:76%;padding:4px 12px}}
+.game-wrap[data-presentation=portrait] #play-hud .phase-hud{display:none}.teaching .game-wrap[data-presentation=portrait] #play-hud .phase-hud{display:flex;top:calc(var(--play-top) + 8px)}
+.game-wrap[data-presentation=portrait] #mission-hud .key-slot{min-height:24px;width:auto;padding:0;gap:6px}
+/* HUD scales with the displayed game, independently of device pixel ratio. */
+#play-hud{--hud-inset:8%;--hud-factor:var(--hud-scale,1)}
+#play-hud .screen-heading{top:6%;font-size:calc(12px * var(--hud-factor))}#play-hud .screen-heading button{font-size:calc(12px * var(--hud-factor));padding:calc(7px * var(--hud-factor)) calc(10px * var(--hud-factor))}
+#play-hud .status-panel{top:16%;transform:scale(var(--hud-factor));transform-origin:top left}
+#mission-hud{top:16%;transform:scale(var(--hud-factor));transform-origin:top right}
+#receipt-message{top:38%;transform:scale(var(--hud-factor));transform-origin:top right}
+#play-hud .phase-hud{top:6%;transform:translateX(-50%) scale(var(--hud-factor));transform-origin:top center}
+#play-hud .field-belt{bottom:8%;transform:translateX(-50%) scale(var(--hud-factor));transform-origin:bottom center}
+#play-hud #game-message{top:64%;bottom:auto;transform:translate(-50%,-50%) scale(var(--hud-factor));transform-origin:center}
+#play-hud #power-countdown{transform:translateX(-50%) scale(var(--hud-factor));transform-origin:top center}
+.game-wrap[data-presentation=portrait] #play-hud .screen-heading{top:18px;left:6%;right:6%}
+.game-wrap[data-presentation=portrait] #play-hud .status-panel{left:6%;top:calc(var(--play-top) - 108px);width:42%;transform:none}
+.game-wrap[data-presentation=portrait] #mission-hud{right:6%;top:calc(var(--play-top) - 108px);width:40%;transform:none}
+.game-wrap[data-presentation=portrait] #receipt-message{top:calc(var(--play-top) + var(--play-height) + 10px);left:50%;right:auto;transform:translateX(-50%);max-width:88%}
+.game-wrap[data-presentation=portrait] #play-hud .field-belt{top:calc(var(--play-top) + var(--play-height) + 100px);bottom:auto;transform:translateX(-50%)}
+.game-wrap[data-presentation=portrait] #play-hud #game-message{top:calc(var(--play-top) + var(--play-height) * .72);bottom:auto;transform:translate(-50%,-50%);max-width:88%}
+/* Minimal marks: the scene remains visible behind every HUD zone. */
+#play-hud .status-panel,#mission-hud,#receipt-message,#play-hud #game-message,#play-hud #power-countdown{background:none;border:0;box-shadow:none;text-shadow:1px 1px #03080b,-1px -1px #03080b}
+#play-hud .status-panel{width:170px;padding:0;gap:2px;top:13%}.monitor-label{display:none}
+#play-hud .status-panel .vital-row:nth-of-type(2){display:none}.teaching #play-hud .status-panel .vital-row:nth-of-type(2){display:grid}
+#play-hud .status-panel #health-caption{display:none}#play-hud .status-panel[data-danger=true] #health-caption,#play-hud .status-panel[data-healing=true] #health-caption{display:block}
+#play-hud .status-panel .pixel-segments{height:5px;gap:3px}#play-hud .status-panel .pixel-segments i{border:0;box-shadow:none;background:#1a2527}#play-hud .status-panel .pixel-segments i[data-filled=true]{background:#aeb79d}#play-hud .status-panel[data-danger=true] #health-bar i[data-filled=true]{background:#b9755f}
+#mission-hud{top:13%;width:145px;padding:0}#mission-hud>small{display:none}#mission-hud .minor-status{margin:0 0 3px;gap:4px}#mission-hud .minor-status span:first-child{opacity:.7}
+#play-hud .phase-hud{display:none}.teaching #play-hud .phase-hud{display:flex}
+#receipt-message{width:180px;gap:8px;padding:0;font-size:14px;color:#ccd0b0}#receipt-message .message-detail{font-size:12px;margin-top:3px}.receipt-mark svg{width:22px;height:22px}
+#play-hud #game-message{font-size:18px;line-height:1.5;max-width:min(460px,70%);padding:0;letter-spacing:1px;color:#ccc6ae}
+#play-hud .field-belt .item-slot{width:48px;min-height:48px;background:none;border:0;box-shadow:none;padding:10px 2px 2px;gap:0}
+#play-hud .field-belt .item-slot>span{display:none}#play-hud .field-belt .item-slot svg{width:24px;height:24px;color:#b6b496;filter:drop-shadow(1px 1px #03080b)}#play-hud .field-belt .item-slot>b{top:auto;bottom:0;right:0;font-size:13px;text-shadow:1px 1px #03080b}#play-hud .field-belt .item-slot kbd{top:0;left:0;font-size:10px}
+#play-hud .field-belt .item-slot[data-used=true],#play-hud .field-belt .item-slot[data-received=true]{background:none;border:0;box-shadow:none}#play-hud .field-belt .item-slot[data-used=true] svg,#play-hud .field-belt .item-slot[data-received=true] svg{color:#eef0cf}#play-hud .field-belt .item-slot[data-received=true]::after{top:-17px;font-size:13px}
+#play-hud #power-countdown{padding:0;min-width:160px}#power-countdown::before,#power-countdown::after{display:none}#power-countdown #power-label{font-size:11px}#power-countdown #power-seconds{font-size:36px}#power-countdown #power-hint{font-size:10px}
+#play-hud .screen-heading button{background:none;border:0;box-shadow:none;text-shadow:1px 1px #03080b}
+.game-wrap[data-presentation=portrait] #play-hud .status-panel{padding:0;width:42%;top:calc(var(--play-top) - 72px)}
+.game-wrap[data-presentation=portrait] #mission-hud{padding:0;top:calc(var(--play-top) - 96px)}
+.game-wrap[data-presentation=portrait] #receipt-message{min-height:0;width:280px;font-size:16px;padding:0;top:calc(var(--play-top) + var(--play-height) + 16px)}
+.game-wrap[data-presentation=portrait] #play-hud #game-message{font-size:16px;max-width:84%;padding:0}
+.game-wrap[data-presentation=portrait] #play-hud .field-belt .item-slot{width:52px;min-height:48px}
+@media(max-height:550px) and (min-aspect-ratio:1/1){#play-hud #game-message{font-size:15px;max-width:65%}#receipt-message{font-size:13px;width:165px}#play-hud .status-panel{width:150px}#mission-hud{width:130px}#play-hud .field-belt .item-slot{min-height:44px;width:44px}}
+/* Slim, solid pixel bar; no internal grid or ornamental edges. */
+#play-hud .status-panel{width:180px}
+#play-hud .status-panel .vital-row:first-of-type{grid-template-columns:1fr;gap:6px}
+#play-hud .status-panel .vital-row:first-of-type>small{grid-column:1}
+#health-bar{position:relative;display:block;width:100%;height:6px;background:#23302c;border:0;border-radius:0;box-shadow:none;mask:none;clip-path:none;overflow:hidden}
+#health-bar>span{position:absolute;display:block;left:0;top:0;height:100%;margin:0;padding:0;border:0;box-shadow:none}
+#health-bar .health-loss{width:var(--health-loss,100%);background:#c09a7e}
+#health-bar .health-fill{width:var(--health-fill,100%);background:#e1e3df}
+.status-panel[data-danger=true] #health-bar .health-fill{background:#b66755}
+.status-panel[data-healing=true] #health-bar .health-fill{background:#f2f4ec}
+.game-wrap[data-presentation=portrait] #play-hud .status-panel{width:38%}
+@media(max-height:550px) and (min-aspect-ratio:1/1){#play-hud .status-panel{width:159px}}
+
+/* Equipment power lives with supplies, across the screen from health. */
+#play-hud #flashlight-toggle{display:grid;grid-template-columns:24px 1fr auto;grid-template-rows:auto auto;column-gap:7px;row-gap:2px;align-items:center;width:100%;min-height:36px;margin:18px 0 0;padding:0;border:0;background:none;box-shadow:none;text-align:left;font:12px/1.2 NightPixel,monospace;color:#d4d8c7;text-shadow:1px 1px #03080b;pointer-events:auto}
+#flashlight-toggle svg{grid-column:1;grid-row:1/3;width:24px;height:24px;filter:drop-shadow(1px 1px #03080b)}
+#flashlight-toggle .flashlight-heading{grid-column:2;grid-row:1;white-space:nowrap}
+#flashlight-toggle kbd{display:inline;padding:0;border:0;background:none;box-shadow:none;font:12px NightPixel,monospace;color:inherit}
+#flashlight-toggle .flashlight-charge{grid-column:3;grid-row:1;white-space:nowrap;font-size:12px}
+#flashlight-toggle #battery{font-size:18px;font-weight:400}
+#flashlight-mode{grid-column:2/4;grid-row:2;font-size:10px;color:#a4ae99}
+#play-hud #flashlight-toggle[data-low=true]{color:#d5a66d}#flashlight-toggle[data-low=true] #flashlight-mode{color:#d5a66d}
+#play-hud #flashlight-toggle[data-empty=true]{color:#bd7464}#flashlight-toggle[data-empty=true] #flashlight-mode{color:#bd7464}
+#flashlight-toggle[aria-pressed=false] .torch-ray,#flashlight-toggle[data-blocked=true] .torch-ray,#flashlight-toggle[data-empty=true] .torch-ray{visibility:hidden}
+#flashlight-toggle:focus-visible{outline:1px dotted currentColor;outline-offset:3px}
+#mission-hud .minor-status span:first-child{opacity:1;font-size:12px;color:#aeb49a}
+/* Bring pickups into peripheral vision near the player, separate from captions. */
+.game-wrap[data-presentation=landscape] #receipt-message{right:22%;top:45%}

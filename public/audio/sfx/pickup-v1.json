@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. A small brass key and ceramic electrical fuse picked up from a wooden box, soft metal clink and cloth rustle. Dry close foley.",
+  "requested_duration": 0.6,
+  "file": "pickup-v1.mp3"
+}

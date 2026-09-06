@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {presentation} from '../src/pixel-scale.ts';
+test('normal, wide, square, portrait and small embeds preserve the same camera aspect',()=>{for(const [w,h]of [[1920,1080],[3440,1440],[900,900],[390,844],[600,700],[390,550],[844,390],[320,240]]){const p=presentation(w,h);assert.ok(Math.abs(p.width/p.height-5/3)<1e-8);assert.ok(p.left>=0&&p.top>=0);assert.ok(p.left+p.width<=w+.01);assert.ok(p.top+p.height<=h+.01);if(p.portrait)assert.ok(p.top+p.height+160<=h);}});

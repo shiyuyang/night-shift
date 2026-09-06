@@ -1,0 +1,146 @@
+[
+  {
+    "id": "step",
+    "file": "/audio/sfx/step-v1.mp3",
+    "gain": 0.35,
+    "duration": 0.5,
+    "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. One single quiet leather boot footstep on dusty cracked linoleum. Dry close foley, short tail.",
+    "opusFile": "/audio/sfx/step-v1.opus"
+  },
+  {
+    "id": "metal",
+    "file": "/audio/sfx/metal-v1.mp3",
+    "gain": 0.5,
+    "duration": 1.2,
+    "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. A rusty hospital door latch clacks then creaks very briefly. Dull corroded metal, intimate and ominous.",
+    "opusFile": "/audio/sfx/metal-v1.opus"
+  },
+  {
+    "id": "impact",
+    "file": "/audio/sfx/impact-v1.mp3",
+    "gain": 0.65,
+    "duration": 0.8,
+    "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. One blunt physical hit against a clothed torso, low thud with cloth movement. Short restrained startled grunt, no words. Not a cinematic explosion.",
+    "opusFile": "/audio/sfx/impact-v1.opus"
+  },
+  {
+    "id": "ghost",
+    "file": "/audio/sfx/ghost-v1.mp3",
+    "gain": 0.55,
+    "duration": 1.8,
+    "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. Distant unnatural breath mixed with low rusty metal scrape, an approaching presence warning, tense rising texture with a quick decay, no scream.",
+    "opusFile": "/audio/sfx/ghost-v1.opus"
+  },
+  {
+    "id": "heartbeat",
+    "file": "/audio/sfx/heartbeat-v1.mp3",
+    "gain": 0.4,
+    "duration": 0.7,
+    "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. One muffled human heartbeat double pulse, thump thump. Deep organic body sound, close, no additional beats.",
+    "opusFile": "/audio/sfx/heartbeat-v1.opus"
+  },
+  {
+    "id": "call-bell",
+    "file": "/audio/sfx/call-bell-v1.mp3",
+    "gain": 0.45,
+    "duration": 1,
+    "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. Two muted old hospital brass call bell chimes with a short room tail. Uneasy, mechanical, not musical.",
+    "opusFile": "/audio/sfx/call-bell-v1.opus"
+  },
+  {
+    "id": "bandage",
+    "file": "/audio/sfx/bandage-v1.mp3",
+    "gain": 0.6,
+    "duration": 1.2,
+    "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. Close dry foley of tearing medical gauze packaging and wrapping a cloth bandage, two soft fabric pulls then gentle pat. No voice.",
+    "opusFile": "/audio/sfx/bandage-v1.opus"
+  },
+  {
+    "id": "breath",
+    "file": "/audio/sfx/breath-v1.mp3",
+    "gain": 0.35,
+    "duration": 1.1,
+    "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. One strained human breath cycle after running, inhale then exhale, quiet close and dry. No words, no scream.",
+    "opusFile": "/audio/sfx/breath-v1.opus"
+  },
+  {
+    "id": "exhausted",
+    "file": "/audio/sfx/exhausted-v1.mp3",
+    "gain": 0.5,
+    "duration": 1.2,
+    "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. One exhausted human gasp followed by a heavy exhale, breathless after sprinting, dry close foley. No speech.",
+    "opusFile": "/audio/sfx/exhausted-v1.opus"
+  },
+  {
+    "id": "recover",
+    "file": "/audio/sfx/recover-v1.mp3",
+    "gain": 0.3,
+    "duration": 0.7,
+    "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. One relieved quiet human exhale, catching breath, subdued and dry. No speech.",
+    "opusFile": "/audio/sfx/recover-v1.opus"
+  },
+  {
+    "id": "relay",
+    "file": "/audio/sfx/relay-v1.mp3",
+    "gain": 0.45,
+    "duration": 0.5,
+    "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. One short chunky old electrical relay click with a muted low contact clunk. Dry, no ringing, no beep.",
+    "opusFile": "/audio/sfx/relay-v1.opus"
+  },
+  {
+    "id": "relay-urgent",
+    "file": "/audio/sfx/relay-urgent-v1.mp3",
+    "gain": 0.5,
+    "duration": 0.5,
+    "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. One tense sharp double electrical relay click with a tiny contact buzz, mechanical and short. Dry, no siren.",
+    "opusFile": "/audio/sfx/relay-urgent-v1.opus"
+  },
+  {
+    "id": "pickup",
+    "file": "/audio/sfx/pickup-v1.mp3",
+    "gain": 0.35,
+    "duration": 0.6,
+    "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. A small brass key and ceramic electrical fuse picked up from a wooden box, soft metal clink and cloth rustle. Dry close foley.",
+    "opusFile": "/audio/sfx/pickup-v1.opus"
+  },
+  {
+    "id": "flash",
+    "file": "/audio/sfx/flash-v1.mp3",
+    "gain": 0.6,
+    "duration": 0.8,
+    "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. A disposable photographic flash discharging, a sharp short electrical snap with a low dry air puff. No explosion, no music.",
+    "opusFile": "/audio/sfx/flash-v1.opus"
+  },
+  {
+    "id": "patient-cry",
+    "file": "/audio/sfx/patient-cry-v2.mp3",
+    "gain": 0.42,
+    "duration": 6.5,
+    "prompt": "Unsettling adult patient quietly sobbing in an abandoned tiled hospital at night. Uneven trembling whimpers, stifled breaths, one unnaturally long exhale. Dark hollow cavernous reverb and clearly audible distant corridor echoes; sobs return faintly from empty rooms. Sparse and sinister, not theatrical. No words, music, percussion or loud scream. First sob immediate, last two seconds lingering cold ghostly echo tails.",
+    "opusFile": "/audio/sfx/patient-cry-v2.opus"
+  },
+  {
+    "id": "patient-rise",
+    "file": "/audio/sfx/patient-rise-v1.mp3",
+    "gain": 0.55,
+    "duration": 0.8,
+    "prompt": "An adult crying hospital patient suddenly inhales sharply and gasps while rising, a ragged breath and hospital gown rustle building to an abrupt silence. No words, no music. Immediate onset isolated horror game warning, duration under one second.",
+    "opusFile": "/audio/sfx/patient-rise-v1.opus"
+  },
+  {
+    "id": "patient-lunge",
+    "file": "/audio/sfx/patient-lunge-v2.mp3",
+    "gain": 0.95,
+    "duration": 1.8,
+    "prompt": "One terrifying adult female apparition attack scream. Immediate explosive onset, no inhale. Piercing raw shriek with ragged throaty undertone, furious and inhuman, not a gasp. Strong close voice for 0.7 seconds then cold tiled hospital corridor echoes decay for one second. Synchronize with a sudden lunge. No words, music, footsteps, cloth, percussion or boom. Clear vocal texture, no clipping or static distortion.",
+    "opusFile": "/audio/sfx/patient-lunge-v2.opus"
+  },
+  {
+    "id": "patient-stunned",
+    "file": "/audio/sfx/patient-stunned-v1.mp3",
+    "gain": 0.55,
+    "duration": 1.5,
+    "prompt": "A distressed adult hospital patient recoils from a bright flash, a brief shocked cry followed by hands covering face and knees collapsing onto linoleum. Natural breath and gown foley, no words, no music.",
+    "opusFile": "/audio/sfx/patient-stunned-v1.opus"
+  }
+]

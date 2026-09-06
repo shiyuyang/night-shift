@@ -1,0 +1,14 @@
+[
+  {
+    "theme": 0,
+    "source": "maps/rooms/ward.ldtk"
+  },
+  {
+    "theme": 1,
+    "source": "maps/rooms/warehouse.ldtk"
+  },
+  {
+    "theme": 2,
+    "source": "maps/rooms/plant.ldtk"
+  }
+]

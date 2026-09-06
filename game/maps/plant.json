@@ -1,0 +1,367 @@
+{
+  "id": "plant",
+  "name": "地下机房",
+  "theme": 2,
+  "source": "maps/plant.ldtk",
+  "level": "Plant",
+  "events": [
+    {
+      "id": "plant_return",
+      "trigger": {
+        "flag": "first_box",
+        "zone": "return_corridor"
+      },
+      "once": true,
+      "sequence": [
+        {
+          "type": "light",
+          "target": "LampCenter",
+          "strength": 0.08
+        },
+        {
+          "type": "sound",
+          "id": "call-bell",
+          "pan": -0.65,
+          "source": "LampSouth"
+        },
+        {
+          "type": "message",
+          "text": "供电继电器跳闸，应急灯接管。"
+        },
+        {
+          "type": "wait",
+          "seconds": 1.8
+        },
+        {
+          "type": "light",
+          "target": "LampCenter",
+          "strength": 0.56
+        }
+      ]
+    }
+  ],
+  "lights": [
+    {
+      "id": "LampWest",
+      "radius": 155,
+      "strength": 0.66,
+      "color": "#c59b65"
+    },
+    {
+      "id": "LampCenter",
+      "radius": 150,
+      "strength": 0.56,
+      "color": "#79a6b6"
+    },
+    {
+      "id": "LampExit",
+      "radius": 112,
+      "strength": 0.5,
+      "color": "#b74336"
+    },
+    {
+      "id": "LampSouth",
+      "radius": 120,
+      "strength": 0.52,
+      "color": "#80a394"
+    }
+  ],
+  "width": 960,
+  "height": 576,
+  "entities": [
+    {
+      "id": "Wall",
+      "x": 22,
+      "y": 61,
+      "width": 916,
+      "height": 28
+    },
+    {
+      "id": "Wall",
+      "x": 22,
+      "y": 89,
+      "width": 14,
+      "height": 439
+    },
+    {
+      "id": "Wall",
+      "x": 924,
+      "y": 89,
+      "width": 14,
+      "height": 439
+    },
+    {
+      "id": "Wall",
+      "x": 22,
+      "y": 508,
+      "width": 916,
+      "height": 20
+    },
+    {
+      "id": "Wall",
+      "x": 36,
+      "y": 245,
+      "width": 340,
+      "height": 16
+    },
+    {
+      "id": "Wall",
+      "x": 440,
+      "y": 160,
+      "width": 220,
+      "height": 16
+    },
+    {
+      "id": "Wall",
+      "x": 490,
+      "y": 370,
+      "width": 434,
+      "height": 16
+    },
+    {
+      "id": "Wall",
+      "x": 720,
+      "y": 89,
+      "width": 14,
+      "height": 174
+    },
+    {
+      "id": "Wall",
+      "x": 734,
+      "y": 263,
+      "width": 36,
+      "height": 16
+    },
+    {
+      "id": "Wall",
+      "x": 832,
+      "y": 263,
+      "width": 92,
+      "height": 16
+    },
+    {
+      "id": "Wall",
+      "x": 380,
+      "y": 180,
+      "width": 14,
+      "height": 88
+    },
+    {
+      "id": "Wall",
+      "x": 650,
+      "y": 250,
+      "width": 110,
+      "height": 14
+    },
+    {
+      "id": "Wall",
+      "x": 570,
+      "y": 406,
+      "width": 14,
+      "height": 66
+    },
+    {
+      "id": "Machine",
+      "x": 110,
+      "y": 136,
+      "width": 65,
+      "height": 44
+    },
+    {
+      "id": "Machine",
+      "x": 270,
+      "y": 392,
+      "width": 65,
+      "height": 44
+    },
+    {
+      "id": "Machine",
+      "x": 545,
+      "y": 213,
+      "width": 65,
+      "height": 44
+    },
+    {
+      "id": "Machine",
+      "x": 782,
+      "y": 412,
+      "width": 65,
+      "height": 44
+    },
+    {
+      "id": "Door",
+      "x": 770,
+      "y": 263,
+      "width": 62,
+      "height": 16
+    },
+    {
+      "id": "DoorUse",
+      "x": 801,
+      "y": 296,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "PlayerSpawn",
+      "x": 458,
+      "y": 318,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "Exit",
+      "x": 65,
+      "y": 319,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "ReturnZone",
+      "x": 430,
+      "y": 280,
+      "width": 90,
+      "height": 65
+    },
+    {
+      "id": "CameraBounds",
+      "x": 20,
+      "y": 60,
+      "width": 920,
+      "height": 468
+    },
+    {
+      "id": "PlayBounds",
+      "x": 36,
+      "y": 90,
+      "width": 888,
+      "height": 418
+    },
+    {
+      "id": "MonsterLeft",
+      "x": 65,
+      "y": 320,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "MonsterRight",
+      "x": 890,
+      "y": 320,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "LampWest",
+      "x": 156,
+      "y": 302,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "LampCenter",
+      "x": 480,
+      "y": 304,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "LampExit",
+      "x": 72,
+      "y": 294,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "LampSouth",
+      "x": 610,
+      "y": 436,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 90,
+      "y": 150,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 642,
+      "y": 222,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 306,
+      "y": 318,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 354,
+      "y": 414,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "Key_A",
+      "x": 107,
+      "y": 425,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "Box0_A",
+      "x": 243,
+      "y": 192,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "Box1_A",
+      "x": 635,
+      "y": 451,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "Box2_A",
+      "x": 820,
+      "y": 170,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "Key_B",
+      "x": 418,
+      "y": 450,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "Box0_B",
+      "x": 94,
+      "y": 218,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "Box1_B",
+      "x": 700,
+      "y": 440,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "Box2_B",
+      "x": 820,
+      "y": 170,
+      "width": 8,
+      "height": 8
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "music_v1",
+  "prompt": "Instrumental pixel survival-horror game soundtrack. Locked hospital pharmacy storeroom, narrow aisles of medicine shelves. FEATURED ENSEMBLE: dry pizzicato cello and muted wooden marimba in a sparse lopsided 5/4 pattern at 72 BPM. A recognizable plucked low-high-low motif with sudden rests, little room reverb, dusty claustrophobic chamber horror. Start with plucked strings and wooden notes immediately. No piano, music box, synthesizer drone or drum kit. Subtle glass harmonics answer the plucks. Compose a distinctive musical identity, not a generic ambient drone. Keep the arrangement sparse enough for gameplay sounds and streamer speech. No voices, cries, whispers, literal footsteps, jump-scare blasts or major volume jumps. Unresolved loop-friendly ending without a fade-out. Do not become cheerful or heroic.",
+  "requested_duration": 40,
+  "file": "warehouse-theme-v2.mp3"
+}

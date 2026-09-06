@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "A frail adult hospital patient quietly sobbing in uneven breaths, distressed whimpers and cloth rustle. No intelligible words, no music. Dry intimate isolated horror game foley, natural human crying, not theatrical.",
+  "requested_duration": 2.4,
+  "file": "patient-cry-v1.mp3"
+}

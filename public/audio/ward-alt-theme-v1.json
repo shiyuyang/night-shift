@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "music_v1",
+  "prompt": "Instrumental restrained pixel survival horror game ambience for night patrol in an abandoned hospital. No vocals, speech, jump scare blasts, bright melody or trailer drums. Leave clear space for streamer speech and actual gameplay footsteps. Loopable sustained beginning and end, no outro. Isolation ward after visiting hours. Fragile bowed glass harmonics, low breathing-like air ventilation without human voices, muffled detuned celesta intervals and long empty-room reverb. Cold fragile dread, very sparse pacing.",
+  "requested_duration": 48,
+  "file": "ward-alt-theme-v1.mp3"
+}

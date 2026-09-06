@@ -1,0 +1,440 @@
+[
+  {
+    "id": "Ward_1",
+    "theme": 0,
+    "source": "maps/rooms/ward.ldtk",
+    "props": [
+      [
+        28,
+        36,
+        36,
+        58
+      ],
+      [
+        148,
+        116,
+        36,
+        58
+      ]
+    ]
+  },
+  {
+    "id": "Ward_2",
+    "theme": 0,
+    "source": "maps/rooms/ward.ldtk",
+    "props": [
+      [
+        28,
+        32,
+        36,
+        58
+      ],
+      [
+        148,
+        32,
+        36,
+        58
+      ]
+    ]
+  },
+  {
+    "id": "Ward_3",
+    "theme": 0,
+    "source": "maps/rooms/ward.ldtk",
+    "props": [
+      [
+        28,
+        118,
+        36,
+        58
+      ],
+      [
+        148,
+        118,
+        36,
+        58
+      ]
+    ]
+  },
+  {
+    "id": "Ward_4",
+    "theme": 0,
+    "source": "maps/rooms/ward.ldtk",
+    "props": [
+      [
+        28,
+        36,
+        36,
+        58
+      ],
+      [
+        28,
+        118,
+        36,
+        58
+      ]
+    ]
+  },
+  {
+    "id": "Ward_5",
+    "theme": 0,
+    "source": "maps/rooms/ward.ldtk",
+    "props": [
+      [
+        148,
+        36,
+        36,
+        58
+      ],
+      [
+        148,
+        118,
+        36,
+        58
+      ]
+    ]
+  },
+  {
+    "id": "Ward_6",
+    "theme": 0,
+    "source": "maps/rooms/ward.ldtk",
+    "props": [
+      [
+        28,
+        36,
+        36,
+        58
+      ],
+      [
+        148,
+        118,
+        36,
+        58
+      ],
+      [
+        28,
+        134,
+        28,
+        32
+      ]
+    ]
+  },
+  {
+    "id": "Ward_7",
+    "theme": 0,
+    "source": "maps/rooms/ward.ldtk",
+    "props": [
+      [
+        94,
+        80,
+        36,
+        52
+      ]
+    ]
+  },
+  {
+    "id": "Ward_8",
+    "theme": 0,
+    "source": "maps/rooms/ward.ldtk",
+    "props": [
+      [
+        148,
+        36,
+        36,
+        58
+      ]
+    ]
+  },
+  {
+    "id": "Warehouse_1",
+    "theme": 1,
+    "source": "maps/rooms/warehouse.ldtk",
+    "props": [
+      [
+        28,
+        36,
+        36,
+        36
+      ],
+      [
+        148,
+        116,
+        36,
+        36
+      ]
+    ]
+  },
+  {
+    "id": "Warehouse_2",
+    "theme": 1,
+    "source": "maps/rooms/warehouse.ldtk",
+    "props": [
+      [
+        28,
+        32,
+        36,
+        36
+      ],
+      [
+        148,
+        32,
+        36,
+        36
+      ]
+    ]
+  },
+  {
+    "id": "Warehouse_3",
+    "theme": 1,
+    "source": "maps/rooms/warehouse.ldtk",
+    "props": [
+      [
+        28,
+        118,
+        36,
+        36
+      ],
+      [
+        148,
+        118,
+        36,
+        36
+      ]
+    ]
+  },
+  {
+    "id": "Warehouse_4",
+    "theme": 1,
+    "source": "maps/rooms/warehouse.ldtk",
+    "props": [
+      [
+        28,
+        36,
+        36,
+        36
+      ],
+      [
+        28,
+        118,
+        36,
+        36
+      ]
+    ]
+  },
+  {
+    "id": "Warehouse_5",
+    "theme": 1,
+    "source": "maps/rooms/warehouse.ldtk",
+    "props": [
+      [
+        148,
+        36,
+        36,
+        36
+      ],
+      [
+        148,
+        118,
+        36,
+        36
+      ]
+    ]
+  },
+  {
+    "id": "Warehouse_6",
+    "theme": 1,
+    "source": "maps/rooms/warehouse.ldtk",
+    "props": [
+      [
+        28,
+        36,
+        36,
+        36
+      ],
+      [
+        148,
+        118,
+        36,
+        36
+      ],
+      [
+        28,
+        134,
+        36,
+        36
+      ]
+    ]
+  },
+  {
+    "id": "Warehouse_7",
+    "theme": 1,
+    "source": "maps/rooms/warehouse.ldtk",
+    "props": [
+      [
+        94,
+        80,
+        36,
+        36
+      ]
+    ]
+  },
+  {
+    "id": "Warehouse_8",
+    "theme": 1,
+    "source": "maps/rooms/warehouse.ldtk",
+    "props": [
+      [
+        148,
+        36,
+        36,
+        36
+      ]
+    ]
+  },
+  {
+    "id": "Plant_1",
+    "theme": 2,
+    "source": "maps/rooms/plant.ldtk",
+    "props": [
+      [
+        28,
+        36,
+        40,
+        60
+      ],
+      [
+        148,
+        116,
+        40,
+        60
+      ]
+    ]
+  },
+  {
+    "id": "Plant_2",
+    "theme": 2,
+    "source": "maps/rooms/plant.ldtk",
+    "props": [
+      [
+        28,
+        32,
+        40,
+        60
+      ],
+      [
+        148,
+        32,
+        40,
+        60
+      ]
+    ]
+  },
+  {
+    "id": "Plant_3",
+    "theme": 2,
+    "source": "maps/rooms/plant.ldtk",
+    "props": [
+      [
+        28,
+        118,
+        40,
+        60
+      ],
+      [
+        148,
+        118,
+        40,
+        60
+      ]
+    ]
+  },
+  {
+    "id": "Plant_4",
+    "theme": 2,
+    "source": "maps/rooms/plant.ldtk",
+    "props": [
+      [
+        28,
+        36,
+        40,
+        60
+      ],
+      [
+        28,
+        118,
+        40,
+        60
+      ]
+    ]
+  },
+  {
+    "id": "Plant_5",
+    "theme": 2,
+    "source": "maps/rooms/plant.ldtk",
+    "props": [
+      [
+        148,
+        36,
+        40,
+        60
+      ],
+      [
+        148,
+        118,
+        40,
+        60
+      ]
+    ]
+  },
+  {
+    "id": "Plant_6",
+    "theme": 2,
+    "source": "maps/rooms/plant.ldtk",
+    "props": [
+      [
+        28,
+        36,
+        40,
+        60
+      ],
+      [
+        148,
+        118,
+        40,
+        60
+      ],
+      [
+        28,
+        134,
+        40,
+        60
+      ]
+    ]
+  },
+  {
+    "id": "Plant_7",
+    "theme": 2,
+    "source": "maps/rooms/plant.ldtk",
+    "props": [
+      [
+        94,
+        80,
+        40,
+        60
+      ]
+    ]
+  },
+  {
+    "id": "Plant_8",
+    "theme": 2,
+    "source": "maps/rooms/plant.ldtk",
+    "props": [
+      [
+        148,
+        36,
+        40,
+        60
+      ]
+    ]
+  }
+]

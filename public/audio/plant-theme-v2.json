@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "music_v1",
+  "prompt": "Instrumental pixel survival-horror game soundtrack. Failing hospital basement generator room. FEATURED SOUND: a clearly defined low analog synthesizer pulse in a slow 3+3+2 pattern at 84 BPM, gritty band-limited electronic tones, short metallic resonances and an unstable rising oscillator. Minimal industrial horror score, relentless mechanical unease. Pulse begins immediately, subtle filter evolution every eight bars. No piano, music box, acoustic strings, EDM drop or drum kit. Compose a distinctive musical identity, not a generic ambient drone. Keep the arrangement sparse enough for gameplay sounds and streamer speech. No voices, cries, whispers, literal footsteps, jump-scare blasts or major volume jumps. Unresolved loop-friendly ending without a fade-out. Do not become cheerful or heroic.",
+  "requested_duration": 40,
+  "file": "plant-theme-v2.mp3"
+}

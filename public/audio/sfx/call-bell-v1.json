@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. Two muted old hospital brass call bell chimes with a short room tail. Uneasy, mechanical, not musical.",
+  "requested_duration": 1,
+  "file": "call-bell-v1.mp3"
+}

@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "music_v1",
+  "prompt": "Instrumental restrained pixel survival horror game ambience for night patrol in an abandoned hospital. No vocals, speech, jump scare blasts, bright melody or trailer drums. Leave clear space for streamer speech and actual gameplay footsteps. Loopable sustained beginning and end, no outro. Night duty reception desk, empty corridors beyond. Sparse detuned piano with long hollow reverb, dusty tape room tone, low unease and a distant muted clock-like rhythm. Slow, intimate anticipation, no pursuit.",
+  "requested_duration": 48,
+  "file": "menu-theme-v1.mp3"
+}

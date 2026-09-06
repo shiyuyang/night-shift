@@ -1,0 +1,17 @@
+{
+  "provider": "built-in image_gen",
+  "canvas": {
+    "width": 240,
+    "height": 144
+  },
+  "prompts": {
+    "ward": "Create a finished background asset for a pixel horror game archive thumbnail, landscape aspect 5:3. Authored low-resolution pixel art composed as a 240x144 grid, enlarged with nearest-neighbor edges. Carefully shaped pixel clusters, 24-color muted palette, crisp silhouettes, 3-tone material shading, localized rust and grime, sparing intentional dithering. Must remain readable at thumbnail size. Not photorealism, no 3D render, no smooth painting, no random noise overlay, no UI, no border, no text, no watermark. Fixed high corner security camera view, cinematic empty room, restrained Japanese indie horror dread. Abandoned hospital ward. Two empty iron beds with creased dirty sheets, a half-drawn green privacy curtain with ambiguous shadow behind it, cracked wall tiles, a small amber nurse-call lamp. Cold desaturated sage green, charcoal shadows, bone-colored bedding. Beds are clear large foreground shapes, dark doorway in distance.",
+    "warehouse": "Create a finished background asset for a pixel horror game archive thumbnail, landscape aspect 5:3. Authored low-resolution pixel art composed as a 240x144 grid, enlarged with nearest-neighbor edges. Carefully shaped pixel clusters, 24-color muted palette, crisp silhouettes, 3-tone material shading, localized rust and grime, sparing intentional dithering. Must remain readable at thumbnail size. Not photorealism, no 3D render, no smooth painting, no random noise overlay, no UI, no border, no text, no watermark. Fixed high corner security camera view, cinematic empty room, restrained Japanese indie horror dread. Abandoned hospital medicine warehouse. Dense tall shelves with irregular stacks of medicine cartons and glass jars, a torn cardboard crate foreground, scuffed floor with a dragging trail disappearing behind shelves, dim hanging amber bulb and tiny red indicator. Ochre brown, dusty olive, charcoal shadows. Strong box and shelf silhouettes and claustrophobic narrow aisle.",
+    "plant": "Create a finished background asset for a pixel horror game archive thumbnail, landscape aspect 5:3. Authored low-resolution pixel art composed as a 240x144 grid, enlarged with nearest-neighbor edges. Carefully shaped pixel clusters, 24-color muted palette, crisp silhouettes, 3-tone material shading, localized rust and grime, sparing intentional dithering. Must remain readable at thumbnail size. Not photorealism, no 3D render, no smooth painting, no random noise overlay, no UI, no border, no text, no watermark. Fixed high corner security camera view, cinematic empty room, restrained Japanese indie horror dread. Underground hospital machinery room. Large old electrical cabinets, thick elbow pipes with rust at joints, pressure gauges and two tiny teal/amber indicators, shallow leak puddle reflecting a narrow warm light, cable loops and distant red door. Cold petrol blue, charcoal, oxidized copper highlights. Dominant bold cabinet and pipe silhouettes, empty unsettling room."
+  },
+  "files": {
+    "ward": "/assets/archive-ward-v1.png",
+    "warehouse": "/assets/archive-warehouse-v1.png",
+    "plant": "/assets/archive-plant-v1.png"
+  }
+}

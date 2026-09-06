@@ -1,0 +1,36 @@
+[
+  {
+    "id": "warehouse_return",
+    "trigger": {
+      "flag": "first_box",
+      "zone": "return_corridor"
+    },
+    "once": true,
+    "sequence": [
+      {
+        "type": "light",
+        "target": "LampCenter",
+        "strength": 0.08
+      },
+      {
+        "type": "sound",
+        "id": "metal",
+        "pan": -0.65,
+        "source": "LampWest"
+      },
+      {
+        "type": "message",
+        "text": "货架深处响了一声，过道灯暗了下来。"
+      },
+      {
+        "type": "wait",
+        "seconds": 1.8
+      },
+      {
+        "type": "light",
+        "target": "LampCenter",
+        "strength": 0.56
+      }
+    ]
+  }
+]

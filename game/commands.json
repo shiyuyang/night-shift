@@ -1,0 +1,58 @@
+[
+  {
+    "id": "reveal",
+    "kind": "buff",
+    "icon": "⌖",
+    "label": "物资侦察",
+    "description": "标出物资与药柜，标出未搜空的补给药柜"
+  },
+  {
+    "id": "supply",
+    "kind": "buff",
+    "icon": "＋",
+    "label": "反击补给",
+    "description": "第二关起优先补充最少的道具 1 个，援助有冷却"
+  },
+  {
+    "id": "repel",
+    "kind": "buff",
+    "icon": "✴",
+    "label": "驱散闪光",
+    "description": "救场闪光：压制近处哭泣患者 6 秒，并击退追逐者；不能隔墙"
+  },
+  {
+    "id": "sanctuary",
+    "kind": "buff",
+    "icon": "✧",
+    "label": "短暂庇护",
+    "description": "8 秒免伤，争取搜寻时间"
+  },
+  {
+    "id": "blackout",
+    "kind": "debuff",
+    "icon": "ϟ",
+    "label": "供电干扰",
+    "description": "环境灯熄灭 5 秒，手电保留；恢复后有冷却，不叠加"
+  },
+  {
+    "id": "ghost",
+    "kind": "debuff",
+    "icon": "♟︎",
+    "label": "不速之客",
+    "description": "3 秒预警后追逐，可用闪光和诱饵反制"
+  },
+  {
+    "id": "drain",
+    "kind": "debuff",
+    "icon": "▰",
+    "label": "电池漏电",
+    "description": "8 秒额外耗电，最多损失 16%，不叠加时长"
+  },
+  {
+    "id": "alarm",
+    "kind": "debuff",
+    "icon": "◌",
+    "label": "贴身噪声",
+    "description": "6 秒暴露当前位置，可用 R 诱饵转移"
+  }
+]

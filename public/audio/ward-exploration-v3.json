@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "music_v1",
+  "requested_duration_ms": 40000,
+  "prompt": "Instrumental atmospheric survival horror game exploration score. Abandoned hospital at 2 AM. Slow dark ambient, uneasy sub bass drone, bowed metal harmonics, distant detuned upright piano single notes, airy tape hiss, fragile reverberant texture, cold sparse room tone, no vocals, no speech, no melody hook, no drums or beat drop. Ominous and restrained, space for streamer speech and game footsteps. Quiet consistent intensity, no loud stingers. Designed for repeated background playback with sustained beginning and end, not a song outro.",
+  "file": "ward-exploration-v3.mp3"
+}

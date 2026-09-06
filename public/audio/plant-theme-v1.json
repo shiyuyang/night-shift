@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "music_v1",
+  "prompt": "Instrumental understated survival horror game score. No vocals, speech, bright melody, EDM or cinematic trailer drums. Leave space for footsteps and streamer speech. Underground power machinery room. Deep electrical hum, slow asymmetric mechanical pulses, bowed steel resonance, dissonant analog oscillators. Oppressive industrial dread, not action music. Sustained loopable beginning and end, no song outro.",
+  "requested_duration": 40,
+  "file": "plant-theme-v1.mp3"
+}

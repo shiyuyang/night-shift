@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "One terrifying adult female apparition attack scream. Immediate explosive onset, no inhale. Piercing raw shriek with ragged throaty undertone, furious and inhuman, not a gasp. Strong close voice for 0.7 seconds then cold tiled hospital corridor echoes decay for one second. Synchronize with a sudden lunge. No words, music, footsteps, cloth, percussion or boom. Clear vocal texture, no clipping or static distortion.",
+  "requested_duration": 1.8,
+  "file": "patient-lunge-v2.mp3"
+}

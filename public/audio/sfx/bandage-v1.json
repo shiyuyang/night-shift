@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. Close dry foley of tearing medical gauze packaging and wrapping a cloth bandage, two soft fabric pulls then gentle pat. No voice.",
+  "requested_duration": 1.2,
+  "file": "bandage-v1.mp3"
+}

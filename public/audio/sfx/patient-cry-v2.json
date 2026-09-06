@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Unsettling adult patient quietly sobbing in an abandoned tiled hospital at night. Uneven trembling whimpers, stifled breaths, one unnaturally long exhale. Dark hollow cavernous reverb and clearly audible distant corridor echoes; sobs return faintly from empty rooms. Sparse and sinister, not theatrical. No words, music, percussion or loud scream. First sob immediate, last two seconds lingering cold ghostly echo tails.",
+  "requested_duration": 6.5,
+  "file": "patient-cry-v2.mp3"
+}

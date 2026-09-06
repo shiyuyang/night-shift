@@ -1,0 +1,2044 @@
+{
+  "bgColor": "#10181B",
+  "defs": {
+    "entities": [
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "Wall",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 1,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "Bed",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 2,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "Crate",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 3,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "Door",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 4,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "DoorUse",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 5,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "PlayerSpawn",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 6,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "Exit",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 7,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "ReturnZone",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 8,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "Key_A",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 9,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "Box0_A",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 10,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "Box1_A",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 11,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "Box2_A",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 12,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "Key_B",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 13,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "Box0_B",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 14,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "Box1_B",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 15,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "Box2_B",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 16,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "Machine",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 17,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "CameraBounds",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 18,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "PlayBounds",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 19,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "MonsterLeft",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 20,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "MonsterRight",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 21,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "LampWest",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 22,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "LampCenter",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 23,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "LampExit",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 24,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "LampSouth",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 25,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#975352",
+        "height": 16,
+        "identifier": "WeeperSpawn",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 26,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      }
+    ],
+    "enums": [],
+    "externalEnums": [],
+    "layers": [
+      {
+        "__type": "Entities",
+        "displayOpacity": 1,
+        "gridSize": 1,
+        "identifier": "Architecture",
+        "intGridValues": [],
+        "intGridValuesGroups": [],
+        "parallaxFactorX": 0,
+        "parallaxFactorY": 0,
+        "parallaxScaling": false,
+        "pxOffsetX": 0,
+        "pxOffsetY": 0,
+        "uid": 100,
+        "autoRuleGroups": [],
+        "canSelectWhenInactive": true,
+        "excludedTags": [],
+        "guideGridHei": 0,
+        "guideGridWid": 0,
+        "hideFieldsWhenInactive": false,
+        "hideInList": false,
+        "inactiveOpacity": 0.25,
+        "renderInWorldView": true,
+        "requiredTags": [],
+        "tilePivotX": 0,
+        "tilePivotY": 0,
+        "type": "Entities",
+        "uiFilterTags": [],
+        "useAsyncRender": false
+      },
+      {
+        "__type": "Entities",
+        "displayOpacity": 1,
+        "gridSize": 1,
+        "identifier": "Loot_A",
+        "intGridValues": [],
+        "intGridValuesGroups": [],
+        "parallaxFactorX": 0,
+        "parallaxFactorY": 0,
+        "parallaxScaling": false,
+        "pxOffsetX": 0,
+        "pxOffsetY": 0,
+        "uid": 101,
+        "autoRuleGroups": [],
+        "canSelectWhenInactive": true,
+        "excludedTags": [],
+        "guideGridHei": 0,
+        "guideGridWid": 0,
+        "hideFieldsWhenInactive": false,
+        "hideInList": false,
+        "inactiveOpacity": 0.25,
+        "renderInWorldView": true,
+        "requiredTags": [],
+        "tilePivotX": 0,
+        "tilePivotY": 0,
+        "type": "Entities",
+        "uiFilterTags": [],
+        "useAsyncRender": false
+      },
+      {
+        "__type": "Entities",
+        "displayOpacity": 1,
+        "gridSize": 1,
+        "identifier": "Loot_B",
+        "intGridValues": [],
+        "intGridValuesGroups": [],
+        "parallaxFactorX": 0,
+        "parallaxFactorY": 0,
+        "parallaxScaling": false,
+        "pxOffsetX": 0,
+        "pxOffsetY": 0,
+        "uid": 102,
+        "autoRuleGroups": [],
+        "canSelectWhenInactive": true,
+        "excludedTags": [],
+        "guideGridHei": 0,
+        "guideGridWid": 0,
+        "hideFieldsWhenInactive": false,
+        "hideInList": false,
+        "inactiveOpacity": 0.25,
+        "renderInWorldView": true,
+        "requiredTags": [],
+        "tilePivotX": 0,
+        "tilePivotY": 0,
+        "type": "Entities",
+        "uiFilterTags": [],
+        "useAsyncRender": false
+      }
+    ],
+    "levelFields": [],
+    "tilesets": []
+  },
+  "externalLevels": false,
+  "iid": "9ba63b7b-34c6-44e5-be34-5c26daa85631",
+  "jsonVersion": "1.5.3",
+  "levels": [
+    {
+      "__bgColor": "#162020",
+      "__neighbours": [],
+      "fieldInstances": [],
+      "identifier": "Ward",
+      "iid": "c3ba997f-a479-4021-a6c1-b3d9fb1d9757",
+      "pxHei": 576,
+      "pxWid": 960,
+      "uid": 200,
+      "worldDepth": 0,
+      "worldX": 0,
+      "worldY": 0,
+      "__smartColor": "#687A72",
+      "bgPivotX": 0,
+      "bgPivotY": 0,
+      "useAutoIdentifier": false,
+      "layerInstances": [
+        {
+          "__cHei": 576,
+          "__cWid": 960,
+          "__gridSize": 1,
+          "__identifier": "Architecture",
+          "__opacity": 1,
+          "__pxTotalOffsetX": 0,
+          "__pxTotalOffsetY": 0,
+          "__type": "Entities",
+          "autoLayerTiles": [],
+          "entityInstances": [
+            {
+              "__grid": [
+                22,
+                61
+              ],
+              "__identifier": "Wall",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 1,
+              "fieldInstances": [],
+              "height": 28,
+              "iid": "5b117339-e989-48ce-b55f-abbddbd9c5cc",
+              "px": [
+                22,
+                61
+              ],
+              "width": 916
+            },
+            {
+              "__grid": [
+                22,
+                89
+              ],
+              "__identifier": "Wall",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 1,
+              "fieldInstances": [],
+              "height": 439,
+              "iid": "e9855b73-d722-43cb-b471-83a14c3ffe37",
+              "px": [
+                22,
+                89
+              ],
+              "width": 14
+            },
+            {
+              "__grid": [
+                924,
+                89
+              ],
+              "__identifier": "Wall",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 1,
+              "fieldInstances": [],
+              "height": 439,
+              "iid": "1029cf0e-77fd-4a5e-8ebd-e5e066e192fd",
+              "px": [
+                924,
+                89
+              ],
+              "width": 14
+            },
+            {
+              "__grid": [
+                22,
+                508
+              ],
+              "__identifier": "Wall",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 1,
+              "fieldInstances": [],
+              "height": 20,
+              "iid": "a2c59e5f-a20a-4eaa-84c5-8c6dc488282c",
+              "px": [
+                22,
+                508
+              ],
+              "width": 916
+            },
+            {
+              "__grid": [
+                36,
+                263
+              ],
+              "__identifier": "Wall",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 1,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "1a8af391-e6b0-4fa9-84ba-0ee53ffedc85",
+              "px": [
+                36,
+                263
+              ],
+              "width": 90
+            },
+            {
+              "__grid": [
+                188,
+                263
+              ],
+              "__identifier": "Wall",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 1,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "8b15400e-9c9f-4bec-afa8-c10656022c16",
+              "px": [
+                188,
+                263
+              ],
+              "width": 240
+            },
+            {
+              "__grid": [
+                500,
+                263
+              ],
+              "__identifier": "Wall",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 1,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "014451ec-ce11-4450-8815-ce594d45aec1",
+              "px": [
+                500,
+                263
+              ],
+              "width": 270
+            },
+            {
+              "__grid": [
+                832,
+                263
+              ],
+              "__identifier": "Wall",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 1,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "b9123113-d848-4002-a8ea-0475d00a13cb",
+              "px": [
+                832,
+                263
+              ],
+              "width": 92
+            },
+            {
+              "__grid": [
+                36,
+                350
+              ],
+              "__identifier": "Wall",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 1,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "dc0222bd-168f-40ec-bbd4-eb1e7e126475",
+              "px": [
+                36,
+                350
+              ],
+              "width": 90
+            },
+            {
+              "__grid": [
+                188,
+                350
+              ],
+              "__identifier": "Wall",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 1,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "b2513e1f-7387-4e96-ae87-1d1e93573f70",
+              "px": [
+                188,
+                350
+              ],
+              "width": 240
+            },
+            {
+              "__grid": [
+                500,
+                350
+              ],
+              "__identifier": "Wall",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 1,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "f98d2d96-00b7-434a-a070-6bf74ee601e9",
+              "px": [
+                500,
+                350
+              ],
+              "width": 270
+            },
+            {
+              "__grid": [
+                832,
+                350
+              ],
+              "__identifier": "Wall",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 1,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "dd9f09ef-938f-403b-ab0c-4183a035ba8c",
+              "px": [
+                832,
+                350
+              ],
+              "width": 92
+            },
+            {
+              "__grid": [
+                330,
+                89
+              ],
+              "__identifier": "Wall",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 1,
+              "fieldInstances": [],
+              "height": 174,
+              "iid": "a10ef887-7e1a-473d-b58c-97a7cd730a49",
+              "px": [
+                330,
+                89
+              ],
+              "width": 14
+            },
+            {
+              "__grid": [
+                330,
+                366
+              ],
+              "__identifier": "Wall",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 1,
+              "fieldInstances": [],
+              "height": 142,
+              "iid": "070d5333-a5af-4c29-bb48-7befbc848606",
+              "px": [
+                330,
+                366
+              ],
+              "width": 14
+            },
+            {
+              "__grid": [
+                650,
+                89
+              ],
+              "__identifier": "Wall",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 1,
+              "fieldInstances": [],
+              "height": 174,
+              "iid": "79312b92-d214-47c9-bc44-1a4f43c7b87e",
+              "px": [
+                650,
+                89
+              ],
+              "width": 14
+            },
+            {
+              "__grid": [
+                650,
+                366
+              ],
+              "__identifier": "Wall",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 1,
+              "fieldInstances": [],
+              "height": 142,
+              "iid": "eb19ad37-20b6-4715-90c7-9967506b1613",
+              "px": [
+                650,
+                366
+              ],
+              "width": 14
+            },
+            {
+              "__grid": [
+                69,
+                135
+              ],
+              "__identifier": "Bed",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 2,
+              "fieldInstances": [],
+              "height": 76,
+              "iid": "d94cc2b9-17b4-4208-9123-a248931a2b68",
+              "px": [
+                69,
+                135
+              ],
+              "width": 38
+            },
+            {
+              "__grid": [
+                212,
+                135
+              ],
+              "__identifier": "Bed",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 2,
+              "fieldInstances": [],
+              "height": 76,
+              "iid": "6b9bbc39-a571-4a3e-87f4-01321f8faedc",
+              "px": [
+                212,
+                135
+              ],
+              "width": 38
+            },
+            {
+              "__grid": [
+                373,
+                135
+              ],
+              "__identifier": "Bed",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 2,
+              "fieldInstances": [],
+              "height": 76,
+              "iid": "8e18ffb5-2c4b-46e6-97d5-7585c6fb81d3",
+              "px": [
+                373,
+                135
+              ],
+              "width": 38
+            },
+            {
+              "__grid": [
+                541,
+                135
+              ],
+              "__identifier": "Bed",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 2,
+              "fieldInstances": [],
+              "height": 76,
+              "iid": "91ff8a9c-8ee3-4f96-a2b1-ca6cfd35ba9f",
+              "px": [
+                541,
+                135
+              ],
+              "width": 38
+            },
+            {
+              "__grid": [
+                685,
+                135
+              ],
+              "__identifier": "Bed",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 2,
+              "fieldInstances": [],
+              "height": 76,
+              "iid": "33f7e008-3239-462a-b4c7-de83105b96df",
+              "px": [
+                685,
+                135
+              ],
+              "width": 38
+            },
+            {
+              "__grid": [
+                838,
+                135
+              ],
+              "__identifier": "Bed",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 2,
+              "fieldInstances": [],
+              "height": 76,
+              "iid": "d65a56d6-0f87-439a-8759-415f041e84a3",
+              "px": [
+                838,
+                135
+              ],
+              "width": 38
+            },
+            {
+              "__grid": [
+                94,
+                425
+              ],
+              "__identifier": "Crate",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 3,
+              "fieldInstances": [],
+              "height": 34,
+              "iid": "30dc9eed-021c-4910-8bb5-f3ae1265e2bf",
+              "px": [
+                94,
+                425
+              ],
+              "width": 42
+            },
+            {
+              "__grid": [
+                415,
+                425
+              ],
+              "__identifier": "Crate",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 3,
+              "fieldInstances": [],
+              "height": 34,
+              "iid": "fd37294e-7ba3-461b-bfcb-7fccedb75b39",
+              "px": [
+                415,
+                425
+              ],
+              "width": 42
+            },
+            {
+              "__grid": [
+                728,
+                425
+              ],
+              "__identifier": "Crate",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 3,
+              "fieldInstances": [],
+              "height": 34,
+              "iid": "d6814290-bdbc-440f-a163-d62e5e6c09ef",
+              "px": [
+                728,
+                425
+              ],
+              "width": 42
+            },
+            {
+              "__grid": [
+                770,
+                263
+              ],
+              "__identifier": "Door",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 4,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "a01c2a93-1ea5-422a-84aa-0db20211dc9b",
+              "px": [
+                770,
+                263
+              ],
+              "width": 62
+            },
+            {
+              "__grid": [
+                801,
+                296
+              ],
+              "__identifier": "DoorUse",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 5,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "c8a65971-196b-49e5-bd34-7f0dd21b2efa",
+              "px": [
+                801,
+                296
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                458,
+                318
+              ],
+              "__identifier": "PlayerSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 6,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "caf10718-f829-46cf-ae0d-992bd033a342",
+              "px": [
+                458,
+                318
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                65,
+                319
+              ],
+              "__identifier": "Exit",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 7,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "d9f9d53f-6741-4a25-8fdd-2e828a14d680",
+              "px": [
+                65,
+                319
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                430,
+                280
+              ],
+              "__identifier": "ReturnZone",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 8,
+              "fieldInstances": [],
+              "height": 65,
+              "iid": "2a247d02-95fd-4ee7-bc32-f5b245a58150",
+              "px": [
+                430,
+                280
+              ],
+              "width": 90
+            },
+            {
+              "__grid": [
+                20,
+                60
+              ],
+              "__identifier": "CameraBounds",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 18,
+              "fieldInstances": [],
+              "height": 468,
+              "iid": "e3651139-2123-4224-9cad-9590a4af96e6",
+              "px": [
+                20,
+                60
+              ],
+              "width": 920
+            },
+            {
+              "__grid": [
+                36,
+                90
+              ],
+              "__identifier": "PlayBounds",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 19,
+              "fieldInstances": [],
+              "height": 418,
+              "iid": "736f6ff5-ab32-4f66-822e-a4c765e6d720",
+              "px": [
+                36,
+                90
+              ],
+              "width": 888
+            },
+            {
+              "__grid": [
+                65,
+                320
+              ],
+              "__identifier": "MonsterLeft",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 20,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "73de669e-b4ce-4a45-8d53-5cc12d286368",
+              "px": [
+                65,
+                320
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                890,
+                320
+              ],
+              "__identifier": "MonsterRight",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 21,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "e53065f9-f88e-47db-8be3-328e816a8243",
+              "px": [
+                890,
+                320
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                156,
+                302
+              ],
+              "__identifier": "LampWest",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 22,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "6cc6f627-a3bb-48cf-9445-10b6cee2dfbc",
+              "px": [
+                156,
+                302
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                480,
+                304
+              ],
+              "__identifier": "LampCenter",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 23,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "81a843eb-aa39-425f-9e1d-588b42f033a5",
+              "px": [
+                480,
+                304
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                72,
+                294
+              ],
+              "__identifier": "LampExit",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 24,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "a2d08ab2-5dc2-4745-a555-07eac6493ce1",
+              "px": [
+                72,
+                294
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                610,
+                436
+              ],
+              "__identifier": "LampSouth",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 25,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "5f3496ef-7600-48ab-8c54-1962f3958a4d",
+              "px": [
+                610,
+                436
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                426,
+                150
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "abb7c9bf-85d5-4769-a082-63d1d952ef01",
+              "px": [
+                426,
+                150
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                594,
+                150
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "1d82183f-bb6c-4b91-840e-6c111174aa6d",
+              "px": [
+                594,
+                150
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                258,
+                414
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "c43b0f7d-dbd5-4fba-a814-52228f8f7bb4",
+              "px": [
+                258,
+                414
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                378,
+                438
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "9b253ad8-1273-49a9-bb36-b9a2169d628d",
+              "px": [
+                378,
+                438
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                786,
+                438
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "e2ea9208-d62b-4acf-bc5d-43271ada264f",
+              "px": [
+                786,
+                438
+              ],
+              "width": 8
+            }
+          ],
+          "gridTiles": [],
+          "iid": "c2798811-2c8e-49c9-badf-e52b29de0268",
+          "intGridCsv": [],
+          "layerDefUid": 100,
+          "levelId": 200,
+          "pxOffsetX": 0,
+          "pxOffsetY": 0,
+          "visible": true,
+          "optionalRules": [],
+          "seed": 0
+        },
+        {
+          "__cHei": 576,
+          "__cWid": 960,
+          "__gridSize": 1,
+          "__identifier": "Loot_A",
+          "__opacity": 1,
+          "__pxTotalOffsetX": 0,
+          "__pxTotalOffsetY": 0,
+          "__type": "Entities",
+          "autoLayerTiles": [],
+          "entityInstances": [
+            {
+              "__grid": [
+                107,
+                393
+              ],
+              "__identifier": "Key_A",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 9,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "bd6f1e70-1df1-4919-b102-e0ec77e323a2",
+              "px": [
+                107,
+                393
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                236,
+                235
+              ],
+              "__identifier": "Box0_A",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 10,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "5d362879-0fc8-4293-9abe-96e43dc2cb9b",
+              "px": [
+                236,
+                235
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                603,
+                427
+              ],
+              "__identifier": "Box1_A",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 11,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "90132fe8-6923-47f8-9759-55161caa42b4",
+              "px": [
+                603,
+                427
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                770,
+                170
+              ],
+              "__identifier": "Box2_A",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 12,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "a7707d7f-1690-4367-8d04-4eff9846a5e6",
+              "px": [
+                770,
+                170
+              ],
+              "width": 8
+            }
+          ],
+          "gridTiles": [],
+          "iid": "277ec1f2-8a35-47f8-9df5-0d711aa76dc1",
+          "intGridCsv": [],
+          "layerDefUid": 101,
+          "levelId": 200,
+          "pxOffsetX": 0,
+          "pxOffsetY": 0,
+          "visible": true,
+          "optionalRules": [],
+          "seed": 0
+        },
+        {
+          "__cHei": 576,
+          "__cWid": 960,
+          "__gridSize": 1,
+          "__identifier": "Loot_B",
+          "__opacity": 1,
+          "__pxTotalOffsetX": 0,
+          "__pxTotalOffsetY": 0,
+          "__type": "Entities",
+          "autoLayerTiles": [],
+          "entityInstances": [
+            {
+              "__grid": [
+                232,
+                446
+              ],
+              "__identifier": "Key_B",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 13,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "c4b3fcbe-b6f8-4f5a-9749-e775095d3b20",
+              "px": [
+                232,
+                446
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                395,
+                235
+              ],
+              "__identifier": "Box0_B",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 14,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "e7662f2b-f02b-4cab-a19b-fdc4b1eb6f0b",
+              "px": [
+                395,
+                235
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                541,
+                444
+              ],
+              "__identifier": "Box1_B",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 15,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "7922d02e-75b0-4734-a966-573219ae7363",
+              "px": [
+                541,
+                444
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                770,
+                170
+              ],
+              "__identifier": "Box2_B",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 16,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "052029c1-4dfd-4f40-87ed-3e382ee172c4",
+              "px": [
+                770,
+                170
+              ],
+              "width": 8
+            }
+          ],
+          "gridTiles": [],
+          "iid": "d96bde43-ed2c-47ae-82b5-45f8dae07419",
+          "intGridCsv": [],
+          "layerDefUid": 102,
+          "levelId": 200,
+          "pxOffsetX": 0,
+          "pxOffsetY": 0,
+          "visible": true,
+          "optionalRules": [],
+          "seed": 0
+        }
+      ]
+    }
+  ],
+  "toc": [],
+  "worlds": [],
+  "appBuildId": 0,
+  "backupLimit": 10,
+  "backupOnSave": true,
+  "customCommands": [],
+  "defaultEntityHeight": 16,
+  "defaultEntityWidth": 16,
+  "defaultGridSize": 1,
+  "defaultLevelBgColor": "#162020",
+  "defaultPivotX": 0,
+  "defaultPivotY": 0,
+  "dummyWorldIid": "9ff0837a-6491-4546-ad25-fad0104f3874",
+  "exportLevelBg": false,
+  "exportTiled": false,
+  "flags": [],
+  "identifierStyle": "Free",
+  "imageExportMode": "None",
+  "levelNamePattern": "Level_%idx",
+  "minifyJson": false,
+  "nextUid": 201,
+  "simplifiedExport": false,
+  "defaultLevelWidth": 960,
+  "defaultLevelHeight": 576,
+  "worldLayout": "Free",
+  "worldGridWidth": 960,
+  "worldGridHeight": 576
+}

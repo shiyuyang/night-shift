@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "music_v1",
+  "prompt": "Instrumental understated survival horror game score. No vocals, speech, bright melody, EDM or cinematic trailer drums. Leave space for footsteps and streamer speech. Abandoned medicine warehouse. Dry wooden knocks, distant rattling shelves, sparse detuned plucked strings and dusty tape flutter over uneasy low drones. Hollow, cramped and unpredictable. No big stingers. Sustained loopable beginning and end, no song outro.",
+  "requested_duration": 40,
+  "file": "warehouse-theme-v1.mp3"
+}

@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "An adult hospital patient lunges with a short feral desperate shriek and bare feet scraping hospital linoleum, cloth whipping forward. Single sharp close vocal attack, no words, no music, no explosion.",
+  "requested_duration": 1,
+  "file": "patient-lunge-v1.mp3"
+}

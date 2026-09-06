@@ -1,0 +1,16 @@
+/* Full-window shell, stable 5:3 playfield. The surround carries no dashboard. */
+.game-wrap{background:radial-gradient(ellipse at center,#162025 0,#090f13 55%,#03070a 100%)}
+.game-wrap::before{content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 3px,#0002 3px 4px);opacity:.3}
+#play-hud{position:absolute;left:var(--play-left,0);top:var(--play-top,0);width:var(--play-width,100%);height:var(--play-height,100%);pointer-events:none;z-index:22}
+#play-hud button{pointer-events:auto}#play-hud .screen-heading{top:16px}.teaching #play-hud button{pointer-events:none}
+#play-hud .inventory-hud{left:auto;right:20px;bottom:20px}#play-hud .game-bottom{left:20px;bottom:20px;font-size:12px;gap:12px}#play-hud .phase-hud{left:20px;bottom:66px;gap:5px}#play-hud #game-message{bottom:125px}
+#pause-menu{z-index:38;max-height:calc(100dvh - 90px)}
+.game-wrap[data-presentation=portrait] #play-hud{inset:0;width:100%;height:100%}
+.game-wrap[data-presentation=portrait] #play-hud .game-bottom{left:12px;right:12px;top:calc(var(--play-top) + var(--play-height) + 12px);bottom:auto;justify-content:center;font-size:11px}
+.game-wrap[data-presentation=portrait] #play-hud .inventory-hud{left:50%;right:auto;transform:translateX(-50%);top:calc(var(--play-top) + var(--play-height) + 58px);bottom:auto}
+.game-wrap[data-presentation=portrait] #play-hud .phase-hud{left:12px;right:12px;top:calc(var(--play-top) + var(--play-height) + 140px);bottom:auto;text-align:center;align-items:center}
+.game-wrap[data-presentation=portrait] #play-hud #game-message{top:calc(var(--play-top) - 70px);bottom:auto;max-width:90%;max-height:62px;overflow:auto}
+.game-wrap[data-presentation=portrait] #tutorial-card{top:60px;max-height:calc(100dvh - 90px);overflow:auto}
+@media(max-height:550px) and (min-aspect-ratio:1/1){#play-hud .screen-heading{top:7px;left:12px;right:12px}#play-hud .screen-heading button{font-size:10px;padding:5px 8px}#play-hud .game-hud{top:35px;left:12px}#play-hud .game-bottom{left:12px;bottom:12px;padding:5px;gap:8px;font-size:10px}#play-hud .inventory-hud{right:12px;bottom:12px;gap:5px}#play-hud .item-slot{width:43px;min-height:52px;font-size:10px;padding:6px 3px 3px}#play-hud .item-slot svg{width:18px;height:18px}#play-hud .item-slot>b{font-size:11px}#play-hud .phase-hud{left:12px;bottom:48px}#play-hud .phase-hud #objective{display:none}#play-hud #game-message{bottom:82px;font-size:11px;padding:4px 8px}#tutorial-card{top:52px;max-height:calc(100dvh - 66px);overflow:auto}.start-layer{padding:50px 24px 14px;justify-content:flex-start}.start-layer .night-select button{min-height:48px}.start-layer h2{font-size:24px;margin:6px 0}.start-layer .night-select{max-width:480px}#pause-menu{top:45px;max-height:calc(100dvh - 55px)}}
+
+#game canvas{position:absolute;left:var(--play-left,0);top:var(--play-top,0);margin:0!important}#play-hud #game-message{transform:translateX(-50%)}

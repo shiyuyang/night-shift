@@ -1,0 +1,104 @@
+[
+  {
+    "id": "ward",
+    "name": "废弃病房",
+    "theme": 0,
+    "source": "maps/ward.ldtk",
+    "level": "Ward",
+    "events": "game/events/ward-return.json",
+    "lights": [
+      {
+        "id": "LampWest",
+        "radius": 155,
+        "strength": 0.66,
+        "color": "#c59b65"
+      },
+      {
+        "id": "LampCenter",
+        "radius": 150,
+        "strength": 0.56,
+        "color": "#79a6b6"
+      },
+      {
+        "id": "LampExit",
+        "radius": 112,
+        "strength": 0.5,
+        "color": "#b74336"
+      },
+      {
+        "id": "LampSouth",
+        "radius": 120,
+        "strength": 0.52,
+        "color": "#80a394"
+      }
+    ]
+  },
+  {
+    "id": "warehouse",
+    "name": "药品仓库",
+    "theme": 1,
+    "source": "maps/warehouse.ldtk",
+    "level": "Warehouse",
+    "events": "game/events/warehouse-return.json",
+    "lights": [
+      {
+        "id": "LampWest",
+        "radius": 155,
+        "strength": 0.66,
+        "color": "#c59b65"
+      },
+      {
+        "id": "LampCenter",
+        "radius": 150,
+        "strength": 0.56,
+        "color": "#79a6b6"
+      },
+      {
+        "id": "LampExit",
+        "radius": 112,
+        "strength": 0.5,
+        "color": "#b74336"
+      },
+      {
+        "id": "LampSouth",
+        "radius": 120,
+        "strength": 0.52,
+        "color": "#80a394"
+      }
+    ]
+  },
+  {
+    "id": "plant",
+    "name": "地下机房",
+    "theme": 2,
+    "source": "maps/plant.ldtk",
+    "level": "Plant",
+    "events": "game/events/plant-return.json",
+    "lights": [
+      {
+        "id": "LampWest",
+        "radius": 155,
+        "strength": 0.66,
+        "color": "#c59b65"
+      },
+      {
+        "id": "LampCenter",
+        "radius": 150,
+        "strength": 0.56,
+        "color": "#79a6b6"
+      },
+      {
+        "id": "LampExit",
+        "radius": 112,
+        "strength": 0.5,
+        "color": "#b74336"
+      },
+      {
+        "id": "LampSouth",
+        "radius": 120,
+        "strength": 0.52,
+        "color": "#80a394"
+      }
+    ]
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. A disposable photographic flash discharging, a sharp short electrical snap with a low dry air puff. No explosion, no music.",
+  "requested_duration": 0.8,
+  "file": "flash-v1.mp3"
+}

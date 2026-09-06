@@ -1,0 +1,15 @@
+{
+  "firstEncounter": 24,
+  "walkSpeed": 83,
+  "sprintSpeed": 125,
+  "monsterBaseSpeed": 87,
+  "speedPerFuse": 6,
+  "encounterDuration": 22,
+  "durationPerFuse": 3,
+  "recoveryInterval": 24,
+  "exitStartup": 8,
+  "contactDamage": 20,
+  "staminaDrain": 28,
+  "staminaRecovery": 20,
+  "staminaRecoveryDelay": 1.2
+}

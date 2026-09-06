@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Isolated game sound effect for a restrained abandoned hospital survival horror game. No music, no speech, no background ambience. Immediate onset. Distant unnatural breath mixed with low rusty metal scrape, an approaching presence warning, tense rising texture with a quick decay, no scream.",
+  "requested_duration": 1.8,
+  "file": "ghost-v1.mp3"
+}

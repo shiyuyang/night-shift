@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "music_v1",
+  "requested_duration_ms": 24000,
+  "prompt": "Instrumental survival horror pursuit underscore in an abandoned hospital. Claustrophobic low pulsing strings, irregular muted heartbeat percussion, scraping metallic overtones, dissonant bowed cello, urgent but restrained, 100 BPM implied pulse. No vocals, no speech, no bright lead melody, no EDM, no jump scare blast. Sparse enough to hear footsteps and streamer voice. Sustain tension throughout, no triumphant resolution. Compatible with dark ambient exploration music, steady loopable texture.",
+  "file": "ward-pursuit-v3.mp3"
+}

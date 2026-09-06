@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "A distressed adult hospital patient recoils from a bright flash, a brief shocked cry followed by hands covering face and knees collapsing onto linoleum. Natural breath and gown foley, no words, no music.",
+  "requested_duration": 1.5,
+  "file": "patient-stunned-v1.mp3"
+}

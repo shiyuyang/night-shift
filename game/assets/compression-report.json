@@ -1,0 +1,207 @@
+[
+  {
+    "file": "assets/watchman-sheet-v4.webp",
+    "source_bytes": 1591407,
+    "bytes": 665826
+  },
+  {
+    "file": "assets/patient-sheet-v4.webp",
+    "source_bytes": 1134945,
+    "bytes": 852950
+  },
+  {
+    "file": "assets/bed-overhead-v4.webp",
+    "source_bytes": 681453,
+    "bytes": 458760
+  },
+  {
+    "file": "assets/weeping-patient-v1.webp",
+    "source_bytes": 1348325,
+    "bytes": 960314
+  },
+  {
+    "file": "assets/hospital-listener-v1.webp",
+    "source_bytes": 1161746,
+    "bytes": 840216
+  },
+  {
+    "file": "assets/hospital-light-shy-v1.webp",
+    "source_bytes": 1164164,
+    "bytes": 822152
+  },
+  {
+    "file": "assets/hospital-patroller-v1.webp",
+    "source_bytes": 1081888,
+    "bytes": 834208
+  },
+  {
+    "file": "assets/hospital-corridor-v2.webp",
+    "source_bytes": 2024250,
+    "bytes": 1383456
+  },
+  {
+    "file": "assets/hospital-floor-v2.webp",
+    "source_bytes": 2354337,
+    "bytes": 1742434
+  },
+  {
+    "file": "assets/hospital-wall-v2.webp",
+    "source_bytes": 2820080,
+    "bytes": 2058530
+  },
+  {
+    "file": "assets/watch-desk-v1.webp",
+    "source_bytes": 1922036,
+    "bytes": 1459970
+  },
+  {
+    "file": "assets/archive-ward-v1.webp",
+    "source_bytes": 1944674,
+    "bytes": 1424116
+  },
+  {
+    "file": "assets/archive-warehouse-v1.webp",
+    "source_bytes": 1939765,
+    "bytes": 1449540
+  },
+  {
+    "file": "assets/archive-plant-v1.webp",
+    "source_bytes": 1987684,
+    "bytes": 1466216
+  },
+  {
+    "file": "audio/ward-exploration-v3.opus",
+    "source_bytes": 641194,
+    "bytes": 328591
+  },
+  {
+    "file": "audio/ward-pursuit-v3.opus",
+    "source_bytes": 384149,
+    "bytes": 194956
+  },
+  {
+    "file": "audio/warehouse-theme-v1.opus",
+    "source_bytes": 641192,
+    "bytes": 368837
+  },
+  {
+    "file": "audio/plant-theme-v1.opus",
+    "source_bytes": 641192,
+    "bytes": 333182
+  },
+  {
+    "file": "audio/power-theme-v1.opus",
+    "source_bytes": 129192,
+    "bytes": 71148
+  },
+  {
+    "file": "audio/menu-theme-v1.opus",
+    "source_bytes": 768252,
+    "bytes": 447999
+  },
+  {
+    "file": "audio/ward-alt-theme-v1.opus",
+    "source_bytes": 767834,
+    "bytes": 428040
+  },
+  {
+    "file": "audio/warehouse-alt-theme-v1.opus",
+    "source_bytes": 768670,
+    "bytes": 404221
+  },
+  {
+    "file": "audio/plant-alt-theme-v1.opus",
+    "source_bytes": 769087,
+    "bytes": 420196
+  },
+  {
+    "file": "audio/sfx/step-v1.opus",
+    "source_bytes": 8820,
+    "bytes": 2361
+  },
+  {
+    "file": "audio/sfx/metal-v1.opus",
+    "source_bytes": 20105,
+    "bytes": 5484
+  },
+  {
+    "file": "audio/sfx/impact-v1.opus",
+    "source_bytes": 13835,
+    "bytes": 3754
+  },
+  {
+    "file": "audio/sfx/ghost-v1.opus",
+    "source_bytes": 29300,
+    "bytes": 8053
+  },
+  {
+    "file": "audio/sfx/heartbeat-v1.opus",
+    "source_bytes": 11745,
+    "bytes": 2822
+  },
+  {
+    "file": "audio/sfx/call-bell-v1.opus",
+    "source_bytes": 16761,
+    "bytes": 5922
+  },
+  {
+    "file": "audio/sfx/bandage-v1.opus",
+    "source_bytes": 20105,
+    "bytes": 5884
+  },
+  {
+    "file": "audio/sfx/breath-v1.opus",
+    "source_bytes": 18433,
+    "bytes": 5701
+  },
+  {
+    "file": "audio/sfx/exhausted-v1.opus",
+    "source_bytes": 20105,
+    "bytes": 5266
+  },
+  {
+    "file": "audio/sfx/recover-v1.opus",
+    "source_bytes": 11745,
+    "bytes": 2840
+  },
+  {
+    "file": "audio/sfx/relay-v1.opus",
+    "source_bytes": 8820,
+    "bytes": 2327
+  },
+  {
+    "file": "audio/sfx/relay-urgent-v1.opus",
+    "source_bytes": 8820,
+    "bytes": 2400
+  },
+  {
+    "file": "audio/sfx/pickup-v1.opus",
+    "source_bytes": 10492,
+    "bytes": 2849
+  },
+  {
+    "file": "audio/sfx/flash-v1.opus",
+    "source_bytes": 13835,
+    "bytes": 3596
+  },
+  {
+    "file": "audio/sfx/patient-cry-v2.opus",
+    "source_bytes": 100771,
+    "bytes": 31835
+  },
+  {
+    "file": "audio/sfx/patient-rise-v1.opus",
+    "source_bytes": 13835,
+    "bytes": 3848
+  },
+  {
+    "file": "audio/sfx/patient-lunge-v2.opus",
+    "source_bytes": 29300,
+    "bytes": 9005
+  },
+  {
+    "file": "audio/sfx/patient-stunned-v1.opus",
+    "source_bytes": 24702,
+    "bytes": 7500
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "provider": "ElevenLabs",
+  "model": "music_v1",
+  "prompt": "Instrumental understated survival horror game score. No vocals, speech, bright melody, EDM or cinematic trailer drums. Leave space for footsteps and streamer speech. Exactly eight seconds of emergency power startup tension. Begin with low throbbing electrical suspense. Gradually tighten dissonant strings and accelerating muted mechanical pulses. Final three seconds intensely claustrophobic rising pressure. Abrupt clean cutoff at eight seconds, no resolution or trailing outro. No huge volume jumps.",
+  "requested_duration": 8,
+  "file": "power-theme-v1.mp3",
+  "postprocess": "Loudness normalized; tempo fitted to eight-second countdown; short ending fade"
+}
