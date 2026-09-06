@@ -7,7 +7,7 @@ export const lessons={
  heal:{title:'先处理伤口',text:'按 Q 或点击绷带恢复 40 生命。确认生命恢复，才算完成包扎。',target:'Q'},
  practice:{title:'包扎演练 · 可选',text:'你还没有受伤。可模拟一次轻伤（20 生命），再用 Q 包扎；也可以跳过，等真正受伤时再学。',target:'Q'},
  door:{title:'留好退路',text:'靠近房门按 E 开锁。已解锁的门可以反复开关；关门能挡住怪物。',target:'world'},
- exit:{title:'最后一段巡查',text:'出口供电需要 8 秒。时间到后靠近 EXIT 按 E，期间可以移动、放诱饵或使用闪光。',target:'world'}
+ exit:{title:'最后一段巡查',text:'三枚保险丝已集齐。这扇发绿光的门就是出口。镜头返回后开始计算通电的 8 秒；保持移动，通电后到这里按 E 撤离。',target:'world'}
 } as const;
 export type Lesson=keyof typeof lessons;
 const STORAGE='night-shift-tutorial-v1';

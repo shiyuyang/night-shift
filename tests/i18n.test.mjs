@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
+import {t,setLocale,stageName} from '../src/i18n.ts';
+test('menu translations have matching keys and interpolation parameters',()=>{const a=JSON.parse(readFileSync('game/locales/zh-CN.json')),b=JSON.parse(readFileSync('game/locales/en.json'));assert.deepEqual(Object.keys(a).sort(),Object.keys(b).sort());for(const k of Object.keys(a)){assert.ok(b[k].trim());assert.deepEqual((a[k].match(/\{\w+\}/g)||[]).sort(),(b[k].match(/\{\w+\}/g)||[]).sort(),k);}});
+test('language changes resolve stage names and parameterized records',()=>{setLocale('en');assert.equal(t('menu.page',{page:1,total:2}),'Page 1 / 2');assert.equal(stageName(1),'Medical Stores');setLocale('zh-CN');assert.equal(stageName(1),'药品仓库');});

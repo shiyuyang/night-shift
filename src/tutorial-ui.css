@@ -1,0 +1,25 @@
+/* Tutorial copy floats in the scene; no panel, backdrop or enclosing border. */
+#tutorial-card{background:none;border:0;box-shadow:none;padding:0;width:min(460px,calc(100vw - 56px));top:22%;color:#d1cfb9;font:16px/1.8 NightPixel,monospace;text-shadow:2px 2px #070c10;filter:none;backdrop-filter:none}
+#tutorial-card::before,#tutorial-card::after{display:none}
+#tutorial-card small{font:12px/1.6 NightPixel,monospace;color:#acaa91;letter-spacing:2px}
+#tutorial-card h2{font:26px/1.4 NightPixel,monospace;color:#e1dcc3;letter-spacing:2px;margin:10px 0 14px}
+#tutorial-card p{margin:0 0 18px;max-width:32em;color:#c8ccb7}
+#tutorial-card>div{gap:8px 24px;align-items:center}
+#tutorial-card button,#tutorial-card #tutorial-skip,#tutorial-card #tutorial-practice-skip{background:none;border:0;box-shadow:none;color:#a3aa98;padding:9px 0;font:14px/1.6 NightPixel,monospace;text-shadow:2px 2px #070c10}
+#tutorial-card #tutorial-continue{color:#e0d7b7}
+#tutorial-card #tutorial-continue::before{content:'›';display:inline-block;margin-right:9px;color:#d6be89}
+#tutorial-card button:hover{color:#fff0cd;filter:none;text-decoration:underline;text-underline-offset:5px}
+#tutorial-card button:focus-visible{outline:0;color:#fff0cd;text-decoration:underline;text-underline-offset:5px}
+.tutorial-target{outline:none!important;animation:none!important}
+.tutorial-target::after{border-width:2px;border-color:#bcb697;background:none;box-shadow:none}
+.teaching #play-hud .phase-hud{background:none;border:0;box-shadow:none}
+.game-wrap[data-presentation=portrait] #tutorial-card{top:8%;max-height:80dvh;width:calc(100vw - 48px);overflow:auto}
+@media(max-width:540px){#tutorial-card{font-size:14px;line-height:1.8}#tutorial-card h2{font-size:22px}#tutorial-card button{font-size:13px}}
+@media(max-height:600px) and (min-width:541px){#tutorial-card{top:12%;width:min(470px,70vw);max-height:78dvh;overflow:auto;padding:0;font-size:14px}#tutorial-card h2{font-size:22px;margin:8px 0}#tutorial-card p{margin-bottom:10px}}
+/* Context is explained by the tutorial itself, not a duplicate phase panel. */
+.teaching #play-hud .phase-hud,
+.teaching .game-wrap[data-presentation=portrait] #play-hud .phase-hud{display:none!important}
+/* Dim the scene, not a rectangle behind the copy. */
+#game-wrap::after{content:'';position:absolute;inset:0;z-index:39;pointer-events:none;background:#030709;opacity:0;transition:opacity .18s ease-out}
+.teaching #game-wrap::after{opacity:.42}
+@media(prefers-reduced-motion:reduce){#game-wrap::after{transition:none}}

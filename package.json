@@ -15,7 +15,12 @@
     "content:check": "node scripts/validate-content.mjs",
     "test:browser:immersive": "node tests/immersive.browser.mjs",
     "test:browser:tutorial": "node tests/tutorial.browser.mjs",
-    "test:browser:encounters": "node tests/encounters.browser.mjs"
+    "test:browser:encounters": "node tests/encounters.browser.mjs",
+    "build:deploy": "GAME_BASE_PATH=/games/night-shift/ npm run build",
+    "test:browser:deployment": "node tests/deployment.browser.mjs",
+    "deploy:linode": "python scripts/deploy-linode.py",
+    "test:browser:menu": "node tests/menu.browser.mjs",
+    "test:browser:exit": "node tests/tutorial-exit.browser.mjs"
   },
   "dependencies": {
     "phaser": "^3.90.0"
