@@ -4,7 +4,7 @@
   "domain": "night-shift-assets.liveinteractivegame.com",
   "zoneId": "30badb66445e606e10540be49d75e584",
   "prefix": "games/night-shift",
-  "version": "c1405de20e423902",
+  "version": "23c3421c260f604c",
   "files": [
     {
       "file": "assets/archive-plant-v1.q95.webp",
@@ -85,6 +85,11 @@
       "file": "assets/weeping-patient-v1.webp",
       "bytes": 960314,
       "sha256": "8fae864e2a1efc1390c25efe17520953d4b51f89503d1a7b6e40c0b19f8777b7"
+    },
+    {
+      "file": "assets/yakin-byoutou-title-v4.webp",
+      "bytes": 491356,
+      "sha256": "1f955f252a8522041cad1bea30cdff79235d7f4b5ee3b56d2585905f2fc66744"
     },
     {
       "file": "audio/menu-theme-v1.mp3",
@@ -202,6 +207,6 @@
       "sha256": "85cb13ec5954e082b256bba488ff9c9366a9f3166a61bf174cddb9fde0651ae0"
     }
   ],
-  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/",
-  "verifiedAt": "2026-09-07T03:27:51.043Z"
+  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/23c3421c260f604c/",
+  "verifiedAt": "2026-09-07T10:51:23.683Z"
 }

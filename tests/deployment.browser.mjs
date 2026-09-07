@@ -20,6 +20,12 @@ try{
  await page.goto(url,{waitUntil:'domcontentloaded'});await page.locator('#start:enabled').waitFor({timeout:60000});
  await page.waitForFunction(()=>document.querySelector('#survey')?.dataset.loaded==='true');
  assert.equal(await page.locator('[data-command]').count(),0);
+ assert.equal(await page.title(),'夜勤病棟');
+ const brand=page.locator('.game-brand img');
+ assert.equal(await brand.getAttribute('alt'),'夜勤病棟');
+ assert.equal(await brand.getAttribute('src'),assetBase+'assets/yakin-byoutou-title-v4.webp');
+ assert.ok(await brand.evaluate(image=>image.complete&&image.naturalWidth>0),'Title image must load');
+ assert.equal(await page.locator('.desk-title p').textContent(),'今晚的病人，比名册上多一位。');
  await page.locator('#start').click();await page.waitForFunction(()=>document.body.dataset.ui==='playing');
  await page.waitForFunction(()=>document.querySelector('#music-status')?.textContent?.includes('已就绪'),null,{timeout:60000});
  console.log(fallback?'MP3 fallback playback ready':'Opus playback ready');

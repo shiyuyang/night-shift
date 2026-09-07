@@ -19,7 +19,7 @@ try{
  await page.locator('#book-guide').click();assert.equal(await page.locator('#guide-dialog').evaluate(el=>el.open),true);await page.locator('#close-guide').click();
  await page.locator('#desk-settings').click();assert.equal(await page.locator('#pause-menu').isVisible(),true);await page.locator('#resume').click();
  }
- await page.reload();await page.locator('#start:enabled').waitFor();assert.equal(await page.locator('#menu-language').inputValue(),'en');assert.equal(await page.locator('.desk-title h2').textContent(),'NIGHT SHIFT');
+ await page.reload();await page.locator('#start:enabled').waitFor();assert.equal(await page.locator('#menu-language').inputValue(),'en');assert.equal(await page.locator('.desk-title h2 img').getAttribute('alt'),'夜勤病棟');
  await page.locator('#start').click();await page.waitForFunction(()=>document.body.dataset.ui==='playing');assert.deepEqual(errors,[]);await page.close();
  }
  console.log('Journal menu: both languages, persistence, stage locks, guide/settings, signing and four viewports passed.');

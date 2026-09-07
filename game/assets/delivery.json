@@ -79,6 +79,11 @@
       "source": "/assets/archive-plant-v1.png",
       "file": "/assets/archive-plant-v1.q95.webp",
       "encoding": "webp-q95"
+    },
+    {
+      "source": "/assets/yakin-byoutou-title-v4.png",
+      "file": "/assets/yakin-byoutou-title-v4.webp",
+      "encoding": "lossless"
     }
   ],
   "staticFiles": [
