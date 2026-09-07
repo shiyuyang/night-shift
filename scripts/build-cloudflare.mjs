@@ -17,11 +17,7 @@ assert.equal(files.filter(f=>f.file.endsWith('.js')).length,2);
 assert.equal(files.filter(f=>f.file.endsWith('.css')).length,1);
 rmSync('dist-cloudflare',{recursive:true,force:true});
 for(const {file} of files){const target='dist-cloudflare/night-shift/'+file;mkdirSync(dirname(target),{recursive:true});copyFileSync('dist/'+file,target);}
-copyFileSync('deploy/games-index.html','dist-cloudflare/index.html');
-writeFileSync('dist-cloudflare/_headers',`/
-  Cache-Control: no-cache
-  X-Night-Shift-Hosting: cloudflare-static
-/night-shift/*
+writeFileSync('dist-cloudflare/_headers',`/night-shift/*
   X-Content-Type-Options: nosniff
   X-Night-Shift-Hosting: cloudflare-static
 /night-shift/

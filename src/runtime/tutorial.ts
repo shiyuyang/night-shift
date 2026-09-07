@@ -12,16 +12,13 @@ export const lessons={
  exit:{title:'最后一段巡查',text:'三枚保险丝已集齐。这扇发绿光的门就是出口。镜头返回后开始计算通电的 8 秒；保持移动，通电后到这里按 E 撤离。',target:'world'}
 } as const;
 export type Lesson=keyof typeof lessons;
-const STORAGE='night-shift-tutorial-v1';
 export class Tutorial {
  completed=new Set<Lesson>();shown=new Set<Lesson>();prompt:Lesson|null=null;enabled=false;practiceSkipped=false;
- constructor(){try{const saved=JSON.parse(localStorage.getItem(STORAGE)??'[]');if(Array.isArray(saved))for(const id of saved)if(id in lessons)this.completed.add(id);}catch{}}
- start(round:number){this.enabled=round===1;this.shown.clear();this.prompt=null;this.practiceSkipped=false;}
+ start(round:number){this.enabled=round===1;this.completed.clear();this.shown.clear();this.prompt=null;this.practiceSkipped=false;}
  needs(id:Lesson){return this.enabled&&!this.completed.has(id);}
  show(id:Lesson){if(!this.needs(id)||this.shown.has(id)||this.prompt)return false;this.prompt=id;this.shown.add(id);return true;}
  resume(){const id=this.prompt;this.prompt=null;return id;}
- learn(id:Lesson){if(!this.needs(id))return;this.completed.add(id);try{localStorage.setItem(STORAGE,JSON.stringify([...this.completed]));}catch{}}
+ learn(id:Lesson){if(!this.needs(id))return;this.completed.add(id);}
  skip(){this.enabled=false;this.prompt=null;}
- reset(){this.completed.clear();this.shown.clear();this.prompt=null;try{localStorage.removeItem(STORAGE);}catch{}}
  get combatTraining(){return this.enabled&&(this.needs('flash')||this.needs('decoy'));}
 }

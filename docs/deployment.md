@@ -2,7 +2,7 @@
 
 当前入口：https://games.liveinteractivegame.com/night-shift/
 
-游戏目录：https://games.liveinteractivegame.com/
+站点根路径不公开游戏目录，返回 404；通过各游戏的直接链接访问。
 
 ## 当前部署：Cloudflare
 
@@ -12,7 +12,7 @@ HTML、JS、CSS 托管在 Workers Static Assets；图片、音频、字体仍由
 npm run deploy:cloudflare
 ```
 
-该命令校验 R2 素材版本，构建静态页面，执行 Wrangler dry-run、本地正常音频和 MP3 回退检查，再部署并检查线上。测试禁止游戏访问旧 API 域名和 Linode IP。构建输出 `dist-cloudflare/` 只包含目录首页、游戏 HTML、两份 JS、CSS 及响应头配置。媒体不重复上传。
+该命令校验 R2 素材版本，构建静态页面，执行 Wrangler dry-run、本地正常音频和 MP3 回退检查，再部署并检查线上。测试禁止游戏访问旧 API 域名和 Linode IP。构建输出 `dist-cloudflare/` 只包含游戏 HTML、两份 JS、CSS 及响应头配置。媒体不重复上传。
 
 域名与未来游戏路径约定见 [Cloudflare 托管设计](cloudflare-hosting.md)。
 

@@ -147,3 +147,10 @@ html[lang=en] #start-layer .night-select button b{font-size:15px}
 .patrol-book{padding-bottom:7%}
 /* Final inset: use the left negative space without hugging the browser edge. */
 @media(min-width:701px){#start-layer{padding-left:4vw}}
+/* Move only the action; preserve the original footer and book geometry. */
+#start-layer #start{top:-62px}
+/* Fit the full title/book/footer composition to the available viewport. */
+#start-layer{overflow:hidden}
+#start-layer .desk-content{position:absolute;margin:0;transform-origin:top left}
+@media(max-width:700px){#start-layer .desk-content{width:calc(100% - 32px)}}
+@media(min-width:701px) and (max-width:1100px){#start-layer #start{width:140px}}
