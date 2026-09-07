@@ -12,3 +12,6 @@ __pycache__/
 *.py[cod]
 *.log
 .DS_Store
+.wrangler/
+dist-cloudflare/
+dist-cloudflare-manifest.json

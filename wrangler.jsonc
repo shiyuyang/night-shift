@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "interactive-games",
+  "account_id": "88a1b52dbadcb015f707f00ce53ff7ce",
+  "compatibility_date": "2026-09-07",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    {
+      "pattern": "games.liveinteractivegame.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "api.liveinteractivegame.com/games/night-shift*",
+      "zone_name": "liveinteractivegame.com"
+    }
+  ],
+  "assets": {
+    "directory": "./dist-cloudflare",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  },
+  "main": "deploy/games-worker.mjs"
+}

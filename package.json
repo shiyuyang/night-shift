@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "npm run content:check && tsc && vite build",
+    "build": "npm run content:check && npm run assets:pack && tsc && vite build && node scripts/prepare-delivery.mjs",
     "preview": "vite preview --host 0.0.0.0",
-    "test": "npm run content:check && node --test server/events.test.mjs tests/collision.test.mjs tests/encounters.test.mjs tests/levels.test.mjs tests/run-rules.test.mjs tests/campaign.test.mjs tests/locks.test.mjs tests/assets.test.mjs tests/event-runtime.test.mjs tests/tutorial.test.mjs tests/presentation.test.mjs tests/audio.test.mjs tests/random-level.test.mjs tests/rogue.test.mjs",
+    "test": "npm run content:check && npm run assets:pack && node --test server/events.test.mjs tests/collision.test.mjs tests/encounters.test.mjs tests/levels.test.mjs tests/run-rules.test.mjs tests/campaign.test.mjs tests/locks.test.mjs tests/assets.test.mjs tests/event-runtime.test.mjs tests/tutorial.test.mjs tests/presentation.test.mjs tests/audio.test.mjs tests/audio-pack.test.mjs tests/random-level.test.mjs tests/rogue.test.mjs",
     "test:browser": "node tests/endless.browser.mjs 1 3",
     "test:browser:night2": "node tests/endless.browser.mjs 2 3",
     "test:browser:lighting": "node tests/lighting.browser.mjs",
@@ -18,10 +18,16 @@
     "test:browser:encounters": "node tests/encounters.browser.mjs",
     "build:deploy": "GAME_BASE_PATH=/games/night-shift/ npm run build",
     "test:browser:deployment": "node tests/deployment.browser.mjs",
-    "deploy:linode": "python scripts/deploy-linode.py",
+    "deploy:linode": "python3 scripts/deploy-linode.py",
     "test:browser:menu": "node tests/menu.browser.mjs",
     "test:browser:exit": "node tests/tutorial-exit.browser.mjs",
-    "test:browser:vitals": "node tests/tutorial-vitals.browser.mjs"
+    "test:browser:vitals": "node tests/tutorial-vitals.browser.mjs",
+    "assets:compress": "python3 scripts/compress-assets.py",
+    "assets:pack": "node scripts/pack-audio.mjs",
+    "predev": "npm run assets:pack",
+    "assets:publish": "node scripts/publish-r2.mjs",
+    "build:cloudflare": "node scripts/build-cloudflare.mjs",
+    "deploy:cloudflare": "node scripts/deploy-cloudflare.mjs"
   },
   "dependencies": {
     "phaser": "^3.90.0"
@@ -31,6 +37,7 @@
     "@types/node": "^24.0.0",
     "ajv": "^8.20.0",
     "typescript": "^5.9.3",
-    "vite": "^7.1.0"
+    "vite": "^7.1.0",
+    "wrangler": "4.129.0"
   }
 }

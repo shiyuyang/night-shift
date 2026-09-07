@@ -1,7 +1,7 @@
 /* The title is a desk, and the navigation is ink on an open duty ledger. */
 #start-layer{isolation:isolate;display:flex;align-items:center;justify-content:center;padding:5vh 5vw 3vh;background:#171711;text-align:left;overflow:auto;color:#29291f}
 #start-layer.hidden{display:none}
-.desk-scene{position:fixed;inset:0;z-index:-3;background:url('/assets/watch-desk-painted-v2.webp') center/cover no-repeat}
+.desk-scene{position:fixed;inset:0;z-index:-3;background:url('/assets/watch-desk-painted-v2.q95.webp') center/cover no-repeat}
 #start-layer::before{content:'';position:fixed;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(0deg,#080a0b45,transparent 55%,#03080b30)}
 .desk-content{width:min(900px,88vw);max-width:none;margin:auto;flex-shrink:0;padding-top:2vh}
 .desk-title{margin:0 0 24px 24px;text-shadow:1px 2px 2px #000}
@@ -73,7 +73,7 @@ html[lang=en] .desk-title h2{letter-spacing:4px}html[lang=en] #start-layer .nigh
 @media(prefers-reduced-motion:reduce){.desk-interference,.patrol-book.turning .book-body,.patrol-book.signing .file-stamp{animation:none}}
 
 /* Revision: the original hospital composition, a pixel ledger and a clear paper-tab action. */
-.desk-scene{background-image:url('/assets/watch-desk-v1.webp');image-rendering:pixelated}
+.desk-scene{background-image:url('/assets/watch-desk-v1.q95.webp');image-rendering:pixelated}
 #start-layer{justify-content:flex-start;padding:5vh 5vw;align-items:center}
 #start-layer::before{background:linear-gradient(90deg,#050a0d45,transparent 70%)}
 .desk-content{width:min(740px,57vw);max-width:none;margin:auto 0;padding:0}

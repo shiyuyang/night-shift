@@ -1,207 +1,389 @@
 [
   {
     "file": "assets/watchman-sheet-v4.webp",
+    "source": "assets/watchman-sheet-v4.png",
     "source_bytes": 1591407,
-    "bytes": 665826
+    "bytes": 665826,
+    "source_sha256": "2f46e9fabb78787dcd9c8fad4c1a22f79b0fc16b6133f831e27170fbad062f72",
+    "sha256": "5e672d200c09db0444b6b7731ddb20c38436c5b43f28dc0dec4beea63e20dcad",
+    "encoding": "lossless"
   },
   {
     "file": "assets/patient-sheet-v4.webp",
+    "source": "assets/patient-sheet-v4.png",
     "source_bytes": 1134945,
-    "bytes": 852950
+    "bytes": 852950,
+    "source_sha256": "00ca28bdd0abfbf9d10e6f7b5065903e9020d81f1d09e6388039fe364b0980fa",
+    "sha256": "12fc209228c8c962be94dc9d29c3243673a0f562d3d5c71f817dd21c3b8b3adb",
+    "encoding": "lossless"
   },
   {
     "file": "assets/bed-overhead-v4.webp",
+    "source": "assets/bed-overhead-v4.png",
     "source_bytes": 681453,
-    "bytes": 458760
+    "bytes": 458760,
+    "source_sha256": "205a4574164ff2c70cb4852835f78767e57ec6e81bdf783bbde7ed0b47ac2cc5",
+    "sha256": "a7f81c18983279366befb17b0b1da8963d28dc559052b82ed85585fb6289ba51",
+    "encoding": "lossless"
   },
   {
     "file": "assets/weeping-patient-v1.webp",
+    "source": "assets/weeping-patient-v1.png",
     "source_bytes": 1348325,
-    "bytes": 960314
+    "bytes": 960314,
+    "source_sha256": "7847d2a3e4e2f00ef146b3d967dd0304af0a570e41b4dabafcfc1a75fd42a50c",
+    "sha256": "8fae864e2a1efc1390c25efe17520953d4b51f89503d1a7b6e40c0b19f8777b7",
+    "encoding": "lossless"
   },
   {
     "file": "assets/hospital-listener-v1.webp",
+    "source": "assets/hospital-listener-v1.png",
     "source_bytes": 1161746,
-    "bytes": 840216
+    "bytes": 840216,
+    "source_sha256": "1a54e234497a5d36ba433ffb518d0f16d93f54d8a908f5a334e9f5531b4e6001",
+    "sha256": "b0cf7b3e227cd1547df84517198555b5807cc37a936d811abef47a528944545a",
+    "encoding": "lossless"
   },
   {
     "file": "assets/hospital-light-shy-v1.webp",
+    "source": "assets/hospital-light-shy-v1.png",
     "source_bytes": 1164164,
-    "bytes": 822152
+    "bytes": 822152,
+    "source_sha256": "c786308fcab9c890b2a1dceea459d19fdb73f1a332b887be90b503334238a285",
+    "sha256": "2f6ec34c7849481d449088ecdf1ff03dc35a85ad6b0530245547ea68c48cc0e7",
+    "encoding": "lossless"
   },
   {
     "file": "assets/hospital-patroller-v1.webp",
+    "source": "assets/hospital-patroller-v1.png",
     "source_bytes": 1081888,
-    "bytes": 834208
+    "bytes": 834208,
+    "source_sha256": "8a3e7f245e21c0468808db103ff0d9ca4086b489c3178c39c3abaceabe5b3b03",
+    "sha256": "7393cb63d8f78819a26356ecf9e317676bedf27f2ee3acd6d8dd4f3909b1d3ed",
+    "encoding": "lossless"
   },
   {
-    "file": "assets/hospital-corridor-v2.webp",
+    "file": "assets/hospital-corridor-v2.q95.webp",
+    "source": "assets/hospital-corridor-v2.png",
     "source_bytes": 2024250,
-    "bytes": 1383456
+    "bytes": 280544,
+    "source_sha256": "c7a5d970432c299f7d8dd34f5484ccab60705c1ed5f807e62652864354fdaca6",
+    "sha256": "b04933bdc200c6373b28100adfc0c4c9d1c5ba4ebc698d93f59249488e1ee2cf",
+    "encoding": "webp-q95"
   },
   {
-    "file": "assets/hospital-floor-v2.webp",
+    "file": "assets/hospital-floor-v2.q95.webp",
+    "source": "assets/hospital-floor-v2.png",
     "source_bytes": 2354337,
-    "bytes": 1742434
+    "bytes": 408898,
+    "source_sha256": "e7a43ab92af418d69274015343a0e7f1417fbc1d049351fe27408f07198eec1c",
+    "sha256": "aba52280f139899d5c49ad49a2035f1ee525b1bc58af7e854efac4827a722552",
+    "encoding": "webp-q95"
   },
   {
-    "file": "assets/hospital-wall-v2.webp",
+    "file": "assets/hospital-wall-v2.q95.webp",
+    "source": "assets/hospital-wall-v2.png",
     "source_bytes": 2820080,
-    "bytes": 2058530
+    "bytes": 608880,
+    "source_sha256": "7dc7d4431789fcf842c6b85e6880a56a3bf3c91f6ea6aa1b230ba215c85805b5",
+    "sha256": "a5523afb3a7c412c704683b55865a80b1aae92137837fdd7a997c4d0293343cb",
+    "encoding": "webp-q95"
   },
   {
-    "file": "assets/watch-desk-v1.webp",
+    "file": "assets/watch-desk-v1.q95.webp",
+    "source": "assets/watch-desk-v1.png",
     "source_bytes": 1922036,
-    "bytes": 1459970
+    "bytes": 282364,
+    "source_sha256": "b0cc5c71df16e32d5992f3ae59183176010c174b333ddf4b1ee0d7788208ed80",
+    "sha256": "2b594c15789c88e8499ab3e453d6fe8b84d356ca839f163e4796bfdc78b4a314",
+    "encoding": "webp-q95"
   },
   {
-    "file": "assets/archive-ward-v1.webp",
+    "file": "assets/watch-desk-painted-v2.q95.webp",
+    "source": "assets/watch-desk-painted-v2.png",
+    "source_bytes": 2304933,
+    "bytes": 467268,
+    "source_sha256": "1903fd01083e8f27b64873c3b12add1b0cf96d5968501db0d3ed20946c00792c",
+    "sha256": "122b313730f4d1fc5a15edd57c06083d176d61103ae6edfeb8c06f4c38fbe4b3",
+    "encoding": "webp-q95"
+  },
+  {
+    "file": "assets/patrol-book-pixel-v1.webp",
+    "source": "assets/patrol-book-pixel-v1.png",
+    "source_bytes": 1928246,
+    "bytes": 1272988,
+    "source_sha256": "9ea3cfd6bb1d37ee3666793a85fc3febc218f6c41e7543387ad8c695f94677b6",
+    "sha256": "298fcbbbf76ee4e3c35a8971e3f20ebee34404f9b9efd014df21e2f53abf118b",
+    "encoding": "lossless"
+  },
+  {
+    "file": "assets/archive-ward-v1.q95.webp",
+    "source": "assets/archive-ward-v1.png",
     "source_bytes": 1944674,
-    "bytes": 1424116
+    "bytes": 286658,
+    "source_sha256": "9bbda2c6df81cca2796630ce1e377d73fbec4335a0bf5b0cb8223fa6cfaa2eab",
+    "sha256": "e419e7b474f44fdb7f0669a48edad9c87acfa91e2000f6fe3a721b7d9391509a",
+    "encoding": "webp-q95"
   },
   {
-    "file": "assets/archive-warehouse-v1.webp",
+    "file": "assets/archive-warehouse-v1.q95.webp",
+    "source": "assets/archive-warehouse-v1.png",
     "source_bytes": 1939765,
-    "bytes": 1449540
+    "bytes": 340696,
+    "source_sha256": "5b18ad97968ac0a75618a755944b69bdfcfc1b3624ff9c8e60cb1bf72420efd1",
+    "sha256": "c27c4587b5974352864f900e3a5f2e57aa43da00caac31b5060ddc376f8b1560",
+    "encoding": "webp-q95"
   },
   {
-    "file": "assets/archive-plant-v1.webp",
+    "file": "assets/archive-plant-v1.q95.webp",
+    "source": "assets/archive-plant-v1.png",
     "source_bytes": 1987684,
-    "bytes": 1466216
+    "bytes": 310896,
+    "source_sha256": "202f0d6a5825736d09e541f56fa99d230aa066c552c081c80d19347172841ba2",
+    "sha256": "b747b0189f6ebd5ba8d83397ce198aececcdb52c94a462d6637c052358d859fb",
+    "encoding": "webp-q95"
   },
   {
     "file": "audio/ward-exploration-v3.opus",
+    "source": "audio/ward-exploration-v3.mp3",
     "source_bytes": 641194,
-    "bytes": 328591
+    "bytes": 328591,
+    "source_sha256": "39f533a92852588c0070096bb756d6cc611184cc62452bcc29a786ace0e4bc36",
+    "sha256": "c15c392d0950ac5653ffaa2e480cd058d112f5fb9013ed6ab5d1d9c866df0294",
+    "encoding": "opus-64k"
   },
   {
     "file": "audio/ward-pursuit-v3.opus",
+    "source": "audio/ward-pursuit-v3.mp3",
     "source_bytes": 384149,
-    "bytes": 194956
+    "bytes": 194956,
+    "source_sha256": "27870c1169ba354230293b3e475740ab7738f5c5f10441a826f71fc33bdd731b",
+    "sha256": "8e43a29924af56527a0bf48fbe73488a90739ccb43b7217c3c52d375c70c5ed8",
+    "encoding": "opus-64k"
   },
   {
     "file": "audio/warehouse-theme-v1.opus",
+    "source": "audio/warehouse-theme-v1.mp3",
     "source_bytes": 641192,
-    "bytes": 368837
+    "bytes": 368837,
+    "source_sha256": "73c482573fe7c1aa99dde0bd450b75233ace8e1e49280b7c87aab9a3eee343fc",
+    "sha256": "abc04b20b0ad17f38112cabdb550012f4f296724252707705398a5a6dace6d1b",
+    "encoding": "opus-64k"
   },
   {
     "file": "audio/plant-theme-v1.opus",
+    "source": "audio/plant-theme-v1.mp3",
     "source_bytes": 641192,
-    "bytes": 333182
+    "bytes": 333182,
+    "source_sha256": "cce9dd37a46619067d2c3f338204f2de301ee8913c9f3c887e15e7067efa6b50",
+    "sha256": "5285ccd6dd1916cbff273126062b80419e966c3674497585679dd53a6bb967a6",
+    "encoding": "opus-64k"
   },
   {
     "file": "audio/power-theme-v1.opus",
+    "source": "audio/power-theme-v1.mp3",
     "source_bytes": 129192,
-    "bytes": 71148
+    "bytes": 71148,
+    "source_sha256": "7c11b56e7c837681bf384dbcbfd23fbcdbd3fe00809cb04f52e4772178c56ca4",
+    "sha256": "cc36e7250f5cd8b12aa620aeef236194cf35fcd7a0094ddc9dee394fa9b9742c",
+    "encoding": "opus-64k"
   },
   {
     "file": "audio/menu-theme-v1.opus",
+    "source": "audio/menu-theme-v1.mp3",
     "source_bytes": 768252,
-    "bytes": 447999
+    "bytes": 447999,
+    "source_sha256": "f976424c49129f2ce7e54fac46381e096bf530b8e5c294ed8c0eb2680dd073de",
+    "sha256": "b276915b2bcc069b2c0bf9b5f83761aa24c971429199c573b7f122bdf69805ed",
+    "encoding": "opus-64k"
   },
   {
     "file": "audio/ward-alt-theme-v1.opus",
+    "source": "audio/ward-alt-theme-v1.mp3",
     "source_bytes": 767834,
-    "bytes": 428040
+    "bytes": 428040,
+    "source_sha256": "fb18b4e9eff6ed86dea8b178e25f01471d39b4bb109114951d251961b6a9781c",
+    "sha256": "9f486769ac8e42e87cf0d3716a19fcd755f7401cde7417ad0a30a62a0b17218d",
+    "encoding": "opus-64k"
   },
   {
     "file": "audio/warehouse-alt-theme-v1.opus",
+    "source": "audio/warehouse-alt-theme-v1.mp3",
     "source_bytes": 768670,
-    "bytes": 404221
+    "bytes": 404221,
+    "source_sha256": "2899a5964d3a61fc8d82d3bcb69a57e28aaca52c7824c992708c059368bea03f",
+    "sha256": "4312fad5ee4a2744ac15c3e50b1f5e24c664e4b7be2f001bbb2a5ddde410142a",
+    "encoding": "opus-64k"
   },
   {
     "file": "audio/plant-alt-theme-v1.opus",
+    "source": "audio/plant-alt-theme-v1.mp3",
     "source_bytes": 769087,
-    "bytes": 420196
+    "bytes": 420196,
+    "source_sha256": "0f4d443ede834b246d2f93033c2dc81040d9acbe60d3f7c36f74f4938b9680a7",
+    "sha256": "e81121f37dd59c39ef0351ecc26e4ef10458a494d33bf487d13a09d6424604b5",
+    "encoding": "opus-64k"
   },
   {
     "file": "audio/sfx/step-v1.opus",
+    "source": "audio/sfx/step-v1.mp3",
     "source_bytes": 8820,
-    "bytes": 2361
+    "bytes": 2361,
+    "source_sha256": "55bac932a5d10e82b00caf5e2344cf65d4462c5ce0a02f091408a81cea4eed27",
+    "sha256": "868a671bc373c078d92eaa8e772ef53309156cd1884f700e13772263cc6dfeab",
+    "encoding": "opus-40k"
   },
   {
     "file": "audio/sfx/metal-v1.opus",
+    "source": "audio/sfx/metal-v1.mp3",
     "source_bytes": 20105,
-    "bytes": 5484
+    "bytes": 5484,
+    "source_sha256": "41d20993684fdb20fb83af3bff22608e35283b5413c7588b011b9662d94ed86a",
+    "sha256": "89830e3d7a219203c64a8424e9606ad9f35f3fcd1069df1daf6e40686881bd6d",
+    "encoding": "opus-40k"
   },
   {
     "file": "audio/sfx/impact-v1.opus",
+    "source": "audio/sfx/impact-v1.mp3",
     "source_bytes": 13835,
-    "bytes": 3754
+    "bytes": 3754,
+    "source_sha256": "78a9b49d0a2dc80c884a8a09c3ce340e7b2fc8c503321263caee1acc57f1321b",
+    "sha256": "681b16ed3f70891f3a8a5faca4d9eb5a1acef03e1eef8c7bb290b4f838080a16",
+    "encoding": "opus-40k"
   },
   {
     "file": "audio/sfx/ghost-v1.opus",
+    "source": "audio/sfx/ghost-v1.mp3",
     "source_bytes": 29300,
-    "bytes": 8053
+    "bytes": 8053,
+    "source_sha256": "25b2d61bed10b24b729bc230561880a794313760f38768c99ba69f37107d219b",
+    "sha256": "2b566b157a442327fc5757cfdf6bb8e32d73784c45b775c002f09a9ede048c15",
+    "encoding": "opus-40k"
   },
   {
     "file": "audio/sfx/heartbeat-v1.opus",
+    "source": "audio/sfx/heartbeat-v1.mp3",
     "source_bytes": 11745,
-    "bytes": 2822
+    "bytes": 2822,
+    "source_sha256": "5e28808a881b4caa224cdc5ad5cc34bacd51f5dfd6fbf5bcf41aa28018175a9e",
+    "sha256": "84522db687a96192422861743ad1d24df1eac9f3fb57bf8ca07af3dac0d4a3b1",
+    "encoding": "opus-40k"
   },
   {
     "file": "audio/sfx/call-bell-v1.opus",
+    "source": "audio/sfx/call-bell-v1.mp3",
     "source_bytes": 16761,
-    "bytes": 5922
+    "bytes": 5922,
+    "source_sha256": "97e8dfff2626b6bcf16c973c60f093793e8b572dcbf94248dc83e046ab2ee189",
+    "sha256": "95ec81560b3929ef36b4710af3f0b34f170dbace2d8a0af25a4a6c846d56b857",
+    "encoding": "opus-40k"
   },
   {
     "file": "audio/sfx/bandage-v1.opus",
+    "source": "audio/sfx/bandage-v1.mp3",
     "source_bytes": 20105,
-    "bytes": 5884
+    "bytes": 5884,
+    "source_sha256": "87c93bf74fa77decfad036e11e79f0aac170466e5418a2ba7f8c872e8a106d50",
+    "sha256": "ec904cba7d058b5163d2f22c638296437d8558cf24cd07534edcc167568bb4e8",
+    "encoding": "opus-40k"
   },
   {
     "file": "audio/sfx/breath-v1.opus",
+    "source": "audio/sfx/breath-v1.mp3",
     "source_bytes": 18433,
-    "bytes": 5701
+    "bytes": 5701,
+    "source_sha256": "1cc1be5069b299478f5246200e872434dbe1bbcc50a2a68bb3cf04faac75a468",
+    "sha256": "07fce235bd48338a94d8510d2255979a3924bdc1fc6b76c950032d2fafb935b9",
+    "encoding": "opus-40k"
   },
   {
     "file": "audio/sfx/exhausted-v1.opus",
+    "source": "audio/sfx/exhausted-v1.mp3",
     "source_bytes": 20105,
-    "bytes": 5266
+    "bytes": 5266,
+    "source_sha256": "d583181b1c0364ff5603eddc497e001eb85ca05d9baf47e36a276734578f82f6",
+    "sha256": "4ee7f013f67b3ed415f38abb474206c914c2c43b021ecbf5942d1e8e6455aa08",
+    "encoding": "opus-40k"
   },
   {
     "file": "audio/sfx/recover-v1.opus",
+    "source": "audio/sfx/recover-v1.mp3",
     "source_bytes": 11745,
-    "bytes": 2840
+    "bytes": 2840,
+    "source_sha256": "f94b6d7d3afb71b32ac4f84fa0fac4a2cc16a0fd5ebc00060cb69c2eac52eb67",
+    "sha256": "11de2c32ea4a36c95408591a3827c99285151dd5aa908fb8fe5aa39a30903c4b",
+    "encoding": "opus-40k"
   },
   {
     "file": "audio/sfx/relay-v1.opus",
+    "source": "audio/sfx/relay-v1.mp3",
     "source_bytes": 8820,
-    "bytes": 2327
+    "bytes": 2327,
+    "source_sha256": "63bd17608d2505f77dd87e3364b813df74d8b3f173333ee20402b117723ca67e",
+    "sha256": "dd4dcc403e2a1df32100aaea02eef8a14cee119ae09b55f91e070a5ee1cc9cda",
+    "encoding": "opus-40k"
   },
   {
     "file": "audio/sfx/relay-urgent-v1.opus",
+    "source": "audio/sfx/relay-urgent-v1.mp3",
     "source_bytes": 8820,
-    "bytes": 2400
+    "bytes": 2400,
+    "source_sha256": "24595d43527c38b0f23e0bfe2ce6fe9891dd5dde6a0c4b16aea59d41cdf29e40",
+    "sha256": "77e0e24838ce42a6c5418bd6945f45db136faaab9dbdbebe5b9b6cb5e17417a2",
+    "encoding": "opus-40k"
   },
   {
     "file": "audio/sfx/pickup-v1.opus",
+    "source": "audio/sfx/pickup-v1.mp3",
     "source_bytes": 10492,
-    "bytes": 2849
+    "bytes": 2849,
+    "source_sha256": "1e3b0f6e217ba951074c7e84b030cca1e9f7160da08393d6c67c938a82b8ae16",
+    "sha256": "a10b871b366ba1bdcccebf98534ffca0da843f40636e03ea20e88c50a5fbb255",
+    "encoding": "opus-40k"
   },
   {
     "file": "audio/sfx/flash-v1.opus",
+    "source": "audio/sfx/flash-v1.mp3",
     "source_bytes": 13835,
-    "bytes": 3596
+    "bytes": 3596,
+    "source_sha256": "0a898c8631d46e77c85df001057e0e660a7052e02f43ff0733c2cd0fac8c7260",
+    "sha256": "f39642bb149725c7ffa9edfb2c81ef0037e659f18733396f866b97e74d2634da",
+    "encoding": "opus-40k"
   },
   {
     "file": "audio/sfx/patient-cry-v2.opus",
+    "source": "audio/sfx/patient-cry-v2.mp3",
     "source_bytes": 100771,
-    "bytes": 31835
+    "bytes": 31835,
+    "source_sha256": "400a7a9c511db12765a19b46d27fa40da77a2cf81786354cd8137d0537a416b2",
+    "sha256": "3eaef656f45a174c17ea0b0a5340acb604b661c396cdb045177b8b2df802929b",
+    "encoding": "opus-40k"
   },
   {
     "file": "audio/sfx/patient-rise-v1.opus",
+    "source": "audio/sfx/patient-rise-v1.mp3",
     "source_bytes": 13835,
-    "bytes": 3848
+    "bytes": 3848,
+    "source_sha256": "c602933848e484d14f00da84e65cc7c91fa9ca5141e22b806b34196efdc76e4b",
+    "sha256": "075447eeaedc321af353f6237cd29d854efa16bd05999e931af76b93f84924fd",
+    "encoding": "opus-40k"
   },
   {
     "file": "audio/sfx/patient-lunge-v2.opus",
+    "source": "audio/sfx/patient-lunge-v2.mp3",
     "source_bytes": 29300,
-    "bytes": 9005
+    "bytes": 9005,
+    "source_sha256": "10ec10b9c351c03fd4aec76f350e1eb86ddc34d45038120668eb85113d382219",
+    "sha256": "694d9c383b307ee693fde482c53fd26182fc722f7d666d1815980653cc01443d",
+    "encoding": "opus-40k"
   },
   {
     "file": "audio/sfx/patient-stunned-v1.opus",
+    "source": "audio/sfx/patient-stunned-v1.mp3",
     "source_bytes": 24702,
-    "bytes": 7500
+    "bytes": 7500,
+    "source_sha256": "422ef2b9443ea104a4db930f9fd1d2a3899d75d86c09e0de8fd75a6b40a4becb",
+    "sha256": "7f69155866e414df034c15b2904e074f8f30615579ec6c2519557e72c35919f1",
+    "encoding": "opus-40k"
   }
 ]

@@ -1,0 +1,12 @@
+import {execFileSync} from 'node:child_process';
+import {readFileSync} from 'node:fs';
+const env={...process.env,GAME_BASE_PATH:'/night-shift/',VITE_ASSET_BASE_URL:JSON.parse(readFileSync('deploy/r2-release.json')).assetBaseUrl,TEST_NO_LINODE:'1'};
+const run=(command,args,extra={})=>execFileSync(command,args,{env:{...env,...extra},stdio:'inherit'});
+run('npm',['run','build:cloudflare']);
+run('npx',['wrangler','deploy','--dry-run']);
+run('node',['tests/deployment.browser.mjs']);
+run('node',['tests/deployment.browser.mjs'],{TEST_MP3_FALLBACK:'1'});
+run('npx',['wrangler','deploy']);
+const production={DEPLOY_URL:'https://games.liveinteractivegame.com/night-shift/'};
+run('node',['tests/deployment.browser.mjs'],production);
+run('node',['tests/deployment.browser.mjs'],{...production,TEST_MP3_FALLBACK:'1'});

@@ -6,7 +6,10 @@ import { validateEvent, createGate } from './server/events.mjs';
 import type { ServerResponse } from 'node:http';
 export default defineConfig({
   base: process.env.GAME_BASE_PATH || "/",
-  plugins: [{name:'ldtk-content',buildStart(){exportMaps();},configureServer(server){let files=exportMaps();server.watcher.add(files);server.watcher.on('change',changed=>{if(files.includes(changed)){try{files=exportMaps();server.watcher.add(files);}catch(error){server.ws.send({type:'error',err:{message:String(error),stack:''}});}}});}}, {name:'local-webhook', configureServer(server) {
+  plugins: [{name:'cdn-css',enforce:'pre',transform(code,id){
+    const base=process.env.VITE_ASSET_BASE_URL?.replace(/\/$/,'');
+    if(base&&id.endsWith('.css'))return code.replace(/url\((['"]?)\/(assets|fonts)\/([^)'"\s]+)\1\)/g,(_match,quote,folder,file)=>`url(${quote}${base}/${folder}/${file}${quote})`);
+  }},{name:'ldtk-content',buildStart(){exportMaps();},configureServer(server){let files=exportMaps();server.watcher.add(files);server.watcher.on('change',changed=>{if(files.includes(changed)){try{files=exportMaps();server.watcher.add(files);}catch(error){server.ws.send({type:'error',err:{message:String(error),stack:''}});}}});}}, {name:'local-webhook', configureServer(server) {
     const clients = new Set<ServerResponse>(); const gate = createGate();
     server.middlewares.use('/api/events', (req,res) => {
       if(req.method !== 'GET') { res.writeHead(405).end(); return; }

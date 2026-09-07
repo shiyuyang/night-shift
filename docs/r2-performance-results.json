@@ -1,0 +1,4153 @@
+{
+  "conditions": {
+    "date": "2026-09-07",
+    "client": "local Chrome 1440x900, fresh browser context for each run",
+    "warmupRuns": 1,
+    "measuredRuns": 5,
+    "thirdParty": "Google Fonts CSS and Cloudflare analytics mocked; no game/media requests mocked",
+    "edgeCache": "natural cache, observed via CDP; no global purge",
+    "timing": "DOMContentLoaded then start enabled plus survey loaded; click start then music ready"
+  },
+  "variants": {
+    "original": {
+      "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/",
+      "stats": {
+        "menuMs": {
+          "median": 3313.0499170000003,
+          "min": 1801.9921669999985,
+          "max": 4530.043624999998
+        },
+        "audioMs": {
+          "median": 1009.8706659999989,
+          "min": 743.7171660000022,
+          "max": 1909.276667
+        },
+        "totalMs": {
+          "median": 4596.225958999999,
+          "min": 2594.9942499999997,
+          "max": 5583.693082999998
+        }
+      },
+      "runs": [
+        {
+          "warmup": false,
+          "menuMs": 3313.0499170000003,
+          "audioMs": 1909.276667,
+          "totalMs": 5255.646624999999,
+          "httpRequests": 44,
+          "gameRequests": 42,
+          "mediaRequests": 38,
+          "mediaTransferBytes": 10940820,
+          "errors": [],
+          "media": [
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/patrol-book-pixel-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b913ee295655-SJC",
+              "disk": false,
+              "bytes": 1273643
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/watch-desk-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b913ee2a5655-SJC",
+              "disk": false,
+              "bytes": 282908
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/archive-ward-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b913ee2e5655-SJC",
+              "disk": false,
+              "bytes": 287210
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-listener-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9142e3a5655-SJC",
+              "disk": false,
+              "bytes": 840819
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-light-shy-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9142e3b5655-SJC",
+              "disk": false,
+              "bytes": 822753
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-patroller-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9142e385655-SJC",
+              "disk": false,
+              "bytes": 834820
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/watchman-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9142e395655-SJC",
+              "disk": false,
+              "bytes": 666414
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/patient-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9142e3e5655-SJC",
+              "disk": false,
+              "bytes": 853559
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/weeping-patient-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9142e3d5655-SJC",
+              "disk": false,
+              "bytes": 960940
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/bed-overhead-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9142e3c5655-SJC",
+              "disk": false,
+              "bytes": 459328
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b913ee2b5655-SJC",
+              "disk": false,
+              "bytes": 535427
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/warehouse-alt-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b91c8fb95655-SJC",
+              "disk": false,
+              "bytes": 404834
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/plant-alt-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b91c8fba5655-SJC",
+              "disk": false,
+              "bytes": 420770
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/power-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b91c8fb65655-SJC",
+              "disk": false,
+              "bytes": 71669
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-alt-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b91c8fb85655-SJC",
+              "disk": false,
+              "bytes": 428655
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/plant-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b91c8fb45655-SJC",
+              "disk": false,
+              "bytes": 333750
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-exploration-v3.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b91c8fb25655-SJC",
+              "disk": false,
+              "bytes": 329188
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-pursuit-v3.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b91c8fb35655-SJC",
+              "disk": false,
+              "bytes": 195494
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/menu-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b91c8fb75655-SJC",
+              "disk": false,
+              "bytes": 448638
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/warehouse-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b91c8fb55655-SJC",
+              "disk": false,
+              "bytes": 369460
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/step-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b924597e5655-SJC",
+              "disk": false,
+              "bytes": 2867
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/pickup-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b924598c5655-SJC",
+              "disk": false,
+              "bytes": 3351
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/heartbeat-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b92459825655-SJC",
+              "disk": false,
+              "bytes": 3322
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-cry-v2.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b924598b5655-SJC",
+              "disk": false,
+              "bytes": 32358
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/relay-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b92459875655-SJC",
+              "disk": false,
+              "bytes": 2834
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-stunned-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b924598d5655-SJC",
+              "disk": false,
+              "bytes": 8011
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/exhausted-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b924598a5655-SJC",
+              "disk": false,
+              "bytes": 5770
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/relay-urgent-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b92459885655-SJC",
+              "disk": false,
+              "bytes": 2900
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/call-bell-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b92459805655-SJC",
+              "disk": false,
+              "bytes": 6425
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/bandage-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b92459845655-SJC",
+              "disk": false,
+              "bytes": 6385
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/metal-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b924597f5655-SJC",
+              "disk": false,
+              "bytes": 5987
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/impact-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b92459815655-SJC",
+              "disk": false,
+              "bytes": 4259
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/breath-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b92459855655-SJC",
+              "disk": false,
+              "bytes": 6202
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/ghost-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b92459835655-SJC",
+              "disk": false,
+              "bytes": 8556
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-rise-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b924598f5655-SJC",
+              "disk": false,
+              "bytes": 4353
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/flash-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b92459895655-SJC",
+              "disk": false,
+              "bytes": 4106
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/recover-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b92459865655-SJC",
+              "disk": false,
+              "bytes": 3338
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-lunge-v2.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b924598e5655-SJC",
+              "disk": false,
+              "bytes": 9517
+            }
+          ]
+        },
+        {
+          "warmup": false,
+          "menuMs": 3655.3910419999993,
+          "audioMs": 880.0038750000003,
+          "totalMs": 4596.225958999999,
+          "httpRequests": 44,
+          "gameRequests": 42,
+          "mediaRequests": 38,
+          "mediaTransferBytes": 10940869,
+          "errors": [],
+          "media": [
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/watch-desk-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9377cf0586f-SJC",
+              "disk": false,
+              "bytes": 282907
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/patrol-book-pixel-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9377cf1586f-SJC",
+              "disk": false,
+              "bytes": 1273639
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-listener-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b937bcfe586f-SJC",
+              "disk": false,
+              "bytes": 840818
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-light-shy-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b937bd01586f-SJC",
+              "disk": false,
+              "bytes": 822773
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-patroller-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b937bd00586f-SJC",
+              "disk": false,
+              "bytes": 834817
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/watchman-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b937bcff586f-SJC",
+              "disk": false,
+              "bytes": 666409
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/patient-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b937bd02586f-SJC",
+              "disk": false,
+              "bytes": 853567
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/weeping-patient-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b937bd03586f-SJC",
+              "disk": false,
+              "bytes": 960925
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/bed-overhead-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b937bd04586f-SJC",
+              "disk": false,
+              "bytes": 459329
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9377cf2586f-SJC",
+              "disk": false,
+              "bytes": 535417
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/archive-ward-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b93dfe97586f-SJC",
+              "disk": false,
+              "bytes": 287204
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-exploration-v3.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9405ef9586f-SJC",
+              "disk": false,
+              "bytes": 329194
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/warehouse-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9405efd586f-SJC",
+              "disk": false,
+              "bytes": 369449
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/warehouse-alt-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9405f02586f-SJC",
+              "disk": false,
+              "bytes": 404851
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/plant-alt-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9405f03586f-SJC",
+              "disk": false,
+              "bytes": 420781
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/power-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9405eff586f-SJC",
+              "disk": false,
+              "bytes": 71672
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/plant-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9405efe586f-SJC",
+              "disk": false,
+              "bytes": 333760
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-pursuit-v3.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9405efa586f-SJC",
+              "disk": false,
+              "bytes": 195508
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-alt-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9405f01586f-SJC",
+              "disk": false,
+              "bytes": 428646
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/menu-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9405f00586f-SJC",
+              "disk": false,
+              "bytes": 448646
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/exhausted-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9439ffc586f-SJC",
+              "disk": false,
+              "bytes": 5769
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/ghost-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9439ff7586f-SJC",
+              "disk": false,
+              "bytes": 8569
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-lunge-v2.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b943a803586f-SJC",
+              "disk": false,
+              "bytes": 9508
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/breath-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9439ff5586f-SJC",
+              "disk": false,
+              "bytes": 6205
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/relay-urgent-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9439ffe586f-SJC",
+              "disk": false,
+              "bytes": 2903
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/impact-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9439ff8586f-SJC",
+              "disk": false,
+              "bytes": 4261
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/flash-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9439800586f-SJC",
+              "disk": false,
+              "bytes": 4101
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-stunned-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b943a804586f-SJC",
+              "disk": false,
+              "bytes": 8002
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/relay-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b943a802586f-SJC",
+              "disk": false,
+              "bytes": 2832
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/pickup-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9439fff586f-SJC",
+              "disk": false,
+              "bytes": 3355
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/step-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9439ff3586f-SJC",
+              "disk": false,
+              "bytes": 2862
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-rise-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9439ff9586f-SJC",
+              "disk": false,
+              "bytes": 4358
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/metal-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9439ff4586f-SJC",
+              "disk": false,
+              "bytes": 5993
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/recover-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9439ffa586f-SJC",
+              "disk": false,
+              "bytes": 3341
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-cry-v2.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b943a801586f-SJC",
+              "disk": false,
+              "bytes": 32349
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/heartbeat-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9439ff6586f-SJC",
+              "disk": false,
+              "bytes": 3329
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/call-bell-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9439ffd586f-SJC",
+              "disk": false,
+              "bytes": 6429
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/bandage-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9439ffb586f-SJC",
+              "disk": false,
+              "bytes": 6391
+            }
+          ]
+        },
+        {
+          "warmup": false,
+          "menuMs": 1801.9921669999985,
+          "audioMs": 1792.8058749999982,
+          "totalMs": 3625.2992079999985,
+          "httpRequests": 44,
+          "gameRequests": 42,
+          "mediaRequests": 38,
+          "mediaTransferBytes": 10940953,
+          "errors": [],
+          "media": [
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/watch-desk-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b94c5a1e5dcf-HKG",
+              "disk": false,
+              "bytes": 282912
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/patrol-book-pixel-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b94c5a205dcf-HKG",
+              "disk": false,
+              "bytes": 1273683
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-listener-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b94c9a295dcf-HKG",
+              "disk": false,
+              "bytes": 840832
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-light-shy-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b94c9a245dcf-HKG",
+              "disk": false,
+              "bytes": 822762
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-patroller-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b94c9a255dcf-HKG",
+              "disk": false,
+              "bytes": 834816
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/watchman-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b94c9a275dcf-HKG",
+              "disk": false,
+              "bytes": 666415
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/patient-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b94c9a2a5dcf-HKG",
+              "disk": false,
+              "bytes": 853563
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/weeping-patient-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b94c9a265dcf-HKG",
+              "disk": false,
+              "bytes": 960956
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/bed-overhead-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b94c9a285dcf-HKG",
+              "disk": false,
+              "bytes": 459326
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b94c5a1f5dcf-HKG",
+              "disk": false,
+              "bytes": 535428
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/archive-ward-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b94eaa725dcf-HKG",
+              "disk": false,
+              "bytes": 287200
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-exploration-v3.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b951ba8f5dcf-HKG",
+              "disk": false,
+              "bytes": 329169
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-alt-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b951ba935dcf-HKG",
+              "disk": false,
+              "bytes": 428682
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/warehouse-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b951ba905dcf-HKG",
+              "disk": false,
+              "bytes": 369416
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/plant-alt-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b951ba975dcf-HKG",
+              "disk": false,
+              "bytes": 420805
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/menu-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b951ba965dcf-HKG",
+              "disk": false,
+              "bytes": 448641
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/power-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b951ba915dcf-HKG",
+              "disk": false,
+              "bytes": 71670
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-pursuit-v3.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b951ba925dcf-HKG",
+              "disk": false,
+              "bytes": 195501
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/warehouse-alt-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b951ba955dcf-HKG",
+              "disk": false,
+              "bytes": 404809
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/plant-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b951ba945dcf-HKG",
+              "disk": false,
+              "bytes": 333788
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-rise-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b145dcf-HKG",
+              "disk": false,
+              "bytes": 4355
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/step-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b035dcf-HKG",
+              "disk": false,
+              "bytes": 2864
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/metal-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b055dcf-HKG",
+              "disk": false,
+              "bytes": 5998
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-stunned-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b135dcf-HKG",
+              "disk": false,
+              "bytes": 8008
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/relay-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b0c5dcf-HKG",
+              "disk": false,
+              "bytes": 2831
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/pickup-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b0e5dcf-HKG",
+              "disk": false,
+              "bytes": 3354
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/recover-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b0b5dcf-HKG",
+              "disk": false,
+              "bytes": 3350
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/ghost-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b095dcf-HKG",
+              "disk": false,
+              "bytes": 8564
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/flash-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b0f5dcf-HKG",
+              "disk": false,
+              "bytes": 4098
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/call-bell-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b065dcf-HKG",
+              "disk": false,
+              "bytes": 6433
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-cry-v2.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b105dcf-HKG",
+              "disk": false,
+              "bytes": 32351
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/breath-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b0a5dcf-HKG",
+              "disk": false,
+              "bytes": 6208
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/relay-urgent-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b125dcf-HKG",
+              "disk": false,
+              "bytes": 2905
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/impact-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b075dcf-HKG",
+              "disk": false,
+              "bytes": 4258
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-lunge-v2.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b115dcf-HKG",
+              "disk": false,
+              "bytes": 9512
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/heartbeat-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b045dcf-HKG",
+              "disk": false,
+              "bytes": 3325
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/bandage-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b085dcf-HKG",
+              "disk": false,
+              "bytes": 6396
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/exhausted-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b9590b0d5dcf-HKG",
+              "disk": false,
+              "bytes": 5769
+            }
+          ]
+        },
+        {
+          "warmup": false,
+          "menuMs": 4530.043624999998,
+          "audioMs": 1009.8706659999989,
+          "totalMs": 5583.693082999998,
+          "httpRequests": 44,
+          "gameRequests": 42,
+          "mediaRequests": 38,
+          "mediaTransferBytes": 10940800,
+          "errors": [],
+          "media": [
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/watch-desk-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b96f0bc81c9e-AMS",
+              "disk": false,
+              "bytes": 282910
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-listener-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b96f3bce1c9e-AMS",
+              "disk": false,
+              "bytes": 840830
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-light-shy-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b96f3bcf1c9e-AMS",
+              "disk": false,
+              "bytes": 822763
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/watchman-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b96f3bd21c9e-AMS",
+              "disk": false,
+              "bytes": 666425
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/patient-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b96f3bd11c9e-AMS",
+              "disk": false,
+              "bytes": 853575
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/bed-overhead-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b96f3bd41c9e-AMS",
+              "disk": false,
+              "bytes": 459330
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/weeping-patient-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b96f3bd31c9e-AMS",
+              "disk": false,
+              "bytes": 960954
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/patrol-book-pixel-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b96f0bca1c9e-AMS",
+              "disk": false,
+              "bytes": 1273670
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-patroller-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b96f3bd01c9e-AMS",
+              "disk": false,
+              "bytes": 834834
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b96f0bc91c9e-AMS",
+              "disk": false,
+              "bytes": 535427
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/archive-ward-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9782c281c9e-AMS",
+              "disk": false,
+              "bytes": 287201
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/plant-alt-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97abc3d1c9e-AMS",
+              "disk": false,
+              "bytes": 420821
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/warehouse-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97abc3a1c9e-AMS",
+              "disk": false,
+              "bytes": 369432
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/warehouse-alt-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97abc3e1c9e-AMS",
+              "disk": false,
+              "bytes": 404812
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/menu-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97abc3b1c9e-AMS",
+              "disk": false,
+              "bytes": 448574
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-exploration-v3.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97abc381c9e-AMS",
+              "disk": false,
+              "bytes": 329147
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/power-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97abc361c9e-AMS",
+              "disk": false,
+              "bytes": 71674
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-pursuit-v3.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97abc391c9e-AMS",
+              "disk": false,
+              "bytes": 195497
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-alt-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97abc3c1c9e-AMS",
+              "disk": false,
+              "bytes": 428625
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/plant-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97abc371c9e-AMS",
+              "disk": false,
+              "bytes": 333734
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/bandage-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6cce1c9e-AMS",
+              "disk": false,
+              "bytes": 6390
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/metal-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6cc71c9e-AMS",
+              "disk": false,
+              "bytes": 5997
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/relay-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6ccd1c9e-AMS",
+              "disk": false,
+              "bytes": 2833
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/recover-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6cd51c9e-AMS",
+              "disk": false,
+              "bytes": 3350
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/heartbeat-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6cc81c9e-AMS",
+              "disk": false,
+              "bytes": 3331
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-rise-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6cd81c9e-AMS",
+              "disk": false,
+              "bytes": 4354
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/impact-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6ccc1c9e-AMS",
+              "disk": false,
+              "bytes": 4253
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/ghost-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6ccb1c9e-AMS",
+              "disk": false,
+              "bytes": 8562
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/pickup-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6cd31c9e-AMS",
+              "disk": false,
+              "bytes": 3350
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/call-bell-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6cca1c9e-AMS",
+              "disk": false,
+              "bytes": 6427
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/flash-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6cd21c9e-AMS",
+              "disk": false,
+              "bytes": 4100
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-stunned-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6cd61c9e-AMS",
+              "disk": false,
+              "bytes": 8013
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-lunge-v2.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6cd71c9e-AMS",
+              "disk": false,
+              "bytes": 9511
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-cry-v2.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6cd41c9e-AMS",
+              "disk": false,
+              "bytes": 32343
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/exhausted-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6cd01c9e-AMS",
+              "disk": false,
+              "bytes": 5769
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/breath-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6cd11c9e-AMS",
+              "disk": false,
+              "bytes": 6202
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/step-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6cc91c9e-AMS",
+              "disk": false,
+              "bytes": 2871
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/relay-urgent-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b97f6ccf1c9e-AMS",
+              "disk": false,
+              "bytes": 2909
+            }
+          ]
+        },
+        {
+          "warmup": false,
+          "menuMs": 1809.8878750000003,
+          "audioMs": 743.7171660000022,
+          "totalMs": 2594.9942499999997,
+          "httpRequests": 44,
+          "gameRequests": 42,
+          "mediaRequests": 38,
+          "mediaTransferBytes": 10941060,
+          "errors": [],
+          "media": [
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/patrol-book-pixel-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9876d561c68-HKG",
+              "disk": false,
+              "bytes": 1273693
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/watch-desk-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9876d541c68-HKG",
+              "disk": false,
+              "bytes": 282916
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/archive-ward-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9876d591c68-HKG",
+              "disk": false,
+              "bytes": 287211
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-listener-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b987ad5d1c68-HKG",
+              "disk": false,
+              "bytes": 840854
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-light-shy-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b987ad5e1c68-HKG",
+              "disk": false,
+              "bytes": 822759
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-patroller-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b987ad601c68-HKG",
+              "disk": false,
+              "bytes": 834827
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/watchman-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b987ad5f1c68-HKG",
+              "disk": false,
+              "bytes": 666415
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/patient-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b987ad611c68-HKG",
+              "disk": false,
+              "bytes": 853580
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/weeping-patient-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b987ad621c68-HKG",
+              "disk": false,
+              "bytes": 960979
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/bed-overhead-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b987ad631c68-HKG",
+              "disk": false,
+              "bytes": 459327
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9876d551c68-HKG",
+              "disk": false,
+              "bytes": 535431
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/plant-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98cede91c68-HKG",
+              "disk": false,
+              "bytes": 333756
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/power-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98cedea1c68-HKG",
+              "disk": false,
+              "bytes": 71673
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/warehouse-alt-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98ceded1c68-HKG",
+              "disk": false,
+              "bytes": 404814
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-pursuit-v3.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98cede61c68-HKG",
+              "disk": false,
+              "bytes": 195512
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-alt-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98cedee1c68-HKG",
+              "disk": false,
+              "bytes": 428672
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/plant-alt-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98cedeb1c68-HKG",
+              "disk": false,
+              "bytes": 420833
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/menu-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98cedec1c68-HKG",
+              "disk": false,
+              "bytes": 448637
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-exploration-v3.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98cede81c68-HKG",
+              "disk": false,
+              "bytes": 329175
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/warehouse-theme-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98cede71c68-HKG",
+              "disk": false,
+              "bytes": 369420
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/breath-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e4c1c68-HKG",
+              "disk": false,
+              "bytes": 6207
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/recover-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e4d1c68-HKG",
+              "disk": false,
+              "bytes": 3346
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/relay-urgent-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e4f1c68-HKG",
+              "disk": false,
+              "bytes": 2901
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/metal-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e461c68-HKG",
+              "disk": false,
+              "bytes": 5989
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/step-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e451c68-HKG",
+              "disk": false,
+              "bytes": 2865
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/bandage-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e4b1c68-HKG",
+              "disk": false,
+              "bytes": 6388
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-stunned-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e521c68-HKG",
+              "disk": false,
+              "bytes": 8011
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/pickup-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e501c68-HKG",
+              "disk": false,
+              "bytes": 3356
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/flash-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e561c68-HKG",
+              "disk": false,
+              "bytes": 4104
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-cry-v2.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e551c68-HKG",
+              "disk": false,
+              "bytes": 32351
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/call-bell-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e4a1c68-HKG",
+              "disk": false,
+              "bytes": 6435
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/ghost-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e481c68-HKG",
+              "disk": false,
+              "bytes": 8563
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-rise-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e541c68-HKG",
+              "disk": false,
+              "bytes": 4350
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/heartbeat-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e491c68-HKG",
+              "disk": false,
+              "bytes": 3330
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/relay-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e511c68-HKG",
+              "disk": false,
+              "bytes": 2832
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/exhausted-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e4e1c68-HKG",
+              "disk": false,
+              "bytes": 5779
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/impact-v1.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e471c68-HKG",
+              "disk": false,
+              "bytes": 4257
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-lunge-v2.opus",
+              "status": 200,
+              "cache": "DYNAMIC",
+              "ray": "a372b98f8e531c68-HKG",
+              "disk": false,
+              "bytes": 9512
+            }
+          ]
+        }
+      ],
+      "warmup": {
+        "warmup": true,
+        "menuMs": 3790.0886670000004,
+        "audioMs": 597.9590410000001,
+        "totalMs": 4596.5535,
+        "httpRequests": 44,
+        "gameRequests": 42,
+        "mediaRequests": 38,
+        "mediaTransferBytes": 10940859,
+        "errors": [],
+        "media": [
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/watch-desk-v1.q95.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b8f98a1b18ae-AMS",
+            "disk": false,
+            "bytes": 282901
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/archive-ward-v1.q95.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b8f98a1f18ae-AMS",
+            "disk": false,
+            "bytes": 287206
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/patrol-book-pixel-v1.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b8f98a1c18ae-AMS",
+            "disk": false,
+            "bytes": 1273641
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-listener-v1.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b8f9ea3218ae-AMS",
+            "disk": false,
+            "bytes": 840832
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-light-shy-v1.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b8f9ea3318ae-AMS",
+            "disk": false,
+            "bytes": 822760
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/hospital-patroller-v1.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b8f9ea3418ae-AMS",
+            "disk": false,
+            "bytes": 834822
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/watchman-sheet-v4.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b8f9ea3518ae-AMS",
+            "disk": false,
+            "bytes": 666418
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/patient-sheet-v4.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b8f9ea3618ae-AMS",
+            "disk": false,
+            "bytes": 853566
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/weeping-patient-v1.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b8f9ea3718ae-AMS",
+            "disk": false,
+            "bytes": 960929
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/assets/bed-overhead-v4.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b8f9ea3818ae-AMS",
+            "disk": false,
+            "bytes": 459330
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b8f98a1d18ae-AMS",
+            "disk": false,
+            "bytes": 535426
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-exploration-v3.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9032b4e18ae-AMS",
+            "disk": false,
+            "bytes": 329199
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/warehouse-alt-theme-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9032b5518ae-AMS",
+            "disk": false,
+            "bytes": 404825
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/menu-theme-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9032b5418ae-AMS",
+            "disk": false,
+            "bytes": 448607
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-alt-theme-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9032b5318ae-AMS",
+            "disk": false,
+            "bytes": 428667
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/warehouse-theme-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9032b5018ae-AMS",
+            "disk": false,
+            "bytes": 369447
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/plant-theme-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9032b5118ae-AMS",
+            "disk": false,
+            "bytes": 333760
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/ward-pursuit-v3.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9032b4f18ae-AMS",
+            "disk": false,
+            "bytes": 195518
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/power-theme-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9032b5218ae-AMS",
+            "disk": false,
+            "bytes": 71675
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/plant-alt-theme-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9032b5618ae-AMS",
+            "disk": false,
+            "bytes": 420780
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/ghost-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058ba218ae-AMS",
+            "disk": false,
+            "bytes": 8558
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/relay-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058bab18ae-AMS",
+            "disk": false,
+            "bytes": 2828
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/pickup-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058bad18ae-AMS",
+            "disk": false,
+            "bytes": 3354
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/impact-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058ba118ae-AMS",
+            "disk": false,
+            "bytes": 4254
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/exhausted-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058ba518ae-AMS",
+            "disk": false,
+            "bytes": 5768
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/flash-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058baa18ae-AMS",
+            "disk": false,
+            "bytes": 4099
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/heartbeat-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058ba318ae-AMS",
+            "disk": false,
+            "bytes": 3327
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/breath-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058ba618ae-AMS",
+            "disk": false,
+            "bytes": 6207
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/call-bell-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058ba418ae-AMS",
+            "disk": false,
+            "bytes": 6430
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-stunned-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058baf18ae-AMS",
+            "disk": false,
+            "bytes": 8009
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-lunge-v2.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058bac18ae-AMS",
+            "disk": false,
+            "bytes": 9515
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-cry-v2.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058bae18ae-AMS",
+            "disk": false,
+            "bytes": 32347
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/bandage-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058ba718ae-AMS",
+            "disk": false,
+            "bytes": 6393
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/relay-urgent-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058ba918ae-AMS",
+            "disk": false,
+            "bytes": 2908
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/step-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058b9f18ae-AMS",
+            "disk": false,
+            "bytes": 2867
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/metal-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058ba018ae-AMS",
+            "disk": false,
+            "bytes": 5988
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/patient-rise-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058bb018ae-AMS",
+            "disk": false,
+            "bytes": 4353
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_original/audio/sfx/recover-v1.opus",
+            "status": 200,
+            "cache": "DYNAMIC",
+            "ray": "a372b9058ba818ae-AMS",
+            "disk": false,
+            "bytes": 3345
+          }
+        ]
+      }
+    },
+    "linode-packed": {
+      "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/",
+      "stats": {
+        "menuMs": {
+          "median": 3531.1946659999994,
+          "min": 2830.4327079999994,
+          "max": 3948.2723750000005
+        },
+        "audioMs": {
+          "median": 590.603000000001,
+          "min": 525.9277500000026,
+          "max": 773.2879590000011
+        },
+        "totalMs": {
+          "median": 4266.075832999999,
+          "min": 3463.077166,
+          "max": 4730.018917000001
+        }
+      },
+      "runs": [
+        {
+          "warmup": false,
+          "menuMs": 2830.4327079999994,
+          "audioMs": 590.603000000001,
+          "totalMs": 3463.077166,
+          "httpRequests": 27,
+          "gameRequests": 25,
+          "mediaRequests": 21,
+          "mediaTransferBytes": 10931951,
+          "errors": [],
+          "media": [
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/patrol-book-pixel-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9c35be65811-AMS",
+              "disk": false,
+              "bytes": 1273624
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/archive-ward-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9c35be95811-AMS",
+              "disk": false,
+              "bytes": 287200
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/watchman-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9c39bf15811-AMS",
+              "disk": false,
+              "bytes": 666423
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-listener-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9c39bee5811-AMS",
+              "disk": false,
+              "bytes": 840828
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-patroller-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9c39bf05811-AMS",
+              "disk": false,
+              "bytes": 834813
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-light-shy-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9c39bef5811-AMS",
+              "disk": false,
+              "bytes": 822783
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/patient-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9c39bf25811-AMS",
+              "disk": false,
+              "bytes": 853576
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/watch-desk-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9c35be75811-AMS",
+              "disk": false,
+              "bytes": 282908
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/weeping-patient-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9c39bf45811-AMS",
+              "disk": false,
+              "bytes": 960954
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/bed-overhead-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9c39bf35811-AMS",
+              "disk": false,
+              "bytes": 459332
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9c35be85811-AMS",
+              "disk": false,
+              "bytes": 535418
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/plant-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9cbfcba5811-AMS",
+              "disk": false,
+              "bytes": 333725
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/menu-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9cbfcbc5811-AMS",
+              "disk": false,
+              "bytes": 448555
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-exploration-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9cbfcb75811-AMS",
+              "disk": false,
+              "bytes": 329140
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/power-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9cbfcbb5811-AMS",
+              "disk": false,
+              "bytes": 71672
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/warehouse-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9cbfcb95811-AMS",
+              "disk": false,
+              "bytes": 369392
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-pursuit-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9cbfcb85811-AMS",
+              "disk": false,
+              "bytes": 195490
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9cbfcbd5811-AMS",
+              "disk": false,
+              "bytes": 428611
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/sfx-opus-dceb220d0bcb6bc7.bin",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9cbfcc05811-AMS",
+              "disk": false,
+              "bytes": 111979
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/warehouse-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9cbfcbe5811-AMS",
+              "disk": false,
+              "bytes": 404774
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/plant-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9cbfcbf5811-AMS",
+              "disk": false,
+              "bytes": 420754
+            }
+          ]
+        },
+        {
+          "warmup": false,
+          "menuMs": 3531.1946659999994,
+          "audioMs": 773.2879590000011,
+          "totalMs": 4338.937833,
+          "httpRequests": 27,
+          "gameRequests": 25,
+          "mediaRequests": 21,
+          "mediaTransferBytes": 10931900,
+          "errors": [],
+          "media": [
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/patrol-book-pixel-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9ddfc411c8a-AMS",
+              "disk": false,
+              "bytes": 1273648
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/watch-desk-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9ddfc421c8a-AMS",
+              "disk": false,
+              "bytes": 282901
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/archive-ward-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9ddfc431c8a-AMS",
+              "disk": false,
+              "bytes": 287198
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-listener-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9de3c481c8a-AMS",
+              "disk": false,
+              "bytes": 840819
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-light-shy-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9de3c491c8a-AMS",
+              "disk": false,
+              "bytes": 822751
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/watchman-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9de3c4a1c8a-AMS",
+              "disk": false,
+              "bytes": 666416
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-patroller-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9de3c471c8a-AMS",
+              "disk": false,
+              "bytes": 834818
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/patient-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9de3c4c1c8a-AMS",
+              "disk": false,
+              "bytes": 853563
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/weeping-patient-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9de3c4d1c8a-AMS",
+              "disk": false,
+              "bytes": 960943
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/bed-overhead-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9de3c4b1c8a-AMS",
+              "disk": false,
+              "bytes": 459340
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9ddfc401c8a-AMS",
+              "disk": false,
+              "bytes": 535426
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-exploration-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9e6dcb11c8a-AMS",
+              "disk": false,
+              "bytes": 329138
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/plant-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9e6dcb41c8a-AMS",
+              "disk": false,
+              "bytes": 333729
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/power-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9e6dcb51c8a-AMS",
+              "disk": false,
+              "bytes": 71673
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/warehouse-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9e6dcb71c8a-AMS",
+              "disk": false,
+              "bytes": 404773
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9e6dcb91c8a-AMS",
+              "disk": false,
+              "bytes": 428601
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/sfx-opus-dceb220d0bcb6bc7.bin",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9e6dcba1c8a-AMS",
+              "disk": false,
+              "bytes": 111984
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/plant-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9e6dcb81c8a-AMS",
+              "disk": false,
+              "bytes": 420746
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/warehouse-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9e6dcb31c8a-AMS",
+              "disk": false,
+              "bytes": 369388
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-pursuit-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9e6dcb21c8a-AMS",
+              "disk": false,
+              "bytes": 195489
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/menu-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9e6dcb61c8a-AMS",
+              "disk": false,
+              "bytes": 448556
+            }
+          ]
+        },
+        {
+          "warmup": false,
+          "menuMs": 3948.2723750000005,
+          "audioMs": 745.4950000000026,
+          "totalMs": 4730.018917000001,
+          "httpRequests": 27,
+          "gameRequests": 25,
+          "mediaRequests": 21,
+          "mediaTransferBytes": 10931950,
+          "errors": [],
+          "media": [
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/patrol-book-pixel-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9f9787bf5b4-AMS",
+              "disk": false,
+              "bytes": 1273643
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/watch-desk-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9f9787af5b4-AMS",
+              "disk": false,
+              "bytes": 282904
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/archive-ward-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9f9787df5b4-AMS",
+              "disk": false,
+              "bytes": 287209
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-listener-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9f9a882f5b4-AMS",
+              "disk": false,
+              "bytes": 840856
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-light-shy-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9f9b883f5b4-AMS",
+              "disk": false,
+              "bytes": 822761
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-patroller-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9f9b884f5b4-AMS",
+              "disk": false,
+              "bytes": 834824
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/watchman-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9f9b885f5b4-AMS",
+              "disk": false,
+              "bytes": 666422
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/patient-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9f9b887f5b4-AMS",
+              "disk": false,
+              "bytes": 853583
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/weeping-patient-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9f9b888f5b4-AMS",
+              "disk": false,
+              "bytes": 960948
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/bed-overhead-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9f9b886f5b4-AMS",
+              "disk": false,
+              "bytes": 459332
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372b9f9787cf5b4-AMS",
+              "disk": false,
+              "bytes": 535417
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/warehouse-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba052959f5b4-AMS",
+              "disk": false,
+              "bytes": 369384
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/menu-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba05295bf5b4-AMS",
+              "disk": false,
+              "bytes": 448556
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/power-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba05295af5b4-AMS",
+              "disk": false,
+              "bytes": 71669
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/sfx-opus-dceb220d0bcb6bc7.bin",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba05295df5b4-AMS",
+              "disk": false,
+              "bytes": 111979
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/plant-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba052958f5b4-AMS",
+              "disk": false,
+              "bytes": 333729
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/warehouse-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba05295ef5b4-AMS",
+              "disk": false,
+              "bytes": 404773
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba05295ff5b4-AMS",
+              "disk": false,
+              "bytes": 428586
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/plant-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba05295cf5b4-AMS",
+              "disk": false,
+              "bytes": 420749
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-pursuit-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba052957f5b4-AMS",
+              "disk": false,
+              "bytes": 195489
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-exploration-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba052956f5b4-AMS",
+              "disk": false,
+              "bytes": 329137
+            }
+          ]
+        },
+        {
+          "warmup": false,
+          "menuMs": 3482.7405,
+          "audioMs": 525.9277500000026,
+          "totalMs": 4045.2815839999967,
+          "httpRequests": 27,
+          "gameRequests": 25,
+          "mediaRequests": 21,
+          "mediaTransferBytes": 10932333,
+          "errors": [],
+          "media": [
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/patrol-book-pixel-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba17c99617d8-SJC",
+              "disk": false,
+              "bytes": 1273652
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/watch-desk-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba17b99417d8-SJC",
+              "disk": false,
+              "bytes": 282916
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/archive-ward-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba17c99717d8-SJC",
+              "disk": false,
+              "bytes": 287200
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-listener-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba17f99b17d8-SJC",
+              "disk": false,
+              "bytes": 840840
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-light-shy-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba17f99c17d8-SJC",
+              "disk": false,
+              "bytes": 822773
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-patroller-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba17f99d17d8-SJC",
+              "disk": false,
+              "bytes": 834834
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/watchman-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba17f99e17d8-SJC",
+              "disk": false,
+              "bytes": 666418
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/patient-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba17f9a017d8-SJC",
+              "disk": false,
+              "bytes": 853597
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/weeping-patient-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba17f99f17d8-SJC",
+              "disk": false,
+              "bytes": 960952
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/bed-overhead-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba17f9a117d8-SJC",
+              "disk": false,
+              "bytes": 459323
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba17c99517d8-SJC",
+              "disk": false,
+              "bytes": 535440
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/sfx-opus-dceb220d0bcb6bc7.bin",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba205a5117d8-SJC",
+              "disk": false,
+              "bytes": 111980
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/power-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba205a4f17d8-SJC",
+              "disk": false,
+              "bytes": 71671
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/plant-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba205a4d17d8-SJC",
+              "disk": false,
+              "bytes": 333780
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba205a5217d8-SJC",
+              "disk": false,
+              "bytes": 428657
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/warehouse-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba205a4e17d8-SJC",
+              "disk": false,
+              "bytes": 369444
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/plant-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba205a5317d8-SJC",
+              "disk": false,
+              "bytes": 420772
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-exploration-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba205a4c17d8-SJC",
+              "disk": false,
+              "bytes": 329129
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-pursuit-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba205a4b17d8-SJC",
+              "disk": false,
+              "bytes": 195519
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/menu-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba205a5017d8-SJC",
+              "disk": false,
+              "bytes": 448591
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/warehouse-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba205a5417d8-SJC",
+              "disk": false,
+              "bytes": 404845
+            }
+          ]
+        },
+        {
+          "warmup": false,
+          "menuMs": 3667.285541000001,
+          "audioMs": 561.0328750000008,
+          "totalMs": 4266.075832999999,
+          "httpRequests": 27,
+          "gameRequests": 25,
+          "mediaRequests": 21,
+          "mediaTransferBytes": 10931858,
+          "errors": [],
+          "media": [
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/patrol-book-pixel-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba32ef7b8ade-AMS",
+              "disk": false,
+              "bytes": 1273641
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/watch-desk-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba32ef798ade-AMS",
+              "disk": false,
+              "bytes": 282904
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/archive-ward-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba32ff7d8ade-AMS",
+              "disk": false,
+              "bytes": 287204
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-listener-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba332f828ade-AMS",
+              "disk": false,
+              "bytes": 840828
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-light-shy-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba332f848ade-AMS",
+              "disk": false,
+              "bytes": 822752
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-patroller-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba332f878ade-AMS",
+              "disk": false,
+              "bytes": 834816
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/watchman-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba332f888ade-AMS",
+              "disk": false,
+              "bytes": 666417
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/patient-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba332f858ade-AMS",
+              "disk": false,
+              "bytes": 853565
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/weeping-patient-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba332f868ade-AMS",
+              "disk": false,
+              "bytes": 960928
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/bed-overhead-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba332f898ade-AMS",
+              "disk": false,
+              "bytes": 459325
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba32ef7a8ade-AMS",
+              "disk": false,
+              "bytes": 535427
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-exploration-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba3b8ff68ade-AMS",
+              "disk": false,
+              "bytes": 329143
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/warehouse-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba3b8ffb8ade-AMS",
+              "disk": false,
+              "bytes": 404769
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/plant-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba3b8ff98ade-AMS",
+              "disk": false,
+              "bytes": 333726
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/warehouse-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba3b8ffa8ade-AMS",
+              "disk": false,
+              "bytes": 369390
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/power-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba3b8ffc8ade-AMS",
+              "disk": false,
+              "bytes": 71668
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/menu-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba3b8ff88ade-AMS",
+              "disk": false,
+              "bytes": 448548
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/sfx-opus-dceb220d0bcb6bc7.bin",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba3b8fff8ade-AMS",
+              "disk": false,
+              "bytes": 111980
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba3b8ffe8ade-AMS",
+              "disk": false,
+              "bytes": 428591
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/plant-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba3b8ffd8ade-AMS",
+              "disk": false,
+              "bytes": 420747
+            },
+            {
+              "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-pursuit-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba3b8ff78ade-AMS",
+              "disk": false,
+              "bytes": 195489
+            }
+          ]
+        }
+      ],
+      "warmup": {
+        "warmup": true,
+        "menuMs": 4573.240124999999,
+        "audioMs": 593.2811250000004,
+        "totalMs": 5405.256417,
+        "httpRequests": 27,
+        "gameRequests": 25,
+        "mediaRequests": 21,
+        "mediaTransferBytes": 10931929,
+        "errors": [],
+        "media": [
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/patrol-book-pixel-v1.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9a8581e294e-AMS",
+            "disk": false,
+            "bytes": 1273641
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/watch-desk-v1.q95.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9a8581c294e-AMS",
+            "disk": false,
+            "bytes": 282912
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/archive-ward-v1.q95.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9a8681f294e-AMS",
+            "disk": false,
+            "bytes": 287204
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-listener-v1.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9a8b824294e-AMS",
+            "disk": false,
+            "bytes": 840826
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-light-shy-v1.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9a8b826294e-AMS",
+            "disk": false,
+            "bytes": 822772
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/hospital-patroller-v1.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9a8b825294e-AMS",
+            "disk": false,
+            "bytes": 834815
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/watchman-sheet-v4.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9a8b827294e-AMS",
+            "disk": false,
+            "bytes": 666415
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/patient-sheet-v4.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9a8b829294e-AMS",
+            "disk": false,
+            "bytes": 853571
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/weeping-patient-v1.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9a8b82a294e-AMS",
+            "disk": false,
+            "bytes": 960938
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/assets/bed-overhead-v4.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9a8b828294e-AMS",
+            "disk": false,
+            "bytes": 459336
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9a8581d294e-AMS",
+            "disk": false,
+            "bytes": 535422
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/menu-theme-v1.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9b5490e294e-AMS",
+            "disk": false,
+            "bytes": 448556
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/plant-theme-v1.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9b5490d294e-AMS",
+            "disk": false,
+            "bytes": 333732
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/power-theme-v1.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9b5490c294e-AMS",
+            "disk": false,
+            "bytes": 71668
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/warehouse-theme-v1.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9b5490b294e-AMS",
+            "disk": false,
+            "bytes": 369383
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/sfx-opus-dceb220d0bcb6bc7.bin",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9b54911294e-AMS",
+            "disk": false,
+            "bytes": 111981
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-exploration-v3.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9b54909294e-AMS",
+            "disk": false,
+            "bytes": 329140
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/warehouse-alt-theme-v1.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9b54910294e-AMS",
+            "disk": false,
+            "bytes": 404777
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-pursuit-v3.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9b5490a294e-AMS",
+            "disk": false,
+            "bytes": 195497
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/ward-alt-theme-v1.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9b5490f294e-AMS",
+            "disk": false,
+            "bytes": 428595
+          },
+          {
+            "url": "https://api.liveinteractivegame.com/games/night-shift/__perf_20260907_packed/audio/plant-alt-theme-v1.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372b9b54912294e-AMS",
+            "disk": false,
+            "bytes": 420748
+          }
+        ]
+      }
+    },
+    "r2-packed": {
+      "url": "https://api.liveinteractivegame.com/games/night-shift/",
+      "stats": {
+        "menuMs": {
+          "median": 2521.452083,
+          "min": 2305.7861249999996,
+          "max": 3567.643459000001
+        },
+        "audioMs": {
+          "median": 463.20695799999976,
+          "min": 457.1132499999985,
+          "max": 465.95058400000016
+        },
+        "totalMs": {
+          "median": 3017.301625,
+          "min": 2799.861791999999,
+          "max": 4057.5204170000015
+        }
+      },
+      "runs": [
+        {
+          "warmup": false,
+          "menuMs": 2318.315375,
+          "audioMs": 463.20695799999976,
+          "totalMs": 2816.99475,
+          "httpRequests": 27,
+          "gameRequests": 25,
+          "mediaRequests": 21,
+          "mediaTransferBytes": 10938899,
+          "errors": [],
+          "media": [
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/patrol-book-pixel-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba65f857dd5d-HKG",
+              "disk": false,
+              "bytes": 1273656
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/watch-desk-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba65f858dd5d-HKG",
+              "disk": false,
+              "bytes": 282933
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-light-shy-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba6939398a4c-HKG",
+              "disk": false,
+              "bytes": 823637
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-patroller-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba6939388a4c-HKG",
+              "disk": false,
+              "bytes": 835494
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/patient-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba6939368a4c-HKG",
+              "disk": false,
+              "bytes": 854268
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/archive-ward-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba69393a8a4c-HKG",
+              "disk": false,
+              "bytes": 287333
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/bed-overhead-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba69392e8a4c-HKG",
+              "disk": false,
+              "bytes": 459626
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/watchman-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba6939318a4c-HKG",
+              "disk": false,
+              "bytes": 667114
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-listener-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba6939328a4c-HKG",
+              "disk": false,
+              "bytes": 841511
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/weeping-patient-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba6939338a4c-HKG",
+              "disk": false,
+              "bytes": 961720
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba69392a8a4c-HKG",
+              "disk": false,
+              "bytes": 535818
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-pursuit-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba6e7d4f8a4c-HKG",
+              "disk": false,
+              "bytes": 195544
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-exploration-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba6e7d4c8a4c-HKG",
+              "disk": false,
+              "bytes": 329318
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/warehouse-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba6e7d538a4c-HKG",
+              "disk": false,
+              "bytes": 369601
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/power-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba6e7d588a4c-HKG",
+              "disk": false,
+              "bytes": 71565
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/plant-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba6e7d558a4c-HKG",
+              "disk": false,
+              "bytes": 334068
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/warehouse-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba6e7d5e8a4c-HKG",
+              "disk": false,
+              "bytes": 405022
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/plant-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba6e7d5f8a4c-HKG",
+              "disk": false,
+              "bytes": 421021
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba6e7d5d8a4c-HKG",
+              "disk": false,
+              "bytes": 428868
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/menu-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba6e7d5c8a4c-HKG",
+              "disk": false,
+              "bytes": 448857
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/sfx-opus-dceb220d0bcb6bc7.bin",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba6e7d618a4c-HKG",
+              "disk": false,
+              "bytes": 111925
+            }
+          ]
+        },
+        {
+          "warmup": false,
+          "menuMs": 2305.7861249999996,
+          "audioMs": 465.95058400000016,
+          "totalMs": 2799.861791999999,
+          "httpRequests": 27,
+          "gameRequests": 25,
+          "mediaRequests": 21,
+          "mediaTransferBytes": 10939084,
+          "errors": [],
+          "media": [
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/watch-desk-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba779f3bb6a3-HKG",
+              "disk": false,
+              "bytes": 282915
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/patrol-book-pixel-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba779f3cb6a3-HKG",
+              "disk": false,
+              "bytes": 1273693
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/watchman-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba7c4c3d8625-HKG",
+              "disk": false,
+              "bytes": 667145
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/weeping-patient-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba7c3c378625-HKG",
+              "disk": false,
+              "bytes": 961725
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/patient-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba7c3c388625-HKG",
+              "disk": false,
+              "bytes": 854272
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-light-shy-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba7c4c408625-HKG",
+              "disk": false,
+              "bytes": 823432
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-patroller-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba7c4c3f8625-HKG",
+              "disk": false,
+              "bytes": 835499
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-listener-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba7c3c398625-HKG",
+              "disk": false,
+              "bytes": 841516
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/archive-ward-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba7c4c428625-HKG",
+              "disk": false,
+              "bytes": 287520
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/bed-overhead-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba7c3c3b8625-HKG",
+              "disk": false,
+              "bytes": 459622
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba7c3c338625-HKG",
+              "disk": false,
+              "bytes": 535812
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-pursuit-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba80af838625-HKG",
+              "disk": false,
+              "bytes": 195545
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/warehouse-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba80af848625-HKG",
+              "disk": false,
+              "bytes": 369594
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-exploration-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba80af828625-HKG",
+              "disk": false,
+              "bytes": 329308
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/power-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba80af868625-HKG",
+              "disk": false,
+              "bytes": 71744
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/menu-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba80af898625-HKG",
+              "disk": false,
+              "bytes": 448848
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/warehouse-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba80af8d8625-HKG",
+              "disk": false,
+              "bytes": 405021
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba80af8c8625-HKG",
+              "disk": false,
+              "bytes": 428897
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/plant-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba80af858625-HKG",
+              "disk": false,
+              "bytes": 333892
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/plant-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba80af908625-HKG",
+              "disk": false,
+              "bytes": 420989
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/sfx-opus-dceb220d0bcb6bc7.bin",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba80af928625-HKG",
+              "disk": false,
+              "bytes": 112095
+            }
+          ]
+        },
+        {
+          "warmup": false,
+          "menuMs": 2521.452083,
+          "audioMs": 463.6802910000006,
+          "totalMs": 3017.301625,
+          "httpRequests": 27,
+          "gameRequests": 25,
+          "mediaRequests": 21,
+          "mediaTransferBytes": 10938861,
+          "errors": [],
+          "media": [
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/watch-desk-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba8acbe3e2f8-HKG",
+              "disk": false,
+              "bytes": 282905
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/patrol-book-pixel-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba8acbe4e2f8-HKG",
+              "disk": false,
+              "bytes": 1273671
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-patroller-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba8f6b54786c-HKG",
+              "disk": false,
+              "bytes": 835700
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/patient-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba8f6b4e786c-HKG",
+              "disk": false,
+              "bytes": 854258
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-light-shy-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba8f6b3a786c-HKG",
+              "disk": false,
+              "bytes": 823422
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-listener-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba8f6b47786c-HKG",
+              "disk": false,
+              "bytes": 841510
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/archive-ward-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba8f6b58786c-HKG",
+              "disk": false,
+              "bytes": 287524
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/watchman-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba8f6b3c786c-HKG",
+              "disk": false,
+              "bytes": 666937
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/weeping-patient-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba8f6b41786c-HKG",
+              "disk": false,
+              "bytes": 961722
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/bed-overhead-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba8f6b3e786c-HKG",
+              "disk": false,
+              "bytes": 459637
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba8f6b31786c-HKG",
+              "disk": false,
+              "bytes": 535811
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-exploration-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba942e7c786c-HKG",
+              "disk": false,
+              "bytes": 329347
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/plant-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba942e81786c-HKG",
+              "disk": false,
+              "bytes": 333890
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-pursuit-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba942e7e786c-HKG",
+              "disk": false,
+              "bytes": 195510
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/warehouse-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba942e7f786c-HKG",
+              "disk": false,
+              "bytes": 369586
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/power-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba942e84786c-HKG",
+              "disk": false,
+              "bytes": 71738
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/sfx-opus-dceb220d0bcb6bc7.bin",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba942e8b786c-HKG",
+              "disk": false,
+              "bytes": 111930
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/warehouse-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba942e88786c-HKG",
+              "disk": false,
+              "bytes": 405044
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba942e86786c-HKG",
+              "disk": false,
+              "bytes": 428865
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/menu-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba942e85786c-HKG",
+              "disk": false,
+              "bytes": 448845
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/plant-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372ba942e89786c-HKG",
+              "disk": false,
+              "bytes": 421009
+            }
+          ]
+        },
+        {
+          "warmup": false,
+          "menuMs": 3567.643459000001,
+          "audioMs": 457.1132499999985,
+          "totalMs": 4057.5204170000015,
+          "httpRequests": 27,
+          "gameRequests": 25,
+          "mediaRequests": 21,
+          "mediaTransferBytes": 10938999,
+          "errors": [],
+          "media": [
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/watch-desk-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baa57cf56807-SJC",
+              "disk": false,
+              "bytes": 282919
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/patrol-book-pixel-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baa57cf66807-SJC",
+              "disk": false,
+              "bytes": 1273665
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/patient-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baa9dad472ce-HKG",
+              "disk": false,
+              "bytes": 854471
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/weeping-patient-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baa9dad272ce-HKG",
+              "disk": false,
+              "bytes": 961752
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-patroller-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baa9dadb72ce-HKG",
+              "disk": false,
+              "bytes": 835492
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/watchman-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baa9dad972ce-HKG",
+              "disk": false,
+              "bytes": 666923
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/bed-overhead-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baa9dacf72ce-HKG",
+              "disk": false,
+              "bytes": 459622
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-light-shy-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baa9dadc72ce-HKG",
+              "disk": false,
+              "bytes": 823615
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-listener-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baa9dade72ce-HKG",
+              "disk": false,
+              "bytes": 841508
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/archive-ward-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baa9dae072ce-HKG",
+              "disk": false,
+              "bytes": 287321
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baa9dacd72ce-HKG",
+              "disk": false,
+              "bytes": 535814
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-exploration-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baae4db472ce-HKG",
+              "disk": false,
+              "bytes": 329331
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-pursuit-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baae4db972ce-HKG",
+              "disk": false,
+              "bytes": 195511
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/warehouse-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baae4dba72ce-HKG",
+              "disk": false,
+              "bytes": 369597
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/power-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baae4dbf72ce-HKG",
+              "disk": false,
+              "bytes": 71728
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/plant-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baae4dbc72ce-HKG",
+              "disk": false,
+              "bytes": 333897
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/plant-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baae4dc572ce-HKG",
+              "disk": false,
+              "bytes": 420989
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baae4dc272ce-HKG",
+              "disk": false,
+              "bytes": 428859
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/sfx-opus-dceb220d0bcb6bc7.bin",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baae4dc672ce-HKG",
+              "disk": false,
+              "bytes": 111952
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/menu-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baae4dc072ce-HKG",
+              "disk": false,
+              "bytes": 448851
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/warehouse-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372baae4dc372ce-HKG",
+              "disk": false,
+              "bytes": 405182
+            }
+          ]
+        },
+        {
+          "warmup": false,
+          "menuMs": 3456.342916999998,
+          "audioMs": 459.5353329999998,
+          "totalMs": 3940.6975839999977,
+          "httpRequests": 27,
+          "gameRequests": 25,
+          "mediaRequests": 21,
+          "mediaTransferBytes": 10939005,
+          "errors": [],
+          "media": [
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/watch-desk-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372babf3b197745-AMS",
+              "disk": false,
+              "bytes": 282913
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/patrol-book-pixel-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372babf3b187745-AMS",
+              "disk": false,
+              "bytes": 1273667
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/watchman-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac3488b5df5-HKG",
+              "disk": false,
+              "bytes": 666934
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-light-shy-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac348915df5-HKG",
+              "disk": false,
+              "bytes": 823442
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-patroller-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac348905df5-HKG",
+              "disk": false,
+              "bytes": 835494
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/archive-ward-v1.q95.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac348955df5-HKG",
+              "disk": false,
+              "bytes": 287331
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/patient-sheet-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac348925df5-HKG",
+              "disk": false,
+              "bytes": 854266
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/weeping-patient-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac3488e5df5-HKG",
+              "disk": false,
+              "bytes": 961906
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-listener-v1.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac348945df5-HKG",
+              "disk": false,
+              "bytes": 841527
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/bed-overhead-v4.webp",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac348935df5-HKG",
+              "disk": false,
+              "bytes": 459621
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac348895df5-HKG",
+              "disk": false,
+              "bytes": 536008
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/warehouse-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac7ab8b5df5-HKG",
+              "disk": false,
+              "bytes": 369621
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-pursuit-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac79b875df5-HKG",
+              "disk": false,
+              "bytes": 195516
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/power-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac7ab8d5df5-HKG",
+              "disk": false,
+              "bytes": 71565
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/plant-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac7ab8c5df5-HKG",
+              "disk": false,
+              "bytes": 334057
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/plant-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac7ab915df5-HKG",
+              "disk": false,
+              "bytes": 420990
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/menu-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac7ab8e5df5-HKG",
+              "disk": false,
+              "bytes": 448842
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/warehouse-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac7ab905df5-HKG",
+              "disk": false,
+              "bytes": 405013
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-alt-theme-v1.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac7ab8f5df5-HKG",
+              "disk": false,
+              "bytes": 428896
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-exploration-v3.ogg",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac79b865df5-HKG",
+              "disk": false,
+              "bytes": 329298
+            },
+            {
+              "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/sfx-opus-dceb220d0bcb6bc7.bin",
+              "status": 200,
+              "cache": "HIT",
+              "ray": "a372bac7ab935df5-HKG",
+              "disk": false,
+              "bytes": 112098
+            }
+          ]
+        }
+      ],
+      "warmup": {
+        "warmup": true,
+        "menuMs": 3859.974208,
+        "audioMs": 446.23712500000056,
+        "totalMs": 4518.177707999999,
+        "httpRequests": 27,
+        "gameRequests": 25,
+        "mediaRequests": 21,
+        "mediaTransferBytes": 10940335,
+        "errors": [],
+        "media": [
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/archive-ward-v1.q95.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba554dc320f0-HKG",
+            "disk": false,
+            "bytes": 287528
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/bed-overhead-v4.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba554dc020f0-HKG",
+            "disk": false,
+            "bytes": 459623
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-light-shy-v1.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba554dbb20f0-HKG",
+            "disk": false,
+            "bytes": 823433
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/patient-sheet-v4.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba554dc220f0-HKG",
+            "disk": false,
+            "bytes": 854265
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-listener-v1.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba554dbe20f0-HKG",
+            "disk": false,
+            "bytes": 841512
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/hospital-patroller-v1.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba554db920f0-HKG",
+            "disk": false,
+            "bytes": 835699
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/weeping-patient-v1.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba554dc120f0-HKG",
+            "disk": false,
+            "bytes": 961746
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/watchman-sheet-v4.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba554dbf20f0-HKG",
+            "disk": false,
+            "bytes": 666899
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba554db620f0-HKG",
+            "disk": false,
+            "bytes": 535805
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/watch-desk-v1.q95.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba570e847ab8-SJC",
+            "disk": false,
+            "bytes": 283176
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/assets/patrol-book-pixel-v1.webp",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba570e857ab8-SJC",
+            "disk": false,
+            "bytes": 1274762
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-pursuit-v3.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba5c1a1820f0-HKG",
+            "disk": false,
+            "bytes": 195542
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-exploration-v3.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba5c1a1520f0-HKG",
+            "disk": false,
+            "bytes": 329297
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/power-theme-v1.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba5c1a1d20f0-HKG",
+            "disk": false,
+            "bytes": 71568
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/menu-theme-v1.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba5c1a1e20f0-HKG",
+            "disk": false,
+            "bytes": 448994
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/warehouse-theme-v1.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba5c1a1a20f0-HKG",
+            "disk": false,
+            "bytes": 369609
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/sfx-opus-dceb220d0bcb6bc7.bin",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba5c1a2220f0-HKG",
+            "disk": false,
+            "bytes": 111934
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/plant-alt-theme-v1.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba5c1a2120f0-HKG",
+            "disk": false,
+            "bytes": 421044
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/warehouse-alt-theme-v1.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba5c1a2020f0-HKG",
+            "disk": false,
+            "bytes": 405020
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/ward-alt-theme-v1.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba5c1a1f20f0-HKG",
+            "disk": false,
+            "bytes": 428864
+          },
+          {
+            "url": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/audio/plant-theme-v1.ogg",
+            "status": 200,
+            "cache": "HIT",
+            "ray": "a372ba5c1a1c20f0-HKG",
+            "disk": false,
+            "bytes": 334015
+          }
+        ]
+      }
+    }
+  }
+}

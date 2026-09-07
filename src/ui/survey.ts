@@ -11,7 +11,7 @@ function loadImage(file:string){
 /** Authored location stills, rendered on the same fixed pixel grid as the archive. */
 export function drawSurvey(canvas:HTMLCanvasElement,level:Level){
  const ctx=canvas.getContext('2d');if(!ctx)return;
- const theme=scenes[level.theme]??scenes[0],file=`/assets/archive-${theme}-v1.webp`;
+ const theme=scenes[level.theme]??scenes[0],file=`/assets/archive-${theme}-v1.q95.webp`;
  canvas.dataset.scene=theme;canvas.dataset.loaded='false';
  canvas.setAttribute('aria-label',t('survey.alt',{name:stageName(level.theme)}));
  ctx.fillStyle='#182322';ctx.fillRect(0,0,240,144);

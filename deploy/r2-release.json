@@ -1,0 +1,207 @@
+{
+  "accountId": "88a1b52dbadcb015f707f00ce53ff7ce",
+  "bucket": "night-shift-assets",
+  "domain": "night-shift-assets.liveinteractivegame.com",
+  "zoneId": "30badb66445e606e10540be49d75e584",
+  "prefix": "games/night-shift",
+  "version": "c1405de20e423902",
+  "files": [
+    {
+      "file": "assets/archive-plant-v1.q95.webp",
+      "bytes": 310896,
+      "sha256": "b747b0189f6ebd5ba8d83397ce198aececcdb52c94a462d6637c052358d859fb"
+    },
+    {
+      "file": "assets/archive-ward-v1.q95.webp",
+      "bytes": 286658,
+      "sha256": "e419e7b474f44fdb7f0669a48edad9c87acfa91e2000f6fe3a721b7d9391509a"
+    },
+    {
+      "file": "assets/archive-warehouse-v1.q95.webp",
+      "bytes": 340696,
+      "sha256": "c27c4587b5974352864f900e3a5f2e57aa43da00caac31b5060ddc376f8b1560"
+    },
+    {
+      "file": "assets/bed-overhead-v4.webp",
+      "bytes": 458760,
+      "sha256": "a7f81c18983279366befb17b0b1da8963d28dc559052b82ed85585fb6289ba51"
+    },
+    {
+      "file": "assets/hospital-corridor-v2.q95.webp",
+      "bytes": 280544,
+      "sha256": "b04933bdc200c6373b28100adfc0c4c9d1c5ba4ebc698d93f59249488e1ee2cf"
+    },
+    {
+      "file": "assets/hospital-floor-v2.q95.webp",
+      "bytes": 408898,
+      "sha256": "aba52280f139899d5c49ad49a2035f1ee525b1bc58af7e854efac4827a722552"
+    },
+    {
+      "file": "assets/hospital-light-shy-v1.webp",
+      "bytes": 822152,
+      "sha256": "2f6ec34c7849481d449088ecdf1ff03dc35a85ad6b0530245547ea68c48cc0e7"
+    },
+    {
+      "file": "assets/hospital-listener-v1.webp",
+      "bytes": 840216,
+      "sha256": "b0cf7b3e227cd1547df84517198555b5807cc37a936d811abef47a528944545a"
+    },
+    {
+      "file": "assets/hospital-patroller-v1.webp",
+      "bytes": 834208,
+      "sha256": "7393cb63d8f78819a26356ecf9e317676bedf27f2ee3acd6d8dd4f3909b1d3ed"
+    },
+    {
+      "file": "assets/hospital-wall-v2.q95.webp",
+      "bytes": 608880,
+      "sha256": "a5523afb3a7c412c704683b55865a80b1aae92137837fdd7a997c4d0293343cb"
+    },
+    {
+      "file": "assets/patient-sheet-v4.webp",
+      "bytes": 852950,
+      "sha256": "12fc209228c8c962be94dc9d29c3243673a0f562d3d5c71f817dd21c3b8b3adb"
+    },
+    {
+      "file": "assets/patrol-book-pixel-v1.webp",
+      "bytes": 1272988,
+      "sha256": "298fcbbbf76ee4e3c35a8971e3f20ebee34404f9b9efd014df21e2f53abf118b"
+    },
+    {
+      "file": "assets/watch-desk-painted-v2.q95.webp",
+      "bytes": 467268,
+      "sha256": "122b313730f4d1fc5a15edd57c06083d176d61103ae6edfeb8c06f4c38fbe4b3"
+    },
+    {
+      "file": "assets/watch-desk-v1.q95.webp",
+      "bytes": 282364,
+      "sha256": "2b594c15789c88e8499ab3e453d6fe8b84d356ca839f163e4796bfdc78b4a314"
+    },
+    {
+      "file": "assets/watchman-sheet-v4.webp",
+      "bytes": 665826,
+      "sha256": "5e672d200c09db0444b6b7731ddb20c38436c5b43f28dc0dec4beea63e20dcad"
+    },
+    {
+      "file": "assets/weeping-patient-v1.webp",
+      "bytes": 960314,
+      "sha256": "8fae864e2a1efc1390c25efe17520953d4b51f89503d1a7b6e40c0b19f8777b7"
+    },
+    {
+      "file": "audio/menu-theme-v1.mp3",
+      "bytes": 768252,
+      "sha256": "f976424c49129f2ce7e54fac46381e096bf530b8e5c294ed8c0eb2680dd073de"
+    },
+    {
+      "file": "audio/menu-theme-v1.ogg",
+      "bytes": 447999,
+      "sha256": "b276915b2bcc069b2c0bf9b5f83761aa24c971429199c573b7f122bdf69805ed"
+    },
+    {
+      "file": "audio/plant-alt-theme-v1.mp3",
+      "bytes": 769087,
+      "sha256": "0f4d443ede834b246d2f93033c2dc81040d9acbe60d3f7c36f74f4938b9680a7"
+    },
+    {
+      "file": "audio/plant-alt-theme-v1.ogg",
+      "bytes": 420196,
+      "sha256": "e81121f37dd59c39ef0351ecc26e4ef10458a494d33bf487d13a09d6424604b5"
+    },
+    {
+      "file": "audio/plant-theme-v1.mp3",
+      "bytes": 641192,
+      "sha256": "cce9dd37a46619067d2c3f338204f2de301ee8913c9f3c887e15e7067efa6b50"
+    },
+    {
+      "file": "audio/plant-theme-v1.ogg",
+      "bytes": 333182,
+      "sha256": "5285ccd6dd1916cbff273126062b80419e966c3674497585679dd53a6bb967a6"
+    },
+    {
+      "file": "audio/power-theme-v1.mp3",
+      "bytes": 129192,
+      "sha256": "7c11b56e7c837681bf384dbcbfd23fbcdbd3fe00809cb04f52e4772178c56ca4"
+    },
+    {
+      "file": "audio/power-theme-v1.ogg",
+      "bytes": 71148,
+      "sha256": "cc36e7250f5cd8b12aa620aeef236194cf35fcd7a0094ddc9dee394fa9b9742c"
+    },
+    {
+      "file": "audio/sfx-mp3-0822ac8633ba188a.bin",
+      "bytes": 381529,
+      "sha256": "0822ac8633ba188a33dde707793b2284bff6cb5c43b962b05bea985758d13468"
+    },
+    {
+      "file": "audio/sfx-opus-dceb220d0bcb6bc7.bin",
+      "bytes": 111447,
+      "sha256": "dceb220d0bcb6bc7f1e4b7edb21af304e48d9826ffa4936e562e4ed357586280"
+    },
+    {
+      "file": "audio/ward-alt-theme-v1.mp3",
+      "bytes": 767834,
+      "sha256": "fb18b4e9eff6ed86dea8b178e25f01471d39b4bb109114951d251961b6a9781c"
+    },
+    {
+      "file": "audio/ward-alt-theme-v1.ogg",
+      "bytes": 428040,
+      "sha256": "9f486769ac8e42e87cf0d3716a19fcd755f7401cde7417ad0a30a62a0b17218d"
+    },
+    {
+      "file": "audio/ward-exploration-v3.mp3",
+      "bytes": 641194,
+      "sha256": "39f533a92852588c0070096bb756d6cc611184cc62452bcc29a786ace0e4bc36"
+    },
+    {
+      "file": "audio/ward-exploration-v3.ogg",
+      "bytes": 328591,
+      "sha256": "c15c392d0950ac5653ffaa2e480cd058d112f5fb9013ed6ab5d1d9c866df0294"
+    },
+    {
+      "file": "audio/ward-pursuit-v3.mp3",
+      "bytes": 384149,
+      "sha256": "27870c1169ba354230293b3e475740ab7738f5c5f10441a826f71fc33bdd731b"
+    },
+    {
+      "file": "audio/ward-pursuit-v3.ogg",
+      "bytes": 194956,
+      "sha256": "8e43a29924af56527a0bf48fbe73488a90739ccb43b7217c3c52d375c70c5ed8"
+    },
+    {
+      "file": "audio/warehouse-alt-theme-v1.mp3",
+      "bytes": 768670,
+      "sha256": "2899a5964d3a61fc8d82d3bcb69a57e28aaca52c7824c992708c059368bea03f"
+    },
+    {
+      "file": "audio/warehouse-alt-theme-v1.ogg",
+      "bytes": 404221,
+      "sha256": "4312fad5ee4a2744ac15c3e50b1f5e24c664e4b7be2f001bbb2a5ddde410142a"
+    },
+    {
+      "file": "audio/warehouse-theme-v1.mp3",
+      "bytes": 641192,
+      "sha256": "73c482573fe7c1aa99dde0bd450b75233ace8e1e49280b7c87aab9a3eee343fc"
+    },
+    {
+      "file": "audio/warehouse-theme-v1.ogg",
+      "bytes": 368837,
+      "sha256": "abc04b20b0ad17f38112cabdb550012f4f296724252707705398a5a6dace6d1b"
+    },
+    {
+      "file": "fonts/OFL.txt",
+      "bytes": 4412,
+      "sha256": "3ab41567e68e3988ba1ef16dd2644eca95ca5648ea12e7d46e6287fc0bbe5aee"
+    },
+    {
+      "file": "fonts/SOURCE.txt",
+      "bytes": 131,
+      "sha256": "4364b2a89eb7c6f4597a52f337267f9998cc949e87eccf494c181a8ea9c65263"
+    },
+    {
+      "file": "fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
+      "bytes": 534852,
+      "sha256": "85cb13ec5954e082b256bba488ff9c9366a9f3166a61bf174cddb9fde0651ae0"
+    }
+  ],
+  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c1405de20e423902/",
+  "verifiedAt": "2026-09-07T03:27:51.043Z"
+}

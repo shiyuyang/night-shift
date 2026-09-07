@@ -1,4 +1,5 @@
 import {decodeAudioAsset} from './runtime/audio-asset.ts';
+import {decodeSoundEffects} from './runtime/audio-pack.ts';
 import effects from '../game/audio-sfx.json' with {type:'json'};
 import music from '../game/music.json' with {type:'json'};
 interface LoopLayer { id: string; buffer: AudioBuffer; gain: GainNode; nextStart: number; active?:boolean; sources?:Set<AudioBufferSourceNode>; }
@@ -97,8 +98,11 @@ export class Ambience {
   }
   private async loadMusic() {
     const ctx = this.context!;
-    const buffers = await Promise.all(music.map(track=>decodeAudioAsset(ctx,track.file,track.opusFile)));
-    await Promise.all(effects.map(async effect=>{this.effects.set(effect.id,await decodeAudioAsset(ctx,effect.file,effect.opusFile));}));
+    const [buffers,effectBuffers] = await Promise.all([
+      Promise.all(music.map(track=>decodeAudioAsset(ctx,track.file,track.opusFile.replace(/\.opus$/,'.ogg')))),
+      decodeSoundEffects(ctx)
+    ]);
+    this.effects=effectBuffers;
     this.powerBuffer = buffers[music.findIndex(track => track.id === 'power')];
     this.layers = buffers.flatMap((buffer, i) => {
       if (music[i].id === 'power') return [];

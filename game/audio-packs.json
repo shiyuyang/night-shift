@@ -1,0 +1,160 @@
+{
+  "opus": {
+    "file": "/audio/sfx-opus-dceb220d0bcb6bc7.bin",
+    "bytes": 111447,
+    "sha256": "dceb220d0bcb6bc7f1e4b7edb21af304e48d9826ffa4936e562e4ed357586280",
+    "entries": {
+      "step": {
+        "offset": 0,
+        "length": 2361
+      },
+      "metal": {
+        "offset": 2361,
+        "length": 5484
+      },
+      "impact": {
+        "offset": 7845,
+        "length": 3754
+      },
+      "ghost": {
+        "offset": 11599,
+        "length": 8053
+      },
+      "heartbeat": {
+        "offset": 19652,
+        "length": 2822
+      },
+      "call-bell": {
+        "offset": 22474,
+        "length": 5922
+      },
+      "bandage": {
+        "offset": 28396,
+        "length": 5884
+      },
+      "breath": {
+        "offset": 34280,
+        "length": 5701
+      },
+      "exhausted": {
+        "offset": 39981,
+        "length": 5266
+      },
+      "recover": {
+        "offset": 45247,
+        "length": 2840
+      },
+      "relay": {
+        "offset": 48087,
+        "length": 2327
+      },
+      "relay-urgent": {
+        "offset": 50414,
+        "length": 2400
+      },
+      "pickup": {
+        "offset": 52814,
+        "length": 2849
+      },
+      "flash": {
+        "offset": 55663,
+        "length": 3596
+      },
+      "patient-cry": {
+        "offset": 59259,
+        "length": 31835
+      },
+      "patient-rise": {
+        "offset": 91094,
+        "length": 3848
+      },
+      "patient-lunge": {
+        "offset": 94942,
+        "length": 9005
+      },
+      "patient-stunned": {
+        "offset": 103947,
+        "length": 7500
+      }
+    }
+  },
+  "mp3": {
+    "file": "/audio/sfx-mp3-0822ac8633ba188a.bin",
+    "bytes": 381529,
+    "sha256": "0822ac8633ba188a33dde707793b2284bff6cb5c43b962b05bea985758d13468",
+    "entries": {
+      "step": {
+        "offset": 0,
+        "length": 8820
+      },
+      "metal": {
+        "offset": 8820,
+        "length": 20105
+      },
+      "impact": {
+        "offset": 28925,
+        "length": 13835
+      },
+      "ghost": {
+        "offset": 42760,
+        "length": 29300
+      },
+      "heartbeat": {
+        "offset": 72060,
+        "length": 11745
+      },
+      "call-bell": {
+        "offset": 83805,
+        "length": 16761
+      },
+      "bandage": {
+        "offset": 100566,
+        "length": 20105
+      },
+      "breath": {
+        "offset": 120671,
+        "length": 18433
+      },
+      "exhausted": {
+        "offset": 139104,
+        "length": 20105
+      },
+      "recover": {
+        "offset": 159209,
+        "length": 11745
+      },
+      "relay": {
+        "offset": 170954,
+        "length": 8820
+      },
+      "relay-urgent": {
+        "offset": 179774,
+        "length": 8820
+      },
+      "pickup": {
+        "offset": 188594,
+        "length": 10492
+      },
+      "flash": {
+        "offset": 199086,
+        "length": 13835
+      },
+      "patient-cry": {
+        "offset": 212921,
+        "length": 100771
+      },
+      "patient-rise": {
+        "offset": 313692,
+        "length": 13835
+      },
+      "patient-lunge": {
+        "offset": 327527,
+        "length": 29300
+      },
+      "patient-stunned": {
+        "offset": 356827,
+        "length": 24702
+      }
+    }
+  }
+}
