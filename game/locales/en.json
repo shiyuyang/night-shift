@@ -70,5 +70,9 @@
   "guide.5": "Cross-marked cabinets contain supplies. Tall lockers hide you for up to 8 seconds. Break line of sight before hiding.",
   "tutorial.exitReturn": "Return to character",
   "tutorial.exitTitle": "THIS IS THE EXIT",
-  "tutorial.exitText": "All three fuses are collected. This green-lit door is your exit. The 8-second power countdown resumes when the camera returns. Keep moving, then come here and press E to escape."
+  "tutorial.exitText": "All three fuses are collected. This green-lit door is your exit. The 8-second power countdown resumes when the camera returns. Keep moving, then come here and press E to escape.",
+  "tutorial.healthTitle": "WATCH YOUR HEALTH",
+  "tutorial.healthText": "The white bar at the upper left is your health. Hits shorten it; at zero, you die. Blinking after a hit gives brief protection. Press Q to heal 40 health with a bandage.",
+  "tutorial.flashlightTitle": "SAVE YOUR LIGHT",
+  "tutorial.flashlightText": "The upper-right flashlight shows battery charge and time, separately from health. Press T or click its icon. Try switching off, then on. Switching off or hiding stops battery drain; use the beam to see ahead."
 }

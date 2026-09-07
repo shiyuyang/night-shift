@@ -1,4 +1,6 @@
 export const lessons={
+ health:{title:'留意你的生命',text:'左上方的白色长条是生命值。受伤会缩短，降到 0 就会死亡；受伤后的闪烁只是短暂无敌。负伤后用 Q 绷带恢复 40 生命。',target:'health'},
+ flashlight:{title:'把光留给需要的地方',text:'右上角单独显示手电电量和剩余秒数，和生命值无关。按 T 或点击手电图标开关。现在试着关闭，再打开：关灯或藏身不耗电；需要看清前方时再开灯。',target:'light'},
  move:{title:'第一条值班守则',text:'WASD / 方向键移动。按住 Shift 可短暂疾跑，松开后恢复体力。先沿走廊走一段。',target:'stamina'},
  key:{title:'把钥匙收好',text:'靠近地上的铜钥匙，按 E 拾取。专用钥匙只开启对应的锁，第一次开锁后消耗。',target:'key'},
  box:{title:'开箱会发出声音',text:'靠近箱子按 E 搜寻。取走保险丝后，准备应对被声音引来的东西。',target:'world'},

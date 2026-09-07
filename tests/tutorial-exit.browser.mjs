@@ -2,7 +2,7 @@ import {chromium} from '@playwright/test';import assert from 'node:assert/strict
 const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome-stable',headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
 try{
  const page=await browser.newPage({viewport:{width:1440,height:900}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
- await page.addInitScript(()=>localStorage.setItem('night-shift-tutorial-v1',JSON.stringify(['move','key','box','flash','decoy','heal','practice','door'])));
+ await page.addInitScript(()=>localStorage.setItem('night-shift-tutorial-v1',JSON.stringify(['health','flashlight','move','key','box','flash','decoy','heal','practice','door'])));
  await page.goto('http://localhost:5174/?playtest=encounters');await page.locator('#start:enabled').waitFor();await page.locator('#start').click();await page.waitForFunction(()=>document.body.dataset.ui==='playing'&&window.__nightshiftScene?.active);
  await page.evaluate(()=>{const s=window.__nightshiftScene;s.player.setPosition(800,318);s.cameras.main.centerOn(800,318);s.state.fuses=3;s.exitStartup=8;s.cooldown=999;});
  await page.waitForFunction(()=>window.__nightshift().exitTour==='hold');

@@ -20,7 +20,8 @@
     "test:browser:deployment": "node tests/deployment.browser.mjs",
     "deploy:linode": "python scripts/deploy-linode.py",
     "test:browser:menu": "node tests/menu.browser.mjs",
-    "test:browser:exit": "node tests/tutorial-exit.browser.mjs"
+    "test:browser:exit": "node tests/tutorial-exit.browser.mjs",
+    "test:browser:vitals": "node tests/tutorial-vitals.browser.mjs"
   },
   "dependencies": {
     "phaser": "^3.90.0"
