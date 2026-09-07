@@ -144,6 +144,51 @@
     "encoding": "webp-q95"
   },
   {
+    "file": "assets/yakin-byoutou-title-v4.webp",
+    "source": "assets/yakin-byoutou-title-v4.png",
+    "source_bytes": 785217,
+    "bytes": 491356,
+    "source_sha256": "1f4ec914f91d1ca2c0c5e213612ef4b60c8aac965bbe45aaa9783f0d5e837ca6",
+    "sha256": "1f955f252a8522041cad1bea30cdff79235d7f4b5ee3b56d2585905f2fc66744",
+    "encoding": "lossless"
+  },
+  {
+    "file": "assets/watch-desk-cold-night-v1.webp",
+    "source": "assets/watch-desk-cold-night-v1.png",
+    "source_bytes": 1814559,
+    "bytes": 184588,
+    "source_sha256": "a6d9e720a446d4c03d655c4f727b640cd293bc185ad97436f87f0bfeb9860cc2",
+    "sha256": "7228852655ab5b72189ff92c04602102d726b04c12760ff0ab2427062c789d68",
+    "encoding": "webp-q95"
+  },
+  {
+    "file": "assets/hospital-register-selected-v1.webp",
+    "source": "assets/hospital-register-selected-v1.png",
+    "source_bytes": 2668382,
+    "bytes": 571216,
+    "source_sha256": "a0cd72a7b8597bd568cba64e13667ba47d270bf1d629893722dcbaa7d4d89fb7",
+    "sha256": "054e5fa98826311416bb7bf89b29e4e9fbb1870a7625aaae59a961a450db29a6",
+    "encoding": "webp-q95"
+  },
+  {
+    "file": "assets/stamp-button-normal-v1.webp",
+    "source": "assets/stamp-button-normal-v1.png",
+    "source_bytes": 416793,
+    "bytes": 317858,
+    "source_sha256": "d6df64f0e28bee5d2eff79d5442f057fb431b22a9d65717c8a2bbeb686fbef66",
+    "sha256": "1918a7e904ea8a474ac03c2914bc7fa3a5c47252398af8c0a1a51828de8b9c25",
+    "encoding": "lossless"
+  },
+  {
+    "file": "assets/stamp-button-pressed-v1.webp",
+    "source": "assets/stamp-button-pressed-v1.png",
+    "source_bytes": 1323170,
+    "bytes": 143786,
+    "source_sha256": "5ba8750b58abd8fa30b7368240f0cb025a42ec31e0dc6728cadd8e01afbb8e77",
+    "sha256": "31f052758989e4ad5539379bda6ed626a00f600d03d325df2438023e38aafc2c",
+    "encoding": "webp-q95"
+  },
+  {
     "file": "audio/ward-exploration-v3.opus",
     "source": "audio/ward-exploration-v3.mp3",
     "source_bytes": 641194,

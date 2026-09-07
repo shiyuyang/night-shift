@@ -1,0 +1,4 @@
+PhotoNote is a subset of Ma Shan Zheng, licensed under SIL OFL 1.1.
+Source: https://github.com/google/fonts/tree/main/ofl/mashanzheng
+Subset: photo note, start action, pending/signed/complete status in zh-CN and en.
+Generated with fonttools pyftsubset, WOFF2.

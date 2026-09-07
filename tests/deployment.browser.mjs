@@ -26,6 +26,10 @@ try{
  assert.equal(await brand.getAttribute('src'),assetBase+'assets/yakin-byoutou-title-v4.webp');
  assert.ok(await brand.evaluate(image=>image.complete&&image.naturalWidth>0),'Title image must load');
  assert.equal(await page.locator('.desk-title p').textContent(),'今晚的病人，比名册上多一位。');
+ // Observe the actual animated opacity, not just the scheduled flash counter.
+ await page.waitForFunction(()=>Number(getComputedStyle(document.querySelector('.desk-lamp-falloff')).opacity)>.1,null,{timeout:25000,polling:'raf'});
+ await page.waitForFunction(()=>Number(getComputedStyle(document.querySelector('.desk-lamp-falloff')).opacity)===0);
+ assert.equal(await page.locator('#start').textContent(),'开始巡查 →');
  await page.locator('#start').click();await page.waitForFunction(()=>document.body.dataset.ui==='playing');
  await page.waitForFunction(()=>document.querySelector('#music-status')?.textContent?.includes('已就绪'),null,{timeout:60000});
  console.log(fallback?'MP3 fallback playback ready':'Opus playback ready');
