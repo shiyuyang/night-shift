@@ -7,13 +7,13 @@ export type WeeperEvent='cry'|'warning'|'dash'|'suppressed'|'hit'|'quiet';
 export interface WeeperInput {player:Position;hidden:boolean;angle:number;light:boolean;sprinting:boolean;noise:boolean;solids:Box[];architecture:Box[];bounds:Box;immune:boolean;flash?:boolean;}
 /** One deterministic patient. No damage can occur before the flash decision. */
 export class Weeper {
- position:Position;home:Position;phase:WeeperPhase='idle';anger=0;clock=0;angle=0;elapsed=0;cryAt=0;grace=1;route:Position[]=[];routeClock=0;watchful=0;hushed=false;noticed=false;noticeTime=0;
+ position:Position;home:Position;phase:WeeperPhase='idle';anger=0;clock=0;angle=0;elapsed=0;cryAt=0;grace=1;route:Position[]=[];routeClock=0;watchful=0;hushed=false;noticed=false;noticeTime=0;calmWait=0;
  constructor(home:Position){this.home={...home};this.position={...home};}
  get dangerous(){return this.phase==='warning'||this.phase==='dash';}
  get awake(){return this.dangerous||this.phase==='returning';}
  flash(player:Position,solids:Box[]):boolean{
   if(Math.hypot(player.x-this.position.x,player.y-this.position.y)>weeperRules.flashRadius||!clearContact({x:player.x,y:player.y+10},{x:this.position.x,y:this.position.y+10},solids))return false;
-  this.phase='stunned';this.clock=weeperRules.flashSeconds;this.anger=0;this.watchful=12;this.hushed=true;this.route=[];return true;
+  this.phase='stunned';this.clock=weeperRules.flashSeconds;this.anger=0;this.calmWait=0;this.watchful=12;this.hushed=true;this.route=[];return true;
  }
  tick(dt:number,input:WeeperInput):WeeperEvent[]{
   if(dt<=0)return [];
@@ -29,7 +29,8 @@ export class Weeper {
    const close=visible&&distance<weeperRules.alertRadius&&this.grace===0;
    this.watchful=Math.max(0,this.watchful-dt);
    const disturbance=close&&(this.watchful>0||input.light&&diff<.62||input.sprinting||input.noise||distance<50);
-   this.anger=Math.max(0,Math.min(1,this.anger+dt*(disturbance?1/weeperRules.alertSeconds:-.7)));
+   if(disturbance){this.calmWait=weeperRules.calmDelay;this.anger=Math.min(1,this.anger+dt/weeperRules.alertSeconds);}
+   else{const cooling=Math.max(0,dt-this.calmWait);this.calmWait=Math.max(0,this.calmWait-dt);this.anger=Math.max(0,this.anger-cooling*weeperRules.calmRate);}
    this.phase=this.anger>0?'alert':'idle';
    if((this.noticed||this.anger>=.3)&&!this.hushed){this.hushed=true;events.push('quiet');}
    if(!this.noticed&&this.anger===0&&this.watchful===0&&this.hushed){this.hushed=false;this.cryAt=this.elapsed+3;}

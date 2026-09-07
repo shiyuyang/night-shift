@@ -74,5 +74,14 @@
   "tutorial.healthTitle": "留意你的生命",
   "tutorial.healthText": "左上方的白色长条是生命值。受伤会缩短，降到 0 就会死亡；受伤后的闪烁只是短暂无敌。负伤后用 Q 绷带恢复 40 生命。",
   "tutorial.flashlightTitle": "把光留给需要的地方",
-  "tutorial.flashlightText": "右上角单独显示手电电量和剩余秒数，和生命值无关。按 T 或点击手电图标开关。现在试着关闭，再打开：关灯或藏身不耗电；需要看清前方时再开灯。"
+  "tutorial.flashlightText": "右上角单独显示手电电量和剩余秒数，和生命值无关。按 T 或点击手电图标开关。现在试着关闭，再打开：关灯或藏身不耗电；需要看清前方时再开灯。",
+  "tutorial.monster-listenerTitle": "听声者 · 轻走离开",
+  "tutorial.monster-listenerText": "它看不见你，但疾跑、开箱和开关门会暴露位置。轻走离开发声处，或用 R 诱饵引开它；不要停在它正在寻找的位置。",
+  "tutorial.monster-light-shyTitle": "畏光者 · 照一下，转身跑",
+  "tutorial.monster-light-shyText": "回头用手电照它一下，它会遮脸后退。转身后仍有约 2 秒逃跑时间；它放下手臂就会恢复追逐，短时间重复照光不能延长控制。按 F 闪光可争取更长时间。",
+  "tutorial.monster-patrollerTitle": "巡逻者 · 转角关门",
+  "tutorial.monster-patrollerText": "被它看见就会遭到追逐。绕过转角、按 E 关门挡住它，脱离视线后再藏身。",
+  "tutorial.monster-weeperTitle": "哭泣患者 · 别惊动它",
+  "tutorial.monster-weeperText": "按 T 熄灯，轻走并保持距离。近处照光、疾跑和噪声会激怒它；起身扑来时按 F 闪光，或向侧面躲开。",
+  "tutorial.monsterContinue": "记住了，继续"
 }

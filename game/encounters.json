@@ -6,9 +6,11 @@
   "weeper": {
     "firstRound": 3,
     "chance": 0.85,
-    "alertRadius": 90,
+    "alertRadius": 110,
     "touchRadius": 32,
-    "alertSeconds": 2,
+    "alertSeconds": 1.2,
+    "calmDelay": 1,
+    "calmRate": 0.25,
     "warningSeconds": 0.8,
     "dashSpeed": 220,
     "dashSeconds": 0.9,
