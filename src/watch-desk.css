@@ -297,7 +297,15 @@ html[lang=zh-CN] .survey-frame span{font-family:PhotoNote,cursive;font-size:17px
  radial-gradient(ellipse 16% 40% at 73% 40%,#01091075,transparent 100%),
  radial-gradient(ellipse 15% 23% at 63% 72%,#010910b0,transparent 100%);
 }
-@media(prefers-reduced-motion:reduce){.desk-lamp-falloff{display:none}}
+.desk-apparition{
+ position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;
+}
+.desk-yurei{
+ position:absolute;left:65%;top:34%;width:14%;height:37%;opacity:0;
+ background:url('/assets/desk-yurei-v1.webp') center/contain no-repeat;
+ filter:brightness(.62) saturate(.45);image-rendering:auto;
+}
+@media(prefers-reduced-motion:reduce){.desk-lamp-falloff,.desk-apparition{display:none}}
 
 /* The cover is a fixed composition; only its outer stage scales. */
 .desk-stage-host{position:fixed;inset:0;z-index:1000;background:#030607;overflow:hidden}

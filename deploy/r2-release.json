@@ -4,7 +4,7 @@
   "domain": "night-shift-assets.liveinteractivegame.com",
   "zoneId": "30badb66445e606e10540be49d75e584",
   "prefix": "games/night-shift",
-  "version": "499cc6e7e9b81a28",
+  "version": "a1a674bee95a4b70",
   "files": [
     {
       "file": "assets/archive-plant-v1.q95.webp",
@@ -25,6 +25,11 @@
       "file": "assets/bed-overhead-v4.webp",
       "bytes": 458760,
       "sha256": "a7f81c18983279366befb17b0b1da8963d28dc559052b82ed85585fb6289ba51"
+    },
+    {
+      "file": "assets/desk-yurei-v1.webp",
+      "bytes": 27194,
+      "sha256": "15845780818de2abcbfc68d18af43a774582369bea9e278f54570d72450ee751"
     },
     {
       "file": "assets/hospital-corridor-v2.q95.webp",
@@ -337,6 +342,6 @@
       "sha256": "d113cd651f212760397282b77588d331a6079268e539375b784992fb97ecd320"
     }
   ],
-  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/499cc6e7e9b81a28/",
-  "verifiedAt": "2026-09-08T09:16:12.096Z"
+  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/a1a674bee95a4b70/",
+  "verifiedAt": "2026-09-08T10:45:43.400Z"
 }
