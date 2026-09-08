@@ -4,7 +4,7 @@
   "domain": "night-shift-assets.liveinteractivegame.com",
   "zoneId": "30badb66445e606e10540be49d75e584",
   "prefix": "games/night-shift",
-  "version": "580806860ba99927",
+  "version": "c6b21df6eb8f5603",
   "files": [
     {
       "file": "assets/archive-plant-v1.q95.webp",
@@ -132,6 +132,11 @@
       "sha256": "1f955f252a8522041cad1bea30cdff79235d7f4b5ee3b56d2585905f2fc66744"
     },
     {
+      "file": "audio/garden-blood-moon-v1.ogg",
+      "bytes": 401173,
+      "sha256": "0d4afc0df6a58898442f9047755c2e900c29e91a3e269b1c60fa474f4eb27056"
+    },
+    {
       "file": "audio/menu-theme-v1.ogg",
       "bytes": 447999,
       "sha256": "b276915b2bcc069b2c0bf9b5f83761aa24c971429199c573b7f122bdf69805ed"
@@ -147,14 +152,14 @@
       "sha256": "5285ccd6dd1916cbff273126062b80419e966c3674497585679dd53a6bb967a6"
     },
     {
-      "file": "audio/power-theme-v1.ogg",
-      "bytes": 71148,
-      "sha256": "cc36e7250f5cd8b12aa620aeef236194cf35fcd7a0094ddc9dee394fa9b9742c"
+      "file": "audio/power-30-v1.ogg",
+      "bytes": 228287,
+      "sha256": "078e75d5b41ea57a9ee1ed9de024bd245f3cc068ecaac491fbf424f2960b0392"
     },
     {
-      "file": "audio/sfx-opus-dceb220d0bcb6bc7.bin",
-      "bytes": 111447,
-      "sha256": "dceb220d0bcb6bc7f1e4b7edb21af304e48d9826ffa4936e562e4ed357586280"
+      "file": "audio/sfx-opus-3b1721547ed073ad.bin",
+      "bytes": 425330,
+      "sha256": "3b1721547ed073adb2349d7c04853bf0f1193d85a8f547b52cd0ad7f9395ec63"
     },
     {
       "file": "audio/ward-alt-theme-v1.ogg",
@@ -307,6 +312,6 @@
       "sha256": "d113cd651f212760397282b77588d331a6079268e539375b784992fb97ecd320"
     }
   ],
-  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/580806860ba99927/",
-  "verifiedAt": "2026-09-08T15:07:38.661Z"
+  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c6b21df6eb8f5603/",
+  "verifiedAt": "2026-09-08T17:14:23.658Z"
 }
