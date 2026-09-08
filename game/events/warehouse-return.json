@@ -20,7 +20,7 @@
       },
       {
         "type": "message",
-        "text": "货架深处响了一声，过道灯暗了下来。"
+        "text": "event.warehouse"
       },
       {
         "type": "wait",

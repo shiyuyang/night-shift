@@ -11,7 +11,7 @@ const assetBase=process.env.VITE_ASSET_BASE_URL||(process.env.DEPLOY_URL&&exists
 const executablePath=process.env.CHROME_PATH||['/usr/bin/google-chrome-stable','/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'].find(existsSync);
 const browser=await chromium.launch({executablePath,headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
 try{
- const page=await browser.newPage({viewport:{width:1440,height:900}});const errors=[],bad=[],local=[];
+ const page=await browser.newPage({locale:'zh-CN',viewport:{width:1440,height:900}});const errors=[],bad=[],local=[];
  const fallback=process.env.TEST_MP3_FALLBACK==='1';
  const originRequests=[];
  if(process.env.TEST_NO_LINODE==='1')await page.route(/https?:\/\/(?:api\.liveinteractivegame\.com|139\.162\.147\.129)(?:\/|:)/,route=>{originRequests.push(route.request().url());return route.abort();});
@@ -23,13 +23,16 @@ try{
  assert.equal(await page.title(),'夜勤病棟');
  const brand=page.locator('.game-brand img');
  assert.equal(await brand.getAttribute('alt'),'夜勤病棟');
- assert.equal(await brand.getAttribute('src'),assetBase+'assets/yakin-byoutou-title-v4.webp');
+ assert.equal(new URL(await brand.getAttribute('src'),url).href,assetBase+'assets/yakin-byoutou-title-v4.webp');
  assert.ok(await brand.evaluate(image=>image.complete&&image.naturalWidth>0),'Title image must load');
  assert.equal(await page.locator('.desk-title p').textContent(),'今晚的病人，比名册上多一位。');
- // Observe the actual animated opacity, not just the scheduled flash counter.
+ // Verify the cover's lamp actually changes opacity.
  await page.waitForFunction(()=>Number(getComputedStyle(document.querySelector('.desk-lamp-falloff')).opacity)>.1,null,{timeout:25000,polling:'raf'});
  await page.waitForFunction(()=>Number(getComputedStyle(document.querySelector('.desk-lamp-falloff')).opacity)===0);
  assert.equal(await page.locator('#start').textContent(),'开始巡查 →');
+ assert.equal(await page.locator('.survey-frame span').textContent(),'封楼前留影');
+ await page.evaluate(()=>document.fonts.ready);
+ assert.ok(await page.evaluate(()=>document.fonts.check('17px PhotoNote','封楼前留影尚未交班开始巡查')));
  // The menu keeps one composition across wide and portrait windows.
  const geometry=()=>page.evaluate(()=>{
   const stage=document.querySelector('#start-layer').getBoundingClientRect();

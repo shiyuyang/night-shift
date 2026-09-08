@@ -1,3 +1,5 @@
+import {setLocale} from '../src/i18n.ts';
+setLocale('zh-Hans');
 import test from 'node:test';import assert from 'node:assert/strict';
 import {RogueRun,PressureDirector,cacheOutcome,waterPhase} from '../src/runtime/rogue-run.ts';
 import {makeLevel} from '../src/levels.ts';import {center,featureSafetyBox} from '../src/runtime/rogue-content.ts';import {validatePlayableLevel} from '../src/runtime/level-validation.ts';

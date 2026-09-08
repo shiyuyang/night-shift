@@ -1,0 +1,206 @@
+{
+  "locales": {
+    "ja": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "ar": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "de": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "fr": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "es": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "id": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "vi": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "th": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "pt": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "tr": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "ru": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "it": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "ro": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "ms": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "ko": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "uk": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "az": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "pl": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "nl": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "el": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "bg": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "my": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "hu": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "he": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "hr": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "sv": {
+      "model": "mlx-community/Qwen3.5-9B-4bit",
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "en": {
+      "status": "source",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "zh-Hant": {
+      "status": "draft",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    },
+    "zh-Hans": {
+      "status": "source",
+      "nativeReviewed": false,
+      "translatedKeys": 313,
+      "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd"
+    }
+  },
+  "sourceHash": "a2cba45ed7d1dad824a8d538d280fefdee2f07466de90d28cb83e5bb02cffffd",
+  "note": "Machine translation drafts with explicit editorial overrides; no native-speaker review claimed."
+}

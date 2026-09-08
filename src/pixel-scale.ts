@@ -10,6 +10,6 @@ export function presentation(width:number,height:number){
 }
 export function displayZoom(width:number,height:number){return presentation(width,height).zoom;}
 export function attachPixelScale(game:Phaser.Game,host:HTMLElement){
- const resize=()=>{const {width,height}=host.getBoundingClientRect();if(!width||!height)return;const view=presentation(width,height);game.scale.setZoom(view.zoom);const parent=host.parentElement!;for(const name of ['left','top','width','height'] as const)parent.style.setProperty(`--play-${name}`,`${view[name]}px`);parent.style.setProperty('--hud-scale',String(view.portrait?1:Math.max(1,Math.min(2.4,view.width/1280))));parent.dataset.presentation=view.portrait?'portrait':'landscape';host.dataset.pixelScale=String(view.zoom);host.dataset.pixelFit='fixed-view';};
+ const resize=()=>{const {width,height}=host.getBoundingClientRect();if(!width||!height)return;const view=presentation(width,height);game.scale.setZoom(view.zoom);const parent=host.parentElement!;for(const name of ['left','top','width','height'] as const)parent.style.setProperty(`--play-${name}`,`${view[name]}px`);parent.style.setProperty('--game-ui-scale',String(view.width/1280));parent.dataset.presentation=view.portrait?'portrait':'landscape';host.dataset.pixelScale=String(view.zoom);host.dataset.pixelFit='fixed-view';};
  const observer=new ResizeObserver(resize);observer.observe(host);game.events.once('destroy',()=>observer.disconnect());resize();
 }

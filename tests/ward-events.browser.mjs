@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {goTo,snapshot} from './navigation.mjs';
 import {overlaps} from '../src/collision.ts';
 const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome-stable',headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
-const page=await browser.newPage({viewport:{width:1440,height:1100}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+const page=await browser.newPage({locale:'zh-CN',viewport:{width:1440,height:1100}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
 const use=async()=>{await page.keyboard.press('e',{delay:80});await page.waitForTimeout(180);};
 try{
  await page.goto(process.env.BASE_URL||'http://localhost:5174');await page.locator('#start:enabled').click();

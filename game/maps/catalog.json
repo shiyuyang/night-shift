@@ -26,7 +26,7 @@
           },
           {
             "type": "message",
-            "text": "那台断了电的监视器，刚才亮了一下。"
+            "text": "event.ward"
           },
           {
             "type": "wait",
@@ -474,7 +474,7 @@
           },
           {
             "type": "message",
-            "text": "货架深处响了一声，过道灯暗了下来。"
+            "text": "event.warehouse"
           },
           {
             "type": "wait",
@@ -862,7 +862,7 @@
           },
           {
             "type": "message",
-            "text": "供电继电器跳闸，应急灯接管。"
+            "text": "event.plant"
           },
           {
             "type": "wait",

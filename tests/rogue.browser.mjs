@@ -2,7 +2,7 @@ import {feetAt,overlaps} from '../src/collision.ts';
 import {chromium} from '@playwright/test';import assert from 'node:assert/strict';import {goTo,snapshot} from './navigation.mjs';
 const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome-stable',headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
 try{
- const page=await browser.newPage({viewport:{width:1440,height:1000}});page.defend=true;const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const page=await browser.newPage({locale:'zh-CN',viewport:{width:1440,height:1000}});page.defend=true;const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.addInitScript(()=>{localStorage.setItem('night-shift-campaign-v1',JSON.stringify({unlocked:2}));localStorage.setItem('night-shift-tutorial-v1',JSON.stringify(['move','key','box','flash','decoy','heal','door','exit']));});
  await page.goto(process.env.BASE_URL||'http://localhost:5174');await page.locator('#start:enabled').waitFor();await page.locator('#start').click();await page.waitForFunction(()=>window.__nightshift?.().night===2);await page.locator('#console-toggle').click();
  const initial=await snapshot(page);assert.equal(initial.decoys,1);assert.equal(initial.bandages,1);assert.equal(initial.flashes,1+(initial.rules.event==='supply'?1:0));assert.deepEqual(initial.rogue.features.map(f=>f.kind),['cache','locker']);

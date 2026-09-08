@@ -1,0 +1,56 @@
+/* Independent of cover artwork: text follows locale; the fixed stage never mirrors. */
+@font-face{font-family:LocaleLatin;src:url('/fonts/locale-latin-f84459daf7.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleArabic;src:url('/fonts/locale-ar-b37007c412.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleHebrew;src:url('/fonts/locale-he-f6569a40cd.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleThai;src:url('/fonts/locale-th-00cbed7909.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleMyanmar;src:url('/fonts/locale-my-5b9d94eaa6.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleJapanese;src:url('/fonts/locale-ja-da69667ac1.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleKorean;src:url('/fonts/locale-ko-061d1e2edc.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleHans;src:url('/fonts/locale-zh-Hans-2271a0e5db.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleHant;src:url('/fonts/locale-zh-Hant-0ed7e29190.woff2') format('woff2');font-display:swap}
+:root{--locale-font:LocaleLatin;--locale-note:var(--locale-font)}
+:lang(ar){--locale-font:LocaleArabic}:lang(he){--locale-font:LocaleHebrew}:lang(th){--locale-font:LocaleThai}:lang(my){--locale-font:LocaleMyanmar}:lang(ja){--locale-font:LocaleJapanese}:lang(ko){--locale-font:LocaleKorean}:lang(zh-Hans){--locale-font:LocaleHans;--locale-note:PhotoNote,LocaleHans}:lang(zh-Hant){--locale-font:LocaleHant}
+body,button,select,option,kbd,dialog,body h1,body h2,body h3,body b,body small,body p,body span,body label,body i{font-family:var(--locale-font),LocaleLatin,NightPixel,sans-serif!important;text-shadow:none;font-weight:400}
+#start-layer #start,.record-heading .file-stamp,.survey-frame>span{font-family:var(--locale-note),sans-serif!important}
+#start-layer,.book-body,.book-tabs,.book-footer,#play-hud,.game-wrap{direction:ltr}
+.desk-title,.book-header,.archive-index,.archive-sheet,.desk-footnote,#pause-menu,#guide-dialog,#tutorial-card,.result-document,.message-copy{direction:inherit}
+html[dir=rtl] :is(.desk-title,.book-header,.archive-index,.archive-sheet,.desk-footnote,#pause-menu,#guide-dialog,#tutorial-card,.result-document,.message-copy){direction:rtl;text-align:start}
+html[dir=rtl] :is(.book-tabs button,.book-tabs select,#start){direction:rtl}
+html[data-script=complex] *{letter-spacing:normal!important;text-transform:none!important}
+#start-layer .book-tabs{display:flex;right:4%;gap:5px;max-width:calc(100% - 38px);align-items:stretch;bottom:calc(100% - 14px);height:auto}
+#start-layer .book-tabs button,#start-layer .book-tabs select{font-size:14px;line-height:1.4;letter-spacing:0;min-height:38px;padding:7px 12px;white-space:normal;min-width:0;max-width:170px}
+#start-layer .book-tabs select{width:155px;padding-inline-end:26px}
+#start-layer .night-select button b{font-size:15px;line-height:1.25;white-space:normal;overflow-wrap:anywhere;min-width:0}
+#start-layer .night-select button small{font-size:11px;line-height:1.3;white-space:normal}
+#start-layer .night-select button{height:48px;min-height:48px;align-content:center}
+#start-layer .archive-sheet{min-width:0;overflow:auto;scrollbar-width:thin;scrollbar-color:#777861 transparent;overscroll-behavior:contain}
+#start-layer .record-heading{flex-wrap:wrap;gap:6px;min-width:0}
+#start-layer .file-stamp{max-width:100%;font-size:12px;line-height:1.5;white-space:normal;overflow-wrap:anywhere}
+#start-layer #file-title{font-size:21px;line-height:1.3;overflow-wrap:anywhere}
+#start-layer #file-note,#start-layer #stage-detail{font-size:13px;line-height:1.6;overflow-wrap:anywhere;white-space:pre-line}
+#start-layer .survey-frame>span{font-size:16px;line-height:1.5;white-space:normal;overflow-wrap:anywhere}
+#start-layer #start{height:auto;min-height:40px;max-width:95%;font-size:17px;line-height:1.4;white-space:normal;letter-spacing:0;padding:9px 18px;overflow-wrap:anywhere}
+#start-layer .desk-title p{font-size:17px;line-height:1.5;white-space:normal}
+#start-layer .desk-footnote{font-size:11px;line-height:1.5;white-space:normal;gap:12px}
+#start-layer .desk-kicker{font-size:11px;line-height:1.5;white-space:normal}
+#start-layer .book-header{font-size:12px;gap:12px;line-height:1.4}
+#start-layer .index-label{font-size:11px;line-height:1.3}
+#pause-menu,dialog,#tutorial-card{max-height:85dvh;overflow:auto;overflow-wrap:anywhere}
+#tutorial-card p{line-height:1.6;font-size:15px}
+#tutorial-card>div,.result-actions{flex-wrap:wrap}
+#tutorial-card button,.result-actions button,#pause-menu button{white-space:normal;height:auto;min-height:36px;line-height:1.4}
+#mission-hud{max-width:min(42vw,340px)}
+#flashlight-toggle .flashlight-heading{white-space:normal;line-height:1.4;font-size:11px}
+#flashlight-mode{white-space:normal;line-height:1.4}
+.item-slot>span{white-space:normal;font-size:11px;line-height:1.3}
+#game-message,#receipt-message{max-width:min(65vw,520px);overflow-wrap:anywhere}
+.message-copy{white-space:pre-line;line-height:1.5}
+#round-rule,.result-document{overflow-wrap:anywhere}
+
+/* Keep text labels distinct from their numeric readings. */
+.vital-row>span:first-child>b,.minor-status b{margin-inline-start:.4em}
+#start-layer .book-tabs{top:auto}
+#start-layer .archive-sheet{max-height:410px}
+
+/* The fixed cover sits at 1000; its settings must remain above it. */
+.game-wrap:has(#start-layer:not(.hidden)) #pause-menu{position:fixed;z-index:1001}

@@ -86,14 +86,14 @@ export class Ambience {
       this.musicBus=this.context.createGain();this.musicBus.gain.value=1;this.musicBus.connect(this.master);
     }
     if (!this.layers.length) {
-      this.onStatus('配乐载入中');
+      this.onStatus('loading');
       this.loading ??= this.loadMusic();
       try { await this.loading; } catch {
         this.loading = undefined; this.enabled = false;
-        this.onStatus('音频加载失败，点击重试'); this.setRunning(this.running); return;
+        this.onStatus('failed'); this.setRunning(this.running); return;
       }
     }
-    this.onStatus(this.enabled ? '配乐已就绪' : '声音关闭');
+    this.onStatus(this.enabled ? 'ready' : 'off');
     this.setRunning(this.running);
   }
   private async loadMusic() {

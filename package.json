@@ -27,15 +27,23 @@
     "predev": "npm run assets:pack",
     "assets:publish": "node scripts/publish-r2.mjs",
     "build:cloudflare": "node scripts/build-cloudflare.mjs",
-    "deploy:cloudflare": "node scripts/deploy-cloudflare.mjs"
+    "deploy:cloudflare": "node scripts/deploy-cloudflare.mjs",
+    "i18n:check": "node scripts/i18n/check.mjs && node scripts/i18n/check-fonts.mjs",
+    "i18n:types": "node scripts/i18n/check.mjs --types",
+    "test:i18n": "node --test tests/i18n.test.mjs",
+    "test:browser:i18n": "node tests/localization.browser.mjs",
+    "i18n:fonts": "uv run --with fonttools --with brotli python scripts/i18n/fonts.py"
   },
   "dependencies": {
+    "@formatjs/icu-messageformat-parser": "^3.5.17",
+    "intl-messageformat": "^11.2.14",
     "phaser": "^3.90.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0",
     "@types/node": "^24.0.0",
     "ajv": "^8.20.0",
+    "fontkit": "^2.0.4",
     "typescript": "^5.9.3",
     "vite": "^7.1.0",
     "wrangler": "4.129.0"

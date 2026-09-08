@@ -15,3 +15,6 @@ __pycache__/
 .wrangler/
 dist-cloudflare/
 dist-cloudflare-manifest.json
+
+# Generated localization browser evidence
+output/localization/

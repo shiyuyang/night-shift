@@ -26,7 +26,7 @@
         },
         {
           "type": "message",
-          "text": "供电继电器跳闸，应急灯接管。"
+          "text": "event.plant"
         },
         {
           "type": "wait",

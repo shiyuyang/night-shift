@@ -1,0 +1,17 @@
+{
+  "context": "Fictional Japanese general hospital. The player patrols as a night worker; patrol is not military service.",
+  "terms": {
+    "ward": "Hospital ward, not administrative district or person",
+    "handover": "Hospital shift handover between workers, not sign-in authentication",
+    "flash": "A carried device whose flash repels and stuns monsters; separate from the continuous flashlight beam",
+    "decoy": "A sound-making object dropped at the player's feet to distract a pursuer",
+    "bandage": "Consumable that restores 40 health",
+    "fuse": "Electrical component; collect three to start exit power",
+    "Listener": "Monster that detects noise but cannot see",
+    "Light-Shy": "Monster that recoils from flashlight illumination",
+    "Patroller": "Monster that pursues on sight",
+    "Crying Patient": "Monster that hunts continuously once provoked; flash ends the hunt"
+  },
+  "ja": {"hospital":"青葉市 松原総合病院","patrol":"巡回","logbook":"巡回記録簿","handover":"申し送り","flashlight":"懐中電灯","flash":"閃光器","decoy":"音の囮","bandage":"包帯","fuse":"ヒューズ","ward":"病棟"},
+  "zh-Hant": {"flashlight":"手電筒","flash":"閃光器","decoy":"誘餌","bandage":"繃帶","fuse":"保險絲"}
+}
