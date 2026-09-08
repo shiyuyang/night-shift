@@ -1,9 +1,9 @@
 /* The title is a desk, and the navigation is ink on an open duty ledger. */
-#start-layer{isolation:isolate;display:flex;align-items:center;justify-content:center;padding:5vh 5vw 3vh;background:#171711;text-align:left;overflow:auto;color:#29291f}
+#start-layer{isolation:isolate;display:flex;align-items:center;justify-content:center;padding:5cqh 5cqw 3cqh;background:#171711;text-align:left;overflow:auto;color:#29291f}
 #start-layer.hidden{display:none}
 .desk-scene{position:fixed;inset:0;z-index:-3;background:url('/assets/watch-desk-painted-v2.q95.webp') center/cover no-repeat}
 #start-layer::before{content:'';position:fixed;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(0deg,#080a0b45,transparent 55%,#03080b30)}
-.desk-content{width:min(900px,88vw);max-width:none;margin:auto;flex-shrink:0;padding-top:2vh}
+.desk-content{width:min(900px,88cqw);max-width:none;margin:auto;flex-shrink:0;padding-top:2cqh}
 .desk-title{margin:0 0 24px 24px;text-shadow:1px 2px 2px #000}
 .desk-kicker{font:12px/1.6 NightPixel,monospace;letter-spacing:2px;color:#c7b390}
 .desk-title h2{font:36px/1.3 NightPixel,monospace;letter-spacing:7px;margin:7px 0;color:#ddd1af;text-shadow:2px 3px #171b16}
@@ -67,16 +67,16 @@ body[data-ui=title] .screen-heading{display:none}
 #guide-dialog h2,#guide-dialog p{color:#34392b;font-family:NightPixel,monospace}#guide-dialog p{font-size:14px;line-height:1.8}
 html[lang=en] #start-layer,html[lang=en] #pause-menu,html[lang=en] #guide-dialog{font-family:NightPixel,'Courier New',monospace}
 html[lang=en] .desk-title h2{letter-spacing:4px}html[lang=en] #start-layer .night-select button b{font-size:15px}
-@media(min-width:1800px){.desk-content{width:1050px}.book-body{min-height:390px}#start-layer .night-select button{min-height:53px}.desk-title h2{font-size:48px}.archive-sheet{padding-left:38px}.survey-frame{max-width:280px}}
-@media(max-width:700px){#start-layer{padding:40px 16px 28px;align-items:flex-start}.desk-content{width:100%;padding:0}.desk-title{margin:0 4px 50px}.desk-title h2{font-size:28px;letter-spacing:3px}.desk-title p{font-size:12px}.desk-kicker{letter-spacing:0}.patrol-book{padding:17px 13px 14px;transform:none}.book-tabs{right:8px;gap:3px}.book-tabs button,.book-tabs select{padding:8px 8px 12px;font-size:11px}.book-header{font-size:12px;letter-spacing:0;padding:0 3px 12px}.book-body{grid-template-columns:1fr}.patrol-book::after{display:none}.patrol-book{background:linear-gradient(100deg,#ad9e78,#c0b18b 15%,#b7a782 95%,#998a65)}.archive-index{padding:14px 3px 16px;border-bottom:1px solid #665e4540}#start-layer .night-select button{grid-template-columns:32px 1fr auto;min-height:42px}#start-layer .night-select button small{grid-column:3;grid-row:1;font-size:10px}#start-layer .stage-number{grid-row:1}#start-layer .night-select button.selected::after{top:9px}#start-layer .stage-pages{padding-top:9px}.archive-sheet{padding:16px 6px 7px}.survey-frame{width:65%;max-width:230px;float:right;margin:0 0 12px 14px}.archive-sheet h3{font-size:24px}.archive-sheet:after{content:'';display:block;clear:both}#file-note{font-size:13px}#start-layer #stage-detail{font-size:11px}.book-footer{grid-template-columns:1fr;gap:8px;padding:12px 4px 0}#start-layer #start{font-size:18px}.desk-footnote{margin-top:20px}.desk-footnote>span{max-width:85%}.desk-clock{display:none}}
-@media(max-height:650px) and (min-width:701px){#start-layer{padding:28px 5vw;align-items:flex-start}.desk-content{width:810px;margin:0}.desk-title{margin:0 10px 36px}.desk-title h2{font-size:28px}.desk-title p{display:none}.patrol-book{padding:16px 20px}.book-body{min-height:0}.archive-index{padding:12px 22px 4px 5px}#start-layer .night-select button{min-height:37px;padding:4px 7px}.archive-sheet{padding:12px 4px 4px 22px}.survey-frame{max-width:170px}.archive-sheet h3{font-size:20px;margin:5px 0 8px}#file-note{font-size:12px;margin:9px 0 6px}.book-header{padding-bottom:10px}.desk-footnote{margin-top:20px}}
+@container desk-stage (min-width:1800px){.desk-content{width:1050px}.book-body{min-height:390px}#start-layer .night-select button{min-height:53px}.desk-title h2{font-size:48px}.archive-sheet{padding-left:38px}.survey-frame{max-width:280px}}
+@container desk-stage (max-width:700px){#start-layer{padding:40px 16px 28px;align-items:flex-start}.desk-content{width:100%;padding:0}.desk-title{margin:0 4px 50px}.desk-title h2{font-size:28px;letter-spacing:3px}.desk-title p{font-size:12px}.desk-kicker{letter-spacing:0}.patrol-book{padding:17px 13px 14px;transform:none}.book-tabs{right:8px;gap:3px}.book-tabs button,.book-tabs select{padding:8px 8px 12px;font-size:11px}.book-header{font-size:12px;letter-spacing:0;padding:0 3px 12px}.book-body{grid-template-columns:1fr}.patrol-book::after{display:none}.patrol-book{background:linear-gradient(100deg,#ad9e78,#c0b18b 15%,#b7a782 95%,#998a65)}.archive-index{padding:14px 3px 16px;border-bottom:1px solid #665e4540}#start-layer .night-select button{grid-template-columns:32px 1fr auto;min-height:42px}#start-layer .night-select button small{grid-column:3;grid-row:1;font-size:10px}#start-layer .stage-number{grid-row:1}#start-layer .night-select button.selected::after{top:9px}#start-layer .stage-pages{padding-top:9px}.archive-sheet{padding:16px 6px 7px}.survey-frame{width:65%;max-width:230px;float:right;margin:0 0 12px 14px}.archive-sheet h3{font-size:24px}.archive-sheet:after{content:'';display:block;clear:both}#file-note{font-size:13px}#start-layer #stage-detail{font-size:11px}.book-footer{grid-template-columns:1fr;gap:8px;padding:12px 4px 0}#start-layer #start{font-size:18px}.desk-footnote{margin-top:20px}.desk-footnote>span{max-width:85%}.desk-clock{display:none}}
+@container desk-stage (max-height:650px) and (min-width:701px){#start-layer{padding:28px 5cqw;align-items:flex-start}.desk-content{width:810px;margin:0}.desk-title{margin:0 10px 36px}.desk-title h2{font-size:28px}.desk-title p{display:none}.patrol-book{padding:16px 20px}.book-body{min-height:0}.archive-index{padding:12px 22px 4px 5px}#start-layer .night-select button{min-height:37px;padding:4px 7px}.archive-sheet{padding:12px 4px 4px 22px}.survey-frame{max-width:170px}.archive-sheet h3{font-size:20px;margin:5px 0 8px}#file-note{font-size:12px;margin:9px 0 6px}.book-header{padding-bottom:10px}.desk-footnote{margin-top:20px}}
 @media(prefers-reduced-motion:reduce){.desk-interference,.patrol-book.turning .book-body,.patrol-book.signing .file-stamp{animation:none}}
 
 /* Revision: the original hospital composition, a pixel ledger and a clear paper-tab action. */
 .desk-scene{background-image:url('/assets/watch-desk-cold-night-v1.webp');image-rendering:pixelated}
-#start-layer{justify-content:flex-start;padding:5vh 5vw;align-items:center}
+#start-layer{justify-content:flex-start;padding:5cqh 5cqw;align-items:center}
 #start-layer::before{background:linear-gradient(90deg,#050a0d45,transparent 70%)}
-.desk-content{width:min(740px,57vw);max-width:none;margin:auto 0;padding:0}
+.desk-content{width:min(740px,57cqw);max-width:none;margin:auto 0;padding:0}
 .desk-title{margin:0 0 36px 18px}.desk-title h2{font-size:36px;letter-spacing:4px}.desk-title p{letter-spacing:1px}
 .patrol-book{aspect-ratio:3/2;display:grid;grid-template-rows:auto 1fr auto;padding:6% 6% 5%;transform:none;background:url('/assets/patrol-book-pixel-v1.webp') center/100% 100% no-repeat;border-radius:0;box-shadow:none;filter:drop-shadow(5px 8px 0 #03080888)}
 .patrol-book::before,.patrol-book::after{display:none}
@@ -101,17 +101,17 @@ html[lang=en] .desk-title h2{letter-spacing:4px}html[lang=en] #start-layer .nigh
 #start-layer #start:disabled{cursor:wait;opacity:.5}
 .desk-footnote{margin:20px 12px 0;font-size:11px}
 html[lang=en] #start-layer .night-select button b{font-size:13px}
-@media(min-width:1800px){.desk-content{width:840px}.patrol-book{padding:6%}.desk-title h2{font-size:44px}.book-body{min-height:0}#start-layer .night-select button{min-height:43px}.survey-frame{max-width:206px}#file-note{font-size:14px}.archive-sheet h3{font-size:24px}}
-@media(max-width:1100px) and (min-width:701px){.desk-content{width:670px;max-width:68vw}.desk-title h2{font-size:30px}.patrol-book{aspect-ratio:auto;min-height:435px}.archive-index{padding-right:16px}.archive-sheet{padding-left:16px}}
-@media(max-width:700px){#start-layer{padding:35px 16px;align-items:flex-start}.desk-content{width:100%;max-width:none}.desk-title{margin:0 2px 42px}.desk-title h2{font-size:28px}.patrol-book{aspect-ratio:auto;padding:20px 18px;background-size:200% 100%;background-position:left center;display:block;filter:drop-shadow(3px 5px #03080888)}.book-header{padding:4px 0 12px}.book-tabs{right:5%;top:-18px}.book-body{display:block}.archive-index{padding:14px 0;border:0;border-bottom:1px solid #5e634348}#start-layer .night-select button{grid-template-columns:29px 1fr auto;min-height:40px}#start-layer .night-select button small{grid-column:3;grid-row:1}#start-layer .stage-number{grid-row:1}.archive-sheet{padding:17px 0 6px}.survey-frame{float:right;width:55%;margin:3px 0 12px 12px;max-width:174px}.archive-sheet h3{font-size:22px}#file-note{font-size:13px}#start-layer #stage-detail{font-size:11px}.book-footer{display:flex;flex-direction:column;align-items:stretch;gap:9px;padding:13px 0 4px}#start-layer #start{width:calc(100% + 24px);margin:0 -24px 0 0;min-height:48px}.desk-footnote{margin:20px 0 0}}
-@media(max-height:650px) and (min-width:701px){#start-layer{padding:26px 4vw;align-items:flex-start}.desk-content{width:640px;max-width:72vw}.desk-title{margin-bottom:35px}.desk-title h2{font-size:26px}.patrol-book{aspect-ratio:auto;min-height:420px}.desk-title p{display:none}.book-body{min-height:0}.book-footer{padding-top:9px}}
+@container desk-stage (min-width:1800px){.desk-content{width:840px}.patrol-book{padding:6%}.desk-title h2{font-size:44px}.book-body{min-height:0}#start-layer .night-select button{min-height:43px}.survey-frame{max-width:206px}#file-note{font-size:14px}.archive-sheet h3{font-size:24px}}
+@container desk-stage (max-width:1100px) and (min-width:701px){.desk-content{width:670px;max-width:68cqw}.desk-title h2{font-size:30px}.patrol-book{aspect-ratio:auto;min-height:435px}.archive-index{padding-right:16px}.archive-sheet{padding-left:16px}}
+@container desk-stage (max-width:700px){#start-layer{padding:35px 16px;align-items:flex-start}.desk-content{width:100%;max-width:none}.desk-title{margin:0 2px 42px}.desk-title h2{font-size:28px}.patrol-book{aspect-ratio:auto;padding:20px 18px;background-size:200% 100%;background-position:left center;display:block;filter:drop-shadow(3px 5px #03080888)}.book-header{padding:4px 0 12px}.book-tabs{right:5%;top:-18px}.book-body{display:block}.archive-index{padding:14px 0;border:0;border-bottom:1px solid #5e634348}#start-layer .night-select button{grid-template-columns:29px 1fr auto;min-height:40px}#start-layer .night-select button small{grid-column:3;grid-row:1}#start-layer .stage-number{grid-row:1}.archive-sheet{padding:17px 0 6px}.survey-frame{float:right;width:55%;margin:3px 0 12px 12px;max-width:174px}.archive-sheet h3{font-size:22px}#file-note{font-size:13px}#start-layer #stage-detail{font-size:11px}.book-footer{display:flex;flex-direction:column;align-items:stretch;gap:9px;padding:13px 0 4px}#start-layer #start{width:calc(100% + 24px);margin:0 -24px 0 0;min-height:48px}.desk-footnote{margin:20px 0 0}}
+@container desk-stage (max-height:650px) and (min-width:701px){#start-layer{padding:26px 4cqw;align-items:flex-start}.desk-content{width:640px;max-width:72cqw}.desk-title{margin-bottom:35px}.desk-title h2{font-size:26px}.patrol-book{aspect-ratio:auto;min-height:420px}.desk-title p{display:none}.book-body{min-height:0}.book-footer{padding-top:9px}}
 @media(prefers-reduced-motion:reduce){#start-layer #start{transition:none}}
 
 /* Keep the right-hand monitor and corridor unobstructed. */
-@media(min-width:701px){#start-layer{padding-left:2.8vw;padding-right:5vw}.desk-content{width:min(710px,54vw)}}
-@media(min-width:1800px){.desk-content{width:810px}}
-@media(max-width:1100px) and (min-width:701px){.desk-content{width:650px;max-width:66vw}}
-@media(max-height:650px) and (min-width:701px){.desk-content{width:625px;max-width:69vw}}
+@container desk-stage (min-width:701px){#start-layer{padding-left:2.8cqw;padding-right:5cqw}.desk-content{width:min(710px,54cqw)}}
+@container desk-stage (min-width:1800px){.desk-content{width:810px}}
+@container desk-stage (max-width:1100px) and (min-width:701px){.desk-content{width:650px;max-width:66cqw}}
+@container desk-stage (max-height:650px) and (min-width:701px){.desk-content{width:625px;max-width:69cqw}}
 /* Paper-safe typesetting: stronger ink, comfortable margins, restrained action tab. */
 .patrol-book{padding:5.5% 8% 5%;min-height:490px}
 .book-header{font-size:14px;color:#30372a;padding-bottom:12px;letter-spacing:0}
@@ -128,47 +128,47 @@ html[lang=en] #start-layer .night-select button b{font-size:13px}
 .book-footer>span{font-size:12px;line-height:1.6;color:#464d33}
 #start-layer #start{justify-self:end;width:190px;max-width:calc(100% + 20px);min-height:38px;margin-right:-20px;padding:7px 12px;font-size:16px;border-bottom-width:3px}
 html[lang=en] #start-layer .night-select button b{font-size:15px}
-@media(min-width:1800px){.patrol-book{min-height:540px}#file-note{font-size:16px}#start-layer .night-select button b{font-size:18px}#start-layer #stage-detail{font-size:13px}}
-@media(max-width:700px){.patrol-book{padding:24px 25px;min-height:0}.archive-index{padding-right:0}.archive-sheet{padding-left:0}#start-layer #start{align-self:flex-end;width:185px;min-height:40px;margin-right:-15px}#file-note{font-size:14px}#start-layer .night-select button b{font-size:16px}.book-footer{gap:12px}}
-@media(max-height:650px) and (min-width:701px){.patrol-book{min-height:490px}.desk-title{margin-bottom:35px}}
+@container desk-stage (min-width:1800px){.patrol-book{min-height:540px}#file-note{font-size:16px}#start-layer .night-select button b{font-size:18px}#start-layer #stage-detail{font-size:13px}}
+@container desk-stage (max-width:700px){.patrol-book{padding:24px 25px;min-height:0}.archive-index{padding-right:0}.archive-sheet{padding-left:0}#start-layer #start{align-self:flex-end;width:185px;min-height:40px;margin-right:-15px}#file-note{font-size:14px}#start-layer .night-select button b{font-size:16px}.book-footer{gap:12px}}
+@container desk-stage (max-height:650px) and (min-width:701px){.patrol-book{min-height:490px}.desk-title{margin-bottom:35px}}
 /* Leave the right-hand hospital scene visible; instructions belong in the tutorial. */
-@media(min-width:701px){#start-layer{padding-left:1.2vw}.desk-title{margin-left:12px}.desk-title h2{font-size:44px;letter-spacing:5px}.desk-title p{font-size:17px;line-height:1.7}.desk-kicker{font-size:14px}.desk-footnote{font-size:14px}}
+@container desk-stage (min-width:701px){#start-layer{padding-left:1.2cqw}.desk-title{margin-left:12px}.desk-title h2{font-size:44px;letter-spacing:5px}.desk-title p{font-size:17px;line-height:1.7}.desk-kicker{font-size:14px}.desk-footnote{font-size:14px}}
 .book-body{min-height:min-content}.patrol-book{aspect-ratio:auto;grid-template-rows:auto auto auto}
 .book-footer{display:flex;justify-content:flex-end;clear:both;margin-top:12px}
 #start-layer .stage-pages{margin-top:8px;flex-shrink:0}
-@media(min-width:1800px){.desk-title h2{font-size:52px}.desk-title p{font-size:20px}.desk-kicker,.desk-footnote{font-size:16px}}
-@media(max-width:700px){.desk-title h2{font-size:34px}.desk-title p{font-size:15px}.desk-kicker{font-size:13px}.desk-footnote{font-size:13px}.book-footer{display:flex;align-items:flex-end}}
-@media(max-height:650px) and (min-width:701px){.desk-title h2{font-size:36px}.desk-title p{display:block;font-size:15px}}
-@media(min-width:701px){#start-layer{padding-left:10px}.desk-title{margin-left:6px}.desk-footnote{margin-left:6px}}
+@container desk-stage (min-width:1800px){.desk-title h2{font-size:52px}.desk-title p{font-size:20px}.desk-kicker,.desk-footnote{font-size:16px}}
+@container desk-stage (max-width:700px){.desk-title h2{font-size:34px}.desk-title p{font-size:15px}.desk-kicker{font-size:13px}.desk-footnote{font-size:13px}.book-footer{display:flex;align-items:flex-end}}
+@container desk-stage (max-height:650px) and (min-width:701px){.desk-title h2{font-size:36px}.desk-title p{display:block;font-size:15px}}
+@container desk-stage (min-width:701px){#start-layer{padding-left:10px}.desk-title{margin-left:6px}.desk-footnote{margin-left:6px}}
 #start-layer #start{width:172px;max-width:100%;margin:0;min-height:36px;padding:7px 10px;font-size:16px}
 .book-footer{padding-right:4px;padding-bottom:3px}
-@media(max-width:700px){#start-layer #start{width:170px;max-width:100%;margin:0;min-height:38px}}
+@container desk-stage (max-width:700px){#start-layer #start{width:170px;max-width:100%;margin:0;min-height:38px}}
 /* start-layer inherits a column flex layout: align the cross axis to the left. */
 #start-layer{align-items:flex-start}
 .patrol-book{padding-bottom:7%}
 /* Final inset: use the left negative space without hugging the browser edge. */
-@media(min-width:701px){#start-layer{padding-left:4vw}}
+@container desk-stage (min-width:701px){#start-layer{padding-left:4cqw}}
 /* Move only the action; preserve the original footer and book geometry. */
 #start-layer #start{top:-62px}
 /* Fit the full title/book/footer composition to the available viewport. */
 #start-layer{overflow:hidden}
 #start-layer .desk-content{position:absolute;margin:0;transform-origin:top left}
-@media(max-width:700px){#start-layer .desk-content{width:calc(100% - 32px)}}
-@media(min-width:701px) and (max-width:1100px){#start-layer #start{width:140px}}
+@container desk-stage (max-width:700px){#start-layer .desk-content{width:calc(100% - 32px)}}
+@container desk-stage (min-width:701px) and (max-width:1100px){#start-layer #start{width:140px}}
 
 /* DNT wordmark: luminance mask discards the black source background.
    The source remains RGB; subtitle stays live localized text. */
 .desk-title .game-brand{width:min(360px,80%);margin:3px 0 0;line-height:0;letter-spacing:0;text-shadow:none;position:relative}
 .game-brand img{display:block;width:100%;height:auto;image-rendering:pixelated}
 .desk-title p{max-width:36ch}
-@media(min-width:1800px){.desk-title .game-brand{width:420px}}
-@media(max-width:700px){.desk-title .game-brand{width:min(300px,95%)}.desk-title{margin-bottom:34px}}
-@media(max-height:650px) and (min-width:701px){.desk-title .game-brand{width:270px}.desk-title{margin-bottom:28px}}
+@container desk-stage (min-width:1800px){.desk-title .game-brand{width:420px}}
+@container desk-stage (max-width:700px){.desk-title .game-brand{width:min(300px,95%)}.desk-title{margin-bottom:34px}}
+@container desk-stage (max-height:650px) and (min-width:701px){.desk-title .game-brand{width:270px}.desk-title{margin-bottom:28px}}
 
 .game-brand::after{content:"";position:absolute;inset:0;background:#dedbc9;mask-image:var(--brand-source);mask-mode:luminance;mask-size:100% 100%;mask-repeat:no-repeat;pointer-events:none}
 .game-brand img{opacity:0}
 
-@media(min-width:701px){.desk-title p{max-width:none}html[lang=en] .desk-title p{font-size:15px;letter-spacing:0}}
+@container desk-stage (min-width:701px){.desk-title p{max-width:none}html[lang=en] .desk-title p{font-size:15px;letter-spacing:0}}
 
 /* Local cold-night palette: tint only the paper, never the live text. */
 .patrol-book{background-image:none}
@@ -220,7 +220,7 @@ html[lang=en] #start-layer .night-select button b{font-size:15px}
 #start-layer #start:hover:not(:disabled){background:#70484c18;color:#502c32;transform:none}
 #start-layer #start:active:not(:disabled){background:#70484c2b;color:#502c32;transform:translateY(1px);border-bottom-width:1px;box-shadow:none}
 html[lang=en] #start-layer #start{font-size:17px;letter-spacing:1px}
-@media(max-width:700px){#start-layer #start{top:0}}
+@container desk-stage (max-width:700px){#start-layer #start{top:0}}
 #start-layer #start:focus-visible{outline:2px solid #60383d;outline-offset:3px;box-shadow:none}
 @media(prefers-reduced-motion:reduce){#start-layer #start{transition:none}}
 
@@ -256,7 +256,7 @@ html[lang=en] #start-layer #start{font-size:17px;letter-spacing:1px}
  background-repeat:no-repeat;background-position:right 10px center;background-size:10px 6px;image-rendering:pixelated;
 }
 .book-tabs option{font:400 12px/18px NightPixel,monospace}
-@media(max-width:700px){.book-tabs{gap:4px;top:-26px}.book-tabs button,.book-tabs select{padding-left:8px;padding-right:8px}.book-tabs select{padding-right:24px}}
+@container desk-stage (max-width:700px){.book-tabs{gap:4px;top:-26px}.book-tabs button,.book-tabs select{padding-left:8px;padding-right:8px}.book-tabs select{padding-right:24px}}
 
 /* A pasted photograph with a handwritten note on its paper margin. */
 .survey-frame{
@@ -298,3 +298,13 @@ html[lang=zh-CN] .survey-frame span{font-family:PhotoNote,cursive;font-size:17px
  radial-gradient(ellipse 15% 23% at 63% 72%,#010910b0,transparent 100%);
 }
 @media(prefers-reduced-motion:reduce){.desk-lamp-falloff{display:none}}
+
+/* The cover is a fixed composition; only its outer stage scales. */
+.desk-stage-host{position:fixed;inset:0;z-index:1000;background:#030607;overflow:hidden}
+.desk-stage-host:has(>#start-layer.hidden){display:none}
+#start-layer{position:absolute;inset:auto;width:1280px;height:720px;min-width:0;min-height:0;max-width:none;max-height:none;padding:36px 64px 36px 51px;container:desk-stage / size;transform-origin:top left;overflow:hidden;align-items:flex-start}
+#start-layer .desk-content{width:691px;max-width:none}
+
+/* Isolate cover rows from viewport-based gameplay styles. */
+#start-layer .night-select button{font:12px/1.4 NightPixel,monospace;flex:none;min-width:0;gap:0 9px}
+#start-layer #file-note{min-height:3.3em}

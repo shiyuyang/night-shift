@@ -1,8 +1,15 @@
 /** Fit the entire menu together, preserving its internal layout and hit targets. */
 export function fitDesk(layer:HTMLElement,content:HTMLElement){
+ const host=document.createElement('div');
+ host.className='desk-stage-host';
+ layer.before(host);host.append(layer);
  let frame=0;
  const update=()=>{
   frame=0;
+  const stageScale=Math.min(host.clientWidth/1280,host.clientHeight/720);
+  layer.style.transform=`scale(${stageScale})`;
+  layer.style.left=`${(host.clientWidth-1280*stageScale)/2}px`;
+  layer.style.top=`${(host.clientHeight-720*stageScale)/2}px`;
   if(!layer.clientWidth||!content.offsetHeight)return;
   const style=getComputedStyle(layer);
   const left=parseFloat(style.paddingLeft),right=parseFloat(style.paddingRight);
@@ -15,7 +22,7 @@ export function fitDesk(layer:HTMLElement,content:HTMLElement){
  };
  const schedule=()=>{if(!frame)frame=requestAnimationFrame(update);};
  const observer=new ResizeObserver(schedule);
- observer.observe(layer);observer.observe(content);
+ observer.observe(host);observer.observe(layer);observer.observe(content);
  window.addEventListener('resize',schedule);
  void document.fonts.ready.then(schedule);
  schedule();

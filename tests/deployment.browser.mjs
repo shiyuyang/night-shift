@@ -30,6 +30,22 @@ try{
  await page.waitForFunction(()=>Number(getComputedStyle(document.querySelector('.desk-lamp-falloff')).opacity)>.1,null,{timeout:25000,polling:'raf'});
  await page.waitForFunction(()=>Number(getComputedStyle(document.querySelector('.desk-lamp-falloff')).opacity)===0);
  assert.equal(await page.locator('#start').textContent(),'开始巡查 →');
+ // The menu keeps one composition across wide and portrait windows.
+ const geometry=()=>page.evaluate(()=>{
+  const stage=document.querySelector('#start-layer').getBoundingClientRect();
+  const book=document.querySelector('.patrol-book').getBoundingClientRect();
+  return {ratio:stage.width/stage.height,x:(book.x-stage.x)/stage.width,y:(book.y-stage.y)/stage.height,width:book.width/stage.width};
+ });
+ await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+ const baseline=await geometry();
+ for(const viewport of [{width:900,height:900},{width:540,height:960},{width:1920,height:800}]){
+  await page.setViewportSize(viewport);
+  await page.waitForTimeout(100);
+  const current=await geometry();
+  assert.ok(Math.abs(current.ratio-16/9)<.001);
+  for(const key of ['x','y','width'])assert.ok(Math.abs(current[key]-baseline[key])<.002,`Menu composition changed: ${key} ${JSON.stringify({baseline,current,viewport})}`);
+ }
+ await page.setViewportSize({width:1440,height:900});
  await page.locator('#start').click();await page.waitForFunction(()=>document.body.dataset.ui==='playing');
  await page.waitForFunction(()=>document.querySelector('#music-status')?.textContent?.includes('已就绪'),null,{timeout:60000});
  console.log(fallback?'MP3 fallback playback ready':'Opus playback ready');
