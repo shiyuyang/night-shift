@@ -3,6 +3,7 @@ import {preview} from 'vite';
 import assert from 'node:assert/strict';
 import {existsSync,readFileSync} from 'node:fs';
 import {deliveryFiles} from '../scripts/prepare-delivery.mjs';
+const musicCount=JSON.parse(readFileSync(new URL('../game/music.json',import.meta.url))).length;
 const prefix=process.env.GAME_BASE_PATH||'/games/night-shift/';
 const networkTimeout=Math.max(60000,Number(process.env.TEST_NETWORK_TIMEOUT_MS)||60000);
 const server=process.env.DEPLOY_URL?null:await preview({base:prefix,appType:'mpa',preview:{host:'127.0.0.1',port:0}});
@@ -13,6 +14,8 @@ const executablePath=process.env.CHROME_PATH||['/usr/bin/google-chrome-stable','
 const browser=await chromium.launch({executablePath,headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
 try{
  const page=await browser.newPage({locale:'zh-CN',viewport:{width:1440,height:900}});const errors=[],bad=[],local=[];
+ // Explicit test-only permission for development proxies using private/Fake-IP DNS.
+ if(process.env.TEST_ALLOW_LOCAL_NETWORK==='1')await page.context().grantPermissions(['local-network-access'],{origin:new URL(url).origin});
  const originRequests=[];
  // Exercise uncached delivery, including every cross-origin response body.
  const network=await page.context().newCDPSession(page);
@@ -62,7 +65,7 @@ try{
  assert.ok(local.some(u=>u.endsWith('.ogg')));assert.ok(local.some(u=>u.includes('hospital-')&&u.endsWith('.webp')));
  assert.ok(local.some(u=>new URL(u).pathname.endsWith('.q95.webp')));
  assert.ok(!local.some(u=>new URL(u).pathname.endsWith('.png')));
- assert.equal(new Set(local.filter(u=>u.endsWith('.ogg'))).size,9);
+ assert.equal(new Set(local.filter(u=>u.endsWith('.ogg'))).size,musicCount);
  assert.equal(new Set(local.filter(u=>u.includes('sfx-opus-')&&u.endsWith('.bin'))).size,1);
  assert.ok(!local.some(u=>u.endsWith('.mp3')), 'Normal playback should use Opus only');
  assert.ok(local.every(u=>u.startsWith(assetBase)||new URL(u).pathname.startsWith(prefix)),JSON.stringify(local));
@@ -78,5 +81,5 @@ try{
  assert.deepEqual(errors,[]);
  assert.deepEqual(bad,[]);
  assert.deepEqual(originRequests,[],'Game attempted to contact Linode/API');
- console.log('Deployment checks passed:',url,`— game start, ${imagePaths.length} images, 9 music + 1 sound pack (${'Opus'}), no source/unused files, correct asset origin.`);
+ console.log('Deployment checks passed:',url,`— game start, ${imagePaths.length} images, ${musicCount} music + 1 sound pack (${'Opus'}), no source/unused files, correct asset origin.`);
 }finally{await browser.close();if(server)await new Promise(r=>server.httpServer.close(r));}
