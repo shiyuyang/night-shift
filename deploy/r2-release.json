@@ -4,7 +4,7 @@
   "domain": "night-shift-assets.liveinteractivegame.com",
   "zoneId": "30badb66445e606e10540be49d75e584",
   "prefix": "games/night-shift",
-  "version": "a1a674bee95a4b70",
+  "version": "07ff18cda112368c",
   "files": [
     {
       "file": "assets/archive-plant-v1.q95.webp",
@@ -30,6 +30,11 @@
       "file": "assets/desk-yurei-v1.webp",
       "bytes": 27194,
       "sha256": "15845780818de2abcbfc68d18af43a774582369bea9e278f54570d72450ee751"
+    },
+    {
+      "file": "assets/garden-pine-v1.webp",
+      "bytes": 624694,
+      "sha256": "4a4d6dd9a0bc715e565919ffe132bb0d770863a487d812a0dfc11a1d36667420"
     },
     {
       "file": "assets/hospital-corridor-v2.q95.webp",
@@ -70,6 +75,11 @@
       "file": "assets/hospital-wall-v2.q95.webp",
       "bytes": 608880,
       "sha256": "a5523afb3a7c412c704683b55865a80b1aae92137837fdd7a997c4d0293343cb"
+    },
+    {
+      "file": "assets/morgue-shrouded-body-v1.webp",
+      "bytes": 414116,
+      "sha256": "baba78bd4a5caa8363de90c9560d341d801d5002246fb70735e3396dd9a86741"
     },
     {
       "file": "assets/patient-sheet-v4.webp",
@@ -247,6 +257,11 @@
       "sha256": "37a4a96126c0c0eeada67a8f772bd4b0c191600a20aa2967beef3be4a24fc2cf"
     },
     {
+      "file": "fonts/hospital-handwriting-f4b06c07ab.woff2",
+      "bytes": 12072,
+      "sha256": "f4b06c07abad9dc4208a6e31ef552690438257c721642d62a5231ff062b781a5"
+    },
+    {
       "file": "fonts/locale-ar-b37007c412.woff2",
       "bytes": 81432,
       "sha256": "b37007c4124f6beb4bee0a39e71616a5db1ef2b02e2ae379f546914762266367"
@@ -257,14 +272,14 @@
       "sha256": "f6569a40cdf5a12a2d36711eb80238057e10148ab1e52417e37962974e9124c0"
     },
     {
-      "file": "fonts/locale-ja-8b8fa54639.woff2",
-      "bytes": 253296,
-      "sha256": "8b8fa54639e72d58e0f6b0a34495b1302a5ced2157a642bd7717490863502bdf"
+      "file": "fonts/locale-ja-0b70e631e6.woff2",
+      "bytes": 255984,
+      "sha256": "0b70e631e6563b0dea3552c277a3ada7fe0a1f0885fcf4262a195c895d680cbf"
     },
     {
-      "file": "fonts/locale-ko-999e896c37.woff2",
-      "bytes": 105176,
-      "sha256": "999e896c3755f196a2af338b8f3ed4cc02ea85380ea3f944069b127651c33776"
+      "file": "fonts/locale-ko-13c0abbc8d.woff2",
+      "bytes": 106276,
+      "sha256": "13c0abbc8dcf639639fd65bd81f94b8e20d43392a71508accc997853c7c81c77"
     },
     {
       "file": "fonts/locale-latin-84536a0a4d.woff2",
@@ -272,9 +287,9 @@
       "sha256": "84536a0a4dd3e74d8d6f3a9c786213c73a3fe7ef698a620f0556a02f21c201f5"
     },
     {
-      "file": "fonts/locale-my-5b9d94eaa6.woff2",
-      "bytes": 129156,
-      "sha256": "5b9d94eaa6eb94805d3b48cf97c568204334e42d38fba7d47f886f09c85fbb83"
+      "file": "fonts/locale-my-4e9be0980c.woff2",
+      "bytes": 131016,
+      "sha256": "4e9be0980c47671f109eed61c9a30e39d4ca4e7e1d898e401dfbd468a728c0d0"
     },
     {
       "file": "fonts/locale-th-00cbed7909.woff2",
@@ -282,14 +297,14 @@
       "sha256": "00cbed7909b42f2bcc1ba9c6e9896983df3aafc054e8cb3196c7bd306fd1abd2"
     },
     {
-      "file": "fonts/locale-zh-Hans-67a31fdc4d.woff2",
-      "bytes": 204120,
-      "sha256": "67a31fdc4d9b1883dd4c4cef49c06fd241996887c4d4d0d70e510ea3af301e6d"
+      "file": "fonts/locale-zh-Hans-9a99e4bbaa.woff2",
+      "bytes": 206608,
+      "sha256": "9a99e4bbaacbbd07b327e3ab124b0ee47385d558deadf7d97f391e2f16d1efc2"
     },
     {
-      "file": "fonts/locale-zh-Hant-da19f3544d.woff2",
-      "bytes": 220460,
-      "sha256": "da19f3544d6834ee2a6cfad375a2c0277b5172458a51dcdfe2c5a202ff597441"
+      "file": "fonts/locale-zh-Hant-4a4ee8f885.woff2",
+      "bytes": 225040,
+      "sha256": "4a4ee8f8853f666b30b336811e10aade1228485b541b9d45d9998c22b0f9eb6c"
     },
     {
       "file": "fonts/notosans-OFL.txt",
@@ -342,6 +357,6 @@
       "sha256": "d113cd651f212760397282b77588d331a6079268e539375b784992fb97ecd320"
     }
   ],
-  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/a1a674bee95a4b70/",
-  "verifiedAt": "2026-09-08T10:45:43.400Z"
+  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/07ff18cda112368c/",
+  "verifiedAt": "2026-09-08T14:11:05.898Z"
 }
