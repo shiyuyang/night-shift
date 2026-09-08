@@ -11,7 +11,7 @@ const assetBase=process.env.VITE_ASSET_BASE_URL||(process.env.DEPLOY_URL&&exists
 const executablePath=process.env.CHROME_PATH||['/usr/bin/google-chrome-stable','/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'].find(existsSync);
 const browser=await chromium.launch({executablePath,headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
 try{
- const page=await browser.newPage({viewport:{width:1440,height:900}});const errors=[],bad=[],local=[];
+ const page=await browser.newPage({locale:'zh-CN',viewport:{width:1440,height:900}});const errors=[],bad=[],local=[];
  const fallback=process.env.TEST_MP3_FALLBACK==='1';
  const originRequests=[];
  if(process.env.TEST_NO_LINODE==='1')await page.route(/https?:\/\/(?:api\.liveinteractivegame\.com|139\.162\.147\.129)(?:\/|:)/,route=>{originRequests.push(route.request().url());return route.abort();});

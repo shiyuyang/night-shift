@@ -1,6 +1,6 @@
 import {chromium} from '@playwright/test';import assert from 'node:assert/strict';import {goTo,snapshot} from './navigation.mjs';import {feetAt,overlaps} from '../src/collision.ts';
 if(process.argv.includes('--rogue-only')){await import('./rogue.browser.mjs');process.exit(0);}
-const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome-stable',headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});const page=await browser.newPage({viewport:{width:1440,height:1100}});const errors=[];page.on('pageerror',e=>errors.push(e.message));const first=Number(process.argv[2]||1),rounds=Number(process.argv[3]||3);const use=async()=>{await page.keyboard.press('e',{delay:90});await page.waitForTimeout(160);};
+const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome-stable',headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});const page=await browser.newPage({locale:'zh-CN',viewport:{width:1440,height:1100}});const errors=[];page.on('pageerror',e=>errors.push(e.message));const first=Number(process.argv[2]||1),rounds=Number(process.argv[3]||3);const use=async()=>{await page.keyboard.press('e',{delay:90});await page.waitForTimeout(160);};
 async function approach(v){await goTo(page,v.x,v.y,36);}
 try{
  if(first>1)await page.addInitScript(n=>{if(!localStorage.getItem('night-shift-campaign-v1'))localStorage.setItem('night-shift-campaign-v1',JSON.stringify({unlocked:n}));},first);

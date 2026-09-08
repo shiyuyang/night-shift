@@ -25,7 +25,7 @@
         },
         {
           "type": "message",
-          "text": "那台断了电的监视器，刚才亮了一下。"
+          "text": "event.ward"
         },
         {
           "type": "wait",

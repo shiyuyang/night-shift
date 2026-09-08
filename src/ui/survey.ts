@@ -1,4 +1,4 @@
-import {t,stageName} from '../i18n';
+import {t,stageName,canvasFont} from '../i18n';
 import {assetUrl} from '../runtime/asset-url';
 import type {Level} from '../levels';
 const scenes=['ward','warehouse','plant'] as const;
@@ -24,6 +24,6 @@ export function drawSurvey(canvas:HTMLCanvasElement,level:Level){
   canvas.dataset.loaded='true';
  }).catch(()=>{
   if(canvas.dataset.scene!==theme)return;
-  ctx.fillStyle='#adb193';ctx.font='12px NightPixel, monospace';ctx.fillText(t('survey.error'),12,76);canvas.dataset.loaded='error';
+  ctx.fillStyle='#adb193';ctx.font='12px '+canvasFont()+', NightPixel, sans-serif';ctx.fillText(t('survey.error'),12,76);canvas.dataset.loaded='error';
  });
 }
