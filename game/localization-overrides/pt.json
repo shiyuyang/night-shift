@@ -1,3 +1,11 @@
 {
-  "ui.archived-footage-not-live": "Antes do fechamento da ala"
+  "ui.archived-footage-not-live": "Antes do fechamento da ala",
+  "menu.pending": "PENDENTE",
+  "menu.complete": "VERIFICADO",
+  "menu.sketch": "Antes de fechar",
+  "event.quiet": "Perseguições mais espaçadas",
+  "event.supply": "Suprimentos: +1 clarão",
+  "event.power": "Energia instável; apagões",
+  "menu.anomaly": "{threat}\n{event}",
+  "menu.start": "Iniciar →"
 }

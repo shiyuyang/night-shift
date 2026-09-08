@@ -1,5 +1,13 @@
 {
   "menu.hospital": "Orașul Aoba · Spitalul General Matsubara",
   "loot.fuse": "Siguranță +1 · {count}/3\n{key}",
-  "ui.archived-footage-not-live": "Înainte de închiderea secției"
+  "ui.archived-footage-not-live": "Înainte de închiderea secției",
+  "menu.pending": "DE VERIFICAT",
+  "menu.complete": "VERIFICAT",
+  "menu.sketch": "Foto de arhivă",
+  "event.quiet": "Urmăriri mai rare",
+  "event.supply": "Provizii: +1 bliț",
+  "event.power": "Curent instabil; întreruperi",
+  "menu.anomaly": "{threat}\n{event}",
+  "menu.start": "Începe tura →"
 }

@@ -1,4 +1,12 @@
 {
   "gameplay.no-flashes-left-use-r-for-a": "No quedan destellos. Usa R para colocar un señuelo o espera los suministros de los espectadores.",
-  "ui.archived-footage-not-live": "Antes del cierre del pabellón"
+  "ui.archived-footage-not-live": "Antes del cierre del pabellón",
+  "menu.pending": "PENDIENTE",
+  "menu.complete": "REVISADO",
+  "menu.sketch": "Antes del cierre",
+  "event.quiet": "Más tiempo entre persecuciones",
+  "event.supply": "Suministros: +1 destello",
+  "event.power": "Corriente inestable; cortes",
+  "menu.anomaly": "{threat}\n{event}",
+  "menu.start": "Comenzar →"
 }

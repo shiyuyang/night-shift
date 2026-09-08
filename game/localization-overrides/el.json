@@ -1,4 +1,12 @@
 {
   "ui.archived-footage-not-live": "Πριν κλείσει η πτέρυγα",
-  "gameplay.the-alarm-exposed-you-its-footsteps-quicken": "Ο συναγερμός αποκάλυψε τη θέση σου · τα βήματά του γίνονται πιο γρήγορα!"
+  "gameplay.the-alarm-exposed-you-its-footsteps-quicken": "Ο συναγερμός αποκάλυψε τη θέση σου · τα βήματά του γίνονται πιο γρήγορα!",
+  "menu.pending": "ΕΚΚΡΕΜΕΙ",
+  "menu.complete": "ΕΛΕΓΧΘΗΚΕ",
+  "menu.sketch": "Πριν το κλείσιμο",
+  "event.quiet": "Αραιότερες καταδιώξεις",
+  "event.supply": "Εφόδια: +1 λάμψη",
+  "event.power": "Ασταθές ρεύμα, διακοπές",
+  "menu.anomaly": "{threat}\n{event}",
+  "menu.start": "Έναρξη →"
 }

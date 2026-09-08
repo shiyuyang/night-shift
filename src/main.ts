@@ -1,4 +1,4 @@
-import {assetUrl} from './runtime/asset-url';
+import {assetUrl,corsAssetUrl} from './runtime/asset-url';
 import {t as msg,t as translate,setLocale,getLocale,stageName,type MessageKey,localeNames,escapeHtml,htmlMessage,isolate,canvasFont} from './i18n';
 import {lessons,isMonsterLesson,type Lesson} from './runtime/tutorial';
 import {campaign} from './campaign';
@@ -20,6 +20,7 @@ import './localization.css';
 import './ui/game-ui-scale.css';
 import {drawSurvey} from './ui/survey';
 import {fitDesk} from './ui/fit-desk';
+import {mountDeskLamp} from './ui/desk-lamp';
 // Both cover variants share the same locale runtime.
 const t=translate;
 const DEV=(import.meta as unknown as {env:{DEV:boolean}}).env.DEV;
@@ -40,7 +41,7 @@ document.querySelector('#app')!.innerHTML=`<svg width="0" height="0" aria-hidden
 <div class="phase-hud"><span id="run-phase">${htmlMessage("ui.search")}</span><span id="objective"></span></div>
 </div><div class="start-layer" id="start-layer">
 <div class="desk-scene" aria-hidden="true"></div><div class="desk-interference" aria-hidden="true"></div>
-<div class="desk-content"><div class="desk-title"><span class="desk-kicker">${htmlMessage("menu.hospital")}</span><h2 class="game-brand" style="--brand-source:url('${assetUrl('/assets/yakin-byoutou-title-v4.webp')}')"><img src="${assetUrl('/assets/yakin-byoutou-title-v4.webp')}" width="2048" height="768" alt="夜勤病棟" draggable="false"></h2><p>${htmlMessage("menu.subtitle")}</p></div>
+<div class="desk-content"><div class="desk-title"><span class="desk-kicker">${htmlMessage("menu.hospital")}</span><h2 class="game-brand" style="--brand-source:url('${corsAssetUrl('/assets/yakin-byoutou-title-v4.webp')}')"><img crossorigin="anonymous" src="${corsAssetUrl('/assets/yakin-byoutou-title-v4.webp')}" width="2048" height="768" alt="夜勤病棟" draggable="false"></h2><p>${htmlMessage("menu.subtitle")}</p></div>
 <section class="patrol-book" aria-label="${htmlMessage("ui.patrol-records")}"><div class="book-header"><span>${htmlMessage("ui.night-patrol-logbook")}</span><span id="stage-progress"></span></div><nav class="book-tabs"><button id="book-guide"></button><button id="desk-settings"></button><label for="menu-language" id="language-label"></label><select id="menu-language" aria-labelledby="language-label">${Object.entries(localeNames).map(([code,name])=>`<option value="${code}" lang="${code}">${escapeHtml(name)}</option>`).join('')}</select></nav>
 <div class="book-body"><div class="archive-index"><div class="index-label">${htmlMessage("ui.number-patrol-area")}</div><div class="night-select" id="stage-list"></div><div class="stage-pages"><button id="stage-prev" aria-label="${htmlMessage("menu.previous")}">←</button><span id="stage-page"></span><button id="stage-next" aria-label="${htmlMessage("menu.next")}">→</button></div></div>
 <div class="archive-sheet"><div class="record-heading"><span class="file-code" id="file-code"></span><span class="file-stamp" id="file-stamp"></span></div><h3 id="file-title"></h3><div class="survey-frame"><canvas id="survey" width="240" height="144" aria-label="${htmlMessage("ui.archived-image-of-selected-area")}"></canvas><span>${htmlMessage("ui.archived-footage-not-live")}</span></div><p id="file-note"></p><p id="stage-detail"></p></div></div>
@@ -55,6 +56,7 @@ ${DEV?`<aside class="interaction"><div class="panel-heading"><h2>${htmlMessage("
 // A missing optional font must not prevent entering the game.
 await document.fonts.load('12px '+canvasFont()).catch(error=>console.warn('Locale font unavailable',error));
 fitDesk($('#start-layer'),$('.desk-content'));
+mountDeskLamp($('.desk-scene'));
 const gameOverlay=document.createElement('div');gameOverlay.className='game-overlay-stage';$('#game-wrap').append(gameOverlay);gameOverlay.append($('#tutorial-card'),$('#result-screen'));
 const fieldBelt=document.createElement('div');fieldBelt.className='field-belt';fieldBelt.setAttribute('aria-label',msg("ui.quick-items"));$('#play-hud').append(fieldBelt);fieldBelt.append($('.inventory-hud'));
 const mission=document.createElement('section');mission.id='mission-hud';mission.setAttribute('aria-label',msg("ui.escape-supplies"));mission.innerHTML=`<small>${htmlMessage("ui.escape-preparations")}</small>`;mission.append($('.minor-status'),$('.key-slot'),$('#flashlight-toggle'));$('#play-hud').append(mission);
@@ -69,7 +71,8 @@ function renderMessage(){
   if(lines.length>1){const detail=document.createElement('span');detail.className='message-detail';detail.textContent=lines.slice(1).join(' ');copy.append(detail);}el.append(copy);
  }
 }
-let previousHealth=100;let lastFeedbackTime=0;let barHealth=100;let teaching:Lesson|null=null;let giftQueue:{command:Command;viewer:string}[]=[];let nextGiftAt=0;let running=false,paused=false,audioOn=true,selectedNight=campaign.unlocked,stagePage=Math.floor((selectedNight-1)/6),toastTimer:ReturnType<typeof setTimeout>;
+const STAGES_PER_PAGE=7;
+let previousHealth=100;let lastFeedbackTime=0;let barHealth=100;let teaching:Lesson|null=null;let giftQueue:{command:Command;viewer:string}[]=[];let nextGiftAt=0;let running=false,paused=false,audioOn=true,selectedNight=campaign.unlocked,stagePage=Math.floor((selectedNight-1)/STAGES_PER_PAGE),toastTimer:ReturnType<typeof setTimeout>;
 document.body.dataset.ui='title';
 const ambience=new Ambience();
 let currentTrack='menu',currentChase=false;
@@ -108,9 +111,9 @@ $('#guide').onclick=()=>document.querySelector<HTMLDialogElement>('#guide-dialog
 $('#sound').onclick=()=>{audioOn=!audioOn;void ambience.setEnabled(audioOn).catch(()=>toast(msg("ui.could-not-enable-audio-please-retry")));};ambience.onStatus=status=>{$('#music-status').dataset.status=status;$('#music-status').textContent=audioStatus(status);audioOn=ambience.enabled;$('#sound').textContent=t(audioOn?'settings.soundOn':'settings.soundOff');};$('#music-volume').oninput=e=>ambience.setVolume(Number((e.target as HTMLInputElement).value)/100);$('#desk-settings').onclick=()=>menu(true);$('#start-layer').addEventListener('pointerdown',()=>{if(audioOn)enterAudio();},{once:true});
 $('#fullscreen').onclick=()=>{if(document.fullscreenElement)void document.exitFullscreen();else void $('#game-wrap').requestFullscreen().catch(()=>toast(msg("ui.this-browser-does-not-support-fullscreen")));};
 function renderStages(){
- const pages=Math.ceil((campaign.unlocked+1)/6);stagePage=Math.max(0,Math.min(stagePage,pages-1));
+ const pages=Math.ceil((campaign.unlocked+1)/STAGES_PER_PAGE);stagePage=Math.max(0,Math.min(stagePage,pages-1));
  $('#stage-progress').textContent=t('menu.archive',{count:String(campaign.unlocked-1).padStart(2,'0')});
- $('#stage-list').innerHTML=Array.from({length:6},(_,i)=>{const n=stagePage*6+i+1;return `<button data-night="${n}" ${campaign.canPlay(n)?'':'disabled'} class="${n===selectedNight?'selected':''}" aria-pressed="${n===selectedNight}"><span class="stage-number">${String(n).padStart(2,'0')}</span><b>${escapeHtml(stageName(makeLevel(n).theme))}</b><small>${htmlMessage(n<campaign.unlocked?'menu.filed':campaign.canPlay(n)?'menu.available':'menu.locked')}</small></button>`;}).join('');
+ $('#stage-list').innerHTML=Array.from({length:STAGES_PER_PAGE},(_,i)=>{const n=stagePage*STAGES_PER_PAGE+i+1;return `<button data-night="${n}" ${campaign.canPlay(n)?'':'disabled'} class="${n===selectedNight?'selected':''}" aria-pressed="${n===selectedNight}"><span class="stage-number">${String(n).padStart(2,'0')}</span><b>${escapeHtml(stageName(makeLevel(n).theme))}</b><small>${htmlMessage(n<campaign.unlocked?'menu.filed':campaign.canPlay(n)?'menu.available':'menu.locked')}</small></button>`;}).join('');
  $('#stage-page').textContent=t('menu.page',{page:String(stagePage+1).padStart(2,'0'),total:String(pages).padStart(2,'0')});
  $('#stage-prev').toggleAttribute('disabled',stagePage===0);$('#stage-next').toggleAttribute('disabled',stagePage>=pages-1);
  const rule=roundRules(selectedNight),level=makeLevel(selectedNight);
@@ -123,7 +126,7 @@ function renderStages(){
  drawSurvey(document.querySelector<HTMLCanvasElement>('#survey')!,level);
  document.querySelectorAll<HTMLButtonElement>('[data-night]').forEach(b=>b.onclick=()=>{selectedNight=Number(b.dataset.night);renderStages();document.querySelector<HTMLButtonElement>(`[data-night="${selectedNight}"]`)?.focus({preventScroll:true});ambience.setScene(-2,0,0);});
 }
-function title(){ambience.setScene(-2,0,0);giftQueue=[];running=false;paused=false;game.setPaused(true);menu(false);document.body.dataset.ui='title';$('#result-screen').hidden=true;$('#game-wrap').classList.remove('run-ended');$('#start-layer').classList.remove('hidden');selectedNight=campaign.unlocked;stagePage=Math.floor((selectedNight-1)/6);applyMenuLanguage();ambience.setRunning(true);}
+function title(){ambience.setScene(-2,0,0);giftQueue=[];running=false;paused=false;game.setPaused(true);menu(false);document.body.dataset.ui='title';$('#result-screen').hidden=true;$('#game-wrap').classList.remove('run-ended');$('#start-layer').classList.remove('hidden');selectedNight=campaign.unlocked;stagePage=Math.floor((selectedNight-1)/STAGES_PER_PAGE);applyMenuLanguage();ambience.setRunning(true);}
 $('#menu-stages').onclick=title;$('#result-menu').onclick=title;$('#stage-prev').onclick=()=>{stagePage--;turnPage();};$('#stage-next').onclick=()=>{stagePage++;turnPage();};applyMenuLanguage();
 $('#next-night').onclick=()=>{if(!game.continueRun())return;ambience.beginRun(makeLevel(selectedNight+1).theme,selectedNight+1);running=true;paused=false;document.body.dataset.ui='playing';$('#result-screen').hidden=true;$('#game-wrap').classList.remove('run-ended');ambience.setRunning(true);};
 document.querySelectorAll<HTMLButtonElement>('[data-item]').forEach(b=>b.onclick=()=>{if(running&&!paused)game.useItem(b.dataset.item as 'F'|'R'|'Q');b.blur();});

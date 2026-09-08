@@ -1,4 +1,11 @@
 {
   "ui.patrol-duration": "Patrulltid",
-  "ui.archived-footage-not-live": "Före avdelningens stängning"
+  "ui.archived-footage-not-live": "Före avdelningens stängning",
+  "menu.pending": "EJ KONTROLLERAT",
+  "menu.complete": "KONTROLLERAT",
+  "menu.sketch": "Före stängning",
+  "event.quiet": "Längre pauser mellan jakter",
+  "event.supply": "Extra förråd: +1 blixt",
+  "event.power": "Instabil ström; avbrott",
+  "menu.anomaly": "{threat}\n{event}"
 }

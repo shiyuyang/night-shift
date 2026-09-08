@@ -1,3 +1,10 @@
 {
-  "ui.archived-footage-not-live": "封樓前留影"
+  "ui.archived-footage-not-live": "封樓前留影",
+  "menu.pending": "待巡查",
+  "menu.complete": "已巡查",
+  "menu.sketch": "封樓前留影",
+  "event.quiet": "追逐間隔較長",
+  "event.supply": "額外補給：閃光 +1",
+  "event.power": "供電不穩，間歇停電",
+  "menu.anomaly": "{threat}\n{event}"
 }

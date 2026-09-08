@@ -3,5 +3,12 @@
   "loot.fuse": "Sekring +1 · {count}/3\n{key}",
   "threat.light-shy": "Si Takut Cahaya",
   "threat.patroller": "Si Peronda",
-  "ui.archived-footage-not-live": "Sebelum bangsal ditutup"
+  "ui.archived-footage-not-live": "Sebelum bangsal ditutup",
+  "menu.pending": "BELUM DIPERIKSA",
+  "menu.complete": "DIPERIKSA",
+  "menu.sketch": "Sebelum ditutup",
+  "event.quiet": "Jeda pengejaran lebih lama",
+  "event.supply": "Bekal ekstra: +1 kilatan",
+  "event.power": "Listrik labil; rawan padam",
+  "menu.anomaly": "{threat}\n{event}"
 }

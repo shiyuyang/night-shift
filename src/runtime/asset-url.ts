@@ -5,3 +5,8 @@ export function assetUrl(file:string){
  const base=env?.VITE_ASSET_BASE_URL||env?.BASE_URL||'/';
  return base.replace(/\/$/,'')+'/'+file.replace(/^\//,'');
 }
+/** Keep CORS image reads separate from previously cached no-CORS responses. */
+export function corsAssetUrl(file:string){
+ const url=assetUrl(file);
+ return /^(?:data:|blob:)/.test(url)?url:url+(url.includes('?')?'&':'?')+'cors=anonymous';
+}

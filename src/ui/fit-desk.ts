@@ -23,6 +23,9 @@ export function fitDesk(layer:HTMLElement,content:HTMLElement){
  const schedule=()=>{if(!frame)frame=requestAnimationFrame(update);};
  const observer=new ResizeObserver(schedule);
  observer.observe(host);observer.observe(layer);observer.observe(content);
+ const textObserver=new MutationObserver(schedule);
+ textObserver.observe(content,{subtree:true,childList:true,characterData:true});
+ document.fonts.addEventListener('loadingdone',schedule);
  window.addEventListener('resize',schedule);
  void document.fonts.ready.then(schedule);
  schedule();

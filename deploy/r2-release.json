@@ -4,7 +4,7 @@
   "domain": "night-shift-assets.liveinteractivegame.com",
   "zoneId": "30badb66445e606e10540be49d75e584",
   "prefix": "games/night-shift",
-  "version": "23c3421c260f604c",
+  "version": "a1a674bee95a4b70",
   "files": [
     {
       "file": "assets/archive-plant-v1.q95.webp",
@@ -25,6 +25,11 @@
       "file": "assets/bed-overhead-v4.webp",
       "bytes": 458760,
       "sha256": "a7f81c18983279366befb17b0b1da8963d28dc559052b82ed85585fb6289ba51"
+    },
+    {
+      "file": "assets/desk-yurei-v1.webp",
+      "bytes": 27194,
+      "sha256": "15845780818de2abcbfc68d18af43a774582369bea9e278f54570d72450ee751"
     },
     {
       "file": "assets/hospital-corridor-v2.q95.webp",
@@ -52,6 +57,16 @@
       "sha256": "7393cb63d8f78819a26356ecf9e317676bedf27f2ee3acd6d8dd4f3909b1d3ed"
     },
     {
+      "file": "assets/hospital-register-selected-v1.webp",
+      "bytes": 571216,
+      "sha256": "054e5fa98826311416bb7bf89b29e4e9fbb1870a7625aaae59a961a450db29a6"
+    },
+    {
+      "file": "assets/hospital-seal-oval-v1.webp",
+      "bytes": 350056,
+      "sha256": "8e867b3afcf4dcd8517729f64f3434a9c01bb289debbd643c0fe3753ab5d8930"
+    },
+    {
       "file": "assets/hospital-wall-v2.q95.webp",
       "bytes": 608880,
       "sha256": "a5523afb3a7c412c704683b55865a80b1aae92137837fdd7a997c4d0293343cb"
@@ -65,6 +80,21 @@
       "file": "assets/patrol-book-pixel-v1.webp",
       "bytes": 1272988,
       "sha256": "298fcbbbf76ee4e3c35a8971e3f20ebee34404f9b9efd014df21e2f53abf118b"
+    },
+    {
+      "file": "assets/stamp-button-normal-v1.webp",
+      "bytes": 317858,
+      "sha256": "1918a7e904ea8a474ac03c2914bc7fa3a5c47252398af8c0a1a51828de8b9c25"
+    },
+    {
+      "file": "assets/stamp-button-pressed-v1.webp",
+      "bytes": 143786,
+      "sha256": "31f052758989e4ad5539379bda6ed626a00f600d03d325df2438023e38aafc2c"
+    },
+    {
+      "file": "assets/watch-desk-cold-night-v1.webp",
+      "bytes": 184588,
+      "sha256": "7228852655ab5b72189ff92c04602102d726b04c12760ff0ab2427062c789d68"
     },
     {
       "file": "assets/watch-desk-painted-v2.q95.webp",
@@ -192,6 +222,11 @@
       "sha256": "abc04b20b0ad17f38112cabdb550012f4f296724252707705398a5a6dace6d1b"
     },
     {
+      "file": "fonts/MaShanZheng-OFL.txt",
+      "bytes": 4397,
+      "sha256": "d7bdb1cee215b689e23c2f95672a6084c790542170648267a55114103d756a08"
+    },
+    {
       "file": "fonts/OFL.txt",
       "bytes": 4412,
       "sha256": "3ab41567e68e3988ba1ef16dd2644eca95ca5648ea12e7d46e6287fc0bbe5aee"
@@ -205,8 +240,108 @@
       "file": "fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
       "bytes": 534852,
       "sha256": "85cb13ec5954e082b256bba488ff9c9366a9f3166a61bf174cddb9fde0651ae0"
+    },
+    {
+      "file": "fonts/hospital-handwriting-37a4a96126.woff2",
+      "bytes": 15408,
+      "sha256": "37a4a96126c0c0eeada67a8f772bd4b0c191600a20aa2967beef3be4a24fc2cf"
+    },
+    {
+      "file": "fonts/locale-ar-b37007c412.woff2",
+      "bytes": 81432,
+      "sha256": "b37007c4124f6beb4bee0a39e71616a5db1ef2b02e2ae379f546914762266367"
+    },
+    {
+      "file": "fonts/locale-he-f6569a40cd.woff2",
+      "bytes": 25160,
+      "sha256": "f6569a40cdf5a12a2d36711eb80238057e10148ab1e52417e37962974e9124c0"
+    },
+    {
+      "file": "fonts/locale-ja-8b8fa54639.woff2",
+      "bytes": 253296,
+      "sha256": "8b8fa54639e72d58e0f6b0a34495b1302a5ced2157a642bd7717490863502bdf"
+    },
+    {
+      "file": "fonts/locale-ko-999e896c37.woff2",
+      "bytes": 105176,
+      "sha256": "999e896c3755f196a2af338b8f3ed4cc02ea85380ea3f944069b127651c33776"
+    },
+    {
+      "file": "fonts/locale-latin-84536a0a4d.woff2",
+      "bytes": 116892,
+      "sha256": "84536a0a4dd3e74d8d6f3a9c786213c73a3fe7ef698a620f0556a02f21c201f5"
+    },
+    {
+      "file": "fonts/locale-my-5b9d94eaa6.woff2",
+      "bytes": 129156,
+      "sha256": "5b9d94eaa6eb94805d3b48cf97c568204334e42d38fba7d47f886f09c85fbb83"
+    },
+    {
+      "file": "fonts/locale-th-00cbed7909.woff2",
+      "bytes": 58516,
+      "sha256": "00cbed7909b42f2bcc1ba9c6e9896983df3aafc054e8cb3196c7bd306fd1abd2"
+    },
+    {
+      "file": "fonts/locale-zh-Hans-67a31fdc4d.woff2",
+      "bytes": 204120,
+      "sha256": "67a31fdc4d9b1883dd4c4cef49c06fd241996887c4d4d0d70e510ea3af301e6d"
+    },
+    {
+      "file": "fonts/locale-zh-Hant-da19f3544d.woff2",
+      "bytes": 220460,
+      "sha256": "da19f3544d6834ee2a6cfad375a2c0277b5172458a51dcdfe2c5a202ff597441"
+    },
+    {
+      "file": "fonts/notosans-OFL.txt",
+      "bytes": 4395,
+      "sha256": "e2e177a32561584d4fc13aaa3cd8e53758a12910f013fe9ca125419111722029"
+    },
+    {
+      "file": "fonts/notosansarabic-OFL.txt",
+      "bytes": 4381,
+      "sha256": "df5143cdf3380169f2d03bf6d2cd243e85621fd097e608c3607cf7f9c9884ae6"
+    },
+    {
+      "file": "fonts/notosanshebrew-OFL.txt",
+      "bytes": 4381,
+      "sha256": "5b93a1ad3c9891b755443440b067f4b1a5e4d51fedde1055aa310ee33f09394a"
+    },
+    {
+      "file": "fonts/notosansjp-OFL.txt",
+      "bytes": 4387,
+      "sha256": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded"
+    },
+    {
+      "file": "fonts/notosanskr-OFL.txt",
+      "bytes": 4387,
+      "sha256": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded"
+    },
+    {
+      "file": "fonts/notosansmyanmar-OFL.txt",
+      "bytes": 4382,
+      "sha256": "c000d317288b00ee3c2bb72f30c57367df29fd9dc31c83bf6e362e21e9178680"
+    },
+    {
+      "file": "fonts/notosanssc-OFL.txt",
+      "bytes": 4387,
+      "sha256": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded"
+    },
+    {
+      "file": "fonts/notosanstc-OFL.txt",
+      "bytes": 4387,
+      "sha256": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded"
+    },
+    {
+      "file": "fonts/notosansthai-OFL.txt",
+      "bytes": 4379,
+      "sha256": "96ac951c8caddd87d8a66fe0d02342127696131d3e935ce4a936dc68cf032e33"
+    },
+    {
+      "file": "fonts/photo-note-SOURCE.txt",
+      "bytes": 260,
+      "sha256": "d113cd651f212760397282b77588d331a6079268e539375b784992fb97ecd320"
     }
   ],
-  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/23c3421c260f604c/",
-  "verifiedAt": "2026-09-07T10:51:23.683Z"
+  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/a1a674bee95a4b70/",
+  "verifiedAt": "2026-09-08T10:45:43.400Z"
 }

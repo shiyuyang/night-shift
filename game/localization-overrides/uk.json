@@ -1,3 +1,15 @@
 {
-  "ui.archived-footage-not-live": "До закриття відділення"
+  "ui.archived-footage-not-live": "До закриття відділення",
+  "menu.pending": "НЕ ПЕРЕВІРЕНО",
+  "menu.complete": "ПЕРЕВІРЕНО",
+  "menu.sketch": "До закриття",
+  "event.quiet": "Погоні рідші",
+  "event.supply": "Припаси: +1 спалах",
+  "event.power": "Збої живлення; відключення",
+  "menu.anomaly": "{threat}\n{event}",
+  "stage.0": "Покинута палата",
+  "menu.book": "ЖУРНАЛ ОБХОДІВ",
+  "menu.start": "Почати обхід →",
+  "menu.record": "ОБХІД / {number}",
+  "note.2": "Світло згасло. Стукіт у трубах не стихає."
 }

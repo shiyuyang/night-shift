@@ -1,3 +1,11 @@
 {
-  "ui.archived-footage-not-live": "Преди затварянето на отделението"
+  "ui.archived-footage-not-live": "Преди затварянето на отделението",
+  "menu.pending": "НЕПРОВЕРЕНО",
+  "menu.complete": "ПРОВЕРЕНО",
+  "menu.sketch": "Преди затваряне",
+  "event.quiet": "По-редки преследвания",
+  "event.supply": "Запаси: +1 проблясък",
+  "event.power": "Нестабилен ток; прекъсвания",
+  "menu.anomaly": "{threat}\n{event}",
+  "menu.start": "Започни →"
 }
