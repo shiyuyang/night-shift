@@ -69,7 +69,7 @@
   "guide.5": "Szafki z krzyżami zawierają zapasy. Wysokie szafki ukrywają Cię do 8 sekund. Przed ukryciem zerwij linię widzenia.",
   "tutorial.exitReturn": "Wróć do postaci",
   "tutorial.exitTitle": "TO JEST WYCHÓD",
-  "tutorial.exitText": "Zbierano wszystkie trzy bezpieczniki. To drzwi oświetlone na zielono to Twój wyjście. 8-sekundowa licznik zasilania wznowi się, gdy kamera wróci. Nieustannie się poruszaj, a następnie przyjdź tutaj i naciśnij E, aby uciec.",
+  "tutorial.exitText": "Zbierano wszystkie trzy bezpieczniki. To drzwi oświetlone na zielono to Twój wyjście. {seconds, number}-sekundowa licznik zasilania wznowi się, gdy kamera wróci. Nieustannie się poruszaj, a następnie przyjdź tutaj i naciśnij E, aby uciec.",
   "tutorial.healthTitle": "OBSTERWUJ SWOJE ZDROWIE",
   "tutorial.healthText": "Biała paski w lewym górnym rogu to Twoje zdrowie. Uderzenia je skracają; przy zerze umierasz. Miga po trafieniu, dając chwilową ochronę. Naciśnij Q, aby uzdrowić 40 punktów zdrowia bandażem.",
   "tutorial.flashlightTitle": "ZACHOWAJ SWOJE ŚWIATŁO",

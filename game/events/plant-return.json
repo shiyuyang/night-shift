@@ -13,12 +13,6 @@
         "strength": 0.08
       },
       {
-        "type": "sound",
-        "id": "call-bell",
-        "pan": -0.65,
-        "source": "LampSouth"
-      },
-      {
         "type": "message",
         "text": "event.plant"
       },

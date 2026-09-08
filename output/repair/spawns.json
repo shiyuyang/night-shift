@@ -1,0 +1,100 @@
+[
+  {
+    "round": 1,
+    "total": 100,
+    "generated": 0,
+    "skipped": 100,
+    "failures": []
+  },
+  {
+    "round": 2,
+    "total": 100,
+    "generated": 100,
+    "skipped": 0,
+    "failures": []
+  },
+  {
+    "round": 3,
+    "total": 100,
+    "generated": 100,
+    "skipped": 0,
+    "failures": []
+  },
+  {
+    "round": 4,
+    "total": 100,
+    "generated": 89,
+    "skipped": 11,
+    "failures": []
+  },
+  {
+    "round": 5,
+    "total": 100,
+    "generated": 89,
+    "skipped": 11,
+    "failures": []
+  },
+  {
+    "round": 6,
+    "total": 100,
+    "generated": 89,
+    "skipped": 11,
+    "failures": []
+  },
+  {
+    "round": 7,
+    "total": 100,
+    "generated": 89,
+    "skipped": 11,
+    "failures": []
+  },
+  {
+    "round": 8,
+    "total": 100,
+    "generated": 89,
+    "skipped": 11,
+    "failures": []
+  },
+  {
+    "round": 9,
+    "total": 100,
+    "generated": 89,
+    "skipped": 11,
+    "failures": []
+  },
+  {
+    "round": 10,
+    "total": 100,
+    "generated": 89,
+    "skipped": 11,
+    "failures": []
+  },
+  {
+    "round": 11,
+    "total": 100,
+    "generated": 89,
+    "skipped": 11,
+    "failures": []
+  },
+  {
+    "round": 12,
+    "total": 100,
+    "generated": 89,
+    "skipped": 11,
+    "failures": []
+  },
+  {
+    "round": 13,
+    "total": 100,
+    "generated": 89,
+    "skipped": 11,
+    "failures": []
+  },
+  {
+    "round": 14,
+    "total": 100,
+    "generated": 89,
+    "skipped": 11,
+    "failures": []
+  }
+]

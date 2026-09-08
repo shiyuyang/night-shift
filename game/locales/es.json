@@ -69,7 +69,7 @@
   "guide.5": "Los gabinetes con marca en cruz contienen suministros. Los armarios altos te ocultan hasta por 8 segundos. Rompe la línea de visión antes de ocultarte.",
   "tutorial.exitReturn": "Volver al personaje",
   "tutorial.exitTitle": "ESTA ES LA SALIDA",
-  "tutorial.exitText": "Se han recolectado los tres fusibles. Esta puerta iluminada en verde es tu salida. El recuento regresivo de energía de 8 segundos reanuda cuando la cámara regresa. Sigue moviéndote, luego ven aquí y presiona E para escapar.",
+  "tutorial.exitText": "Se han recolectado los tres fusibles. Esta puerta iluminada en verde es tu salida. El recuento regresivo de energía de {seconds, number} segundos reanuda cuando la cámara regresa. Sigue moviéndote, luego ven aquí y presiona E para escapar.",
   "tutorial.healthTitle": "VIGILA TU SALUD",
   "tutorial.healthText": "La barra blanca en la esquina superior izquierda es tu salud. Los impactos la acortan; al llegar a cero, mueres. Parpadear tras un impacto otorga protección breve. Presiona Q para sanar 40 puntos de salud con un vendaje.",
   "tutorial.flashlightTitle": "AHORRA TU LUCES",

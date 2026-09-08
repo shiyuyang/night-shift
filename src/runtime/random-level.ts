@@ -1,4 +1,5 @@
 import searchSpots from '../../game/search-spots.json' with {type:'json'};
+import {weeperExclusion} from './weeper-placement.ts';
 import {populateRogueContent} from './rogue-content.ts';
 import type {Level} from '../levels.ts';
 import {overlaps} from '../collision.ts';
@@ -21,6 +22,8 @@ export function randomizeLevel(base:Level,seed:number,maxAttempts=12):Level{
   const bodies=[{x:level.key.x-6,y:level.key.y-6,width:12,height:12},...level.boxes.map(b=>({x:b.x-13,y:b.y-9,width:26,height:21}))];
   // Reachability alone would allow an item embedded in the edge of furniture.
   if(bodies.some((b,n)=>[...level.walls,...level.props,level.door,...bodies.slice(n+1)].some(s=>overlaps(b,s))))continue;
+  const fixed=level.round===2&&level.weeperFixed;
+  if(fixed&&!validatePlayableLevel({...level,props:[...level.props,{...weeperExclusion(fixed),kind:'crate'}]}).valid)continue;
   if(validatePlayableLevel(level).valid){level.generation={...level.generation!,seed:seed>>>0,attempts:i+1};return populateRogueContent(level,seededRandom(seed^0x1234abcd));}
  }
  if(!validatePlayableLevel(base).valid)throw Error('Fallback map failed playability validation');

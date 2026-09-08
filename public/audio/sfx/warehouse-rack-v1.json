@@ -1,0 +1,8 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Original isolated foley for an abandoned Japanese hospital pixel horror game at night. No music, words, speech or monster vocals. Tall old medicine storage shelving slowly flexes under load, a low rusty frame creak followed by one small shelf tap. Enclosed dry warehouse acoustics, no footsteps.",
+  "requestedSeconds": 3,
+  "generatedAt": "2026-09-08T16:26:49.379623+00:00",
+  "postProcessing": "Additional -3 dB gain before MP3/Opus delivery encoding; source retained unchanged."
+}

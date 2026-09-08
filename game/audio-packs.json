@@ -1,8 +1,8 @@
 {
   "opus": {
-    "file": "/audio/sfx-opus-dceb220d0bcb6bc7.bin",
-    "bytes": 111447,
-    "sha256": "dceb220d0bcb6bc7f1e4b7edb21af304e48d9826ffa4936e562e4ed357586280",
+    "file": "/audio/sfx-opus-3b1721547ed073ad.bin",
+    "bytes": 425330,
+    "sha256": "3b1721547ed073adb2349d7c04853bf0f1193d85a8f547b52cd0ad7f9395ec63",
     "entries": {
       "step": {
         "offset": 0,
@@ -75,6 +75,90 @@
       "patient-stunned": {
         "offset": 103947,
         "length": 7500
+      },
+      "outpatient-speaker": {
+        "offset": 111447,
+        "length": 18260
+      },
+      "outpatient-wheel": {
+        "offset": 129707,
+        "length": 13509
+      },
+      "surgery-tray": {
+        "offset": 143216,
+        "length": 12785
+      },
+      "surgery-suction": {
+        "offset": 156001,
+        "length": 21335
+      },
+      "morgue-knock": {
+        "offset": 177336,
+        "length": 14400
+      },
+      "morgue-slide": {
+        "offset": 191736,
+        "length": 9836
+      },
+      "garden-wind": {
+        "offset": 201572,
+        "length": 26598
+      },
+      "garden-chime": {
+        "offset": 228170,
+        "length": 17209
+      },
+      "blood-moon-rise": {
+        "offset": 245379,
+        "length": 23243
+      },
+      "blood-moon-flicker": {
+        "offset": 268622,
+        "length": 5449
+      },
+      "door-batter": {
+        "offset": 274071,
+        "length": 4498
+      },
+      "door-breach": {
+        "offset": 278569,
+        "length": 10687
+      },
+      "ward-bed-call": {
+        "offset": 289256,
+        "length": 17867
+      },
+      "ward-curtain": {
+        "offset": 307123,
+        "length": 9900
+      },
+      "ward-bedframe": {
+        "offset": 317023,
+        "length": 9617
+      },
+      "warehouse-vials": {
+        "offset": 326640,
+        "length": 14218
+      },
+      "warehouse-rack": {
+        "offset": 340858,
+        "length": 12325
+      },
+      "warehouse-cold-unit": {
+        "offset": 353183,
+        "length": 29472
+      },
+      "plant-coastdown": {
+        "offset": 382655,
+        "length": 23933
+      },
+      "plant-pipe-knock": {
+        "offset": 406588,
+        "length": 13369
+      },
+      "plant-breaker-arc": {
+        "offset": 419957,
+        "length": 5373
       }
     }
   }

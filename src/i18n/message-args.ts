@@ -70,7 +70,7 @@ export interface MessageValues{
 "guide.5":{}
 "tutorial.exitReturn":{}
 "tutorial.exitTitle":{}
-"tutorial.exitText":{}
+"tutorial.exitText":{"seconds":number}
 "tutorial.healthTitle":{}
 "tutorial.healthText":{}
 "tutorial.flashlightTitle":{}

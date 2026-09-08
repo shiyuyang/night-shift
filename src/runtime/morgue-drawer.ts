@@ -8,8 +8,7 @@ export class MorgueDrawer {
  get solids():Box[]{return this.area&&(this.phase==='extending'||this.phase==='open')?[this.area]:[];}
  tick(dt:number,opened:number,near:boolean,bodies:Box[]):'warning'|'slide'|undefined{
   if(!this.area||dt<=0)return;
-  if(opened===3&&(this.phase==='idle'||this.phase==='warning')){this.phase='cancelled';return;}
-  if(this.phase==='idle'&&opened>=2&&near){this.phase='warning';this.elapsed=0;return 'warning';}
+  if(this.phase==='idle'&&opened===3&&near){this.phase='warning';this.elapsed=0;return 'warning';}
   if(this.phase==='warning'){
    this.elapsed+=dt;
    const sweep={x:this.area.x-8,y:this.area.y-8,width:this.area.width+16,height:this.area.height+16};

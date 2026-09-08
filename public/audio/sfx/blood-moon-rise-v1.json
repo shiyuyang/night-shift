@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. Supernatural blood moon reveal in a deserted hospital courtyard. A low pressure swell, thin bent-metal harmonic tearing above it, wind sucked away into unnatural stillness. Dark visceral dread, restrained peak, no explosive boom, no melody.",
+  "requestedSeconds": 5,
+  "generatedAt": "2026-09-08T16:16:09.699886+00:00"
+}

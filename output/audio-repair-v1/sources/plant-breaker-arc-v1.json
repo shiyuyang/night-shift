@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Original isolated foley for an abandoned Japanese hospital pixel horror game at night. No music, words, speech or monster vocals. An old industrial hospital circuit breaker snaps open, rapid contact chatter and a tiny electrical arc fizz then dead silence. Short isolated dry mechanical sound, no explosion.",
+  "requestedSeconds": 1.2,
+  "generatedAt": "2026-09-08T16:27:02.746418+00:00"
+}

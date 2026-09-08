@@ -3256,6 +3256,182 @@
                 590
               ],
               "width": 16
+            },
+            {
+              "__grid": [
+                11,
+                13
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "a1e212a1-a282-419a-92fb-41292fadf8b7",
+              "px": [
+                176,
+                214
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                11,
+                36
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "934fc712-9c42-456b-9b96-526a36b2028f",
+              "px": [
+                176,
+                590
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                30,
+                13
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "1e2d4fd7-2313-4443-bbb3-df1852cbffb9",
+              "px": [
+                480,
+                214
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                30,
+                35
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "112b5be5-138d-468e-9415-6bed405e7b05",
+              "px": [
+                480,
+                574
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                50,
+                13
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "9e682568-df01-48df-8100-bed4c70adcb8",
+              "px": [
+                800,
+                214
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                50,
+                34
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "468587d0-9ecc-4f1e-b3d9-4678ab616afe",
+              "px": [
+                800,
+                558
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                69,
+                22
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "04dd0f3a-8547-4d0e-ab9e-aa0f5ee35418",
+              "px": [
+                1104,
+                358
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                69,
+                36
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "91e36227-b919-4d5b-ab8d-95bf226c80b9",
+              "px": [
+                1104,
+                590
+              ],
+              "width": 8
             }
           ],
           "gridTiles": [],

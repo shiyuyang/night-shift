@@ -13,12 +13,6 @@
         "strength": 0.08
       },
       {
-        "type": "sound",
-        "id": "metal",
-        "pan": -0.65,
-        "source": "LampWest"
-      },
-      {
         "type": "message",
         "text": "event.warehouse"
       },

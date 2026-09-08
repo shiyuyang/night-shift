@@ -69,7 +69,7 @@
   "guide.5": "Laci bertanda silang mengandungi bekalan. Rak tinggi menyembunyikan anda selama sehingga 8 saat. Putuskan garis pandangan sebelum bersembunyi.",
   "tutorial.exitReturn": "Kembali kepada watak",
   "tutorial.exitTitle": "INI ADALAH KELUAR",
-  "tutorial.exitText": "Semua tiga penutup dikumpulkan. Pintu bercahaya hijau ini adalah keluar anda. Senarai turun kuasa 8 saat diteruskan apabila kamera kembali. Teruskan bergerak, kemudian datang ke sini dan tekan E untuk melarikan diri.",
+  "tutorial.exitText": "Semua tiga penutup dikumpulkan. Pintu bercahaya hijau ini adalah keluar anda. Senarai turun kuasa {seconds, number} saat diteruskan apabila kamera kembali. Teruskan bergerak, kemudian datang ke sini dan tekan E untuk melarikan diri.",
   "tutorial.healthTitle": "WASPAKAN KESEHATAN ANDA",
   "tutorial.healthText": "Bar putih di bahagian kiri atas ialah kesihatan anda. Serangan memendekkannya; pada sifar, anda mati. Berkedip selepas serangan memberikan perlindungan sebentar. Tekan Q untuk menyembuhkan 40 kesihatan dengan pembalut.",
   "tutorial.flashlightTitle": "JAGA CAHAYA ANDA",

@@ -19,12 +19,6 @@
           "strength": 0.08
         },
         {
-          "type": "sound",
-          "id": "call-bell",
-          "pan": -0.65,
-          "source": "LampSouth"
-        },
-        {
           "type": "wait",
           "seconds": 1.8
         },
@@ -277,7 +271,7 @@
       "id": "Wall",
       "x": 968,
       "y": 556,
-      "width": 276,
+      "width": 152,
       "height": 16
     },
     {
@@ -324,10 +318,10 @@
     },
     {
       "id": "MorgueDrawerZone",
-      "x": 695,
-      "y": 164,
+      "x": 1030,
+      "y": 448,
       "width": 50,
-      "height": 100
+      "height": 108
     },
     {
       "id": "MorgueWarningZone",
@@ -586,6 +580,69 @@
       "x": 1104,
       "y": 574,
       "width": 16,
+      "height": 16
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 176,
+      "y": 230,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 176,
+      "y": 574,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 480,
+      "y": 230,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 480,
+      "y": 574,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 800,
+      "y": 230,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 800,
+      "y": 574,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 984,
+      "y": 230,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 1104,
+      "y": 574,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "Wall",
+      "x": 1180,
+      "y": 556,
+      "width": 64,
       "height": 16
     },
     {

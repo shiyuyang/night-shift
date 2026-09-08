@@ -69,7 +69,7 @@
   "guide.5": "Ormani s križem sadrže opremu. Visoki ormarići vas skrivaju do 8 sekundi. Prije skrivanja, prekinite liniju vida.",
   "tutorial.exitReturn": "Povratak na lik",
   "tutorial.exitTitle": "OVO JE IZLAZ",
-  "tutorial.exitText": "Sva tri osigurača su prikupljena. Ova vrata s zelenom svjetlošću su vaš izlaz. 8-sekundni niz napajanja se nastavlja kada kamera vrati. Nastavite se kretati, a zatid dođite ovdje i pritisnite E da pobjegnete.",
+  "tutorial.exitText": "Sva tri osigurača su prikupljena. Ova vrata s zelenom svjetlošću su vaš izlaz. {seconds, number}-sekundni niz napajanja se nastavlja kada kamera vrati. Nastavite se kretati, a zatid dođite ovdje i pritisnite E da pobjegnete.",
   "tutorial.healthTitle": "PRATITE SVOJE ZDRAVLJE",
   "tutorial.healthText": "Bijela traka u gornjem lijevom kutu je vaš zdravlje. Pogođeni kraće ga; na nuli, umrete. Treptanje nakon udara daje kratko zaštitu. Pritisnite Q da zacijelite 40 zdravlja zavojem.",
   "tutorial.flashlightTitle": "SAČUVAJ SVJETLO",

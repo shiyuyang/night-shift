@@ -69,7 +69,7 @@
   "guide.5": "Tủ có dấu chéo chứa đồ dùng. Tủ quần áo cao ẩn bạn trong tối đa 8 giây. Hãy phá đường ngắm trước khi ẩn.",
   "tutorial.exitReturn": "Quay lại nhân vật",
   "tutorial.exitTitle": "NÀY LÀ CỬA RA",
-  "tutorial.exitText": "Đã thu thập đủ ba cầu chì. Cánh cửa này có đèn xanh là lối ra của bạn. Đếm ngược cấp điện 8 giây sẽ tiếp tục khi camera quay lại. Hãy di chuyển liên tục, sau đó đến đây và nhấn E để thoát.",
+  "tutorial.exitText": "Đã thu thập đủ ba cầu chì. Cánh cửa này có đèn xanh là lối ra của bạn. Đếm ngược cấp điện {seconds, number} giây sẽ tiếp tục khi camera quay lại. Hãy di chuyển liên tục, sau đó đến đây và nhấn E để thoát.",
   "tutorial.healthTitle": "CẨN THẬN SỨC KHỎE",
   "tutorial.healthText": "Thanh trắng ở góc trên bên trái là sức khỏe của bạn. Bị đánh sẽ làm giảm nó; khi về 0, bạn chết. Nháy sau khi bị đánh cho khả năng miễn dịch tạm thời. Nhấn Q để chữa 40 điểm sức khỏe bằng băng.",
   "tutorial.flashlightTitle": "BẢO VỆ ĐÈN CỦA BẠN",

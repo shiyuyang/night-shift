@@ -69,7 +69,7 @@
   "guide.5": "Les armoires croisées contiennent des fournitures. Les grands placards vous cachent jusqu'à 8 secondes. Brisez la ligne de vue avant de vous cacher.",
   "tutorial.exitReturn": "Retour au personnage",
   "tutorial.exitTitle": "C'EST LA SORTIE",
-  "tutorial.exitText": "Les trois fusibles sont collectés. Cette porte éclairée en vert est votre sortie. Le compte à rebours d'alimentation de 8 secondes reprend lorsque la caméra revient. Continuez à bouger, puis venez ici et appuyez sur E pour échapper.",
+  "tutorial.exitText": "Les trois fusibles sont collectés. Cette porte éclairée en vert est votre sortie. Le compte à rebours d'alimentation de {seconds, number} secondes reprend lorsque la caméra revient. Continuez à bouger, puis venez ici et appuyez sur E pour échapper.",
   "tutorial.healthTitle": "VEILLEZ À VOTRE SANTÉ",
   "tutorial.healthText": "La barre blanche en haut à gauche est votre santé. Les coups la réduisent ; à zéro, vous mourrez. Le clignotement après un coup donne une brève protection. Appuyez sur Q pour guérir 40 points de santé avec un pansement.",
   "tutorial.flashlightTitle": "GARDEZ VOTRE LUMIÈRE",

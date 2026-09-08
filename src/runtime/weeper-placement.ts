@@ -1,14 +1,15 @@
 import type {Level} from '../levels.ts';
 import {monsterFeetAt,monsterArchitecture,overlaps,clearContact,feetAt,type Box,type Position} from '../collision.ts';
-import {validatePlayableLevel} from './level-validation.ts';
+import {reachablePositions,validatePlayableLevel} from './level-validation.ts';
 import {patrolPath} from '../patrol.ts';
 import {weeperRules} from './weeper.ts';
 export function weeperExclusion(p:Position):Box{return {x:p.x-weeperRules.alertRadius,y:p.y-weeperRules.alertRadius,width:weeperRules.alertRadius*2,height:weeperRules.alertRadius*2};}
 /** Authored LDtk sockets, then a conservative proof with the entire alert square blocked. */
 export function chooseWeeper(level:Level,seed:number):Position|undefined{
  if(level.round<weeperRules.firstRound)return;
+ if(level.round===2)return level.weeperFixed?{...level.weeperFixed}:undefined;
  const hash=(Math.imul(seed^level.round,1664525)+1013904223)>>>0;
- if(level.round!==weeperRules.firstRound&&hash/4294967296>weeperRules.chance)return;
+ if(level.round!==3&&hash/4294967296>weeperRules.chance)return;
  const features=(level.features??[]).map(f=>({x:f.x,y:f.y+8,width:f.width,height:f.height-8,kind:'crate' as const}));
  const candidates=[...(level.weeperSpawns??[])];if(!candidates.length)return;
  const offset=hash%candidates.length;candidates.push(...candidates.splice(0,offset));const searches=[level.key,...level.boxes];
@@ -29,7 +30,18 @@ export function chooseWeeper(level:Level,seed:number):Position|undefined{
   if(searches.some(v=>Math.hypot(v.x-p.x,v.y-p.y)<weeperRules.alertRadius+15))continue;
   const solids=[...level.walls.map(monsterArchitecture),monsterArchitecture(level.door),...level.props,...features,...level.boxes.map(b=>({x:b.x-13,y:b.y-9,width:26,height:21}))];
   if(solids.some(b=>overlaps(monsterFeetAt(p.x,p.y),b)))continue;
-  const test={...level,props:[...level.props,...features,{...zone,kind:'crate' as const}]};
-  if(validatePlayableLevel(test).valid)return {...p};
+  const route=patrolPath(level.spawn,p,solids,level.bounds,monsterFeetAt),end=route.at(-1);
+  if(end&&Math.hypot(end.x-p.x,end.y-p.y)<12&&weeperRoamPoints(level,p).length)return {...p};
  }
+}
+
+/** Local endpoints let a patient leave a chokepoint; its alert radius is not a permanent wall. */
+export function weeperRoamPoints(level:Level,home:Position):Position[]{
+ if(level.round===2)return [];
+ const features=(level.features??[]).map(f=>({x:f.x,y:f.y+8,width:f.width,height:f.height-8}));
+ const solids=[...level.walls.map(monsterArchitecture),monsterArchitecture(level.door),...level.props,...features,...level.boxes.map(b=>({x:b.x-13,y:b.y-9,width:26,height:21}))];
+ const points=reachablePositions(level,false,monsterFeetAt).filter(p=>Math.hypot(p.x-home.x,p.y-home.y)>=140&&Math.hypot(p.x-home.x,p.y-home.y)<=250&&!solids.some(b=>overlaps(monsterFeetAt(p.x,p.y),b)));
+ const result:Position[]=[];
+ for(const p of points){if(result.some(v=>Math.hypot(v.x-p.x,v.y-p.y)<100))continue;const route=patrolPath(home,p,solids,level.bounds,monsterFeetAt);if(route.length>42||!route.length||Math.hypot(route.at(-1)!.x-p.x,route.at(-1)!.y-p.y)>12)continue;result.push(p);if(result.length===4)break;}
+ return result;
 }

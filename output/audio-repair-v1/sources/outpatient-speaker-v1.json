@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. Empty outpatient reception: a broken wall intercom relay opens with a dry click, faint breath-like electrical interference swells from the metal speaker, then cuts abruptly. Unintelligible non-vocal texture, cold tiled room echo. No announcement or voice.",
+  "requestedSeconds": 4,
+  "generatedAt": "2026-09-08T16:15:42.366170+00:00"
+}

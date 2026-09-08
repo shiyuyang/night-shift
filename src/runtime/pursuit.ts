@@ -6,7 +6,7 @@ export function choosePursuitEntry(entries:Position[],player:Position,solids:Box
  const candidates=entries.filter(p=>Math.hypot(p.x-player.x,p.y-player.y)>=180&&!visible(p)&&!solids.some(b=>overlaps(monsterFeetAt(p.x,p.y),b))).map(p=>{
   const route=patrolPath(p,player,solids,bounds,monsterFeetAt);return {position:p,route,seconds:routeLength(p,route)/speed};
  }).filter(p=>p.route.length&&p.route.at(-1)&&Math.hypot(p.route.at(-1)!.x-player.x,p.route.at(-1)!.y-player.y)<35);
- return candidates.sort((a,b)=>Math.abs(a.seconds-5.5)-Math.abs(b.seconds-5.5))[0];
+ return candidates.sort((a,b)=>Math.abs(a.seconds-3.5)-Math.abs(b.seconds-3.5))[0];
 }
 /** Search destinations derive from the last sensed position, not the hidden player's position. */
 export class PursuitSearch {
@@ -31,4 +31,19 @@ export class PursuitSearch {
   if(Math.hypot(position.x-this.points[this.index].x,position.y-this.points[this.index].y)<24)this.index=Math.min(this.points.length-1,this.index+1);
   return this.points[this.index];
  }
+}
+
+/** Choose a side-entry meeting point on the initial escape route, including audible lead-in. */
+export function chooseFinaleEntry(entries:Position[],player:Position,exit:Position,solids:Box[],bounds:Box,speed:number,visible:(p:Position)=>boolean,runnerSpeed=125,warning=3){
+ const escape=patrolPath(player,exit,solids,bounds,monsterFeetAt);let walked=0,previous=player;
+ const meetings:{position:Position;seconds:number}[]=[];
+ for(const [i,p] of escape.entries()){walked+=Math.hypot(p.x-previous.x,p.y-previous.y);previous=p;if(walked>=180&&walked<=850&&i%8===0)meetings.push({position:p,seconds:walked/runnerSpeed});}
+ let best:{position:Position;target:Position;score:number}|undefined;
+ for(const entry of entries){if(Math.hypot(entry.x-player.x,entry.y-player.y)<180||visible(entry)||solids.some(b=>overlaps(monsterFeetAt(entry.x,entry.y),b)))continue;
+  for(const meeting of meetings){const route=patrolPath(entry,meeting.position,solids,bounds,monsterFeetAt),end=route.at(-1);if(!end||Math.hypot(end.x-meeting.position.x,end.y-meeting.position.y)>20)continue;
+   const arrives=warning+routeLength(entry,route)/speed,score=Math.abs(arrives-meeting.seconds)+(arrives>meeting.seconds+1?4:0);
+   if(!best||score<best.score)best={position:entry,target:meeting.position,score};
+  }
+ }
+ return best;
 }

@@ -69,7 +69,7 @@
   "guide.5": "帶十字的矮藥櫃提供補給，高櫃可藏身最多 8 秒。先拉開距離；被怪物看見時不能藏入。",
   "tutorial.exitReturn": "記住了，返回角色",
   "tutorial.exitTitle": "出口就在這裡",
-  "tutorial.exitText": "三枚保險絲已集齊。這扇發綠光的門就是出口。鏡頭返回後開始計算通電的 8 秒；保持移動，通電後到這裡按 E 撤離。",
+  "tutorial.exitText": "三枚保險絲已集齊。這扇發綠光的門就是出口。鏡頭返回後開始計算通電的 {seconds, number} 秒；保持移動，通電後到這裡按 E 撤離。",
   "tutorial.healthTitle": "留意你的生命",
   "tutorial.healthText": "左上方的白色長條是生命值。受傷會縮短，降到 0 就會死亡；受傷後的閃爍只是短暫無敵。負傷後用 Q 繃帶恢復 40 生命。",
   "tutorial.flashlightTitle": "把光留給需要的地方",

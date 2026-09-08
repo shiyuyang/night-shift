@@ -129,7 +129,7 @@
         },
         {
           "type": "sound",
-          "id": "metal",
+          "id": "blood-moon-rise",
           "pan": 0
         },
         {
@@ -711,6 +711,62 @@
       "y": 578,
       "width": 16,
       "height": 16
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 184,
+      "y": 226,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 184,
+      "y": 570,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 480,
+      "y": 234,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 480,
+      "y": 570,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 800,
+      "y": 234,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 800,
+      "y": 570,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 1104,
+      "y": 314,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 1104,
+      "y": 578,
+      "width": 8,
+      "height": 8
     },
     {
       "id": "Key_A",

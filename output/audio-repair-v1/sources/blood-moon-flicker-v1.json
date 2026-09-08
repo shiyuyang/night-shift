@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. A failing emergency floodlight loses power under a blood moon: brief unstable contact buzz, sharp electrical crackle and sudden dead silence. Immediate onset, isolated short effect, no large explosion.",
+  "requestedSeconds": 1.2,
+  "generatedAt": "2026-09-08T16:16:12.403264+00:00"
+}

@@ -69,7 +69,7 @@
   "guide.5": "带十字的矮药柜提供补给，高柜可藏身最多 8 秒。先拉开距离；被怪物看见时不能藏入。",
   "tutorial.exitReturn": "记住了，返回角色",
   "tutorial.exitTitle": "出口就在这里",
-  "tutorial.exitText": "三枚保险丝已集齐。这扇发绿光的门就是出口。镜头返回后开始计算通电的 8 秒；保持移动，通电后到这里按 E 撤离。",
+  "tutorial.exitText": "三枚保险丝已集齐。这扇发绿光的门就是出口。镜头返回后开始计算通电的 {seconds, number} 秒；保持移动，通电后到这里按 E 撤离。",
   "tutorial.healthTitle": "留意你的生命",
   "tutorial.healthText": "左上方的白色长条是生命值。受伤会缩短，降到 0 就会死亡；受伤后的闪烁只是短暂无敌。负伤后用 Q 绷带恢复 40 生命。",
   "tutorial.flashlightTitle": "把光留给需要的地方",

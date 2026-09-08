@@ -87,7 +87,7 @@
   "threat.listener": "The Listener",
   "threat.patroller": "The Patroller",
   "tutorial.exitReturn": "Return to character",
-  "tutorial.exitText": "All three fuses are collected. This green-lit door is your exit. The 8-second power countdown resumes when the camera returns. Keep moving, then come here and press E to escape.",
+  "tutorial.exitText": "All three fuses are collected. This green-lit door is your exit. The {seconds, number}-second power countdown resumes when the camera returns. Keep moving, then come here and press E to escape.",
   "tutorial.exitTitle": "THIS IS THE EXIT",
   "tutorial.flashlightText": "The upper-right flashlight shows battery charge and time, separately from health. Press T or click its icon. Try switching off, then on. Switching off or hiding stops battery drain; use the beam to see ahead.",
   "tutorial.flashlightTitle": "SAVE YOUR LIGHT",

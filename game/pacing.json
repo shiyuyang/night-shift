@@ -7,7 +7,7 @@
   "encounterDuration": 22,
   "durationPerFuse": 3,
   "recoveryInterval": 24,
-  "exitStartup": 8,
+  "exitStartup": 30,
   "contactDamage": 20,
   "staminaDrain": 28,
   "staminaRecovery": 20,

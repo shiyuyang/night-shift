@@ -69,7 +69,7 @@
   "guide.5": "Xəstəlik qutularında təchizatlar var. Uzun dolablar sizi 8 saniyəyə qədər gizlədir. Gizlətməzdən əvvəl xəttin görünməsini dayandırın.",
   "tutorial.exitReturn": "Personaja qayıt",
   "tutorial.exitTitle": "BURA ÇIXIŞDIR",
-  "tutorial.exitText": "Üçüncü sigara toplanıb. Bu yaşıl işıqlı qapı çıxışıdır. Kamera geri qayıtdıqda 8 saniyəlik enerji sayacı yenidən başlayır. Hərəkətə davam edin, sonra buraya gəlin və E düyməsini sıxın ki, qaçış edəsiniz.",
+  "tutorial.exitText": "Üçüncü sigara toplanıb. Bu yaşıl işıqlı qapı çıxışıdır. Kamera geri qayıtdıqda {seconds, number} saniyəlik enerji sayacı yenidən başlayır. Hərəkətə davam edin, sonra buraya gəlin və E düyməsini sıxın ki, qaçış edəsiniz.",
   "tutorial.healthTitle": "SAĞLAMLIGHINIZI QORUYUN",
   "tutorial.healthText": "Yuxarı sol tərəfdəki ağ zolaq sağlamlıqdır. Vurğular onu qısaldır; sıfıra düşdüyünüz zaman ölürsünüz. Vurğudan sonra qısa müddətlik himayə verir. Q düyməsini sıxaraq bandajla 40 sağlamlıq bərpa edin.",
   "tutorial.flashlightTitle": "İŞIĞINIZI QORUYUN",

@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. A locked old hospital door gives way: latch snaps, wood splits, door swings inward and strikes its stop with a heavy bang. Clear mechanical sequence, short echo, no explosions or voice.",
+  "requestedSeconds": 2.5,
+  "generatedAt": "2026-09-08T16:16:18.672600+00:00"
+}

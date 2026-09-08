@@ -8,14 +8,14 @@ export type WeeperEvent='cry'|'warning'|'dash'|'suppressed'|'hit'|'quiet';
 export interface WeeperInput {player:Position;hidden:boolean;angle:number;light:boolean;lightRange?:number;sprinting:boolean;noise:boolean;solids:Box[];architecture:Box[];bounds:Box;immune:boolean;flash?:boolean;}
 /** One deterministic patient. No damage can occur before the flash decision. */
 export class Weeper {
- roaming=false;private roamPoints:Position[];private roamWait=7;private roamIndex=0;private roamGoal?:Position;private roamRoute:Position[]=[];
+ private lungeCommitted=false;roaming=false;private roamPoints:Position[];private roamWait=7;private roamIndex=0;private roamGoal?:Position;private roamRoute:Position[]=[];
  position:Position;home:Position;phase:WeeperPhase='idle';anger=0;clock=0;angle=0;elapsed=0;cryAt=0;grace=1;route:Position[]=[];routeClock=0;watchful=0;hushed=false;noticed=false;noticeTime=0;calmWait=0;
  constructor(home:Position,roamPoints:Position[]=[]){this.roamPoints=roamPoints;this.home={...home};this.position={...home};}
  get dangerous(){return this.phase==='warning'||this.phase==='chasing'||this.phase==='dash'||this.phase==='alert'&&this.anger>=riseThreshold;}
  get awake(){return this.dangerous||this.phase==='returning';}
  flash(player:Position,solids:Box[]):boolean{
   if(Math.hypot(player.x-this.position.x,player.y-this.position.y)>weeperRules.flashRadius||!clearContact({x:player.x,y:player.y+10},{x:this.position.x,y:this.position.y+10},solids))return false;
-  this.phase='stunned';this.clock=weeperRules.flashSeconds;this.anger=0;this.calmWait=0;this.watchful=12;this.hushed=true;this.route=[];return true;
+  this.phase='stunned';this.lungeCommitted=false;this.roamGoal=undefined;this.roamRoute=[];this.clock=weeperRules.flashSeconds;this.anger=0;this.calmWait=0;this.watchful=12;this.hushed=true;this.route=[];return true;
  }
  tick(dt:number,input:WeeperInput):WeeperEvent[]{
   if(dt<=0)return [];
@@ -36,22 +36,22 @@ export class Weeper {
    if(disturbance||this.anger>=riseThreshold){this.calmWait=weeperRules.calmDelay;this.anger=Math.min(1,this.anger+dt/(weeperRules.alertSeconds*(distance>weeperRules.alertRadius&&this.anger<riseThreshold?2:1)));}
    else{const cooling=Math.max(0,dt-this.calmWait);this.calmWait=Math.max(0,this.calmWait-dt);this.anger=Math.max(0,this.anger-cooling*weeperRules.calmRate);}
    this.phase=this.anger>0?'alert':'idle';
-   if((this.noticed||this.anger>=.3)&&!this.hushed){this.hushed=true;events.push('quiet');}
-   if(!this.noticed&&this.anger===0&&this.watchful===0&&this.hushed){this.hushed=false;this.cryAt=this.elapsed+3;}
+   if(this.anger>=.3&&!this.hushed){this.hushed=true;events.push('quiet');}
+   if(this.anger===0&&this.watchful===0&&this.hushed){this.hushed=false;this.cryAt=this.elapsed+3;}
    if(visible&&(this.noticed||this.phase==='alert'))this.angle=Math.atan2(input.player.y-this.position.y,input.player.x-this.position.x);
-   if(close&&distance<weeperRules.touchRadius||this.anger>=1){this.phase='warning';this.clock=weeperRules.warningSeconds;events.push('quiet','warning');}
-   const wasRoaming=this.roaming;this.roaming=false;if(this.phase==='idle'&&!this.noticed)this.roam(dt,input);
-   if(this.roaming&&!wasRoaming)events.push('quiet');
+   if(close&&distance<weeperRules.touchRadius||this.anger>=1){this.phase='warning';this.lungeCommitted=false;this.clock=weeperRules.warningSeconds;events.push('quiet','warning');}
+   const wasRoaming=this.roaming;this.roaming=false;if(this.phase==='idle')this.roam(dt,input);
+
    if(wasRoaming&&!this.roaming)this.cryAt=this.elapsed;
-   if(this.phase!=='warning'&&!this.roaming&&!this.hushed&&distance<290&&this.elapsed>=this.cryAt){this.cryAt=this.elapsed+8.5+Math.floor(this.elapsed)%3;events.push('cry');}
+   if(this.phase!=='warning'&&!this.hushed&&distance<380&&this.elapsed>=this.cryAt){this.cryAt=this.elapsed+8.5+Math.floor(this.elapsed)%3;events.push('cry');}
    return events;
   }
   this.roaming=false;
   if(this.phase==='warning'){
+   if(visible)this.angle=Math.atan2(input.player.y-this.position.y,input.player.x-this.position.x);
    this.clock=Math.max(0,this.clock-dt);
    if(this.clock===0){
-    if(!visible||distance>weeperRules.lungeRadius){this.chase();return ['quiet'];}
-    this.angle=Math.atan2(input.player.y-this.position.y,input.player.x-this.position.x);
+    if(!this.lungeCommitted&&(!visible||distance>weeperRules.lungeRadius)){this.chase();return ['quiet'];}
     this.phase='dash';this.clock=weeperRules.dashSeconds;return ['quiet','dash'];
    }
    return events;
@@ -59,7 +59,7 @@ export class Weeper {
   if(this.phase==='chasing'){
    this.clock=Math.max(0,this.clock-dt);
    if(this.clock>0)return events;
-   if(visible&&distance<=weeperRules.lungeRadius){this.phase='warning';this.clock=weeperRules.warningSeconds;this.angle=Math.atan2(input.player.y-this.position.y,input.player.x-this.position.x);return ['quiet','warning'];}
+   if(visible&&distance<=weeperRules.lungeRadius){this.phase='warning';this.lungeCommitted=true;this.clock=weeperRules.warningSeconds;this.angle=Math.atan2(input.player.y-this.position.y,input.player.x-this.position.x);return ['quiet','warning'];}
    // An awakened patient keeps hunting, including waiting outside a closed door or locker.
    this.routeClock-=dt;
    if(this.routeClock<=0){this.route=patrolPath(this.position,input.player,input.architecture,input.bounds,monsterFeetAt);this.routeClock=.3;}
@@ -105,6 +105,6 @@ export class Weeper {
   if(this.roaming)this.angle=Math.atan2(this.position.y-before.y,this.position.x-before.x);
   if(movement.blocked||Math.hypot(this.position.x-this.roamGoal.x,this.position.y-this.roamGoal.y)<6){this.roamGoal=undefined;this.roamRoute=[];this.roamWait=6+(this.roamIndex%3)*2;this.roaming=false;}
  }
- private chase(pause=0){this.phase='chasing';this.clock=pause;this.route=[];this.routeClock=0;}
+ private chase(pause=0){this.lungeCommitted=false;this.phase='chasing';this.clock=pause;this.route=[];this.routeClock=0;}
  get frame(){if(this.phase==='idle'&&this.roaming)return 8+Math.floor(this.elapsed*4)%4;if(this.phase==='idle')return this.noticed?(this.noticeTime<.2?2:4):Math.floor(this.elapsed*2)%4;if(this.phase==='alert')return this.anger<riseThreshold?(this.noticeTime<.2?2:4):5;if(this.phase==='warning')return this.clock>weeperRules.warningSeconds*.8?5:this.clock>weeperRules.warningSeconds*.35?6:7;if(this.phase==='chasing')return this.clock>0?14:8+Math.floor(this.elapsed*10)%4;if(this.phase==='dash')return 8+Math.floor(this.elapsed*12)%4;if(this.phase==='stunned')return this.clock>4?12:14;return 8+Math.floor(this.elapsed*4)%2;}
 }

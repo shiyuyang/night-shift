@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "music_v1",
+  "prompt": "Original instrumental looping score for a Japanese pixel horror game, abandoned hospital courtyard under a dark blood moon. Distinct from indoor hospital piano music: distant low temple-bell-like metallic resonance, breathy bowed glass, slow irregular sub-bass breathing pulses and thin detuned string clusters drifting over cold wind-like textures. No voices, choir, speech, piano melody, heroic theme, EDM or trailer percussion. Ominous outdoor ritual dread and oppressive stillness. Keep the midrange sparse so a crying patient, footsteps and streamer speech remain clearly audible. Maintain uneasy intensity without loud stingers. Sustained beginning and ending for crossfaded looping, no resolved outro.",
+  "requestedSeconds": 48,
+  "generatedAt": "2026-09-08T16:16:31.957286+00:00"
+}

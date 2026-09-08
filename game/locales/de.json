@@ -69,7 +69,7 @@
   "guide.5": "Kabinette mit Kreuzmarkierung enthalten Vorräte. Hohe Schränke verstecken Sie für bis zu 8 Sekunden. Blickkontakt vor dem Verstecken unterbrechen.",
   "tutorial.exitReturn": "Zurück zum Charakter",
   "tutorial.exitTitle": "DIES IST DER AUSGANG",
-  "tutorial.exitText": "Alle drei Sicherungen wurden gesammelt. Diese grün beleuchtete Tür ist Ihr Ausgang. Die 8-Sekunden-Stromabzählung setzt sich fort, wenn die Kamera zurückkehrt. Weiterbewegen, dann hierher kommen und E drücken, um zu entkommen.",
+  "tutorial.exitText": "Alle drei Sicherungen wurden gesammelt. Diese grün beleuchtete Tür ist Ihr Ausgang. Die {seconds, number}-Sekunden-Stromabzählung setzt sich fort, wenn die Kamera zurückkehrt. Weiterbewegen, dann hierher kommen und E drücken, um zu entkommen.",
   "tutorial.healthTitle": "ACHTEN AUF IHRE GESUNDHEIT",
   "tutorial.healthText": "Die weiße Leiste oben links ist Ihre Gesundheit. Treffer verkürzen sie; bei Null sterben Sie. Blinken nach einem Treffer gewährt kurzzeitigen Schutz. Drücken Sie Q, um mit einem Verband 40 Gesundheit zu heilen.",
   "tutorial.flashlightTitle": "SPAREN SIE IHRES LICHT",

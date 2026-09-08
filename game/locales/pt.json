@@ -69,7 +69,7 @@
   "guide.5": "Armários com marca de cruz contêm suprimentos. Armários altos o escondem por até 8 segundos. Quebre a linha de visão antes de se esconder.",
   "tutorial.exitReturn": "Voltar ao personagem",
   "tutorial.exitTitle": "ISSO É A SAÍDA",
-  "tutorial.exitText": "Todos os três disfarces foram coletados. Esta porta iluminada em verde é sua saída. A contagem regressiva de 8 segundos da energia retoma quando a câmera voltar. Mantenha-se em movimento, depois venha aqui e pressione E para escapar.",
+  "tutorial.exitText": "Todos os três disfarces foram coletados. Esta porta iluminada em verde é sua saída. A contagem regressiva de {seconds, number} segundos da energia retoma quando a câmera voltar. Mantenha-se em movimento, depois venha aqui e pressione E para escapar.",
   "tutorial.healthTitle": "CUIDE DA SUA SAÚDE",
   "tutorial.healthText": "A barra branca no canto superior esquerdo é sua vida. Acertos a diminuem; ao chegar a zero, você morre. Piscar após um acerto concede proteção breve. Pressione Q para curar 40 de vida com uma atadura.",
   "tutorial.flashlightTitle": "PROTEJA SUA LUZ",

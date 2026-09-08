@@ -69,7 +69,7 @@
   "guide.5": "Çarpı işareti olan dolaplar malzemeleri içerir. Yüksek dolaplar 8 saniyeye kadar sizi gizler. Gizlenmeden önce görüş hattını kırın.",
   "tutorial.exitReturn": "Karaktere Dön",
   "tutorial.exitTitle": "BURASI ÇIKIŞ",
-  "tutorial.exitText": "Üç sigorta da toplanmış. Bu yeşil ışıklı kapı çıkışınız. Kamera geri döndüğünde 8 saniyelik elektrik sırası yeniden başlar. Harekete devam edin, sonra buraya gelip E'ye basın ve kaçın.",
+  "tutorial.exitText": "Üç sigorta da toplanmış. Bu yeşil ışıklı kapı çıkışınız. Kamera geri döndüğünde {seconds, number} saniyelik elektrik sırası yeniden başlar. Harekete devam edin, sonra buraya gelip E'ye basın ve kaçın.",
   "tutorial.healthTitle": "CANINIZA DİKKAT",
   "tutorial.healthText": "Üst soldaki beyaz çubuk sağlığınızı gösterir. Vurulmak onu kısaltır; sıfıra düşerseniz ölürsünüz. Bir vuruştan sonra yanıp sönmek kısa süreli koruma sağlar. Bandajla Q'ya basarak 40 sağlık iyileştirin.",
   "tutorial.flashlightTitle": "IŞIĞINIZI KURTARIN",

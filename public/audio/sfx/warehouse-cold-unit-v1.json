@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Original isolated foley for an abandoned Japanese hospital pixel horror game at night. No music, words, speech or monster vocals. An old medicine refrigerator compressor clicks on, shudders irregularly, hums briefly then abruptly fails and stops. Close mechanical foley, eerie sudden stillness, no alarm.",
+  "requestedSeconds": 5,
+  "generatedAt": "2026-09-08T16:26:52.744981+00:00"
+}

@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. One damaged iron wind chime in a deserted hospital garden strikes twice irregularly, brittle dissonant metallic vibration, open-air night decay. Sparse, cold, not a musical phrase.",
+  "requestedSeconds": 3.5,
+  "generatedAt": "2026-09-08T16:16:05.678659+00:00"
+}

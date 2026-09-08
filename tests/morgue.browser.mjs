@@ -30,16 +30,10 @@ try{
    await goTo(page,l.boxes[0].x,l.boxes[0].y,35);await use();assert.equal((await snapshot(page)).opened[0],true);
    await page.screenshot({path:`${output}/${name}-search.png`});
    await goTo(page,l.boxes[1].x,l.boxes[1].y,35);await use();assert.equal((await snapshot(page)).opened[1],true);
-   // Cross the added southern area, then enter the east lock room through its door.
-   await goTo(page,490,490,12);await goTo(page,490,210,12);await page.waitForFunction(()=>window.__nightshift().morgueDrawer.phase==='open');
-   const drawer=await snapshot(page);assert.ok(drawer.solids.some(b=>b.x===drawer.morgueDrawer.area.x&&b.y===drawer.morgueDrawer.area.y));
-   await page.screenshot({path:`${output}/drawer-open.png`});await goTo(page,800,210,12);assert.equal((await snapshot(page)).morgueDrawer.phase,'open');
-   await goTo(page,700,680,12);assert.ok((await snapshot(page)).camera.y>200);
-   await page.screenshot({path:`${output}/${name}-south.png`});
    await goTo(page,l.doorUse.x,l.doorUse.y,8);await use();assert.equal((await snapshot(page)).door,true);
    assert.ok((await snapshot(page)).camera.x>500);
    await goTo(page,l.boxes[2].x,l.boxes[2].y,35);await use();assert.equal((await snapshot(page)).opened[2],true);
-   const escapeStart=await snapshot(page);await page.screenshot({path:`${output}/${name}-final-box.png`});
+   await goTo(page,1116,490,15);await page.waitForFunction(()=>window.__nightshift().morgueDrawer.phase==='open');const escapeStart=await snapshot(page);await page.screenshot({path:`${output}/${name}-final-box.png`});
    await goTo(page,l.exit.x,l.exit.y,20);await page.waitForFunction(()=>window.__nightshift().exitStartup===0);await use();
    await page.locator('#result-screen').waitFor({state:'visible'});assert.equal(await page.locator('#result-screen').getAttribute('data-outcome'),'won');
    const end=await snapshot(page);assert.ok(end.health>0);assert.deepEqual(errors,[]);

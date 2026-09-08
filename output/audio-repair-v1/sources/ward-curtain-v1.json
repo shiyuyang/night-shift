@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Original isolated foley for an abandoned Japanese hospital pixel horror game at night. No music, words, speech or monster vocals. A fabric privacy curtain slowly slides on old metal rings across a short rail, soft cloth brushing, one final ring abruptly catches. Close intimate ward foley, no footsteps.",
+  "requestedSeconds": 2.5,
+  "generatedAt": "2026-09-08T16:26:40.372137+00:00"
+}

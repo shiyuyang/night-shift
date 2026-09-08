@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. A single surgical steel instrument shifts and falls into a stainless tray, bright thin metallic ring with dark operating-room decay. Start with tiny scrape then an abrupt sharp clink. Not many objects crashing.",
+  "requestedSeconds": 2.5,
+  "generatedAt": "2026-09-08T16:15:48.705694+00:00"
+}

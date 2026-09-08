@@ -69,7 +69,7 @@
   "guide.5": "Kabinets met kruis bevatten voorraden. Hoog kasten verbergen je tot 8 seconden. Brek de zichtlijn voordat je je verbergt.",
   "tutorial.exitReturn": "Terug naar personage",
   "tutorial.exitTitle": "DIT IS DE UITGAANG",
-  "tutorial.exitText": "Alle drie zekeringen zijn verzameld. Deze groen verlichte deur is je uitgang. De 8-seconden stroomtelling hervat zich wanneer de camera terugkeert. Blijf bewegen, kom hier en druk op E om te ontsnappen.",
+  "tutorial.exitText": "Alle drie zekeringen zijn verzameld. Deze groen verlichte deur is je uitgang. De {seconds, number}-seconden stroomtelling hervat zich wanneer de camera terugkeert. Blijf bewegen, kom hier en druk op E om te ontsnappen.",
   "tutorial.healthTitle": "HOUD OP LETTEN OP JE GEZONDHEID",
   "tutorial.healthText": "De witte balk linksboven is je gezondheid. Trefferen verkorten deze; op nul ben je dood. Knipperen na een treffer geeft tijdelijke bescherming. Druk op Q om 40 gezondheid te herstellen met een verband.",
   "tutorial.flashlightTitle": "BEWAAR JE LICHT",

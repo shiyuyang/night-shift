@@ -142,5 +142,173 @@
     "duration": 1.5,
     "prompt": "A distressed adult hospital patient recoils from a bright flash, a brief shocked cry followed by hands covering face and knees collapsing onto linoleum. Natural breath and gown foley, no words, no music.",
     "opusFile": "/audio/sfx/patient-stunned-v1.opus"
+  },
+  {
+    "id": "outpatient-speaker",
+    "duration": 4,
+    "gain": 0.4,
+    "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. Empty outpatient reception: a broken wall intercom relay opens with a dry click, faint breath-like electrical interference swells from the metal speaker, then cuts abruptly. Unintelligible non-vocal texture, cold tiled room echo. No announcement or voice.",
+    "file": "/audio/sfx/outpatient-speaker-v1.mp3",
+    "opusFile": "/audio/sfx/outpatient-speaker-v1.opus"
+  },
+  {
+    "id": "outpatient-wheel",
+    "duration": 3,
+    "gain": 0.42,
+    "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. An unattended hospital wheelchair rolls a short distance on linoleum. One uneven squeaking caster, soft rubber friction, sudden stop. Hollow empty waiting room reflections, ominous and close.",
+    "file": "/audio/sfx/outpatient-wheel-v1.mp3",
+    "opusFile": "/audio/sfx/outpatient-wheel-v1.opus"
+  },
+  {
+    "id": "surgery-tray",
+    "duration": 2.5,
+    "gain": 0.46,
+    "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. A single surgical steel instrument shifts and falls into a stainless tray, bright thin metallic ring with dark operating-room decay. Start with tiny scrape then an abrupt sharp clink. Not many objects crashing.",
+    "file": "/audio/sfx/surgery-tray-v1.mp3",
+    "opusFile": "/audio/sfx/surgery-tray-v1.opus"
+  },
+  {
+    "id": "surgery-suction",
+    "duration": 5,
+    "gain": 0.38,
+    "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. Old surgical suction equipment starts by itself, irregular wet air draw behind a wall, failing motor cough, abrupt shutdown. Mechanical and disturbing, no gore sounds or human voice.",
+    "file": "/audio/sfx/surgery-suction-v1.mp3",
+    "opusFile": "/audio/sfx/surgery-suction-v1.opus"
+  },
+  {
+    "id": "morgue-knock",
+    "duration": 3,
+    "gain": 0.62,
+    "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. Three irregular knocks from inside a sealed refrigerated mortuary drawer. Dull muffled impacts inside heavy metal, first knock immediate, second after a pause, third nearer and harder, short cold reverberation. No voice.",
+    "file": "/audio/sfx/morgue-knock-v1.mp3",
+    "opusFile": "/audio/sfx/morgue-knock-v1.opus"
+  },
+  {
+    "id": "morgue-slide",
+    "duration": 2,
+    "gain": 0.62,
+    "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. Heavy mortuary body drawer slides out on rusty telescoping steel rails, a resistant seal releases, metal friction builds, tray reaches its stop with a heavy clunk. One continuous outward movement, cold room echo.",
+    "file": "/audio/sfx/morgue-slide-v1.mp3",
+    "opusFile": "/audio/sfx/morgue-slide-v1.opus"
+  },
+  {
+    "id": "garden-wind",
+    "duration": 6,
+    "gain": 0.34,
+    "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. Night wind passes through pine branches in a deserted hospital courtyard. Restrained hollow gust, dry needles brushing stone, broad open-air space with distant building reflections, subtle eerie whistling without any voice.",
+    "file": "/audio/sfx/garden-wind-v1.mp3",
+    "opusFile": "/audio/sfx/garden-wind-v1.opus"
+  },
+  {
+    "id": "garden-chime",
+    "duration": 3.5,
+    "gain": 0.38,
+    "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. One damaged iron wind chime in a deserted hospital garden strikes twice irregularly, brittle dissonant metallic vibration, open-air night decay. Sparse, cold, not a musical phrase.",
+    "file": "/audio/sfx/garden-chime-v1.mp3",
+    "opusFile": "/audio/sfx/garden-chime-v1.opus"
+  },
+  {
+    "id": "blood-moon-rise",
+    "duration": 5,
+    "gain": 0.55,
+    "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. Supernatural blood moon reveal in a deserted hospital courtyard. A low pressure swell, thin bent-metal harmonic tearing above it, wind sucked away into unnatural stillness. Dark visceral dread, restrained peak, no explosive boom, no melody.",
+    "file": "/audio/sfx/blood-moon-rise-v1.mp3",
+    "opusFile": "/audio/sfx/blood-moon-rise-v1.opus"
+  },
+  {
+    "id": "blood-moon-flicker",
+    "duration": 1.2,
+    "gain": 0.42,
+    "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. A failing emergency floodlight loses power under a blood moon: brief unstable contact buzz, sharp electrical crackle and sudden dead silence. Immediate onset, isolated short effect, no large explosion.",
+    "file": "/audio/sfx/blood-moon-flicker-v1.mp3",
+    "opusFile": "/audio/sfx/blood-moon-flicker-v1.opus"
+  },
+  {
+    "id": "door-batter",
+    "duration": 1,
+    "gain": 0.58,
+    "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. One forceful body impact on a locked wooden hospital door. Heavy low thump, loose handle rattles, wood creaks under strain. Immediate onset with short enclosed corridor echo. Single impact only.",
+    "file": "/audio/sfx/door-batter-v1.mp3",
+    "opusFile": "/audio/sfx/door-batter-v1.opus"
+  },
+  {
+    "id": "door-breach",
+    "duration": 2.5,
+    "gain": 0.68,
+    "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. A locked old hospital door gives way: latch snaps, wood splits, door swings inward and strikes its stop with a heavy bang. Clear mechanical sequence, short echo, no explosions or voice.",
+    "file": "/audio/sfx/door-breach-v1.mp3",
+    "opusFile": "/audio/sfx/door-breach-v1.opus"
+  },
+  {
+    "id": "ward-bed-call",
+    "duration": 3,
+    "gain": 0.4,
+    "prompt": "Original isolated foley for an abandoned Japanese hospital pixel horror game at night. No music, words, speech or monster vocals. An old bedside nurse-call buzzer rings two short uneven bursts separated by silence. Thin mechanical electrical bell, hollow empty ward reflections, no modern musical notification.",
+    "file": "/audio/sfx/ward-bed-call-v1.mp3",
+    "opusFile": "/audio/sfx/ward-bed-call-v1.opus"
+  },
+  {
+    "id": "ward-curtain",
+    "duration": 2.5,
+    "gain": 0.38,
+    "prompt": "Original isolated foley for an abandoned Japanese hospital pixel horror game at night. No music, words, speech or monster vocals. A fabric privacy curtain slowly slides on old metal rings across a short rail, soft cloth brushing, one final ring abruptly catches. Close intimate ward foley, no footsteps.",
+    "file": "/audio/sfx/ward-curtain-v1.mp3",
+    "opusFile": "/audio/sfx/ward-curtain-v1.opus"
+  },
+  {
+    "id": "ward-bedframe",
+    "duration": 2,
+    "gain": 0.42,
+    "prompt": "Original isolated foley for an abandoned Japanese hospital pixel horror game at night. No music, words, speech or monster vocals. An unoccupied hospital bed slowly takes an invisible weight: low mattress spring creak followed by one restrained metal side-rail click. Sparse cold room echo, no voice.",
+    "file": "/audio/sfx/ward-bedframe-v1.mp3",
+    "opusFile": "/audio/sfx/ward-bedframe-v1.opus"
+  },
+  {
+    "id": "warehouse-vials",
+    "duration": 2.5,
+    "gain": 0.38,
+    "prompt": "Original isolated foley for an abandoned Japanese hospital pixel horror game at night. No music, words, speech or monster vocals. A few small glass medicine vials lightly tap each other in sequence on a dusty shelf, one rolls a short distance and stops. Dry close fragile glass, no breaking or loud crash.",
+    "file": "/audio/sfx/warehouse-vials-v1.mp3",
+    "opusFile": "/audio/sfx/warehouse-vials-v1.opus"
+  },
+  {
+    "id": "warehouse-rack",
+    "duration": 3,
+    "gain": 0.42,
+    "prompt": "Original isolated foley for an abandoned Japanese hospital pixel horror game at night. No music, words, speech or monster vocals. Tall old medicine storage shelving slowly flexes under load, a low rusty frame creak followed by one small shelf tap. Enclosed dry warehouse acoustics, no footsteps.",
+    "file": "/audio/sfx/warehouse-rack-v1.mp3",
+    "opusFile": "/audio/sfx/warehouse-rack-v1.opus"
+  },
+  {
+    "id": "warehouse-cold-unit",
+    "duration": 5,
+    "gain": 0.36,
+    "prompt": "Original isolated foley for an abandoned Japanese hospital pixel horror game at night. No music, words, speech or monster vocals. An old medicine refrigerator compressor clicks on, shudders irregularly, hums briefly then abruptly fails and stops. Close mechanical foley, eerie sudden stillness, no alarm.",
+    "file": "/audio/sfx/warehouse-cold-unit-v1.mp3",
+    "opusFile": "/audio/sfx/warehouse-cold-unit-v1.opus"
+  },
+  {
+    "id": "plant-coastdown",
+    "duration": 6,
+    "gain": 0.38,
+    "prompt": "Original isolated foley for an abandoned Japanese hospital pixel horror game at night. No music, words, speech or monster vocals. A heavy hospital basement generator loses power. Flywheel and worn bearings slowly coast down from steady rotation to a dead stop over six seconds. Deep mechanical inertia, restrained low rumble, no explosion or music.",
+    "file": "/audio/sfx/plant-coastdown-v1.mp3",
+    "opusFile": "/audio/sfx/plant-coastdown-v1.opus"
+  },
+  {
+    "id": "plant-pipe-knock",
+    "duration": 3,
+    "gain": 0.44,
+    "prompt": "Original isolated foley for an abandoned Japanese hospital pixel horror game at night. No music, words, speech or monster vocals. Three low dull pressure knocks travel along an old hospital basement pipe from far to near, resonant metal tube body, irregular spacing, a clear final knock with short enclosed echo. No voice or footsteps.",
+    "file": "/audio/sfx/plant-pipe-knock-v1.mp3",
+    "opusFile": "/audio/sfx/plant-pipe-knock-v1.opus"
+  },
+  {
+    "id": "plant-breaker-arc",
+    "duration": 1.2,
+    "gain": 0.48,
+    "prompt": "Original isolated foley for an abandoned Japanese hospital pixel horror game at night. No music, words, speech or monster vocals. An old industrial hospital circuit breaker snaps open, rapid contact chatter and a tiny electrical arc fizz then dead silence. Short isolated dry mechanical sound, no explosion.",
+    "file": "/audio/sfx/plant-breaker-arc-v1.mp3",
+    "opusFile": "/audio/sfx/plant-breaker-arc-v1.opus"
   }
 ]

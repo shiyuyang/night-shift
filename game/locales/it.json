@@ -69,7 +69,7 @@
   "guide.5": "Gli armadi contrassegnati con una X contengono forniture. Gli armadietti alti ti nascondono per fino a 8 secondi. Rompi la linea di vista prima di nasconderti.",
   "tutorial.exitReturn": "Torna al personaggio",
   "tutorial.exitTitle": "QUESTA È L'USCITA",
-  "tutorial.exitText": "Tutte e tre le fusibili sono state raccolte. Questa porta illuminata di verde è la tua uscita. Il conto alla rovescia dell'alimentazione da 8 secondi riprende quando la telecamera torna. Continua a muoverti, poi vieni qui e premi E per scappare.",
+  "tutorial.exitText": "Tutte e tre le fusibili sono state raccolte. Questa porta illuminata di verde è la tua uscita. Il conto alla rovescia dell'alimentazione da {seconds, number} secondi riprende quando la telecamera torna. Continua a muoverti, poi vieni qui e premi E per scappare.",
   "tutorial.healthTitle": "STAI ATTENTO ALLA TUA SALUTE",
   "tutorial.healthText": "La barra bianca in alto a sinistra è la tua salute. I colpi la riducono; a zero, muori. Lampeggiare dopo un colpo dà una breve protezione. Premi Q per curarti di 40 punti salute con una garza.",
   "tutorial.flashlightTitle": "SALVA LA TUA LUCE",

@@ -19,11 +19,6 @@
           "strength": 0.75
         },
         {
-          "type": "sound",
-          "id": "metal",
-          "pan": 0.6
-        },
-        {
           "type": "message",
           "text": "event.ward"
         },
@@ -32,18 +27,8 @@
           "seconds": 0.8
         },
         {
-          "type": "sound",
-          "id": "step",
-          "pan": -0.8
-        },
-        {
           "type": "wait",
           "seconds": 0.65
-        },
-        {
-          "type": "sound",
-          "id": "step",
-          "pan": 0.7
         },
         {
           "type": "wait",
@@ -604,6 +589,62 @@
     },
     {
       "id": "MonsterEntry",
+      "x": 1100,
+      "y": 574,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 180,
+      "y": 230,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 180,
+      "y": 574,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 476,
+      "y": 230,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 476,
+      "y": 606,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 796,
+      "y": 230,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 796,
+      "y": 574,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 1100,
+      "y": 366,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
       "x": 1100,
       "y": 574,
       "width": 8,

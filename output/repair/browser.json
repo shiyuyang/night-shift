@@ -1,0 +1,37 @@
+[
+  {
+    "round": 2,
+    "seed": 895950400,
+    "initialPatient": {
+      "id": "WeeperFixed",
+      "x": 910,
+      "y": 216,
+      "width": 8,
+      "height": 8
+    },
+    "countdown": 29.763340000000007,
+    "drawer": {
+      "phase": "idle",
+      "progress": 0
+    },
+    "assistance": "sanctuary every second; no teleports, forced spawn, inventory or unlock edits",
+    "errors": []
+  },
+  {
+    "round": 6,
+    "seed": 895950400,
+    "countdown": 29.75668,
+    "drawer": {
+      "phase": "open",
+      "progress": 1,
+      "area": {
+        "x": 1030,
+        "y": 448,
+        "width": 50,
+        "height": 108
+      }
+    },
+    "assistance": "sanctuary every second; no teleports, forced spawn, inventory or unlock edits",
+    "errors": []
+  }
+]

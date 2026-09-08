@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Original isolated foley for an abandoned Japanese hospital pixel horror game at night. No music, words, speech or monster vocals. A heavy hospital basement generator loses power. Flywheel and worn bearings slowly coast down from steady rotation to a dead stop over six seconds. Deep mechanical inertia, restrained low rumble, no explosion or music.",
+  "requestedSeconds": 6,
+  "generatedAt": "2026-09-08T16:26:55.897287+00:00"
+}

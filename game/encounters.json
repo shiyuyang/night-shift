@@ -4,7 +4,7 @@
   "patrolSight": 240,
   "patrolSearchSeconds": 5,
   "weeper": {
-    "firstRound": 3,
+    "firstRound": 2,
     "chance": 0.85,
     "alertRadius": 110,
     "touchRadius": 32,
@@ -13,7 +13,7 @@
     "calmRate": 0.25,
     "warningSeconds": 0.8,
     "chaseSpeed": 145,
-    "lungeRadius": 110,
+    "lungeRadius": 70,
     "dashSpeed": 220,
     "dashSeconds": 0.9,
     "flashSeconds": 6,

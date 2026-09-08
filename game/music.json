@@ -38,13 +38,13 @@
   },
   {
     "id": "power",
-    "file": "/audio/power-theme-v1.mp3",
+    "duration": 30,
+    "mixGain": 0.9057,
+    "prompt": "Original instrumental thirty-second emergency power startup horror cue in an abandoned Japanese hospital at night. First ten seconds: irregular low relay-like percussion and tense transformer drone. Middle ten seconds: tighten rhythm, add restrained dissonant bowed metal and low strings. Last ten seconds: increasingly urgent heartbeat-like pulse and narrowing metallic tension, strongest pressure in the final five seconds. No voice, choir, speech, bright tune, EDM, heroic resolution or huge volume jump. Clear space for pursuit footsteps, door impacts and a shrieking patient; tension grows through rhythm and texture rather than loudness. End sharply at exactly thirty seconds.",
+    "file": "/audio/power-30-v1.mp3",
+    "opusFile": "/audio/power-30-v1.opus",
     "theme": -1,
-    "duration": 8,
-    "prompt": "Instrumental understated survival horror game score. No vocals, speech, bright melody, EDM or cinematic trailer drums. Leave space for footsteps and streamer speech. Exactly eight seconds of emergency power startup tension. Begin with low throbbing electrical suspense. Gradually tighten dissonant strings and accelerating muted mechanical pulses. Final three seconds intensely claustrophobic rising pressure. Abrupt clean cutoff at eight seconds, no resolution or trailing outro. No huge volume jumps.",
-    "opusFile": "/audio/power-theme-v1.opus",
-    "measuredLufs": -21.85,
-    "mixGain": 1.0411
+    "measuredLufs": -20.64
   },
   {
     "id": "menu",
@@ -85,5 +85,15 @@
     "opusFile": "/audio/plant-alt-theme-v1.opus",
     "mixGain": 1.2445,
     "measuredLufs": -23.4
+  },
+  {
+    "id": "garden-blood-moon",
+    "duration": 48,
+    "mixGain": 0.975,
+    "prompt": "Original instrumental looping score for a Japanese pixel horror game, abandoned hospital courtyard under a dark blood moon. Distinct from indoor hospital piano music: distant low temple-bell-like metallic resonance, breathy bowed glass, slow irregular sub-bass breathing pulses and thin detuned string clusters drifting over cold wind-like textures. No voices, choir, speech, piano melody, heroic theme, EDM or trailer percussion. Ominous outdoor ritual dread and oppressive stillness. Keep the midrange sparse so a crying patient, footsteps and streamer speech remain clearly audible. Maintain uneasy intensity without loud stingers. Sustained beginning and ending for crossfaded looping, no resolved outro.",
+    "file": "/audio/garden-blood-moon-v1.mp3",
+    "opusFile": "/audio/garden-blood-moon-v1.opus",
+    "theme": -3,
+    "measuredLufs": -21.28
   }
 ]

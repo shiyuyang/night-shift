@@ -69,7 +69,7 @@
   "guide.5": "Kereszttel jelölt szekrények tartalmazzák az ellátásokat. Magas fiókok 8 másodpercig rejtenek el. Rejtőzést előtt vonja meg a látószöget.",
   "tutorial.exitReturn": "Vissza a karakterhez",
   "tutorial.exitTitle": "EZEK AZ KILÉP",
-  "tutorial.exitText": "Az összes három biztoséka összegyűjtve. Ez a zöld fényű ajtó a kilépés. A 8 másodperces áramszámlálás akkor folytatódik, amikor a kamera visszatér. Maradjon mozgásban, majd jöjjön ide és nyomja meg E-t a meneküléshez.",
+  "tutorial.exitText": "Az összes három biztoséka összegyűjtve. Ez a zöld fényű ajtó a kilépés. A {seconds, number} másodperces áramszámlálás akkor folytatódik, amikor a kamera visszatér. Maradjon mozgásban, majd jöjjön ide és nyomja meg E-t a meneküléshez.",
   "tutorial.healthTitle": "FIGYELJE AZ EGÉSZSÉGÉT",
   "tutorial.healthText": "A felső bal oldali fehér sáv az életedet jelöli. A találkák lerövidítik; ha nulla, meghalsz. Egy talál után villogva rövid ideig védve vagy. Nyomj Q-t, hogy 40 életpontot gyógyíts egy kötszerrel.",
   "tutorial.flashlightTitle": "MÉRD MEG A FENYVET",

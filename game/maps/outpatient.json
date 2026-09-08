@@ -19,12 +19,6 @@
           "strength": 0.08
         },
         {
-          "type": "sound",
-          "id": "call-bell",
-          "pan": -0.65,
-          "source": "LampSouth"
-        },
-        {
           "type": "wait",
           "seconds": 1.8
         },
@@ -573,6 +567,62 @@
       "y": 590,
       "width": 16,
       "height": 16
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 176,
+      "y": 214,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 176,
+      "y": 590,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 480,
+      "y": 214,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 480,
+      "y": 574,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 800,
+      "y": 214,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 800,
+      "y": 558,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 1104,
+      "y": 358,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 1104,
+      "y": 590,
+      "width": 8,
+      "height": 8
     },
     {
       "id": "Key_A",

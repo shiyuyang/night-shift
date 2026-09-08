@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. Heavy mortuary body drawer slides out on rusty telescoping steel rails, a resistant seal releases, metal friction builds, tray reaches its stop with a heavy clunk. One continuous outward movement, cold room echo.",
+  "requestedSeconds": 2,
+  "generatedAt": "2026-09-08T16:15:58.133985+00:00"
+}

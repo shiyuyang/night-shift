@@ -69,7 +69,7 @@
   "guide.5": "Lemari bertanda silang berisi persediaan. Lemari tinggi menyembunyikan Anda hingga 8 detik. Putus garis pandang sebelum bersembunyi.",
   "tutorial.exitReturn": "Kembali ke karakter",
   "tutorial.exitTitle": "INI ADALAH KELUAR",
-  "tutorial.exitText": "Ketiga fuse telah dikumpulkan. Pintu bercahaya hijau ini adalah jalan keluar Anda. Hitung mundur daya 8 detik dimulai kembali saat kamera kembali. Tetap bergerak, lalu datang ke sini dan tekan E untuk melarikan diri.",
+  "tutorial.exitText": "Ketiga fuse telah dikumpulkan. Pintu bercahaya hijau ini adalah jalan keluar Anda. Hitung mundur daya {seconds, number} detik dimulai kembali saat kamera kembali. Tetap bergerak, lalu datang ke sini dan tekan E untuk melarikan diri.",
   "tutorial.healthTitle": "WASPADAI KESEHATAN ANDA",
   "tutorial.healthText": "Bilah putih di kiri atas adalah kesehatan Anda. Dampak memperpendeknya; pada nol, Anda mati. Berkedip setelah dampak memberikan perlindungan singkat. Tekan Q untuk menyembuhkan 40 kesehatan dengan perban.",
   "tutorial.flashlightTitle": "SELAMATKAN CAHAYA ANDA",

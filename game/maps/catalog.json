@@ -20,11 +20,6 @@
             "strength": 0.75
           },
           {
-            "type": "sound",
-            "id": "metal",
-            "pan": 0.6
-          },
-          {
             "type": "message",
             "text": "event.ward"
           },
@@ -33,18 +28,8 @@
             "seconds": 0.8
           },
           {
-            "type": "sound",
-            "id": "step",
-            "pan": -0.8
-          },
-          {
             "type": "wait",
             "seconds": 0.65
-          },
-          {
-            "type": "sound",
-            "id": "step",
-            "pan": 0.7
           },
           {
             "type": "wait",
@@ -611,6 +596,62 @@
         "height": 8
       },
       {
+        "id": "WeeperSpawn",
+        "x": 180,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 180,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 476,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 476,
+        "y": 606,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 796,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 796,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 1100,
+        "y": 366,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 1100,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
         "id": "Key_A",
         "x": 300,
         "y": 620,
@@ -687,12 +728,6 @@
             "type": "light",
             "target": "LampCenter",
             "strength": 0.08
-          },
-          {
-            "type": "sound",
-            "id": "metal",
-            "pan": -0.65,
-            "source": "LampWest"
           },
           {
             "type": "message",
@@ -1242,6 +1277,69 @@
         "height": 8
       },
       {
+        "id": "WeeperFixed",
+        "x": 910,
+        "y": 216,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 176,
+        "y": 246,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 176,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 488,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 488,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 800,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 800,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 1104,
+        "y": 318,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 1104,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
         "id": "Key_A",
         "x": 225,
         "y": 245,
@@ -1318,12 +1416,6 @@
             "type": "light",
             "target": "LampCenter",
             "strength": 0.08
-          },
-          {
-            "type": "sound",
-            "id": "call-bell",
-            "pan": -0.65,
-            "source": "LampSouth"
           },
           {
             "type": "message",
@@ -1852,6 +1944,62 @@
         "height": 8
       },
       {
+        "id": "WeeperSpawn",
+        "x": 176,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 176,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 480,
+        "y": 214,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 480,
+        "y": 582,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 800,
+        "y": 214,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 800,
+        "y": 582,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 1104,
+        "y": 326,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 1096,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
         "id": "Key_A",
         "x": 215,
         "y": 230,
@@ -1928,12 +2076,6 @@
             "type": "light",
             "target": "LampCenter",
             "strength": 0.08
-          },
-          {
-            "type": "sound",
-            "id": "call-bell",
-            "pan": -0.65,
-            "source": "LampSouth"
           },
           {
             "type": "wait",
@@ -2486,6 +2628,62 @@
         "height": 16
       },
       {
+        "id": "WeeperSpawn",
+        "x": 176,
+        "y": 214,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 176,
+        "y": 590,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 480,
+        "y": 214,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 480,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 800,
+        "y": 214,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 800,
+        "y": 558,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 1104,
+        "y": 358,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 1104,
+        "y": 590,
+        "width": 8,
+        "height": 8
+      },
+      {
         "id": "Key_A",
         "x": 250,
         "y": 610,
@@ -2562,12 +2760,6 @@
             "type": "light",
             "target": "LampCenter",
             "strength": 0.08
-          },
-          {
-            "type": "sound",
-            "id": "call-bell",
-            "pan": -0.65,
-            "source": "LampSouth"
           },
           {
             "type": "wait",
@@ -3106,6 +3298,62 @@
         "height": 16
       },
       {
+        "id": "WeeperSpawn",
+        "x": 176,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 176,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 480,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 480,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 800,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 800,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 1104,
+        "y": 342,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 1112,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
         "id": "Key_A",
         "x": 220,
         "y": 230,
@@ -3182,12 +3430,6 @@
             "type": "light",
             "target": "LampCenter",
             "strength": 0.08
-          },
-          {
-            "type": "sound",
-            "id": "call-bell",
-            "pan": -0.65,
-            "source": "LampSouth"
           },
           {
             "type": "wait",
@@ -3442,7 +3684,7 @@
         "id": "Wall",
         "x": 968,
         "y": 556,
-        "width": 276,
+        "width": 152,
         "height": 16
       },
       {
@@ -3489,10 +3731,10 @@
       },
       {
         "id": "MorgueDrawerZone",
-        "x": 695,
-        "y": 164,
+        "x": 1030,
+        "y": 448,
         "width": 50,
-        "height": 100
+        "height": 108
       },
       {
         "id": "MorgueWarningZone",
@@ -3754,6 +3996,69 @@
         "height": 16
       },
       {
+        "id": "WeeperSpawn",
+        "x": 176,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 176,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 480,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 480,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 800,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 800,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 984,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 1104,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "Wall",
+        "x": 1180,
+        "y": 556,
+        "width": 64,
+        "height": 16
+      },
+      {
         "id": "Key_A",
         "x": 240,
         "y": 350,
@@ -3942,7 +4247,7 @@
           },
           {
             "type": "sound",
-            "id": "metal",
+            "id": "blood-moon-rise",
             "pan": 0
           },
           {
@@ -4524,6 +4829,62 @@
         "y": 578,
         "width": 16,
         "height": 16
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 184,
+        "y": 226,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 184,
+        "y": 570,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 480,
+        "y": 234,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 480,
+        "y": 570,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 800,
+        "y": 234,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 800,
+        "y": 570,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 1104,
+        "y": 314,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 1104,
+        "y": 578,
+        "width": 8,
+        "height": 8
       },
       {
         "id": "Key_A",

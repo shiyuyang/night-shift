@@ -1243,6 +1243,33 @@
         "showName": true,
         "tags": [],
         "tileOpacity": 1
+      },
+      {
+        "color": "#975352",
+        "height": 16,
+        "identifier": "WeeperFixed",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 201,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
       }
     ],
     "enums": [],
@@ -2910,6 +2937,204 @@
                 574
               ],
               "width": 8
+            },
+            {
+              "__grid": [
+                56,
+                13
+              ],
+              "__identifier": "WeeperFixed",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 201,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "c2d3294b-7e3d-434e-a948-36db8ec73c33",
+              "px": [
+                910,
+                216
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                176,
+                246
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "5041fa38-d1c0-4dbe-a5cd-141f3c9dbf65",
+              "px": [
+                176,
+                246
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                176,
+                574
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "3f014e56-b91d-4801-878e-fb3d89a10e4c",
+              "px": [
+                176,
+                574
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                488,
+                230
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "22ee943c-cbb7-411e-a02f-976eb9f688da",
+              "px": [
+                488,
+                230
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                488,
+                574
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "8a89bea9-ecc5-4ef7-8795-4d0957b3dce4",
+              "px": [
+                488,
+                574
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                800,
+                230
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "8d386890-3742-4400-96a8-ee26cdaf8144",
+              "px": [
+                800,
+                230
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                800,
+                574
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "0450319b-1857-4fd6-858f-3b67a7fbb05e",
+              "px": [
+                800,
+                574
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                1104,
+                318
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "eacb15e1-fd92-40e5-b649-fa006d08c5ab",
+              "px": [
+                1104,
+                318
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                1104,
+                574
+              ],
+              "__identifier": "WeeperSpawn",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 26,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "04e816ad-6c8a-4125-b433-b8c7a5a53a5f",
+              "px": [
+                1104,
+                574
+              ],
+              "width": 8
             }
           ],
           "gridTiles": [],
@@ -3168,7 +3393,7 @@
   "imageExportMode": "None",
   "levelNamePattern": "Level_%idx",
   "minifyJson": false,
-  "nextUid": 201,
+  "nextUid": 202,
   "simplifiedExport": false,
   "defaultLevelWidth": 1280,
   "defaultLevelHeight": 768,

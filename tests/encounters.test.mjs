@@ -44,7 +44,7 @@ test('standing commits the patient to hunting despite darkness, retreat, hiding 
   for(let i=0;i<40&&!['dash','chasing'].includes(w.phase);i++)events.push(...w.tick(.05,after));
   assert.ok(['dash','chasing'].includes(w.phase));assert.equal(w.dangerous,true);assert.equal(events.filter(e=>e==='warning').length,1);
   if(changes.hidden||changes.solids||changes.player)assert.equal(w.phase,'chasing');
-  else assert.equal(w.phase,'dash');
+  else assert.equal(w.phase,'chasing');
  }
 });
 test('flash interrupts both committed rising and warning before a lunge can start',()=>{
@@ -65,7 +65,7 @@ test('flash requires distance and line of sight; no aiming requirement',()=>{con
 test('unanswered lunge kills but cannot cross a thin wall at low frame rates',()=>{const w=new Weeper({x:100,y:150});w.phase='dash';w.clock=.9;w.angle=0;assert.ok(w.tick(.4,input({player:{x:175,y:150}})).includes('hit'));
  const wall={x:135,y:90,width:4,height:140},blocked=new Weeper({x:100,y:150});blocked.phase='dash';blocked.clock=.9;blocked.angle=0;assert.ok(!blocked.tick(.4,input({player:{x:175,y:150},solids:[wall],architecture:[monsterArchitecture(wall)]})).includes('hit'));assert.ok(blocked.position.x<135);assert.ok(!overlaps(monsterFeetAt(blocked.position.x,blocked.position.y),wall));assert.equal(blocked.phase,'chasing');});
 test('six seconds of suppression freezes on pause and returns physically rather than teleporting',()=>{const w=new Weeper({x:100,y:150});w.position={x:150,y:150};assert.ok(w.flash({x:180,y:150},[]));w.tick(0,input());assert.equal(w.clock,6);w.tick(5.9,input());assert.equal(w.phase,'stunned');w.tick(.2,input());assert.equal(w.phase,'returning');const before={...w.position};w.tick(.05,input());assert.ok(Math.hypot(w.position.x-before.x,w.position.y-before.y)<=48*.05+.001);});
-test('patient sockets never block the complete lock chain, including optional cabinets',()=>{let placements=0;for(let n=1;n<=9;n++)for(const seed of [1,2,10,42,99,8675309]){const l=makeLevel(n,seed),p=chooseWeeper(l,seed);if(n<weeperRules.firstRound)assert.equal(p,undefined);if(!p)continue;placements++;assert.ok(l.weeperSpawns.some(v=>v.x===p.x&&v.y===p.y));const f=(l.features??[]).map(v=>({x:v.x,y:v.y+8,width:v.width,height:v.height-8,kind:'crate'}));assert.equal(validatePlayableLevel({...l,props:[...l.props,...f,{...weeperExclusion(p),kind:'crate'}]}).valid,true,`${n}/${seed}`);}assert.ok(placements>10,`placements ${placements}`);});
+test('fixed patient preserves bypass; roaming patients preserve base lock chain',()=>{let placements=0;for(let n=1;n<=9;n++)for(const seed of [1,2,10,42,99,8675309]){const l=makeLevel(n,seed),p=chooseWeeper(l,seed);if(n<weeperRules.firstRound)assert.equal(p,undefined);if(!p)continue;placements++;assert.ok(n===2||l.weeperSpawns.some(v=>v.x===p.x&&v.y===p.y));const f=(l.features??[]).map(v=>({x:v.x,y:v.y+8,width:v.width,height:v.height-8,kind:'crate'}));assert.equal(validatePlayableLevel({...l,props:[...l.props,...f,...(n===2?[{...weeperExclusion(p),kind:'crate'}]:[])]}).valid,true,`${n}/${seed}`);}assert.ok(placements>10,`placements ${placements}`);});
 
 test('light-shy recoils then slows, beam flickering cannot reset the flinch cooldown',async()=>{
  const {LightFear}=await import('../src/runtime/light-fear.ts');const {lightSlows}=await import('../src/run-rules.ts');const f=new LightFear();
@@ -89,10 +89,10 @@ test('flash gives a full escape window but patient remains watchful after recove
  assert.ok(['warning','dash','stunned'].includes(w.phase),w.phase);
 });
 
- test('quiet approach outside attack radius stops crying and visibly raises head without attacking',()=>{
+ test('quiet approach raises head without permanently silencing or attacking',()=>{
  const w=new Weeper({x:100,y:150});w.grace=0;
  assert.ok(w.tick(.1,input({player:{x:300,y:150},light:false})).includes('cry'));
- assert.ok(w.tick(.1,input({player:{x:220,y:150},light:false})).includes('quiet'));
+ assert.ok(!w.tick(.1,input({player:{x:220,y:150},light:false})).includes('quiet'));
  w.tick(.3,input({player:{x:220,y:150},light:false}));assert.equal(w.frame,4);assert.equal(w.noticed,true);
  for(let i=0;i<100;i++)w.tick(.1,input({player:{x:220,y:150},light:false}));assert.equal(w.phase,'idle');assert.equal(w.anger,0);
  w.tick(.1,input({player:{x:300,y:150},light:false}));assert.equal(w.noticed,false);assert.equal(w.hushed,false);

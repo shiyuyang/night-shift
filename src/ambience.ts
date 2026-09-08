@@ -1,3 +1,4 @@
+import {tuning} from './runtime/pacing.ts';
 import {decodeAudioAsset} from './runtime/audio-asset.ts';
 import {decodeSoundEffects} from './runtime/audio-pack.ts';
 import effects from '../game/audio-sfx.json' with {type:'json'};
@@ -38,10 +39,12 @@ export class Ambience {
     try{localStorage.setItem('night-shift-music-rotation-v1',JSON.stringify(this.previousThemes));}catch{}
     this.setScene(theme,0,0,night,0);
   }
+  private bloodMoon=0;
   private powerRemaining = 0;
   private powerBuffer?: AudioBuffer;
   private powerVoice?: { source: AudioBufferSourceNode; gain: GainNode; started: number; offset: number };
-  setScene(theme: number, tension: number, powerRemaining: number, night = 1, searchProgress = 0) {
+  setScene(theme: number, tension: number, powerRemaining: number, night = 1, searchProgress = 0, bloodMoon = 0) {
+    this.bloodMoon=bloodMoon;
     this.theme = musicTheme(theme);this.night = night;this.searchProgress=searchProgress;
     this.tension = Math.max(0, Math.min(1, tension));
     this.powerRemaining = Math.max(0, powerRemaining);
@@ -59,7 +62,7 @@ export class Ambience {
   private syncPower() {
     if (!this.context || !this.master || !this.powerBuffer) return;
     if (!this.enabled || !this.running || this.powerRemaining <= 0) { this.stopPower(); return; }
-    const ctx = this.context, offset = Math.max(0, 8 - this.powerRemaining);
+    const ctx = this.context, offset = Math.max(0, tuning.exitStartup - this.powerRemaining);
     if (this.powerVoice && Math.abs(this.powerVoice.offset + ctx.currentTime - this.powerVoice.started - offset) < .3) return;
     this.stopPower();
     // Seek from game time when resumed: tutorial/menu pauses cannot skip the climax.
@@ -139,7 +142,8 @@ export class Ambience {
     if (!this.context) return;
     const t = this.context.currentTime, powering = this.powerRemaining > 0;
     const variants=music.filter(track=>track.theme===this.theme);
-    const themeId=variants[((this.runTheme===this.theme?this.runVariant:Math.floor(Math.max(0,this.night-1)/3))+(this.searchProgress>0?1:0))%variants.length]?.id??'menu';
+    const baseThemeId=variants[((this.runTheme===this.theme?this.runVariant:Math.floor(Math.max(0,this.night-1)/3))+(this.searchProgress>0?1:0))%variants.length]?.id??'menu';
+    const themeId=this.bloodMoon>.05?'garden-blood-moon':baseThemeId;
     const chase=Math.max(0,(this.tension-.35)/.65);
     if(this.reportedTrack!==themeId||this.reportedChase!==(chase>0)){this.reportedTrack=themeId;this.reportedChase=chase>0;this.onTrack(themeId,chase>0);}
     for (const layer of this.layers) {
@@ -168,14 +172,14 @@ export class Ambience {
     this.updateMusicDucking();this.syncPower();
     if (this.context && this.master) this.master.gain.setTargetAtTime(this.enabled && running ? this.volume : 0,this.context.currentTime,.12);
   }
-  cue(kind: string, pan = 0) {
+  cue(kind: string, pan = 0, volume = 1) {
     if(kind==='patient-stop'){for(const voice of this.patientVoices)voice.stop();this.patientVoices.clear();this.updateMusicDucking();return;}
     if(kind==='sting')kind='impact';
     if(!this.enabled||!this.running||!this.context||!this.master)return;
     const buffer=this.effects.get(kind),definition=effects.find(effect=>effect.id===kind);if(!buffer||!definition)return;
     // Bound overlapping footsteps and gift bursts without synthesizing fallback sounds.
     if(this.voices.size>=12){const oldest=this.voices.values().next().value;oldest?.stop();if(oldest)this.voices.delete(oldest);}
-    const ctx=this.context,source=ctx.createBufferSource(),gain=ctx.createGain(),stereo=ctx.createStereoPanner();source.buffer=buffer;source.playbackRate.value=kind==='step'?.96+Math.random()*.08:1;gain.gain.value=definition.gain;stereo.pan.value=Math.max(-1,Math.min(1,pan));source.connect(gain).connect(stereo).connect(this.master);this.voices.add(source);if(kind.startsWith('patient-')){this.patientVoices.add(source);this.updateMusicDucking();if(kind==='patient-lunge')this.musicBus?.gain.setTargetAtTime(.2,ctx.currentTime,.01);}source.start();source.onended=()=>{this.patientVoices.delete(source);this.updateMusicDucking();this.voices.delete(source);source.disconnect();gain.disconnect();stereo.disconnect();};
+    const ctx=this.context,source=ctx.createBufferSource(),gain=ctx.createGain(),stereo=ctx.createStereoPanner();source.buffer=buffer;source.playbackRate.value=kind==='step'?.96+Math.random()*.08:1;gain.gain.value=definition.gain*Math.max(0,Math.min(1,volume));stereo.pan.value=Math.max(-1,Math.min(1,pan));source.connect(gain).connect(stereo).connect(this.master);this.voices.add(source);if(kind.startsWith('patient-')){this.patientVoices.add(source);this.updateMusicDucking();if(kind==='patient-lunge')this.musicBus?.gain.setTargetAtTime(.2,ctx.currentTime,.01);}source.start();source.onended=()=>{this.patientVoices.delete(source);this.updateMusicDucking();this.voices.delete(source);source.disconnect();gain.disconnect();stereo.disconnect();};
   }
   dispose() {if(this.scheduler)clearInterval(this.scheduler);void this.context?.close();}
 }

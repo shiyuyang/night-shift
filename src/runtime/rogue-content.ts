@@ -21,7 +21,7 @@ export function populateRogueContent(level:Level,rng:()=>number){
   for(const p of points){if(essential.some(v=>Math.hypot(v.x-p.x,v.y-p.y)<78)||level.features.some(f=>Math.hypot(center(f).x-p.x,center(f).y-p.y)<80))continue;
    const width=kind==='water'||kind==='steam'?36:kind==='glass'?32:24,height=kind==='water'||kind==='steam'?24:20;
    const f:Feature={id:kind+'-'+level.features.length,kind,x:p.x-width/2,y:p.y-height/2,width,height,roll:rng(),reward:(['flash','decoy','bandage'] as const)[Math.floor(rng()*3)]};
-   const safe=featureSafetyBox(f);if([...level.walls,...level.props].some(b=>overlaps(safe,b)))continue;
+   const safe=featureSafetyBox(f);if(level.round===2&&level.weeperFixed&&Math.hypot(center(f).x-level.weeperFixed.x,center(f).y-level.weeperFixed.y)<180)continue;if([...level.walls,...level.props].some(b=>overlaps(safe,b)))continue;
    const test={...level,props:[...level.props,...blocked.map(b=>({...b,kind:'crate' as const})),{...safe,kind:'crate' as const}]};
    if(!validatePlayableLevel(test).valid)continue;
    // The visible front of each cabinet must be approachable, including after

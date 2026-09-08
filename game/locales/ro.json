@@ -69,7 +69,7 @@
   "guide.5": "Garderoberele cu marcaje în cruce conțin aprovizionări. Dulapurile înalte te ascund până la 8 secunde. Întoarce-te din raza de vedere înainte să te ascunzi.",
   "tutorial.exitReturn": "Înapoi la personaj",
   "tutorial.exitTitle": "ACESTA ESTE IEȘIREA",
-  "tutorial.exitText": "Toate cele trei siguranțe sunt colectate. Această ușă iluminată în verde este ieșirea ta. Numărătoarea de 8 secunde cu curentul se reia când camera revine. Continuă să te miști, apoi vino aici și apasă E pentru a scăpa.",
+  "tutorial.exitText": "Toate cele trei siguranțe sunt colectate. Această ușă iluminată în verde este ieșirea ta. Numărătoarea de {seconds, number} secunde cu curentul se reia când camera revine. Continuă să te miști, apoi vino aici și apasă E pentru a scăpa.",
   "tutorial.healthTitle": "UITE-ȚI LA SĂNĂTATE",
   "tutorial.healthText": "Bara albă din stânga sus este sănătatea ta. Loviturile o scurtează; la zero, mori. Clipirea după o lovire oferă protecție temporară. Apasă Q pentru a vindeca 40 de puncte de sănătate cu un pansament.",
   "tutorial.flashlightTitle": "SALVEAZĂ LUMINA TA",

@@ -1,3 +1,4 @@
+import {tuning} from './pacing.ts';
 import {t as msg} from '../i18n.ts';
 export const MONSTER_LESSONS_KEY='night-shift-monster-lessons-v1';
 export const monsterLessons=['monster-listener','monster-light-shy','monster-patroller','monster-weeper'] as const;
@@ -18,7 +19,7 @@ export const lessons={
  heal:{get title(){return msg("lesson.treat-the-wound-first")},get text(){return msg("lesson.press-q-or-click-the-bandage-to")},target:'Q'},
  practice:{get title(){return msg("lesson.bandaging-practice-optional")},get text(){return msg("lesson.you-are-unhurt-simulate-a-minor-injury")},target:'Q'},
  door:{get title(){return msg("lesson.keep-an-escape-route")},get text(){return msg("lesson.approach-the-room-door-and-press-e")},target:'world'},
- exit:{get title(){return msg("lesson.the-final-patrol")},get text(){return msg("tutorial.exitText")},target:'world'}
+ exit:{get title(){return msg("lesson.the-final-patrol")},get text(){return msg("tutorial.exitText",{seconds:tuning.exitStartup})},target:'world'}
 } as const;
 export type Lesson=keyof typeof lessons;
 export class Tutorial {

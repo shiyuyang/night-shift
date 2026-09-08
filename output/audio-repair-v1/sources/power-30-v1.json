@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "music_v1",
+  "prompt": "Original instrumental thirty-second emergency power startup horror cue in an abandoned Japanese hospital at night. First ten seconds: irregular low relay-like percussion and tense transformer drone. Middle ten seconds: tighten rhythm, add restrained dissonant bowed metal and low strings. Last ten seconds: increasingly urgent heartbeat-like pulse and narrowing metallic tension, strongest pressure in the final five seconds. No voice, choir, speech, bright tune, EDM, heroic resolution or huge volume jump. Clear space for pursuit footsteps, door impacts and a shrieking patient; tension grows through rhythm and texture rather than loudness. End sharply at exactly thirty seconds.",
+  "requestedSeconds": 30,
+  "generatedAt": "2026-09-08T16:16:44.417912+00:00"
+}

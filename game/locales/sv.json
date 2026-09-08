@@ -69,7 +69,7 @@
   "guide.5": "Skåp med korsmarkering innehåller förnödenheter. Höga skåp gömmer dig i upp till 8 sekunder. Bryt synlinjen innan du gömmer dig.",
   "tutorial.exitReturn": "Återgå till karaktär",
   "tutorial.exitTitle": "DETTA ÄR UTGÅNGEN",
-  "tutorial.exitText": "De tre säkringarna är samlade. Denna grönt lysande dörr är din utgång. Den 8-sekunders räknedan för ström återupptas när kameran kommer tillbaka. Håll dig i rörelse, kom här och tryck E för att fly.",
+  "tutorial.exitText": "De tre säkringarna är samlade. Denna grönt lysande dörr är din utgång. Den {seconds, number}-sekunders räknedan för ström återupptas när kameran kommer tillbaka. Håll dig i rörelse, kom här och tryck E för att fly.",
   "tutorial.healthTitle": "HÅLL OMTVET OM DIN HÄLSA",
   "tutorial.healthText": "Den vita balken i övre vänstra hörnet är din hälsa. Slag förkortar den; vid noll dör du. Blinkande efter ett slag ger kortvarig skydd. Tryck på Q för att läka 40 hälsa med en förband.",
   "tutorial.flashlightTitle": "SPARA DITT Ljus",

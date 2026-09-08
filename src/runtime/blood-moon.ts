@@ -3,6 +3,7 @@ import type {Lamp} from '../light-renderer';
 export class BloodMoon {
  amount=0;target=0;private time=0;
  tick(dt:number){if(this.target>0)this.time+=Math.max(0,dt);const step=Math.max(0,dt)/3;this.amount+=Math.sign(this.target-this.amount)*Math.min(Math.abs(this.target-this.amount),step);}
+ get flickering(){const t=this.time%43;return this.amount>0&&[[7,.7],[19,1.1],[34,.5]].some(([at,d])=>t>at&&t<at+d);}
  reset(){this.amount=0;this.target=0;this.time=0;}
  light(lamp:Lamp):Lamp{
   if(this.amount===0)return lamp;

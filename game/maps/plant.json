@@ -19,12 +19,6 @@
           "strength": 0.08
         },
         {
-          "type": "sound",
-          "id": "call-bell",
-          "pan": -0.65,
-          "source": "LampSouth"
-        },
-        {
           "type": "message",
           "text": "event.plant"
         },
@@ -545,6 +539,62 @@
     },
     {
       "id": "MonsterEntry",
+      "x": 1096,
+      "y": 574,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 176,
+      "y": 230,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 176,
+      "y": 574,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 480,
+      "y": 214,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 480,
+      "y": 582,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 800,
+      "y": 214,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 800,
+      "y": 582,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
+      "x": 1104,
+      "y": 326,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "WeeperSpawn",
       "x": 1096,
       "y": 574,
       "width": 8,

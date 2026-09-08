@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Original isolated foley for an abandoned Japanese hospital pixel horror game at night. No music, words, speech or monster vocals. An unoccupied hospital bed slowly takes an invisible weight: low mattress spring creak followed by one restrained metal side-rail click. Sparse cold room echo, no voice.",
+  "requestedSeconds": 2,
+  "generatedAt": "2026-09-08T16:26:43.093610+00:00"
+}

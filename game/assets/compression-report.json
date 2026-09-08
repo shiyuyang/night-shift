@@ -252,12 +252,12 @@
     "encoding": "opus-64k"
   },
   {
-    "file": "audio/power-theme-v1.opus",
-    "source": "audio/power-theme-v1.mp3",
-    "source_bytes": 129192,
-    "bytes": 71148,
-    "source_sha256": "7c11b56e7c837681bf384dbcbfd23fbcdbd3fe00809cb04f52e4772178c56ca4",
-    "sha256": "cc36e7250f5cd8b12aa620aeef236194cf35fcd7a0094ddc9dee394fa9b9742c",
+    "file": "audio/power-30-v1.opus",
+    "source": "audio/power-30-v1.mp3",
+    "source_bytes": 481114,
+    "bytes": 228287,
+    "source_sha256": "99a2088ff6ad3265fe4f6c02d804563b1b75da3393b627114c160ba3adc77554",
+    "sha256": "078e75d5b41ea57a9ee1ed9de024bd245f3cc068ecaac491fbf424f2960b0392",
     "encoding": "opus-64k"
   },
   {
@@ -294,6 +294,15 @@
     "bytes": 420196,
     "source_sha256": "0f4d443ede834b246d2f93033c2dc81040d9acbe60d3f7c36f74f4938b9680a7",
     "sha256": "e81121f37dd59c39ef0351ecc26e4ef10458a494d33bf487d13a09d6424604b5",
+    "encoding": "opus-64k"
+  },
+  {
+    "file": "audio/garden-blood-moon-v1.opus",
+    "source": "audio/garden-blood-moon-v1.mp3",
+    "source_bytes": 767834,
+    "bytes": 401173,
+    "source_sha256": "84a62687ae491cfe55ba0fe9613bc304cf629ddf7df07b9810cf6f78ac735fa5",
+    "sha256": "0d4afc0df6a58898442f9047755c2e900c29e91a3e269b1c60fa474f4eb27056",
     "encoding": "opus-64k"
   },
   {
@@ -456,6 +465,195 @@
     "bytes": 7500,
     "source_sha256": "422ef2b9443ea104a4db930f9fd1d2a3899d75d86c09e0de8fd75a6b40a4becb",
     "sha256": "7f69155866e414df034c15b2904e074f8f30615579ec6c2519557e72c35919f1",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/outpatient-speaker-v1.opus",
+    "source": "audio/sfx/outpatient-speaker-v1.mp3",
+    "source_bytes": 65244,
+    "bytes": 18260,
+    "source_sha256": "1aa2ae93e5d10bdee4a1db16efee515ee36c479d28f1cb344460bd996c039e02",
+    "sha256": "cdb7a549374c8712adcd894e8a12b4a5caf6e0ddc1ff0c012d1feb7b05f59ee0",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/outpatient-wheel-v1.opus",
+    "source": "audio/sfx/outpatient-wheel-v1.mp3",
+    "source_bytes": 48944,
+    "bytes": 13509,
+    "source_sha256": "bd97e7613e33418ba4be2bd7bbd8e7ab27ccd275346edcf18ccf3c9bbb4949ac",
+    "sha256": "204ba3d62afc70efd7c96bbe633910edd001e27a5a2fc4a58f4ede1e7f2710f1",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/surgery-tray-v1.opus",
+    "source": "audio/sfx/surgery-tray-v1.mp3",
+    "source_bytes": 40585,
+    "bytes": 12785,
+    "source_sha256": "99e91747cd61aafb361a764c4b90d297e336a03bb8f067ec2937bcbf7537a332",
+    "sha256": "d1e14b2f207b1fdc409cd788a9e9a7d6fac4abe43f874719127f43be38337278",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/surgery-suction-v1.opus",
+    "source": "audio/sfx/surgery-suction-v1.mp3",
+    "source_bytes": 81127,
+    "bytes": 21335,
+    "source_sha256": "7b184f886ad73e572107ef782d16b783e81e85ed41549789e5b26d13f42f5c82",
+    "sha256": "7edff935ca46fca700a7223e3f6bc398e351dc54584c60ed4b80bf57fd754907",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/morgue-knock-v1.opus",
+    "source": "audio/sfx/morgue-knock-v1.mp3",
+    "source_bytes": 48944,
+    "bytes": 14400,
+    "source_sha256": "84bb5c4160255f2b61ff4725a409a45db9e8a9fe0cf728ea7e31520a6fa9d1af",
+    "sha256": "68195880d219f0979136bb26ca457f24771f23506adaaef847e80e09d82e02db",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/morgue-slide-v1.opus",
+    "source": "audio/sfx/morgue-slide-v1.mp3",
+    "source_bytes": 33061,
+    "bytes": 9836,
+    "source_sha256": "cda3e057240a6ea4ac3300f674716e9d52ac70b3f43cf1280b3967d8d7a69597",
+    "sha256": "eea4761267d27fca907da9a561a4b199a202e6b9a5d5753b1e9401f50bca1988",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/garden-wind-v1.opus",
+    "source": "audio/sfx/garden-wind-v1.mp3",
+    "source_bytes": 97009,
+    "bytes": 26598,
+    "source_sha256": "10ea659c079010f70de3e151b17bb7a40ee5b8a5c0a30dff5ddca5ce0e5301ef",
+    "sha256": "6aa3db507fbe8bf25b5f4a4b6ebefda3e7b1efd5909dbd4eab6c2344107a60cc",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/garden-chime-v1.opus",
+    "source": "audio/sfx/garden-chime-v1.mp3",
+    "source_bytes": 56885,
+    "bytes": 17209,
+    "source_sha256": "65bce2fb2570e9cd5e41c405ffed8cf3f836f30596f9a18af9bf819815640b0a",
+    "sha256": "0b9e8708909d9f631ee7f7eebb9c69698d165467e795866f91595d8bc2fd6cf3",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/blood-moon-rise-v1.opus",
+    "source": "audio/sfx/blood-moon-rise-v1.mp3",
+    "source_bytes": 81127,
+    "bytes": 23243,
+    "source_sha256": "a8f808d8b60bf09455562b2ed38e469b6c58d2ed6913420c8f1cdda6d50b7348",
+    "sha256": "a42c8074c03e02339d86b2c07b44c932a8e8bf327e20c5feb06dd7ea9f4e22fd",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/blood-moon-flicker-v1.opus",
+    "source": "audio/sfx/blood-moon-flicker-v1.mp3",
+    "source_bytes": 20105,
+    "bytes": 5449,
+    "source_sha256": "c122c7e34b2764b557cb0766e31b70dd8e394c11c69d01725087faa511af3b8e",
+    "sha256": "f6ffb6c9bc98d6e4f73a3bc473b0da635efd969bf69bbf69c6c885a8296631d1",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/door-batter-v1.opus",
+    "source": "audio/sfx/door-batter-v1.mp3",
+    "source_bytes": 17179,
+    "bytes": 4498,
+    "source_sha256": "edca3aa7e8412abfa784f7b33e5bb78cc8fc15cbf466ab357b0508c2dfde13b4",
+    "sha256": "2a5cc7f2e23e80254cf1ee64d3cbdbb16d3534491fa6500a3548a907d52b7b82",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/door-breach-v1.opus",
+    "source": "audio/sfx/door-breach-v1.mp3",
+    "source_bytes": 40585,
+    "bytes": 10687,
+    "source_sha256": "8af0112a25212c42cfe9b6b418293c198cff687d8334edfe5aff55131b0ca2b6",
+    "sha256": "a646965c12f0834d963005b568b097b3cf6b648de1fe30a405c8eb1e36b272fc",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/ward-bed-call-v1.opus",
+    "source": "audio/sfx/ward-bed-call-v1.mp3",
+    "source_bytes": 48944,
+    "bytes": 17867,
+    "source_sha256": "91bc5e1cfd161d8c713aa5d476776b1e99a020195fa14c26a2a55f5e6852263c",
+    "sha256": "40946381eee1bb0997ba3e92c2438e07fd871820a48910a323562b150ee87ca2",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/ward-curtain-v1.opus",
+    "source": "audio/sfx/ward-curtain-v1.mp3",
+    "source_bytes": 40585,
+    "bytes": 9900,
+    "source_sha256": "1d580e6a0cb172960efb5793543b486641b291372cbe1f0653bb0ea2e4957d72",
+    "sha256": "3b0f8a4b49a07071a59af0c2d5e86f90e6d82ac43198346e23a267838f19b9cb",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/ward-bedframe-v1.opus",
+    "source": "audio/sfx/ward-bedframe-v1.mp3",
+    "source_bytes": 33061,
+    "bytes": 9617,
+    "source_sha256": "11b2c9a8e02f4cbdc85920f7f38a2b56c5ecc00695fde95c94c3545fcbe6863d",
+    "sha256": "90183c034b927fcb3e3214e7e1d4ad429a6c8ba875a826a6e437d3511629b41e",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/warehouse-vials-v1.opus",
+    "source": "audio/sfx/warehouse-vials-v1.mp3",
+    "source_bytes": 40585,
+    "bytes": 14218,
+    "source_sha256": "27940c664495d11afa01c6f3537d5b051009777ff82f16c740705a7e003e76d3",
+    "sha256": "17f1200a0effbd02159ca3c815a68b5941f498fb5ce621ed792cc14258757086",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/warehouse-rack-v1.opus",
+    "source": "audio/sfx/warehouse-rack-v1.mp3",
+    "source_bytes": 48944,
+    "bytes": 12325,
+    "source_sha256": "30b907d4c12227359475162fb90566eb6f7851d5b5982bdfb654790b37b5cc20",
+    "sha256": "62b754c5eb98ba65ac3959c1e38efd96a68020d86513ffb672afd1c5906d8750",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/warehouse-cold-unit-v1.opus",
+    "source": "audio/sfx/warehouse-cold-unit-v1.mp3",
+    "source_bytes": 81127,
+    "bytes": 29472,
+    "source_sha256": "2aa91d69868b3a3dd7fb809fabe29500ba69cb31668dcf224a90b1ef6fb546af",
+    "sha256": "0936e44905fde5efc611599708987201c6a58c3c55098e43e8eea657abfba48d",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/plant-coastdown-v1.opus",
+    "source": "audio/sfx/plant-coastdown-v1.mp3",
+    "source_bytes": 97009,
+    "bytes": 23933,
+    "source_sha256": "809fab51c22f0d99e4f8e7f2090959b5b2a4304f7b1d8f93d3c7de50d938cb68",
+    "sha256": "40f4a374b9ebba87335f8171c38930eb27375f98789ab9f96f4092ebe75226bc",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/plant-pipe-knock-v1.opus",
+    "source": "audio/sfx/plant-pipe-knock-v1.mp3",
+    "source_bytes": 48944,
+    "bytes": 13369,
+    "source_sha256": "46c8c70b0c59a92dd956383ad32d5ca2a0adcbdca031a284c05fdc5bfd68a76a",
+    "sha256": "956772a1fd3df7eb5f546b6e33254bc2f1b43c0f3f8a512f5e738fcb737ba06a",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/plant-breaker-arc-v1.opus",
+    "source": "audio/sfx/plant-breaker-arc-v1.mp3",
+    "source_bytes": 20105,
+    "bytes": 5373,
+    "source_sha256": "765c953f9e53821aa41ad6b02d51179642afe99d733d0c4e51ea374d9257cca9",
+    "sha256": "1cdffed8b39bae77726cab7bbff83329ac267c647f7c08e1afe94656e58084c9",
     "encoding": "opus-40k"
   }
 ]

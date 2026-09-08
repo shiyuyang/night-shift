@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Original isolated foley for an abandoned Japanese hospital pixel horror game at night. No music, words, speech or monster vocals. A few small glass medicine vials lightly tap each other in sequence on a dusty shelf, one rolls a short distance and stops. Dry close fragile glass, no breaking or loud crash.",
+  "requestedSeconds": 2.5,
+  "generatedAt": "2026-09-08T16:26:45.688523+00:00"
+}

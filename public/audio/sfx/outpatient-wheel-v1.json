@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. An unattended hospital wheelchair rolls a short distance on linoleum. One uneven squeaking caster, soft rubber friction, sudden stop. Hollow empty waiting room reflections, ominous and close.",
+  "requestedSeconds": 3,
+  "generatedAt": "2026-09-08T16:15:45.822469+00:00"
+}

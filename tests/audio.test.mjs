@@ -9,12 +9,12 @@ test('music changes by scene and power playback seeks correctly after pause or m
  const param=()=>({value:0,setValueAtTime(v){this.value=v},linearRampToValueAtTime(v){this.value=v},setTargetAtTime(v){this.value=v},cancelScheduledValues(){}});
  const gain=()=>({gain:param(),connect(){return this},disconnect(){}});
  const sources=[];const ctx={currentTime:10,createGain:gain,createBufferSource(){const source={connect(){return this},disconnect(){},start(t,offset){this.offset=offset},stop(){this.stopped=true}};sources.push(source);return source}};
- const a=new Ambience();a.context=ctx;a.master=gain();a.powerBuffer={duration:8};a.layers=music.filter(m=>m.id!=='power').map(m=>({id:m.id,gain:gain()}));a.enabled=true;a.setRunning(true);
+ const a=new Ambience();a.context=ctx;a.master=gain();a.powerBuffer={duration:30};a.layers=music.filter(m=>m.id!=='power').map(m=>({id:m.id,gain:gain()}));a.enabled=true;a.setRunning(true);
  a.setScene(1,0,0);assert.ok(a.layers.find(l=>l.id==='warehouse').gain.gain.value>.5);assert.equal(a.layers.find(l=>l.id==='ward').gain.gain.value,0);
  a.setScene(-2,0,0);assert.ok(a.layers.find(l=>l.id==='menu').gain.gain.value>.5);
  a.setScene(0,0,0,4);assert.ok(a.layers.find(l=>l.id==='ward-alt').gain.gain.value>.5);assert.equal(a.layers.find(l=>l.id==='ward').gain.gain.value,0);
- a.setScene(2,1,8);assert.equal(sources.length,1);assert.equal(sources[0].offset,0);
- ctx.currentTime=12;a.setScene(2,1,6);assert.equal(sources.length,1);
+ a.setScene(2,1,30);assert.equal(sources.length,1);assert.equal(sources[0].offset,0);
+ ctx.currentTime=12;a.setScene(2,1,28);assert.equal(sources.length,1);
  a.setRunning(false);assert.ok(sources[0].stopped);ctx.currentTime=30;a.setRunning(true);assert.equal(sources.at(-1).offset,2);
  await a.setEnabled(false);assert.ok(sources.at(-1).stopped);
  a.enabled=true;a.setRunning(true);assert.equal(sources.at(-1).offset,2);

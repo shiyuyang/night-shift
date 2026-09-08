@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Original isolated sound design for a Japanese abandoned hospital pixel horror game at night. No speech, words, music or recognizable melody. Leave room for footsteps and a crying patient. Night wind passes through pine branches in a deserted hospital courtyard. Restrained hollow gust, dry needles brushing stone, broad open-air space with distant building reflections, subtle eerie whistling without any voice.",
+  "requestedSeconds": 6,
+  "generatedAt": "2026-09-08T16:16:02.502013+00:00"
+}

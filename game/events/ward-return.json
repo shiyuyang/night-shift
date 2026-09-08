@@ -1,18 +1,38 @@
 [
   {
     "id": "ward_return_echo",
-    "trigger": {"flag": "first_box", "zone": "return_corridor"},
+    "trigger": {
+      "flag": "first_box",
+      "zone": "return_corridor"
+    },
     "once": true,
     "sequence": [
-      {"type": "light", "target": "crt", "strength": 0.75},
-      {"type": "sound", "id": "metal", "pan": 0.6},
-      {"type": "message", "text": "event.ward"},
-      {"type": "wait", "seconds": 0.8},
-      {"type": "sound", "id": "step", "pan": -0.8},
-      {"type": "wait", "seconds": 0.65},
-      {"type": "sound", "id": "step", "pan": 0.7},
-      {"type": "wait", "seconds": 1.2},
-      {"type": "light", "target": "crt", "strength": 0.36}
+      {
+        "type": "light",
+        "target": "crt",
+        "strength": 0.75
+      },
+      {
+        "type": "message",
+        "text": "event.ward"
+      },
+      {
+        "type": "wait",
+        "seconds": 0.8
+      },
+      {
+        "type": "wait",
+        "seconds": 0.65
+      },
+      {
+        "type": "wait",
+        "seconds": 1.2
+      },
+      {
+        "type": "light",
+        "target": "crt",
+        "strength": 0.36
+      }
     ]
   }
 ]

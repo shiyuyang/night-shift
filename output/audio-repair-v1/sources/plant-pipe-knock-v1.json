@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Original isolated foley for an abandoned Japanese hospital pixel horror game at night. No music, words, speech or monster vocals. Three low dull pressure knocks travel along an old hospital basement pipe from far to near, resonant metal tube body, irregular spacing, a clear final knock with short enclosed echo. No voice or footsteps.",
+  "requestedSeconds": 3,
+  "generatedAt": "2026-09-08T16:26:59.961524+00:00"
+}
