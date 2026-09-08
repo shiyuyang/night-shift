@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import {existsSync,readFileSync} from 'node:fs';
 import {deliveryFiles} from '../scripts/prepare-delivery.mjs';
 const prefix=process.env.GAME_BASE_PATH||'/games/night-shift/';
+const networkTimeout=Math.max(60000,Number(process.env.TEST_NETWORK_TIMEOUT_MS)||60000);
 const server=process.env.DEPLOY_URL?null:await preview({base:prefix,appType:'mpa',preview:{host:'127.0.0.1',port:0}});
 const url=process.env.DEPLOY_URL||`http://127.0.0.1:${server.httpServer.address().port}${prefix}`;
 const releaseFile=new URL('../deploy/r2-release.json',import.meta.url);
@@ -14,15 +15,14 @@ try{
  const page=await browser.newPage({locale:'zh-CN',viewport:{width:1440,height:900}});const errors=[],bad=[],local=[];
  const fallback=process.env.TEST_MP3_FALLBACK==='1';
  const originRequests=[];
- // Exercise uncached delivery. Chromium's disk cache can stall concurrent R2
- // response bodies even after receiving HTTP 200 on this release host.
+ // Exercise uncached delivery, including every cross-origin response body.
  const network=await page.context().newCDPSession(page);
  await network.send('Network.enable');
  await network.send('Network.setCacheDisabled',{cacheDisabled:true});
  if(process.env.TEST_NO_LINODE==='1')await page.route(/https?:\/\/(?:api\.liveinteractivegame\.com|139\.162\.147\.129)(?:\/|:)/,route=>{originRequests.push(route.request().url());return route.abort();});
  if(fallback)await page.route(/(?:\.ogg$|sfx-opus-.*\.bin$)/,route=>route.fulfill({status:200,contentType:'application/octet-stream',body:'unsupported audio fixture'}));
  page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if((r.url().startsWith(new URL(url).origin)||r.url().startsWith(assetBase))&&!new URL(r.url()).pathname.startsWith('/cdn-cgi/')){local.push(r.url());if(r.status()>=400)bad.push([r.status(),r.url()]);}});
- await page.goto(url,{waitUntil:'domcontentloaded'});await page.locator('#start:enabled').waitFor({timeout:60000});
+ await page.goto(url,{waitUntil:'domcontentloaded',timeout:networkTimeout});await page.locator('#start:enabled').waitFor({timeout:networkTimeout});
  await page.waitForFunction(()=>document.querySelector('#survey')?.dataset.loaded==='true');
  assert.equal(await page.locator('[data-command]').count(),0);
  assert.equal(await page.title(),'夜勤病棟');
