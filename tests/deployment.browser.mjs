@@ -23,9 +23,13 @@ try{
  assert.equal(await page.title(),'夜勤病棟');
  const brand=page.locator('.game-brand img');
  assert.equal(await brand.getAttribute('alt'),'夜勤病棟');
- assert.equal(await brand.getAttribute('src'),assetBase+'assets/yakin-byoutou-title-v4.webp');
+ assert.equal(new URL(await brand.getAttribute('src'),url).href,assetBase+'assets/yakin-byoutou-title-v4.webp');
  assert.ok(await brand.evaluate(image=>image.complete&&image.naturalWidth>0),'Title image must load');
  assert.equal(await page.locator('.desk-title p').textContent(),'今晚的病人，比名册上多一位。');
+ assert.equal(await page.locator('#start').textContent(),'开始巡查 →');
+ assert.equal(await page.locator('.survey-frame span').textContent(),'封楼前留影');
+ await page.evaluate(()=>document.fonts.ready);
+ assert.ok(await page.evaluate(()=>document.fonts.check('17px PhotoNote','封楼前留影尚未交班开始巡查')));
  await page.locator('#start').click();await page.waitForFunction(()=>document.body.dataset.ui==='playing');
  await page.waitForFunction(()=>document.querySelector('#music-status')?.textContent?.includes('已就绪'),null,{timeout:60000});
  console.log(fallback?'MP3 fallback playback ready':'Opus playback ready');

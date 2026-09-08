@@ -385,5 +385,23 @@
     "source_sha256": "422ef2b9443ea104a4db930f9fd1d2a3899d75d86c09e0de8fd75a6b40a4becb",
     "sha256": "7f69155866e414df034c15b2904e074f8f30615579ec6c2519557e72c35919f1",
     "encoding": "opus-40k"
+  },
+  {
+    "file": "assets/stamp-button-normal-v1.webp",
+    "source": "assets/stamp-button-normal-v1.png",
+    "source_bytes": 416793,
+    "bytes": 317858,
+    "source_sha256": "d6df64f0e28bee5d2eff79d5442f057fb431b22a9d65717c8a2bbeb686fbef66",
+    "sha256": "1918a7e904ea8a474ac03c2914bc7fa3a5c47252398af8c0a1a51828de8b9c25",
+    "encoding": "lossless"
+  },
+  {
+    "file": "assets/stamp-button-pressed-v1.webp",
+    "source": "assets/stamp-button-pressed-v1.png",
+    "source_bytes": 1323170,
+    "bytes": 143786,
+    "source_sha256": "5ba8750b58abd8fa30b7368240f0cb025a42ec31e0dc6728cadd8e01afbb8e77",
+    "sha256": "31f052758989e4ad5539379bda6ed626a00f600d03d325df2438023e38aafc2c",
+    "encoding": "webp-q95"
   }
 ]

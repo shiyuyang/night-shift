@@ -51,7 +51,8 @@ export function prepareDelivery() {
   // Validate compiled CSS paths against the curated output, including the base.
   for (const file of walk(dist).filter(p => p.endsWith('.css'))) {
     for (const [, url] of readFileSync(file, 'utf8').matchAll(/url\(["']?([^\s)'";]+)["']?\)/g)) {
-      if (/^(data:|https?:|\/\/)/.test(url)) continue;
+      // Fragment URLs reference inline SVG filters, not delivery files.
+      if (/^(#|data:|https?:|\/\/)/.test(url)) continue;
       const path = url.split(/[?#]/)[0];
       const target = path.startsWith('/') ? resolve(dist, path.replace(/^.*?\/(assets|fonts)\//, '$1/')) : resolve(dirname(file), path);
       if (!statSync(target).isFile()) throw Error('Missing CSS asset: ' + url);

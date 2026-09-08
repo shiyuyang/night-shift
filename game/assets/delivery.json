@@ -84,11 +84,24 @@
       "source": "/assets/yakin-byoutou-title-v4.png",
       "file": "/assets/yakin-byoutou-title-v4.webp",
       "encoding": "lossless"
+    },
+    {
+      "source": "/assets/stamp-button-normal-v1.png",
+      "file": "/assets/stamp-button-normal-v1.webp",
+      "encoding": "lossless"
+    },
+    {
+      "source": "/assets/stamp-button-pressed-v1.png",
+      "file": "/assets/stamp-button-pressed-v1.webp",
+      "encoding": "webp-q95"
     }
   ],
   "staticFiles": [
     "/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
     "/fonts/OFL.txt",
-    "/fonts/SOURCE.txt"
+    "/fonts/SOURCE.txt",
+    "/fonts/hospital-handwriting-f4b06c07ab.woff2",
+    "/fonts/MaShanZheng-OFL.txt",
+    "/fonts/photo-note-SOURCE.txt"
   ]
 }
