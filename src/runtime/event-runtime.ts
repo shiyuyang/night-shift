@@ -1,11 +1,11 @@
-export type Action={type:'wait';seconds:number}|{type:'sound';id:'step'|'metal'|'call-bell';pan:number;source?:string}|{type:'light';target:string;strength:number}|{type:'message';text:string};
+export type Action={type:'blood-moon';strength:number}|{type:'wait';seconds:number}|{type:'sound';id:'step'|'metal'|'call-bell';pan:number;source?:string}|{type:'light';target:string;strength:number}|{type:'message';text:string};
 export interface EventDefinition{id:string;trigger:{flag:string;zone:string};once:true;sequence:Action[]}
 export interface EventState{flags:Record<string,boolean>;zones:Record<string,boolean>}
 /** Small allowlisted DSL: never eval scripts or schedule wall-clock timers. */
 export function parseEvents(value:unknown,lightTargets:readonly string[]=['crt']):EventDefinition[]{
  if(!Array.isArray(value))throw Error('Events must be an array');const ids=new Set<string>();
  for(const e of value){if(!e||typeof e.id!=='string'||ids.has(e.id)||e.once!==true||typeof e.trigger?.flag!=='string'||typeof e.trigger?.zone!=='string'||!Array.isArray(e.sequence)||e.sequence.length>32)throw Error('Invalid event header');ids.add(e.id);
- for(const a of e.sequence){const finite=(n:unknown,min:number,max:number)=>typeof n==='number'&&Number.isFinite(n)&&n>=min&&n<=max;const valid=a&&((a.type==='wait'&&finite(a.seconds,0,30))||(a.type==='sound'&&['step','metal','call-bell'].includes(a.id)&&finite(a.pan,-1,1)&&(a.source===undefined||lightTargets.includes(a.source)&&a.source!=='crt'))||(a.type==='light'&&lightTargets.includes(a.target)&&finite(a.strength,0,1))||(a.type==='message'&&typeof a.text==='string'&&a.text.length<=160));if(!valid)throw Error(`Invalid action in ${e.id}`);}}
+ for(const a of e.sequence){const finite=(n:unknown,min:number,max:number)=>typeof n==='number'&&Number.isFinite(n)&&n>=min&&n<=max;const valid=a&&((a.type==='blood-moon'&&finite(a.strength,0,1))||(a.type==='wait'&&finite(a.seconds,0,30))||(a.type==='sound'&&['step','metal','call-bell'].includes(a.id)&&finite(a.pan,-1,1)&&(a.source===undefined||lightTargets.includes(a.source)&&a.source!=='crt'))||(a.type==='light'&&lightTargets.includes(a.target)&&finite(a.strength,0,1))||(a.type==='message'&&typeof a.text==='string'&&a.text.length<=160));if(!valid)throw Error(`Invalid action in ${e.id}`);}}
  return value;
 }
 export class EventRuntime {

@@ -3591,6 +3591,29 @@
             "seconds": 0.35
           }
         ]
+      },
+      {
+        "id": "garden_blood_moon",
+        "trigger": {
+          "flag": "first_box",
+          "zone": "NorthPathZone"
+        },
+        "once": true,
+        "sequence": [
+          {
+            "type": "wait",
+            "seconds": 9
+          },
+          {
+            "type": "sound",
+            "id": "metal",
+            "pan": 0
+          },
+          {
+            "type": "blood-moon",
+            "strength": 1
+          }
+        ]
       }
     ],
     "lights": [

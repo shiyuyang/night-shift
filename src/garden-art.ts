@@ -86,13 +86,13 @@ export function drawGardenProp(g:Phaser.GameObjects.Graphics,b:Box&{kind:string}
   r(x+7,y+4,w-14,11,0x657f7b);r(x+7,y+18,w-14,17,0x456162);r(x+9,y+35,w-18,3,0x9caeaa);r(x+3,y+16,w-6,3,0xa1ada4);
  }
 }
-export function drawGardenLamps(g:Phaser.GameObjects.Graphics,l:Level,strength:(id:string,fallback:number)=>number,time:number){
+export function drawGardenLamps(g:Phaser.GameObjects.Graphics,l:Level,strength:(id:string,fallback:number)=>number,time:number,bloodMoon=0){
  const r=rect(g);
  // Distant institutional facade: repeated dark windows, just two lit rooms.
  r(38,97,1200,10,0x17272d);
  for(let x=62,i=0;x<1220;x+=76,i++){r(x,75,38,17,0x14272f);r(x+2,77,34,12,i===4||i===10?0x88998c:0x324951);r(x+18,77,2,13,0x192c32);}
  for(const lamp of l.lamps){const on=strength(lamp.id,lamp.strength)>.15;
-  r(lamp.x-4,lamp.y+8,8,4,0x192a2e);r(lamp.x-1,lamp.y-20,3,30,0x7c8b86);r(lamp.x-11,lamp.y-24,24,6,0x283d42);r(lamp.x-8,lamp.y-22,18,3,on?0xc3d3c6:0x4b6061);
+  r(lamp.x-4,lamp.y+8,8,4,0x192a2e);r(lamp.x-1,lamp.y-20,3,30,0x7c8b86);r(lamp.x-11,lamp.y-24,24,6,0x283d42);r(lamp.x-8,lamp.y-22,18,3,on?(bloodMoon>.5?0xe66a62:0xc3d3c6):0x4b6061);
  }
  // The blood moon is seen as a broken reflection in rainwater on the drained basin floor.
  const basin=l.props.find(p=>p.kind==='fountain');

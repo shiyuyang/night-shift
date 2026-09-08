@@ -19,3 +19,18 @@ test('garden wave dims lamps in order, preserves exit light and restores every l
  const lights=out.filter(a=>a.type==='light');assert.deepEqual(lights.slice(0,5).map(a=>a.target),['LampEast','LampNorth','LampCenter','LampWest','LampSouth']);assert.ok(lights.slice(0,5).every(a=>a.strength===.06));assert.ok(lights.slice(5).every(a=>a.strength===.65));assert.equal(lights.some(a=>a.target==='LampExit'),false);assert.equal(lights.length,10);
  for(let i=0;i<100;i++)runtime.tick(.1,state);assert.equal(out.filter(a=>a.type==='light').length,10);
 });
+
+test('blood moon follows the dark wave and fades all light types without adding light or changing reach',async()=>{
+ const {BloodMoon}=await import('../src/runtime/blood-moon.ts');const moon=new BloodMoon(),l=makeLevel(7);
+ const runtime=new EventRuntime(l.events,a=>{if(a.type==='blood-moon')moon.target=a.strength;});
+ const state={flags:{first_box:true},zones:{NorthPathZone:true}};
+ runtime.tick(.01,state);runtime.tick(8.8,state);assert.equal(moon.target,0);runtime.tick(.3,state);assert.equal(moon.target,1);
+ moon.tick(1.5);assert.equal(moon.amount,.5);moon.tick(0);assert.equal(moon.amount,.5);moon.tick(1.5);assert.equal(moon.amount,1);
+ for(const light of [...l.lamps,{x:0,y:0,radius:250,strength:.98,color:'#d4c6a0',angle:0}]){const red=moon.light(light);assert.equal(red.radius,light.radius);assert.ok(red.strength>0&&red.strength<=light.strength);assert.ok(parseInt(red.color.slice(1,3),16)>parseInt(red.color.slice(3,5),16)*2);}
+ runtime.reset();assert.equal(moon.amount,1);moon.reset();assert.equal(moon.amount,0);assert.equal(moon.target,0);
+});
+
+test('blood moon light loss freezes on pause and remains bounded',async()=>{
+ const {BloodMoon}=await import('../src/runtime/blood-moon.ts');const m=new BloodMoon();m.target=1;const l={x:0,y:0,radius:180,strength:.6,color:'#bfcfc7'};
+ m.tick(6.9);const normal=m.light(l);m.tick(.45);const dip=m.light(l);assert.ok(dip.strength<normal.strength);m.tick(0);assert.deepEqual(m.light(l),dip);m.tick(1);assert.equal(m.light(l).strength,normal.strength);
+});
