@@ -1,13 +1,13 @@
 /* Independent of cover artwork: text follows locale; the fixed stage never mirrors. */
-@font-face{font-family:LocaleLatin;src:url('/fonts/locale-latin-f84459daf7.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleLatin;src:url('/fonts/locale-latin-84536a0a4d.woff2') format('woff2');font-display:swap}
 @font-face{font-family:LocaleArabic;src:url('/fonts/locale-ar-b37007c412.woff2') format('woff2');font-display:swap}
 @font-face{font-family:LocaleHebrew;src:url('/fonts/locale-he-f6569a40cd.woff2') format('woff2');font-display:swap}
 @font-face{font-family:LocaleThai;src:url('/fonts/locale-th-00cbed7909.woff2') format('woff2');font-display:swap}
 @font-face{font-family:LocaleMyanmar;src:url('/fonts/locale-my-5b9d94eaa6.woff2') format('woff2');font-display:swap}
-@font-face{font-family:LocaleJapanese;src:url('/fonts/locale-ja-da69667ac1.woff2') format('woff2');font-display:swap}
-@font-face{font-family:LocaleKorean;src:url('/fonts/locale-ko-061d1e2edc.woff2') format('woff2');font-display:swap}
-@font-face{font-family:LocaleHans;src:url('/fonts/locale-zh-Hans-2271a0e5db.woff2') format('woff2');font-display:swap}
-@font-face{font-family:LocaleHant;src:url('/fonts/locale-zh-Hant-0ed7e29190.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleJapanese;src:url('/fonts/locale-ja-8b8fa54639.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleKorean;src:url('/fonts/locale-ko-999e896c37.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleHans;src:url('/fonts/locale-zh-Hans-67a31fdc4d.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleHant;src:url('/fonts/locale-zh-Hant-da19f3544d.woff2') format('woff2');font-display:swap}
 :root{--locale-font:LocaleLatin;--locale-note:var(--locale-font)}
 :lang(ar){--locale-font:LocaleArabic}:lang(he){--locale-font:LocaleHebrew}:lang(th){--locale-font:LocaleThai}:lang(my){--locale-font:LocaleMyanmar}:lang(ja){--locale-font:LocaleJapanese}:lang(ko){--locale-font:LocaleKorean}:lang(zh-Hans){--locale-font:LocaleHans;--locale-note:PhotoNote,LocaleHans}:lang(zh-Hant){--locale-font:LocaleHant}
 body,button,select,option,kbd,dialog,body h1,body h2,body h3,body b,body small,body p,body span,body label,body i{font-family:var(--locale-font),LocaleLatin,NightPixel,sans-serif!important;text-shadow:none;font-weight:400}
@@ -55,13 +55,44 @@ html[data-script=complex] *{letter-spacing:normal!important;text-transform:none!
 /* The fixed cover sits at 1000; its settings must remain above it. */
 .game-wrap:has(#start-layer:not(.hidden)) #pause-menu{position:fixed;z-index:1001}
 
-/* Reserve a real action row above the ledger rule; translations scroll independently. */
-#start-layer .patrol-book{height:570px;min-height:570px;grid-template-rows:auto minmax(0,1fr) auto;padding-bottom:13%}
+/* Reserve a real action row above the ledger rule; translations fit within each page. */
+#start-layer .patrol-book{height:auto;min-height:570px;grid-template-rows:auto minmax(374px,1fr) auto;padding-bottom:13%}
 #start-layer .book-body{min-height:0;grid-template-rows:minmax(0,1fr)}
-#start-layer .archive-sheet{min-height:0;max-height:none;padding-bottom:8px}
+#start-layer .archive-sheet{min-height:0;max-height:none;padding-bottom:8px;overflow:hidden}
 #start-layer .book-footer{margin-top:10px;border-top:0;border-bottom:1px solid #42585c44;padding:0 4px 10px;align-items:flex-end}
 #start-layer #start{top:0;flex-shrink:0}
 /* Keep a visible image, with CORS-compatible luminance masking for its black backing. */
 #start-layer .game-brand{aspect-ratio:8/3;isolation:auto}
 #start-layer .game-brand img{opacity:1;mask-image:var(--brand-source);mask-mode:luminance;mask-size:100% 100%;mask-repeat:no-repeat}
 #start-layer .game-brand::after{display:none}
+
+/* The stamp has its own fixed slot, so translated labels cannot push down the record. */
+#start-layer .record-heading{position:relative;display:block;height:32px;margin-bottom:9px;padding-right:0}
+#start-layer .record-heading .file-code{display:block;max-width:51%;font-size:10px;line-height:1.35}
+#start-layer .record-heading .file-stamp{position:absolute;right:0;top:0;width:46%;max-width:none;box-sizing:border-box;margin:0;padding:4px 5px;font-size:10px;line-height:1.25;letter-spacing:0;text-align:center;white-space:normal}
+#start-layer .archive-sheet .survey-frame{width:174px;max-width:174px}
+#start-layer .archive-sheet #file-note,#start-layer .archive-sheet #stage-detail{letter-spacing:0;min-height:0;line-height:1.45;margin:8px 0 0}
+
+/* A rubber stamp has a fixed 3:1 die; never stretch the impression to fit copy. */
+#start-layer .record-heading{height:40px}
+#start-layer .record-heading .file-stamp{width:120px;height:40px;aspect-ratio:3/1;display:flex;align-items:center;justify-content:center;padding:4px 8px;white-space:nowrap;font-family:PhotoNote,var(--locale-font),serif!important;font-size:12px;line-height:1;letter-spacing:0}
+#start-layer .record-heading .file-stamp::after{inset:0;background-size:contain;background-position:center;background-repeat:no-repeat}
+
+#start-layer .record-heading .file-stamp{font-size:16px}
+
+#start-layer .archive-sheet{padding-top:5px}
+#start-layer .record-heading{margin-bottom:5px}
+#start-layer .archive-sheet #file-title{margin:3px 0 6px}
+#start-layer .archive-sheet .survey-frame>span{line-height:1.35;padding:3px 2px}
+#start-layer .archive-sheet #file-note,#start-layer .archive-sheet #stage-detail{width:100%;margin-top:4px}
+
+#start-layer .record-heading .file-stamp{min-width:120px;max-width:120px;min-height:40px;max-height:40px}
+
+#start-layer .record-heading{margin-bottom:10px}
+#start-layer .archive-sheet .survey-frame>span{letter-spacing:0}
+
+/* Preserve the original chapter index spacing. */
+#start-layer .book-body{min-height:374px}
+
+/* Dedicated document seal; the patrol action retains its rectangular impression. */
+#start-layer .record-heading .file-stamp::after{background-image:url('/assets/hospital-seal-oval-v1.webp');background-size:contain;opacity:.72}

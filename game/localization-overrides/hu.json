@@ -1,5 +1,13 @@
 {
   "menu.hospital": "Aoba város · Matsubara Általános Kórház",
   "ui.patrol-duration": "Járőrözés időtartama",
-  "ui.archived-footage-not-live": "Az osztály bezárása előtt"
+  "ui.archived-footage-not-live": "Az osztály bezárása előtt",
+  "menu.pending": "ELLENŐRIZENDŐ",
+  "menu.complete": "ELLENŐRIZVE",
+  "menu.sketch": "Bezárás előtt",
+  "event.quiet": "Ritkább üldözések",
+  "event.supply": "Tartalék: +1 villanás",
+  "event.power": "Ingadozó áram; kimaradások",
+  "menu.anomaly": "{threat}\n{event}",
+  "menu.start": "Indítás →"
 }

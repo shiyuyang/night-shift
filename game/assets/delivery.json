@@ -104,13 +104,18 @@
       "source": "/assets/stamp-button-pressed-v1.png",
       "file": "/assets/stamp-button-pressed-v1.webp",
       "encoding": "webp-q95"
+    },
+    {
+      "source": "/assets/hospital-seal-oval-v1.png",
+      "file": "/assets/hospital-seal-oval-v1.webp",
+      "encoding": "webp-q95"
     }
   ],
   "staticFiles": [
     "/fonts/ark-pixel-12px-monospaced-zh_cn.otf.woff2",
     "/fonts/OFL.txt",
     "/fonts/SOURCE.txt",
-    "/fonts/hospital-handwriting-f4b06c07ab.woff2",
+    "/fonts/hospital-handwriting-37a4a96126.woff2",
     "/fonts/MaShanZheng-OFL.txt",
     "/fonts/photo-note-SOURCE.txt",
     "/fonts/notosanstc-OFL.txt",
@@ -122,14 +127,14 @@
     "/fonts/notosansjp-OFL.txt",
     "/fonts/notosanskr-OFL.txt",
     "/fonts/notosansmyanmar-OFL.txt",
-    "/fonts/locale-latin-f84459daf7.woff2",
+    "/fonts/locale-latin-84536a0a4d.woff2",
     "/fonts/locale-ar-b37007c412.woff2",
     "/fonts/locale-he-f6569a40cd.woff2",
     "/fonts/locale-th-00cbed7909.woff2",
     "/fonts/locale-my-5b9d94eaa6.woff2",
-    "/fonts/locale-ja-da69667ac1.woff2",
-    "/fonts/locale-ko-061d1e2edc.woff2",
-    "/fonts/locale-zh-Hans-2271a0e5db.woff2",
-    "/fonts/locale-zh-Hant-0ed7e29190.woff2"
+    "/fonts/locale-ja-8b8fa54639.woff2",
+    "/fonts/locale-ko-999e896c37.woff2",
+    "/fonts/locale-zh-Hans-67a31fdc4d.woff2",
+    "/fonts/locale-zh-Hant-da19f3544d.woff2"
   ]
 }

@@ -1,3 +1,13 @@
 {
-  "ui.archived-footage-not-live": "Avant la fermeture du service"
+  "ui.archived-footage-not-live": "Avant la fermeture du service",
+  "menu.pending": "À VÉRIFIER",
+  "menu.complete": "VÉRIFIÉ",
+  "menu.sketch": "Avant fermeture",
+  "event.quiet": "Poursuites plus espacées",
+  "event.supply": "Réserve : +1 flash",
+  "event.power": "Courant instable, coupures",
+  "menu.anomaly": "{threat}\n{event}",
+  "note.1": "Une caisse en trop. Un bruit derrière les rayons.",
+  "stage.1": "Réserve médicale",
+  "menu.start": "Commencer →"
 }

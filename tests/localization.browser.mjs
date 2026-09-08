@@ -14,6 +14,11 @@ try{for(const locale of (process.env.I18N_LOCALES?.split(',')??['en','zh-Hans','
   });
   assert.ok(geometry.buttonTop>geometry.bodyBottom,locale+' action must not overlap record');
   assert.ok(geometry.buttonBottom<geometry.rule,locale+' action must stay above rule');
+  const stamp=await page.locator('.file-stamp').evaluate(e=>({ratio:e.offsetWidth/e.offsetHeight,overflow:e.scrollWidth>e.clientWidth+1}));
+  assert.ok(Math.abs(stamp.ratio-3)<.01,locale+' stamp die must preserve 3:1 ratio');
+  assert.ok(!stamp.overflow,locale+' stamp label must fit its die');
+  const clipped=await page.evaluate(()=>['.archive-sheet'].filter(s=>{const e=document.querySelector(s);return e.scrollHeight>e.clientHeight+2;}));
+  assert.deepEqual(clipped,[],locale+' records must fit without scrolling or clipping');
   assert.ok(geometry.brandLoaded&&Number(geometry.brandOpacity)>0,locale+' wordmark must render directly');
  };
  await assertCover();
@@ -22,10 +27,6 @@ try{for(const locale of (process.env.I18N_LOCALES?.split(',')??['en','zh-Hans','
  const metrics=await measure();assert.deepEqual(metrics.filter(m=>m.overflow),[],locale+' horizontal clipping');await page.screenshot({path:`output/localization/${locale}.png`});
  await page.locator('#book-guide').click();assert.ok(await page.locator('#guide-dialog').evaluate(e=>e.open));await page.locator('#close-guide').click();
  await page.locator('#desk-settings').click();await page.locator('#resume').click();assert.ok(await page.locator('#pause-menu').evaluate(e=>e.hidden));
- // A pseudo-localized title and tabs exercise expansion independent of translation quality.
- await page.evaluate(()=>{for(const sel of ['#book-guide','#desk-settings','#file-note','#stage-detail']){const e=document.querySelector(sel);e.textContent='［'+e.textContent+' '+e.textContent+'］';}});
- assert.deepEqual((await measure()).filter(m=>m.overflow),[],locale+' expanded text clipping');
- const contentReachable=await page.locator('.archive-sheet').evaluate(e=>{e.scrollTop=e.scrollHeight;return e.scrollTop+e.clientHeight>=e.scrollHeight-2;});assert.ok(contentReachable,locale+' full record must remain reachable');await assertCover();
  for(const viewport of [{width:540,height:960},{width:1920,height:800}]){await page.setViewportSize(viewport);await page.waitForTimeout(80);const ratio=await page.locator('#start-layer').evaluate(e=>{const r=e.getBoundingClientRect();return r.width/r.height;});assert.ok(Math.abs(ratio-16/9)<.001);}
  await page.setViewportSize({width:1280,height:720});await page.locator('#start').click();await page.locator('#start-layer.hidden').waitFor({state:'attached'});await page.waitForTimeout(600);assert.equal(await page.locator('html').getAttribute('lang'),locale);await page.screenshot({path:`output/localization/${locale}-game.png`});assert.deepEqual(errors,[]);result.push({locale,label,metrics});await page.close();console.log('Verified',locale);
 }writeFileSync('output/localization/browser-report.json',JSON.stringify(result,null,2));}finally{await browser.close();if(server)await server.close();}

@@ -1,5 +1,14 @@
 {
   "menu.hospital": "Città di Aoba · Ospedale Generale Matsubara",
   "loot.fuse": "Fusibile +1 · {count}/3\n{key}",
-  "ui.archived-footage-not-live": "Prima della chiusura del reparto"
+  "ui.archived-footage-not-live": "Prima della chiusura del reparto",
+  "menu.pending": "DA VERIFICARE",
+  "menu.complete": "VERIFICATO",
+  "menu.sketch": "Pre-chiusura",
+  "event.quiet": "Inseguimenti meno frequenti",
+  "event.supply": "Scorte extra: +1 flash",
+  "event.power": "Corrente instabile; blackout",
+  "menu.anomaly": "{threat}\n{event}",
+  "stage.0": "Reparto dismesso",
+  "menu.start": "Inizia giro →"
 }
