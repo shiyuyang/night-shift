@@ -21,6 +21,9 @@ try{for(const locale of (process.env.I18N_LOCALES?.split(',')??['en','zh-Hans','
   assert.deepEqual(clipped,[],locale+' records must fit without scrolling or clipping');
   assert.ok(geometry.brandLoaded&&Number(geometry.brandOpacity)>0,locale+' wordmark must render directly');
  };
+ assert.equal(await page.locator('#stage-list button').count(),7);
+ const indexFits=await page.evaluate(()=>{const rows=[...document.querySelectorAll('#stage-list button')];return rows.at(-1).getBoundingClientRect().bottom<=document.querySelector('.stage-pages').getBoundingClientRect().top&&rows.every(row=>[...row.querySelectorAll('b,small')].every(text=>text.scrollWidth<=text.clientWidth+1&&text.getBoundingClientRect().bottom<=row.getBoundingClientRect().bottom+1));});
+ assert.ok(indexFits,locale+' seven chapter rows must fit above pagination');
  await assertCover();
  for(let stage=0;stage<3;stage++){await page.locator('#stage-list button').nth(stage).click();await assertCover();}
  await page.locator('#stage-list button').first().click();

@@ -1,11 +1,11 @@
 import {t,stageName,canvasFont} from '../i18n';
-import {assetUrl} from '../runtime/asset-url';
+import {corsAssetUrl} from '../runtime/asset-url';
 import type {Level} from '../levels';
 const scenes=['ward','warehouse','plant'] as const;
 const images=new Map<string,Promise<HTMLImageElement>>();
 function loadImage(file:string){
  let pending=images.get(file);
- if(!pending){pending=new Promise<HTMLImageElement>((resolve,reject)=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=()=>{images.delete(file);reject(new Error('Archive image unavailable'));};image.crossOrigin="anonymous";image.src=assetUrl(file);});images.set(file,pending);}
+ if(!pending){pending=new Promise<HTMLImageElement>((resolve,reject)=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=()=>{images.delete(file);reject(new Error('Archive image unavailable'));};image.crossOrigin="anonymous";image.src=corsAssetUrl(file);});images.set(file,pending);}
  return pending;
 }
 /** Authored location stills, rendered on the same fixed pixel grid as the archive. */

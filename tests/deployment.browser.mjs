@@ -24,11 +24,12 @@ try{
  page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if((r.url().startsWith(new URL(url).origin)||r.url().startsWith(assetBase))&&!new URL(r.url()).pathname.startsWith('/cdn-cgi/')){local.push(r.url());if(r.status()>=400)bad.push([r.status(),r.url()]);}});
  await page.goto(url,{waitUntil:'domcontentloaded',timeout:networkTimeout});await page.locator('#start:enabled').waitFor({timeout:networkTimeout});
  await page.waitForFunction(()=>document.querySelector('#survey')?.dataset.loaded==='true');
+ assert.equal(await page.locator('#stage-list button').count(),7);
  assert.equal(await page.locator('[data-command]').count(),0);
  assert.equal(await page.title(),'夜勤病棟');
  const brand=page.locator('.game-brand img');
  assert.equal(await brand.getAttribute('alt'),'夜勤病棟');
- assert.equal(new URL(await brand.getAttribute('src'),url).href,assetBase+'assets/yakin-byoutou-title-v4.webp');
+ assert.equal(new URL(await brand.getAttribute('src'),url).href,assetBase+'assets/yakin-byoutou-title-v4.webp?cors=anonymous');
  assert.ok(await brand.evaluate(image=>image.complete&&image.naturalWidth>0),'Title image must load');
  assert.equal(await page.locator('.desk-title p').textContent(),'今晚的病人，比名册上多一位。');
  // Verify the cover's lamp actually changes opacity.
