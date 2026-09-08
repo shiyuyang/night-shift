@@ -54,3 +54,14 @@ html[data-script=complex] *{letter-spacing:normal!important;text-transform:none!
 
 /* The fixed cover sits at 1000; its settings must remain above it. */
 .game-wrap:has(#start-layer:not(.hidden)) #pause-menu{position:fixed;z-index:1001}
+
+/* Reserve a real action row above the ledger rule; translations scroll independently. */
+#start-layer .patrol-book{height:570px;min-height:570px;grid-template-rows:auto minmax(0,1fr) auto;padding-bottom:13%}
+#start-layer .book-body{min-height:0;grid-template-rows:minmax(0,1fr)}
+#start-layer .archive-sheet{min-height:0;max-height:none;padding-bottom:8px}
+#start-layer .book-footer{margin-top:10px;border-top:0;border-bottom:1px solid #42585c44;padding:0 4px 10px;align-items:flex-end}
+#start-layer #start{top:0;flex-shrink:0}
+/* Keep a visible image, with CORS-compatible luminance masking for its black backing. */
+#start-layer .game-brand{aspect-ratio:8/3;isolation:auto}
+#start-layer .game-brand img{opacity:1;mask-image:var(--brand-source);mask-mode:luminance;mask-size:100% 100%;mask-repeat:no-repeat}
+#start-layer .game-brand::after{display:none}
