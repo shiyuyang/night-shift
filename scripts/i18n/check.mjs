@@ -13,7 +13,7 @@ function scan(file){file=path.resolve(file);if(seen.has(file)||!file.endsWith('.
  if(ts.isStringLiteralLike(n)&&/[\p{Script=Han}]/u.test(n.text)&&!dnt.has(n.text))errors.push(path.relative('.',file)+':'+(tree.getLineAndCharacterOfPosition(n.getStart()).line+1)+' literal player text: '+n.text.slice(0,50));
  if(ts.isPropertyAccessExpression(n)&&['textContent','innerText'].includes(n.name.text)&&ts.isBinaryExpression(n.parent)&&n.parent.left===n&&ts.isStringLiteralLike(n.parent.right)){const v=n.parent.right.text;if(/\p{L}{2}/u.test(v)&&!dnt.has(v))errors.push(path.relative('.',file)+' literal text sink: '+v);}
  if(ts.isCallExpression(n)&&ts.isPropertyAccessExpression(n.expression)&&['setText','fillText','say','notice'].includes(n.expression.name.text)&&n.arguments[0]&&ts.isStringLiteralLike(n.arguments[0])){const v=n.arguments[0].text;if(v&&!dnt.has(v))errors.push(path.relative('.',file)+' literal Canvas text: '+v);}
- 
+
  if(ts.isCallExpression(n)&&ts.isPropertyAccessExpression(n.expression)){
   const method=n.expression.name.text;
   const index=method==='text'&&ts.isPropertyAccessExpression(n.expression.expression)&&n.expression.expression.name.text==='add'?2:method==='setAttribute'&&n.arguments[0]&&ts.isStringLiteralLike(n.arguments[0])&&['aria-label','title','alt','placeholder'].includes(n.arguments[0].text)?1:-1;
