@@ -12,6 +12,8 @@
     "calmDelay": 1,
     "calmRate": 0.25,
     "warningSeconds": 0.8,
+    "chaseSpeed": 145,
+    "lungeRadius": 110,
     "dashSpeed": 220,
     "dashSeconds": 0.9,
     "flashSeconds": 6,

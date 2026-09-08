@@ -6,7 +6,7 @@ export const lessons={
  'monster-listener':{title:'听声者 · 轻走离开',text:'它看不见你，但疾跑、开箱和开关门会暴露位置。轻走离开发声处，或用 R 诱饵引开它；不要停在它正在寻找的位置。',target:'world'},
  'monster-light-shy':{title:'畏光者 · 照一下，转身跑',text:'回头用手电照它一下，它会遮脸后退。转身后仍有约 2 秒逃跑时间；它放下手臂就会恢复追逐，短时间重复照光不能延长控制。按 F 闪光可争取更长时间。',target:'world'},
  'monster-patroller':{title:'巡逻者 · 转角关门',text:'被它看见就会遭到追逐。绕过转角、按 E 关门挡住它，脱离视线后再藏身。',target:'world'},
- 'monster-weeper':{title:'哭泣患者 · 别惊动它',text:'按 T 熄灯，轻走并保持距离。近处照光、疾跑和噪声会激怒它。一旦站起，熄灯或离开也不会取消扑击；按 F 闪光打断，或向侧面躲开。',target:'world'},
+ 'monster-weeper':{title:'哭泣患者 · 别惊动它',text:'按 T 熄灯，轻走并保持距离。近处照光、疾跑和噪声会激怒它。一旦站起就会持续追杀，扑空、关灯或藏身都不会让它放弃。按 F 闪光才能终止追杀；侧躲只能避开这次扑击。',target:'world'},
  health:{title:'留意你的生命',text:'左上方的白色长条是生命值。受伤会缩短，降到 0 就会死亡；受伤后的闪烁只是短暂无敌。负伤后用 Q 绷带恢复 40 生命。',target:'health'},
  flashlight:{title:'把光留给需要的地方',text:'右上角单独显示手电电量和剩余秒数，和生命值无关。按 T 或点击手电图标开关。现在试着关闭，再打开：关灯或藏身不耗电；需要看清前方时再开灯。',target:'light'},
  move:{title:'第一条值班守则',text:'WASD / 方向键移动。按住 Shift 可短暂疾跑，松开后恢复体力。先沿走廊走一段。',target:'stamina'},

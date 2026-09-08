@@ -82,6 +82,6 @@
   "tutorial.monster-patrollerTitle": "巡逻者 · 转角关门",
   "tutorial.monster-patrollerText": "被它看见就会遭到追逐。绕过转角、按 E 关门挡住它，脱离视线后再藏身。",
   "tutorial.monster-weeperTitle": "哭泣患者 · 别惊动它",
-  "tutorial.monster-weeperText": "按 T 熄灯，轻走并保持距离。近处照光、疾跑和噪声会激怒它。一旦站起，熄灯或离开也不会取消扑击；按 F 闪光打断，或向侧面躲开。",
+  "tutorial.monster-weeperText": "按 T 熄灯，轻走并保持距离。近处照光、疾跑和噪声会激怒它。一旦站起就会持续追杀，扑空、关灯或藏身都不会让它放弃。按 F 闪光才能终止追杀；侧躲只能避开这次扑击。",
   "tutorial.monsterContinue": "记住了，继续"
 }
