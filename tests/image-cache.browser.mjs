@@ -10,12 +10,13 @@ const executablePath=process.env.CHROME_PATH||['/usr/bin/google-chrome-stable','
 const browser=await chromium.launch({executablePath,headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
 try{
  const page=await browser.newPage({locale:'zh-CN',viewport:{width:1440,height:900}});
+ page.on('response',r=>{if(r.status()>=400)console.error('HTTP failure:',r.status(),r.url());});
  page.on('requestfailed',request=>console.error('Network failure:',request.url(),request.failure()?.errorText));
  page.on('console',message=>{if(message.type()==='error')console.error('Browser:',message.text());});
  // Explicit test-only permission for development proxies using private/Fake-IP DNS.
  if(process.env.TEST_ALLOW_LOCAL_NETWORK==='1')await page.context().grantPermissions(['local-network-access'],{origin:new URL(url).origin});
  const fixture=url+'__image_cache_fixture';
- await page.route(fixture,route=>route.fulfill({contentType:'text/html',body:'<!doctype html><title>Cache fixture</title>'}));
+ await page.route(fixture,route=>route.fulfill({contentType:'text/html',body:'<!doctype html><link rel="icon" href="data:,"><title>Cache fixture</title>'}));
  await page.goto(fixture);
  await page.unroute(fixture);
  // Deliberately keep the real browser cache enabled. R2's no-Origin response
