@@ -62,13 +62,13 @@ try{
  await page.waitForTimeout(1500);await page.screenshot({path:'/tmp/night-shift-deployed.png'});
  assert.deepEqual(errors,[]);assert.deepEqual(bad,[]);
  assert.ok(local.some(u=>u.endsWith('.ogg')));assert.ok(local.some(u=>u.includes('hospital-')&&u.endsWith('.webp')));
- assert.ok(local.some(u=>u.endsWith('.q95.webp')));
- assert.ok(!local.some(u=>u.endsWith('.png')));
+ assert.ok(local.some(u=>new URL(u).pathname.endsWith('.q95.webp')));
+ assert.ok(!local.some(u=>new URL(u).pathname.endsWith('.png')));
  assert.equal(new Set(local.filter(u=>u.endsWith(fallback?'.mp3':'.ogg'))).size,9);
  assert.equal(new Set(local.filter(u=>u.includes(fallback?'sfx-mp3-':'sfx-opus-')&&u.endsWith('.bin'))).size,1);
  if(!fallback)assert.ok(!local.some(u=>u.endsWith('.mp3')), 'Normal playback should use Opus only');
  assert.ok(local.every(u=>u.startsWith(assetBase)||new URL(u).pathname.startsWith(prefix)),JSON.stringify(local));
- if(assetBase!==url)assert.ok(local.filter(u=>/\.(webp|ogg|mp3|bin|woff2)$/.test(u)).every(u=>u.startsWith(assetBase)),'All media and fonts must use R2');
+ if(assetBase!==url)assert.ok(local.filter(u=>/\.(webp|ogg|mp3|bin|woff2)$/.test(new URL(u).pathname)).every(u=>u.startsWith(assetBase)),'All media and fonts must use R2');
  // Decode every published image, including archive scenes not selected on night one.
  const imagePaths=deliveryFiles().filter(p=>p.endsWith('.webp'));
  // CSS images may be in the browser cache from a no-CORS request. Make a fresh
