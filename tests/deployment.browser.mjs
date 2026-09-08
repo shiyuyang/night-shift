@@ -32,7 +32,8 @@ try{
  assert.equal(await page.locator('#start').textContent(),'开始巡查 →');
  assert.equal(await page.locator('.survey-frame span').textContent(),'封楼前留影');
  await page.evaluate(()=>document.fonts.ready);
- assert.ok(await page.evaluate(()=>document.fonts.check('17px PhotoNote','封楼前留影尚未交班开始巡查')));
+ assert.ok(await page.evaluate(()=>document.fonts.check('17px PhotoNote','封楼前留影待巡查已巡查开始巡查')));
+ assert.ok(await page.locator('.file-stamp').evaluate(e=>getComputedStyle(e,'::after').backgroundImage.includes('hospital-seal-oval-v1.webp')),'The document must use the oval seal');
  // The menu keeps one composition across wide and portrait windows.
  const geometry=()=>page.evaluate(()=>{
   const stage=document.querySelector('#start-layer').getBoundingClientRect();
@@ -73,5 +74,5 @@ try{
  assert.deepEqual(errors,[]);
  assert.deepEqual(bad,[]);
  assert.deepEqual(originRequests,[],'Game attempted to contact Linode/API');
- console.log('Deployment checks passed:',url,`— game start, 16 images, 9 music + 1 sound pack (${fallback?'MP3 fallback':'Opus'}), no source/unused files, correct asset origin.`);
+ console.log('Deployment checks passed:',url,`— game start, ${imagePaths.length} images, 9 music + 1 sound pack (${fallback?'MP3 fallback':'Opus'}), no source/unused files, correct asset origin.`);
 }finally{await browser.close();if(server)await new Promise(r=>server.httpServer.close(r));}

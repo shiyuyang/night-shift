@@ -189,6 +189,15 @@
     "encoding": "webp-q95"
   },
   {
+    "file": "assets/hospital-seal-oval-v1.webp",
+    "source": "assets/hospital-seal-oval-v1.png",
+    "source_bytes": 778097,
+    "bytes": 350056,
+    "source_sha256": "afe2ec48f0dcd9599c5c75ad3eb3ca39581bf81e9bd0d19b8bf037b26464e236",
+    "sha256": "8e867b3afcf4dcd8517729f64f3434a9c01bb289debbd643c0fe3753ab5d8930",
+    "encoding": "webp-q95"
+  },
+  {
     "file": "audio/ward-exploration-v3.opus",
     "source": "audio/ward-exploration-v3.mp3",
     "source_bytes": 641194,
@@ -430,14 +439,5 @@
     "source_sha256": "422ef2b9443ea104a4db930f9fd1d2a3899d75d86c09e0de8fd75a6b40a4becb",
     "sha256": "7f69155866e414df034c15b2904e074f8f30615579ec6c2519557e72c35919f1",
     "encoding": "opus-40k"
-  },
-  {
-    "file": "assets/hospital-seal-oval-v1.webp",
-    "source": "assets/hospital-seal-oval-v1.png",
-    "source_bytes": 778097,
-    "bytes": 350056,
-    "source_sha256": "afe2ec48f0dcd9599c5c75ad3eb3ca39581bf81e9bd0d19b8bf037b26464e236",
-    "sha256": "8e867b3afcf4dcd8517729f64f3434a9c01bb289debbd643c0fe3753ab5d8930",
-    "encoding": "webp-q95"
   }
 ]

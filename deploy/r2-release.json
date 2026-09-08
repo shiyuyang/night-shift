@@ -4,7 +4,7 @@
   "domain": "night-shift-assets.liveinteractivegame.com",
   "zoneId": "30badb66445e606e10540be49d75e584",
   "prefix": "games/night-shift",
-  "version": "9e6e38cfa5b14550",
+  "version": "499cc6e7e9b81a28",
   "files": [
     {
       "file": "assets/archive-plant-v1.q95.webp",
@@ -55,6 +55,11 @@
       "file": "assets/hospital-register-selected-v1.webp",
       "bytes": 571216,
       "sha256": "054e5fa98826311416bb7bf89b29e4e9fbb1870a7625aaae59a961a450db29a6"
+    },
+    {
+      "file": "assets/hospital-seal-oval-v1.webp",
+      "bytes": 350056,
+      "sha256": "8e867b3afcf4dcd8517729f64f3434a9c01bb289debbd643c0fe3753ab5d8930"
     },
     {
       "file": "assets/hospital-wall-v2.q95.webp",
@@ -232,9 +237,9 @@
       "sha256": "85cb13ec5954e082b256bba488ff9c9366a9f3166a61bf174cddb9fde0651ae0"
     },
     {
-      "file": "fonts/hospital-handwriting-f4b06c07ab.woff2",
-      "bytes": 12072,
-      "sha256": "f4b06c07abad9dc4208a6e31ef552690438257c721642d62a5231ff062b781a5"
+      "file": "fonts/hospital-handwriting-37a4a96126.woff2",
+      "bytes": 15408,
+      "sha256": "37a4a96126c0c0eeada67a8f772bd4b0c191600a20aa2967beef3be4a24fc2cf"
     },
     {
       "file": "fonts/locale-ar-b37007c412.woff2",
@@ -247,19 +252,19 @@
       "sha256": "f6569a40cdf5a12a2d36711eb80238057e10148ab1e52417e37962974e9124c0"
     },
     {
-      "file": "fonts/locale-ja-da69667ac1.woff2",
-      "bytes": 253908,
-      "sha256": "da69667ac1b2bd0d39af666d734acf6905e24c3e20903a88953191b430c39fe5"
+      "file": "fonts/locale-ja-8b8fa54639.woff2",
+      "bytes": 253296,
+      "sha256": "8b8fa54639e72d58e0f6b0a34495b1302a5ced2157a642bd7717490863502bdf"
     },
     {
-      "file": "fonts/locale-ko-061d1e2edc.woff2",
-      "bytes": 105148,
-      "sha256": "061d1e2edc983cb91599ef787ab4f9e170be419849ac67709254a502be863d92"
+      "file": "fonts/locale-ko-999e896c37.woff2",
+      "bytes": 105176,
+      "sha256": "999e896c3755f196a2af338b8f3ed4cc02ea85380ea3f944069b127651c33776"
     },
     {
-      "file": "fonts/locale-latin-f84459daf7.woff2",
-      "bytes": 117416,
-      "sha256": "f84459daf74d277a22f0ef5df8989083755129e234c23228879c9af5a4c12518"
+      "file": "fonts/locale-latin-84536a0a4d.woff2",
+      "bytes": 116892,
+      "sha256": "84536a0a4dd3e74d8d6f3a9c786213c73a3fe7ef698a620f0556a02f21c201f5"
     },
     {
       "file": "fonts/locale-my-5b9d94eaa6.woff2",
@@ -272,14 +277,14 @@
       "sha256": "00cbed7909b42f2bcc1ba9c6e9896983df3aafc054e8cb3196c7bd306fd1abd2"
     },
     {
-      "file": "fonts/locale-zh-Hans-2271a0e5db.woff2",
-      "bytes": 203836,
-      "sha256": "2271a0e5dbb59555455528e3d8982654b06e8fcbaf8b40c7c5b25e73e98ba39c"
+      "file": "fonts/locale-zh-Hans-67a31fdc4d.woff2",
+      "bytes": 204120,
+      "sha256": "67a31fdc4d9b1883dd4c4cef49c06fd241996887c4d4d0d70e510ea3af301e6d"
     },
     {
-      "file": "fonts/locale-zh-Hant-0ed7e29190.woff2",
-      "bytes": 221000,
-      "sha256": "0ed7e29190d150af93e98a07da0bc5c5680512922070ccd5ee0dcebb224cfc50"
+      "file": "fonts/locale-zh-Hant-da19f3544d.woff2",
+      "bytes": 220460,
+      "sha256": "da19f3544d6834ee2a6cfad375a2c0277b5172458a51dcdfe2c5a202ff597441"
     },
     {
       "file": "fonts/notosans-OFL.txt",
@@ -332,6 +337,6 @@
       "sha256": "d113cd651f212760397282b77588d331a6079268e539375b784992fb97ecd320"
     }
   ],
-  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/9e6e38cfa5b14550/",
-  "verifiedAt": "2026-09-08T06:04:44.287Z"
+  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/499cc6e7e9b81a28/",
+  "verifiedAt": "2026-09-08T09:16:12.096Z"
 }
