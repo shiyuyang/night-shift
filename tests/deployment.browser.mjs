@@ -14,6 +14,11 @@ try{
  const page=await browser.newPage({locale:'zh-CN',viewport:{width:1440,height:900}});const errors=[],bad=[],local=[];
  const fallback=process.env.TEST_MP3_FALLBACK==='1';
  const originRequests=[];
+ // Exercise uncached delivery. Chromium's disk cache can stall concurrent R2
+ // response bodies even after receiving HTTP 200 on this release host.
+ const network=await page.context().newCDPSession(page);
+ await network.send('Network.enable');
+ await network.send('Network.setCacheDisabled',{cacheDisabled:true});
  if(process.env.TEST_NO_LINODE==='1')await page.route(/https?:\/\/(?:api\.liveinteractivegame\.com|139\.162\.147\.129)(?:\/|:)/,route=>{originRequests.push(route.request().url());return route.abort();});
  if(fallback)await page.route(/(?:\.ogg$|sfx-opus-.*\.bin$)/,route=>route.fulfill({status:200,contentType:'application/octet-stream',body:'unsupported audio fixture'}));
  page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if((r.url().startsWith(new URL(url).origin)||r.url().startsWith(assetBase))&&!new URL(r.url()).pathname.startsWith('/cdn-cgi/')){local.push(r.url());if(r.status()>=400)bad.push([r.status(),r.url()]);}});
