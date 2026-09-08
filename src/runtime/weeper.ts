@@ -2,6 +2,7 @@ import rules from '../../game/encounters.json' with {type:'json'};
 import {clearContact,feetAt,monsterFeetAt,moveWithCollision,overlaps,type Box,type Position} from '../collision.ts';
 import {patrolPath,followPatrolPath} from '../patrol.ts';
 export const weeperRules=rules.weeper;
+const riseThreshold=.75;
 export type WeeperPhase='idle'|'alert'|'warning'|'dash'|'stunned'|'returning';
 export type WeeperEvent='cry'|'warning'|'dash'|'suppressed'|'hit'|'quiet';
 export interface WeeperInput {player:Position;hidden:boolean;angle:number;light:boolean;sprinting:boolean;noise:boolean;solids:Box[];architecture:Box[];bounds:Box;immune:boolean;flash?:boolean;}
@@ -29,21 +30,22 @@ export class Weeper {
    const close=visible&&distance<weeperRules.alertRadius&&this.grace===0;
    this.watchful=Math.max(0,this.watchful-dt);
    const disturbance=close&&(this.watchful>0||input.light&&diff<.62||input.sprinting||input.noise||distance<50);
-   if(disturbance){this.calmWait=weeperRules.calmDelay;this.anger=Math.min(1,this.anger+dt/weeperRules.alertSeconds);}
+   // Frame 5 starts standing: from here the attack builds even after all stimuli disappear.
+   if(disturbance||this.anger>=riseThreshold){this.calmWait=weeperRules.calmDelay;this.anger=Math.min(1,this.anger+dt/weeperRules.alertSeconds);}
    else{const cooling=Math.max(0,dt-this.calmWait);this.calmWait=Math.max(0,this.calmWait-dt);this.anger=Math.max(0,this.anger-cooling*weeperRules.calmRate);}
    this.phase=this.anger>0?'alert':'idle';
    if((this.noticed||this.anger>=.3)&&!this.hushed){this.hushed=true;events.push('quiet');}
    if(!this.noticed&&this.anger===0&&this.watchful===0&&this.hushed){this.hushed=false;this.cryAt=this.elapsed+3;}
-   if(this.noticed||this.phase==='alert')this.angle=Math.atan2(input.player.y-this.position.y,input.player.x-this.position.x);
-   if(close&&distance<weeperRules.touchRadius||this.anger>=1){this.phase='warning';this.clock=weeperRules.warningSeconds;this.angle=toward+Math.PI;events.push('quiet','warning');}
+   if(visible&&(this.noticed||this.phase==='alert'))this.angle=Math.atan2(input.player.y-this.position.y,input.player.x-this.position.x);
+   if(close&&distance<weeperRules.touchRadius||this.anger>=1){this.phase='warning';this.clock=weeperRules.warningSeconds;events.push('quiet','warning');}
    else if(!this.hushed&&distance<290&&this.elapsed>=this.cryAt){this.cryAt=this.elapsed+8.5+Math.floor(this.elapsed)%3;events.push('cry');}
    return events;
   }
   if(this.phase==='warning'){
    this.clock=Math.max(0,this.clock-dt);
    if(this.clock===0){
-    if(!visible){this.phase='returning';this.routeClock=0;return ['quiet'];}
-    this.angle=Math.atan2(input.player.y-this.position.y,input.player.x-this.position.x);this.phase='dash';this.clock=weeperRules.dashSeconds;return ['quiet','dash'];
+    if(visible)this.angle=Math.atan2(input.player.y-this.position.y,input.player.x-this.position.x);
+    this.phase='dash';this.clock=weeperRules.dashSeconds;return ['quiet','dash'];
    }
    return events;
   }
@@ -65,5 +67,5 @@ export class Weeper {
   const target=this.route[0]??this.home,a=Math.atan2(target.y-this.position.y,target.x-this.position.x);this.angle=a;
   const movement=followPatrolPath(this.position,this.route,48*dt,input.architecture);this.position=movement.position;if(movement.blocked)this.routeClock=0;return events;
  }
- get frame(){if(this.phase==='idle')return this.noticed?(this.noticeTime<.2?2:4):Math.floor(this.elapsed*2)%4;if(this.phase==='alert')return this.anger<.75?(this.noticeTime<.2?2:4):5;if(this.phase==='warning')return this.clock>weeperRules.warningSeconds*.8?5:this.clock>weeperRules.warningSeconds*.35?6:7;if(this.phase==='dash')return 8+Math.floor(this.elapsed*12)%4;if(this.phase==='stunned')return this.clock>4?12:14;return 8+Math.floor(this.elapsed*4)%2;}
+ get frame(){if(this.phase==='idle')return this.noticed?(this.noticeTime<.2?2:4):Math.floor(this.elapsed*2)%4;if(this.phase==='alert')return this.anger<riseThreshold?(this.noticeTime<.2?2:4):5;if(this.phase==='warning')return this.clock>weeperRules.warningSeconds*.8?5:this.clock>weeperRules.warningSeconds*.35?6:7;if(this.phase==='dash')return 8+Math.floor(this.elapsed*12)%4;if(this.phase==='stunned')return this.clock>4?12:14;return 8+Math.floor(this.elapsed*4)%2;}
 }

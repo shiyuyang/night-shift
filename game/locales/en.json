@@ -82,6 +82,6 @@
   "tutorial.monster-patrollerTitle": "Patroller · Turn a corner and close the door",
   "tutorial.monster-patrollerText": "It pursues you on sight. Turn a corner and press E to close a door behind you. Break line of sight before hiding.",
   "tutorial.monster-weeperTitle": "Crying Patient · Do not disturb it",
-  "tutorial.monster-weeperText": "Press T to turn off your light. Walk quietly and keep your distance. Nearby light, sprinting and noise provoke it. Press F to interrupt its lunge, or dodge sideways.",
+  "tutorial.monster-weeperText": "Press T to turn off your light. Walk quietly and keep your distance. Nearby light, sprinting and noise provoke it. Once it stands, turning off your light or retreating will not cancel the lunge. Press F to interrupt it, or dodge sideways.",
   "tutorial.monsterContinue": "Understood. Continue"
 }

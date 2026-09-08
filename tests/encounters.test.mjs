@@ -31,6 +31,32 @@ test('brief pauses in disturbance no longer erase anger; retreat eventually calm
  for(let i=0;i<100;i++)calm.tick(.05,input({player:{x:300,y:150},light:false}));assert.equal(calm.anger,0);assert.equal(calm.phase,'idle');
 });
 test('flashlight lasts 120 seconds, off stops drain, tutorial has more time',()=>{assert.ok(Math.abs(flashlightDrain(120,true,false)-100)<1e-8);assert.equal(flashlightDrain(300,false,false),0);assert.ok(Math.abs(flashlightDrain(180,true,true)-100)<1e-8);assert.equal(flashlightRemaining(100,false),120);assert.equal(flashlightRemaining(20,false),24);assert.equal(flashlightRemaining(0,false),0);});
+test('standing commits the patient to a lunge despite darkness, retreat, hiding or occlusion',()=>{
+ const wall={x:150,y:60,width:12,height:240};
+ for(const changes of [{light:false},{angle:0},{player:{x:350,y:150},light:false},{hidden:true,player:{x:100,y:250}},{player:{x:200,y:250},solids:[wall],architecture:[monsterArchitecture(wall)]}]){
+  const w=new Weeper({x:100,y:150});w.grace=0;
+  const near=input({player:{x:200,y:150}});
+  while(w.frame!==5)w.tick(.05,near);
+  assert.equal(w.phase,'alert');const angle=w.angle,anger=w.anger;
+  const after=input({player:{x:200,y:150},...changes});
+  w.tick(0,after);assert.equal(w.anger,anger);
+  const events=[];
+  for(let i=0;i<40&&w.phase!=='dash';i++)events.push(...w.tick(.05,after));
+  assert.equal(w.phase,'dash');assert.equal(events.filter(e=>e==='warning').length,1);assert.equal(events.filter(e=>e==='dash').length,1);
+  if(changes.hidden||changes.solids)assert.equal(w.angle,angle,'occluded player cannot steer the attack');
+ }
+});
+test('flash interrupts both committed rising and warning before a lunge can start',()=>{
+ for(const phase of ['alert','warning']){
+  const w=new Weeper({x:100,y:150});w.grace=0;
+  const near=input({player:{x:200,y:150}});
+  while(phase==='alert'?w.frame!==5:w.phase!=='warning')w.tick(.05,near);
+  assert.deepEqual(w.tick(.05,{...near,flash:true}),['quiet','suppressed']);
+  assert.equal(w.phase,'stunned');assert.equal(w.anger,0);
+  for(let i=0;i<40;i++)assert.ok(!w.tick(.05,near).includes('dash'));
+  assert.equal(w.phase,'stunned');
+ }
+});
 test('patient warns before lunging; light through a wall cannot wake it',()=>{const w=new Weeper({x:100,y:150}),wall={x:120,y:60,width:12,height:240};for(let i=0;i<100;i++)w.tick(.05,input({solids:[wall],architecture:[monsterArchitecture(wall)]}));assert.equal(w.phase,'idle');for(let i=0;i<40&&w.phase!=='warning';i++)w.tick(.05,input());assert.equal(w.phase,'warning');assert.ok(w.clock>0);assert.ok(!w.tick(.05,input()).includes('hit'));});
 test('light off and walking outside personal space safely passes patient',()=>{const w=new Weeper({x:100,y:150});for(let i=0;i<100;i++)w.tick(.05,input({player:{x:165,y:150},light:false}));assert.equal(w.phase,'idle');assert.equal(w.anger,0);});
 test('flash beats a same-frame lethal impact, including a large frame delta',()=>{for(const dt of [.016,.05,.2]){const w=new Weeper({x:100,y:150});w.phase='dash';w.clock=.9;w.angle=0;const events=w.tick(dt,input({player:{x:116,y:150},flash:true}));assert.deepEqual(events,['quiet','suppressed']);assert.equal(w.phase,'stunned');assert.equal(w.clock,6);assert.equal(w.anger,0);}});
