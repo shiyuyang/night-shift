@@ -403,5 +403,14 @@
     "source_sha256": "5ba8750b58abd8fa30b7368240f0cb025a42ec31e0dc6728cadd8e01afbb8e77",
     "sha256": "31f052758989e4ad5539379bda6ed626a00f600d03d325df2438023e38aafc2c",
     "encoding": "webp-q95"
+  },
+  {
+    "file": "assets/hospital-seal-oval-v1.webp",
+    "source": "assets/hospital-seal-oval-v1.png",
+    "source_bytes": 778097,
+    "bytes": 350056,
+    "source_sha256": "afe2ec48f0dcd9599c5c75ad3eb3ca39581bf81e9bd0d19b8bf037b26464e236",
+    "sha256": "8e867b3afcf4dcd8517729f64f3434a9c01bb289debbd643c0fe3753ab5d8930",
+    "encoding": "webp-q95"
   }
 ]

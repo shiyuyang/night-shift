@@ -1,5 +1,12 @@
 {
   "menu.hospital": "Aoba Şehri · Matsubara Genel Hastanesi",
   "command.ghost.description": "3 saniyelik uyarıdan sonra takip başlar. Flaşlarla ve sesli yemlerle karşı koyun.",
-  "ui.archived-footage-not-live": "Servis kapatılmadan önce"
+  "ui.archived-footage-not-live": "Servis kapatılmadan önce",
+  "menu.pending": "BEKLİYOR",
+  "menu.complete": "KONTROL EDİLDİ",
+  "menu.sketch": "Kapanış öncesi",
+  "event.quiet": "Kovalamacalar daha seyrek",
+  "event.supply": "Ek erzak: +1 flaş",
+  "event.power": "Elektrik kararsız; kesintiler",
+  "menu.anomaly": "{threat}\n{event}"
 }

@@ -1,5 +1,13 @@
 {
   "menu.hospital": "Thành phố Aoba · Bệnh viện Đa khoa Matsubara",
   "loot.fuse": "Cầu chì +1 · {count}/3\n{key}",
-  "ui.archived-footage-not-live": "Trước khi khu bệnh phòng đóng cửa"
+  "ui.archived-footage-not-live": "Trước khi khu bệnh phòng đóng cửa",
+  "menu.pending": "CHƯA KIỂM TRA",
+  "menu.complete": "ĐÃ KIỂM TRA",
+  "menu.sketch": "Trước khi đóng",
+  "event.quiet": "Giãn cách các đợt truy đuổi",
+  "event.supply": "Tiếp tế: +1 chớp sáng",
+  "event.power": "Điện chập chờn, hay mất điện",
+  "menu.anomaly": "{threat}\n{event}",
+  "menu.start": "Tuần tra →"
 }

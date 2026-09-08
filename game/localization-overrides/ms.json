@@ -1,5 +1,12 @@
 {
   "menu.hospital": "Bandar Aoba · Hospital Besar Matsubara",
   "loot.fuse": "Fius +1 · {count}/3\n{key}",
-  "ui.archived-footage-not-live": "Sebelum wad ditutup"
+  "ui.archived-footage-not-live": "Sebelum wad ditutup",
+  "menu.pending": "BELUM DIPERIKSA",
+  "menu.complete": "DIPERIKSA",
+  "menu.sketch": "Sebelum ditutup",
+  "event.quiet": "Sela pengejaran lebih lama",
+  "event.supply": "Bekalan: +1 kilatan",
+  "event.power": "Bekalan elektrik tak stabil",
+  "menu.anomaly": "{threat}\n{event}"
 }

@@ -1,3 +1,13 @@
 {
-  "ui.archived-footage-not-live": "До закрытия отделения"
+  "ui.archived-footage-not-live": "До закрытия отделения",
+  "menu.pending": "НЕ ПРОВЕРЕНО",
+  "menu.complete": "ПРОВЕРЕНО",
+  "menu.sketch": "До закрытия",
+  "event.quiet": "Погони реже",
+  "event.supply": "Припасы: +1 вспышка",
+  "event.power": "Сбои питания; отключения",
+  "menu.anomaly": "{threat}\n{event}",
+  "note.0": "Койки пусты. Звонок вызова не стихает.",
+  "stage.0": "Заброшенная палата",
+  "menu.start": "Начать обход →"
 }

@@ -1,5 +1,10 @@
 {
-  "menu.complete": "YOXLAMA TAMAMLANDI",
-  "menu.pending": "NÖVBƏ TƏHVİLİ GÖZLƏNİLİR",
-  "ui.archived-footage-not-live": "Şöbə bağlanmazdan əvvəl"
+  "menu.complete": "YOXLANILIB",
+  "menu.pending": "YOXLANILMAYIB",
+  "ui.archived-footage-not-live": "Şöbə bağlanmazdan əvvəl",
+  "menu.sketch": "Bağlanmazdan öncə",
+  "event.quiet": "Təqiblər daha seyrəkdir",
+  "event.supply": "Əlavə ehtiyat: +1 işıq partlayışı",
+  "event.power": "Elektrik qeyri-sabitdir",
+  "menu.anomaly": "{threat}\n{event}"
 }

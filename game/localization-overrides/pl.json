@@ -1,3 +1,12 @@
 {
-  "ui.archived-footage-not-live": "Przed zamknięciem oddziału"
+  "ui.archived-footage-not-live": "Przed zamknięciem oddziału",
+  "menu.pending": "DO KONTROLI",
+  "menu.complete": "SPRAWDZONO",
+  "menu.sketch": "Zdjęcie archiwalne",
+  "event.quiet": "Dłuższe przerwy w pościgach",
+  "event.supply": "Zapasy: +1 błysk",
+  "event.power": "Wahania i zaniki prądu",
+  "menu.anomaly": "{threat}\n{event}",
+  "stage.0": "Opuszczony oddział",
+  "menu.start": "Rozpocznij →"
 }

@@ -1,4 +1,12 @@
 {
   "menu.hospital": "Stadt Aoba · Allgemeines Krankenhaus Matsubara",
-  "ui.archived-footage-not-live": "Vor der Schließung der Station"
+  "ui.archived-footage-not-live": "Vor der Schließung der Station",
+  "menu.pending": "OFFEN",
+  "menu.complete": "GEPRÜFT",
+  "menu.sketch": "Vor Schließung",
+  "event.quiet": "Längere Verfolgungspausen",
+  "event.supply": "Zusatzvorrat: +1 Blitz",
+  "event.power": "Instabiler Strom; Ausfälle",
+  "menu.anomaly": "{threat}\n{event}",
+  "menu.start": "Rundgang →"
 }

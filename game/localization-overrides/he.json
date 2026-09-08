@@ -1,3 +1,10 @@
 {
-  "ui.archived-footage-not-live": "לפני סגירת המחלקה"
+  "ui.archived-footage-not-live": "לפני סגירת המחלקה",
+  "menu.pending": "טרם נבדק",
+  "menu.complete": "נבדק",
+  "menu.sketch": "לפני הסגירה",
+  "event.quiet": "מרווח ארוך בין מרדפים",
+  "event.supply": "אספקה: הבזק +1",
+  "event.power": "חשמל לא יציב; הפסקות",
+  "menu.anomaly": "{threat}\n{event}"
 }

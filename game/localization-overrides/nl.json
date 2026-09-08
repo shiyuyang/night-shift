@@ -1,4 +1,12 @@
 {
   "ui.stage": "Niveau {stage} · {area}",
-  "ui.archived-footage-not-live": "Voor de sluiting van de afdeling"
+  "ui.archived-footage-not-live": "Voor de sluiting van de afdeling",
+  "menu.pending": "TE CONTROLEREN",
+  "menu.complete": "GECONTROLEERD",
+  "menu.sketch": "Vóór sluiting",
+  "event.quiet": "Langere achtervolgingspauzes",
+  "event.supply": "Extra voorraad: +1 flits",
+  "event.power": "Stroom instabiel; uitval",
+  "menu.anomaly": "{threat}\n{event}",
+  "menu.start": "Begin ronde →"
 }
