@@ -311,5 +311,13 @@
   "command.drain": "Kebocoran bateri",
   "command.drain.description": "Pengurasan bateri tambahan selama 8 saat, kehilangan sehingga 16%. Tempoh tidak bertindih.",
   "command.alarm": "Bunyi",
-  "command.alarm.description": "Terdedahkan kedudukan anda selama 6 saat. Tekan R untuk mengalihkan dengan umpan."
+  "command.alarm.description": "Terdedahkan kedudukan anda selama 6 saat. Tekan R untuk mengalihkan dengan umpan.",
+  "stage.3": "Klinik Pesakit Luar",
+  "stage.4": "Bilik Bedah",
+  "note.3": "Ruang menunggu kosong. Bunyi di sebalik pintu pemeriksaan.",
+  "note.4": "Lampu pembedahan masih menyala.",
+  "stage.5": "Bilik Mayat",
+  "note.5": "Laci berkeriut di belakangmu.",
+  "stage.6": "Halaman Hospital",
+  "note.6": "Tingkap bercahaya. Halaman kosong."
 }

@@ -311,5 +311,13 @@
   "command.drain": "Rò rỉ pin",
   "command.drain.description": "Tiêu hao pin thêm trong 8 giây, mất tối đa 16%. Thời gian không chồng chất.",
   "command.alarm": "Âm thanh",
-  "command.alarm.description": "Tiết lộ vị trí của bạn trong 6 giây. Nhấn R để phân tâm bằng mồi nhử."
+  "command.alarm.description": "Tiết lộ vị trí của bạn trong 6 giây. Nhấn R để phân tâm bằng mồi nhử.",
+  "stage.3": "Khu khám bệnh",
+  "stage.4": "Phòng mổ",
+  "note.3": "Phòng chờ trống vắng. Có tiếng động sau cửa phòng khám.",
+  "note.4": "Đèn mổ vẫn sáng.",
+  "stage.5": "Nhà xác",
+  "note.5": "Ngăn kéo kêu lạch cạch phía sau.",
+  "stage.6": "Sân bệnh viện",
+  "note.6": "Cửa sổ sáng đèn. Sân vắng người."
 }

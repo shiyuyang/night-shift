@@ -109,6 +109,16 @@
       "source": "/assets/hospital-seal-oval-v1.png",
       "file": "/assets/hospital-seal-oval-v1.webp",
       "encoding": "webp-q95"
+    },
+    {
+      "source": "/assets/morgue-shrouded-body-v1.png",
+      "file": "/assets/morgue-shrouded-body-v1.webp",
+      "encoding": "lossless"
+    },
+    {
+      "source": "/assets/garden-pine-v1.png",
+      "file": "/assets/garden-pine-v1.webp",
+      "encoding": "lossless"
     }
   ],
   "staticFiles": [
@@ -127,15 +137,16 @@
     "/fonts/notosansjp-OFL.txt",
     "/fonts/notosanskr-OFL.txt",
     "/fonts/notosansmyanmar-OFL.txt",
+    "/assets/desk-yurei-v1.webp",
+    "/fonts/hospital-handwriting-f4b06c07ab.woff2",
     "/fonts/locale-latin-84536a0a4d.woff2",
     "/fonts/locale-ar-b37007c412.woff2",
     "/fonts/locale-he-f6569a40cd.woff2",
     "/fonts/locale-th-00cbed7909.woff2",
-    "/fonts/locale-my-5b9d94eaa6.woff2",
-    "/fonts/locale-ja-8b8fa54639.woff2",
-    "/fonts/locale-ko-999e896c37.woff2",
-    "/fonts/locale-zh-Hans-67a31fdc4d.woff2",
-    "/fonts/locale-zh-Hant-da19f3544d.woff2",
-    "/assets/desk-yurei-v1.webp"
+    "/fonts/locale-my-4e9be0980c.woff2",
+    "/fonts/locale-ja-0b70e631e6.woff2",
+    "/fonts/locale-ko-13c0abbc8d.woff2",
+    "/fonts/locale-zh-Hans-9a99e4bbaa.woff2",
+    "/fonts/locale-zh-Hant-4a4ee8f885.woff2"
   ]
 }

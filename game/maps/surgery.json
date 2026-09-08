@@ -1,0 +1,564 @@
+{
+  "id": "surgery",
+  "name": "手术室",
+  "theme": 4,
+  "source": "maps/surgery.ldtk",
+  "level": "Surgery",
+  "events": [
+    {
+      "id": "surgery_return",
+      "trigger": {
+        "flag": "first_box",
+        "zone": "return_corridor"
+      },
+      "once": true,
+      "sequence": [
+        {
+          "type": "light",
+          "target": "LampCenter",
+          "strength": 0.08
+        },
+        {
+          "type": "sound",
+          "id": "call-bell",
+          "pan": -0.65,
+          "source": "LampSouth"
+        },
+        {
+          "type": "wait",
+          "seconds": 1.8
+        },
+        {
+          "type": "light",
+          "target": "LampCenter",
+          "strength": 0.75
+        }
+      ]
+    }
+  ],
+  "lights": [
+    {
+      "id": "LampWest",
+      "radius": 155,
+      "strength": 0.66,
+      "color": "#c59b65"
+    },
+    {
+      "id": "LampCenter",
+      "radius": 190,
+      "strength": 0.75,
+      "color": "#bbd9d3"
+    },
+    {
+      "id": "LampExit",
+      "radius": 112,
+      "strength": 0.5,
+      "color": "#b74336"
+    },
+    {
+      "id": "LampSouth",
+      "radius": 120,
+      "strength": 0.52,
+      "color": "#80a394"
+    },
+    {
+      "id": "LampNorth",
+      "radius": 165,
+      "strength": 0.52,
+      "color": "#79a6b6"
+    },
+    {
+      "id": "LampEast",
+      "radius": 150,
+      "strength": 0.56,
+      "color": "#80a394"
+    }
+  ],
+  "width": 1280,
+  "height": 768,
+  "entities": [
+    {
+      "id": "Wall",
+      "x": 22,
+      "y": 68,
+      "width": 1236,
+      "height": 28
+    },
+    {
+      "id": "Wall",
+      "x": 22,
+      "y": 96,
+      "width": 14,
+      "height": 624
+    },
+    {
+      "id": "Wall",
+      "x": 1244,
+      "y": 96,
+      "width": 14,
+      "height": 624
+    },
+    {
+      "id": "Wall",
+      "x": 22,
+      "y": 720,
+      "width": 1236,
+      "height": 20
+    },
+    {
+      "id": "PlayBounds",
+      "x": 36,
+      "y": 96,
+      "width": 1208,
+      "height": 624
+    },
+    {
+      "id": "CameraBounds",
+      "x": 20,
+      "y": 68,
+      "width": 1240,
+      "height": 672
+    },
+    {
+      "id": "PlayerSpawn",
+      "x": 200,
+      "y": 414,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "Exit",
+      "x": 65,
+      "y": 414,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "MonsterLeft",
+      "x": 70,
+      "y": 414,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "MonsterRight",
+      "x": 1200,
+      "y": 414,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "ReturnZone",
+      "x": 70,
+      "y": 370,
+      "width": 240,
+      "height": 90
+    },
+    {
+      "id": "Wall",
+      "x": 360,
+      "y": 248,
+      "width": 170,
+      "height": 16
+    },
+    {
+      "id": "Wall",
+      "x": 642,
+      "y": 248,
+      "width": 286,
+      "height": 16
+    },
+    {
+      "id": "Wall",
+      "x": 360,
+      "y": 548,
+      "width": 286,
+      "height": 16
+    },
+    {
+      "id": "Wall",
+      "x": 758,
+      "y": 548,
+      "width": 170,
+      "height": 16
+    },
+    {
+      "id": "Wall",
+      "x": 360,
+      "y": 264,
+      "width": 16,
+      "height": 284
+    },
+    {
+      "id": "Wall",
+      "x": 912,
+      "y": 264,
+      "width": 16,
+      "height": 284
+    },
+    {
+      "id": "Wall",
+      "x": 280,
+      "y": 96,
+      "width": 16,
+      "height": 150
+    },
+    {
+      "id": "Wall",
+      "x": 280,
+      "y": 350,
+      "width": 16,
+      "height": 20
+    },
+    {
+      "id": "Wall",
+      "x": 36,
+      "y": 354,
+      "width": 244,
+      "height": 16
+    },
+    {
+      "id": "Wall",
+      "x": 36,
+      "y": 514,
+      "width": 105,
+      "height": 16
+    },
+    {
+      "id": "Wall",
+      "x": 245,
+      "y": 514,
+      "width": 51,
+      "height": 16
+    },
+    {
+      "id": "Wall",
+      "x": 280,
+      "y": 530,
+      "width": 16,
+      "height": 190
+    },
+    {
+      "id": "Wall",
+      "x": 1000,
+      "y": 96,
+      "width": 16,
+      "height": 244
+    },
+    {
+      "id": "Wall",
+      "x": 1000,
+      "y": 324,
+      "width": 76,
+      "height": 16
+    },
+    {
+      "id": "Wall",
+      "x": 1148,
+      "y": 324,
+      "width": 96,
+      "height": 16
+    },
+    {
+      "id": "Door",
+      "x": 1076,
+      "y": 324,
+      "width": 72,
+      "height": 16
+    },
+    {
+      "id": "DoorUse",
+      "x": 1112,
+      "y": 360,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "Wall",
+      "x": 1000,
+      "y": 530,
+      "width": 16,
+      "height": 190
+    },
+    {
+      "id": "Wall",
+      "x": 1000,
+      "y": 514,
+      "width": 66,
+      "height": 16
+    },
+    {
+      "id": "Wall",
+      "x": 1178,
+      "y": 514,
+      "width": 66,
+      "height": 16
+    },
+    {
+      "id": "Operatingtable",
+      "x": 570,
+      "y": 355,
+      "width": 58,
+      "height": 112
+    },
+    {
+      "id": "Operatingtable",
+      "x": 760,
+      "y": 355,
+      "width": 58,
+      "height": 112
+    },
+    {
+      "id": "Machine",
+      "x": 400,
+      "y": 290,
+      "width": 42,
+      "height": 60
+    },
+    {
+      "id": "Machine",
+      "x": 850,
+      "y": 290,
+      "width": 42,
+      "height": 60
+    },
+    {
+      "id": "Desk",
+      "x": 430,
+      "y": 482,
+      "width": 85,
+      "height": 28
+    },
+    {
+      "id": "Desk",
+      "x": 800,
+      "y": 482,
+      "width": 85,
+      "height": 28
+    },
+    {
+      "id": "Desk",
+      "x": 75,
+      "y": 170,
+      "width": 100,
+      "height": 32
+    },
+    {
+      "id": "Shelf",
+      "x": 60,
+      "y": 575,
+      "width": 100,
+      "height": 28
+    },
+    {
+      "id": "Desk",
+      "x": 70,
+      "y": 660,
+      "width": 100,
+      "height": 28
+    },
+    {
+      "id": "Shelf",
+      "x": 1050,
+      "y": 120,
+      "width": 145,
+      "height": 28
+    },
+    {
+      "id": "Bed",
+      "x": 1060,
+      "y": 560,
+      "width": 38,
+      "height": 76
+    },
+    {
+      "id": "Bed",
+      "x": 1170,
+      "y": 560,
+      "width": 38,
+      "height": 76
+    },
+    {
+      "id": "PreparationZone",
+      "x": 60,
+      "y": 130,
+      "width": 195,
+      "height": 200
+    },
+    {
+      "id": "OptionalPreparationZone",
+      "x": 60,
+      "y": 130,
+      "width": 195,
+      "height": 200
+    },
+    {
+      "id": "ScrubZone",
+      "x": 60,
+      "y": 550,
+      "width": 195,
+      "height": 146
+    },
+    {
+      "id": "OptionalScrubZone",
+      "x": 60,
+      "y": 550,
+      "width": 195,
+      "height": 146
+    },
+    {
+      "id": "OperatingZone",
+      "x": 400,
+      "y": 285,
+      "width": 490,
+      "height": 235
+    },
+    {
+      "id": "RecoveryZone",
+      "x": 1030,
+      "y": 550,
+      "width": 190,
+      "height": 145
+    },
+    {
+      "id": "OptionalRecoveryZone",
+      "x": 1030,
+      "y": 550,
+      "width": 190,
+      "height": 145
+    },
+    {
+      "id": "SterileZone",
+      "x": 1030,
+      "y": 160,
+      "width": 190,
+      "height": 145
+    },
+    {
+      "id": "LampWest",
+      "x": 210,
+      "y": 400,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "LampCenter",
+      "x": 650,
+      "y": 350,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "LampExit",
+      "x": 65,
+      "y": 400,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "LampSouth",
+      "x": 650,
+      "y": 615,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "LampNorth",
+      "x": 580,
+      "y": 200,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "LampEast",
+      "x": 1110,
+      "y": 185,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "DressPhoneZone",
+      "x": 80,
+      "y": 130,
+      "width": 24,
+      "height": 24
+    },
+    {
+      "id": "DressCrtZone",
+      "x": 1060,
+      "y": 130,
+      "width": 24,
+      "height": 24
+    },
+    {
+      "id": "DressMemorialZone",
+      "x": 80,
+      "y": 675,
+      "width": 24,
+      "height": 24
+    },
+    {
+      "id": "DressDollZone",
+      "x": 1190,
+      "y": 675,
+      "width": 24,
+      "height": 24
+    },
+    {
+      "id": "Key_A",
+      "x": 220,
+      "y": 230,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "Box0_A",
+      "x": 215,
+      "y": 620,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "Box1_A",
+      "x": 480,
+      "y": 380,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "Box2_A",
+      "x": 1080,
+      "y": 210,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "Key_B",
+      "x": 150,
+      "y": 280,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "Box0_B",
+      "x": 190,
+      "y": 575,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "Box1_B",
+      "x": 690,
+      "y": 395,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "id": "Box2_B",
+      "x": 1195,
+      "y": 235,
+      "width": 16,
+      "height": 16
+    }
+  ]
+}

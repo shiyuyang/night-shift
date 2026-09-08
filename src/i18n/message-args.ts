@@ -313,4 +313,12 @@ export interface MessageValues{
 "command.drain.description":{}
 "command.alarm":{}
 "command.alarm.description":{}
+"stage.3":{}
+"stage.4":{}
+"note.3":{}
+"note.4":{}
+"stage.5":{}
+"note.5":{}
+"stage.6":{}
+"note.6":{}
 }

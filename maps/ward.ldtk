@@ -703,6 +703,519 @@
         "showName": true,
         "tags": [],
         "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "Desk",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 27,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "Shelf",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 28,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "NurseZone",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 29,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "WardOneZone",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 30,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "WardTwoZone",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 31,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "TreatmentZone",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 32,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "LinenZone",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 33,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "IsolationZone",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 34,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "DressPhoneZone",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 35,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "DressCrtZone",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 36,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "DressMemorialZone",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 37,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "DressDollZone",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 38,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "LampTreatment",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 39,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "LampWardTwo",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 40,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "OptionalNurseZone",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 41,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "OptionalWardOneZone",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 42,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "OptionalWardTwoZone",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 43,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "OptionalTreatmentZone",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 44,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "OptionalLinenZone",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 45,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
       }
     ],
     "enums": [],
@@ -809,8 +1322,8 @@
       "fieldInstances": [],
       "identifier": "Ward",
       "iid": "c3ba997f-a479-4021-a6c1-b3d9fb1d9757",
-      "pxHei": 576,
-      "pxWid": 960,
+      "pxHei": 768,
+      "pxWid": 1280,
       "uid": 200,
       "worldDepth": 0,
       "worldX": 0,
@@ -821,8 +1334,8 @@
       "useAutoIdentifier": false,
       "layerInstances": [
         {
-          "__cHei": 576,
-          "__cWid": 960,
+          "__cHei": 768,
+          "__cWid": 1280,
           "__gridSize": 1,
           "__identifier": "Architecture",
           "__opacity": 1,
@@ -834,7 +1347,7 @@
             {
               "__grid": [
                 22,
-                61
+                68
               ],
               "__identifier": "Wall",
               "__pivot": [
@@ -846,17 +1359,17 @@
               "defUid": 1,
               "fieldInstances": [],
               "height": 28,
-              "iid": "5b117339-e989-48ce-b55f-abbddbd9c5cc",
+              "iid": "8b1d1220-f12d-4040-b479-013533a73a59",
               "px": [
                 22,
-                61
+                68
               ],
-              "width": 916
+              "width": 1236
             },
             {
               "__grid": [
                 22,
-                89
+                96
               ],
               "__identifier": "Wall",
               "__pivot": [
@@ -867,18 +1380,18 @@
               "__tags": [],
               "defUid": 1,
               "fieldInstances": [],
-              "height": 439,
-              "iid": "e9855b73-d722-43cb-b471-83a14c3ffe37",
+              "height": 624,
+              "iid": "205c13fe-ef65-4359-82ec-8de240183338",
               "px": [
                 22,
-                89
+                96
               ],
               "width": 14
             },
             {
               "__grid": [
-                924,
-                89
+                1244,
+                96
               ],
               "__identifier": "Wall",
               "__pivot": [
@@ -889,18 +1402,18 @@
               "__tags": [],
               "defUid": 1,
               "fieldInstances": [],
-              "height": 439,
-              "iid": "1029cf0e-77fd-4a5e-8ebd-e5e066e192fd",
+              "height": 624,
+              "iid": "a2dab57b-814c-490b-b832-98660072244f",
               "px": [
-                924,
-                89
+                1244,
+                96
               ],
               "width": 14
             },
             {
               "__grid": [
                 22,
-                508
+                720
               ],
               "__identifier": "Wall",
               "__pivot": [
@@ -912,17 +1425,17 @@
               "defUid": 1,
               "fieldInstances": [],
               "height": 20,
-              "iid": "a2c59e5f-a20a-4eaa-84c5-8c6dc488282c",
+              "iid": "78cf7553-cf25-450e-a8ec-07e4b2dba60e",
               "px": [
                 22,
-                508
+                720
               ],
-              "width": 916
+              "width": 1236
             },
             {
               "__grid": [
                 36,
-                263
+                350
               ],
               "__identifier": "Wall",
               "__pivot": [
@@ -934,17 +1447,17 @@
               "defUid": 1,
               "fieldInstances": [],
               "height": 16,
-              "iid": "1a8af391-e6b0-4fa9-84ba-0ee53ffedc85",
+              "iid": "0ff6bcf2-4642-4e98-aef8-d055fb45f185",
               "px": [
                 36,
-                263
+                350
               ],
-              "width": 90
+              "width": 184
             },
             {
               "__grid": [
-                188,
-                263
+                292,
+                350
               ],
               "__identifier": "Wall",
               "__pivot": [
@@ -956,17 +1469,17 @@
               "defUid": 1,
               "fieldInstances": [],
               "height": 16,
-              "iid": "8b15400e-9c9f-4bec-afa8-c10656022c16",
+              "iid": "b80d37b1-15b3-4270-9c15-e591ff033b6c",
               "px": [
-                188,
-                263
+                292,
+                350
               ],
-              "width": 240
+              "width": 308
             },
             {
               "__grid": [
-                500,
-                263
+                672,
+                350
               ],
               "__identifier": "Wall",
               "__pivot": [
@@ -978,17 +1491,17 @@
               "defUid": 1,
               "fieldInstances": [],
               "height": 16,
-              "iid": "014451ec-ce11-4450-8815-ce594d45aec1",
+              "iid": "f5824b89-0cfe-4cb1-bdc3-b0ce5a1410e2",
               "px": [
-                500,
-                263
+                672,
+                350
               ],
-              "width": 270
+              "width": 408
             },
             {
               "__grid": [
-                832,
-                263
+                1152,
+                350
               ],
               "__identifier": "Wall",
               "__pivot": [
@@ -1000,17 +1513,17 @@
               "defUid": 1,
               "fieldInstances": [],
               "height": 16,
-              "iid": "b9123113-d848-4002-a8ea-0475d00a13cb",
+              "iid": "026c6d94-027d-49bd-a52d-7a0fe3568158",
               "px": [
-                832,
-                263
+                1152,
+                350
               ],
               "width": 92
             },
             {
               "__grid": [
                 36,
-                350
+                470
               ],
               "__identifier": "Wall",
               "__pivot": [
@@ -1022,17 +1535,17 @@
               "defUid": 1,
               "fieldInstances": [],
               "height": 16,
-              "iid": "dc0222bd-168f-40ec-bbd4-eb1e7e126475",
+              "iid": "e67c86d0-69b3-4e65-93c7-20742cc60a74",
               "px": [
                 36,
-                350
+                470
               ],
-              "width": 90
+              "width": 184
             },
             {
               "__grid": [
-                188,
-                350
+                292,
+                470
               ],
               "__identifier": "Wall",
               "__pivot": [
@@ -1044,17 +1557,17 @@
               "defUid": 1,
               "fieldInstances": [],
               "height": 16,
-              "iid": "b2513e1f-7387-4e96-ae87-1d1e93573f70",
+              "iid": "699fcad5-14f6-41de-92bc-461d880420da",
               "px": [
-                188,
-                350
+                292,
+                470
               ],
-              "width": 240
+              "width": 308
             },
             {
               "__grid": [
-                500,
-                350
+                672,
+                470
               ],
               "__identifier": "Wall",
               "__pivot": [
@@ -1066,17 +1579,17 @@
               "defUid": 1,
               "fieldInstances": [],
               "height": 16,
-              "iid": "f98d2d96-00b7-434a-a070-6bf74ee601e9",
+              "iid": "c1f3b9df-739c-4adf-bb57-148cda4f3799",
               "px": [
-                500,
-                350
+                672,
+                470
               ],
-              "width": 270
+              "width": 408
             },
             {
               "__grid": [
-                832,
-                350
+                1152,
+                470
               ],
               "__identifier": "Wall",
               "__pivot": [
@@ -1088,17 +1601,17 @@
               "defUid": 1,
               "fieldInstances": [],
               "height": 16,
-              "iid": "dd9f09ef-938f-403b-ab0c-4183a035ba8c",
+              "iid": "2281ca66-09b8-42c1-b670-13630c5022b2",
               "px": [
-                832,
-                350
+                1152,
+                470
               ],
               "width": 92
             },
             {
               "__grid": [
-                330,
-                89
+                400,
+                96
               ],
               "__identifier": "Wall",
               "__pivot": [
@@ -1109,18 +1622,18 @@
               "__tags": [],
               "defUid": 1,
               "fieldInstances": [],
-              "height": 174,
-              "iid": "a10ef887-7e1a-473d-b58c-97a7cd730a49",
+              "height": 254,
+              "iid": "621fe687-53ab-41a9-b90f-00084f5881b9",
               "px": [
-                330,
-                89
+                400,
+                96
               ],
-              "width": 14
+              "width": 16
             },
             {
               "__grid": [
-                330,
-                366
+                816,
+                96
               ],
               "__identifier": "Wall",
               "__pivot": [
@@ -1131,18 +1644,18 @@
               "__tags": [],
               "defUid": 1,
               "fieldInstances": [],
-              "height": 142,
-              "iid": "070d5333-a5af-4c29-bb48-7befbc848606",
+              "height": 254,
+              "iid": "72fd3a26-c5ca-4206-b4bf-fd2e8468a290",
               "px": [
-                330,
-                366
+                816,
+                96
               ],
-              "width": 14
+              "width": 16
             },
             {
               "__grid": [
-                650,
-                89
+                400,
+                486
               ],
               "__identifier": "Wall",
               "__pivot": [
@@ -1153,18 +1666,18 @@
               "__tags": [],
               "defUid": 1,
               "fieldInstances": [],
-              "height": 174,
-              "iid": "79312b92-d214-47c9-bc44-1a4f43c7b87e",
+              "height": 234,
+              "iid": "fe963ff3-6fd3-4373-ab12-5f68e516d2fc",
               "px": [
-                650,
-                89
+                400,
+                486
               ],
-              "width": 14
+              "width": 16
             },
             {
               "__grid": [
-                650,
-                366
+                816,
+                486
               ],
               "__identifier": "Wall",
               "__pivot": [
@@ -1175,18 +1688,40 @@
               "__tags": [],
               "defUid": 1,
               "fieldInstances": [],
-              "height": 142,
-              "iid": "eb19ad37-20b6-4715-90c7-9967506b1613",
+              "height": 94,
+              "iid": "15dfa989-8e8a-4cbe-8d3a-a02023be8e61",
               "px": [
-                650,
-                366
+                816,
+                486
               ],
-              "width": 14
+              "width": 16
             },
             {
               "__grid": [
-                69,
-                135
+                816,
+                660
+              ],
+              "__identifier": "Wall",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 1,
+              "fieldInstances": [],
+              "height": 60,
+              "iid": "dfe81a11-c279-44f1-a20a-bb62cb02b43e",
+              "px": [
+                816,
+                660
+              ],
+              "width": 16
+            },
+            {
+              "__grid": [
+                90,
+                140
               ],
               "__identifier": "Bed",
               "__pivot": [
@@ -1198,17 +1733,17 @@
               "defUid": 2,
               "fieldInstances": [],
               "height": 76,
-              "iid": "d94cc2b9-17b4-4208-9123-a248931a2b68",
+              "iid": "a7dd69b7-6918-4903-a60c-488ab9176b5b",
               "px": [
-                69,
-                135
+                90,
+                140
               ],
               "width": 38
             },
             {
               "__grid": [
-                212,
-                135
+                300,
+                140
               ],
               "__identifier": "Bed",
               "__pivot": [
@@ -1220,17 +1755,17 @@
               "defUid": 2,
               "fieldInstances": [],
               "height": 76,
-              "iid": "6b9bbc39-a571-4a3e-87f4-01321f8faedc",
+              "iid": "66f029f6-af27-49eb-91e8-20892f3da3e0",
               "px": [
-                212,
-                135
+                300,
+                140
               ],
               "width": 38
             },
             {
               "__grid": [
-                373,
-                135
+                460,
+                140
               ],
               "__identifier": "Bed",
               "__pivot": [
@@ -1242,17 +1777,17 @@
               "defUid": 2,
               "fieldInstances": [],
               "height": 76,
-              "iid": "8e18ffb5-2c4b-46e6-97d5-7585c6fb81d3",
+              "iid": "7bc3faa2-6540-4674-b9af-b8ead6f83ff1",
               "px": [
-                373,
-                135
+                460,
+                140
               ],
               "width": 38
             },
             {
               "__grid": [
-                541,
-                135
+                710,
+                140
               ],
               "__identifier": "Bed",
               "__pivot": [
@@ -1264,17 +1799,17 @@
               "defUid": 2,
               "fieldInstances": [],
               "height": 76,
-              "iid": "91ff8a9c-8ee3-4f96-a2b1-ca6cfd35ba9f",
+              "iid": "fa6525a7-ea7d-41cf-901a-d2179f16ad48",
               "px": [
-                541,
-                135
+                710,
+                140
               ],
               "width": 38
             },
             {
               "__grid": [
-                685,
-                135
+                900,
+                140
               ],
               "__identifier": "Bed",
               "__pivot": [
@@ -1286,17 +1821,17 @@
               "defUid": 2,
               "fieldInstances": [],
               "height": 76,
-              "iid": "33f7e008-3239-462a-b4c7-de83105b96df",
+              "iid": "fe45d986-b40f-4f6c-8576-3f3054a4b148",
               "px": [
-                685,
-                135
+                900,
+                140
               ],
               "width": 38
             },
             {
               "__grid": [
-                838,
-                135
+                1150,
+                140
               ],
               "__identifier": "Bed",
               "__pivot": [
@@ -1308,83 +1843,215 @@
               "defUid": 2,
               "fieldInstances": [],
               "height": 76,
-              "iid": "d65a56d6-0f87-439a-8759-415f041e84a3",
+              "iid": "8840b99c-6530-4321-9487-853859da23e0",
               "px": [
-                838,
-                135
+                1150,
+                140
               ],
               "width": 38
             },
             {
               "__grid": [
-                94,
-                425
+                460,
+                530
               ],
-              "__identifier": "Crate",
+              "__identifier": "Bed",
               "__pivot": [
                 0,
                 0
               ],
               "__smartColor": "#8D9A84",
               "__tags": [],
-              "defUid": 3,
+              "defUid": 2,
               "fieldInstances": [],
-              "height": 34,
-              "iid": "30dc9eed-021c-4910-8bb5-f3ae1265e2bf",
+              "height": 76,
+              "iid": "f61d899e-3e2e-4b09-89f6-45cdd1973e92",
               "px": [
-                94,
-                425
+                460,
+                530
               ],
-              "width": 42
+              "width": 38
             },
             {
               "__grid": [
-                415,
-                425
+                570,
+                530
               ],
-              "__identifier": "Crate",
+              "__identifier": "Bed",
               "__pivot": [
                 0,
                 0
               ],
               "__smartColor": "#8D9A84",
               "__tags": [],
-              "defUid": 3,
+              "defUid": 2,
               "fieldInstances": [],
-              "height": 34,
-              "iid": "fd37294e-7ba3-461b-bfcb-7fccedb75b39",
+              "height": 76,
+              "iid": "1119afe8-e350-4ac9-b1ff-fcc7a3a03101",
               "px": [
-                415,
-                425
+                570,
+                530
               ],
-              "width": 42
+              "width": 38
             },
             {
               "__grid": [
-                728,
-                425
+                80,
+                530
               ],
-              "__identifier": "Crate",
+              "__identifier": "Desk",
               "__pivot": [
                 0,
                 0
               ],
               "__smartColor": "#8D9A84",
               "__tags": [],
-              "defUid": 3,
+              "defUid": 27,
               "fieldInstances": [],
-              "height": 34,
-              "iid": "d6814290-bdbc-440f-a163-d62e5e6c09ef",
+              "height": 36,
+              "iid": "d28d1e52-fad7-4d80-84b1-996c9ada9041",
               "px": [
-                728,
-                425
+                80,
+                530
               ],
-              "width": 42
+              "width": 144
             },
             {
               "__grid": [
-                770,
-                263
+                80,
+                566
+              ],
+              "__identifier": "Desk",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 27,
+              "fieldInstances": [],
+              "height": 60,
+              "iid": "16353f9d-ddc4-4a2a-9df4-6399a70a17ad",
+              "px": [
+                80,
+                566
+              ],
+              "width": 32
+            },
+            {
+              "__grid": [
+                150,
+                672
+              ],
+              "__identifier": "Shelf",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 28,
+              "fieldInstances": [],
+              "height": 28,
+              "iid": "f0a622a4-03ca-442b-aecd-b03a59380d80",
+              "px": [
+                150,
+                672
+              ],
+              "width": 72
+            },
+            {
+              "__grid": [
+                300,
+                672
+              ],
+              "__identifier": "Shelf",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 28,
+              "fieldInstances": [],
+              "height": 28,
+              "iid": "6ebf198e-8731-4637-8e07-6b606991415b",
+              "px": [
+                300,
+                672
+              ],
+              "width": 72
+            },
+            {
+              "__grid": [
+                900,
+                672
+              ],
+              "__identifier": "Shelf",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 28,
+              "fieldInstances": [],
+              "height": 28,
+              "iid": "3e54b81c-dc54-4dc5-a83f-30c19ba93c73",
+              "px": [
+                900,
+                672
+              ],
+              "width": 72
+            },
+            {
+              "__grid": [
+                1100,
+                672
+              ],
+              "__identifier": "Shelf",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 28,
+              "fieldInstances": [],
+              "height": 28,
+              "iid": "895b9ea9-1602-4bbb-b7f1-6d0db018ff7d",
+              "px": [
+                1100,
+                672
+              ],
+              "width": 72
+            },
+            {
+              "__grid": [
+                740,
+                526
+              ],
+              "__identifier": "Machine",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 17,
+              "fieldInstances": [],
+              "height": 44,
+              "iid": "7c40417a-857a-438f-9789-38629c7e97f0",
+              "px": [
+                740,
+                526
+              ],
+              "width": 40
+            },
+            {
+              "__grid": [
+                1080,
+                350
               ],
               "__identifier": "Door",
               "__pivot": [
@@ -1396,17 +2063,17 @@
               "defUid": 4,
               "fieldInstances": [],
               "height": 16,
-              "iid": "a01c2a93-1ea5-422a-84aa-0db20211dc9b",
+              "iid": "0548dba5-f1dd-4ab1-9f56-8d8ef58a1cd5",
               "px": [
-                770,
-                263
+                1080,
+                350
               ],
-              "width": 62
+              "width": 72
             },
             {
               "__grid": [
-                801,
-                296
+                1116,
+                386
               ],
               "__identifier": "DoorUse",
               "__pivot": [
@@ -1418,17 +2085,17 @@
               "defUid": 5,
               "fieldInstances": [],
               "height": 8,
-              "iid": "c8a65971-196b-49e5-bd34-7f0dd21b2efa",
+              "iid": "5baa08c7-f733-447d-b837-fb4d5635937c",
               "px": [
-                801,
-                296
+                1116,
+                386
               ],
               "width": 8
             },
             {
               "__grid": [
-                458,
-                318
+                420,
+                414
               ],
               "__identifier": "PlayerSpawn",
               "__pivot": [
@@ -1440,17 +2107,17 @@
               "defUid": 6,
               "fieldInstances": [],
               "height": 8,
-              "iid": "caf10718-f829-46cf-ae0d-992bd033a342",
+              "iid": "eb847699-26b3-4326-ba1f-9bdf3bdf4d5f",
               "px": [
-                458,
-                318
+                420,
+                414
               ],
               "width": 8
             },
             {
               "__grid": [
                 65,
-                319
+                414
               ],
               "__identifier": "Exit",
               "__pivot": [
@@ -1462,39 +2129,17 @@
               "defUid": 7,
               "fieldInstances": [],
               "height": 8,
-              "iid": "d9f9d53f-6741-4a25-8fdd-2e828a14d680",
+              "iid": "710fddd8-b0fc-4357-ba6a-856a6e05735c",
               "px": [
                 65,
-                319
+                414
               ],
               "width": 8
             },
             {
               "__grid": [
-                430,
-                280
-              ],
-              "__identifier": "ReturnZone",
-              "__pivot": [
-                0,
-                0
-              ],
-              "__smartColor": "#8D9A84",
-              "__tags": [],
-              "defUid": 8,
-              "fieldInstances": [],
-              "height": 65,
-              "iid": "2a247d02-95fd-4ee7-bc32-f5b245a58150",
-              "px": [
-                430,
-                280
-              ],
-              "width": 90
-            },
-            {
-              "__grid": [
                 20,
-                60
+                68
               ],
               "__identifier": "CameraBounds",
               "__pivot": [
@@ -1505,18 +2150,18 @@
               "__tags": [],
               "defUid": 18,
               "fieldInstances": [],
-              "height": 468,
-              "iid": "e3651139-2123-4224-9cad-9590a4af96e6",
+              "height": 672,
+              "iid": "24525fc3-2861-4f6a-8877-32ee661aae5e",
               "px": [
                 20,
-                60
+                68
               ],
-              "width": 920
+              "width": 1240
             },
             {
               "__grid": [
                 36,
-                90
+                96
               ],
               "__identifier": "PlayBounds",
               "__pivot": [
@@ -1527,18 +2172,40 @@
               "__tags": [],
               "defUid": 19,
               "fieldInstances": [],
-              "height": 418,
-              "iid": "736f6ff5-ab32-4f66-822e-a4c765e6d720",
+              "height": 624,
+              "iid": "e4c8a1b2-1ff6-47b5-9257-5a63ab52b7d0",
               "px": [
                 36,
-                90
+                96
               ],
-              "width": 888
+              "width": 1208
             },
             {
               "__grid": [
-                65,
-                320
+                390,
+                378
+              ],
+              "__identifier": "ReturnZone",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 8,
+              "fieldInstances": [],
+              "height": 76,
+              "iid": "c016613e-1ac7-4f3e-9b61-6cf258bd89b9",
+              "px": [
+                390,
+                378
+              ],
+              "width": 120
+            },
+            {
+              "__grid": [
+                70,
+                414
               ],
               "__identifier": "MonsterLeft",
               "__pivot": [
@@ -1550,17 +2217,17 @@
               "defUid": 20,
               "fieldInstances": [],
               "height": 8,
-              "iid": "73de669e-b4ce-4a45-8d53-5cc12d286368",
+              "iid": "b14a0828-75c2-4ca7-afca-069f915d5f68",
               "px": [
-                65,
-                320
+                70,
+                414
               ],
               "width": 8
             },
             {
               "__grid": [
-                890,
-                320
+                1210,
+                414
               ],
               "__identifier": "MonsterRight",
               "__pivot": [
@@ -1572,17 +2239,17 @@
               "defUid": 21,
               "fieldInstances": [],
               "height": 8,
-              "iid": "e53065f9-f88e-47db-8be3-328e816a8243",
+              "iid": "21d3a53e-538c-4096-9d7d-40c016c92d84",
               "px": [
-                890,
-                320
+                1210,
+                414
               ],
               "width": 8
             },
             {
               "__grid": [
-                156,
-                302
+                256,
+                405
               ],
               "__identifier": "LampWest",
               "__pivot": [
@@ -1594,17 +2261,17 @@
               "defUid": 22,
               "fieldInstances": [],
               "height": 8,
-              "iid": "6cc6f627-a3bb-48cf-9445-10b6cee2dfbc",
+              "iid": "fab56adb-962c-4927-b7a1-60d97aa277ad",
               "px": [
-                156,
-                302
+                256,
+                405
               ],
               "width": 8
             },
             {
               "__grid": [
-                480,
-                304
+                636,
+                407
               ],
               "__identifier": "LampCenter",
               "__pivot": [
@@ -1616,17 +2283,17 @@
               "defUid": 23,
               "fieldInstances": [],
               "height": 8,
-              "iid": "81a843eb-aa39-425f-9e1d-588b42f033a5",
+              "iid": "54443d7d-f348-446f-87ce-f8091657cb0e",
               "px": [
-                480,
-                304
+                636,
+                407
               ],
               "width": 8
             },
             {
               "__grid": [
                 72,
-                294
+                390
               ],
               "__identifier": "LampExit",
               "__pivot": [
@@ -1638,17 +2305,17 @@
               "defUid": 24,
               "fieldInstances": [],
               "height": 8,
-              "iid": "a2d08ab2-5dc2-4745-a555-07eac6493ce1",
+              "iid": "c68e1683-dc06-49ad-9b43-44c1d7719148",
               "px": [
                 72,
-                294
+                390
               ],
               "width": 8
             },
             {
               "__grid": [
-                610,
-                436
+                1116,
+                602
               ],
               "__identifier": "LampSouth",
               "__pivot": [
@@ -1660,17 +2327,281 @@
               "defUid": 25,
               "fieldInstances": [],
               "height": 8,
-              "iid": "5f3496ef-7600-48ab-8c54-1962f3958a4d",
+              "iid": "c8448af3-498b-4c37-8289-14f9424be027",
               "px": [
-                610,
-                436
+                1116,
+                602
               ],
               "width": 8
             },
             {
               "__grid": [
-                426,
-                150
+                636,
+                570
+              ],
+              "__identifier": "LampTreatment",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 39,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "0dcb8fd2-a68b-4145-86cd-e0baeb11cdd7",
+              "px": [
+                636,
+                570
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                636,
+                246
+              ],
+              "__identifier": "LampWardTwo",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 40,
+              "fieldInstances": [],
+              "height": 8,
+              "iid": "b824767e-7f38-444e-b271-e31c80750858",
+              "px": [
+                636,
+                246
+              ],
+              "width": 8
+            },
+            {
+              "__grid": [
+                52,
+                500
+              ],
+              "__identifier": "NurseZone",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 29,
+              "fieldInstances": [],
+              "height": 204,
+              "iid": "742cb244-b9bf-44ff-ac96-9037aa4b5188",
+              "px": [
+                52,
+                500
+              ],
+              "width": 328
+            },
+            {
+              "__grid": [
+                52,
+                112
+              ],
+              "__identifier": "WardOneZone",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 30,
+              "fieldInstances": [],
+              "height": 216,
+              "iid": "c5bcbc13-43de-4f32-ba18-55f1c764ee22",
+              "px": [
+                52,
+                112
+              ],
+              "width": 328
+            },
+            {
+              "__grid": [
+                432,
+                112
+              ],
+              "__identifier": "WardTwoZone",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 31,
+              "fieldInstances": [],
+              "height": 216,
+              "iid": "ad7927b1-cbe5-476f-a4b9-18e1b551445a",
+              "px": [
+                432,
+                112
+              ],
+              "width": 364
+            },
+            {
+              "__grid": [
+                432,
+                500
+              ],
+              "__identifier": "TreatmentZone",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 32,
+              "fieldInstances": [],
+              "height": 204,
+              "iid": "c3942d7b-618f-4f04-b459-71ba171c7c67",
+              "px": [
+                432,
+                500
+              ],
+              "width": 364
+            },
+            {
+              "__grid": [
+                848,
+                500
+              ],
+              "__identifier": "LinenZone",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 33,
+              "fieldInstances": [],
+              "height": 204,
+              "iid": "1bb181f7-15ab-4b80-9704-cdee050274d4",
+              "px": [
+                848,
+                500
+              ],
+              "width": 376
+            },
+            {
+              "__grid": [
+                848,
+                112
+              ],
+              "__identifier": "IsolationZone",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 34,
+              "fieldInstances": [],
+              "height": 216,
+              "iid": "48045abe-ced9-4580-8abd-457e89560047",
+              "px": [
+                848,
+                112
+              ],
+              "width": 376
+            },
+            {
+              "__grid": [
+                200,
+                377
+              ],
+              "__identifier": "DressPhoneZone",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 35,
+              "fieldInstances": [],
+              "height": 19,
+              "iid": "026abb67-5f81-4e1a-b93a-f62c9d0030a9",
+              "px": [
+                200,
+                377
+              ],
+              "width": 12
+            },
+            {
+              "__grid": [
+                170,
+                538
+              ],
+              "__identifier": "DressCrtZone",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 36,
+              "fieldInstances": [],
+              "height": 15,
+              "iid": "c7f30253-d2c4-4671-8749-ca252ea310f9",
+              "px": [
+                170,
+                538
+              ],
+              "width": 19
+            },
+            {
+              "__grid": [
+                1040,
+                377
+              ],
+              "__identifier": "DressMemorialZone",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 37,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "47ad761a-8f8d-4ef3-9ea9-2bc68b0e4932",
+              "px": [
+                1040,
+                377
+              ],
+              "width": 9
+            },
+            {
+              "__grid": [
+                1170,
+                682
+              ],
+              "__identifier": "DressDollZone",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 38,
+              "fieldInstances": [],
+              "height": 20,
+              "iid": "fad1623c-188c-483e-a468-a6ca00c4215b",
+              "px": [
+                1170,
+                682
+              ],
+              "width": 10
+            },
+            {
+              "__grid": [
+                520,
+                265
               ],
               "__identifier": "WeeperSpawn",
               "__pivot": [
@@ -1682,17 +2613,17 @@
               "defUid": 26,
               "fieldInstances": [],
               "height": 8,
-              "iid": "abb7c9bf-85d5-4769-a082-63d1d952ef01",
+              "iid": "896ac811-2304-4966-8578-10ebbac2c249",
               "px": [
-                426,
-                150
+                520,
+                265
               ],
               "width": 8
             },
             {
               "__grid": [
-                594,
-                150
+                950,
+                570
               ],
               "__identifier": "WeeperSpawn",
               "__pivot": [
@@ -1704,17 +2635,17 @@
               "defUid": 26,
               "fieldInstances": [],
               "height": 8,
-              "iid": "1d82183f-bb6c-4b91-840e-6c111174aa6d",
+              "iid": "ef4a30be-8e17-4b36-b505-8e84fef7bcb6",
               "px": [
-                594,
-                150
+                950,
+                570
               ],
               "width": 8
             },
             {
               "__grid": [
-                258,
-                414
+                180,
+                620
               ],
               "__identifier": "WeeperSpawn",
               "__pivot": [
@@ -1726,56 +2657,122 @@
               "defUid": 26,
               "fieldInstances": [],
               "height": 8,
-              "iid": "c43b0f7d-dbd5-4fba-a814-52228f8f7bb4",
+              "iid": "dafcb95a-d7c4-4813-8f92-5acfc23d2764",
               "px": [
-                258,
-                414
+                180,
+                620
               ],
               "width": 8
             },
             {
               "__grid": [
-                378,
-                438
+                52,
+                500
               ],
-              "__identifier": "WeeperSpawn",
+              "__identifier": "OptionalNurseZone",
               "__pivot": [
                 0,
                 0
               ],
               "__smartColor": "#8D9A84",
               "__tags": [],
-              "defUid": 26,
+              "defUid": 41,
               "fieldInstances": [],
-              "height": 8,
-              "iid": "9b253ad8-1273-49a9-bb36-b9a2169d628d",
+              "height": 204,
+              "iid": "0b665ac2-cf94-5ab6-b7c1-d74f7acceb1f",
               "px": [
-                378,
-                438
+                52,
+                500
               ],
-              "width": 8
+              "width": 328
             },
             {
               "__grid": [
-                786,
-                438
+                52,
+                112
               ],
-              "__identifier": "WeeperSpawn",
+              "__identifier": "OptionalWardOneZone",
               "__pivot": [
                 0,
                 0
               ],
               "__smartColor": "#8D9A84",
               "__tags": [],
-              "defUid": 26,
+              "defUid": 42,
               "fieldInstances": [],
-              "height": 8,
-              "iid": "e2ea9208-d62b-4acf-bc5d-43271ada264f",
+              "height": 216,
+              "iid": "40947c95-6cc7-5949-97d9-a939f68c55b4",
               "px": [
-                786,
-                438
+                52,
+                112
               ],
-              "width": 8
+              "width": 328
+            },
+            {
+              "__grid": [
+                432,
+                112
+              ],
+              "__identifier": "OptionalWardTwoZone",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 43,
+              "fieldInstances": [],
+              "height": 216,
+              "iid": "3816809f-cc14-529a-a8dd-8b960c166f55",
+              "px": [
+                432,
+                112
+              ],
+              "width": 364
+            },
+            {
+              "__grid": [
+                432,
+                500
+              ],
+              "__identifier": "OptionalTreatmentZone",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 44,
+              "fieldInstances": [],
+              "height": 204,
+              "iid": "d40ec810-62ca-5ef7-948f-606262e17d2e",
+              "px": [
+                432,
+                500
+              ],
+              "width": 364
+            },
+            {
+              "__grid": [
+                848,
+                500
+              ],
+              "__identifier": "OptionalLinenZone",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 45,
+              "fieldInstances": [],
+              "height": 204,
+              "iid": "18eecb45-149c-5cba-973f-824aa4690984",
+              "px": [
+                848,
+                500
+              ],
+              "width": 376
             }
           ],
           "gridTiles": [],
@@ -1790,8 +2787,8 @@
           "seed": 0
         },
         {
-          "__cHei": 576,
-          "__cWid": 960,
+          "__cHei": 768,
+          "__cWid": 1280,
           "__gridSize": 1,
           "__identifier": "Loot_A",
           "__opacity": 1,
@@ -1802,8 +2799,8 @@
           "entityInstances": [
             {
               "__grid": [
-                107,
-                393
+                300,
+                620
               ],
               "__identifier": "Key_A",
               "__pivot": [
@@ -1815,17 +2812,17 @@
               "defUid": 9,
               "fieldInstances": [],
               "height": 8,
-              "iid": "bd6f1e70-1df1-4919-b102-e0ec77e323a2",
+              "iid": "a4054c1a-63c1-4d20-8ba6-0d206fd48626",
               "px": [
-                107,
-                393
+                300,
+                620
               ],
               "width": 8
             },
             {
               "__grid": [
-                236,
-                235
+                200,
+                265
               ],
               "__identifier": "Box0_A",
               "__pivot": [
@@ -1837,17 +2834,17 @@
               "defUid": 10,
               "fieldInstances": [],
               "height": 8,
-              "iid": "5d362879-0fc8-4293-9abe-96e43dc2cb9b",
+              "iid": "11d02fb1-86bf-49e1-bbad-78b753adab7b",
               "px": [
-                236,
-                235
+                200,
+                265
               ],
               "width": 8
             },
             {
               "__grid": [
-                603,
-                427
+                720,
+                640
               ],
               "__identifier": "Box1_A",
               "__pivot": [
@@ -1859,17 +2856,17 @@
               "defUid": 11,
               "fieldInstances": [],
               "height": 8,
-              "iid": "90132fe8-6923-47f8-9759-55161caa42b4",
+              "iid": "0ae5df30-a7b0-4737-a42f-bff0e2547463",
               "px": [
-                603,
-                427
+                720,
+                640
               ],
               "width": 8
             },
             {
               "__grid": [
-                770,
-                170
+                1080,
+                265
               ],
               "__identifier": "Box2_A",
               "__pivot": [
@@ -1881,10 +2878,10 @@
               "defUid": 12,
               "fieldInstances": [],
               "height": 8,
-              "iid": "a7707d7f-1690-4367-8d04-4eff9846a5e6",
+              "iid": "42de4f81-e65c-4589-a31e-0dd6ce2b7a82",
               "px": [
-                770,
-                170
+                1080,
+                265
               ],
               "width": 8
             }
@@ -1901,8 +2898,8 @@
           "seed": 0
         },
         {
-          "__cHei": 576,
-          "__cWid": 960,
+          "__cHei": 768,
+          "__cWid": 1280,
           "__gridSize": 1,
           "__identifier": "Loot_B",
           "__opacity": 1,
@@ -1913,8 +2910,8 @@
           "entityInstances": [
             {
               "__grid": [
-                232,
-                446
+                250,
+                635
               ],
               "__identifier": "Key_B",
               "__pivot": [
@@ -1926,17 +2923,17 @@
               "defUid": 13,
               "fieldInstances": [],
               "height": 8,
-              "iid": "c4b3fcbe-b6f8-4f5a-9749-e775095d3b20",
+              "iid": "f35b5d20-357a-4ae0-b9ba-1f895f6c9398",
               "px": [
-                232,
-                446
+                250,
+                635
               ],
               "width": 8
             },
             {
               "__grid": [
-                395,
-                235
+                340,
+                285
               ],
               "__identifier": "Box0_B",
               "__pivot": [
@@ -1948,17 +2945,17 @@
               "defUid": 14,
               "fieldInstances": [],
               "height": 8,
-              "iid": "e7662f2b-f02b-4cab-a19b-fdc4b1eb6f0b",
+              "iid": "8dcaacc1-24c6-4c3e-bb59-abb205e9af0f",
               "px": [
-                395,
-                235
+                340,
+                285
               ],
               "width": 8
             },
             {
               "__grid": [
-                541,
-                444
+                650,
+                645
               ],
               "__identifier": "Box1_B",
               "__pivot": [
@@ -1970,17 +2967,17 @@
               "defUid": 15,
               "fieldInstances": [],
               "height": 8,
-              "iid": "7922d02e-75b0-4734-a966-573219ae7363",
+              "iid": "e82bdab5-d40c-401e-bd6f-27187b40d40f",
               "px": [
-                541,
-                444
+                650,
+                645
               ],
               "width": 8
             },
             {
               "__grid": [
-                770,
-                170
+                1010,
+                280
               ],
               "__identifier": "Box2_B",
               "__pivot": [
@@ -1992,10 +2989,10 @@
               "defUid": 16,
               "fieldInstances": [],
               "height": 8,
-              "iid": "052029c1-4dfd-4f40-87ed-3e382ee172c4",
+              "iid": "94181fa6-7ab4-4233-9607-5fcf96885574",
               "px": [
-                770,
-                170
+                1010,
+                280
               ],
               "width": 8
             }
@@ -2036,8 +3033,8 @@
   "minifyJson": false,
   "nextUid": 201,
   "simplifiedExport": false,
-  "defaultLevelWidth": 960,
-  "defaultLevelHeight": 576,
+  "defaultLevelWidth": 1280,
+  "defaultLevelHeight": 768,
   "worldLayout": "Free",
   "worldGridWidth": 960,
   "worldGridHeight": 576

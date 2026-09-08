@@ -198,6 +198,24 @@
     "encoding": "webp-q95"
   },
   {
+    "file": "assets/morgue-shrouded-body-v1.webp",
+    "source": "assets/morgue-shrouded-body-v1.png",
+    "source_bytes": 656032,
+    "bytes": 414116,
+    "source_sha256": "14c8cd360bdb18c3894de8bebb453d7fd53490cd35b2f8db8dfafafddb5b052d",
+    "sha256": "baba78bd4a5caa8363de90c9560d341d801d5002246fb70735e3396dd9a86741",
+    "encoding": "lossless"
+  },
+  {
+    "file": "assets/garden-pine-v1.webp",
+    "source": "assets/garden-pine-v1.png",
+    "source_bytes": 845172,
+    "bytes": 624694,
+    "source_sha256": "97905a4abd7b4dbd1c1919bd6f8635a631d8e4b1f44a82d353e21492ff95ee61",
+    "sha256": "4a4d6dd9a0bc715e565919ffe132bb0d770863a487d812a0dfc11a1d36667420",
+    "encoding": "lossless"
+  },
+  {
     "file": "audio/ward-exploration-v3.opus",
     "source": "audio/ward-exploration-v3.mp3",
     "source_bytes": 641194,

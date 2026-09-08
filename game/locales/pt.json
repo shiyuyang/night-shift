@@ -311,5 +311,13 @@
   "command.drain": "Vazamento de bateria",
   "command.drain.description": "Drenagem extra de bateria por 8 segundos, perdendo no máximo 16%. A duração não se acumula.",
   "command.alarm": "Ruído",
-  "command.alarm.description": "Revele sua posição por 6 segundos. Pressione R para distrair com uma isca."
+  "command.alarm.description": "Revele sua posição por 6 segundos. Pressione R para distrair com uma isca.",
+  "stage.3": "Ambulatório",
+  "stage.4": "Sala de cirurgia",
+  "note.3": "Sala de espera vazia. Um ruído atrás de uma porta.",
+  "note.4": "A luz cirúrgica continua acesa.",
+  "stage.5": "Necrotério",
+  "note.5": "Uma gaveta range atrás de você.",
+  "stage.6": "Pátio do hospital",
+  "note.6": "Janelas acesas. Um pátio vazio."
 }

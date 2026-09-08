@@ -311,5 +311,13 @@
   "command.drain": "Perdita di batteria",
   "command.drain.description": "Consumo extra della batteria per 8 secondi, perdendo al massimo il 16%. La durata non si somma.",
   "command.alarm": "Rumore",
-  "command.alarm.description": "Rivela la tua posizione per 6 secondi. Premi R per distrarre con un'esca."
+  "command.alarm.description": "Rivela la tua posizione per 6 secondi. Premi R per distrarre con un'esca.",
+  "stage.3": "Ambulatorio",
+  "stage.4": "Sala operatoria",
+  "note.3": "Sala d’attesa vuota. Un rumore dietro una porta.",
+  "note.4": "La lampada operatoria è ancora accesa.",
+  "stage.5": "Obitorio",
+  "note.5": "Un cassetto sbatte alle tue spalle.",
+  "stage.6": "Cortile ospedaliero",
+  "note.6": "Finestre illuminate. Cortile deserto."
 }

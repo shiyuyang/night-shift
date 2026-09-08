@@ -8,7 +8,8 @@ export const center=(f:Box):Position=>({x:f.x+f.width/2,y:f.y+f.height/2});
 export const featureSafetyBox=(f:Feature):Box=>({x:f.x-12,y:f.y-24,width:f.width+24,height:f.height+36});
 /** Place optional content away from main interactions, proving a route with every danger avoided. */
 export function populateRogueContent(level:Level,rng:()=>number){
- const points=reachablePositions(level,false).filter(p=>p.x>64&&p.x<680&&p.y>132&&p.y<460&&(p.y<250||p.y>370));
+ const rooms=Object.entries(level.zones).filter(([id])=>id.startsWith('Optional')&&id.endsWith('Zone')).map(([,bounds])=>bounds);
+ const points=reachablePositions(level,false).filter(p=>rooms.some(b=>p.x>b.x+24&&p.x<b.x+b.width-24&&p.y>b.y+24&&p.y<b.y+b.height-24));
  for(let i=points.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[points[i],points[j]]=[points[j],points[i]];}
  // Prefer the back of a room, beside a wall or furnishing, over the aisle.
  const distance=(p:Position,b:Box)=>Math.hypot(Math.max(b.x-p.x,0,p.x-b.x-b.width),Math.max(b.y-p.y,0,p.y-b.y-b.height));

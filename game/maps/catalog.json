@@ -82,365 +82,531 @@
         "radius": 120,
         "strength": 0.52,
         "color": "#80a394"
+      },
+      {
+        "id": "LampTreatment",
+        "radius": 150,
+        "strength": 0.52,
+        "color": "#80a394"
+      },
+      {
+        "id": "LampWardTwo",
+        "radius": 150,
+        "strength": 0.5,
+        "color": "#79a6b6"
       }
     ],
-    "width": 960,
-    "height": 576,
+    "width": 1280,
+    "height": 768,
     "entities": [
       {
         "id": "Wall",
         "x": 22,
-        "y": 61,
-        "width": 916,
+        "y": 68,
+        "width": 1236,
         "height": 28
       },
       {
         "id": "Wall",
         "x": 22,
-        "y": 89,
+        "y": 96,
         "width": 14,
-        "height": 439
+        "height": 624
       },
       {
         "id": "Wall",
-        "x": 924,
-        "y": 89,
+        "x": 1244,
+        "y": 96,
         "width": 14,
-        "height": 439
+        "height": 624
       },
       {
         "id": "Wall",
         "x": 22,
-        "y": 508,
-        "width": 916,
+        "y": 720,
+        "width": 1236,
         "height": 20
       },
       {
         "id": "Wall",
         "x": 36,
-        "y": 263,
-        "width": 90,
+        "y": 350,
+        "width": 184,
         "height": 16
       },
       {
         "id": "Wall",
-        "x": 188,
-        "y": 263,
-        "width": 240,
+        "x": 292,
+        "y": 350,
+        "width": 308,
         "height": 16
       },
       {
         "id": "Wall",
-        "x": 500,
-        "y": 263,
-        "width": 270,
+        "x": 672,
+        "y": 350,
+        "width": 408,
         "height": 16
       },
       {
         "id": "Wall",
-        "x": 832,
-        "y": 263,
+        "x": 1152,
+        "y": 350,
         "width": 92,
         "height": 16
       },
       {
         "id": "Wall",
         "x": 36,
-        "y": 350,
-        "width": 90,
+        "y": 470,
+        "width": 184,
         "height": 16
       },
       {
         "id": "Wall",
-        "x": 188,
-        "y": 350,
-        "width": 240,
+        "x": 292,
+        "y": 470,
+        "width": 308,
         "height": 16
       },
       {
         "id": "Wall",
-        "x": 500,
-        "y": 350,
-        "width": 270,
+        "x": 672,
+        "y": 470,
+        "width": 408,
         "height": 16
       },
       {
         "id": "Wall",
-        "x": 832,
-        "y": 350,
+        "x": 1152,
+        "y": 470,
         "width": 92,
         "height": 16
       },
       {
         "id": "Wall",
-        "x": 330,
-        "y": 89,
-        "width": 14,
-        "height": 174
+        "x": 400,
+        "y": 96,
+        "width": 16,
+        "height": 254
       },
       {
         "id": "Wall",
-        "x": 330,
-        "y": 366,
-        "width": 14,
-        "height": 142
+        "x": 816,
+        "y": 96,
+        "width": 16,
+        "height": 254
       },
       {
         "id": "Wall",
-        "x": 650,
-        "y": 89,
-        "width": 14,
-        "height": 174
+        "x": 400,
+        "y": 486,
+        "width": 16,
+        "height": 234
       },
       {
         "id": "Wall",
-        "x": 650,
-        "y": 366,
-        "width": 14,
-        "height": 142
+        "x": 816,
+        "y": 486,
+        "width": 16,
+        "height": 94
+      },
+      {
+        "id": "Wall",
+        "x": 816,
+        "y": 660,
+        "width": 16,
+        "height": 60
       },
       {
         "id": "Bed",
-        "x": 69,
-        "y": 135,
+        "x": 90,
+        "y": 140,
         "width": 38,
         "height": 76
       },
       {
         "id": "Bed",
-        "x": 212,
-        "y": 135,
+        "x": 300,
+        "y": 140,
         "width": 38,
         "height": 76
       },
       {
         "id": "Bed",
-        "x": 373,
-        "y": 135,
+        "x": 460,
+        "y": 140,
         "width": 38,
         "height": 76
       },
       {
         "id": "Bed",
-        "x": 541,
-        "y": 135,
+        "x": 710,
+        "y": 140,
         "width": 38,
         "height": 76
       },
       {
         "id": "Bed",
-        "x": 685,
-        "y": 135,
+        "x": 900,
+        "y": 140,
         "width": 38,
         "height": 76
       },
       {
         "id": "Bed",
-        "x": 838,
-        "y": 135,
+        "x": 1150,
+        "y": 140,
         "width": 38,
         "height": 76
       },
       {
-        "id": "Crate",
-        "x": 94,
-        "y": 425,
-        "width": 42,
-        "height": 34
+        "id": "Bed",
+        "x": 460,
+        "y": 530,
+        "width": 38,
+        "height": 76
       },
       {
-        "id": "Crate",
-        "x": 415,
-        "y": 425,
-        "width": 42,
-        "height": 34
+        "id": "Bed",
+        "x": 570,
+        "y": 530,
+        "width": 38,
+        "height": 76
       },
       {
-        "id": "Crate",
-        "x": 728,
-        "y": 425,
-        "width": 42,
-        "height": 34
+        "id": "Desk",
+        "x": 80,
+        "y": 530,
+        "width": 144,
+        "height": 36
+      },
+      {
+        "id": "Desk",
+        "x": 80,
+        "y": 566,
+        "width": 32,
+        "height": 60
+      },
+      {
+        "id": "Shelf",
+        "x": 150,
+        "y": 672,
+        "width": 72,
+        "height": 28
+      },
+      {
+        "id": "Shelf",
+        "x": 300,
+        "y": 672,
+        "width": 72,
+        "height": 28
+      },
+      {
+        "id": "Shelf",
+        "x": 900,
+        "y": 672,
+        "width": 72,
+        "height": 28
+      },
+      {
+        "id": "Shelf",
+        "x": 1100,
+        "y": 672,
+        "width": 72,
+        "height": 28
+      },
+      {
+        "id": "Machine",
+        "x": 740,
+        "y": 526,
+        "width": 40,
+        "height": 44
       },
       {
         "id": "Door",
-        "x": 770,
-        "y": 263,
-        "width": 62,
+        "x": 1080,
+        "y": 350,
+        "width": 72,
         "height": 16
       },
       {
         "id": "DoorUse",
-        "x": 801,
-        "y": 296,
+        "x": 1116,
+        "y": 386,
         "width": 8,
         "height": 8
       },
       {
         "id": "PlayerSpawn",
-        "x": 458,
-        "y": 318,
+        "x": 420,
+        "y": 414,
         "width": 8,
         "height": 8
       },
       {
         "id": "Exit",
         "x": 65,
-        "y": 319,
+        "y": 414,
         "width": 8,
         "height": 8
       },
       {
-        "id": "ReturnZone",
-        "x": 430,
-        "y": 280,
-        "width": 90,
-        "height": 65
-      },
-      {
         "id": "CameraBounds",
         "x": 20,
-        "y": 60,
-        "width": 920,
-        "height": 468
+        "y": 68,
+        "width": 1240,
+        "height": 672
       },
       {
         "id": "PlayBounds",
         "x": 36,
-        "y": 90,
-        "width": 888,
-        "height": 418
+        "y": 96,
+        "width": 1208,
+        "height": 624
+      },
+      {
+        "id": "ReturnZone",
+        "x": 390,
+        "y": 378,
+        "width": 120,
+        "height": 76
       },
       {
         "id": "MonsterLeft",
-        "x": 65,
-        "y": 320,
+        "x": 70,
+        "y": 414,
         "width": 8,
         "height": 8
       },
       {
         "id": "MonsterRight",
-        "x": 890,
-        "y": 320,
+        "x": 1210,
+        "y": 414,
         "width": 8,
         "height": 8
       },
       {
         "id": "LampWest",
-        "x": 156,
-        "y": 302,
+        "x": 256,
+        "y": 405,
         "width": 8,
         "height": 8
       },
       {
         "id": "LampCenter",
-        "x": 480,
-        "y": 304,
+        "x": 636,
+        "y": 407,
         "width": 8,
         "height": 8
       },
       {
         "id": "LampExit",
         "x": 72,
-        "y": 294,
+        "y": 390,
         "width": 8,
         "height": 8
       },
       {
         "id": "LampSouth",
-        "x": 610,
-        "y": 436,
+        "x": 1116,
+        "y": 602,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "LampTreatment",
+        "x": 636,
+        "y": 570,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "LampWardTwo",
+        "x": 636,
+        "y": 246,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "NurseZone",
+        "x": 52,
+        "y": 500,
+        "width": 328,
+        "height": 204
+      },
+      {
+        "id": "WardOneZone",
+        "x": 52,
+        "y": 112,
+        "width": 328,
+        "height": 216
+      },
+      {
+        "id": "WardTwoZone",
+        "x": 432,
+        "y": 112,
+        "width": 364,
+        "height": 216
+      },
+      {
+        "id": "TreatmentZone",
+        "x": 432,
+        "y": 500,
+        "width": 364,
+        "height": 204
+      },
+      {
+        "id": "LinenZone",
+        "x": 848,
+        "y": 500,
+        "width": 376,
+        "height": 204
+      },
+      {
+        "id": "IsolationZone",
+        "x": 848,
+        "y": 112,
+        "width": 376,
+        "height": 216
+      },
+      {
+        "id": "DressPhoneZone",
+        "x": 200,
+        "y": 377,
+        "width": 12,
+        "height": 19
+      },
+      {
+        "id": "DressCrtZone",
+        "x": 170,
+        "y": 538,
+        "width": 19,
+        "height": 15
+      },
+      {
+        "id": "DressMemorialZone",
+        "x": 1040,
+        "y": 377,
+        "width": 9,
+        "height": 16
+      },
+      {
+        "id": "DressDollZone",
+        "x": 1170,
+        "y": 682,
+        "width": 10,
+        "height": 20
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 520,
+        "y": 265,
         "width": 8,
         "height": 8
       },
       {
         "id": "WeeperSpawn",
-        "x": 426,
-        "y": 150,
+        "x": 950,
+        "y": 570,
         "width": 8,
         "height": 8
       },
       {
         "id": "WeeperSpawn",
-        "x": 594,
-        "y": 150,
+        "x": 180,
+        "y": 620,
         "width": 8,
         "height": 8
       },
       {
-        "id": "WeeperSpawn",
-        "x": 258,
-        "y": 414,
-        "width": 8,
-        "height": 8
+        "id": "OptionalNurseZone",
+        "x": 52,
+        "y": 500,
+        "width": 328,
+        "height": 204
       },
       {
-        "id": "WeeperSpawn",
-        "x": 378,
-        "y": 438,
-        "width": 8,
-        "height": 8
+        "id": "OptionalWardOneZone",
+        "x": 52,
+        "y": 112,
+        "width": 328,
+        "height": 216
       },
       {
-        "id": "WeeperSpawn",
-        "x": 786,
-        "y": 438,
-        "width": 8,
-        "height": 8
+        "id": "OptionalWardTwoZone",
+        "x": 432,
+        "y": 112,
+        "width": 364,
+        "height": 216
+      },
+      {
+        "id": "OptionalTreatmentZone",
+        "x": 432,
+        "y": 500,
+        "width": 364,
+        "height": 204
+      },
+      {
+        "id": "OptionalLinenZone",
+        "x": 848,
+        "y": 500,
+        "width": 376,
+        "height": 204
       },
       {
         "id": "Key_A",
-        "x": 107,
-        "y": 393,
+        "x": 300,
+        "y": 620,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box0_A",
-        "x": 236,
-        "y": 235,
+        "x": 200,
+        "y": 265,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box1_A",
-        "x": 603,
-        "y": 427,
+        "x": 720,
+        "y": 640,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box2_A",
-        "x": 770,
-        "y": 170,
+        "x": 1080,
+        "y": 265,
         "width": 8,
         "height": 8
       },
       {
         "id": "Key_B",
-        "x": 232,
-        "y": 446,
+        "x": 250,
+        "y": 635,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box0_B",
-        "x": 395,
-        "y": 235,
+        "x": 340,
+        "y": 285,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box1_B",
-        "x": 541,
-        "y": 444,
+        "x": 650,
+        "y": 645,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box2_B",
-        "x": 770,
-        "y": 170,
+        "x": 1010,
+        "y": 280,
         "width": 8,
         "height": 8
       }
@@ -512,323 +678,510 @@
         "radius": 120,
         "strength": 0.52,
         "color": "#80a394"
+      },
+      {
+        "id": "LampNorth",
+        "radius": 165,
+        "strength": 0.52,
+        "color": "#bba574"
+      },
+      {
+        "id": "LampEast",
+        "radius": 150,
+        "strength": 0.56,
+        "color": "#80a394"
       }
     ],
-    "width": 960,
-    "height": 576,
+    "width": 1280,
+    "height": 768,
     "entities": [
       {
         "id": "Wall",
         "x": 22,
-        "y": 61,
-        "width": 916,
+        "y": 68,
+        "width": 1236,
         "height": 28
       },
       {
         "id": "Wall",
         "x": 22,
-        "y": 89,
+        "y": 96,
         "width": 14,
-        "height": 439
+        "height": 624
       },
       {
         "id": "Wall",
-        "x": 924,
-        "y": 89,
+        "x": 1244,
+        "y": 96,
         "width": 14,
-        "height": 439
+        "height": 624
       },
       {
         "id": "Wall",
         "x": 22,
-        "y": 508,
-        "width": 916,
+        "y": 720,
+        "width": 1236,
         "height": 20
       },
       {
-        "id": "Wall",
-        "x": 215,
-        "y": 236,
-        "width": 14,
-        "height": 124
+        "id": "CameraBounds",
+        "x": 20,
+        "y": 68,
+        "width": 1240,
+        "height": 672
+      },
+      {
+        "id": "PlayBounds",
+        "x": 36,
+        "y": 96,
+        "width": 1208,
+        "height": 624
       },
       {
         "id": "Wall",
-        "x": 375,
-        "y": 290,
-        "width": 14,
-        "height": 130
-      },
-      {
-        "id": "Wall",
-        "x": 570,
-        "y": 180,
-        "width": 14,
-        "height": 172
-      },
-      {
-        "id": "Wall",
-        "x": 720,
-        "y": 89,
-        "width": 14,
-        "height": 174
-      },
-      {
-        "id": "Wall",
-        "x": 734,
-        "y": 263,
-        "width": 36,
-        "height": 16
-      },
-      {
-        "id": "Wall",
-        "x": 832,
-        "y": 263,
-        "width": 92,
-        "height": 16
-      },
-      {
-        "id": "Crate",
-        "x": 120,
-        "y": 120,
-        "width": 40,
-        "height": 116
-      },
-      {
-        "id": "Crate",
-        "x": 160,
-        "y": 372,
-        "width": 40,
-        "height": 110
-      },
-      {
-        "id": "Crate",
         "x": 300,
-        "y": 120,
-        "width": 40,
-        "height": 116
+        "y": 96,
+        "width": 16,
+        "height": 106
       },
       {
-        "id": "Crate",
-        "x": 340,
-        "y": 372,
-        "width": 40,
-        "height": 110
+        "id": "Wall",
+        "x": 300,
+        "y": 282,
+        "width": 16,
+        "height": 34
       },
       {
-        "id": "Crate",
-        "x": 480,
-        "y": 120,
-        "width": 40,
-        "height": 116
+        "id": "Wall",
+        "x": 36,
+        "y": 300,
+        "width": 264,
+        "height": 16
       },
       {
-        "id": "Crate",
-        "x": 520,
-        "y": 372,
-        "width": 40,
-        "height": 110
+        "id": "Wall",
+        "x": 36,
+        "y": 504,
+        "width": 264,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 300,
+        "y": 504,
+        "width": 16,
+        "height": 58
+      },
+      {
+        "id": "Wall",
+        "x": 300,
+        "y": 650,
+        "width": 16,
+        "height": 70
+      },
+      {
+        "id": "Wall",
+        "x": 1008,
+        "y": 96,
+        "width": 16,
+        "height": 220
+      },
+      {
+        "id": "Wall",
+        "x": 1024,
+        "y": 300,
+        "width": 72,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 1168,
+        "y": 300,
+        "width": 76,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 1008,
+        "y": 504,
+        "width": 236,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 1008,
+        "y": 520,
+        "width": 16,
+        "height": 46
+      },
+      {
+        "id": "Wall",
+        "x": 1008,
+        "y": 650,
+        "width": 16,
+        "height": 70
       },
       {
         "id": "Door",
-        "x": 770,
-        "y": 263,
-        "width": 62,
+        "x": 1096,
+        "y": 300,
+        "width": 72,
         "height": 16
       },
       {
         "id": "DoorUse",
-        "x": 801,
-        "y": 296,
+        "x": 1132,
+        "y": 336,
         "width": 8,
         "height": 8
       },
       {
         "id": "PlayerSpawn",
-        "x": 458,
-        "y": 318,
+        "x": 200,
+        "y": 414,
         "width": 8,
         "height": 8
       },
       {
         "id": "Exit",
         "x": 65,
-        "y": 319,
+        "y": 414,
         "width": 8,
         "height": 8
       },
       {
-        "id": "ReturnZone",
-        "x": 430,
-        "y": 280,
-        "width": 90,
-        "height": 65
-      },
-      {
-        "id": "CameraBounds",
-        "x": 20,
-        "y": 60,
-        "width": 920,
-        "height": 468
-      },
-      {
-        "id": "PlayBounds",
-        "x": 36,
-        "y": 90,
-        "width": 888,
-        "height": 418
-      },
-      {
         "id": "MonsterLeft",
-        "x": 65,
-        "y": 320,
+        "x": 70,
+        "y": 414,
         "width": 8,
         "height": 8
       },
       {
         "id": "MonsterRight",
-        "x": 890,
-        "y": 320,
+        "x": 1205,
+        "y": 414,
         "width": 8,
         "height": 8
       },
       {
+        "id": "ReturnZone",
+        "x": 320,
+        "y": 374,
+        "width": 130,
+        "height": 84
+      },
+      {
+        "id": "Desk",
+        "x": 80,
+        "y": 132,
+        "width": 144,
+        "height": 34
+      },
+      {
+        "id": "Crate",
+        "x": 80,
+        "y": 212,
+        "width": 40,
+        "height": 34
+      },
+      {
+        "id": "Crate",
+        "x": 140,
+        "y": 212,
+        "width": 40,
+        "height": 34
+      },
+      {
+        "id": "Crate",
+        "x": 80,
+        "y": 260,
+        "width": 40,
+        "height": 28
+      },
+      {
+        "id": "Desk",
+        "x": 90,
+        "y": 662,
+        "width": 130,
+        "height": 34
+      },
+      {
+        "id": "Shelf",
+        "x": 1070,
+        "y": 640,
+        "width": 72,
+        "height": 28
+      },
+      {
+        "id": "Machine",
+        "x": 1160,
+        "y": 576,
+        "width": 45,
+        "height": 60
+      },
+      {
+        "id": "Shelf",
+        "x": 1070,
+        "y": 136,
+        "width": 72,
+        "height": 28
+      },
+      {
+        "id": "ReceivingZone",
+        "x": 52,
+        "y": 112,
+        "width": 228,
+        "height": 176
+      },
+      {
+        "id": "DispatchZone",
+        "x": 52,
+        "y": 530,
+        "width": 228,
+        "height": 174
+      },
+      {
+        "id": "StockroomZone",
+        "x": 1040,
+        "y": 112,
+        "width": 188,
+        "height": 176
+      },
+      {
+        "id": "ColdStoreZone",
+        "x": 1040,
+        "y": 536,
+        "width": 188,
+        "height": 168
+      },
+      {
+        "id": "RackWestZone",
+        "x": 476,
+        "y": 210,
+        "width": 96,
+        "height": 106
+      },
+      {
+        "id": "RackCenterZone",
+        "x": 676,
+        "y": 210,
+        "width": 96,
+        "height": 106
+      },
+      {
+        "id": "RackSouthZone",
+        "x": 476,
+        "y": 508,
+        "width": 296,
+        "height": 104
+      },
+      {
+        "id": "OptionalReceivingZone",
+        "x": 52,
+        "y": 180,
+        "width": 228,
+        "height": 100
+      },
+      {
+        "id": "OptionalDispatchZone",
+        "x": 52,
+        "y": 536,
+        "width": 228,
+        "height": 108
+      },
+      {
+        "id": "OptionalColdStoreZone",
+        "x": 1040,
+        "y": 530,
+        "width": 176,
+        "height": 150
+      },
+      {
         "id": "LampWest",
-        "x": 156,
-        "y": 302,
+        "x": 210,
+        "y": 396,
         "width": 8,
         "height": 8
       },
       {
         "id": "LampCenter",
-        "x": 480,
-        "y": 304,
+        "x": 640,
+        "y": 414,
         "width": 8,
         "height": 8
       },
       {
         "id": "LampExit",
         "x": 72,
-        "y": 294,
+        "y": 390,
         "width": 8,
         "height": 8
       },
       {
         "id": "LampSouth",
-        "x": 610,
-        "y": 436,
+        "x": 640,
+        "y": 676,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "LampNorth",
+        "x": 640,
+        "y": 148,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "LampEast",
+        "x": 1132,
+        "y": 388,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "DressPhoneZone",
+        "x": 280,
+        "y": 336,
+        "width": 12,
+        "height": 19
+      },
+      {
+        "id": "DressCrtZone",
+        "x": 170,
+        "y": 140,
+        "width": 19,
+        "height": 15
+      },
+      {
+        "id": "DressMemorialZone",
+        "x": 1000,
+        "y": 336,
+        "width": 9,
+        "height": 16
+      },
+      {
+        "id": "DressDollZone",
+        "x": 1188,
+        "y": 681,
+        "width": 10,
+        "height": 20
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 935,
+        "y": 590,
         "width": 8,
         "height": 8
       },
       {
         "id": "WeeperSpawn",
-        "x": 90,
-        "y": 150,
+        "x": 910,
+        "y": 216,
         "width": 8,
         "height": 8
       },
       {
         "id": "WeeperSpawn",
-        "x": 378,
-        "y": 150,
+        "x": 180,
+        "y": 585,
         "width": 8,
         "height": 8
       },
       {
-        "id": "WeeperSpawn",
-        "x": 546,
-        "y": 150,
-        "width": 8,
-        "height": 8
+        "id": "Rack",
+        "x": 420,
+        "y": 200,
+        "width": 48,
+        "height": 120
       },
       {
-        "id": "WeeperSpawn",
-        "x": 666,
-        "y": 150,
-        "width": 8,
-        "height": 8
+        "id": "Rack",
+        "x": 420,
+        "y": 500,
+        "width": 48,
+        "height": 120
       },
       {
-        "id": "WeeperSpawn",
-        "x": 618,
-        "y": 246,
-        "width": 8,
-        "height": 8
+        "id": "Rack",
+        "x": 620,
+        "y": 200,
+        "width": 48,
+        "height": 120
       },
       {
-        "id": "WeeperSpawn",
-        "x": 330,
-        "y": 270,
-        "width": 8,
-        "height": 8
+        "id": "Rack",
+        "x": 620,
+        "y": 500,
+        "width": 48,
+        "height": 120
       },
       {
-        "id": "WeeperSpawn",
-        "x": 258,
-        "y": 366,
-        "width": 8,
-        "height": 8
+        "id": "Rack",
+        "x": 820,
+        "y": 200,
+        "width": 48,
+        "height": 120
       },
       {
-        "id": "WeeperSpawn",
-        "x": 786,
-        "y": 438,
-        "width": 8,
-        "height": 8
+        "id": "Rack",
+        "x": 820,
+        "y": 500,
+        "width": 48,
+        "height": 120
       },
       {
         "id": "Key_A",
-        "x": 95,
-        "y": 448,
+        "x": 225,
+        "y": 245,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box0_A",
-        "x": 228,
-        "y": 176,
+        "x": 540,
+        "y": 280,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box1_A",
-        "x": 630,
-        "y": 428,
+        "x": 220,
+        "y": 610,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box2_A",
-        "x": 820,
-        "y": 170,
+        "x": 1170,
+        "y": 200,
         "width": 8,
         "height": 8
       },
       {
         "id": "Key_B",
-        "x": 264,
-        "y": 428,
+        "x": 245,
+        "y": 220,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box0_B",
-        "x": 420,
-        "y": 218,
+        "x": 740,
+        "y": 260,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box1_B",
-        "x": 90,
-        "y": 378,
+        "x": 155,
+        "y": 610,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box2_B",
-        "x": 820,
-        "y": 170,
+        "x": 1100,
+        "y": 205,
         "width": 8,
         "height": 8
       }
@@ -900,304 +1253,2918 @@
         "radius": 120,
         "strength": 0.52,
         "color": "#80a394"
+      },
+      {
+        "id": "LampNorth",
+        "radius": 165,
+        "strength": 0.52,
+        "color": "#79a6b6"
+      },
+      {
+        "id": "LampEast",
+        "radius": 150,
+        "strength": 0.56,
+        "color": "#80a394"
       }
     ],
-    "width": 960,
-    "height": 576,
+    "width": 1280,
+    "height": 768,
     "entities": [
       {
         "id": "Wall",
         "x": 22,
-        "y": 61,
-        "width": 916,
+        "y": 68,
+        "width": 1236,
         "height": 28
       },
       {
         "id": "Wall",
         "x": 22,
-        "y": 89,
+        "y": 96,
         "width": 14,
-        "height": 439
+        "height": 624
       },
       {
         "id": "Wall",
-        "x": 924,
-        "y": 89,
+        "x": 1244,
+        "y": 96,
         "width": 14,
-        "height": 439
+        "height": 624
       },
       {
         "id": "Wall",
         "x": 22,
-        "y": 508,
-        "width": 916,
+        "y": 720,
+        "width": 1236,
         "height": 20
+      },
+      {
+        "id": "CameraBounds",
+        "x": 20,
+        "y": 68,
+        "width": 1240,
+        "height": 672
+      },
+      {
+        "id": "PlayBounds",
+        "x": 36,
+        "y": 96,
+        "width": 1208,
+        "height": 624
+      },
+      {
+        "id": "Wall",
+        "x": 272,
+        "y": 96,
+        "width": 16,
+        "height": 90
+      },
+      {
+        "id": "Wall",
+        "x": 272,
+        "y": 274,
+        "width": 16,
+        "height": 34
       },
       {
         "id": "Wall",
         "x": 36,
-        "y": 245,
-        "width": 340,
+        "y": 292,
+        "width": 236,
         "height": 16
       },
       {
         "id": "Wall",
-        "x": 440,
-        "y": 160,
-        "width": 220,
+        "x": 36,
+        "y": 492,
+        "width": 236,
         "height": 16
       },
       {
         "id": "Wall",
-        "x": 490,
-        "y": 370,
-        "width": 434,
+        "x": 272,
+        "y": 492,
+        "width": 16,
+        "height": 64
+      },
+      {
+        "id": "Wall",
+        "x": 272,
+        "y": 644,
+        "width": 16,
+        "height": 76
+      },
+      {
+        "id": "Wall",
+        "x": 1008,
+        "y": 96,
+        "width": 16,
+        "height": 228
+      },
+      {
+        "id": "Wall",
+        "x": 1024,
+        "y": 308,
+        "width": 72,
         "height": 16
       },
       {
         "id": "Wall",
-        "x": 720,
-        "y": 89,
-        "width": 14,
-        "height": 174
-      },
-      {
-        "id": "Wall",
-        "x": 734,
-        "y": 263,
-        "width": 36,
+        "x": 1168,
+        "y": 308,
+        "width": 76,
         "height": 16
       },
       {
         "id": "Wall",
-        "x": 832,
-        "y": 263,
-        "width": 92,
+        "x": 1008,
+        "y": 500,
+        "width": 236,
         "height": 16
       },
       {
         "id": "Wall",
-        "x": 380,
-        "y": 180,
-        "width": 14,
-        "height": 88
+        "x": 1008,
+        "y": 516,
+        "width": 16,
+        "height": 46
       },
       {
         "id": "Wall",
-        "x": 650,
-        "y": 250,
-        "width": 110,
-        "height": 14
-      },
-      {
-        "id": "Wall",
-        "x": 570,
-        "y": 406,
-        "width": 14,
-        "height": 66
-      },
-      {
-        "id": "Machine",
-        "x": 110,
-        "y": 136,
-        "width": 65,
-        "height": 44
-      },
-      {
-        "id": "Machine",
-        "x": 270,
-        "y": 392,
-        "width": 65,
-        "height": 44
-      },
-      {
-        "id": "Machine",
-        "x": 545,
-        "y": 213,
-        "width": 65,
-        "height": 44
-      },
-      {
-        "id": "Machine",
-        "x": 782,
-        "y": 412,
-        "width": 65,
-        "height": 44
+        "x": 1008,
+        "y": 650,
+        "width": 16,
+        "height": 70
       },
       {
         "id": "Door",
-        "x": 770,
-        "y": 263,
-        "width": 62,
+        "x": 1096,
+        "y": 308,
+        "width": 72,
         "height": 16
       },
       {
         "id": "DoorUse",
-        "x": 801,
-        "y": 296,
+        "x": 1132,
+        "y": 344,
         "width": 8,
         "height": 8
       },
       {
         "id": "PlayerSpawn",
-        "x": 458,
-        "y": 318,
+        "x": 344,
+        "y": 414,
         "width": 8,
         "height": 8
       },
       {
         "id": "Exit",
         "x": 65,
-        "y": 319,
+        "y": 400,
         "width": 8,
         "height": 8
       },
       {
-        "id": "ReturnZone",
-        "x": 430,
-        "y": 280,
-        "width": 90,
-        "height": 65
-      },
-      {
-        "id": "CameraBounds",
-        "x": 20,
-        "y": 60,
-        "width": 920,
-        "height": 468
-      },
-      {
-        "id": "PlayBounds",
-        "x": 36,
-        "y": 90,
-        "width": 888,
-        "height": 418
-      },
-      {
         "id": "MonsterLeft",
-        "x": 65,
-        "y": 320,
+        "x": 70,
+        "y": 400,
         "width": 8,
         "height": 8
       },
       {
         "id": "MonsterRight",
-        "x": 890,
-        "y": 320,
+        "x": 1205,
+        "y": 414,
         "width": 8,
         "height": 8
       },
       {
+        "id": "ReturnZone",
+        "x": 320,
+        "y": 370,
+        "width": 128,
+        "height": 90
+      },
+      {
+        "id": "Desk",
+        "x": 75,
+        "y": 132,
+        "width": 130,
+        "height": 34
+      },
+      {
+        "id": "Shelf",
+        "x": 75,
+        "y": 660,
+        "width": 72,
+        "height": 28
+      },
+      {
+        "id": "Shelf",
+        "x": 173,
+        "y": 660,
+        "width": 72,
+        "height": 28
+      },
+      {
+        "id": "Machine",
+        "x": 1155,
+        "y": 142,
+        "width": 54,
+        "height": 72
+      },
+      {
+        "id": "Machine",
+        "x": 1110,
+        "y": 575,
+        "width": 65,
+        "height": 66
+      },
+      {
+        "id": "ControlZone",
+        "x": 52,
+        "y": 112,
+        "width": 200,
+        "height": 164
+      },
+      {
+        "id": "ToolZone",
+        "x": 52,
+        "y": 524,
+        "width": 200,
+        "height": 176
+      },
+      {
+        "id": "PanelZone",
+        "x": 1040,
+        "y": 112,
+        "width": 188,
+        "height": 180
+      },
+      {
+        "id": "PumpZone",
+        "x": 1040,
+        "y": 532,
+        "width": 188,
+        "height": 168
+      },
+      {
+        "id": "ServiceEastZone",
+        "x": 900,
+        "y": 492,
+        "width": 88,
+        "height": 174
+      },
+      {
+        "id": "ServiceSouthZone",
+        "x": 420,
+        "y": 620,
+        "width": 424,
+        "height": 84
+      },
+      {
+        "id": "OptionalControlZone",
+        "x": 52,
+        "y": 180,
+        "width": 200,
+        "height": 96
+      },
+      {
+        "id": "OptionalToolZone",
+        "x": 52,
+        "y": 532,
+        "width": 196,
+        "height": 112
+      },
+      {
+        "id": "OptionalServiceZone",
+        "x": 920,
+        "y": 552,
+        "width": 64,
+        "height": 144
+      },
+      {
+        "id": "PipeNorthZone",
+        "x": 348,
+        "y": 144,
+        "width": 606,
+        "height": 12
+      },
+      {
+        "id": "PipeEastZone",
+        "x": 946,
+        "y": 144,
+        "width": 12,
+        "height": 462
+      },
+      {
+        "id": "PipeSouthZone",
+        "x": 388,
+        "y": 644,
+        "width": 558,
+        "height": 10
+      },
+      {
         "id": "LampWest",
-        "x": 156,
-        "y": 302,
+        "x": 194,
+        "y": 390,
         "width": 8,
         "height": 8
       },
       {
         "id": "LampCenter",
-        "x": 480,
-        "y": 304,
+        "x": 626,
+        "y": 414,
         "width": 8,
         "height": 8
       },
       {
         "id": "LampExit",
         "x": 72,
-        "y": 294,
+        "y": 376,
         "width": 8,
         "height": 8
       },
       {
         "id": "LampSouth",
-        "x": 610,
-        "y": 436,
+        "x": 626,
+        "y": 678,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "LampNorth",
+        "x": 626,
+        "y": 170,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "LampEast",
+        "x": 1132,
+        "y": 396,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "DressPhoneZone",
+        "x": 252,
+        "y": 330,
+        "width": 12,
+        "height": 19
+      },
+      {
+        "id": "DressCrtZone",
+        "x": 125,
+        "y": 140,
+        "width": 19,
+        "height": 15
+      },
+      {
+        "id": "DressMemorialZone",
+        "x": 1000,
+        "y": 352,
+        "width": 9,
+        "height": 16
+      },
+      {
+        "id": "DressDollZone",
+        "x": 1196,
+        "y": 682,
+        "width": 10,
+        "height": 20
+      },
+      {
+        "id": "WeeperSpawn",
+        "x": 940,
+        "y": 550,
         "width": 8,
         "height": 8
       },
       {
         "id": "WeeperSpawn",
-        "x": 90,
-        "y": 150,
+        "x": 180,
+        "y": 580,
         "width": 8,
         "height": 8
       },
       {
         "id": "WeeperSpawn",
-        "x": 642,
-        "y": 222,
+        "x": 348,
+        "y": 190,
         "width": 8,
         "height": 8
       },
       {
-        "id": "WeeperSpawn",
-        "x": 306,
-        "y": 318,
-        "width": 8,
-        "height": 8
+        "id": "Engine",
+        "x": 408,
+        "y": 232,
+        "width": 160,
+        "height": 100
       },
       {
-        "id": "WeeperSpawn",
-        "x": 354,
-        "y": 414,
-        "width": 8,
-        "height": 8
+        "id": "Engine",
+        "x": 408,
+        "y": 480,
+        "width": 160,
+        "height": 100
+      },
+      {
+        "id": "Engine",
+        "x": 708,
+        "y": 232,
+        "width": 160,
+        "height": 100
+      },
+      {
+        "id": "Engine",
+        "x": 708,
+        "y": 480,
+        "width": 160,
+        "height": 100
       },
       {
         "id": "Key_A",
-        "x": 107,
-        "y": 425,
+        "x": 215,
+        "y": 230,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box0_A",
-        "x": 243,
-        "y": 192,
+        "x": 215,
+        "y": 600,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box1_A",
-        "x": 635,
-        "y": 451,
+        "x": 955,
+        "y": 645,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box2_A",
-        "x": 820,
-        "y": 170,
+        "x": 1110,
+        "y": 195,
         "width": 8,
         "height": 8
       },
       {
         "id": "Key_B",
-        "x": 418,
-        "y": 450,
+        "x": 150,
+        "y": 240,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box0_B",
-        "x": 94,
-        "y": 218,
+        "x": 180,
+        "y": 615,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box1_B",
-        "x": 700,
-        "y": 440,
+        "x": 640,
+        "y": 665,
         "width": 8,
         "height": 8
       },
       {
         "id": "Box2_B",
-        "x": 820,
-        "y": 170,
+        "x": 1070,
+        "y": 200,
         "width": 8,
         "height": 8
+      }
+    ]
+  },
+  {
+    "id": "outpatient",
+    "name": "门诊部",
+    "theme": 3,
+    "source": "maps/outpatient.ldtk",
+    "level": "Outpatient",
+    "events": [
+      {
+        "id": "outpatient_return",
+        "trigger": {
+          "flag": "first_box",
+          "zone": "return_corridor"
+        },
+        "once": true,
+        "sequence": [
+          {
+            "type": "light",
+            "target": "LampCenter",
+            "strength": 0.08
+          },
+          {
+            "type": "sound",
+            "id": "call-bell",
+            "pan": -0.65,
+            "source": "LampSouth"
+          },
+          {
+            "type": "wait",
+            "seconds": 1.8
+          },
+          {
+            "type": "light",
+            "target": "LampCenter",
+            "strength": 0.56
+          }
+        ]
+      }
+    ],
+    "lights": [
+      {
+        "id": "LampWest",
+        "radius": 155,
+        "strength": 0.66,
+        "color": "#c59b65"
+      },
+      {
+        "id": "LampCenter",
+        "radius": 150,
+        "strength": 0.56,
+        "color": "#79a6b6"
+      },
+      {
+        "id": "LampExit",
+        "radius": 112,
+        "strength": 0.5,
+        "color": "#b74336"
+      },
+      {
+        "id": "LampSouth",
+        "radius": 120,
+        "strength": 0.52,
+        "color": "#80a394"
+      },
+      {
+        "id": "LampNorth",
+        "radius": 165,
+        "strength": 0.52,
+        "color": "#79a6b6"
+      },
+      {
+        "id": "LampEast",
+        "radius": 150,
+        "strength": 0.56,
+        "color": "#80a394"
+      }
+    ],
+    "width": 1280,
+    "height": 768,
+    "entities": [
+      {
+        "id": "Wall",
+        "x": 22,
+        "y": 68,
+        "width": 1236,
+        "height": 28
+      },
+      {
+        "id": "Wall",
+        "x": 22,
+        "y": 96,
+        "width": 14,
+        "height": 624
+      },
+      {
+        "id": "Wall",
+        "x": 1244,
+        "y": 96,
+        "width": 14,
+        "height": 624
+      },
+      {
+        "id": "Wall",
+        "x": 22,
+        "y": 720,
+        "width": 1236,
+        "height": 20
+      },
+      {
+        "id": "PlayBounds",
+        "x": 36,
+        "y": 96,
+        "width": 1208,
+        "height": 624
+      },
+      {
+        "id": "CameraBounds",
+        "x": 20,
+        "y": 68,
+        "width": 1240,
+        "height": 672
+      },
+      {
+        "id": "PlayerSpawn",
+        "x": 200,
+        "y": 414,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Exit",
+        "x": 65,
+        "y": 414,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterLeft",
+        "x": 70,
+        "y": 414,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterRight",
+        "x": 1200,
+        "y": 414,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "ReturnZone",
+        "x": 70,
+        "y": 370,
+        "width": 240,
+        "height": 90
+      },
+      {
+        "id": "Wall",
+        "x": 360,
+        "y": 180,
+        "width": 16,
+        "height": 160
+      },
+      {
+        "id": "Wall",
+        "x": 680,
+        "y": 180,
+        "width": 16,
+        "height": 160
+      },
+      {
+        "id": "Wall",
+        "x": 36,
+        "y": 340,
+        "width": 108,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 248,
+        "y": 340,
+        "width": 216,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 568,
+        "y": 340,
+        "width": 216,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 888,
+        "y": 340,
+        "width": 72,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 960,
+        "y": 96,
+        "width": 16,
+        "height": 260
+      },
+      {
+        "id": "Wall",
+        "x": 960,
+        "y": 340,
+        "width": 112,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 1144,
+        "y": 340,
+        "width": 100,
+        "height": 16
+      },
+      {
+        "id": "Door",
+        "x": 1072,
+        "y": 340,
+        "width": 72,
+        "height": 16
+      },
+      {
+        "id": "DoorUse",
+        "x": 1108,
+        "y": 376,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 36,
+        "y": 510,
+        "width": 130,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 270,
+        "y": 510,
+        "width": 190,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 564,
+        "y": 510,
+        "width": 200,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 868,
+        "y": 510,
+        "width": 376,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 440,
+        "y": 526,
+        "width": 16,
+        "height": 80
+      },
+      {
+        "id": "Wall",
+        "x": 440,
+        "y": 690,
+        "width": 16,
+        "height": 30
+      },
+      {
+        "id": "Wall",
+        "x": 944,
+        "y": 526,
+        "width": 16,
+        "height": 80
+      },
+      {
+        "id": "Wall",
+        "x": 944,
+        "y": 690,
+        "width": 16,
+        "height": 30
+      },
+      {
+        "id": "Seating",
+        "x": 400,
+        "y": 400,
+        "width": 108,
+        "height": 32
+      },
+      {
+        "id": "Seating",
+        "x": 580,
+        "y": 400,
+        "width": 108,
+        "height": 32
+      },
+      {
+        "id": "Seating",
+        "x": 760,
+        "y": 400,
+        "width": 108,
+        "height": 32
+      },
+      {
+        "id": "Desk",
+        "x": 80,
+        "y": 235,
+        "width": 100,
+        "height": 32
+      },
+      {
+        "id": "Desk",
+        "x": 400,
+        "y": 235,
+        "width": 100,
+        "height": 32
+      },
+      {
+        "id": "Desk",
+        "x": 720,
+        "y": 235,
+        "width": 100,
+        "height": 32
+      },
+      {
+        "id": "Bed",
+        "x": 280,
+        "y": 230,
+        "width": 38,
+        "height": 76
+      },
+      {
+        "id": "Bed",
+        "x": 600,
+        "y": 230,
+        "width": 38,
+        "height": 76
+      },
+      {
+        "id": "Bed",
+        "x": 880,
+        "y": 230,
+        "width": 38,
+        "height": 76
+      },
+      {
+        "id": "Bed",
+        "x": 1120,
+        "y": 180,
+        "width": 38,
+        "height": 76
+      },
+      {
+        "id": "Bed",
+        "x": 800,
+        "y": 580,
+        "width": 38,
+        "height": 76
+      },
+      {
+        "id": "Desk",
+        "x": 80,
+        "y": 560,
+        "width": 110,
+        "height": 32
+      },
+      {
+        "id": "Shelf",
+        "x": 1010,
+        "y": 560,
+        "width": 150,
+        "height": 28
+      },
+      {
+        "id": "Machine",
+        "x": 1140,
+        "y": 620,
+        "width": 44,
+        "height": 44
+      },
+      {
+        "id": "RegistrationZone",
+        "x": 60,
+        "y": 540,
+        "width": 350,
+        "height": 160
+      },
+      {
+        "id": "OptionalRegistrationZone",
+        "x": 60,
+        "y": 540,
+        "width": 350,
+        "height": 160
+      },
+      {
+        "id": "ConsultationZone",
+        "x": 60,
+        "y": 180,
+        "width": 870,
+        "height": 144
+      },
+      {
+        "id": "OptionalConsultationZone",
+        "x": 60,
+        "y": 180,
+        "width": 870,
+        "height": 144
+      },
+      {
+        "id": "ExaminationZone",
+        "x": 480,
+        "y": 546,
+        "width": 430,
+        "height": 150
+      },
+      {
+        "id": "OptionalExaminationZone",
+        "x": 480,
+        "y": 546,
+        "width": 430,
+        "height": 150
+      },
+      {
+        "id": "TreatmentZone",
+        "x": 990,
+        "y": 125,
+        "width": 230,
+        "height": 190
+      },
+      {
+        "id": "StaffZone",
+        "x": 990,
+        "y": 550,
+        "width": 230,
+        "height": 140
+      },
+      {
+        "id": "OptionalStaffZone",
+        "x": 990,
+        "y": 550,
+        "width": 230,
+        "height": 140
+      },
+      {
+        "id": "LampWest",
+        "x": 210,
+        "y": 400,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampCenter",
+        "x": 640,
+        "y": 455,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampExit",
+        "x": 65,
+        "y": 400,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampSouth",
+        "x": 650,
+        "y": 610,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampNorth",
+        "x": 530,
+        "y": 160,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampEast",
+        "x": 1105,
+        "y": 190,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "DressPhoneZone",
+        "x": 80,
+        "y": 130,
+        "width": 24,
+        "height": 24
+      },
+      {
+        "id": "DressCrtZone",
+        "x": 1060,
+        "y": 130,
+        "width": 24,
+        "height": 24
+      },
+      {
+        "id": "DressMemorialZone",
+        "x": 80,
+        "y": 675,
+        "width": 24,
+        "height": 24
+      },
+      {
+        "id": "DressDollZone",
+        "x": 1190,
+        "y": 675,
+        "width": 24,
+        "height": 24
+      },
+      {
+        "id": "Key_A",
+        "x": 250,
+        "y": 610,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box0_A",
+        "x": 215,
+        "y": 275,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box1_A",
+        "x": 550,
+        "y": 620,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box2_A",
+        "x": 1030,
+        "y": 230,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Key_B",
+        "x": 330,
+        "y": 630,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box0_B",
+        "x": 525,
+        "y": 280,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box1_B",
+        "x": 690,
+        "y": 640,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box2_B",
+        "x": 1090,
+        "y": 275,
+        "width": 16,
+        "height": 16
+      }
+    ]
+  },
+  {
+    "id": "surgery",
+    "name": "手术室",
+    "theme": 4,
+    "source": "maps/surgery.ldtk",
+    "level": "Surgery",
+    "events": [
+      {
+        "id": "surgery_return",
+        "trigger": {
+          "flag": "first_box",
+          "zone": "return_corridor"
+        },
+        "once": true,
+        "sequence": [
+          {
+            "type": "light",
+            "target": "LampCenter",
+            "strength": 0.08
+          },
+          {
+            "type": "sound",
+            "id": "call-bell",
+            "pan": -0.65,
+            "source": "LampSouth"
+          },
+          {
+            "type": "wait",
+            "seconds": 1.8
+          },
+          {
+            "type": "light",
+            "target": "LampCenter",
+            "strength": 0.75
+          }
+        ]
+      }
+    ],
+    "lights": [
+      {
+        "id": "LampWest",
+        "radius": 155,
+        "strength": 0.66,
+        "color": "#c59b65"
+      },
+      {
+        "id": "LampCenter",
+        "radius": 190,
+        "strength": 0.75,
+        "color": "#bbd9d3"
+      },
+      {
+        "id": "LampExit",
+        "radius": 112,
+        "strength": 0.5,
+        "color": "#b74336"
+      },
+      {
+        "id": "LampSouth",
+        "radius": 120,
+        "strength": 0.52,
+        "color": "#80a394"
+      },
+      {
+        "id": "LampNorth",
+        "radius": 165,
+        "strength": 0.52,
+        "color": "#79a6b6"
+      },
+      {
+        "id": "LampEast",
+        "radius": 150,
+        "strength": 0.56,
+        "color": "#80a394"
+      }
+    ],
+    "width": 1280,
+    "height": 768,
+    "entities": [
+      {
+        "id": "Wall",
+        "x": 22,
+        "y": 68,
+        "width": 1236,
+        "height": 28
+      },
+      {
+        "id": "Wall",
+        "x": 22,
+        "y": 96,
+        "width": 14,
+        "height": 624
+      },
+      {
+        "id": "Wall",
+        "x": 1244,
+        "y": 96,
+        "width": 14,
+        "height": 624
+      },
+      {
+        "id": "Wall",
+        "x": 22,
+        "y": 720,
+        "width": 1236,
+        "height": 20
+      },
+      {
+        "id": "PlayBounds",
+        "x": 36,
+        "y": 96,
+        "width": 1208,
+        "height": 624
+      },
+      {
+        "id": "CameraBounds",
+        "x": 20,
+        "y": 68,
+        "width": 1240,
+        "height": 672
+      },
+      {
+        "id": "PlayerSpawn",
+        "x": 200,
+        "y": 414,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Exit",
+        "x": 65,
+        "y": 414,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterLeft",
+        "x": 70,
+        "y": 414,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterRight",
+        "x": 1200,
+        "y": 414,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "ReturnZone",
+        "x": 70,
+        "y": 370,
+        "width": 240,
+        "height": 90
+      },
+      {
+        "id": "Wall",
+        "x": 360,
+        "y": 248,
+        "width": 170,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 642,
+        "y": 248,
+        "width": 286,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 360,
+        "y": 548,
+        "width": 286,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 758,
+        "y": 548,
+        "width": 170,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 360,
+        "y": 264,
+        "width": 16,
+        "height": 284
+      },
+      {
+        "id": "Wall",
+        "x": 912,
+        "y": 264,
+        "width": 16,
+        "height": 284
+      },
+      {
+        "id": "Wall",
+        "x": 280,
+        "y": 96,
+        "width": 16,
+        "height": 150
+      },
+      {
+        "id": "Wall",
+        "x": 280,
+        "y": 350,
+        "width": 16,
+        "height": 20
+      },
+      {
+        "id": "Wall",
+        "x": 36,
+        "y": 354,
+        "width": 244,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 36,
+        "y": 514,
+        "width": 105,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 245,
+        "y": 514,
+        "width": 51,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 280,
+        "y": 530,
+        "width": 16,
+        "height": 190
+      },
+      {
+        "id": "Wall",
+        "x": 1000,
+        "y": 96,
+        "width": 16,
+        "height": 244
+      },
+      {
+        "id": "Wall",
+        "x": 1000,
+        "y": 324,
+        "width": 76,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 1148,
+        "y": 324,
+        "width": 96,
+        "height": 16
+      },
+      {
+        "id": "Door",
+        "x": 1076,
+        "y": 324,
+        "width": 72,
+        "height": 16
+      },
+      {
+        "id": "DoorUse",
+        "x": 1112,
+        "y": 360,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 1000,
+        "y": 530,
+        "width": 16,
+        "height": 190
+      },
+      {
+        "id": "Wall",
+        "x": 1000,
+        "y": 514,
+        "width": 66,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 1178,
+        "y": 514,
+        "width": 66,
+        "height": 16
+      },
+      {
+        "id": "Operatingtable",
+        "x": 570,
+        "y": 355,
+        "width": 58,
+        "height": 112
+      },
+      {
+        "id": "Operatingtable",
+        "x": 760,
+        "y": 355,
+        "width": 58,
+        "height": 112
+      },
+      {
+        "id": "Machine",
+        "x": 400,
+        "y": 290,
+        "width": 42,
+        "height": 60
+      },
+      {
+        "id": "Machine",
+        "x": 850,
+        "y": 290,
+        "width": 42,
+        "height": 60
+      },
+      {
+        "id": "Desk",
+        "x": 430,
+        "y": 482,
+        "width": 85,
+        "height": 28
+      },
+      {
+        "id": "Desk",
+        "x": 800,
+        "y": 482,
+        "width": 85,
+        "height": 28
+      },
+      {
+        "id": "Desk",
+        "x": 75,
+        "y": 170,
+        "width": 100,
+        "height": 32
+      },
+      {
+        "id": "Shelf",
+        "x": 60,
+        "y": 575,
+        "width": 100,
+        "height": 28
+      },
+      {
+        "id": "Desk",
+        "x": 70,
+        "y": 660,
+        "width": 100,
+        "height": 28
+      },
+      {
+        "id": "Shelf",
+        "x": 1050,
+        "y": 120,
+        "width": 145,
+        "height": 28
+      },
+      {
+        "id": "Bed",
+        "x": 1060,
+        "y": 560,
+        "width": 38,
+        "height": 76
+      },
+      {
+        "id": "Bed",
+        "x": 1170,
+        "y": 560,
+        "width": 38,
+        "height": 76
+      },
+      {
+        "id": "PreparationZone",
+        "x": 60,
+        "y": 130,
+        "width": 195,
+        "height": 200
+      },
+      {
+        "id": "OptionalPreparationZone",
+        "x": 60,
+        "y": 130,
+        "width": 195,
+        "height": 200
+      },
+      {
+        "id": "ScrubZone",
+        "x": 60,
+        "y": 550,
+        "width": 195,
+        "height": 146
+      },
+      {
+        "id": "OptionalScrubZone",
+        "x": 60,
+        "y": 550,
+        "width": 195,
+        "height": 146
+      },
+      {
+        "id": "OperatingZone",
+        "x": 400,
+        "y": 285,
+        "width": 490,
+        "height": 235
+      },
+      {
+        "id": "RecoveryZone",
+        "x": 1030,
+        "y": 550,
+        "width": 190,
+        "height": 145
+      },
+      {
+        "id": "OptionalRecoveryZone",
+        "x": 1030,
+        "y": 550,
+        "width": 190,
+        "height": 145
+      },
+      {
+        "id": "SterileZone",
+        "x": 1030,
+        "y": 160,
+        "width": 190,
+        "height": 145
+      },
+      {
+        "id": "LampWest",
+        "x": 210,
+        "y": 400,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampCenter",
+        "x": 650,
+        "y": 350,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampExit",
+        "x": 65,
+        "y": 400,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampSouth",
+        "x": 650,
+        "y": 615,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampNorth",
+        "x": 580,
+        "y": 200,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampEast",
+        "x": 1110,
+        "y": 185,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "DressPhoneZone",
+        "x": 80,
+        "y": 130,
+        "width": 24,
+        "height": 24
+      },
+      {
+        "id": "DressCrtZone",
+        "x": 1060,
+        "y": 130,
+        "width": 24,
+        "height": 24
+      },
+      {
+        "id": "DressMemorialZone",
+        "x": 80,
+        "y": 675,
+        "width": 24,
+        "height": 24
+      },
+      {
+        "id": "DressDollZone",
+        "x": 1190,
+        "y": 675,
+        "width": 24,
+        "height": 24
+      },
+      {
+        "id": "Key_A",
+        "x": 220,
+        "y": 230,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box0_A",
+        "x": 215,
+        "y": 620,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box1_A",
+        "x": 480,
+        "y": 380,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box2_A",
+        "x": 1080,
+        "y": 210,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Key_B",
+        "x": 150,
+        "y": 280,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box0_B",
+        "x": 190,
+        "y": 575,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box1_B",
+        "x": 690,
+        "y": 395,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box2_B",
+        "x": 1195,
+        "y": 235,
+        "width": 16,
+        "height": 16
+      }
+    ]
+  },
+  {
+    "id": "morgue",
+    "name": "太平间",
+    "theme": 5,
+    "source": "maps/morgue.ldtk",
+    "level": "Morgue",
+    "events": [
+      {
+        "id": "morgue_return",
+        "trigger": {
+          "flag": "first_box",
+          "zone": "return_corridor"
+        },
+        "once": true,
+        "sequence": [
+          {
+            "type": "light",
+            "target": "LampCenter",
+            "strength": 0.08
+          },
+          {
+            "type": "sound",
+            "id": "call-bell",
+            "pan": -0.65,
+            "source": "LampSouth"
+          },
+          {
+            "type": "wait",
+            "seconds": 1.8
+          },
+          {
+            "type": "light",
+            "target": "LampCenter",
+            "strength": 0.56
+          }
+        ]
+      }
+    ],
+    "lights": [
+      {
+        "id": "LampWest",
+        "radius": 155,
+        "strength": 0.66,
+        "color": "#c59b65"
+      },
+      {
+        "id": "LampCenter",
+        "radius": 145,
+        "strength": 0.5,
+        "color": "#86b2ba"
+      },
+      {
+        "id": "LampExit",
+        "radius": 112,
+        "strength": 0.5,
+        "color": "#b74336"
+      },
+      {
+        "id": "LampSouth",
+        "radius": 120,
+        "strength": 0.52,
+        "color": "#80a394"
+      },
+      {
+        "id": "LampNorth",
+        "radius": 165,
+        "strength": 0.52,
+        "color": "#79a6b6"
+      },
+      {
+        "id": "LampEast",
+        "radius": 150,
+        "strength": 0.56,
+        "color": "#80a394"
+      }
+    ],
+    "width": 1280,
+    "height": 768,
+    "entities": [
+      {
+        "id": "Wall",
+        "x": 22,
+        "y": 68,
+        "width": 1236,
+        "height": 28
+      },
+      {
+        "id": "Wall",
+        "x": 22,
+        "y": 96,
+        "width": 14,
+        "height": 624
+      },
+      {
+        "id": "Wall",
+        "x": 1244,
+        "y": 96,
+        "width": 14,
+        "height": 624
+      },
+      {
+        "id": "Wall",
+        "x": 22,
+        "y": 720,
+        "width": 1236,
+        "height": 20
+      },
+      {
+        "id": "PlayBounds",
+        "x": 36,
+        "y": 96,
+        "width": 1208,
+        "height": 624
+      },
+      {
+        "id": "CameraBounds",
+        "x": 20,
+        "y": 68,
+        "width": 1240,
+        "height": 672
+      },
+      {
+        "id": "PlayerSpawn",
+        "x": 200,
+        "y": 470,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Exit",
+        "x": 65,
+        "y": 470,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterLeft",
+        "x": 70,
+        "y": 500,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterRight",
+        "x": 1200,
+        "y": 500,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "ReturnZone",
+        "x": 60,
+        "y": 430,
+        "width": 270,
+        "height": 100
+      },
+      {
+        "id": "Wall",
+        "x": 36,
+        "y": 264,
+        "width": 404,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 544,
+        "y": 264,
+        "width": 200,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 848,
+        "y": 264,
+        "width": 152,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 36,
+        "y": 432,
+        "width": 108,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 248,
+        "y": 432,
+        "width": 192,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 544,
+        "y": 432,
+        "width": 200,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 848,
+        "y": 432,
+        "width": 152,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 340,
+        "y": 280,
+        "width": 16,
+        "height": 152
+      },
+      {
+        "id": "Wall",
+        "x": 620,
+        "y": 280,
+        "width": 16,
+        "height": 152
+      },
+      {
+        "id": "Wall",
+        "x": 1000,
+        "y": 96,
+        "width": 16,
+        "height": 352
+      },
+      {
+        "id": "Wall",
+        "x": 1000,
+        "y": 432,
+        "width": 80,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 1152,
+        "y": 432,
+        "width": 92,
+        "height": 16
+      },
+      {
+        "id": "Door",
+        "x": 1080,
+        "y": 432,
+        "width": 72,
+        "height": 16
+      },
+      {
+        "id": "DoorUse",
+        "x": 1116,
+        "y": 468,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 36,
+        "y": 556,
+        "width": 108,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 248,
+        "y": 556,
+        "width": 232,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 584,
+        "y": 556,
+        "width": 280,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 968,
+        "y": 556,
+        "width": 276,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 340,
+        "y": 572,
+        "width": 16,
+        "height": 148
+      },
+      {
+        "id": "ColdCabinet",
+        "x": 76,
+        "y": 100,
+        "width": 126,
+        "height": 64
+      },
+      {
+        "id": "ColdCabinet",
+        "x": 260,
+        "y": 100,
+        "width": 126,
+        "height": 64
+      },
+      {
+        "id": "ColdCabinet",
+        "x": 444,
+        "y": 100,
+        "width": 126,
+        "height": 64
+      },
+      {
+        "id": "ColdCabinet",
+        "x": 628,
+        "y": 100,
+        "width": 126,
+        "height": 64
+      },
+      {
+        "id": "ColdCabinet",
+        "x": 812,
+        "y": 100,
+        "width": 126,
+        "height": 64
+      },
+      {
+        "id": "MorgueDrawerZone",
+        "x": 695,
+        "y": 164,
+        "width": 50,
+        "height": 100
+      },
+      {
+        "id": "MorgueWarningZone",
+        "x": 520,
+        "y": 176,
+        "width": 290,
+        "height": 88
+      },
+      {
+        "id": "Desk",
+        "x": 72,
+        "y": 306,
+        "width": 120,
+        "height": 32
+      },
+      {
+        "id": "Shelf",
+        "x": 72,
+        "y": 592,
+        "width": 108,
+        "height": 26
+      },
+      {
+        "id": "ShroudedTrolley",
+        "x": 380,
+        "y": 320,
+        "width": 42,
+        "height": 78
+      },
+      {
+        "id": "ShroudedTrolley",
+        "x": 665,
+        "y": 320,
+        "width": 42,
+        "height": 78
+      },
+      {
+        "id": "ShroudedTrolley",
+        "x": 440,
+        "y": 608,
+        "width": 42,
+        "height": 78
+      },
+      {
+        "id": "ShroudedTrolley",
+        "x": 650,
+        "y": 608,
+        "width": 42,
+        "height": 78
+      },
+      {
+        "id": "ShroudedTrolley",
+        "x": 860,
+        "y": 608,
+        "width": 42,
+        "height": 78
+      },
+      {
+        "id": "ShroudedTrolley",
+        "x": 1070,
+        "y": 608,
+        "width": 42,
+        "height": 78
+      },
+      {
+        "id": "ColdCabinet",
+        "x": 1040,
+        "y": 110,
+        "width": 164,
+        "height": 64
+      },
+      {
+        "id": "ColdCabinet",
+        "x": 1168,
+        "y": 220,
+        "width": 62,
+        "height": 146
+      },
+      {
+        "id": "DutyZone",
+        "x": 60,
+        "y": 290,
+        "width": 250,
+        "height": 125
+      },
+      {
+        "id": "OptionalDutyZone",
+        "x": 60,
+        "y": 290,
+        "width": 250,
+        "height": 125
+      },
+      {
+        "id": "WashZone",
+        "x": 60,
+        "y": 588,
+        "width": 250,
+        "height": 110
+      },
+      {
+        "id": "OptionalWashZone",
+        "x": 60,
+        "y": 588,
+        "width": 250,
+        "height": 110
+      },
+      {
+        "id": "IdentificationZone",
+        "x": 370,
+        "y": 290,
+        "width": 600,
+        "height": 125
+      },
+      {
+        "id": "ColdStoreZone",
+        "x": 1040,
+        "y": 185,
+        "width": 120,
+        "height": 225
+      },
+      {
+        "id": "ParkingZone",
+        "x": 380,
+        "y": 586,
+        "width": 820,
+        "height": 114
+      },
+      {
+        "id": "OptionalParkingZone",
+        "x": 380,
+        "y": 586,
+        "width": 820,
+        "height": 114
+      },
+      {
+        "id": "LampWest",
+        "x": 200,
+        "y": 470,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampCenter",
+        "x": 690,
+        "y": 210,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampExit",
+        "x": 65,
+        "y": 460,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampSouth",
+        "x": 700,
+        "y": 510,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampNorth",
+        "x": 260,
+        "y": 210,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampEast",
+        "x": 1110,
+        "y": 285,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "DressPhoneZone",
+        "x": 90,
+        "y": 300,
+        "width": 24,
+        "height": 24
+      },
+      {
+        "id": "DressCrtZone",
+        "x": 1100,
+        "y": 120,
+        "width": 24,
+        "height": 24
+      },
+      {
+        "id": "DressMemorialZone",
+        "x": 75,
+        "y": 670,
+        "width": 24,
+        "height": 24
+      },
+      {
+        "id": "DressDollZone",
+        "x": 1180,
+        "y": 670,
+        "width": 24,
+        "height": 24
+      },
+      {
+        "id": "Key_A",
+        "x": 240,
+        "y": 350,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box0_A",
+        "x": 240,
+        "y": 630,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box1_A",
+        "x": 535,
+        "y": 340,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box2_A",
+        "x": 1080,
+        "y": 275,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Key_B",
+        "x": 265,
+        "y": 385,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box0_B",
+        "x": 270,
+        "y": 655,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box1_B",
+        "x": 570,
+        "y": 390,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box2_B",
+        "x": 1090,
+        "y": 360,
+        "width": 16,
+        "height": 16
+      }
+    ]
+  },
+  {
+    "id": "garden",
+    "name": "医院花园",
+    "theme": 6,
+    "source": "maps/garden.ldtk",
+    "level": "Garden",
+    "events": [
+      {
+        "id": "garden_dark_wave",
+        "trigger": {
+          "flag": "first_box",
+          "zone": "NorthPathZone"
+        },
+        "once": true,
+        "sequence": [
+          {
+            "type": "sound",
+            "id": "metal",
+            "pan": 0.65,
+            "source": "LampEast"
+          },
+          {
+            "type": "light",
+            "target": "LampEast",
+            "strength": 0.06
+          },
+          {
+            "type": "wait",
+            "seconds": 0.8
+          },
+          {
+            "type": "light",
+            "target": "LampNorth",
+            "strength": 0.06
+          },
+          {
+            "type": "wait",
+            "seconds": 0.8
+          },
+          {
+            "type": "light",
+            "target": "LampCenter",
+            "strength": 0.06
+          },
+          {
+            "type": "wait",
+            "seconds": 0.8
+          },
+          {
+            "type": "light",
+            "target": "LampWest",
+            "strength": 0.06
+          },
+          {
+            "type": "wait",
+            "seconds": 0.8
+          },
+          {
+            "type": "light",
+            "target": "LampSouth",
+            "strength": 0.06
+          },
+          {
+            "type": "wait",
+            "seconds": 0.8
+          },
+          {
+            "type": "wait",
+            "seconds": 3
+          },
+          {
+            "type": "light",
+            "target": "LampEast",
+            "strength": 0.65
+          },
+          {
+            "type": "wait",
+            "seconds": 0.35
+          },
+          {
+            "type": "light",
+            "target": "LampNorth",
+            "strength": 0.65
+          },
+          {
+            "type": "wait",
+            "seconds": 0.35
+          },
+          {
+            "type": "light",
+            "target": "LampCenter",
+            "strength": 0.65
+          },
+          {
+            "type": "wait",
+            "seconds": 0.35
+          },
+          {
+            "type": "light",
+            "target": "LampWest",
+            "strength": 0.65
+          },
+          {
+            "type": "wait",
+            "seconds": 0.35
+          },
+          {
+            "type": "light",
+            "target": "LampSouth",
+            "strength": 0.65
+          },
+          {
+            "type": "wait",
+            "seconds": 0.35
+          }
+        ]
+      }
+    ],
+    "lights": [
+      {
+        "id": "LampWest",
+        "radius": 175,
+        "strength": 0.65,
+        "color": "#b5a486"
+      },
+      {
+        "id": "LampCenter",
+        "radius": 175,
+        "strength": 0.65,
+        "color": "#b4ccc5"
+      },
+      {
+        "id": "LampExit",
+        "radius": 110,
+        "strength": 0.5,
+        "color": "#b4ccc5"
+      },
+      {
+        "id": "LampSouth",
+        "radius": 175,
+        "strength": 0.65,
+        "color": "#b4ccc5"
+      },
+      {
+        "id": "LampNorth",
+        "radius": 175,
+        "strength": 0.65,
+        "color": "#b4ccc5"
+      },
+      {
+        "id": "LampEast",
+        "radius": 175,
+        "strength": 0.65,
+        "color": "#b4ccc5"
+      }
+    ],
+    "width": 1280,
+    "height": 768,
+    "entities": [
+      {
+        "id": "Wall",
+        "x": 22,
+        "y": 68,
+        "width": 1236,
+        "height": 28
+      },
+      {
+        "id": "Wall",
+        "x": 22,
+        "y": 96,
+        "width": 14,
+        "height": 624
+      },
+      {
+        "id": "Wall",
+        "x": 1244,
+        "y": 96,
+        "width": 14,
+        "height": 624
+      },
+      {
+        "id": "Wall",
+        "x": 22,
+        "y": 720,
+        "width": 1236,
+        "height": 20
+      },
+      {
+        "id": "PlayBounds",
+        "x": 36,
+        "y": 96,
+        "width": 1208,
+        "height": 624
+      },
+      {
+        "id": "CameraBounds",
+        "x": 20,
+        "y": 68,
+        "width": 1240,
+        "height": 672
+      },
+      {
+        "id": "PlayerSpawn",
+        "x": 160,
+        "y": 450,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Exit",
+        "x": 65,
+        "y": 450,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterLeft",
+        "x": 70,
+        "y": 470,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterRight",
+        "x": 1200,
+        "y": 470,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "ReturnZone",
+        "x": 60,
+        "y": 390,
+        "width": 280,
+        "height": 135
+      },
+      {
+        "id": "Wall",
+        "x": 292,
+        "y": 96,
+        "width": 16,
+        "height": 230
+      },
+      {
+        "id": "Wall",
+        "x": 36,
+        "y": 310,
+        "width": 110,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 250,
+        "y": 310,
+        "width": 58,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 420,
+        "y": 96,
+        "width": 16,
+        "height": 140
+      },
+      {
+        "id": "Wall",
+        "x": 924,
+        "y": 96,
+        "width": 16,
+        "height": 140
+      },
+      {
+        "id": "Wall",
+        "x": 420,
+        "y": 220,
+        "width": 140,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 664,
+        "y": 220,
+        "width": 276,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 1000,
+        "y": 96,
+        "width": 16,
+        "height": 220
+      },
+      {
+        "id": "Wall",
+        "x": 1000,
+        "y": 300,
+        "width": 90,
+        "height": 16
+      },
+      {
+        "id": "Wall",
+        "x": 1162,
+        "y": 300,
+        "width": 82,
+        "height": 16
+      },
+      {
+        "id": "Door",
+        "x": 1090,
+        "y": 300,
+        "width": 72,
+        "height": 16
+      },
+      {
+        "id": "DoorUse",
+        "x": 1126,
+        "y": 336,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Fountain",
+        "x": 500,
+        "y": 340,
+        "width": 240,
+        "height": 160
+      },
+      {
+        "id": "Hedge",
+        "x": 335,
+        "y": 345,
+        "width": 65,
+        "height": 94
+      },
+      {
+        "id": "Tree",
+        "x": 865,
+        "y": 345,
+        "width": 65,
+        "height": 100
+      },
+      {
+        "id": "Hedge",
+        "x": 490,
+        "y": 620,
+        "width": 185,
+        "height": 60
+      },
+      {
+        "id": "Hedge",
+        "x": 100,
+        "y": 600,
+        "width": 170,
+        "height": 65
+      },
+      {
+        "id": "Tree",
+        "x": 345,
+        "y": 125,
+        "width": 48,
+        "height": 65
+      },
+      {
+        "id": "Tree",
+        "x": 80,
+        "y": 515,
+        "width": 48,
+        "height": 65
+      },
+      {
+        "id": "Tree",
+        "x": 1170,
+        "y": 380,
+        "width": 48,
+        "height": 65
+      },
+      {
+        "id": "Tree",
+        "x": 790,
+        "y": 615,
+        "width": 48,
+        "height": 65
+      },
+      {
+        "id": "Tree",
+        "x": 1145,
+        "y": 585,
+        "width": 48,
+        "height": 65
+      },
+      {
+        "id": "GardenBench",
+        "x": 455,
+        "y": 510,
+        "width": 90,
+        "height": 28
+      },
+      {
+        "id": "GardenBench",
+        "x": 710,
+        "y": 510,
+        "width": 90,
+        "height": 28
+      },
+      {
+        "id": "GardenBench",
+        "x": 345,
+        "y": 265,
+        "width": 90,
+        "height": 28
+      },
+      {
+        "id": "Wheelchair",
+        "x": 330,
+        "y": 540,
+        "width": 34,
+        "height": 46
+      },
+      {
+        "id": "Desk",
+        "x": 75,
+        "y": 155,
+        "width": 105,
+        "height": 32
+      },
+      {
+        "id": "Shelf",
+        "x": 1060,
+        "y": 120,
+        "width": 130,
+        "height": 26
+      },
+      {
+        "id": "Planter",
+        "x": 470,
+        "y": 120,
+        "width": 90,
+        "height": 25
+      },
+      {
+        "id": "Planter",
+        "x": 715,
+        "y": 115,
+        "width": 140,
+        "height": 25
+      },
+      {
+        "id": "Planter",
+        "x": 1020,
+        "y": 555,
+        "width": 90,
+        "height": 25
+      },
+      {
+        "id": "GatehouseZone",
+        "x": 60,
+        "y": 125,
+        "width": 205,
+        "height": 160
+      },
+      {
+        "id": "OptionalGatehouseZone",
+        "x": 60,
+        "y": 125,
+        "width": 205,
+        "height": 160
+      },
+      {
+        "id": "GreenhouseZone",
+        "x": 450,
+        "y": 120,
+        "width": 445,
+        "height": 85
+      },
+      {
+        "id": "OptionalGreenhouseZone",
+        "x": 450,
+        "y": 120,
+        "width": 445,
+        "height": 85
+      },
+      {
+        "id": "MaintenanceZone",
+        "x": 985,
+        "y": 520,
+        "width": 240,
+        "height": 180
+      },
+      {
+        "id": "OptionalMaintenanceZone",
+        "x": 985,
+        "y": 520,
+        "width": 240,
+        "height": 180
+      },
+      {
+        "id": "ToolStoreZone",
+        "x": 1040,
+        "y": 155,
+        "width": 170,
+        "height": 130
+      },
+      {
+        "id": "GlassZone",
+        "x": 410,
+        "y": 96,
+        "width": 535,
+        "height": 145
+      },
+      {
+        "id": "EntryPathZone",
+        "x": 36,
+        "y": 420,
+        "width": 425,
+        "height": 82
+      },
+      {
+        "id": "NorthPathZone",
+        "x": 300,
+        "y": 270,
+        "width": 820,
+        "height": 62
+      },
+      {
+        "id": "SouthPathZone",
+        "x": 300,
+        "y": 550,
+        "width": 835,
+        "height": 62
+      },
+      {
+        "id": "WestPathZone",
+        "x": 410,
+        "y": 280,
+        "width": 68,
+        "height": 310
+      },
+      {
+        "id": "EastPathZone",
+        "x": 780,
+        "y": 280,
+        "width": 70,
+        "height": 330
+      },
+      {
+        "id": "ExitPathZone",
+        "x": 920,
+        "y": 420,
+        "width": 324,
+        "height": 82
+      },
+      {
+        "id": "GreenhousePathZone",
+        "x": 560,
+        "y": 200,
+        "width": 104,
+        "height": 100
+      },
+      {
+        "id": "StorePathZone",
+        "x": 1090,
+        "y": 316,
+        "width": 72,
+        "height": 170
+      },
+      {
+        "id": "LampWest",
+        "x": 390,
+        "y": 470,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampCenter",
+        "x": 470,
+        "y": 305,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampExit",
+        "x": 65,
+        "y": 435,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampSouth",
+        "x": 760,
+        "y": 575,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampNorth",
+        "x": 830,
+        "y": 285,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "LampEast",
+        "x": 1090,
+        "y": 480,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "DressPhoneZone",
+        "x": 90,
+        "y": 130,
+        "width": 24,
+        "height": 24
+      },
+      {
+        "id": "DressCrtZone",
+        "x": 1060,
+        "y": 125,
+        "width": 24,
+        "height": 24
+      },
+      {
+        "id": "DressMemorialZone",
+        "x": 100,
+        "y": 685,
+        "width": 24,
+        "height": 24
+      },
+      {
+        "id": "DressDollZone",
+        "x": 1210,
+        "y": 675,
+        "width": 24,
+        "height": 24
+      },
+      {
+        "id": "Key_A",
+        "x": 210,
+        "y": 220,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box0_A",
+        "x": 600,
+        "y": 160,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box1_A",
+        "x": 1040,
+        "y": 630,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box2_A",
+        "x": 1080,
+        "y": 210,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Key_B",
+        "x": 240,
+        "y": 260,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box0_B",
+        "x": 680,
+        "y": 170,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box1_B",
+        "x": 1100,
+        "y": 675,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "Box2_B",
+        "x": 1180,
+        "y": 250,
+        "width": 16,
+        "height": 16
       }
     ]
   }

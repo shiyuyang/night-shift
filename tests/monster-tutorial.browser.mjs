@@ -7,11 +7,11 @@ try{
  const url=(process.env.BASE_URL||'http://localhost:5174')+'/?playtest=encounters';
  async function start(){await page.goto(url);await page.locator('#start:enabled').waitFor();await page.locator('[data-night="3"]').click();await page.locator('#start').click();await page.waitForFunction(()=>window.__nightshiftScene?.active);}
  async function fixture(kind,blocked=false){await page.evaluate(async({kind,blocked})=>{
-  const s=window.__nightshiftScene;s.tutorial.start(3);s.weeper=undefined;s.weeperSprite.setVisible(false);s.cooldown=999;s.ghostTime=0;s.ghost.setVisible(false);s.player.setPosition(458,318);s.state.health=100;s.state.battery=100;s.flashlightOn=true;s.protection=0;
+  const s=window.__nightshiftScene;s.tutorial.start(3);s.weeper=undefined;s.weeperSprite.setVisible(false);s.cooldown=999;s.ghostTime=0;s.ghost.setVisible(false);s.player.setPosition(458,414);s.state.health=100;s.state.battery=100;s.flashlightOn=true;s.protection=0;
   // A wall fixture proves proximity alone does not open a monster tutorial.
-  s.level.walls=s.level.walls.filter(w=>w.testWall!==true);if(blocked)s.level.walls.push({x:495,y:280,width:8,height:80,testWall:true});
-  if(kind==='weeper'){const {Weeper}=await import('/src/runtime/weeper.ts');s.weeper=new Weeper({x:540,y:318});s.weeper.grace=0;s.weeperSprite.setVisible(true).setPosition(540,318);}
-  else{s.rules={...s.rules,threat:kind};s.ghost.setPosition(540,318).setVisible(true);s.ghostTime=20;s.ghostDelay=0;s.stun=0;s.memory=0;s.patrolRetreat=false;s.patrolUnseen=0;s.lastKnown={x:540,y:318};s.route=[];s.routeTimer=0;}
+  s.level.walls=s.level.walls.filter(w=>w.testWall!==true);if(blocked)s.level.walls.push({x:495,y:376,width:8,height:80,testWall:true});
+  if(kind==='weeper'){const {Weeper}=await import('/src/runtime/weeper.ts');s.weeper=new Weeper({x:540,y:414});s.weeper.grace=0;s.weeperSprite.setVisible(true).setPosition(540,414);}
+  else{s.rules={...s.rules,threat:kind};s.ghost.setPosition(540,414).setVisible(true);s.ghostTime=20;s.ghostDelay=0;s.stun=0;s.memory=0;s.patrolRetreat=false;s.patrolUnseen=0;s.lastKnown={x:540,y:414};s.route=[];s.routeTimer=0;}
  },{kind,blocked});}
  await start();await fixture('weeper',true);await page.waitForTimeout(150);assert.equal(await page.evaluate(()=>window.__nightshiftScene.tutorial.prompt),null);
  for(const kind of ['listener','light-shy','patroller','weeper']){

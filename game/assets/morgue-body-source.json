@@ -1,0 +1,9 @@
+{
+  "source": "public/assets/morgue-shrouded-body-v1.png",
+  "sha256": "14c8cd360bdb18c3894de8bebb453d7fd53490cd35b2f8db8dfafafddb5b052d",
+  "generator": "Built-in image_gen",
+  "description": "Top-down pixel-art shrouded body, transparent background. Shared by morgue trays and trolleys.",
+  "delivery": "public/assets/morgue-shrouded-body-v1.webp",
+  "encoding": "Lossless WebP; original alpha preserved",
+  "runtime": "Trim transparent margins with registerAtlas; preserve aspect ratio; crop drawer at cabinet mouth."
+}

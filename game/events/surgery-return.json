@@ -1,0 +1,32 @@
+[
+  {
+    "id": "surgery_return",
+    "trigger": {
+      "flag": "first_box",
+      "zone": "return_corridor"
+    },
+    "once": true,
+    "sequence": [
+      {
+        "type": "light",
+        "target": "LampCenter",
+        "strength": 0.08
+      },
+      {
+        "type": "sound",
+        "id": "call-bell",
+        "pan": -0.65,
+        "source": "LampSouth"
+      },
+      {
+        "type": "wait",
+        "seconds": 1.8
+      },
+      {
+        "type": "light",
+        "target": "LampCenter",
+        "strength": 0.75
+      }
+    ]
+  }
+]

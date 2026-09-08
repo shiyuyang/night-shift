@@ -30,6 +30,18 @@
         "radius": 120,
         "strength": 0.52,
         "color": "#80a394"
+      },
+      {
+        "id": "LampTreatment",
+        "radius": 150,
+        "strength": 0.52,
+        "color": "#80a394"
+      },
+      {
+        "id": "LampWardTwo",
+        "radius": 150,
+        "strength": 0.5,
+        "color": "#79a6b6"
       }
     ]
   },
@@ -63,6 +75,18 @@
         "id": "LampSouth",
         "radius": 120,
         "strength": 0.52,
+        "color": "#80a394"
+      },
+      {
+        "id": "LampNorth",
+        "radius": 165,
+        "strength": 0.52,
+        "color": "#bba574"
+      },
+      {
+        "id": "LampEast",
+        "radius": 150,
+        "strength": 0.56,
         "color": "#80a394"
       }
     ]
@@ -98,6 +122,202 @@
         "radius": 120,
         "strength": 0.52,
         "color": "#80a394"
+      },
+      {
+        "id": "LampNorth",
+        "radius": 165,
+        "strength": 0.52,
+        "color": "#79a6b6"
+      },
+      {
+        "id": "LampEast",
+        "radius": 150,
+        "strength": 0.56,
+        "color": "#80a394"
+      }
+    ]
+  },
+  {
+    "id": "outpatient",
+    "name": "门诊部",
+    "theme": 3,
+    "source": "maps/outpatient.ldtk",
+    "level": "Outpatient",
+    "events": "game/events/outpatient-return.json",
+    "lights": [
+      {
+        "id": "LampWest",
+        "radius": 155,
+        "strength": 0.66,
+        "color": "#c59b65"
+      },
+      {
+        "id": "LampCenter",
+        "radius": 150,
+        "strength": 0.56,
+        "color": "#79a6b6"
+      },
+      {
+        "id": "LampExit",
+        "radius": 112,
+        "strength": 0.5,
+        "color": "#b74336"
+      },
+      {
+        "id": "LampSouth",
+        "radius": 120,
+        "strength": 0.52,
+        "color": "#80a394"
+      },
+      {
+        "id": "LampNorth",
+        "radius": 165,
+        "strength": 0.52,
+        "color": "#79a6b6"
+      },
+      {
+        "id": "LampEast",
+        "radius": 150,
+        "strength": 0.56,
+        "color": "#80a394"
+      }
+    ]
+  },
+  {
+    "id": "surgery",
+    "name": "手术室",
+    "theme": 4,
+    "source": "maps/surgery.ldtk",
+    "level": "Surgery",
+    "events": "game/events/surgery-return.json",
+    "lights": [
+      {
+        "id": "LampWest",
+        "radius": 155,
+        "strength": 0.66,
+        "color": "#c59b65"
+      },
+      {
+        "id": "LampCenter",
+        "radius": 190,
+        "strength": 0.75,
+        "color": "#bbd9d3"
+      },
+      {
+        "id": "LampExit",
+        "radius": 112,
+        "strength": 0.5,
+        "color": "#b74336"
+      },
+      {
+        "id": "LampSouth",
+        "radius": 120,
+        "strength": 0.52,
+        "color": "#80a394"
+      },
+      {
+        "id": "LampNorth",
+        "radius": 165,
+        "strength": 0.52,
+        "color": "#79a6b6"
+      },
+      {
+        "id": "LampEast",
+        "radius": 150,
+        "strength": 0.56,
+        "color": "#80a394"
+      }
+    ]
+  },
+  {
+    "id": "morgue",
+    "name": "太平间",
+    "theme": 5,
+    "source": "maps/morgue.ldtk",
+    "level": "Morgue",
+    "events": "game/events/morgue-return.json",
+    "lights": [
+      {
+        "id": "LampWest",
+        "radius": 155,
+        "strength": 0.66,
+        "color": "#c59b65"
+      },
+      {
+        "id": "LampCenter",
+        "radius": 145,
+        "strength": 0.5,
+        "color": "#86b2ba"
+      },
+      {
+        "id": "LampExit",
+        "radius": 112,
+        "strength": 0.5,
+        "color": "#b74336"
+      },
+      {
+        "id": "LampSouth",
+        "radius": 120,
+        "strength": 0.52,
+        "color": "#80a394"
+      },
+      {
+        "id": "LampNorth",
+        "radius": 165,
+        "strength": 0.52,
+        "color": "#79a6b6"
+      },
+      {
+        "id": "LampEast",
+        "radius": 150,
+        "strength": 0.56,
+        "color": "#80a394"
+      }
+    ]
+  },
+  {
+    "id": "garden",
+    "name": "医院花园",
+    "theme": 6,
+    "source": "maps/garden.ldtk",
+    "level": "Garden",
+    "events": "game/events/garden-lights.json",
+    "lights": [
+      {
+        "id": "LampWest",
+        "radius": 175,
+        "strength": 0.65,
+        "color": "#b5a486"
+      },
+      {
+        "id": "LampCenter",
+        "radius": 175,
+        "strength": 0.65,
+        "color": "#b4ccc5"
+      },
+      {
+        "id": "LampExit",
+        "radius": 110,
+        "strength": 0.5,
+        "color": "#b4ccc5"
+      },
+      {
+        "id": "LampSouth",
+        "radius": 175,
+        "strength": 0.65,
+        "color": "#b4ccc5"
+      },
+      {
+        "id": "LampNorth",
+        "radius": 175,
+        "strength": 0.65,
+        "color": "#b4ccc5"
+      },
+      {
+        "id": "LampEast",
+        "radius": 175,
+        "strength": 0.65,
+        "color": "#b4ccc5"
       }
     ]
   }

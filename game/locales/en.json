@@ -311,5 +311,13 @@
   "command.drain": "Battery leak",
   "command.drain.description": "Extra battery drain for 8 seconds, losing at most 16%. Duration does not stack.",
   "command.alarm": "Noise",
-  "command.alarm.description": "Expose your position for 6 seconds. Press R to distract with a decoy."
+  "command.alarm.description": "Expose your position for 6 seconds. Press R to distract with a decoy.",
+  "stage.3": "Outpatient Clinic",
+  "stage.4": "Operating Room",
+  "note.3": "An empty waiting hall. A sound behind a clinic door.",
+  "note.4": "The operating light is still on.",
+  "stage.5": "Morgue",
+  "note.5": "A drawer rattles behind you.",
+  "stage.6": "Hospital Courtyard",
+  "note.6": "Lit windows. An empty courtyard."
 }

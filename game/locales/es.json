@@ -311,5 +311,13 @@
   "command.drain": "Fuga de batería",
   "command.drain.description": "Drenaje extra de batería durante 8 segundos, perdiendo como máximo el 16%. La duración no se acumula.",
   "command.alarm": "Ruido",
-  "command.alarm.description": "Expon tu posición durante 6 segundos. Presiona R para distraer con un señuelo."
+  "command.alarm.description": "Expon tu posición durante 6 segundos. Presiona R para distraer con un señuelo.",
+  "stage.3": "Consultas externas",
+  "stage.4": "Quirófano",
+  "note.3": "Sala de espera vacía. Un ruido tras una puerta.",
+  "note.4": "La lámpara quirúrgica sigue encendida.",
+  "stage.5": "Depósito de cadáveres",
+  "note.5": "Un cajón traquetea a tu espalda.",
+  "stage.6": "Patio del hospital",
+  "note.6": "Ventanas iluminadas. Un patio vacío."
 }

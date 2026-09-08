@@ -311,5 +311,13 @@
   "command.drain": "Fuite de batterie",
   "command.drain.description": "Consommation supplémentaire de batterie pendant 8 secondes, perdant au maximum 16 %. La durée ne s'accumule pas.",
   "command.alarm": "Bruit",
-  "command.alarm.description": "Révélez votre position pendant 6 secondes. Appuyez sur R pour distraire avec un appât."
+  "command.alarm.description": "Révélez votre position pendant 6 secondes. Appuyez sur R pour distraire avec un appât.",
+  "stage.3": "Consultations",
+  "stage.4": "Bloc opératoire",
+  "note.3": "Salle d’attente vide. Un bruit derrière une porte.",
+  "note.4": "La lampe opératoire est encore allumée.",
+  "stage.5": "Morgue",
+  "note.5": "Un tiroir claque derrière vous.",
+  "stage.6": "Cour de l’hôpital",
+  "note.6": "Fenêtres éclairées. Cour déserte."
 }

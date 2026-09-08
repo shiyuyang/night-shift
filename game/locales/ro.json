@@ -311,5 +311,13 @@
   "command.drain": "Scurgere baterie",
   "command.drain.description": "Consum suplimentar de baterie timp de 8 secunde, pierzând cel mult 16%. Durata nu se suprapune.",
   "command.alarm": "Zgomot",
-  "command.alarm.description": "Expoziția poziției timp de 6 secunde. Apasă R pentru a distrage cu o momeală."
+  "command.alarm.description": "Expoziția poziției timp de 6 secunde. Apasă R pentru a distrage cu o momeală.",
+  "stage.3": "Ambulatoriu",
+  "stage.4": "Sală de operații",
+  "note.3": "Sala de așteptare e goală. Un zgomot în spatele unei uși.",
+  "note.4": "Lampa chirurgicală este încă aprinsă.",
+  "stage.5": "Morgă",
+  "note.5": "Un sertar zornăie în spatele tău.",
+  "stage.6": "Curtea spitalului",
+  "note.6": "Ferestre luminate. Curtea e goală."
 }
