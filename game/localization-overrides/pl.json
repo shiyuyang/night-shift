@@ -1,3 +1,4 @@
 {
-  "ui.archived-footage-not-live": "Przed zamknięciem oddziału"
+  "ui.archived-footage-not-live": "Przed zamknięciem oddziału",
+  "menu.anomaly": "{threat}\n{event}"
 }

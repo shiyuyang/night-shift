@@ -1,0 +1,112 @@
+[
+  {
+    "id": "garden_dark_wave",
+    "trigger": {
+      "flag": "first_box",
+      "zone": "NorthPathZone"
+    },
+    "once": true,
+    "sequence": [
+      {
+        "type": "sound",
+        "id": "metal",
+        "pan": 0.65,
+        "source": "LampEast"
+      },
+      {
+        "type": "light",
+        "target": "LampEast",
+        "strength": 0.06
+      },
+      {
+        "type": "wait",
+        "seconds": 0.8
+      },
+      {
+        "type": "light",
+        "target": "LampNorth",
+        "strength": 0.06
+      },
+      {
+        "type": "wait",
+        "seconds": 0.8
+      },
+      {
+        "type": "light",
+        "target": "LampCenter",
+        "strength": 0.06
+      },
+      {
+        "type": "wait",
+        "seconds": 0.8
+      },
+      {
+        "type": "light",
+        "target": "LampWest",
+        "strength": 0.06
+      },
+      {
+        "type": "wait",
+        "seconds": 0.8
+      },
+      {
+        "type": "light",
+        "target": "LampSouth",
+        "strength": 0.06
+      },
+      {
+        "type": "wait",
+        "seconds": 0.8
+      },
+      {
+        "type": "wait",
+        "seconds": 3
+      },
+      {
+        "type": "light",
+        "target": "LampEast",
+        "strength": 0.65
+      },
+      {
+        "type": "wait",
+        "seconds": 0.35
+      },
+      {
+        "type": "light",
+        "target": "LampNorth",
+        "strength": 0.65
+      },
+      {
+        "type": "wait",
+        "seconds": 0.35
+      },
+      {
+        "type": "light",
+        "target": "LampCenter",
+        "strength": 0.65
+      },
+      {
+        "type": "wait",
+        "seconds": 0.35
+      },
+      {
+        "type": "light",
+        "target": "LampWest",
+        "strength": 0.65
+      },
+      {
+        "type": "wait",
+        "seconds": 0.35
+      },
+      {
+        "type": "light",
+        "target": "LampSouth",
+        "strength": 0.65
+      },
+      {
+        "type": "wait",
+        "seconds": 0.35
+      }
+    ]
+  }
+]

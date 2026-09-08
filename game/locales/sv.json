@@ -311,5 +311,13 @@
   "command.drain": "Batteriläckage",
   "command.drain.description": "Extra batteriförbrukning i 8 sekunder, förlorar högst 16%. Varaktighet staplas inte.",
   "command.alarm": "Ljud",
-  "command.alarm.description": "Avslöta din position i 6 sekunder. Tryck på R för att distrahera med en lure."
+  "command.alarm.description": "Avslöta din position i 6 sekunder. Tryck på R för att distrahera med en lure.",
+  "stage.3": "Öppenvård",
+  "stage.4": "Operationssal",
+  "note.3": "Ett tomt väntrum. Ett ljud bakom en dörr.",
+  "note.4": "Operationslampan lyser fortfarande.",
+  "stage.5": "Bårhus",
+  "note.5": "En låda skramlar bakom dig.",
+  "stage.6": "Sjukhusgård",
+  "note.6": "Upplysta fönster. En tom gård."
 }

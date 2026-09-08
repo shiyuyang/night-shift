@@ -29,7 +29,7 @@
   "note.0": "As camas estão vazias. O sino de chamada não parou.",
   "note.1": "Uma caixa extra no inventário. Algo arrasta atrás das prateleiras.",
   "note.2": "As luzes se apagam. Os batidos nas tubulações continuam.",
-  "menu.anomaly": "Nota da última turna: {threat}\n{event}",
+  "menu.anomaly": "{threat}\n{event}",
   "threat.listener": "O Ouvinte",
   "threat.light-shy": "O Averso à Luz",
   "threat.patroller": "O Patrulheiro",
@@ -311,5 +311,13 @@
   "command.drain": "Vazamento de bateria",
   "command.drain.description": "Drenagem extra de bateria por 8 segundos, perdendo no máximo 16%. A duração não se acumula.",
   "command.alarm": "Ruído",
-  "command.alarm.description": "Revele sua posição por 6 segundos. Pressione R para distrair com uma isca."
+  "command.alarm.description": "Revele sua posição por 6 segundos. Pressione R para distrair com uma isca.",
+  "stage.3": "Ambulatório",
+  "stage.4": "Sala de cirurgia",
+  "note.3": "Sala de espera vazia. Um ruído atrás de uma porta.",
+  "note.4": "A luz cirúrgica continua acesa.",
+  "stage.5": "Necrotério",
+  "note.5": "Uma gaveta range atrás de você.",
+  "stage.6": "Pátio do hospital",
+  "note.6": "Janelas acesas. Um pátio vazio."
 }

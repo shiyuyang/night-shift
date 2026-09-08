@@ -29,7 +29,7 @@
   "note.0": "Łóżka są puste. Dzwonek alarmowy nie przestaje dzwonić.",
   "note.1": "Jeden dodatkowy skrzynia w liczeniu. Coś pociąga się za półkami.",
   "note.2": "Światła gaśną. Uderzenia w rury trwają dalej.",
-  "menu.anomaly": "Notatka z poprzedniej zmiany: {threat}\n{event}",
+  "menu.anomaly": "{threat}\n{event}",
   "threat.listener": "Słuchacz",
   "threat.light-shy": "Bojący się światła",
   "threat.patroller": "Patrolujący",
@@ -311,5 +311,13 @@
   "command.drain": "Wyciek baterii",
   "command.drain.description": "Dodatkowe zużycie baterii przez 8 sekund, tracąc maksymalnie 16%. Czas trwania się nie sumuje.",
   "command.alarm": "Hałas",
-  "command.alarm.description": "Ujawnij swoją pozycję przez 6 sekund. Naciśnij R, aby rozproszyć uprzedzeniem."
+  "command.alarm.description": "Ujawnij swoją pozycję przez 6 sekund. Naciśnij R, aby rozproszyć uprzedzeniem.",
+  "stage.3": "Przychodnia",
+  "stage.4": "Sala operacyjna",
+  "note.3": "Pusta poczekalnia. Hałas za drzwiami gabinetu.",
+  "note.4": "Lampa operacyjna nadal świeci.",
+  "stage.5": "Kostnica",
+  "note.5": "Za tobą grzechocze szuflada.",
+  "stage.6": "Dziedziniec szpitala",
+  "note.6": "Jasne okna. Pusty dziedziniec."
 }

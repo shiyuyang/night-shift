@@ -71,3 +71,8 @@ test('only selected music is scheduled and a newly selected theme starts at its 
  a.setScene(1,0,0,1,0);assert.equal(sources.length,2);assert.equal(sources[1].buffer.id,'warehouse');assert.equal(sources[1].offset,0);assert.equal(sources[0].stopped,15);
  ctx.currentTime=13;a.setScene(0,0,0,1,0);assert.equal(sources.length,3);assert.equal(sources[2].buffer.id,'ward');assert.equal(sources[2].offset,0);assert.ok(sources[0].stopped<13.1);
 });
+
+test('clinical stages select existing scene beds instead of falling back to menu music',async()=>{
+ const {musicTheme}=await import('../src/ambience.ts');
+ assert.equal(musicTheme(3),0);assert.equal(musicTheme(4),2);assert.equal(musicTheme(-2),-2);
+});

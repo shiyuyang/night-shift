@@ -94,6 +94,16 @@
       "source": "/assets/stamp-button-pressed-v1.png",
       "file": "/assets/stamp-button-pressed-v1.webp",
       "encoding": "webp-q95"
+    },
+    {
+      "source": "/assets/morgue-shrouded-body-v1.png",
+      "file": "/assets/morgue-shrouded-body-v1.webp",
+      "encoding": "lossless"
+    },
+    {
+      "source": "/assets/garden-pine-v1.png",
+      "file": "/assets/garden-pine-v1.webp",
+      "encoding": "lossless"
     }
   ],
   "staticFiles": [
@@ -116,10 +126,10 @@
     "/fonts/locale-ar-b37007c412.woff2",
     "/fonts/locale-he-f6569a40cd.woff2",
     "/fonts/locale-th-00cbed7909.woff2",
-    "/fonts/locale-my-5b9d94eaa6.woff2",
-    "/fonts/locale-ja-da69667ac1.woff2",
-    "/fonts/locale-ko-061d1e2edc.woff2",
-    "/fonts/locale-zh-Hans-2271a0e5db.woff2",
-    "/fonts/locale-zh-Hant-0ed7e29190.woff2"
+    "/fonts/locale-my-4e9be0980c.woff2",
+    "/fonts/locale-ja-e441099e43.woff2",
+    "/fonts/locale-ko-fe5ce7c897.woff2",
+    "/fonts/locale-zh-Hans-e043cbda8a.woff2",
+    "/fonts/locale-zh-Hant-d7476c9c6c.woff2"
   ]
 }

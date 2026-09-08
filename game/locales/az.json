@@ -311,5 +311,13 @@
   "command.drain": "Batteriya sızması",
   "command.drain.description": "8 saniyə ərzində əlavə batareya sıxılması, maksimum 16% itki. Müddət üst-üstə düşmür.",
   "command.alarm": "Səs",
-  "command.alarm.description": "Önünüzü 6 saniyəyə aşkar edin. Pozisiyanızı aldadıcı ilə R düyməsi ilə aldatın."
+  "command.alarm.description": "Önünüzü 6 saniyəyə aşkar edin. Pozisiyanızı aldadıcı ilə R düyməsi ilə aldatın.",
+  "stage.3": "Poliklinika",
+  "stage.4": "Əməliyyat otağı",
+  "note.3": "Gözləmə zalı boşdur. Müayinə qapısının arxasından səs gəlir.",
+  "note.4": "Əməliyyat lampası hələ də yanır.",
+  "stage.5": "Morq",
+  "note.5": "Arxanda bir siyirmə taqqıldayır.",
+  "stage.6": "Xəstəxana həyəti",
+  "note.6": "Pəncərələr işıqlıdır. Həyət boşdur."
 }

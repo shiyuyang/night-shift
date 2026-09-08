@@ -29,7 +29,7 @@
   "note.0": "A ágyak üresek. A hívócsengő nem állt meg.",
   "note.1": "Egy extra doboz a számlában. Valami a polcok mögött húzódik.",
   "note.2": "A fények kialszanak. A csapokban lévő kopogás folytatódik.",
-  "menu.anomaly": "Az előző műszak jegyzete: {threat}\n{event}",
+  "menu.anomaly": "{threat}\n{event}",
   "threat.listener": "A Hallgató",
   "threat.light-shy": "A Fénykerülő",
   "threat.patroller": "A Őrző",
@@ -311,5 +311,13 @@
   "command.drain": "Akku szivárgás",
   "command.drain.description": "Extra akkumulátor-lemerülés 8 másodpercre, maximum 16%-os veszteséggel. A tartam nem halmozódik.",
   "command.alarm": "Zaj",
-  "command.alarm.description": "Kitárja a pozícióját 6 másodpercre. Nyomja meg az R gombot, hogy csalóval elterelje a figyelmet."
+  "command.alarm.description": "Kitárja a pozícióját 6 másodpercre. Nyomja meg az R gombot, hogy csalóval elterelje a figyelmet.",
+  "stage.3": "Szakrendelő",
+  "stage.4": "Műtő",
+  "note.3": "Üres váróterem. Zaj hallatszik egy ajtó mögül.",
+  "note.4": "A műtőlámpa még ég.",
+  "stage.5": "Hullaház",
+  "note.5": "Mögötted egy fiók zörög.",
+  "stage.6": "Kórházudvar",
+  "note.6": "Világos ablakok. Üres udvar."
 }

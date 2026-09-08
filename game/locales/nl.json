@@ -311,5 +311,13 @@
   "command.drain": "Batterijlek",
   "command.drain.description": "Extra batterijverbruik voor 8 seconden, verliest maximaal 16%. Duur stapelt niet.",
   "command.alarm": "Geluid",
-  "command.alarm.description": "Geef je positie prijs voor 6 seconden. Druk op R om te verstoren met een lokmiddel."
+  "command.alarm.description": "Geef je positie prijs voor 6 seconden. Druk op R om te verstoren met een lokmiddel.",
+  "stage.3": "Polikliniek",
+  "stage.4": "Operatiekamer",
+  "note.3": "Een lege wachtkamer. Geluid achter een deur.",
+  "note.4": "De operatielamp brandt nog.",
+  "stage.5": "Mortuarium",
+  "note.5": "Achter je rammelt een lade.",
+  "stage.6": "Ziekenhuistuin",
+  "note.6": "Verlichte ramen. Een lege tuin."
 }

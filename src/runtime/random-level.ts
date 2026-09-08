@@ -6,9 +6,11 @@ import {validatePlayableLevel} from './level-validation.ts';
 export function seededRandom(seed:number){let state=seed>>>0;return ()=>{state+=0x6D2B79F5;let t=state;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296;};}
 function candidate(base:Level,seed:number):Level{
  const level=structuredClone(base),rng=seededRandom(seed);
- const spots=searchSpots[String(base.theme) as keyof typeof searchSpots],pool=spots.open.map(p=>({...p}));
- for(let i=pool.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
- level.key=pool[0];level.boxes=[pool[1],pool[2],{...spots.sealed[Math.floor(rng()*spots.sealed.length)]}];
+ const spots=searchSpots[String(base.theme) as keyof typeof searchSpots];
+ const pick=(points:{x:number;y:number}[])=>({...points[Math.floor(rng()*points.length)]});
+ // Every theme declares independent functional pools; the lock chain is validated below.
+ level.key=pick(spots.key);
+ level.boxes=[pick(spots.free),pick(spots.brass),pick(spots.sealed)];
  level.generation={seed,attempts:1,fallback:false,modules:[]};return level;
 }
 export function randomizeLevel(base:Level,seed:number,maxAttempts=12):Level{

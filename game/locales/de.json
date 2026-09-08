@@ -311,5 +311,13 @@
   "command.drain": "Batterieleck",
   "command.drain.description": "Zusätzlicher Batterieverbrauch für 8 Sekunden, maximaler Verlust von 16%. Dauer stapelt sich nicht.",
   "command.alarm": "Lärm",
-  "command.alarm.description": "Offenbaren Sie Ihre Position für 6 Sekunden. Drücken Sie R, um mit einer Ablenkung abzulenken."
+  "command.alarm.description": "Offenbaren Sie Ihre Position für 6 Sekunden. Drücken Sie R, um mit einer Ablenkung abzulenken.",
+  "stage.3": "Ambulanz",
+  "stage.4": "Operationssaal",
+  "note.3": "Der Warteraum ist leer. Ein Geräusch hinter einer Tür.",
+  "note.4": "Die OP-Leuchte brennt noch.",
+  "stage.5": "Leichenhalle",
+  "note.5": "Hinter dir klappert ein Schubfach.",
+  "stage.6": "Krankenhaushof",
+  "note.6": "Helle Fenster. Ein leerer Hof."
 }

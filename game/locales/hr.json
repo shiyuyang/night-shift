@@ -311,5 +311,13 @@
   "command.drain": "Curenje baterije",
   "command.drain.description": "Povećana potrošnja baterije za 8 sekundi, gubeći najviše 16%. Trajanje se ne zbraja.",
   "command.alarm": "Buca",
-  "command.alarm.description": "Otkrijte svoju poziciju za 6 sekundi. Pritisnite R da privučete privlaku."
+  "command.alarm.description": "Otkrijte svoju poziciju za 6 sekundi. Pritisnite R da privučete privlaku.",
+  "stage.3": "Ambulanta",
+  "stage.4": "Operacijska sala",
+  "note.3": "Prazna čekaonica. Zvuk iza vrata ordinacije.",
+  "note.4": "Operacijska svjetiljka još gori.",
+  "stage.5": "Mrtvačnica",
+  "note.5": "Iza tebe zvecka ladica.",
+  "stage.6": "Bolničko dvorište",
+  "note.6": "Osvijetljeni prozori. Prazno dvorište."
 }

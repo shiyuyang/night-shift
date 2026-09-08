@@ -311,5 +311,13 @@
   "command.drain": "Pil sızıntısı",
   "command.drain.description": "8 saniye ekstra pil tüketimi, en fazla %16 kayıp. Süre üst üste binmez.",
   "command.alarm": "Ses",
-  "command.alarm.description": "Konumunuzu 6 saniye ortaya çıkarın. Dikkat dağıtmak için R tuşu ile sahte ses kullanın."
+  "command.alarm.description": "Konumunuzu 6 saniye ortaya çıkarın. Dikkat dağıtmak için R tuşu ile sahte ses kullanın.",
+  "stage.3": "Poliklinik",
+  "stage.4": "Ameliyathane",
+  "note.3": "Bekleme salonu boş. Muayene kapısının ardında bir ses.",
+  "note.4": "Ameliyat lambası hâlâ yanıyor.",
+  "stage.5": "Morg",
+  "note.5": "Arkanda bir çekmece takırdıyor.",
+  "stage.6": "Hastane Avlusu",
+  "note.6": "Pencereler aydınlık. Avlu boş."
 }

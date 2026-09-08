@@ -14,7 +14,7 @@ test('contact cannot damage through thin walls or slide around their corners',()
  assert.equal(clearContact({x:90,y:110},{x:112,y:110},[]),true);
 });
 test('architecture clearance preserves patrol routes across all map themes',()=>{
- for(let n=1;n<=6;n++)for(const seed of [1,42,999]){
+ for(let n=1;n<=7;n++)for(const seed of [1,42,999]){
   const l=makeLevel(n,seed),solids=[...l.walls.map(monsterArchitecture),...l.props,...l.boxes.map(b=>({x:b.x-13,y:b.y-9,width:26,height:21})),monsterArchitecture(l.door),...(l.features??[]).filter(f=>['cache','locker'].includes(f.kind)).map(f=>({x:f.x,y:f.y+8,width:f.width,height:f.height-8}))];
   for(const spawn of l.monsterSpawns)assert.ok(!solids.some(b=>overlaps(monsterFeetAt(spawn.x,spawn.y),b)),`spawn ${n}/${seed}`);
   const route=patrolPath(l.monsterSpawns[0],l.monsterSpawns[1],solids,l.bounds,monsterFeetAt);

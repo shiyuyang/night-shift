@@ -311,5 +311,13 @@
   "command.drain": "電池漏電",
   "command.drain.description": "8 秒額外耗電，最多損失 16%，不疊加時長",
   "command.alarm": "貼身噪聲",
-  "command.alarm.description": "6 秒暴露當前位置，可用 R 誘餌轉移"
+  "command.alarm.description": "6 秒暴露當前位置，可用 R 誘餌轉移",
+  "stage.3": "門診部",
+  "stage.4": "手術室",
+  "note.3": "候診廳空無一人，診間門後卻傳來聲響。",
+  "note.4": "手術燈仍然亮著。",
+  "stage.5": "太平間",
+  "note.5": "身後的冷櫃抽屜響了。",
+  "stage.6": "醫院中庭",
+  "note.6": "窗裡亮著燈，院裡卻沒有人。"
 }

@@ -1,3 +1,4 @@
 {
-  "ui.archived-footage-not-live": "Antes do fechamento da ala"
+  "ui.archived-footage-not-live": "Antes do fechamento da ala",
+  "menu.anomaly": "{threat}\n{event}"
 }

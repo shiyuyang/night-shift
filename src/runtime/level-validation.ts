@@ -20,7 +20,7 @@ export function escapeRouteLength(level:Level,points=reachablePositions(level,tr
  }
  return Infinity;
 }
-export function validatePlayableLevel(level:Level){
+export function validatePlayableLevel(level:Level,checkDrawer=true):{valid:boolean;errors:string[]}{
  const closed=reachablePositions(level,false),open=reachablePositions(level,true),near=(points:Position[],p:Position,r:number)=>points.some(n=>Math.hypot(n.x-p.x,n.y-p.y)<r);
  const errors:string[]=[];
  // Explicit dependency chain: free box -> ward key -> door; brass -> box 1 -> seal -> box 2.
@@ -31,5 +31,6 @@ export function validatePlayableLevel(level:Level){
  const escape=escapeRouteLength(level,open);if(!Number.isFinite(escape)||escape<600)errors.push('escape route must be reachable and at least 600 units');
  const monsters=reachablePositions(level,true,monsterFeetAt);
  for(const p of level.monsterSpawns)if(!near(monsters,p,12))errors.push('monster spawn disconnected');
+ const drawer=level.zones.MorgueDrawerZone;if(checkDrawer&&drawer){const blocked={...level,props:[...level.props,{...drawer,kind:'machine' as const}]};errors.push(...validatePlayableLevel(blocked,false).errors.map(e=>'extended drawer: '+e));}
  return {valid:errors.length===0,errors};
 }

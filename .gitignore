@@ -18,3 +18,15 @@ dist-cloudflare-manifest.json
 
 # Generated localization browser evidence
 output/localization/
+
+# Generated expanded-ward browser evidence
+output/ward-expanded/
+
+# Generated warehouse/plant browser evidence
+output/industrial-maps/
+
+output/clinical-maps/
+
+output/morgue/
+
+output/garden/

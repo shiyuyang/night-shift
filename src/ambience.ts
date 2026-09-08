@@ -2,6 +2,8 @@ import {decodeAudioAsset} from './runtime/audio-asset.ts';
 import {decodeSoundEffects} from './runtime/audio-pack.ts';
 import effects from '../game/audio-sfx.json' with {type:'json'};
 import music from '../game/music.json' with {type:'json'};
+// New clinical areas reuse existing hospital music beds.
+export const musicTheme=(theme:number)=>theme===3?0:theme===4?2:theme===5?0:theme===6?0:theme;
 interface LoopLayer { id: string; buffer: AudioBuffer; gain: GainNode; nextStart: number; active?:boolean; sources?:Set<AudioBufferSourceNode>; }
 /** Local generated music only. API credentials are never used by the browser. */
 export class Ambience {
@@ -28,6 +30,7 @@ export class Ambience {
   private previousThemes:Record<string,string>={};
   constructor(){try{const saved=JSON.parse(localStorage.getItem('night-shift-music-rotation-v1')??'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved))this.previousThemes=Object.fromEntries(Object.entries(saved).filter(([,value])=>typeof value==='string')) as Record<string,string>;}catch{}}
   beginRun(theme:number,night:number){
+    theme=musicTheme(theme);
     const variants=music.filter(track=>track.theme===theme);if(!variants.length)return;
     const choices=variants.filter(track=>track.id!==this.previousThemes[theme]);
     const selected=choices.length?choices[Math.floor(Math.random()*choices.length)]:variants[0];
@@ -39,7 +42,7 @@ export class Ambience {
   private powerBuffer?: AudioBuffer;
   private powerVoice?: { source: AudioBufferSourceNode; gain: GainNode; started: number; offset: number };
   setScene(theme: number, tension: number, powerRemaining: number, night = 1, searchProgress = 0) {
-    this.theme = theme;this.night = night;this.searchProgress=searchProgress;
+    this.theme = musicTheme(theme);this.night = night;this.searchProgress=searchProgress;
     this.tension = Math.max(0, Math.min(1, tension));
     this.powerRemaining = Math.max(0, powerRemaining);
     this.mix(); this.syncPower();

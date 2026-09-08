@@ -311,5 +311,13 @@
   "command.drain": "Kebocoran baterai",
   "command.drain.description": "Pengurasan baterai tambahan selama 8 detik, kehilangan paling banyak 16%. Durasi tidak menumpuk.",
   "command.alarm": "Suara",
-  "command.alarm.description": "Terpaparkan posisi Anda selama 6 detik. Tekan R untuk mengalihkan perhatian dengan umpan."
+  "command.alarm.description": "Terpaparkan posisi Anda selama 6 detik. Tekan R untuk mengalihkan perhatian dengan umpan.",
+  "stage.3": "Poliklinik",
+  "stage.4": "Ruang Operasi",
+  "note.3": "Ruang tunggu kosong. Ada suara di balik pintu periksa.",
+  "note.4": "Lampu operasi masih menyala.",
+  "stage.5": "Kamar Jenazah",
+  "note.5": "Laci berderak di belakangmu.",
+  "stage.6": "Halaman Rumah Sakit",
+  "note.6": "Jendela menyala. Halaman kosong."
 }
