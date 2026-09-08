@@ -22,10 +22,11 @@ try{for(const locale of (process.env.I18N_LOCALES?.split(',')??['en','zh-Hans','
   assert.ok(geometry.brandLoaded&&Number(geometry.brandOpacity)>0,locale+' wordmark must render directly');
  };
  assert.equal(await page.locator('#stage-list button').count(),7);
+ assert.ok(await page.locator('#stage-list button').evaluateAll(rows=>rows.every(row=>getComputedStyle(row).height==='48px')));
  const indexFits=await page.evaluate(()=>{const rows=[...document.querySelectorAll('#stage-list button')];return rows.at(-1).getBoundingClientRect().bottom<=document.querySelector('.stage-pages').getBoundingClientRect().top&&rows.every(row=>[...row.querySelectorAll('b,small')].every(text=>text.scrollWidth<=text.clientWidth+1&&text.getBoundingClientRect().bottom<=row.getBoundingClientRect().bottom+1));});
  assert.ok(indexFits,locale+' seven chapter rows must fit above pagination');
  await assertCover();
- for(let stage=0;stage<3;stage++){await page.locator('#stage-list button').nth(stage).click();await assertCover();}
+ for(let stage=0;stage<3;stage++){await page.locator('#stage-list button').nth(stage).click();await assertCover();assert.ok(await page.locator('.file-stamp').evaluate(e=>{const s=getComputedStyle(e);return s.color==='rgb(141, 68, 73)'&&s.borderTopWidth==='0px'&&s.boxShadow==='none'}),'Status seal must stay red without a rectangular border');}
  await page.locator('#stage-list button').first().click();
  const metrics=await measure();assert.deepEqual(metrics.filter(m=>m.overflow),[],locale+' horizontal clipping');await page.screenshot({path:`output/localization/${locale}.png`});
  await page.locator('#book-guide').click();assert.ok(await page.locator('#guide-dialog').evaluate(e=>e.open));await page.locator('#close-guide').click();
