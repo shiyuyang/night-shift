@@ -1,0 +1,44 @@
+/* One 1280 × 768 coordinate space for all game text and hit targets. */
+#game-wrap #play-hud,.game-overlay-stage{position:absolute;inset:auto;left:var(--play-left,0);top:var(--play-top,0);width:1280px;height:768px;transform:scale(var(--game-ui-scale,1));transform-origin:top left;--game-ui-size:1.25;--hud-factor:var(--game-ui-size);pointer-events:none}
+.game-overlay-stage{z-index:42;direction:ltr}
+.game-overlay-stage>section{pointer-events:auto}
+#game-wrap #play-hud .screen-heading{top:6%;left:8%;right:8%;font-size:calc(12px * var(--game-ui-size))}
+#game-wrap #play-hud .screen-heading button{font-size:calc(12px * var(--game-ui-size));padding:calc(7px * var(--game-ui-size)) calc(10px * var(--game-ui-size))}
+#game-wrap #play-hud .status-panel{left:8%;right:auto;top:13%;bottom:auto;width:180px;max-width:30%;transform:scale(var(--game-ui-size));transform-origin:top left;padding:0;font-size:12px}
+#game-wrap #play-hud .status-panel .vital-row{grid-template-columns:62px 1fr}
+#game-wrap #play-hud .status-panel .vital-row:first-of-type{grid-template-columns:1fr}
+#game-wrap #play-hud .status-panel .vital-row>small{font-size:10px}
+#game-wrap #mission-hud{left:auto;right:8%;top:13%;width:160px;max-width:28%;transform:scale(var(--game-ui-size));transform-origin:top right;padding:0;font-size:12px}
+#game-wrap #receipt-message{left:auto;right:22%;top:45%;width:180px;max-width:27%;min-height:0;transform:scale(var(--game-ui-size));transform-origin:top right;padding:0;font-size:14px}
+#game-wrap #receipt-message .message-detail{font-size:12px}
+#game-wrap #receipt-message svg{width:22px;height:22px}
+#game-wrap #play-hud .field-belt{left:50%;top:auto;bottom:8%;transform:translateX(-50%) scale(var(--game-ui-size));transform-origin:bottom center}
+#game-wrap #play-hud .field-belt .item-slot{width:48px;min-height:48px;padding:10px 2px 2px;font-size:11px}
+#game-wrap #play-hud .field-belt .item-slot svg{width:24px;height:24px}
+#game-wrap #play-hud #game-message{left:50%;top:64%;bottom:auto;transform:translate(-50%,-50%) scale(var(--game-ui-size));transform-origin:center;max-width:min(460px,70%);max-height:none;padding:0;font-size:18px}
+#game-wrap .game-overlay-stage #tutorial-card{left:50%;top:22%;width:460px;max-width:80%;max-height:56%;transform:translateX(-50%) scale(var(--game-ui-size));transform-origin:top center;padding:0;font-size:16px;overflow:auto}
+#game-wrap .game-overlay-stage #tutorial-card h2{font-size:26px;margin:10px 0 14px}
+#game-wrap .game-overlay-stage #tutorial-card p{font-size:15px;margin:0 0 18px}
+#game-wrap .game-overlay-stage #tutorial-card button{font-size:14px}
+#game-wrap .game-overlay-stage #result-screen{padding:40px 90px}
+#game-wrap .game-overlay-stage #result-title{font-size:38px}
+#game-wrap .game-overlay-stage .result-stats b{font-size:28px}
+
+#game-wrap .game-overlay-stage #pause-menu{position:absolute;right:24px;top:65px;width:300px;max-width:90%;max-height:550px;transform:scale(var(--game-ui-size));transform-origin:top right;z-index:43}
+#game-wrap #mission-hud .minor-status{font-size:12px;gap:4px}
+#game-wrap .game-overlay-stage .result-document{width:700px;max-width:80%;max-height:80%;transform:scale(var(--game-ui-size));transform-origin:center;padding:12px 10px}
+#game-wrap .game-overlay-stage #result-title{margin:24px 0 28px;letter-spacing:3px}
+#game-wrap .game-overlay-stage .document-head,#game-wrap .game-overlay-stage .result-stats span,#game-wrap .game-overlay-stage #run-result p{font-size:12px}
+#game-wrap .game-overlay-stage #run-result h3,#game-wrap .game-overlay-stage .result-actions button{font-size:14px}
+#game-wrap .game-overlay-stage .result-stats{gap:24px;margin:28px 0 22px}
+#game-wrap .game-overlay-stage #run-result{margin-bottom:32px}
+#game-wrap .game-overlay-stage .result-actions{gap:12px 24px}
+
+/* Compact HUD marks need a larger boost than the tutorial copy. */
+#game-wrap #play-hud .screen-heading,#game-wrap #play-hud .status-panel,#game-wrap #mission-hud,#game-wrap #play-hud .field-belt{--game-ui-size:1.4}
+#game-wrap #play-hud .screen-heading{left:4%;right:4%}
+#game-wrap #play-hud .status-panel{left:4%}
+#game-wrap #mission-hud{right:4%}
+
+/* Keep instructional copy quieter than the peripheral HUD. */
+#game-wrap .game-overlay-stage #tutorial-card{--game-ui-size:1.1;max-height:63%}

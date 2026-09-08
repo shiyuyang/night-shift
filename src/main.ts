@@ -17,6 +17,7 @@ import './field-hud.css';
 import './result-screen.css';
 import './tutorial-ui.css';
 import './localization.css';
+import './ui/game-ui-scale.css';
 import {drawSurvey} from './ui/survey';
 import {fitDesk} from './ui/fit-desk';
 // Both cover variants share the same locale runtime.
@@ -54,6 +55,7 @@ ${DEV?`<aside class="interaction"><div class="panel-heading"><h2>${htmlMessage("
 // A missing optional font must not prevent entering the game.
 await document.fonts.load('12px '+canvasFont()).catch(error=>console.warn('Locale font unavailable',error));
 fitDesk($('#start-layer'),$('.desk-content'));
+const gameOverlay=document.createElement('div');gameOverlay.className='game-overlay-stage';$('#game-wrap').append(gameOverlay);gameOverlay.append($('#tutorial-card'),$('#result-screen'));
 const fieldBelt=document.createElement('div');fieldBelt.className='field-belt';fieldBelt.setAttribute('aria-label',msg("ui.quick-items"));$('#play-hud').append(fieldBelt);fieldBelt.append($('.inventory-hud'));
 const mission=document.createElement('section');mission.id='mission-hud';mission.setAttribute('aria-label',msg("ui.escape-supplies"));mission.innerHTML=`<small>${htmlMessage("ui.escape-preparations")}</small>`;mission.append($('.minor-status'),$('.key-slot'),$('#flashlight-toggle'));$('#play-hud').append(mission);
 $('.status-panel').insertAdjacentHTML('afterbegin',`<small class="monitor-label">${htmlMessage("ui.vital-signs")}<i aria-hidden="true"></i></small>`);
@@ -96,7 +98,7 @@ const game=bootGame({onReady(){$('#start').removeAttribute('disabled');},onMonit
 },onMessage(text){environmentMessage=text;renderMessage();},onHit(){$('#flash').classList.remove('hit');void $('#flash').offsetWidth;$('#flash').classList.add('hit');},onEnd(result){
  running=false;paused=false;selectedNight=result.night;$('#pause-menu').hidden=true;$('#pause').setAttribute('aria-expanded','false');$('#result-screen').hidden=false;$('#result-screen').dataset.outcome=result.won?'won':'lost';$('#game-wrap').classList.add('run-ended');$('#result-kicker').textContent=result.won?msg("ui.survivor-record-floor-cleared"):msg("ui.missing-person-record-no-response");$('#result-title').textContent=result.won?msg("ui.you-escaped-this-floor"):msg("ui.patrol-signal-lost");$('#run-result').hidden=false;$('#run-result').innerHTML=`<h3>${htmlMessage("ui.stage",{stage:result.night,area:result.map})}</h3><div class="result-stats"><span><b>${htmlMessage("result.seconds",{seconds:Math.floor(result.elapsed)})}</b>${htmlMessage("ui.patrol-duration")}</span><span><b>${Math.ceil(result.health)}</b>${htmlMessage("ui.health-remaining")}</span><span><b>${result.fuses} / 3</b>${htmlMessage("ui.fuses-040")}</span></div>${result.night>1?`<p>${htmlMessage("result.extras",{searches:result.rogue.cachesOpened,hides:result.rogue.hides})}</p>`:''}`;$('#next-night').hidden=!result.won;$('#next-night').textContent=msg("ui.enter-stage", {stage:result.night+1});$('#threat-screen').style.opacity='0';$('#flash').classList.remove('hit');ambience.setScene(-2,0,0);ambience.setRunning(true);$(result.won?'#next-night':'#result-retry').focus({preventScroll:true});
 }});
-function menu(open:boolean){if(teaching)return;$('#pause-menu').hidden=!open;$('#pause').setAttribute('aria-expanded',String(open));if(running){paused=open;game.setPaused(open);ambience.setRunning(!open);}if(open&&DEV)$('.workspace').classList.add('console-closed');}
+function menu(open:boolean){if(teaching)return;(running?gameOverlay:$('#game-wrap')).append($('#pause-menu'));$('#pause-menu').hidden=!open;$('#pause').setAttribute('aria-expanded',String(open));if(running){paused=open;game.setPaused(open);ambience.setRunning(!open);}if(open&&DEV)$('.workspace').classList.add('console-closed');}
 function enterAudio(){if(audioOn){ambience.setRunning(true);void ambience.setEnabled(true).catch(()=>toast(msg("ui.use-the-sound-button-in-the-menu")));}}
 function start(){giftQueue=[];if(!campaign.canPlay(selectedNight))return;document.body.dataset.ui='playing';applyMenuLanguage();$('#start-layer').classList.add('hidden');$('#result-screen').hidden=true;$('#game-wrap').classList.remove('run-ended');running=true;menu(false);ambience.beginRun(makeLevel(selectedNight).theme,selectedNight);game.startRun(selectedNight);enterAudio();}
 $('#flashlight-toggle').onclick=()=>game.toggleFlashlight();let signing=false;$('#start').onclick=()=>{if(signing)return;signing=true;enterAudio();$('.patrol-book').classList.add('signing');$('#file-stamp').textContent=t('menu.signed');setTimeout(()=>{signing=false;$('.patrol-book').classList.remove('signing');start();},420);};$('#result-retry').onclick=start;
