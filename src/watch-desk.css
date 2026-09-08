@@ -301,11 +301,35 @@ html[lang=zh-CN] .survey-frame span{font-family:PhotoNote,cursive;font-size:17px
  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;
 }
 .desk-yurei{
- position:absolute;left:65%;top:34%;width:14%;height:37%;opacity:0;
- background:url('/assets/desk-yurei-v1.webp') center/contain no-repeat;
- filter:brightness(.62) saturate(.45);image-rendering:auto;
+ position:absolute;left:62.68%;top:49.42%;height:11.7%;aspect-ratio:2/3;
+ transform:translate(-50%,-100%);opacity:0;
+ filter:brightness(var(--yurei-brightness,.43)) sepia(.5) hue-rotate(135deg) saturate(.42) blur(.35px);
+ image-rendering:auto;
 }
-@media(prefers-reduced-motion:reduce){.desk-lamp-falloff,.desk-apparition{display:none}}
+.desk-yurei::before{
+ content:'';position:absolute;inset:0;
+ background:url('/assets/desk-yurei-v1.webp') center/contain no-repeat;
+ /* Lose the hem in the floor darkness instead of outlining the entire cutout. */
+ mask-image:linear-gradient(#000e 0%,#000 18%,#000 65%,#000a 86%,transparent 100%);
+}
+.desk-yurei::after{
+ content:'';position:absolute;left:29%;bottom:0;width:42%;height:5%;
+ background:radial-gradient(ellipse,#020a0dcc,transparent 70%);
+}
+.desk-signal{
+ position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;opacity:0;
+ clip-path:inset(5% 0 13% 45.5%);
+}
+.desk-signal-band{
+ position:absolute;inset:0;
+ background:url('/assets/watch-desk-cold-night-v1.webp') center/100% 100% no-repeat;
+}
+.desk-signal::after{
+ content:'';position:absolute;inset:0;opacity:.18;
+ background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxNjAnIGhlaWdodD0nOTYnPjxmaWx0ZXIgaWQ9J24nPjxmZVR1cmJ1bGVuY2UgdHlwZT0nZnJhY3RhbE5vaXNlJyBiYXNlRnJlcXVlbmN5PScuODInIG51bU9jdGF2ZXM9JzInIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz48L2ZpbHRlcj48cGF0aCBmaWxsPScjYTBiM2I2JyBmaWx0ZXI9J3VybCgjbiknIGQ9J00wIDBoMTYwdjk2SDB6Jy8+PC9zdmc+"),repeating-linear-gradient(0deg,transparent 0 3px,#06121688 3px 4px);
+ background-size:160px 96px,100% 100%;
+}
+@media(prefers-reduced-motion:reduce){.desk-lamp-falloff,.desk-apparition,.desk-signal{display:none}}
 
 /* The cover is a fixed composition; only its outer stage scales. */
 .desk-stage-host{position:fixed;inset:0;z-index:1000;background:#030607;overflow:hidden}
