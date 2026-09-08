@@ -11,7 +11,6 @@ if r2:
  current=json.loads(subprocess.check_output(['node','scripts/r2-manifest.mjs'],cwd=root,text=True))
  assert current['version']==r2['version'] and current['files']==r2['files'],'Media changed; run npm run assets:publish before deploying'
 run(['npm','run','test:browser:deployment'])
-run(['npm','run','test:browser:deployment'],env={**build_env,'TEST_MP3_FALLBACK':'1'})
 release=datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
 revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
 dirty=bool(subprocess.check_output(['git','status','--porcelain'],cwd=root,text=True).strip())

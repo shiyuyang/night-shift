@@ -7,7 +7,7 @@ const read=p=>JSON.parse(readFileSync(new URL('../'+p,import.meta.url)));
 const packs=read('game/audio-packs.json'),effects=read('game/audio-sfx.json');
 const bytes=file=>readFileSync(new URL('../public'+file,import.meta.url));
 test('every packed slice is byte-identical to the original complete encoded sound',()=>{
- for(const [codec,key] of [['opus','opusFile'],['mp3','file']]){
+ for(const [codec,key] of [['opus','opusFile']]){
   const pack=packs[codec],data=bytes(pack.file);let end=0;
   assert.equal(data.length,pack.bytes);assert.equal(createHash('sha256').update(data).digest('hex'),pack.sha256);
   assert.deepEqual(Object.keys(pack.entries).sort(),effects.map(e=>e.id).sort());
@@ -16,14 +16,14 @@ test('every packed slice is byte-identical to the original complete encoded soun
  }
  for(const track of read('game/music.json'))assert.deepEqual(bytes(track.opusFile.replace(/\.opus$/,'.ogg')),bytes(track.opusFile));
 });
-test('one successful pack request supplies every effect; decoder failure falls back to one MP3 pack',async()=>{
+test('one Opus pack supplies all effects; decode errors do not request a different codec',async()=>{
  const original=globalThis.fetch,calls=[];
  try{
   globalThis.fetch=async file=>{calls.push(file);return new Response(bytes(file));};
   let rejectOpus=false;
   const context={async decodeAudioData(data){if(rejectOpus&&Buffer.from(data).subarray(0,4).toString()==='OggS')throw Error('unsupported codec');return {duration:1};}};
   assert.equal((await decodeSoundEffects(context)).size,effects.length);assert.deepEqual(calls,[packs.opus.file]);
-  calls.length=0;rejectOpus=true;assert.equal((await decodeSoundEffects(context)).size,effects.length);assert.deepEqual(calls,[packs.opus.file,packs.mp3.file]);
+  calls.length=0;rejectOpus=true;await assert.rejects(decodeSoundEffects(context),/unsupported codec/);assert.deepEqual(calls,[packs.opus.file]);
  }finally{globalThis.fetch=original;}
 });
 test('corruption is rejected before decoding, and a failed request can be retried',async()=>{

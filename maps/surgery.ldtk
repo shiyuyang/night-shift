@@ -1513,6 +1513,33 @@
         "showName": true,
         "tags": [],
         "tileOpacity": 1
+      },
+      {
+        "color": "#8D9A84",
+        "height": 16,
+        "identifier": "MonsterEntry",
+        "nineSliceBorders": [],
+        "pivotX": 0,
+        "pivotY": 0,
+        "tileRenderMode": "Cover",
+        "uid": 156,
+        "width": 16,
+        "allowOutOfBounds": false,
+        "exportToToc": false,
+        "fieldDefs": [],
+        "fillOpacity": 0.35,
+        "hollow": false,
+        "keepAspectRatio": false,
+        "limitBehavior": "DiscardOldOnes",
+        "limitScope": "PerLayer",
+        "lineOpacity": 1,
+        "maxCount": 0,
+        "renderMode": "Rectangle",
+        "resizableX": true,
+        "resizableY": true,
+        "showName": true,
+        "tags": [],
+        "tileOpacity": 1
       }
     ],
     "enums": [],
@@ -2982,6 +3009,182 @@
                 675
               ],
               "width": 24
+            },
+            {
+              "__grid": [
+                176,
+                230
+              ],
+              "__identifier": "MonsterEntry",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 156,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "41e7eecf-390d-4665-bc23-7af9fcdf93e7",
+              "px": [
+                176,
+                230
+              ],
+              "width": 16
+            },
+            {
+              "__grid": [
+                176,
+                574
+              ],
+              "__identifier": "MonsterEntry",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 156,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "f78b16bf-1757-4218-a7e8-1557cb564c90",
+              "px": [
+                176,
+                574
+              ],
+              "width": 16
+            },
+            {
+              "__grid": [
+                480,
+                230
+              ],
+              "__identifier": "MonsterEntry",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 156,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "90d4dec2-a98a-4b77-92eb-c2355dd4e169",
+              "px": [
+                480,
+                230
+              ],
+              "width": 16
+            },
+            {
+              "__grid": [
+                480,
+                574
+              ],
+              "__identifier": "MonsterEntry",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 156,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "414c0679-9a19-4a6f-ab26-5d79048083e7",
+              "px": [
+                480,
+                574
+              ],
+              "width": 16
+            },
+            {
+              "__grid": [
+                800,
+                230
+              ],
+              "__identifier": "MonsterEntry",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 156,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "1f0b17b6-0524-45c1-b882-a317953682e7",
+              "px": [
+                800,
+                230
+              ],
+              "width": 16
+            },
+            {
+              "__grid": [
+                800,
+                574
+              ],
+              "__identifier": "MonsterEntry",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 156,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "6233a735-57a4-44a0-8ee2-e84a025c0469",
+              "px": [
+                800,
+                574
+              ],
+              "width": 16
+            },
+            {
+              "__grid": [
+                1104,
+                342
+              ],
+              "__identifier": "MonsterEntry",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 156,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "23e020b8-0237-4dc3-8d27-c9bfc15010da",
+              "px": [
+                1104,
+                342
+              ],
+              "width": 16
+            },
+            {
+              "__grid": [
+                1112,
+                574
+              ],
+              "__identifier": "MonsterEntry",
+              "__pivot": [
+                0,
+                0
+              ],
+              "__smartColor": "#8D9A84",
+              "__tags": [],
+              "defUid": 156,
+              "fieldInstances": [],
+              "height": 16,
+              "iid": "22f5ad69-a4ee-4694-ad11-119d1181b27a",
+              "px": [
+                1112,
+                574
+              ],
+              "width": 16
             }
           ],
           "gridTiles": [],

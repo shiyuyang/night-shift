@@ -102,7 +102,7 @@ export class Ambience {
   private async loadMusic() {
     const ctx = this.context!;
     const [buffers,effectBuffers] = await Promise.all([
-      Promise.all(music.map(track=>decodeAudioAsset(ctx,track.file,track.opusFile.replace(/\.opus$/,'.ogg')))),
+      Promise.all(music.map(track=>decodeAudioAsset(ctx,track.opusFile.replace(/\.opus$/,'.ogg')))),
       decodeSoundEffects(ctx)
     ]);
     this.effects=effectBuffers;

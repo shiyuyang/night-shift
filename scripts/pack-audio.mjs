@@ -5,7 +5,7 @@ const root=new URL('../',import.meta.url);
 const read=p=>JSON.parse(readFileSync(new URL(p,root),'utf8'));
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const sounds=read('game/audio-sfx.json'),packs={};
-for(const [codec,key] of [['opus','opusFile'],['mp3','file']]){
+for(const [codec,key] of [['opus','opusFile']]){
  const chunks=[],entries={};let offset=0;
  for(const sound of sounds){
   if(entries[sound.id])throw Error('Duplicate sound: '+sound.id);

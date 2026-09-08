@@ -20,4 +20,4 @@
 
 实心印章源图仍有浅色底，页面用 SVG 颜色矩阵移除，矩阵保留原有透明度，避免黑边。状态文字保持 HTML 渲染；按钮正常态空心，按下态实心。
 
-通过 `npm run assets:publish` 上传不可变 R2 版本并公开 GET 核验 SHA-256，再以 `npm run deploy:cloudflare` 发布当前分支。部署检查覆盖实际闪烁透明度变化、开始巡查、媒体解码和正常/MP3 回退音频。
+通过 `npm run assets:publish` 上传不可变 R2 版本并公开 GET 核验 SHA-256，再以 `npm run deploy:cloudflare` 发布当前分支。部署检查覆盖实际闪烁透明度变化、开始巡查、媒体解码和Chrome Opus 音频（不再保留 MP3 回退）。

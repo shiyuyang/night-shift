@@ -5,11 +5,12 @@ export const weeperRules=rules.weeper;
 const riseThreshold=.75;
 export type WeeperPhase='idle'|'alert'|'warning'|'chasing'|'dash'|'stunned'|'returning';
 export type WeeperEvent='cry'|'warning'|'dash'|'suppressed'|'hit'|'quiet';
-export interface WeeperInput {player:Position;hidden:boolean;angle:number;light:boolean;sprinting:boolean;noise:boolean;solids:Box[];architecture:Box[];bounds:Box;immune:boolean;flash?:boolean;}
+export interface WeeperInput {player:Position;hidden:boolean;angle:number;light:boolean;lightRange?:number;sprinting:boolean;noise:boolean;solids:Box[];architecture:Box[];bounds:Box;immune:boolean;flash?:boolean;}
 /** One deterministic patient. No damage can occur before the flash decision. */
 export class Weeper {
+ roaming=false;private roamPoints:Position[];private roamWait=7;private roamIndex=0;private roamGoal?:Position;private roamRoute:Position[]=[];
  position:Position;home:Position;phase:WeeperPhase='idle';anger=0;clock=0;angle=0;elapsed=0;cryAt=0;grace=1;route:Position[]=[];routeClock=0;watchful=0;hushed=false;noticed=false;noticeTime=0;calmWait=0;
- constructor(home:Position){this.home={...home};this.position={...home};}
+ constructor(home:Position,roamPoints:Position[]=[]){this.roamPoints=roamPoints;this.home={...home};this.position={...home};}
  get dangerous(){return this.phase==='warning'||this.phase==='chasing'||this.phase==='dash'||this.phase==='alert'&&this.anger>=riseThreshold;}
  get awake(){return this.dangerous||this.phase==='returning';}
  flash(player:Position,solids:Box[]):boolean{
@@ -24,23 +25,28 @@ export class Weeper {
   const visible=!input.hidden&&clearContact({x:input.player.x,y:input.player.y+10},{x:this.position.x,y:this.position.y+10},input.solids);
   if(this.phase==='idle'||this.phase==='alert'){
    // Proximity tells are independent of the attack meter: walking quietly still gets a reaction.
-   this.noticed=visible&&distance<(this.noticed?170:150);
-   this.noticeTime=this.noticed?this.noticeTime+dt:0;
    const toward=Math.atan2(this.position.y-input.player.y,this.position.x-input.player.x),diff=Math.abs(Math.atan2(Math.sin(toward-input.angle),Math.cos(toward-input.angle)));
+   const lit=visible&&input.light&&distance<(input.lightRange??250)*.96&&diff<.62;
+   this.noticed=visible&&(distance<(this.noticed?170:150)||lit);
+   this.noticeTime=this.noticed?this.noticeTime+dt:0;
    const close=visible&&distance<weeperRules.alertRadius&&this.grace===0;
    this.watchful=Math.max(0,this.watchful-dt);
-   const disturbance=close&&(this.watchful>0||input.light&&diff<.62||input.sprinting||input.noise||distance<50);
+   const disturbance=this.grace===0&&(lit||close&&(this.watchful>0||input.sprinting||input.noise||distance<50));
    // Frame 5 starts standing: from here the attack builds even after all stimuli disappear.
-   if(disturbance||this.anger>=riseThreshold){this.calmWait=weeperRules.calmDelay;this.anger=Math.min(1,this.anger+dt/weeperRules.alertSeconds);}
+   if(disturbance||this.anger>=riseThreshold){this.calmWait=weeperRules.calmDelay;this.anger=Math.min(1,this.anger+dt/(weeperRules.alertSeconds*(distance>weeperRules.alertRadius&&this.anger<riseThreshold?2:1)));}
    else{const cooling=Math.max(0,dt-this.calmWait);this.calmWait=Math.max(0,this.calmWait-dt);this.anger=Math.max(0,this.anger-cooling*weeperRules.calmRate);}
    this.phase=this.anger>0?'alert':'idle';
    if((this.noticed||this.anger>=.3)&&!this.hushed){this.hushed=true;events.push('quiet');}
    if(!this.noticed&&this.anger===0&&this.watchful===0&&this.hushed){this.hushed=false;this.cryAt=this.elapsed+3;}
    if(visible&&(this.noticed||this.phase==='alert'))this.angle=Math.atan2(input.player.y-this.position.y,input.player.x-this.position.x);
    if(close&&distance<weeperRules.touchRadius||this.anger>=1){this.phase='warning';this.clock=weeperRules.warningSeconds;events.push('quiet','warning');}
-   else if(!this.hushed&&distance<290&&this.elapsed>=this.cryAt){this.cryAt=this.elapsed+8.5+Math.floor(this.elapsed)%3;events.push('cry');}
+   const wasRoaming=this.roaming;this.roaming=false;if(this.phase==='idle'&&!this.noticed)this.roam(dt,input);
+   if(this.roaming&&!wasRoaming)events.push('quiet');
+   if(wasRoaming&&!this.roaming)this.cryAt=this.elapsed;
+   if(this.phase!=='warning'&&!this.roaming&&!this.hushed&&distance<290&&this.elapsed>=this.cryAt){this.cryAt=this.elapsed+8.5+Math.floor(this.elapsed)%3;events.push('cry');}
    return events;
   }
+  this.roaming=false;
   if(this.phase==='warning'){
    this.clock=Math.max(0,this.clock-dt);
    if(this.clock===0){
@@ -81,6 +87,24 @@ export class Weeper {
   const target=this.route[0]??this.home,a=Math.atan2(target.y-this.position.y,target.x-this.position.x);this.angle=a;
   const movement=followPatrolPath(this.position,this.route,48*dt,input.architecture);this.position=movement.position;if(movement.blocked)this.routeClock=0;return events;
  }
+ private roam(dt:number,input:WeeperInput){
+  if(!this.roamPoints.length)return;
+  if(this.roamWait>0){this.roamWait=Math.max(0,this.roamWait-dt);return;}
+  if(!this.roamGoal){
+   for(let i=0;i<this.roamPoints.length;i++){
+    const goal=this.roamPoints[this.roamIndex++%this.roamPoints.length];
+    if(Math.hypot(goal.x-this.position.x,goal.y-this.position.y)<100||Math.hypot(goal.x-input.player.x,goal.y-input.player.y)<100)continue;
+    const route=patrolPath(this.position,goal,input.architecture,input.bounds,monsterFeetAt),end=route.at(-1);
+    if(!end||Math.hypot(end.x-goal.x,end.y-goal.y)>10)continue;
+    this.roamGoal=goal;this.roamRoute=route;break;
+   }
+   if(!this.roamGoal){this.roamWait=5;return;}
+  }
+  const before=this.position,movement=followPatrolPath(before,this.roamRoute,32*dt,input.architecture,monsterFeetAt);this.position=movement.position;
+  this.roaming=Math.hypot(before.x-this.position.x,before.y-this.position.y)>.001;
+  if(this.roaming)this.angle=Math.atan2(this.position.y-before.y,this.position.x-before.x);
+  if(movement.blocked||Math.hypot(this.position.x-this.roamGoal.x,this.position.y-this.roamGoal.y)<6){this.roamGoal=undefined;this.roamRoute=[];this.roamWait=6+(this.roamIndex%3)*2;this.roaming=false;}
+ }
  private chase(pause=0){this.phase='chasing';this.clock=pause;this.route=[];this.routeClock=0;}
- get frame(){if(this.phase==='idle')return this.noticed?(this.noticeTime<.2?2:4):Math.floor(this.elapsed*2)%4;if(this.phase==='alert')return this.anger<riseThreshold?(this.noticeTime<.2?2:4):5;if(this.phase==='warning')return this.clock>weeperRules.warningSeconds*.8?5:this.clock>weeperRules.warningSeconds*.35?6:7;if(this.phase==='chasing')return this.clock>0?14:8+Math.floor(this.elapsed*10)%4;if(this.phase==='dash')return 8+Math.floor(this.elapsed*12)%4;if(this.phase==='stunned')return this.clock>4?12:14;return 8+Math.floor(this.elapsed*4)%2;}
+ get frame(){if(this.phase==='idle'&&this.roaming)return 8+Math.floor(this.elapsed*4)%4;if(this.phase==='idle')return this.noticed?(this.noticeTime<.2?2:4):Math.floor(this.elapsed*2)%4;if(this.phase==='alert')return this.anger<riseThreshold?(this.noticeTime<.2?2:4):5;if(this.phase==='warning')return this.clock>weeperRules.warningSeconds*.8?5:this.clock>weeperRules.warningSeconds*.35?6:7;if(this.phase==='chasing')return this.clock>0?14:8+Math.floor(this.elapsed*10)%4;if(this.phase==='dash')return 8+Math.floor(this.elapsed*12)%4;if(this.phase==='stunned')return this.clock>4?12:14;return 8+Math.floor(this.elapsed*4)%2;}
 }

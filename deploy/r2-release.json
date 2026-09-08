@@ -4,7 +4,7 @@
   "domain": "night-shift-assets.liveinteractivegame.com",
   "zoneId": "30badb66445e606e10540be49d75e584",
   "prefix": "games/night-shift",
-  "version": "07ff18cda112368c",
+  "version": "580806860ba99927",
   "files": [
     {
       "file": "assets/archive-plant-v1.q95.webp",
@@ -132,19 +132,9 @@
       "sha256": "1f955f252a8522041cad1bea30cdff79235d7f4b5ee3b56d2585905f2fc66744"
     },
     {
-      "file": "audio/menu-theme-v1.mp3",
-      "bytes": 768252,
-      "sha256": "f976424c49129f2ce7e54fac46381e096bf530b8e5c294ed8c0eb2680dd073de"
-    },
-    {
       "file": "audio/menu-theme-v1.ogg",
       "bytes": 447999,
       "sha256": "b276915b2bcc069b2c0bf9b5f83761aa24c971429199c573b7f122bdf69805ed"
-    },
-    {
-      "file": "audio/plant-alt-theme-v1.mp3",
-      "bytes": 769087,
-      "sha256": "0f4d443ede834b246d2f93033c2dc81040d9acbe60d3f7c36f74f4938b9680a7"
     },
     {
       "file": "audio/plant-alt-theme-v1.ogg",
@@ -152,19 +142,9 @@
       "sha256": "e81121f37dd59c39ef0351ecc26e4ef10458a494d33bf487d13a09d6424604b5"
     },
     {
-      "file": "audio/plant-theme-v1.mp3",
-      "bytes": 641192,
-      "sha256": "cce9dd37a46619067d2c3f338204f2de301ee8913c9f3c887e15e7067efa6b50"
-    },
-    {
       "file": "audio/plant-theme-v1.ogg",
       "bytes": 333182,
       "sha256": "5285ccd6dd1916cbff273126062b80419e966c3674497585679dd53a6bb967a6"
-    },
-    {
-      "file": "audio/power-theme-v1.mp3",
-      "bytes": 129192,
-      "sha256": "7c11b56e7c837681bf384dbcbfd23fbcdbd3fe00809cb04f52e4772178c56ca4"
     },
     {
       "file": "audio/power-theme-v1.ogg",
@@ -172,19 +152,9 @@
       "sha256": "cc36e7250f5cd8b12aa620aeef236194cf35fcd7a0094ddc9dee394fa9b9742c"
     },
     {
-      "file": "audio/sfx-mp3-0822ac8633ba188a.bin",
-      "bytes": 381529,
-      "sha256": "0822ac8633ba188a33dde707793b2284bff6cb5c43b962b05bea985758d13468"
-    },
-    {
       "file": "audio/sfx-opus-dceb220d0bcb6bc7.bin",
       "bytes": 111447,
       "sha256": "dceb220d0bcb6bc7f1e4b7edb21af304e48d9826ffa4936e562e4ed357586280"
-    },
-    {
-      "file": "audio/ward-alt-theme-v1.mp3",
-      "bytes": 767834,
-      "sha256": "fb18b4e9eff6ed86dea8b178e25f01471d39b4bb109114951d251961b6a9781c"
     },
     {
       "file": "audio/ward-alt-theme-v1.ogg",
@@ -192,19 +162,9 @@
       "sha256": "9f486769ac8e42e87cf0d3716a19fcd755f7401cde7417ad0a30a62a0b17218d"
     },
     {
-      "file": "audio/ward-exploration-v3.mp3",
-      "bytes": 641194,
-      "sha256": "39f533a92852588c0070096bb756d6cc611184cc62452bcc29a786ace0e4bc36"
-    },
-    {
       "file": "audio/ward-exploration-v3.ogg",
       "bytes": 328591,
       "sha256": "c15c392d0950ac5653ffaa2e480cd058d112f5fb9013ed6ab5d1d9c866df0294"
-    },
-    {
-      "file": "audio/ward-pursuit-v3.mp3",
-      "bytes": 384149,
-      "sha256": "27870c1169ba354230293b3e475740ab7738f5c5f10441a826f71fc33bdd731b"
     },
     {
       "file": "audio/ward-pursuit-v3.ogg",
@@ -212,19 +172,9 @@
       "sha256": "8e43a29924af56527a0bf48fbe73488a90739ccb43b7217c3c52d375c70c5ed8"
     },
     {
-      "file": "audio/warehouse-alt-theme-v1.mp3",
-      "bytes": 768670,
-      "sha256": "2899a5964d3a61fc8d82d3bcb69a57e28aaca52c7824c992708c059368bea03f"
-    },
-    {
       "file": "audio/warehouse-alt-theme-v1.ogg",
       "bytes": 404221,
       "sha256": "4312fad5ee4a2744ac15c3e50b1f5e24c664e4b7be2f001bbb2a5ddde410142a"
-    },
-    {
-      "file": "audio/warehouse-theme-v1.mp3",
-      "bytes": 641192,
-      "sha256": "73c482573fe7c1aa99dde0bd450b75233ace8e1e49280b7c87aab9a3eee343fc"
     },
     {
       "file": "audio/warehouse-theme-v1.ogg",
@@ -357,6 +307,6 @@
       "sha256": "d113cd651f212760397282b77588d331a6079268e539375b784992fb97ecd320"
     }
   ],
-  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/07ff18cda112368c/",
-  "verifiedAt": "2026-09-08T14:11:05.898Z"
+  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/580806860ba99927/",
+  "verifiedAt": "2026-09-08T15:07:38.661Z"
 }

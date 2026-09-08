@@ -555,6 +555,62 @@
         "height": 204
       },
       {
+        "id": "MonsterEntry",
+        "x": 180,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 180,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 476,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 476,
+        "y": 606,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 796,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 796,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 1100,
+        "y": 366,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 1100,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
         "id": "Key_A",
         "x": 300,
         "y": 620,
@@ -1130,6 +1186,62 @@
         "height": 120
       },
       {
+        "id": "MonsterEntry",
+        "x": 176,
+        "y": 246,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 176,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 488,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 488,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 800,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 800,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 1104,
+        "y": 318,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 1104,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
         "id": "Key_A",
         "x": 225,
         "y": 245,
@@ -1682,6 +1794,62 @@
         "y": 480,
         "width": 160,
         "height": 100
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 176,
+        "y": 230,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 176,
+        "y": 574,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 480,
+        "y": 214,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 480,
+        "y": 582,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 800,
+        "y": 214,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 800,
+        "y": 582,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 1104,
+        "y": 326,
+        "width": 8,
+        "height": 8
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 1096,
+        "y": 574,
+        "width": 8,
+        "height": 8
       },
       {
         "id": "Key_A",
@@ -2262,6 +2430,62 @@
         "height": 24
       },
       {
+        "id": "MonsterEntry",
+        "x": 176,
+        "y": 214,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 176,
+        "y": 590,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 480,
+        "y": 214,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 480,
+        "y": 574,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 800,
+        "y": 214,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 800,
+        "y": 558,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 1104,
+        "y": 358,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 1104,
+        "y": 590,
+        "width": 16,
+        "height": 16
+      },
+      {
         "id": "Key_A",
         "x": 250,
         "y": 610,
@@ -2824,6 +3048,62 @@
         "y": 675,
         "width": 24,
         "height": 24
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 176,
+        "y": 230,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 176,
+        "y": 574,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 480,
+        "y": 230,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 480,
+        "y": 574,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 800,
+        "y": 230,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 800,
+        "y": 574,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 1104,
+        "y": 342,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 1112,
+        "y": 574,
+        "width": 16,
+        "height": 16
       },
       {
         "id": "Key_A",
@@ -3416,6 +3696,62 @@
         "y": 670,
         "width": 24,
         "height": 24
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 176,
+        "y": 230,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 176,
+        "y": 574,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 480,
+        "y": 230,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 480,
+        "y": 574,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 800,
+        "y": 230,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 800,
+        "y": 574,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 984,
+        "y": 230,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 1104,
+        "y": 574,
+        "width": 16,
+        "height": 16
       },
       {
         "id": "Key_A",
@@ -4132,6 +4468,62 @@
         "y": 675,
         "width": 24,
         "height": 24
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 184,
+        "y": 226,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 184,
+        "y": 570,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 480,
+        "y": 234,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 480,
+        "y": 570,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 800,
+        "y": 234,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 800,
+        "y": 570,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 1104,
+        "y": 314,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "id": "MonsterEntry",
+        "x": 1104,
+        "y": 578,
+        "width": 16,
+        "height": 16
       },
       {
         "id": "Key_A",

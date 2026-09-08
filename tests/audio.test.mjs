@@ -21,12 +21,12 @@ test('music changes by scene and power playback seeks correctly after pause or m
  a.setScene(0,0,0);assert.ok(sources.at(-1).stopped);assert.equal(a.powerVoice,undefined);
 });
 
-test('Opus delivery retries MP3 after a decoder failure without fetching both on success',async()=>{
+test('Opus delivery reports decode failure without requesting another codec',async()=>{
  const {decodeAudioAsset}=await import('../src/runtime/audio-asset.ts'),original=globalThis.fetch,calls=[];
  try{globalThis.fetch=async url=>{calls.push(url);return {ok:true,arrayBuffer:async()=>new Uint8Array([url.endsWith('.opus')?1:2]).buffer};};
  const ctx={async decodeAudioData(bytes){if(new Uint8Array(bytes)[0]===1)throw Error('unsupported');return {duration:8};}};
- assert.equal((await decodeAudioAsset(ctx,'/test.mp3','/test.opus')).duration,8);assert.deepEqual(calls,['/test.opus','/test.mp3']);calls.length=0;
- await decodeAudioAsset({async decodeAudioData(){return {duration:8};}},'/test.mp3','/test.opus');assert.deepEqual(calls,['/test.opus']);
+ await assert.rejects(decodeAudioAsset(ctx,'/test.opus'),/unsupported/);assert.deepEqual(calls,['/test.opus']);calls.length=0;
+ await decodeAudioAsset({async decodeAudioData(){return {duration:8};}},'/test.opus');assert.deepEqual(calls,['/test.opus']);
  }finally{globalThis.fetch=original;}
 });
 

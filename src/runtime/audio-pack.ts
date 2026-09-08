@@ -2,7 +2,7 @@ import packs from '../../game/audio-packs.json' with {type:'json'};
 import {assetUrl} from './asset-url.ts';
 interface Pack {file:string;bytes:number;sha256:string;entries:Record<string,{offset:number;length:number}>;}
 /** Verify the entire transport before slicing; failed loads remain retryable. */
-export async function decodeSoundEffects(context:Pick<AudioContext,'decodeAudioData'>,variants:Pack[]=[packs.opus,packs.mp3]) {
+export async function decodeSoundEffects(context:Pick<AudioContext,'decodeAudioData'>,variants:Pack[]=[packs.opus]) {
  let failure:unknown;
  for(const pack of variants){
   try{

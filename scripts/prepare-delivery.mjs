@@ -11,11 +11,11 @@ export function deliveryFiles() {
   const sounds = read('game/music.json');
   const packs = read('game/audio-packs.json');
   const files = [...config.images.map(i => i.file), ...config.staticFiles,
-    ...sounds.flatMap(s => [s.file, s.opusFile.replace(/\.opus$/,'.ogg')]),packs.opus.file,packs.mp3.file];
+    ...sounds.map(s => s.opusFile.replace(/\.opus$/,'.ogg')),packs.opus.file];
   for (const file of files) {
     if (!file || !/^\/(assets|audio|fonts)\/[\w./-]+$/.test(file) || file.includes('..'))
       throw Error('Invalid delivery file: ' + file);
-    if (!/\.(webp|ogg|mp3|bin|woff2|txt)$/.test(file))
+    if (!/\.(webp|ogg|bin|woff2|txt)$/.test(file))
       throw Error('Source or unsupported file cannot be published: ' + file);
   }
   return [...new Set(files.map(f => f.slice(1)))].sort();

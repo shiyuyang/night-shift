@@ -554,6 +554,62 @@
       "height": 204
     },
     {
+      "id": "MonsterEntry",
+      "x": 180,
+      "y": 230,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "MonsterEntry",
+      "x": 180,
+      "y": 574,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "MonsterEntry",
+      "x": 476,
+      "y": 230,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "MonsterEntry",
+      "x": 476,
+      "y": 606,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "MonsterEntry",
+      "x": 796,
+      "y": 230,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "MonsterEntry",
+      "x": 796,
+      "y": 574,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "MonsterEntry",
+      "x": 1100,
+      "y": 366,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "MonsterEntry",
+      "x": 1100,
+      "y": 574,
+      "width": 8,
+      "height": 8
+    },
+    {
       "id": "Key_A",
       "x": 300,
       "y": 620,
