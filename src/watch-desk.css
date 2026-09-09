@@ -340,3 +340,11 @@ html[lang=zh-CN] .survey-frame span{font-family:PhotoNote,cursive;font-size:17px
 /* Isolate cover rows from viewport-based gameplay styles. */
 #start-layer .night-select button{font:12px/1.4 NightPixel,monospace;flex:none;min-width:0;gap:0 9px}
 #start-layer #file-note{min-height:3.3em}
+
+/* A secondary dated entry beneath the night title. */
+#start-layer .archive-sheet #file-date{font-size:10px;line-height:1.4;color:#59604a;margin:0 0 7px}
+
+/* Keep the night label and location on one ledger row. */
+#start-layer .night-select button{grid-template-columns:max-content minmax(0,1fr);align-items:center}
+#start-layer .night-select button .stage-number{grid-row:1;font:12px/1.4 NightPixel,monospace;white-space:nowrap}
+#start-layer .night-select button b{grid-column:2;grid-row:1;font-size:12px;line-height:1.4;white-space:nowrap;overflow-wrap:normal}

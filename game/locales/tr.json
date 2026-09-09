@@ -339,5 +339,8 @@
   "gift.more": "{count, number} tane daha",
   "gift.remaining": "{seconds, number} saniye kaldı",
   "gift.reserve": "Yedek güç %{amount, number}",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "{night, number}. Gece · {area}",
+  "menu.night": "{night, number}. Gece",
+  "menu.shift-date": "Nöbet tarihi: {date} · {weekday, select, d0 {Paz} d1 {Pzt} d2 {Sal} d3 {Çar} d4 {Per} d5 {Cum} d6 {Cmt} other {}}"
 }

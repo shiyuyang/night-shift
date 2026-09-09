@@ -79,6 +79,7 @@ export class Ambience {
     source.start(ctx.currentTime, offset);
   }
   private volume = .42;
+  private coverStop=()=>{};
   enabled = false;
   onStatus: (status: string) => void = () => {};
   async setEnabled(enabled: boolean) {
@@ -138,7 +139,7 @@ export class Ambience {
       layer.nextStart = end-fade;
     }
   }
-  setVolume(value: number) { this.volume = Math.max(0,Math.min(1,value)); this.setRunning(this.running); }
+  setVolume(value: number) { this.volume = Math.max(0,Math.min(1,value)); if(this.volume===0)this.coverStop();this.setRunning(this.running); }
   setTension(value: number) { this.tension = Math.max(0,Math.min(1,value)); this.mix(); }
   private mix() {
     if (!this.context) return;
@@ -170,9 +171,31 @@ export class Ambience {
   }
   setRunning(running: boolean) {
     this.running = running;
+    if(!running||!this.enabled)this.coverStop();
     if(!running){for(const voice of this.patientVoices)voice.stop();this.patientVoices.clear();this.patientWarnings.clear();this.cries.clear();}
     this.updateMusicDucking();this.syncPower();
     if (this.context && this.master) this.master.gain.setTargetAtTime(this.enabled && running ? this.volume : 0,this.context.currentTime,.12);
+  }
+  /** A restrained fragment of the existing electrical stinger, scheduled with the cover image. */
+  coverApparition(delaySeconds:number,depth:number):()=>void {
+    this.coverStop();
+    const ctx=this.context,buffer=this.effects.get('shade-contact');
+    if(!this.enabled||!this.running||this.volume===0||!ctx||ctx.state!=='running'||!this.master||!buffer)return ()=>{};
+    const source=ctx.createBufferSource(),gain=ctx.createGain(),pan=ctx.createStereoPanner();
+    source.buffer=buffer;
+    const start=ctx.currentTime+Math.max(0,delaySeconds),duration=Math.min(.55,buffer.duration);
+    const strength=.14+Math.max(0,Math.min(3,depth))*.045;
+    pan.pan.value=.22;
+    gain.gain.setValueAtTime(0,start);
+    gain.gain.linearRampToValueAtTime(strength,start+.006);
+    gain.gain.setValueAtTime(strength,start+Math.min(.16,duration/2));
+    gain.gain.linearRampToValueAtTime(0,start+duration);
+    source.connect(gain).connect(pan).connect(this.master);
+    source.start(start);source.stop(start+duration);
+    let ended=false;
+    source.onended=()=>{ended=true;source.disconnect();gain.disconnect();pan.disconnect();};
+    this.coverStop=()=>{if(!ended){ended=true;gain.gain.cancelScheduledValues(ctx.currentTime);gain.gain.setValueAtTime(0,ctx.currentTime);source.stop();}};
+    return this.coverStop;
   }
   cue(kind: string, pan = 0, volume = 1) {
     if(kind==='patient-stop'){for(const voice of this.patientVoices)voice.stop();this.patientVoices.clear();this.patientWarnings.clear();this.cries.clear();this.updateMusicDucking();return;}
@@ -189,5 +212,5 @@ export class Ambience {
     if(this.voices.size>=12){const oldest=this.voices.values().next().value;oldest?.stop();if(oldest)this.voices.delete(oldest);}
     const ctx=this.context,source=ctx.createBufferSource(),gain=ctx.createGain(),stereo=ctx.createStereoPanner();source.buffer=buffer;source.playbackRate.value=kind==='step'?.96+Math.random()*.08:1;gain.gain.value=definition.gain*Math.max(0,Math.min(1,volume));stereo.pan.value=Math.max(-1,Math.min(1,pan));source.connect(gain).connect(stereo).connect(this.master);this.voices.add(source);if(kind.startsWith('patient-')){this.patientVoices.add(source);if(kind==='patient-cry')this.cries.set(source,{gain,stereo});else this.patientWarnings.add(source);this.updateMusicDucking();if(kind==='patient-lunge')this.musicBus?.gain.setTargetAtTime(.2,ctx.currentTime,.01);}source.start();source.onended=()=>{this.patientVoices.delete(source);this.patientWarnings.delete(source);this.cries.delete(source);this.updateMusicDucking();this.voices.delete(source);source.disconnect();gain.disconnect();stereo.disconnect();};
   }
-  dispose() {if(this.scheduler)clearInterval(this.scheduler);void this.context?.close();}
+  dispose() {this.coverStop();if(this.scheduler)clearInterval(this.scheduler);void this.context?.close();}
 }

@@ -339,5 +339,8 @@
   "gift.more": "Còn {count, number} lượt",
   "gift.remaining": "Còn {seconds, number} giây",
   "gift.reserve": "Điện dự trữ {amount, number}%",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "Đêm {night, number} · {area}",
+  "menu.night": "Đêm {night, number}",
+  "menu.shift-date": "Ngày trực: {date} · {weekday, select, d0 {CN} d1 {Thứ 2} d2 {Thứ 3} d3 {Thứ 4} d4 {Thứ 5} d5 {Thứ 6} d6 {Thứ 7} other {}}"
 }

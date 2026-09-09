@@ -234,6 +234,42 @@
     "encoding": "webp-q95"
   },
   {
+    "file": "assets/archive-outpatient-v1.q95.webp",
+    "source": "assets/archive-outpatient-v1.png",
+    "source_bytes": 2162577,
+    "bytes": 349576,
+    "source_sha256": "69841d7fe74be9d0912ed261286b0fa05779361ed65ababb4cf8693eeefa913f",
+    "sha256": "c4f95fd701b7570f5528edd778cdf66ce320f75b00adec8c5e31d5537b7eccea",
+    "encoding": "webp-q95"
+  },
+  {
+    "file": "assets/archive-surgery-v1.q95.webp",
+    "source": "assets/archive-surgery-v1.png",
+    "source_bytes": 2111809,
+    "bytes": 314400,
+    "source_sha256": "60558c2349bec05a35602b2a5014f0816acaf4ac9e284142f492bce02fddccda",
+    "sha256": "d2c3f1def200b4a32bed0ad7ee6152d8e928d3714599590f545baa6e8642dd83",
+    "encoding": "webp-q95"
+  },
+  {
+    "file": "assets/archive-morgue-v1.q95.webp",
+    "source": "assets/archive-morgue-v1.png",
+    "source_bytes": 2159538,
+    "bytes": 346762,
+    "source_sha256": "8212355fe071d6bf665993a78b7d6c3a5275ad07736b1e2281ce6ddb3eef7f14",
+    "sha256": "a080b2fa04f9ced6dd07f342b5f566416ff64c716eb77a8cba38e03acf0143c3",
+    "encoding": "webp-q95"
+  },
+  {
+    "file": "assets/archive-garden-v1.q95.webp",
+    "source": "assets/archive-garden-v1.png",
+    "source_bytes": 2413009,
+    "bytes": 451350,
+    "source_sha256": "2365a989a61f433b1b75f8a8a51de1e6b86d272f4938a7a539509c402900b8bd",
+    "sha256": "b98ecee671ffb750309594a0eab8b185c47333266cb9ba0b4af4b4ad5a7375b4",
+    "encoding": "webp-q95"
+  },
+  {
     "file": "audio/ward-exploration-v3.opus",
     "source": "audio/ward-exploration-v3.mp3",
     "source_bytes": 641194,

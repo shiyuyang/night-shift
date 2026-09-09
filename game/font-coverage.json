@@ -14,52 +14,52 @@
     "missing": "←→♫勤夜棟病"
   },
   "he": {
-    "file": "/fonts/locale-he-f6569a40cd.woff2",
+    "file": "/fonts/locale-he-205d4836b1.woff2",
     "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanshebrew/NotoSansHebrew%5Bwdth%2Cwght%5D.ttf",
     "license": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanshebrew/OFL.txt",
-    "bytes": 25160,
+    "bytes": 25232,
     "missing": "→♫勤夜棟病"
   },
   "th": {
-    "file": "/fonts/locale-th-d1a66109d6.woff2",
+    "file": "/fonts/locale-th-9f5ad7c0da.woff2",
     "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansthai/NotoSansThai%5Bwdth%2Cwght%5D.ttf",
     "license": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansthai/OFL.txt",
-    "bytes": 59448,
+    "bytes": 59880,
     "missing": "→♫勤夜棟病"
   },
   "my": {
-    "file": "/fonts/locale-my-90ceec38bb.woff2",
+    "file": "/fonts/locale-my-e774f8c07e.woff2",
     "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansmyanmar/NotoSansMyanmar%5Bwdth%2Cwght%5D.ttf",
     "license": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansmyanmar/OFL.txt",
-    "bytes": 132484,
+    "bytes": 134904,
     "missing": "→♫勤夜棟病"
   },
   "ja": {
-    "file": "/fonts/locale-ja-a8c4997c49.woff2",
+    "file": "/fonts/locale-ja-9f270388d2.woff2",
     "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
     "license": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansjp/OFL.txt",
-    "bytes": 257428,
+    "bytes": 259292,
     "missing": ""
   },
   "ko": {
-    "file": "/fonts/locale-ko-b3579f075d.woff2",
+    "file": "/fonts/locale-ko-726c13d48a.woff2",
     "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf",
     "license": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanskr/OFL.txt",
-    "bytes": 106712,
+    "bytes": 106884,
     "missing": ""
   },
   "zh-Hans": {
-    "file": "/fonts/locale-zh-Hans-0395ae21b3.woff2",
+    "file": "/fonts/locale-zh-Hans-e3c1c63d4d.woff2",
     "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
     "license": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/OFL.txt",
-    "bytes": 208636,
+    "bytes": 209424,
     "missing": ""
   },
   "zh-Hant": {
-    "file": "/fonts/locale-zh-Hant-9277c4539d.woff2",
+    "file": "/fonts/locale-zh-Hant-687cb3feaa.woff2",
     "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstc/NotoSansTC%5Bwght%5D.ttf",
     "license": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstc/OFL.txt",
-    "bytes": 228136,
+    "bytes": 228452,
     "missing": ""
   }
 }

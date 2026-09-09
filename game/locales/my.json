@@ -339,5 +339,8 @@
   "gift.more": "နောက်ထပ် {count, number} ကြိမ်",
   "gift.remaining": "{seconds, number} စက္ကန့် ကျန်သည်",
   "gift.reserve": "အရန်အား {amount, number}%",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "ည {night, number} · {area}",
+  "menu.night": "ည {night, number}",
+  "menu.shift-date": "တာဝန်ကျရက်: {date} · {weekday, select, d0 {တနင်္ဂနွေ} d1 {တနင်္လာ} d2 {အင်္ဂါ} d3 {ဗုဒ္ဓဟူး} d4 {ကြာသပတေး} d5 {သောကြာ} d6 {စနေ} other {}}"
 }

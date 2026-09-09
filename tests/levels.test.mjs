@@ -1,4 +1,10 @@
 import test from 'node:test';import assert from 'node:assert/strict';import {makeLevel,commands} from '../src/levels.ts';import {feetAt,overlaps} from '../src/collision.ts';
+test('opening nights follow the authored itinerary while endless rotation stays unchanged',()=>{
+ assert.deepEqual(Array.from({length:7},(_,i)=>makeLevel(i+1).theme),[0,3,1,6,4,5,2]);
+ for(let night=8;night<=35;night++)assert.equal(makeLevel(night).theme,(night-1)%7);
+ assert.deepEqual(makeLevel(1,1),makeLevel(1,999));
+ assert.notDeepEqual(makeLevel(8,1).boxes,makeLevel(8,999).boxes);
+});
 function reachable(level,open){const solids=[...level.walls,...level.props,...level.boxes.map(b=>({x:b.x-13,y:b.y-9,width:26,height:21})),...(open?[]:[level.door])];const nodes=[],queue=[[level.spawn.x,level.spawn.y]],seen=new Set([`${level.spawn.x},${level.spawn.y}`]);for(let n=0;n<queue.length;n++){const [x,y]=queue[n];nodes.push({x,y});for(const [dx,dy]of [[6,0],[-6,0],[0,6],[0,-6]]){const nx=x+dx,ny=y+dy,k=`${nx},${ny}`;if(nx<level.bounds.x||nx>level.bounds.x+level.bounds.width||ny<level.bounds.y||ny>level.bounds.y+level.bounds.height||seen.has(k)||solids.some(b=>overlaps(feetAt(nx,ny),b)))continue;seen.add(k);queue.push([nx,ny]);}}return v=>nodes.some(n=>Math.hypot(n.x-v.x,n.y-v.y)<32);}
 test('all fourteen placement variants remain solvable; locked room cannot bypass the door',()=>{for(let i=1;i<=14;i++){const l=makeLevel(i),closed=reachable(l,false),open=reachable(l,true);assert.ok(closed(l.key),`key ${i}`);assert.ok(closed(l.boxes[0]),`free box ${i}`);assert.ok(closed(l.doorUse),`door ${i}`);assert.equal(closed(l.boxes[2]),false,`locked room ${i}`);for(const b of l.boxes)assert.ok(open(b),`box ${i}`);assert.ok(open(l.exit),`exit ${i}`);}});
 test('seven geometries, repeatable rounds, no finite final round',()=>{assert.equal(new Set([1,2,3,4,5,6,7].map(n=>JSON.stringify(makeLevel(n).walls))).size,7);assert.notDeepEqual(makeLevel(1).boxes,makeLevel(8).boxes);assert.deepEqual(makeLevel(1000),makeLevel(1000));assert.equal(makeLevel(1000).round,1000);assert.equal(commands.length,8);});
@@ -18,7 +24,7 @@ test('expanded ward has a traversable workroom loop for both actor footprints',a
 
 test('warehouse cross aisles and plant service ring admit player and wide pursuer',async()=>{
  const {patrolPath,followPatrolPath}=await import('../src/patrol.ts');const {monsterFeetAt,monsterArchitecture}=await import('../src/collision.ts');
- const tours=[{round:2,points:[[350,414],[540,150],[940,150],[940,672],[350,672],[350,414]]},{round:3,points:[[344,414],[344,190],[940,190],[940,660],[344,660],[344,414]]}];
+ const tours=[{round:3,points:[[350,414],[540,150],[940,150],[940,672],[350,672],[350,414]]},{round:7,points:[[344,414],[344,190],[940,190],[940,660],[344,660],[344,414]]}];
  for(const tour of tours){
   const level=makeLevel(tour.round);
   for(const footprint of [feetAt,monsterFeetAt]){
@@ -31,13 +37,13 @@ test('warehouse cross aisles and plant service ring admit player and wide pursue
    }
   }
  }
- const racks=makeLevel(2).props.filter(p=>p.kind==='rack');assert.equal(racks.length,6);assert.equal(new Set(racks.map(p=>p.x)).size,3);assert.equal(new Set(racks.map(p=>p.y)).size,2);
- assert.equal(makeLevel(3).props.filter(p=>p.kind==='engine').length,4);
+ const racks=makeLevel(3).props.filter(p=>p.kind==='rack');assert.equal(racks.length,6);assert.equal(new Set(racks.map(p=>p.x)).size,3);assert.equal(new Set(racks.map(p=>p.y)).size,2);
+ assert.equal(makeLevel(7).props.filter(p=>p.kind==='engine').length,4);
 });
 
 test('clinic rear passage and operating-suite ring fit both actor footprints',async()=>{
  const {patrolPath,followPatrolPath}=await import('../src/patrol.ts');const {monsterFeetAt,monsterArchitecture}=await import('../src/collision.ts');
- for(const [round,points]of [[4,[[200,414],[200,150],[832,150],[832,370],[950,470],[200,470],[200,414]]],[5,[[330,414],[330,200],[950,200],[950,620],[330,620],[330,414]]]]){
+ for(const [round,points]of [[2,[[200,414],[200,150],[832,150],[832,370],[950,470],[200,470],[200,414]]],[5,[[330,414],[330,200],[950,200],[950,620],[330,620],[330,414]]]]){
   const l=makeLevel(round);
   for(const footprint of [feetAt,monsterFeetAt]){
    const solids=[...l.walls.map(w=>footprint===monsterFeetAt?monsterArchitecture(w):w),...l.props,l.door,...l.boxes.map(b=>({x:b.x-13,y:b.y-9,width:26,height:21}))];
@@ -49,5 +55,5 @@ test('clinic rear passage and operating-suite ring fit both actor footprints',as
    }
   }
  }
- assert.equal(makeLevel(4).props.filter(p=>p.kind==='seating').length,3);assert.equal(makeLevel(5).props.filter(p=>p.kind==='operatingtable').length,2);
+ assert.equal(makeLevel(2).props.filter(p=>p.kind==='seating').length,3);assert.equal(makeLevel(5).props.filter(p=>p.kind==='operatingtable').length,2);
 });

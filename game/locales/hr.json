@@ -339,5 +339,8 @@
   "gift.more": "Još {count, number}",
   "gift.remaining": "Preostalo sekundi: {seconds, number}",
   "gift.reserve": "Rezerva {amount, number}%",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "Noć {night, number} · {area}",
+  "menu.night": "Noć {night, number}",
+  "menu.shift-date": "Datum smjene: {date} · {weekday, select, d0 {ned} d1 {pon} d2 {uto} d3 {sri} d4 {čet} d5 {pet} d6 {sub} other {}}"
 }

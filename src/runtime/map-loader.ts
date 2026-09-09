@@ -2,8 +2,9 @@ import {stageName} from '../i18n.ts';
 import catalog from '../../game/maps/catalog.json' with {type:'json'};
 import {parseEvents} from './event-runtime.ts';
 import type {Level} from '../levels.ts';
+const openingOrder=['ward','outpatient','warehouse','garden','surgery','morgue','plant'];
 export function loadLevel(round:number):Level {
- const data=catalog[(round-1)%catalog.length],entities=data.entities,variant=Math.floor((round-1)/catalog.length)%2?'B':'A';
+ const data=(round<=openingOrder.length?catalog.find(map=>map.id===openingOrder[round-1])!:catalog[(round-1)%catalog.length]),entities=data.entities,variant=Math.floor((round-1)/catalog.length)%2?'B':'A';
  const one=(id:string)=>{const found=entities.filter(e=>e.id===id);if(found.length!==1)throw Error(`${data.id} requires exactly one ${id}`);return found[0];};
  const rect=({x,y,width,height}:{x:number;y:number;width:number;height:number})=>({x,y,width,height});
  const point=(id:string)=>{const {x,y}=one(id);return {x,y};};

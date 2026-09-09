@@ -8,7 +8,7 @@ const apparitionStops=[
 ] as const;
 
 /** Keep the light falloff aligned with the source photograph's cover crop. */
-export function mountDeskLamp(scene:HTMLElement){
+export function mountDeskLamp(scene:HTMLElement,onApparition:(delaySeconds:number,depth:number)=>()=>void=()=>()=>{}){
  const light=document.createElement('div');
  light.className='desk-lamp-falloff';
  const apparition=document.createElement('div');
@@ -34,6 +34,7 @@ export function mountDeskLamp(scene:HTMLElement){
  let flashes=0;
  let animation:Animation|undefined;
  let ghostAnimation:Animation|undefined;
+ let cancelSound=()=>{};
  let interferenceAnimations:Animation[]=[];
  const fit=()=>{
   const scale=Math.max(scene.clientWidth/1672,scene.clientHeight/941);
@@ -103,14 +104,18 @@ export function mountDeskLamp(scene:HTMLElement){
    animation.startTime=startTime;
    ghostAnimation.startTime=startTime;
    interferenceAnimations.forEach(animation=>animation.startTime=startTime);
+   cancelSound();
+   cancelSound=onApparition(ghostStart*duration/1000,stopIndex);
   }
   schedule();
  };
- const stop=()=>{clearTimeout(timer);animation?.cancel();ghostAnimation?.cancel();interferenceAnimations.forEach(animation=>animation.cancel());};
+ const stop=()=>{clearTimeout(timer);cancelSound();animation?.cancel();ghostAnimation?.cancel();interferenceAnimations.forEach(animation=>animation.cancel());};
  const reset=()=>{stop();if(!document.hidden&&!motion.matches)schedule();};
  document.addEventListener('visibilitychange',reset);
  motion.addEventListener('change',reset);
  window.addEventListener('pagehide',stop);
  window.addEventListener('pageshow',reset);
+ const cover=scene.closest<HTMLElement>('#start-layer');
+ if(cover)new MutationObserver(()=>{if(cover.classList.contains('hidden'))stop();else reset();}).observe(cover,{attributes:true,attributeFilter:['class']});
  fit();reset();
 }

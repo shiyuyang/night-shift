@@ -1,7 +1,7 @@
 import {t,stageName,canvasFont} from '../i18n';
 import {corsAssetUrl} from '../runtime/asset-url';
 import type {Level} from '../levels';
-const scenes=['ward','warehouse','plant'] as const;
+const scenes=['ward','warehouse','plant','outpatient','surgery','morgue','garden'] as const;
 const images=new Map<string,Promise<HTMLImageElement>>();
 function loadImage(file:string){
  let pending=images.get(file);
@@ -11,16 +11,6 @@ function loadImage(file:string){
 /** Authored location stills, rendered on the same fixed pixel grid as the archive. */
 export function drawSurvey(canvas:HTMLCanvasElement,level:Level){
  const ctx=canvas.getContext('2d');if(!ctx)return;
- // Clinical archive stills use authored geometry, without revealing randomized loot.
- if(level.theme>=3){
-  canvas.dataset.scene=level.theme===3?'outpatient':level.theme===4?'surgery':level.theme===5?'morgue':'garden';canvas.dataset.loaded='true';
-  canvas.setAttribute('aria-label',t('survey.alt',{name:stageName(level.theme)}));
-  ctx.fillStyle='#142122';ctx.fillRect(0,0,240,144);ctx.save();ctx.scale(240/level.width,144/level.height);
-  ctx.fillStyle=level.theme===3?'#44463e':'#344b4c';ctx.fillRect(level.bounds.x,level.bounds.y,level.bounds.width,level.bounds.height);
-  ctx.fillStyle='#7a8980';for(const b of level.walls)ctx.fillRect(b.x,b.y,b.width,b.height);
-  for(const b of level.props){ctx.fillStyle=b.kind==='seating'?'#91aaa0':b.kind==='operatingtable'?'#a4c6b6':'#607a71';ctx.fillRect(b.x,b.y,b.width,b.height);}
-  ctx.restore();ctx.fillStyle='#07101030';for(let y=3;y<144;y+=4)ctx.fillRect(0,y,240,1);return;
- }
  const theme=scenes[level.theme]??scenes[0],file=`/assets/archive-${theme}-v1.q95.webp`;
  canvas.dataset.scene=theme;canvas.dataset.loaded='false';
  canvas.setAttribute('aria-label',t('survey.alt',{name:stageName(level.theme)}));

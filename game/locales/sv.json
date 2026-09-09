@@ -339,5 +339,8 @@
   "gift.more": "Ytterligare {count, number}",
   "gift.remaining": "{seconds, number} sekunder kvar",
   "gift.reserve": "Reserv {amount, number} %",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "Natt {night, number} · {area}",
+  "menu.night": "Natt {night, number}",
+  "menu.shift-date": "Passdatum: {date} · {weekday, select, d0 {sön} d1 {mån} d2 {tis} d3 {ons} d4 {tors} d5 {fre} d6 {lör} other {}}"
 }

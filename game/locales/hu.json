@@ -339,5 +339,8 @@
   "gift.more": "További {count, number}",
   "gift.remaining": "Még {seconds, number} másodperc",
   "gift.reserve": "Tartalék {amount, number}%",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "{night, number}. éjszaka · {area}",
+  "menu.night": "{night, number}. éjszaka",
+  "menu.shift-date": "Műszak dátuma: {date} · {weekday, select, d0 {V} d1 {H} d2 {K} d3 {Sze} d4 {Cs} d5 {P} d6 {Szo} other {}}"
 }

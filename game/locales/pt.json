@@ -339,5 +339,8 @@
   "gift.more": "Mais {count, number}",
   "gift.remaining": "Restam {seconds, number} segundos",
   "gift.reserve": "Reserva {amount, number}%",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "Noite {night, number} · {area}",
+  "menu.night": "Noite {night, number}",
+  "menu.shift-date": "Data do plantão: {date} · {weekday, select, d0 {dom.} d1 {seg.} d2 {ter.} d3 {qua.} d4 {qui.} d5 {sex.} d6 {sáb.} other {}}"
 }

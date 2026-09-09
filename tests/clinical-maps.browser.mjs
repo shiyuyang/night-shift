@@ -8,9 +8,9 @@ const browser=await chromium.launch({executablePath,headless:true});
 const output='output/clinical-maps';mkdirSync(output,{recursive:true});
 const reports=[];
 try{
- for(const round of [4,5]){
+ for(const round of [2,5]){
   const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];
-  const name=round===4?'outpatient':'surgery';page.on('pageerror',e=>errors.push(e.message));
+  const name=round===2?'outpatient':'surgery';page.on('pageerror',e=>errors.push(e.message));
   try{
    await page.addInitScript(()=>{
     localStorage.setItem('night-shift-campaign-v1',JSON.stringify({unlocked:5}));
@@ -31,7 +31,7 @@ try{
    await page.screenshot({path:`${output}/${name}-search.png`});
    await goTo(page,l.boxes[1].x,l.boxes[1].y,35);await use();assert.equal((await snapshot(page)).opened[1],true);
    // Cross the added southern area, then enter the east lock room through its door.
-   await goTo(page,round===4?700:650,675,12);assert.ok((await snapshot(page)).camera.y>200);
+   await goTo(page,round===2?700:650,675,12);assert.ok((await snapshot(page)).camera.y>200);
    await page.screenshot({path:`${output}/${name}-south.png`});
    await goTo(page,l.doorUse.x,l.doorUse.y,8);await use();assert.equal((await snapshot(page)).door,true);
    assert.ok((await snapshot(page)).camera.x>500);

@@ -8,12 +8,12 @@ const browser=await chromium.launch({executablePath,headless:true});
 const output='output/industrial-maps';mkdirSync(output,{recursive:true});
 const reports=[];
 try{
- for(const round of [2,3]){
+ for(const round of [3,7]){
   const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];
-  const name=round===2?'warehouse':'plant';page.on('pageerror',e=>errors.push(e.message));
+  const name=round===3?'warehouse':'plant';page.on('pageerror',e=>errors.push(e.message));
   try{
    await page.addInitScript(()=>{
-    localStorage.setItem('night-shift-campaign-v1',JSON.stringify({unlocked:3}));
+    localStorage.setItem('night-shift-campaign-v1',JSON.stringify({unlocked:7}));
     localStorage.setItem('night-shift-monster-lessons-v1',JSON.stringify(['monster-listener','monster-light-shy','monster-patroller','monster-weeper']));
    });
    await page.goto((process.env.BASE_URL||'http://127.0.0.1:5187')+'/?playtest=industrial');
@@ -43,7 +43,7 @@ try{
    await page.screenshot({path:`${output}/${name}-search.png`});
    await goTo(page,l.boxes[1].x,l.boxes[1].y,35);await use();assert.equal((await snapshot(page)).opened[1],true);
    // Cross the added southern area, then enter the east lock room through its door.
-   await goTo(page,round===2?940:930,680,12);assert.ok((await snapshot(page)).camera.y>200);
+   await goTo(page,round===3?940:930,680,12);assert.ok((await snapshot(page)).camera.y>200);
    await page.screenshot({path:`${output}/${name}-south.png`});
    await goTo(page,l.doorUse.x,l.doorUse.y,8);await use();assert.equal((await snapshot(page)).door,true);
    assert.ok((await snapshot(page)).camera.x>500);

@@ -339,5 +339,8 @@
   "gift.more": "עוד {count, number}",
   "gift.remaining": "נותרו {seconds, number} שניות",
   "gift.reserve": "עתודה {amount, number}%",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "לילה {night, number} · {area}",
+  "menu.night": "לילה {night, number}",
+  "menu.shift-date": "תאריך משמרת: {date} · {weekday, select, d0 {יום א׳} d1 {יום ב׳} d2 {יום ג׳} d3 {יום ד׳} d4 {יום ה׳} d5 {יום ו׳} d6 {שבת} other {}}"
 }

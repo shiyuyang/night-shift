@@ -339,5 +339,8 @@
   "gift.more": "Άλλα {count, number}",
   "gift.remaining": "Απομένουν {seconds, number} δευτερόλεπτα",
   "gift.reserve": "Εφεδρεία {amount, number}%",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "Νύχτα {night, number} · {area}",
+  "menu.night": "Νύχτα {night, number}",
+  "menu.shift-date": "Ημερομηνία βάρδιας: {date} · {weekday, select, d0 {Κυρ} d1 {Δευ} d2 {Τρί} d3 {Τετ} d4 {Πέμ} d5 {Παρ} d6 {Σάβ} other {}}"
 }

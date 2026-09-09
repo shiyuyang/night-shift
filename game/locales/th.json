@@ -339,5 +339,8 @@
   "gift.more": "อีก {count, number} ครั้ง",
   "gift.remaining": "เหลือ {seconds, number} วินาที",
   "gift.reserve": "พลังงานสำรอง {amount, number}%",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "คืนที่ {night, number} · {area}",
+  "menu.night": "คืนที่ {night, number}",
+  "menu.shift-date": "วันที่เข้าเวร: {date} · {weekday, select, d0 {อาทิตย์} d1 {จันทร์} d2 {อังคาร} d3 {พุธ} d4 {พฤหัส} d5 {ศุกร์} d6 {เสาร์} other {}}"
 }

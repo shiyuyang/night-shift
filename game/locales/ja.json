@@ -339,5 +339,8 @@
   "gift.more": "ほか{count, number}回",
   "gift.remaining": "残り{seconds, number}秒",
   "gift.reserve": "予備電力 {amount, number}%",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "第{night, number}夜 · {area}",
+  "menu.night": "第{night, number}夜",
+  "menu.shift-date": "当直日: {date} · {weekday, select, d0 {日} d1 {月} d2 {火} d3 {水} d4 {木} d5 {金} d6 {土} other {}}"
 }

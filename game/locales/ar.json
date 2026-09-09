@@ -339,5 +339,8 @@
   "gift.more": "{count, number} أخرى",
   "gift.remaining": "متبقي {seconds, number} ثانية",
   "gift.reserve": "احتياطي {amount, number}٪",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "الليلة {night, number} · {area}",
+  "menu.night": "الليلة {night, number}",
+  "menu.shift-date": "تاريخ المناوبة: {date} · {weekday, select, d0 {الأحد} d1 {الاثنين} d2 {الثلاثاء} d3 {الأربعاء} d4 {الخميس} d5 {الجمعة} d6 {السبت} other {}}"
 }

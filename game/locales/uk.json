@@ -339,5 +339,8 @@
   "gift.more": "Ще: {count, number}",
   "gift.remaining": "Залишилося секунд: {seconds, number}",
   "gift.reserve": "Резерв {amount, number}%",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "Ніч {night, number} · {area}",
+  "menu.night": "Ніч {night, number}",
+  "menu.shift-date": "Дата зміни: {date} · {weekday, select, d0 {нд} d1 {пн} d2 {вт} d3 {ср} d4 {чт} d5 {пт} d6 {сб} other {}}"
 }

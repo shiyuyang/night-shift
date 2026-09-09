@@ -13,7 +13,7 @@ try{
  for(const locale of ['zh-Hans','en']){
  await Promise.all([page.waitForEvent('load'),page.locator('#menu-language').selectOption(locale)]);await page.locator('#start:enabled').waitFor();assert.equal(await page.locator('html').getAttribute('lang'),locale);
  await page.locator('#stage-prev').click();await page.locator('[data-night="2"]').click();
- assert.equal(await page.locator('#file-title').textContent(),locale==='en'?'Medical Stores':'药品仓库');
+ assert.equal(await page.locator('#file-title').textContent(),locale==='en'?'Night 2 · Outpatient Clinic':'第 2 夜 · 门诊部');
  await page.locator('#stage-next').click();assert.equal(await page.locator('[data-night="9"]').isDisabled(),true);
  await page.locator('#start-layer').evaluate(el=>el.scrollTop=0);await page.waitForTimeout(350);await page.screenshot({path:`/tmp/night-shift-journal-${locale}-${width}.png`});
  const overflow=await page.locator('.patrol-book').evaluate(el=>el.scrollWidth>el.clientWidth+3);assert.equal(overflow,false,`${locale} ${width}`);

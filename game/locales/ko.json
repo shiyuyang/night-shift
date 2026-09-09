@@ -339,5 +339,8 @@
   "gift.more": "추가 {count, number}회",
   "gift.remaining": "{seconds, number}초 남음",
   "gift.reserve": "예비 전력 {amount, number}%",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "{night, number}일째 밤 · {area}",
+  "menu.night": "{night, number}일째 밤",
+  "menu.shift-date": "당직일: {date} · {weekday, select, d0 {일} d1 {월} d2 {화} d3 {수} d4 {목} d5 {금} d6 {토} other {}}"
 }

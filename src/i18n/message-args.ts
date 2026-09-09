@@ -341,4 +341,7 @@ export interface MessageValues{
 "gift.remaining":{"seconds":number}
 "gift.reserve":{"amount":number}
 "gift.quantity":{"count":number}
+"menu.night-title":{"night":number;"area":string|number}
+"menu.night":{"night":number}
+"menu.shift-date":{"date":string|number;"weekday":string|number}
 }

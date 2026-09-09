@@ -339,5 +339,8 @@
   "gift.more": "Încă {count, number}",
   "gift.remaining": "Au rămas {seconds, number} secunde",
   "gift.reserve": "Rezervă {amount, number}%",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "Noaptea {night, number} · {area}",
+  "menu.night": "Noaptea {night, number}",
+  "menu.shift-date": "Data turei: {date} · {weekday, select, d0 {dum.} d1 {lun.} d2 {mar.} d3 {mie.} d4 {joi} d5 {vin.} d6 {sâm.} other {}}"
 }

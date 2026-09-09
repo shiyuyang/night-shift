@@ -7,7 +7,7 @@ export function weeperExclusion(p:Position):Box{return {x:p.x-weeperRules.alertR
 /** Authored LDtk sockets, then a conservative proof with the entire alert square blocked. */
 export function chooseWeeper(level:Level,seed:number):Position|undefined{
  if(level.round<weeperRules.firstRound)return;
- if(level.round===2)return level.weeperFixed?{...level.weeperFixed}:undefined;
+ if((level.theme===1&&level.round<=7))return level.weeperFixed?{...level.weeperFixed}:undefined;
  const hash=(Math.imul(seed^level.round,1664525)+1013904223)>>>0;
  if(level.round!==3&&hash/4294967296>weeperRules.chance)return;
  const features=(level.features??[]).map(f=>({x:f.x,y:f.y+8,width:f.width,height:f.height-8,kind:'crate' as const}));
@@ -37,7 +37,7 @@ export function chooseWeeper(level:Level,seed:number):Position|undefined{
 
 /** Local endpoints let a patient leave a chokepoint; its alert radius is not a permanent wall. */
 export function weeperRoamPoints(level:Level,home:Position):Position[]{
- if(level.round===2)return [];
+ if((level.theme===1&&level.round<=7))return [];
  const features=(level.features??[]).map(f=>({x:f.x,y:f.y+8,width:f.width,height:f.height-8}));
  const solids=[...level.walls.map(monsterArchitecture),monsterArchitecture(level.door),...level.props,...features,...level.boxes.map(b=>({x:b.x-13,y:b.y-9,width:26,height:21}))];
  const points=reachablePositions(level,false,monsterFeetAt).filter(p=>Math.hypot(p.x-home.x,p.y-home.y)>=140&&Math.hypot(p.x-home.x,p.y-home.y)<=250&&!solids.some(b=>overlaps(monsterFeetAt(p.x,p.y),b)));

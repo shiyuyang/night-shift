@@ -8,7 +8,7 @@ const browser=await chromium.launch({executablePath,headless:true});
 const output='output/garden';mkdirSync(output,{recursive:true});
 const reports=[];
 try{
- for(const round of [7]){
+ for(const round of [4]){
   const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];
   const name='garden';page.on('pageerror',e=>errors.push(e.message));
   try{

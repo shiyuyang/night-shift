@@ -339,5 +339,8 @@
   "gift.more": "Daha {count, number}",
   "gift.remaining": "{seconds, number} saniyə qalıb",
   "gift.reserve": "Ehtiyat {amount, number}%",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "{night, number}-ci gecə · {area}",
+  "menu.night": "{night, number}-ci gecə",
+  "menu.shift-date": "Növbə tarixi: {date} · {weekday, select, d0 {B.} d1 {B.E.} d2 {Ç.A.} d3 {Ç.} d4 {C.A.} d5 {C.} d6 {Ş.} other {}}"
 }

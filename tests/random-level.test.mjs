@@ -24,7 +24,7 @@ test('ward random searches stay in functional rooms on both sides of the old bou
 
 test('industrial searches preserve room purpose and cabinets stay off transit aisles',()=>{
  const inside=(p,b)=>p.x>b.x&&p.x<b.x+b.width&&p.y>b.y&&p.y<b.y+b.height;
- for(const [round,rooms]of [[2,[['ReceivingZone'],['RackWestZone','RackCenterZone','RackSouthZone'],['DispatchZone'],['StockroomZone']]],[3,[['ControlZone'],['ToolZone'],['ServiceEastZone','ServiceSouthZone'],['PanelZone']]]]){
+ for(const [round,rooms]of [[3,[['ReceivingZone'],['RackWestZone','RackCenterZone','RackSouthZone'],['DispatchZone'],['StockroomZone']]],[7,[['ControlZone'],['ToolZone'],['ServiceEastZone','ServiceSouthZone'],['PanelZone']]]]){
   for(let seed=0;seed<12;seed++){
    const l=makeLevel(round,seed),points=[l.key,...l.boxes];
    points.forEach((p,i)=>assert.ok(rooms[i].some(id=>inside(p,l.zones[id])),JSON.stringify({round,seed,i,p})));
@@ -37,7 +37,7 @@ test('industrial searches preserve room purpose and cabinets stay off transit ai
 
 test('clinical searches stay within their assigned functional rooms',()=>{
  const inside=(p,b)=>p.x>b.x&&p.x<b.x+b.width&&p.y>b.y&&p.y<b.y+b.height;
- for(const [round,rooms]of [[4,['RegistrationZone','ConsultationZone','ExaminationZone','TreatmentZone']],[5,['PreparationZone','ScrubZone','OperatingZone','SterileZone']]])for(let seed=0;seed<12;seed++){
+ for(const [round,rooms]of [[2,['RegistrationZone','ConsultationZone','ExaminationZone','TreatmentZone']],[5,['PreparationZone','ScrubZone','OperatingZone','SterileZone']]])for(let seed=0;seed<12;seed++){
   const l=makeLevel(round,seed);[l.key,...l.boxes].forEach((p,i)=>assert.ok(inside(p,l.zones[rooms[i]]),`${round} ${seed} ${i}`));
   const optional=Object.entries(l.zones).filter(([id])=>id.startsWith('Optional')).map(([,b])=>b);
   for(const f of l.features)assert.ok(optional.some(b=>inside({x:f.x+f.width/2,y:f.y+f.height/2},b)));

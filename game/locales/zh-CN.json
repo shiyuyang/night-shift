@@ -339,5 +339,8 @@
   "gift.more": "另有 {count, number} 次",
   "gift.remaining": "剩余 {seconds, number} 秒",
   "gift.reserve": "备用电量 {amount, number}%",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "第 {night, number} 夜 · {area}",
+  "menu.night": "第 {night, number} 夜",
+  "menu.shift-date": "值班日期: {date} · {weekday, select, d0 {周日} d1 {周一} d2 {周二} d3 {周三} d4 {周四} d5 {周五} d6 {周六} other {}}"
 }

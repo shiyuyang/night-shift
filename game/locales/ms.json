@@ -339,5 +339,8 @@
   "gift.more": "{count, number} lagi",
   "gift.remaining": "Baki {seconds, number} saat",
   "gift.reserve": "Simpanan {amount, number}%",
-  "gift.quantity": "×{count, number}"
+  "gift.quantity": "×{count, number}",
+  "menu.night-title": "Malam {night, number} · {area}",
+  "menu.night": "Malam {night, number}",
+  "menu.shift-date": "Tarikh bertugas: {date} · {weekday, select, d0 {Ahd} d1 {Isn} d2 {Sel} d3 {Rab} d4 {Kha} d5 {Jum} d6 {Sab} other {}}"
 }
