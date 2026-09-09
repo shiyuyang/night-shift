@@ -4,7 +4,7 @@
   "domain": "night-shift-assets.liveinteractivegame.com",
   "zoneId": "30badb66445e606e10540be49d75e584",
   "prefix": "games/night-shift",
-  "version": "c6b21df6eb8f5603",
+  "version": "0e5a32d32ce9aa9c",
   "files": [
     {
       "file": "assets/archive-plant-v1.q95.webp",
@@ -35,6 +35,16 @@
       "file": "assets/garden-pine-v1.webp",
       "bytes": 624694,
       "sha256": "4a4d6dd9a0bc715e565919ffe132bb0d770863a487d812a0dfc11a1d36667420"
+    },
+    {
+      "file": "assets/gift-shade-contact-v1.webp",
+      "bytes": 249690,
+      "sha256": "42d6131cbc73e9b65a81a6359f9f9660d11cca7d7fc630b56760d3b3cf42032d"
+    },
+    {
+      "file": "assets/gift-shade-walk-v1.webp",
+      "bytes": 47038,
+      "sha256": "3e8ac09c13cc358c992defadcb02f7e29c8f97a2e76c487b4282a95053557a17"
     },
     {
       "file": "assets/hospital-corridor-v2.q95.webp",
@@ -157,9 +167,9 @@
       "sha256": "078e75d5b41ea57a9ee1ed9de024bd245f3cc068ecaac491fbf424f2960b0392"
     },
     {
-      "file": "audio/sfx-opus-3b1721547ed073ad.bin",
-      "bytes": 425330,
-      "sha256": "3b1721547ed073adb2349d7c04853bf0f1193d85a8f547b52cd0ad7f9395ec63"
+      "file": "audio/sfx-opus-1ec7110ca051b3f9.bin",
+      "bytes": 432182,
+      "sha256": "1ec7110ca051b3f95855a434d3b78eaf49b369e77664bac9388292fe53746a12"
     },
     {
       "file": "audio/ward-alt-theme-v1.ogg",
@@ -227,14 +237,14 @@
       "sha256": "f6569a40cdf5a12a2d36711eb80238057e10148ab1e52417e37962974e9124c0"
     },
     {
-      "file": "fonts/locale-ja-0b70e631e6.woff2",
-      "bytes": 255984,
-      "sha256": "0b70e631e6563b0dea3552c277a3ada7fe0a1f0885fcf4262a195c895d680cbf"
+      "file": "fonts/locale-ja-a8c4997c49.woff2",
+      "bytes": 257428,
+      "sha256": "a8c4997c490f7cda3057d12a664dcbacf77cd0c71a7bc9f1058ae93b8fbe87db"
     },
     {
-      "file": "fonts/locale-ko-13c0abbc8d.woff2",
-      "bytes": 106276,
-      "sha256": "13c0abbc8dcf639639fd65bd81f94b8e20d43392a71508accc997853c7c81c77"
+      "file": "fonts/locale-ko-b3579f075d.woff2",
+      "bytes": 106712,
+      "sha256": "b3579f075db7ebe80fda042eaffa55f7539196b5669f26a16150b660726d86e7"
     },
     {
       "file": "fonts/locale-latin-84536a0a4d.woff2",
@@ -242,24 +252,24 @@
       "sha256": "84536a0a4dd3e74d8d6f3a9c786213c73a3fe7ef698a620f0556a02f21c201f5"
     },
     {
-      "file": "fonts/locale-my-4e9be0980c.woff2",
-      "bytes": 131016,
-      "sha256": "4e9be0980c47671f109eed61c9a30e39d4ca4e7e1d898e401dfbd468a728c0d0"
+      "file": "fonts/locale-my-90ceec38bb.woff2",
+      "bytes": 132484,
+      "sha256": "90ceec38bb66f04ca292ef192f4ebdb025fe67423d974c179b1703ae0ff63822"
     },
     {
-      "file": "fonts/locale-th-00cbed7909.woff2",
-      "bytes": 58516,
-      "sha256": "00cbed7909b42f2bcc1ba9c6e9896983df3aafc054e8cb3196c7bd306fd1abd2"
+      "file": "fonts/locale-th-d1a66109d6.woff2",
+      "bytes": 59448,
+      "sha256": "d1a66109d67706c15ff61c177f435c07a65c4b743240cb203be315b432ba2794"
     },
     {
-      "file": "fonts/locale-zh-Hans-9a99e4bbaa.woff2",
-      "bytes": 206608,
-      "sha256": "9a99e4bbaacbbd07b327e3ab124b0ee47385d558deadf7d97f391e2f16d1efc2"
+      "file": "fonts/locale-zh-Hans-0395ae21b3.woff2",
+      "bytes": 208636,
+      "sha256": "0395ae21b3e54462eb1b2c82036c71ab50d954c3c54c38e5c45be8c9a21b8205"
     },
     {
-      "file": "fonts/locale-zh-Hant-4a4ee8f885.woff2",
-      "bytes": 225040,
-      "sha256": "4a4ee8f8853f666b30b336811e10aade1228485b541b9d45d9998c22b0f9eb6c"
+      "file": "fonts/locale-zh-Hant-9277c4539d.woff2",
+      "bytes": 228136,
+      "sha256": "9277c4539dce114597686fabe0bf131178897532afba26d2c91ba10d3992bb29"
     },
     {
       "file": "fonts/notosans-OFL.txt",
@@ -312,6 +322,6 @@
       "sha256": "d113cd651f212760397282b77588d331a6079268e539375b784992fb97ecd320"
     }
   ],
-  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/c6b21df6eb8f5603/",
-  "verifiedAt": "2026-09-08T17:14:23.658Z"
+  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/0e5a32d32ce9aa9c/",
+  "verifiedAt": "2026-09-09T07:02:47.863Z"
 }

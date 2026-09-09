@@ -1,8 +1,8 @@
 {
   "opus": {
-    "file": "/audio/sfx-opus-3b1721547ed073ad.bin",
-    "bytes": 425330,
-    "sha256": "3b1721547ed073adb2349d7c04853bf0f1193d85a8f547b52cd0ad7f9395ec63",
+    "file": "/audio/sfx-opus-1ec7110ca051b3f9.bin",
+    "bytes": 432182,
+    "sha256": "1ec7110ca051b3f95855a434d3b78eaf49b369e77664bac9388292fe53746a12",
     "entries": {
       "step": {
         "offset": 0,
@@ -159,6 +159,10 @@
       "plant-breaker-arc": {
         "offset": 419957,
         "length": 5373
+      },
+      "shade-contact": {
+        "offset": 425330,
+        "length": 6852
       }
     }
   }

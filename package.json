@@ -7,7 +7,7 @@
     "dev": "vite --host 0.0.0.0",
     "build": "npm run content:check && npm run assets:pack && tsc && vite build && node scripts/prepare-delivery.mjs",
     "preview": "vite preview --host 0.0.0.0",
-    "test": "npm run content:check && npm run assets:pack && node --test server/events.test.mjs tests/collision.test.mjs tests/encounters.test.mjs tests/pursuit.test.mjs tests/levels.test.mjs tests/run-rules.test.mjs tests/campaign.test.mjs tests/locks.test.mjs tests/assets.test.mjs tests/event-runtime.test.mjs tests/tutorial.test.mjs tests/presentation.test.mjs tests/audio.test.mjs tests/audio-pack.test.mjs tests/random-level.test.mjs tests/rogue.test.mjs tests/morgue.test.mjs tests/garden.test.mjs tests/repair.test.mjs tests/atmosphere-colors.test.mjs",
+    "test": "npm run content:check && npm run assets:pack && node --test server/events.test.mjs tests/collision.test.mjs tests/encounters.test.mjs tests/pursuit.test.mjs tests/levels.test.mjs tests/run-rules.test.mjs tests/campaign.test.mjs tests/locks.test.mjs tests/assets.test.mjs tests/event-runtime.test.mjs tests/tutorial.test.mjs tests/presentation.test.mjs tests/audio.test.mjs tests/audio-pack.test.mjs tests/random-level.test.mjs tests/rogue.test.mjs tests/morgue.test.mjs tests/garden.test.mjs tests/repair.test.mjs tests/atmosphere-colors.test.mjs tests/live-gifts.test.mjs",
     "test:browser": "node tests/endless.browser.mjs 1 3",
     "test:browser:night2": "node tests/endless.browser.mjs 2 3",
     "test:browser:atmosphere": "node tests/atmosphere-colors.browser.mjs",
@@ -44,7 +44,8 @@
     "test:browser:garden": "node tests/garden.browser.mjs",
     "test:browser:garden-i18n": "node tests/garden-localization.browser.mjs",
     "test:browser:repair": "node tests/repair.browser.mjs",
-    "test:browser:repair-mechanics": "node tests/repair-mechanics.browser.mjs"
+    "test:browser:repair-mechanics": "node tests/repair-mechanics.browser.mjs",
+    "test:browser:gifts": "node tests/live-gifts.browser.mjs"
   },
   "dependencies": {
     "@formatjs/icu-messageformat-parser": "^3.5.17",

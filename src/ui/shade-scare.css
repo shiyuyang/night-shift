@@ -1,0 +1,4 @@
+.shade-contact-scare{position:absolute;z-index:150;left:var(--play-left,0);top:var(--play-top,0);width:var(--play-width,100%);height:var(--play-height,100%);overflow:hidden;background:#010303;pointer-events:auto;isolation:isolate}
+.shade-contact-scare canvas{position:absolute;inset:0;height:100%;width:100%;max-width:none;image-rendering:pixelated}
+.shade-scare-room{object-fit:fill}.shade-scare-face{object-fit:cover;mix-blend-mode:screen;mask-image:radial-gradient(ellipse,black 35%,#000a 65%,transparent 96%)}
+.shade-contact-scare:after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse,transparent 25%,#01030388 80%,#010303 100%)}

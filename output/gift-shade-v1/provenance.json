@@ -1,0 +1,14 @@
+{
+  "provider": "image_gen",
+  "source": "output/gift-shade-v1/source.png",
+  "frames": 16,
+  "rows": [
+    "down",
+    "left",
+    "right",
+    "up"
+  ],
+  "frameWidth": 64,
+  "frameHeight": 80,
+  "processing": "Equal grid slicing, alpha trim, nearest-neighbor resampling, shared feet baseline; source alpha preserved"
+}

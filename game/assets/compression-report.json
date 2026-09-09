@@ -216,6 +216,24 @@
     "encoding": "lossless"
   },
   {
+    "file": "assets/gift-shade-walk-v1.webp",
+    "source": "assets/gift-shade-walk-v1.png",
+    "source_bytes": 74705,
+    "bytes": 47038,
+    "source_sha256": "e41cc3ad4e080cd3ec382585fde64cb010879b7ba1635300b1ca79ffc33f5094",
+    "sha256": "3e8ac09c13cc358c992defadcb02f7e29c8f97a2e76c487b4282a95053557a17",
+    "encoding": "lossless"
+  },
+  {
+    "file": "assets/gift-shade-contact-v1.webp",
+    "source": "assets/gift-shade-contact-v1.png",
+    "source_bytes": 1559661,
+    "bytes": 249690,
+    "source_sha256": "b0c289f69487d091f5477dd357a12c8b0c4e800253dad2df44ac7854b814ea41",
+    "sha256": "42d6131cbc73e9b65a81a6359f9f9660d11cca7d7fc630b56760d3b3cf42032d",
+    "encoding": "webp-q95"
+  },
+  {
     "file": "audio/ward-exploration-v3.opus",
     "source": "audio/ward-exploration-v3.mp3",
     "source_bytes": 641194,
@@ -654,6 +672,15 @@
     "bytes": 5373,
     "source_sha256": "765c953f9e53821aa41ad6b02d51179642afe99d733d0c4e51ea374d9257cca9",
     "sha256": "1cdffed8b39bae77726cab7bbff83329ac267c647f7c08e1afe94656e58084c9",
+    "encoding": "opus-40k"
+  },
+  {
+    "file": "audio/sfx/shade-contact-v1.opus",
+    "source": "audio/sfx/shade-contact-v1.mp3",
+    "source_bytes": 20106,
+    "bytes": 6852,
+    "source_sha256": "1ce5e1169f96cdd5a7ff9d134713f301bbe88a73572127dc97666fde7989f94d",
+    "sha256": "ac5e23432e07b54d02c88c5b2b16dbeeead87fa75be0fdb74d8ec7d7e05172d5",
     "encoding": "opus-40k"
   }
 ]

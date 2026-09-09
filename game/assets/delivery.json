@@ -119,6 +119,16 @@
       "source": "/assets/garden-pine-v1.png",
       "file": "/assets/garden-pine-v1.webp",
       "encoding": "lossless"
+    },
+    {
+      "source": "/assets/gift-shade-walk-v1.png",
+      "file": "/assets/gift-shade-walk-v1.webp",
+      "encoding": "lossless"
+    },
+    {
+      "source": "/assets/gift-shade-contact-v1.png",
+      "file": "/assets/gift-shade-contact-v1.webp",
+      "encoding": "webp-q95"
     }
   ],
   "staticFiles": [
@@ -142,11 +152,11 @@
     "/fonts/locale-latin-84536a0a4d.woff2",
     "/fonts/locale-ar-b37007c412.woff2",
     "/fonts/locale-he-f6569a40cd.woff2",
-    "/fonts/locale-th-00cbed7909.woff2",
-    "/fonts/locale-my-4e9be0980c.woff2",
-    "/fonts/locale-ja-0b70e631e6.woff2",
-    "/fonts/locale-ko-13c0abbc8d.woff2",
-    "/fonts/locale-zh-Hans-9a99e4bbaa.woff2",
-    "/fonts/locale-zh-Hant-4a4ee8f885.woff2"
+    "/fonts/locale-th-d1a66109d6.woff2",
+    "/fonts/locale-my-90ceec38bb.woff2",
+    "/fonts/locale-ja-a8c4997c49.woff2",
+    "/fonts/locale-ko-b3579f075d.woff2",
+    "/fonts/locale-zh-Hans-0395ae21b3.woff2",
+    "/fonts/locale-zh-Hant-9277c4539d.woff2"
   ]
 }

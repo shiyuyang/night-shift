@@ -1,0 +1,7 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "One isolated Japanese ghost horror death stinger, immediate startling attack. A close female breath suddenly tears into a short unnatural rasp layered with a dry television electrical crack and a deep chest impact. Raw intimate and frightening, no words, no melody, no long scream, no music, no background ambience. Abrupt onset in first 20 milliseconds, decays into a faint reversed breath and cuts to silence. 1.2 seconds.",
+  "requestedSeconds": 1.2,
+  "generatedAt": "2026-09-09T06:43:31.877294+00:00"
+}
