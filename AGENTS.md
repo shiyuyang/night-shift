@@ -15,3 +15,7 @@ Ledger copy must fit the fixed page without scrolling, clipping, shrinking photo
 # R2 release policy
 
 After successful R2 uploads, do not run remote hash verification, public GET/HEAD reachability probes, or bulk asset download/decode checks unless the user explicitly requests them. Upload command success is sufficient to proceed with deployment. `npm run assets:publish` must skip these checks by default; use `npm run assets:publish -- --verify` only on explicit request. Likewise, set `VERIFY_R2=1` for deployment inventory checks only on explicit request. Keep local manifest/version consistency checks and normal application smoke tests. Record an unverified upload as published, never as remotely verified. This policy supersedes older release-skill instructions requiring post-upload R2 verification.
+
+# Test parallelism
+
+Use `npm test` for the full CPU suite. Its runner budgets workers from available CPUs and RAM and executes ordinary tests and the 1,400-layout pool in separate phases. Keep seed coverage and global fallback/diversity assertions intact. Use `TEST_WORKERS` to override the budget; use `npm run test:layouts -- --seed N --night N --workers 1` to reproduce failures. Do not add a second independently sized heavy worker pool inside this runner. Keep browser concurrency separate. See docs/testing.md.

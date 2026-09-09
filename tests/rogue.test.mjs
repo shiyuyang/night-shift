@@ -1,7 +1,7 @@
 import {setLocale} from '../src/i18n.ts';
 setLocale('zh-Hans');
 import test from 'node:test';import assert from 'node:assert/strict';
-import {RogueRun,PressureDirector,cacheOutcome,waterPhase} from '../src/runtime/rogue-run.ts';
+import {RogueRun,PressureDirector,waterPhase} from '../src/runtime/rogue-run.ts';
 import {makeLevel} from '../src/levels.ts';import {center,featureSafetyBox} from '../src/runtime/rogue-content.ts';import {validatePlayableLevel} from '../src/runtime/level-validation.ts';
 const feature=(kind,extra={})=>({id:kind,kind,x:100,y:100,width:24,height:20,roll:.7,reward:'flash',...extra});
 test('supply cabinet gives exactly one item with one interaction and no surprise alarm',()=>{const r=new RogueRun([feature('cache')]),p={x:112,y:110};assert.match(r.hint(p),/搜索/);const outcome=r.interact(p,false);assert.equal(outcome.filter(e=>e.type==='loot').length,1);assert.equal(outcome.some(e=>e.type==='alarm'),false);assert.equal(r.interact(p,false).length,0);assert.match(r.hint(p),/搜空/);assert.equal(r.stats.cachesOpened,1);});

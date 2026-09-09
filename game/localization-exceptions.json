@@ -1,9 +1,16 @@
 {
   "dnt": [
-    {"text":"夜勤病棟","reason":"User-approved global image title; keep the same accessible title."},
-    {"text":"EXIT","reason":"Existing international exit sign; localized instructions also explain how to escape."},
-    {"text":"● REC","reason":"Existing camera recording indicator, not a gameplay instruction."}
-  ],
-  "legacyUnreachableModules": ["src/scene.ts", "src/progression.ts"],
-  "legacyPolicy": "Retired prototype modules are not imported by the current game. If connected to an entry point, they must pass the same player-copy checks before release."
+    {
+      "text": "夜勤病棟",
+      "reason": "User-approved global image title; keep the same accessible title."
+    },
+    {
+      "text": "EXIT",
+      "reason": "Existing international exit sign; localized instructions also explain how to escape."
+    },
+    {
+      "text": "● REC",
+      "reason": "Existing camera recording indicator, not a gameplay instruction."
+    }
+  ]
 }

@@ -34,7 +34,7 @@ TT 礼物 webhook
 
 地图设计尺寸 960 × 576，逻辑网格 24px；角色采用约 16 × 32 的像素轮廓。LDtk 建议层：Floor、Walls、Props、Collision(IntGrid)、Entities。实体类型：PlayerSpawn、Fuse、Exit、GhostSpawn、Light。通过导出 JSON 的 `levels[].layerInstances` 读取 IntGrid 与实体位置；转换为独立关卡数据，然后由 Phaser 构建场景。不要将 LDtk 格式耦合到礼物事件系统。
 
-当前几何场景集中在 `src/scene.ts`，替换时应先抽出碰撞矩形和实体坐标，再换图块，保持触发距离与出口逻辑不变。
+初版几何场景代码现已删除。当前入口为 `src/endless.ts`，布局源文件为 `maps/*.ldtk`，由内容工具导出运行数据。
 
 ## Aseprite 素材工作流（计划）
 

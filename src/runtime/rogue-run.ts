@@ -2,7 +2,6 @@ import {t as msg} from '../i18n.ts';
 import type {Position,Box} from '../collision.ts';
 import {center,type Feature} from './rogue-content.ts';
 export type RogueEvent={type:'box-search'}|{type:'noise'}|{type:'message';text:string}|{type:'sound';id:string}|{type:'loot';item:'flash'|'decoy'|'bandage';at:Position;full?:boolean}|{type:'alarm';at:Position}|{type:'damage';amount:number}|{type:'shortcut';gate:Box};
-export function cacheOutcome(roll:number){return {loot:roll<.9,alarm:roll>=.6};}
 export function waterPhase(time:number,offset=0){const t=(time+offset)%10;return t<2?'warning':t<5?'live':'safe';}
 export class PressureDirector{
  recovery=0;tokens=2;refill=0;phase=msg("rogue.explore");
@@ -11,7 +10,7 @@ export class PressureDirector{
  hurt(){this.recovery=Math.max(this.recovery,7);}
 }
 export class RogueRun{
- time=0;opened=new Set<string>();armed='';armUntil=0;generatorCharge=0;generatorId='';runningMachine='';machineTime=0;hidden='';hideTime=0;noiseCooldown=0;hurtCooldown=0;blockerPhase:'idle'|'warning'|'active'='idle';blockerClock=0;blockerStun=0;viewerCooldown=0;
+ time=0;opened=new Set<string>();generatorCharge=0;generatorId='';runningMachine='';machineTime=0;hidden='';hideTime=0;noiseCooldown=0;hurtCooldown=0;blockerPhase:'idle'|'warning'|'active'='idle';blockerClock=0;blockerStun=0;viewerCooldown=0;
  director=new PressureDirector();stats={cachesOpened:0,alarms:0,shortcuts:0,hazardsHit:0,hides:0,viewerAccepted:0,viewerRejected:0};
  features:Feature[];
  constructor(features:Feature[]=[]){this.features=features;}
@@ -32,7 +31,7 @@ export class RogueRun{
  }
  tick(dt:number,p:Position,moving:boolean,sprinting:boolean,holding:boolean,danger:boolean):RogueEvent[]{
  this.time+=dt;this.noiseCooldown=Math.max(0,this.noiseCooldown-dt);this.hurtCooldown=Math.max(0,this.hurtCooldown-dt);this.blockerStun=Math.max(0,this.blockerStun-dt);this.viewerCooldown=Math.max(0,this.viewerCooldown-dt);this.machineTime=Math.max(0,this.machineTime-dt);const events:RogueEvent[]=[];
- const f=this.near(p);if(this.armed&&(this.time>this.armUntil||f?.id!==this.armed))this.armed='';
+ const f=this.near(p);
  if(this.hidden){this.hideTime+=dt;if(moving||this.hideTime>=8){this.hidden='';events.push({type:'alarm',at:p},{type:'sound',id:'breath'},{type:'message',text:msg("rogue.you-left-the-locker-your-breathing-exposed")});}}
  if(f?.kind==='generator'&&!this.opened.has(f.id)&&holding&&!moving){this.generatorCharge+=dt;this.generatorId=f.id;if(this.noiseCooldown===0){events.push({type:'alarm',at:center(f)},{type:'sound',id:'relay'});this.noiseCooldown=1;}if(this.generatorCharge>=2.5){this.opened.add(f.id);this.stats.shortcuts++;events.push({type:'shortcut',gate:f.gate!},{type:'message',text:msg("rogue.the-shutter-rises-shortcut-opened")});this.generatorCharge=0;}}
  else{this.generatorCharge=0;this.generatorId='';}
