@@ -1,0 +1,230 @@
+{
+  "recordedAt": "2026-09-10",
+  "environment": {
+    "cpu": "Ryzen 9 9950X",
+    "memory": "2 x 32 GiB DDR5-6000 EXPO",
+    "node": "26.8.1",
+    "kernel": "7.1.9-arch1-2"
+  },
+  "scopeNote": "Historical intermediate code, before candidate-query reuse and direct-grid validation. Not measurements of final 6e0d900. UMC is system-wide; map results include normal background activity.",
+  "physicalScaling": [
+    {
+      "workers": 8,
+      "trial": 1,
+      "seconds": 9.6,
+      "ipc": 4.266,
+      "stallPct": 13.64,
+      "stallBillions": 52.89,
+      "readGB": 229.18,
+      "readGBps": 23.87
+    },
+    {
+      "workers": 8,
+      "trial": 2,
+      "seconds": 9.6,
+      "ipc": 4.281,
+      "stallPct": 13.37,
+      "stallBillions": 51.63,
+      "readGB": 228.69,
+      "readGBps": 23.82
+    },
+    {
+      "workers": 13,
+      "trial": 1,
+      "seconds": 8.2,
+      "ipc": 3.2,
+      "stallPct": 24.3,
+      "stallBillions": 127.46,
+      "readGB": 231.66,
+      "readGBps": 28.25
+    },
+    {
+      "workers": 13,
+      "trial": 2,
+      "seconds": 8.2,
+      "ipc": 3.214,
+      "stallPct": 24.29,
+      "stallBillions": 127.08,
+      "readGB": 232.07,
+      "readGBps": 28.3
+    },
+    {
+      "workers": 16,
+      "trial": 1,
+      "seconds": 8.1,
+      "ipc": 2.655,
+      "stallPct": 30.3,
+      "stallBillions": 192.89,
+      "readGB": 233.34,
+      "readGBps": 28.81
+    },
+    {
+      "workers": 16,
+      "trial": 2,
+      "seconds": 8.1,
+      "ipc": 2.657,
+      "stallPct": 30.43,
+      "stallBillions": 193.61,
+      "readGB": 233.96,
+      "readGBps": 28.88
+    }
+  ],
+  "umc": [
+    {
+      "workload": "idle",
+      "readGBps": 0.5019181709412045,
+      "writeGBps": 0.0888793838542545,
+      "totalGBps": 0.5907975547954589,
+      "busUtilPct": 0.6165712946076392,
+      "channels": [
+        {
+          "controller": 0,
+          "seconds": 3.00063777,
+          "memclkGHz": 2.9943726729801177,
+          "readGBps": 0.2544200035181187,
+          "writeGBps": 0.045054955100428534,
+          "busUtilPct": 0.6250792498944472,
+          "coverage": 100.0
+        },
+        {
+          "controller": 1,
+          "seconds": 3.00063804,
+          "memclkGHz": 2.994374830694341,
+          "readGBps": 0.24749816742308578,
+          "writeGBps": 0.04382442875382597,
+          "busUtilPct": 0.6080633393208311,
+          "coverage": 100.0
+        }
+      ]
+    },
+    {
+      "workload": "map8",
+      "readGBps": 24.62161291899948,
+      "writeGBps": 22.65427919551556,
+      "totalGBps": 47.275892114515045,
+      "busUtilPct": 49.33821981002179,
+      "channels": [
+        {
+          "controller": 0,
+          "seconds": 9.624654604,
+          "memclkGHz": 2.994375203451197,
+          "readGBps": 12.32849855897021,
+          "writeGBps": 11.332829783488405,
+          "busUtilPct": 49.38702598228441,
+          "coverage": 100.0
+        },
+        {
+          "controller": 1,
+          "seconds": 9.624655004,
+          "memclkGHz": 2.9943756652079996,
+          "readGBps": 12.293114360029273,
+          "writeGBps": 11.321449412027155,
+          "busUtilPct": 49.28941363775917,
+          "coverage": 100.0
+        }
+      ]
+    },
+    {
+      "workload": "map13",
+      "readGBps": 29.413524937217836,
+      "writeGBps": 26.90056035684053,
+      "totalGBps": 56.314085294058366,
+      "busUtilPct": 58.77069497623789,
+      "channels": [
+        {
+          "controller": 0,
+          "seconds": 8.19852074,
+          "memclkGHz": 2.9943748560914174,
+          "readGBps": 14.728400186983002,
+          "writeGBps": 13.456365743364579,
+          "busUtilPct": 58.82856607110482,
+          "coverage": 100.0
+        },
+        {
+          "controller": 1,
+          "seconds": 8.198519677,
+          "memclkGHz": 2.9943755942759567,
+          "readGBps": 14.685124750234834,
+          "writeGBps": 13.444194613475952,
+          "busUtilPct": 58.71282388137096,
+          "coverage": 100.0
+        }
+      ]
+    },
+    {
+      "workload": "map16",
+      "readGBps": 29.747792706497528,
+      "writeGBps": 26.943323720789667,
+      "totalGBps": 56.6911164272872,
+      "busUtilPct": 59.164172090269574,
+      "channels": [
+        {
+          "controller": 0,
+          "seconds": 8.25632363,
+          "memclkGHz": 2.994375006954517,
+          "readGBps": 14.897653331450138,
+          "writeGBps": 13.47808802402771,
+          "busUtilPct": 59.227177190414,
+          "coverage": 100.0
+        },
+        {
+          "controller": 1,
+          "seconds": 8.25632365,
+          "memclkGHz": 2.994375553942825,
+          "readGBps": 14.85013937504739,
+          "writeGBps": 13.465235696761958,
+          "busUtilPct": 59.101166990125144,
+          "coverage": 100.0
+        }
+      ]
+    },
+    {
+      "workload": "stream13",
+      "readGBps": 42.57963353713811,
+      "writeGBps": 19.10904566224439,
+      "totalGBps": 61.688679199382506,
+      "busUtilPct": 64.3797571793066,
+      "channels": [
+        {
+          "controller": 0,
+          "seconds": 2.396695659,
+          "memclkGHz": 2.9943721056324573,
+          "readGBps": 21.293310656428236,
+          "writeGBps": 9.554769490238392,
+          "busUtilPct": 64.38761157152283,
+          "coverage": 100.0
+        },
+        {
+          "controller": 1,
+          "seconds": 2.39669592,
+          "memclkGHz": 2.994374535840158,
+          "readGBps": 21.28632288070987,
+          "writeGBps": 9.554276172006,
+          "busUtilPct": 64.37190278709036,
+          "coverage": 100.0
+        }
+      ]
+    }
+  ],
+  "latestScaling": {
+    "commit": "6e0d900",
+    "seconds": {
+      "13": [
+        3.8
+      ],
+      "16": [
+        3.6,
+        3.6
+      ],
+      "24": [
+        3.5,
+        3.6
+      ],
+      "32": [
+        3.7,
+        3.7
+      ]
+    },
+    "roundingNote": "CLI rounds to 0.1 seconds; 13-worker baseline was obtained from the full-suite test duration."
+  }
+}

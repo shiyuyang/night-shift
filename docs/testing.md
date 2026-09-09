@@ -2,6 +2,8 @@
 
 Use Node.js 24 or newer and run `npm test`. Content export and audio packing run once, before any test workers start.
 
+For the optimization sequence, correctness strategy, hardware-counter interpretation and reusable investigation workflow, see the [September 2026 performance retrospective](performance/2026-09-map-validation-retrospective.md).
+
 The runner uses one resource budget in two sequential phases:
 1. Ordinary unit/regression files run with Node's `--test-concurrency`.
 2. The 1,400-layout sweep runs in a fixed child-process pool. Each job contains 14 seed/night pairs; free workers immediately take the next job. This phase does not overlap the first phase.
@@ -10,7 +12,7 @@ The automatic budget is the smaller of:
 - 75% of `os.availableParallelism()`, rounded down;
 - available memory minus 1 GiB, divided by a 512 MiB per-worker allowance.
 
-At least one worker is used. Available memory comes from Node's `process.availableMemory()`, falling back to OS free memory. These are scheduling estimates, not memory limits. On a machine reporting 32 available logical CPUs, the CPU budget is 24 workers; lower available RAM can reduce it. This is suitable as a starting point for a future 9950X machine, not a benchmark of that hardware.
+At least one worker is used. Available memory comes from Node's `process.availableMemory()`, falling back to OS free memory. These are scheduling estimates, not memory limits. On a machine reporting 32 available logical CPUs, the CPU budget is 24 workers; lower available RAM can reduce it. This is a starting budget, not a universal optimum. Measurements of commit `6e0d900` on the local 9950X support retaining that default; see the retrospective for results and limits.
 
 Override the automatic budget when sharing the machine, diagnosing problems, or measuring scaling:
 
