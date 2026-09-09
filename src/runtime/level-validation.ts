@@ -1,3 +1,4 @@
+import {positionQuery} from './position-query.ts';
 import {feetAt,monsterFeetAt,overlaps,type Footprint,type Position} from '../collision.ts';
 import type {Level} from '../levels.ts';
 /** Grid spacing is smaller than all physical obstacles; cells test the actual actor footprint. */
@@ -50,6 +51,35 @@ export function reachablePositions(level:Level,open:boolean,footprint:Footprint=
 }
 /** Shortest walking distance between valid final-box and exit interaction positions. */
 export function escapeRouteLength(level:Level,points=reachablePositions(level,true)){
+ if(!points.length)return Infinity;
+ let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;
+ for(const p of points){
+  // Arbitrary caller-provided point sets retain the original exact-coordinate semantics.
+  if(!Number.isSafeInteger(p.x)||!Number.isSafeInteger(p.y))return escapeRouteLengthSparse(level,points);
+  minX=Math.min(minX,p.x);minY=Math.min(minY,p.y);maxX=Math.max(maxX,p.x);maxY=Math.max(maxY,p.y);
+ }
+ const cols=(maxX-minX)/8+1,rows=(maxY-minY)/8+1,size=cols*rows;
+ if(!Number.isInteger(cols)||!Number.isInteger(rows)||size>1_000_000)return escapeRouteLengthSparse(level,points);
+ for(const p of points)if((p.x-minX)%8||(p.y-minY)%8)return escapeRouteLengthSparse(level,points);
+ // 0 = absent, 1 = available, 2 = queued. No coordinate strings or per-step objects.
+ const cells=new Uint8Array(size),queue=new Int32Array(size),distance=new Int32Array(size);
+ let tail=0;
+ for(const p of points)cells[((p.y-minY)/8)*cols+(p.x-minX)/8]=1;
+ for(const p of points)if(Math.hypot(p.x-level.exit.x,p.y-level.exit.y)<37){
+  const at=((p.y-minY)/8)*cols+(p.x-minX)/8;
+  if(cells[at]===1){cells[at]=2;queue[tail++]=at;}
+ }
+ const visit=(at:number,d:number)=>{if(cells[at]===1){cells[at]=2;distance[at]=d;queue[tail++]=at;}};
+ for(let i=0;i<tail;i++){
+  const at=queue[i],cx=at%cols,cy=Math.floor(at/cols);
+  if(Math.hypot(minX+cx*8-level.boxes[2].x,minY+cy*8-level.boxes[2].y)<44)return distance[at];
+  const d=distance[at]+8;
+  if(cx+1<cols)visit(at+1,d);if(cx>0)visit(at-1,d);
+  if(cy+1<rows)visit(at+cols,d);if(cy>0)visit(at-cols,d);
+ }
+ return Infinity;
+}
+function escapeRouteLengthSparse(level:Level,points:Position[]){
  const key=(x:number,y:number)=>`${x},${y}`,available=new Set(points.map(p=>key(p.x,p.y))),seen=new Set<string>(),queue:{x:number;y:number;distance:number}[]=[];
  for(const p of points)if(Math.hypot(p.x-level.exit.x,p.y-level.exit.y)<37){queue.push({...p,distance:0});seen.add(key(p.x,p.y));}
  for(let i=0;i<queue.length;i++){const p=queue[i];if(Math.hypot(p.x-level.boxes[2].x,p.y-level.boxes[2].y)<44)return p.distance;
@@ -58,16 +88,16 @@ export function escapeRouteLength(level:Level,points=reachablePositions(level,tr
  return Infinity;
 }
 export function validatePlayableLevel(level:Level,checkDrawer=true):{valid:boolean;errors:string[]}{
- const closed=reachablePositions(level,false),open=reachablePositions(level,true),near=(points:Position[],p:Position,r:number)=>points.some(n=>Math.hypot(n.x-p.x,n.y-p.y)<r);
+ const closed=reachablePositions(level,false),open=reachablePositions(level,true),closedNear=positionQuery(closed),openNear=positionQuery(open);
  const errors:string[]=[];
  // Explicit dependency chain: free box -> ward key -> door; brass -> box 1 -> seal -> box 2.
- for(const [name,p,r] of [['brass',level.key,30],['free-box',level.boxes[0],38],['brass-box',level.boxes[1],38],['door',level.doorUse,38]] as const)if(!near(closed,p,r))errors.push(name+' inaccessible before unlock');
- if(near(closed,level.boxes[2],44))errors.push('locked room bypass');
- for(const [i,p]of level.boxes.entries())if(!near(open,p,38))errors.push('box '+i+' inaccessible after unlock');
- if(!near(open,level.exit,30))errors.push('exit inaccessible');
+ for(const [name,p,r] of [['brass',level.key,30],['free-box',level.boxes[0],38],['brass-box',level.boxes[1],38],['door',level.doorUse,38]] as const)if(!closedNear(p,r))errors.push(name+' inaccessible before unlock');
+ if(closedNear(level.boxes[2],44))errors.push('locked room bypass');
+ for(const [i,p]of level.boxes.entries())if(!openNear(p,38))errors.push('box '+i+' inaccessible after unlock');
+ if(!openNear(level.exit,30))errors.push('exit inaccessible');
  const escape=escapeRouteLength(level,open);if(!Number.isFinite(escape)||escape<600)errors.push('escape route must be reachable and at least 600 units');
- const monsters=reachablePositions(level,true,monsterFeetAt);
- for(const p of level.monsterSpawns)if(!near(monsters,p,12))errors.push('monster spawn disconnected');
+ const monsters=reachablePositions(level,true,monsterFeetAt),monsterNear=positionQuery(monsters);
+ for(const p of level.monsterSpawns)if(!monsterNear(p,12))errors.push('monster spawn disconnected');
  const drawer=level.zones.MorgueDrawerZone;if(checkDrawer&&drawer){const blocked={...level,props:[...level.props,{...drawer,kind:'machine' as const}]};errors.push(...validatePlayableLevel(blocked,false).errors.map(e=>'extended drawer: '+e));}
  return {valid:errors.length===0,errors};
 }

@@ -10,3 +10,12 @@ export function reachablePositions(level,open,footprint=feetAt){
  for(let i=0;i<queue.length;i++){const at=queue[i],cx=at%cols,cy=Math.floor(at/cols);points.push({x:x0+cx*step,y:y0+cy*step});for(const [dx,dy]of [[1,0],[-1,0],[0,1],[0,-1]]){const nx=cx+dx,ny=cy+dy,n=ny*cols+nx;if(nx<0||ny<0||nx>=cols||ny>=rows||seen[n])continue;seen[n]=1;if(valid(x0+nx*step,y0+ny*step))queue.push(n);}}
  return points;
 }
+
+export function escapeRouteLength(level,points=reachablePositions(level,true)){
+ const key=(x,y)=>`${x},${y}`,available=new Set(points.map(p=>key(p.x,p.y))),seen=new Set(),queue=[];
+ for(const p of points)if(Math.hypot(p.x-level.exit.x,p.y-level.exit.y)<37){queue.push({...p,distance:0});seen.add(key(p.x,p.y));}
+ for(let i=0;i<queue.length;i++){const p=queue[i];if(Math.hypot(p.x-level.boxes[2].x,p.y-level.boxes[2].y)<44)return p.distance;
+  for(const [dx,dy] of [[8,0],[-8,0],[0,8],[0,-8]]){const x=p.x+dx,y=p.y+dy,k=key(x,y);if(available.has(k)&&!seen.has(k)){seen.add(k);queue.push({x,y,distance:p.distance+8});}}
+ }
+ return Infinity;
+}
