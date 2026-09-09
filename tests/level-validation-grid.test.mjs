@@ -59,3 +59,36 @@ test('local point queries preserve strict distance thresholds and sparse/empty b
  assert.equal(near({x:32,y:0},32),false);
  assert.equal(near({x:32,y:0},32.000001),true);
 });
+
+test('candidate analysis reuses original-geometry queries without leaking across candidates',async()=>{
+ const {makeLevel}=await import('../src/levels.ts');
+ const {analyzePlayableLevel,validatePlayableLevel}=await import('../src/runtime/level-validation.ts');
+ for(const round of [2,6]){
+  const level=makeLevel(round),analysis=analyzePlayableLevel(level);
+  assert.deepEqual({valid:analysis.valid,errors:analysis.errors},validatePlayableLevel(level));
+  for(const [open,near] of [[false,analysis.closedNear],[true,analysis.openNear]]){
+   const points=reference(level,open);
+   for(const p of [level.spawn,level.key,level.exit,...level.boxes,...level.monsterSpawns])for(const radius of [8,30,38,44]){
+    assert.equal(near(p,radius),points.some(q=>Math.hypot(q.x-p.x,q.y-p.y)<radius));
+   }
+  }
+  assert.equal(analysis.closedNear(level.spawn,1),true);
+  level.props.push({...feetAt(level.spawn.x,level.spawn.y),kind:'crate'});
+  const blocked=analyzePlayableLevel(level);
+  assert.equal(blocked.valid,false);
+  assert.equal(blocked.closedNear(level.spawn,1),false);
+  assert.equal(analysis.closedNear(level.spawn,1),true);
+ }
+});
+
+test('direct grid validation preserves complete error lists including drawer recursion',async()=>{
+ const {makeLevel}=await import('../src/levels.ts');
+ const {validatePlayableLevel}=await import('../src/runtime/level-validation.ts');
+ const {referenceValidation}=await import('./helpers/reference-reachability.mjs');
+ for(let round=1;round<=8;round++){
+  const level=makeLevel(round,3);
+  const sealed={...level,props:[...level.props,{...feetAt(level.spawn.x,level.spawn.y),kind:'crate'}]};
+  const short={...level,exit:{x:level.boxes[2].x,y:level.boxes[2].y+28}};
+  for(const candidate of [level,sealed,short])assert.deepEqual(validatePlayableLevel(candidate),referenceValidation(candidate),`round=${round}`);
+ }
+});

@@ -3,7 +3,7 @@ import {difficultyForNight} from './difficulty.ts';
 import type {Box,Position} from '../collision.ts';
 import {feetAt,overlaps} from '../collision.ts';
 import type {Level} from '../levels.ts';
-import {reachablePositions,validatePlayableLevel} from './level-validation.ts';
+import {reachablePositions,analyzePlayableLevel} from './level-validation.ts';
 export type FeatureKind='empty-task'|'cache'|'generator'|'glass'|'water'|'steam'|'machine'|'locker'|'blocker';
 export interface Feature extends Box {id:string;kind:FeatureKind;roll:number;reward:'flash'|'decoy'|'bandage';hasLoot?:boolean;gate?:Box;}
 export const center=(f:Box):Position=>({x:f.x+f.width/2,y:f.y+f.height/2});
@@ -34,10 +34,10 @@ export function populateRogueContent(level:Level,rng:()=>number){
    const f:Feature={id:kind+'-'+level.features.length,kind,x:p.x-width/2,y:p.y-height/2,width,height,roll:rng(),reward:(['flash','decoy','bandage'] as const)[Math.floor(rng()*3)]};
    const safe=featureSafetyBox(f);if((level.theme===1&&level.round<=7)&&level.weeperFixed&&Math.hypot(center(f).x-level.weeperFixed.x,center(f).y-level.weeperFixed.y)<180)continue;if([...level.walls,...level.props].some(b=>overlaps(safe,b)))continue;
    const test={...level,props:[...level.props,...blocked.map(b=>({...b,kind:'crate' as const})),{...safe,kind:'crate' as const}]};
-   if(!validatePlayableLevel(test).valid)continue;
+   const validation=analyzePlayableLevel(test);if(!validation.valid)continue;
    // The visible front of each cabinet must be approachable, including after
    // all optional furniture has been placed.
-   const reach=positionQuery(reachablePositions(test,false));
+   const reach=validation.closedNear;
    if([...level.features,f].some(v=>!reach({x:center(v).x,y:center(v).y+28},8)))continue;
    level.features.push(f);blocked.push(safe);break;
   }
@@ -68,8 +68,8 @@ function populateEmptyTaskBoxes(level:Level,rng:()=>number){
    const safe=featureSafetyBox(f);
    if([...level.walls,...level.props,...features.map(featureSafetyBox)].some(b=>overlaps(safe,b)))continue;
    const test={...level,props:[...level.props,...[...features,f].map(v=>({...featureSafetyBox(v),kind:'crate' as const}))]};
-   if(!validatePlayableLevel(test).valid)continue;
-   const afterClosed=positionQuery(reachablePositions(test,false)),afterOpen=positionQuery(reachablePositions(test,true));
+   const validation=analyzePlayableLevel(test);if(!validation.valid)continue;
+   const afterClosed=validation.closedNear,afterOpen=validation.openNear;
    if([...features,f].some(v=>!(v.kind==='empty-task'?afterOpen:afterClosed)({x:center(v).x,y:center(v).y+28},8)))continue;
    features.push(f);break;
   }
