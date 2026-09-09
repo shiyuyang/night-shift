@@ -22,3 +22,16 @@ test('finale plans a forward intersection including warning, never visible or ad
 test('room foley waits for the actual furnishing and yields to critical encounters',()=>{
  const a=new SceneAudio(),l={theme:0,props:[{kind:'bed',x:150,y:150,width:40,height:70}]},p={x:140,y:200};assert.equal(a.tick(6,l,p,0,true),undefined);assert.equal(a.tick(.1,l,{x:900,y:200},0,false),undefined);assert.equal(a.tick(.1,l,p,0,false).id,'ward-bed-call');assert.equal(a.tick(20,l,p,0,false),undefined);
 });
+
+test('forced door approach follows the doorway rather than the nearest wall and cancels when player leaves',async()=>{
+ const {doorApproach}=await import('../src/runtime/door-approach.ts');
+ const {monsterFeetAt,overlaps}=await import('../src/collision.ts');
+ const {patrolPath,followPatrolPath}=await import('../src/patrol.ts');
+ const door={x:240,y:200,width:64,height:16},walls=[{x:0,y:200,width:240,height:16},{x:304,y:200,width:296,height:16}],solids=[...walls,door],bounds={x:16,y:16,width:560,height:400};
+ let enemy={x:80,y:270};const inside={x:80,y:100},outside={x:450,y:300};
+ const target=doorApproach(enemy,inside,door,solids,bounds);assert.ok(target);assert.ok(target.x>=240&&target.x<=304);
+ const route=patrolPath(enemy,target,solids,bounds,monsterFeetAt);for(let i=0;i<200;i++){enemy=followPatrolPath(enemy,route,5,solids).position;assert.ok(!solids.some(b=>overlaps(monsterFeetAt(enemy.x,enemy.y),b)));}
+ assert.ok(Math.hypot(enemy.x-target.x,enemy.y-target.y)<1);
+ assert.equal(doorApproach(enemy,outside,door,solids,bounds),undefined);
+ assert.equal(doorApproach({x:80,y:270},inside,door,[...solids,{x:240,y:180,width:64,height:20}],bounds),undefined);
+});

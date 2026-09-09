@@ -1,4 +1,4 @@
-/** Finale-only persistence, driven by sensed targets rather than the player's hidden position. */
+/** Battering timer; the finale doorway task decides whether the attacker is in position. */
 export class DoorBreach {
  progress=0;broken=false;private beat=0;
  tick(dt:number,pushing:boolean){

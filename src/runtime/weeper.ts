@@ -5,7 +5,7 @@ export const weeperRules=rules.weeper;
 const riseThreshold=.75;
 export type WeeperPhase='idle'|'alert'|'warning'|'chasing'|'dash'|'stunned'|'returning';
 export type WeeperEvent='cry'|'warning'|'dash'|'suppressed'|'hit'|'quiet';
-export interface WeeperInput {player:Position;hidden:boolean;angle:number;light:boolean;lightRange?:number;sprinting:boolean;noise:boolean;solids:Box[];architecture:Box[];bounds:Box;immune:boolean;flash?:boolean;}
+export interface WeeperInput {pursuitTarget?:Position;player:Position;hidden:boolean;angle:number;light:boolean;lightRange?:number;sprinting:boolean;noise:boolean;solids:Box[];architecture:Box[];bounds:Box;immune:boolean;flash?:boolean;}
 /** One deterministic patient. No damage can occur before the flash decision. */
 export class Weeper {
  private lungeCommitted=false;roaming=false;private roamPoints:Position[];private roamWait=7;private roamIndex=0;private roamGoal?:Position;private roamRoute:Position[]=[];
@@ -62,7 +62,7 @@ export class Weeper {
    if(visible&&distance<=weeperRules.lungeRadius){this.phase='warning';this.lungeCommitted=true;this.clock=weeperRules.warningSeconds;this.angle=Math.atan2(input.player.y-this.position.y,input.player.x-this.position.x);return ['quiet','warning'];}
    // An awakened patient keeps hunting, including waiting outside a closed door or locker.
    this.routeClock-=dt;
-   if(this.routeClock<=0){this.route=patrolPath(this.position,input.player,input.architecture,input.bounds,monsterFeetAt);this.routeClock=.3;}
+   if(this.routeClock<=0){this.route=patrolPath(this.position,input.pursuitTarget??input.player,input.architecture,input.bounds,monsterFeetAt);this.routeClock=.3;}
    const before=this.position,movement=followPatrolPath(before,this.route,weeperRules.chaseSpeed*dt,input.architecture,monsterFeetAt);
    this.position=movement.position;
    if(Math.hypot(this.position.x-before.x,this.position.y-before.y)>.001)this.angle=Math.atan2(this.position.y-before.y,this.position.x-before.x);
