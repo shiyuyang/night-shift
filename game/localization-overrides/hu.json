@@ -9,5 +9,7 @@
   "event.supply": "Tartalék: +1 villanás",
   "event.power": "Ingadozó áram; kimaradások",
   "menu.anomaly": "{threat}\n{event}",
-  "menu.start": "Indítás →"
+  "menu.start": "Indítás →",
+  "rogue.search-supply-cabinet": "Készletszekrény · E a kereséshez",
+  "gameplay.task-box-empty": "A láda üres"
 }

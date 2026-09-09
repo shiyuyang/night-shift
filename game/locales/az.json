@@ -247,7 +247,6 @@
   "rogue.pursuit": "Axtarış",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Sığınmaq · E ilə çıxmaq. Nefəs alma 8 saniyədən sonra sizi aşkar edir",
   "rogue.supply-cabinet-empty": "Təchizat qutusu · Boş",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Təchizat qutusu · E ilə bir əşya topla",
   "rogue.shortcut-opened": "Qısa yol açıldı",
   "rogue.hold-e-to-crank-generator-noise-attracts": "E ilə generatoru fırlat: {percent}%. Səs düşmənləri cəlb edir",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E ilə gürültülü maşını işə sal · Axtarışçılardan 10 saniyə üçün diqqəti yayındır",
@@ -343,5 +342,7 @@
   "menu.night-title": "{night, number}-ci gecə · {area}",
   "menu.night": "{night, number}-ci gecə",
   "menu.shift-date": "Növbə tarixi: {date} · {weekday, select, d0 {B.} d1 {B.E.} d2 {Ç.A.} d3 {Ç.} d4 {C.A.} d5 {C.} d6 {Ş.} other {}}",
-  "gameplay.listener-flash-immune": "İşıq parıltısı Dinləyiciyə təsir etmir. Yem istifadə edin."
+  "gameplay.listener-flash-immune": "İşıq parıltısı Dinləyiciyə təsir etmir. Yem istifadə edin.",
+  "rogue.search-supply-cabinet": "Təchizat dolabı · Axtarmaq üçün E",
+  "gameplay.task-box-empty": "Qutu boşdur"
 }

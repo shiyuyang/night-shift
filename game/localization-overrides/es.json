@@ -8,5 +8,7 @@
   "event.supply": "Suministros: +1 destello",
   "event.power": "Corriente inestable; cortes",
   "menu.anomaly": "{threat}\n{event}",
-  "menu.start": "Comenzar →"
+  "menu.start": "Comenzar →",
+  "rogue.search-supply-cabinet": "Armario de suministros · E para registrar",
+  "gameplay.task-box-empty": "La caja está vacía"
 }

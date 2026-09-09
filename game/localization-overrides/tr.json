@@ -8,5 +8,7 @@
   "event.quiet": "Kovalamacalar daha seyrek",
   "event.supply": "Ek erzak: +1 flaş",
   "event.power": "Elektrik kararsız; kesintiler",
-  "menu.anomaly": "{threat}\n{event}"
+  "menu.anomaly": "{threat}\n{event}",
+  "rogue.search-supply-cabinet": "Malzeme dolabı · Aramak için E",
+  "gameplay.task-box-empty": "Kutu boş"
 }

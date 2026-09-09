@@ -247,7 +247,6 @@
   "rogue.pursuit": "追逐",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "藏身中 · E 离开 / 8 秒后呼吸声会暴露位置",
   "rogue.supply-cabinet-empty": "补给药柜 · 已搜空",
-  "rogue.supply-cabinet-e-to-collect-one-item": "补给药柜 · E 领取一件道具",
   "rogue.shortcut-opened": "捷径已开启",
   "rogue.hold-e-to-crank-generator-noise-attracts": "按住 E 手摇发电 {percent}% · 噪声引敌",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E 开启噪声设备 · 持续 10 秒引开追踪者",
@@ -343,5 +342,7 @@
   "menu.night-title": "第 {night, number} 夜 · {area}",
   "menu.night": "第 {night, number} 夜",
   "menu.shift-date": "值班日期: {date} · {weekday, select, d0 {周日} d1 {周一} d2 {周二} d3 {周三} d4 {周四} d5 {周五} d6 {周六} other {}}",
-  "gameplay.listener-flash-immune": "闪光对听声者无效，请使用诱饵。"
+  "gameplay.listener-flash-immune": "闪光对听声者无效，请使用诱饵。",
+  "rogue.search-supply-cabinet": "补给箱 · E 搜索",
+  "gameplay.task-box-empty": "箱内已空"
 }

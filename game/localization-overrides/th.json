@@ -8,5 +8,7 @@
   "event.quiet": "เว้นช่วงไล่ล่านานขึ้น",
   "event.supply": "เสบียงเพิ่ม: แฟลช +1",
   "event.power": "ไฟไม่เสถียร ระวังไฟดับ",
-  "menu.anomaly": "{threat}\n{event}"
+  "menu.anomaly": "{threat}\n{event}",
+  "rogue.search-supply-cabinet": "ตู้เสบียง · E เพื่อค้นหา",
+  "gameplay.task-box-empty": "กล่องว่างเปล่า"
 }

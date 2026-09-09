@@ -9,5 +9,7 @@
   "event.supply": "Tiếp tế: +1 chớp sáng",
   "event.power": "Điện chập chờn, hay mất điện",
   "menu.anomaly": "{threat}\n{event}",
-  "menu.start": "Tuần tra →"
+  "menu.start": "Tuần tra →",
+  "rogue.search-supply-cabinet": "Tủ tiếp tế · E để lục tìm",
+  "gameplay.task-box-empty": "Hộp đã trống"
 }

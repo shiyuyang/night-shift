@@ -7,7 +7,7 @@ try{
   await page.addInitScript(()=>{localStorage.setItem('night-shift-campaign-v1',JSON.stringify({unlocked:7}));localStorage.setItem('night-shift-monster-lessons-v1',JSON.stringify(['monster-listener','monster-light-shy','monster-patroller','monster-weeper']));});
   await page.goto((process.env.BASE_URL||'http://127.0.0.1:5174/')+'?playtest=density');await page.locator('#start:enabled').waitFor();await page.locator(`[data-night="${round}"]`).click();await page.locator('#start').click();await page.waitForFunction(()=>window.__nightshiftScene?.active);
   await page.evaluate(()=>{const s=window.__nightshiftScene;s.tutorial.skip();s.protection=999;});
-  if(round>1)await page.waitForFunction(()=>window.__nightshiftScene.ghost.visible,{},{timeout:12000});
+  if(round>1)await page.waitForFunction(()=>window.__nightshiftScene.ghost.visible,{},{timeout:24000});
   const daily=await page.evaluate(()=>{const s=window.__nightshiftScene;return s.reserves.filter(r=>r.position).length;});assert.equal(daily,0);
   if(round===4){
    const before=await page.evaluate(()=>{const s=window.__nightshiftScene;s.memory=0;s.patrolUnseen=99;s.lastThreatAt=-100;s.ghostTime=.1;return {x:s.ghost.x,y:s.ghost.y};});
@@ -17,6 +17,7 @@ try{
   }
   // Controlled alarm fixture. Spawn origin and motion use real scene updates.
   await page.evaluate(()=>{const s=window.__nightshiftScene;s.door=false;s.player.setPosition(s.level.boxes[2].x,s.level.boxes[2].y+24);s.opened=[true,true,true];s.state.fuses=3;s.escalateSearch();s.flashlightOn=false;});
+  if(round<4){await page.waitForTimeout(800);assert.equal(await page.evaluate(()=>window.__nightshiftScene.reserves.filter(r=>r.position).length),0);await page.close();continue;}
   await page.waitForFunction(n=>window.__nightshiftScene.reserves.filter(r=>r.position).length===1,round,{timeout:10000});
   const entry=await page.evaluate(()=>{const s=window.__nightshiftScene;return {exit:s.level.exit,primary:{x:s.ghost.x,y:s.ghost.y},units:s.reserves.flatMap((r,i)=>r.position?[{i,entry:r.entry,position:{...r.position}}]:[]),targets:s.interceptTargets};});
   for(const r of entry.units)assert.ok(Math.hypot(r.entry.x-entry.exit.x,r.entry.y-entry.exit.y)<=225,JSON.stringify({round,r}));

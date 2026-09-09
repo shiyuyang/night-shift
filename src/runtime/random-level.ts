@@ -1,3 +1,4 @@
+import {difficultyForNight} from './difficulty.ts';
 import searchSpots from '../../game/search-spots.json' with {type:'json'};
 import {weeperExclusion} from './weeper-placement.ts';
 import {populateRogueContent} from './rogue-content.ts';
@@ -10,9 +11,10 @@ export function openingSearchPairs(base:Level){
  const solids=[...base.walls,...base.props,base.door];
  // Authoring pools retain room purpose. Require a turn around real geometry,
  // rather than making small objects darker or extending a straight walk.
- const hidden=(p:{x:number;y:number})=>!clearContact(base.spawn,p,solids);
+ const d=difficultyForNight(base.round);
+ const hidden=(p:{x:number;y:number})=>!d.hiddenOpening||!clearContact(base.spawn,p,solids);
  return spots.key.filter(hidden).flatMap(key=>spots.free.filter(box=>hidden(box)
-  &&Math.hypot(key.x-box.x,key.y-box.y)>=300&&!clearContact(key,box,solids)).map(box=>({key,box})));
+  &&Math.hypot(key.x-box.x,key.y-box.y)>=d.openingSeparation&&(!d.hiddenOpening||!clearContact(key,box,solids))).map(box=>({key,box})));
 }
 function candidate(base:Level,seed:number):Level{
  const level=structuredClone(base),rng=seededRandom(seed);

@@ -6,5 +6,7 @@
   "event.quiet": "מרווח ארוך בין מרדפים",
   "event.supply": "אספקה: הבזק +1",
   "event.power": "חשמל לא יציב; הפסקות",
-  "menu.anomaly": "{threat}\n{event}"
+  "menu.anomaly": "{threat}\n{event}",
+  "rogue.search-supply-cabinet": "ארון אספקה · E לחיפוש",
+  "gameplay.task-box-empty": "הארגז ריק"
 }

@@ -9,5 +9,7 @@
   "menu.anomaly": "{threat}\n{event}",
   "note.0": "Койки пусты. Звонок вызова не стихает.",
   "stage.0": "Заброшенная палата",
-  "menu.start": "Начать обход →"
+  "menu.start": "Начать обход →",
+  "rogue.search-supply-cabinet": "Шкаф с припасами · E — обыскать",
+  "gameplay.task-box-empty": "Ящик пуст"
 }

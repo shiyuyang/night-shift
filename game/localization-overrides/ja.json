@@ -89,7 +89,6 @@
   "ui.searching-raises-danger-the-final-fuse-starts": "物資を探すほど危険が高まる。最後のヒューズを取ると通電まで8秒かかる。脱出できるようになるまで動き続けよう。聞き耳を立てる者からは距離を取り、光を嫌う者には灯りを向ける。壁、家具、閉じた扉は敵の進路を遮る。",
   "ui.from-stage-carry-one-flash-decoy-and": "ステージ2からは閃光器、音の囮、包帯を一つずつ携行する。補給の多いステージでは閃光器が一つ増える。十字印の棚で E を押すと補給できる。背の高いロッカーでは最大8秒隠れられるが、先に敵の視線を切ること。普通の家具は背景や遮蔽物としてのみ使われる。",
   "gameplay.extra-supplies-one-additional-flash-per-stage": "補給増加：各ステージで閃光器を一つ追加",
-  "rogue.supply-cabinet-e-to-collect-one-item": "補給棚 · E で道具を一つ入手",
   "ui.bandage": "包帯",
   "interaction.fuses": "出口 · ヒューズ {count}/3",
   "ui.night-patrol-logbook": "夜間巡回記録簿",
@@ -120,5 +119,7 @@
   "command.ghost.description": "3秒の予告後に追跡が始まる。閃光器や音の囮で対処しよう。 閃光は聞き耳を立てる者には効きません。囮を使いましょう。",
   "command.reveal": "物資を探す",
   "command.reveal.description": "物資と棚の位置を表示する",
-  "ui.archived-footage-not-live": "病棟閉鎖前"
+  "ui.archived-footage-not-live": "病棟閉鎖前",
+  "rogue.search-supply-cabinet": "補給箱 · Eで調べる",
+  "gameplay.task-box-empty": "箱の中は空だ"
 }

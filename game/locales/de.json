@@ -247,7 +247,6 @@
   "rogue.pursuit": "Verfolgung",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Verstecken · E zum Verlassen. Atmen enthüllt dich nach 8 Sekunden",
   "rogue.supply-cabinet-empty": "Vorratsschrank · Leer",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Verschrankung · E, um ein Gegenstand zu sammeln",
   "rogue.shortcut-opened": "Abkürzung geöffnet",
   "rogue.hold-e-to-crank-generator-noise-attracts": "E halten, um Generator zu betätigen: {percent}%. Lärm zieht Feinde an",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E, um laute Maschine zu starten · Lenkt Verfolger für 10 Sekunden ab",
@@ -343,5 +342,7 @@
   "menu.night-title": "Nacht {night, number} · {area}",
   "menu.night": "Nacht {night, number}",
   "menu.shift-date": "Dienstdatum: {date} · {weekday, select, d0 {So} d1 {Mo} d2 {Di} d3 {Mi} d4 {Do} d5 {Fr} d6 {Sa} other {}}",
-  "gameplay.listener-flash-immune": "Blitze wirken nicht auf den Lauscher. Benutze einen Köder."
+  "gameplay.listener-flash-immune": "Blitze wirken nicht auf den Lauscher. Benutze einen Köder.",
+  "rogue.search-supply-cabinet": "Vorratsschrank · E zum Durchsuchen",
+  "gameplay.task-box-empty": "Die Kiste ist leer"
 }

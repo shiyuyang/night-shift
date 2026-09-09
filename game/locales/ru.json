@@ -247,7 +247,6 @@
   "rogue.pursuit": "Преследование",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Спрятаться · E, чтобы выйти. Дыхание обнаружит вас через 8 секунд",
   "rogue.supply-cabinet-empty": "Медицинский шкаф · Пусто",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Медицинский шкаф · E, чтобы взять один предмет",
   "rogue.shortcut-opened": "Короткий путь открыт",
   "rogue.hold-e-to-crank-generator-noise-attracts": "Зажмите E, чтобы запустить генератор: {percent}%. Шум привлекает врагов",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E, чтобы запустить шумное оборудование · Отвлекает преследователей на 10 секунд",
@@ -343,5 +342,7 @@
   "menu.night-title": "Ночь {night, number} · {area}",
   "menu.night": "Ночь {night, number}",
   "menu.shift-date": "Дата смены: {date} · {weekday, select, d0 {вс} d1 {пн} d2 {вт} d3 {ср} d4 {чт} d5 {пт} d6 {сб} other {}}",
-  "gameplay.listener-flash-immune": "Вспышки не действуют на Слушателя. Используйте приманку."
+  "gameplay.listener-flash-immune": "Вспышки не действуют на Слушателя. Используйте приманку.",
+  "rogue.search-supply-cabinet": "Шкаф с припасами · E — обыскать",
+  "gameplay.task-box-empty": "Ящик пуст"
 }

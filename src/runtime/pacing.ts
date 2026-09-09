@@ -1,6 +1,7 @@
+import {difficultyForNight} from './difficulty.ts';
 import tuning from '../../game/pacing.json' with {type:'json'};
 export {tuning};
-export function encounterProfile(round:number,fuses:number,remaining=tuning.exitStartup){const stage=Math.max(0,Math.min(3,fuses));return {speed:stage===3?(round===1?111:remaining<=10?121:117):Math.min(tuning.sprintSpeed-8,tuning.monsterBaseSpeed+stage*tuning.speedPerFuse+Math.min(8,Math.max(0,round-1)*2)),duration:tuning.encounterDuration+stage*tuning.durationPerFuse,rest:stage===3?8:Math.max(12,tuning.recoveryInterval-stage*4)};}
+export function encounterProfile(round:number,fuses:number,remaining=tuning.exitStartup){const d=difficultyForNight(round),stage=Math.max(0,Math.min(3,fuses));return {speed:stage===3?(d.finaleRush&&remaining<=10&&!d.endlessRest?121:d.finaleSpeed):Math.min(d.speedCap,tuning.monsterBaseSpeed+stage*tuning.speedPerFuse+Math.min(8,Math.max(0,round-1)*2)),duration:tuning.encounterDuration+stage*tuning.durationPerFuse,rest:stage===3?8:Math.max(12,tuning.recoveryInterval-stage*4)+(d.endlessRest?5:0)};}
 export class Stamina {
  value=100;exhausted=false;private recoveryDelay=0;
  get canSprint(){return !this.exhausted&&this.value>0;}

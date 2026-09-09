@@ -247,7 +247,6 @@
   "rogue.pursuit": "Vadászat",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Rejtőzködés · E a kilépéshez. A lélegzés 8 másodperc után feltár",
   "rogue.supply-cabinet-empty": "Ellátószekrény · Üres",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Ellátószekrény · E az egy tárgy begyűjtéséhez",
   "rogue.shortcut-opened": "Gyorsút megnyitva",
   "rogue.hold-e-to-crank-generator-noise-attracts": "E a generátor kerekezéséhez: {percent}%. A zaj vonzza az ellenségeket",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E a zajos gépek indításához · 10 másodpercre eltereli a vadászokat",
@@ -343,5 +342,7 @@
   "menu.night-title": "{night, number}. éjszaka · {area}",
   "menu.night": "{night, number}. éjszaka",
   "menu.shift-date": "Műszak dátuma: {date} · {weekday, select, d0 {V} d1 {H} d2 {K} d3 {Sze} d4 {Cs} d5 {P} d6 {Szo} other {}}",
-  "gameplay.listener-flash-immune": "A villanások nem hatnak a Hallgatózóra. Használj csalit."
+  "gameplay.listener-flash-immune": "A villanások nem hatnak a Hallgatózóra. Használj csalit.",
+  "rogue.search-supply-cabinet": "Készletszekrény · E a kereséshez",
+  "gameplay.task-box-empty": "A láda üres"
 }

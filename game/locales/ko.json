@@ -247,7 +247,6 @@
   "rogue.pursuit": "추격",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "숨기기에 있습니다 · E 를 눌러 탈출. 숨은 채로 숨을 쉬면 8 초 후 감지됩니다",
   "rogue.supply-cabinet-empty": "의약품 캐비닛 · 비어 있습니다",
-  "rogue.supply-cabinet-e-to-collect-one-item": "의약품 캐비닛 · E 를 눌러 한 개를 수거합니다",
   "rogue.shortcut-opened": "단축로가 열렸습니다",
   "rogue.hold-e-to-crank-generator-noise-attracts": "E 를 눌러 발전기를 감습니다: {percent}%. 소음은 적을 유인합니다",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E 를 눌러 소음 기계 가동을 시작합니다 · 추격자를 10 초간 분산시킵니다",
@@ -343,5 +342,7 @@
   "menu.night-title": "{night, number}일째 밤 · {area}",
   "menu.night": "{night, number}일째 밤",
   "menu.shift-date": "당직일: {date} · {weekday, select, d0 {일} d1 {월} d2 {화} d3 {수} d4 {목} d5 {금} d6 {토} other {}}",
-  "gameplay.listener-flash-immune": "섬광은 청취자에게 통하지 않습니다. 미끼를 사용하세요."
+  "gameplay.listener-flash-immune": "섬광은 청취자에게 통하지 않습니다. 미끼를 사용하세요.",
+  "rogue.search-supply-cabinet": "보급함 · E로 수색",
+  "gameplay.task-box-empty": "상자가 비어 있습니다"
 }

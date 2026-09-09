@@ -1,3 +1,4 @@
+import {difficultyForNight} from './difficulty.ts';
 /** Shared blackout timing; all clocks advance only with active gameplay. */
 export class Blackouts {
  remaining=0;cooldown=0;warning=0;wait=Infinity;armed=false;count=0;
@@ -10,6 +11,7 @@ export class Blackouts {
  }
  tick(dt:number,fuses:number,round:number,power:boolean,blocked:boolean):'warning'|'outage'|undefined{
   this.remaining=Math.max(0,this.remaining-dt);this.cooldown=Math.max(0,this.cooldown-dt);
+  if(!difficultyForNight(round).blackouts)return;
   if(fuses>=3){this.warning=0;return;}
   if(fuses>0&&!this.armed){this.armed=true;this.wait=3+this.random()*2;}
   if(!this.armed||this.remaining>0||round===1&&this.count>0)return;

@@ -247,7 +247,6 @@
   "rogue.pursuit": "การไล่ตาม",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "ซ่อนตัว · E เพื่อออก การหายใจจะทำให้คุณเปิดเผยหลังจาก 8 วินาที",
   "rogue.supply-cabinet-empty": "ตู้เสบียง · ว่าง",
-  "rogue.supply-cabinet-e-to-collect-one-item": "ตู้เก็บอุปกรณ์ · กด E เพื่อเก็บสิ่งของ 1 ชิ้น",
   "rogue.shortcut-opened": "ทางลัดเปิดแล้ว",
   "rogue.hold-e-to-crank-generator-noise-attracts": "กดค้าง E เพื่อหมุนเครื่องกำเนิดไฟฟ้า: {percent}% เสียงดึงดูดศัตรู",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "กด E เพื่อเปิดเครื่องเสียง · ยั่วยุผู้ตามล่าเป็นเวลา 10 วินาที",
@@ -343,5 +342,7 @@
   "menu.night-title": "คืนที่ {night, number} · {area}",
   "menu.night": "คืนที่ {night, number}",
   "menu.shift-date": "วันที่เข้าเวร: {date} · {weekday, select, d0 {อาทิตย์} d1 {จันทร์} d2 {อังคาร} d3 {พุธ} d4 {พฤหัส} d5 {ศุกร์} d6 {เสาร์} other {}}",
-  "gameplay.listener-flash-immune": "แสงแฟลชไม่มีผลต่อผู้ฟัง ใช้เหยื่อล่อแทน"
+  "gameplay.listener-flash-immune": "แสงแฟลชไม่มีผลต่อผู้ฟัง ใช้เหยื่อล่อแทน",
+  "rogue.search-supply-cabinet": "ตู้เสบียง · E เพื่อค้นหา",
+  "gameplay.task-box-empty": "กล่องว่างเปล่า"
 }

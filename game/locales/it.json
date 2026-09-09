@@ -247,7 +247,6 @@
   "rogue.pursuit": "Inseguimento",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Nascosto · Premi E per uscire. Respirare ti espone dopo 8 secondi",
   "rogue.supply-cabinet-empty": "Armadietto forniture · Vuoto",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Armadietto forniture · Premi E per raccogliere un oggetto",
   "rogue.shortcut-opened": "Passaggio aperto",
   "rogue.hold-e-to-crank-generator-noise-attracts": "Tieni premuto E per azionare il generatore: {percent}%. Il rumore attira i nemici",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "Premi E per avviare la macchina rumorosa · Distratti i perseguitatori per 10 secondi",
@@ -343,5 +342,7 @@
   "menu.night-title": "Notte {night, number} · {area}",
   "menu.night": "Notte {night, number}",
   "menu.shift-date": "Data del turno: {date} · {weekday, select, d0 {dom} d1 {lun} d2 {mar} d3 {mer} d4 {gio} d5 {ven} d6 {sab} other {}}",
-  "gameplay.listener-flash-immune": "I lampi non hanno effetto sull’Ascoltatore. Usa un’esca."
+  "gameplay.listener-flash-immune": "I lampi non hanno effetto sull’Ascoltatore. Usa un’esca.",
+  "rogue.search-supply-cabinet": "Armadietto scorte · E per cercare",
+  "gameplay.task-box-empty": "La cassa è vuota"
 }

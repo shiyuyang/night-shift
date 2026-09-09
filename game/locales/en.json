@@ -247,7 +247,6 @@
   "rogue.pursuit": "Pursuit",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Hiding · E to leave. Breathing exposes you after 8 seconds",
   "rogue.supply-cabinet-empty": "Supply cabinet · Empty",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Supply cabinet · E to collect one item",
   "rogue.shortcut-opened": "Shortcut opened",
   "rogue.hold-e-to-crank-generator-noise-attracts": "Hold E to crank generator: {percent}%. Noise attracts enemies",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E to start noisy machinery · Distracts pursuers for 10 seconds",
@@ -343,5 +342,7 @@
   "menu.night-title": "Night {night, number} · {area}",
   "menu.night": "Night {night, number}",
   "menu.shift-date": "Shift date: {date} · {weekday, select, d0 {Sun} d1 {Mon} d2 {Tue} d3 {Wed} d4 {Thu} d5 {Fri} d6 {Sat} other {}}",
-  "gameplay.listener-flash-immune": "Flashes do not affect the Listener. Use a decoy."
+  "gameplay.listener-flash-immune": "Flashes do not affect the Listener. Use a decoy.",
+  "rogue.search-supply-cabinet": "Supply cabinet · E to search",
+  "gameplay.task-box-empty": "Box is empty"
 }

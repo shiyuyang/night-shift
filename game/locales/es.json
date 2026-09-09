@@ -247,7 +247,6 @@
   "rogue.pursuit": "Persecución",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Escondiéndose · E para salir. Respirar te expone después de 8 segundos",
   "rogue.supply-cabinet-empty": "Gabinete de suministros · Vacío",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Gabinete de suministros · E para recoger un objeto",
   "rogue.shortcut-opened": "Atajo abierto",
   "rogue.hold-e-to-crank-generator-noise-attracts": "Mantén E para girar el generador: {percent}%. El ruido atrae a los enemigos",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E para iniciar maquinaria ruidosa · Distracte a los perseguidores durante 10 segundos",
@@ -343,5 +342,7 @@
   "menu.night-title": "Noche {night, number} · {area}",
   "menu.night": "Noche {night, number}",
   "menu.shift-date": "Fecha del turno: {date} · {weekday, select, d0 {dom} d1 {lun} d2 {mar} d3 {mié} d4 {jue} d5 {vie} d6 {sáb} other {}}",
-  "gameplay.listener-flash-immune": "Los destellos no afectan al Oyente. Usa un señuelo."
+  "gameplay.listener-flash-immune": "Los destellos no afectan al Oyente. Usa un señuelo.",
+  "rogue.search-supply-cabinet": "Armario de suministros · E para registrar",
+  "gameplay.task-box-empty": "La caja está vacía"
 }

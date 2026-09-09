@@ -248,7 +248,6 @@ export interface MessageValues{
 "rogue.pursuit":{}
 "rogue.hiding-e-to-leave-breathing-exposes-you":{}
 "rogue.supply-cabinet-empty":{}
-"rogue.supply-cabinet-e-to-collect-one-item":{}
 "rogue.shortcut-opened":{}
 "rogue.hold-e-to-crank-generator-noise-attracts":{"percent":string|number}
 "rogue.e-to-start-noisy-machinery-distracts-pursuers":{}
@@ -345,4 +344,6 @@ export interface MessageValues{
 "menu.night":{"night":number}
 "menu.shift-date":{"date":string|number;"weekday":string|number}
 "gameplay.listener-flash-immune":{}
+"rogue.search-supply-cabinet":{}
+"gameplay.task-box-empty":{}
 }

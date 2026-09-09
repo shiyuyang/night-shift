@@ -8,5 +8,7 @@
   "event.quiet": "Sela pengejaran lebih lama",
   "event.supply": "Bekalan: +1 kilatan",
   "event.power": "Bekalan elektrik tak stabil",
-  "menu.anomaly": "{threat}\n{event}"
+  "menu.anomaly": "{threat}\n{event}",
+  "rogue.search-supply-cabinet": "Almari bekalan · E untuk mencari",
+  "gameplay.task-box-empty": "Kotak kosong"
 }

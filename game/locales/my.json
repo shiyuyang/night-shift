@@ -247,7 +247,6 @@
   "rogue.pursuit": "အလွတ်ပြုခြင်း",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "လျှို့ဝှက်နေခြင်း · E နှိပ်၍ ထွက်ပါ။ နှာခေါင်းသွင်းသောအခါ ၈ စက္ကန့်အကြာတွင် မိမိကိုယ်ကို ဖော်ထုတ်ပေးပါသည်",
   "rogue.supply-cabinet-empty": "ပစ္စည်းသိုလှောင်ခန်း · ပျက်စီးနေသည်",
-  "rogue.supply-cabinet-e-to-collect-one-item": "ပစ္စည်းသိုလှောင်ခန်း · E နှိပ်၍ ပစ္စည်းတစ်ခု ရယူပါ",
   "rogue.shortcut-opened": "လမ်းတိုဖွင့်လှစ်ပြီးပါပြီ",
   "rogue.hold-e-to-crank-generator-noise-attracts": "E ကို နှိပ်၍ ဂျင်နရေတာတာကို လှည့်ပါ: {percent}%။ အသံသည် နောက်လိုက်များကို ဆွဲဆောင်စေသည်",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E ကို နှိပ်၍ အသံထွက်သော စက်ပစ္စည်းကို စတင်ပါ · နောက်လိုက်များကို ၁၀ စက္ကန့်အတွက် ချိတ်ဆက်မှုကို ဖြုတ်ပစ်သည်",
@@ -343,5 +342,7 @@
   "menu.night-title": "ည {night, number} · {area}",
   "menu.night": "ည {night, number}",
   "menu.shift-date": "တာဝန်ကျရက်: {date} · {weekday, select, d0 {တနင်္ဂနွေ} d1 {တနင်္လာ} d2 {အင်္ဂါ} d3 {ဗုဒ္ဓဟူး} d4 {ကြာသပတေး} d5 {သောကြာ} d6 {စနေ} other {}}",
-  "gameplay.listener-flash-immune": "နားထောင်သူကို အလင်းပြက်ဖြင့် မတားနိုင်ပါ။ အာရုံလွှဲပစ္စည်းကို သုံးပါ။"
+  "gameplay.listener-flash-immune": "နားထောင်သူကို အလင်းပြက်ဖြင့် မတားနိုင်ပါ။ အာရုံလွှဲပစ္စည်းကို သုံးပါ။",
+  "rogue.search-supply-cabinet": "ရိက္ခာဗီရို · ရှာဖွေရန် E",
+  "gameplay.task-box-empty": "သေတ္တာအလွတ်ဖြစ်သည်"
 }

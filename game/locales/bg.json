@@ -247,7 +247,6 @@
   "rogue.pursuit": "Преследване",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Скриване · E за излизане. Диханието ви изобличава след 8 секунди",
   "rogue.supply-cabinet-empty": "Кабинет с запаси · Празен",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Кабинет с запаси · E за събиране на един предмет",
   "rogue.shortcut-opened": "Отворен кратък път",
   "rogue.hold-e-to-crank-generator-noise-attracts": "Държайте E, за да завъртите генератора: {percent}%. Шумът привлича врагове",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E, за да започнете шумното оборудване · Отвлича преследващите за 10 секунди",
@@ -343,5 +342,7 @@
   "menu.night-title": "Нощ {night, number} · {area}",
   "menu.night": "Нощ {night, number}",
   "menu.shift-date": "Дата на смяната: {date} · {weekday, select, d0 {нд} d1 {пн} d2 {вт} d3 {ср} d4 {чт} d5 {пт} d6 {сб} other {}}",
-  "gameplay.listener-flash-immune": "Проблясъците не влияят на Слушателя. Използвай примамка."
+  "gameplay.listener-flash-immune": "Проблясъците не влияят на Слушателя. Използвай примамка.",
+  "rogue.search-supply-cabinet": "Шкаф с припаси · E за претърсване",
+  "gameplay.task-box-empty": "Сандъкът е празен"
 }

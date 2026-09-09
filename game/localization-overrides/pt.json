@@ -7,5 +7,7 @@
   "event.supply": "Suprimentos: +1 clarão",
   "event.power": "Energia instável; apagões",
   "menu.anomaly": "{threat}\n{event}",
-  "menu.start": "Iniciar →"
+  "menu.start": "Iniciar →",
+  "rogue.search-supply-cabinet": "Armário de suprimentos · E para vasculhar",
+  "gameplay.task-box-empty": "A caixa está vazia"
 }

@@ -247,7 +247,6 @@
   "rogue.pursuit": "Jacht",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Verstoppen · E om te verlaten. Ademhaling blootstelt je na 8 seconden",
   "rogue.supply-cabinet-empty": "Voorraadkast · Leeg",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Voorraadkast · E om één item op te halen",
   "rogue.shortcut-opened": "Korte route geopend",
   "rogue.hold-e-to-crank-generator-noise-attracts": "Houd E om de generator te draaien: {percent}%. Geluid trekt vijanden aan",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E om lawaaiende machines te starten · Afleidt jagers voor 10 seconden",
@@ -343,5 +342,7 @@
   "menu.night-title": "Nacht {night, number} · {area}",
   "menu.night": "Nacht {night, number}",
   "menu.shift-date": "Dienstdatum: {date} · {weekday, select, d0 {zo} d1 {ma} d2 {di} d3 {wo} d4 {do} d5 {vr} d6 {za} other {}}",
-  "gameplay.listener-flash-immune": "Flitsen hebben geen effect op de Luisteraar. Gebruik een lokmiddel."
+  "gameplay.listener-flash-immune": "Flitsen hebben geen effect op de Luisteraar. Gebruik een lokmiddel.",
+  "rogue.search-supply-cabinet": "Voorraadkast · E om te doorzoeken",
+  "gameplay.task-box-empty": "De kist is leeg"
 }

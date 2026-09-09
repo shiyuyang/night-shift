@@ -247,7 +247,6 @@
   "rogue.pursuit": "Perseguição",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Escondendo · E para sair. Respirar o expõe após 8 segundos",
   "rogue.supply-cabinet-empty": "Armário de suprimentos · Vazio",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Armário de suprimentos · E para coletar um item",
   "rogue.shortcut-opened": "Atalho aberto",
   "rogue.hold-e-to-crank-generator-noise-attracts": "Segure E para girar o gerador: {percent}%. O ruído atrai inimigos",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E para iniciar a máquina barulhenta · Distrai os perseguidores por 10 segundos",
@@ -343,5 +342,7 @@
   "menu.night-title": "Noite {night, number} · {area}",
   "menu.night": "Noite {night, number}",
   "menu.shift-date": "Data do plantão: {date} · {weekday, select, d0 {dom.} d1 {seg.} d2 {ter.} d3 {qua.} d4 {qui.} d5 {sex.} d6 {sáb.} other {}}",
-  "gameplay.listener-flash-immune": "Os clarões não afetam o Ouvinte. Use uma isca."
+  "gameplay.listener-flash-immune": "Os clarões não afetam o Ouvinte. Use uma isca.",
+  "rogue.search-supply-cabinet": "Armário de suprimentos · E para vasculhar",
+  "gameplay.task-box-empty": "A caixa está vazia"
 }

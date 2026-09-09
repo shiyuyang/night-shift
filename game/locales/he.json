@@ -247,7 +247,6 @@
   "rogue.pursuit": "רדיפה",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "הסתרה · E כדי לצאת. נשימה חושפת אותך לאחר 8 שניות",
   "rogue.supply-cabinet-empty": "ארון ציוד · ריק",
-  "rogue.supply-cabinet-e-to-collect-one-item": "ארון אספקה · לחץ E כדי לאסוף פריט אחד",
   "rogue.shortcut-opened": "מסלול קיצורי דרך פתוח",
   "rogue.hold-e-to-crank-generator-noise-attracts": "החזק E כדי להפעיל את המנוע: {percent}%. רעש מושך אויבים",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "לחץ E כדי להפעיל מכונה רועשת · מפריע לרודפים למשך 10 שניות",
@@ -343,5 +342,7 @@
   "menu.night-title": "לילה {night, number} · {area}",
   "menu.night": "לילה {night, number}",
   "menu.shift-date": "תאריך משמרת: {date} · {weekday, select, d0 {יום א׳} d1 {יום ב׳} d2 {יום ג׳} d3 {יום ד׳} d4 {יום ה׳} d5 {יום ו׳} d6 {שבת} other {}}",
-  "gameplay.listener-flash-immune": "הבזקים לא משפיעים על המאזין. השתמשו בפיתיון."
+  "gameplay.listener-flash-immune": "הבזקים לא משפיעים על המאזין. השתמשו בפיתיון.",
+  "rogue.search-supply-cabinet": "ארון אספקה · E לחיפוש",
+  "gameplay.task-box-empty": "הארגז ריק"
 }

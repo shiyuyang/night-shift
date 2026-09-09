@@ -9,5 +9,7 @@
   "event.supply": "Provizii: +1 bliț",
   "event.power": "Curent instabil; întreruperi",
   "menu.anomaly": "{threat}\n{event}",
-  "menu.start": "Începe tura →"
+  "menu.start": "Începe tura →",
+  "rogue.search-supply-cabinet": "Dulap cu provizii · E pentru a căuta",
+  "gameplay.task-box-empty": "Cutia este goală"
 }

@@ -8,5 +8,7 @@
   "event.supply": "Extra voorraad: +1 flits",
   "event.power": "Stroom instabiel; uitval",
   "menu.anomaly": "{threat}\n{event}",
-  "menu.start": "Begin ronde →"
+  "menu.start": "Begin ronde →",
+  "rogue.search-supply-cabinet": "Voorraadkast · E om te doorzoeken",
+  "gameplay.task-box-empty": "De kist is leeg"
 }

@@ -8,5 +8,7 @@
   "event.supply": "Zusatzvorrat: +1 Blitz",
   "event.power": "Instabiler Strom; Ausfälle",
   "menu.anomaly": "{threat}\n{event}",
-  "menu.start": "Rundgang →"
+  "menu.start": "Rundgang →",
+  "rogue.search-supply-cabinet": "Vorratsschrank · E zum Durchsuchen",
+  "gameplay.task-box-empty": "Die Kiste ist leer"
 }

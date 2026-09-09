@@ -1,3 +1,4 @@
+import {difficultyForNight} from './difficulty.ts';
 import type {Level} from '../levels.ts';
 import {monsterFeetAt,monsterArchitecture,overlaps,clearContact,feetAt,type Box,type Position} from '../collision.ts';
 import {reachablePositions,validatePlayableLevel} from './level-validation.ts';
@@ -6,10 +7,10 @@ import {weeperRules} from './weeper.ts';
 export function weeperExclusion(p:Position):Box{return {x:p.x-weeperRules.alertRadius,y:p.y-weeperRules.alertRadius,width:weeperRules.alertRadius*2,height:weeperRules.alertRadius*2};}
 /** Authored LDtk sockets, then a conservative proof with the entire alert square blocked. */
 export function chooseWeeper(level:Level,seed:number):Position|undefined{
- if(level.round<weeperRules.firstRound)return;
- if((level.theme===1&&level.round<=7))return level.weeperFixed?{...level.weeperFixed}:undefined;
- const hash=(Math.imul(seed^level.round,1664525)+1013904223)>>>0;
- if(level.round!==3&&hash/4294967296>weeperRules.chance)return;
+ const difficulty=difficultyForNight(level.round);if(difficulty.weeper==='none')return;
+ if(level.round===3)return level.weeperFixed?{...level.weeperFixed}:undefined;
+ let hash=(seed^Math.imul(level.round,0x9e3779b9))>>>0;hash=Math.imul(hash^(hash>>>16),0x21f0aaad);hash=Math.imul(hash^(hash>>>15),0x735a2d97);hash=(hash^(hash>>>15))>>>0;
+ if(hash/4294967296>difficulty.weeperChance)return;
  const features=(level.features??[]).map(f=>({x:f.x,y:f.y+8,width:f.width,height:f.height-8,kind:'crate' as const}));
  const candidates=[...(level.weeperSpawns??[])];if(!candidates.length)return;
  const offset=hash%candidates.length;candidates.push(...candidates.splice(0,offset));const searches=[level.key,...level.boxes];
@@ -26,18 +27,19 @@ export function chooseWeeper(level:Level,seed:number):Position|undefined{
  const scores=new Map(candidates.map(p=>[p,score(p)]));candidates.sort((a,b)=>scores.get(a)!-scores.get(b)!);
  for(let i=0;i<candidates.length;i++){
   const p=candidates[i],zone=weeperExclusion(p);
+  if(difficulty.weeper==='fixed'&&!validatePlayableLevel({...level,props:[...level.props,...features,{...zone,kind:'crate'}]}).valid)continue;
   if([level.spawn,level.exit,level.doorUse,...level.monsterSpawns].some(v=>Math.hypot(v.x-p.x,v.y-p.y)<weeperRules.alertRadius+45))continue;
   if(searches.some(v=>Math.hypot(v.x-p.x,v.y-p.y)<weeperRules.alertRadius+15))continue;
   const solids=[...level.walls.map(monsterArchitecture),monsterArchitecture(level.door),...level.props,...features,...level.boxes.map(b=>({x:b.x-13,y:b.y-9,width:26,height:21}))];
   if(solids.some(b=>overlaps(monsterFeetAt(p.x,p.y),b)))continue;
   const route=patrolPath(level.spawn,p,solids,level.bounds,monsterFeetAt),end=route.at(-1);
-  if(end&&Math.hypot(end.x-p.x,end.y-p.y)<12&&weeperRoamPoints(level,p).length)return {...p};
+  if(end&&Math.hypot(end.x-p.x,end.y-p.y)<12&&(difficulty.weeper==='fixed'||weeperRoamPoints(level,p).length))return {...p};
  }
 }
 
 /** Local endpoints let a patient leave a chokepoint; its alert radius is not a permanent wall. */
 export function weeperRoamPoints(level:Level,home:Position):Position[]{
- if((level.theme===1&&level.round<=7))return [];
+ if(difficultyForNight(level.round).weeper!=='roaming')return [];
  const features=(level.features??[]).map(f=>({x:f.x,y:f.y+8,width:f.width,height:f.height-8}));
  const solids=[...level.walls.map(monsterArchitecture),monsterArchitecture(level.door),...level.props,...features,...level.boxes.map(b=>({x:b.x-13,y:b.y-9,width:26,height:21}))];
  const points=reachablePositions(level,false,monsterFeetAt).filter(p=>Math.hypot(p.x-home.x,p.y-home.y)>=140&&Math.hypot(p.x-home.x,p.y-home.y)<=250&&!solids.some(b=>overlaps(monsterFeetAt(p.x,p.y),b)));

@@ -247,7 +247,6 @@
   "rogue.pursuit": "Переслідування",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Приховування · E, щоб вийти. Дихання виявляє вас після 8 секунд",
   "rogue.supply-cabinet-empty": "Шкафа запасів · Порожній",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Шкафа запасів · E, щоб забрати один предмет",
   "rogue.shortcut-opened": "Короткий шлях відкрито",
   "rogue.hold-e-to-crank-generator-noise-attracts": "Тримайте E, щоб крутити генератор: {percent}%. Шум приваблює ворогів",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E, щоб запустити шумне обладнання · Відволікає переслідувачів на 10 секунд",
@@ -343,5 +342,7 @@
   "menu.night-title": "Ніч {night, number} · {area}",
   "menu.night": "Ніч {night, number}",
   "menu.shift-date": "Дата зміни: {date} · {weekday, select, d0 {нд} d1 {пн} d2 {вт} d3 {ср} d4 {чт} d5 {пт} d6 {сб} other {}}",
-  "gameplay.listener-flash-immune": "Спалахи не діють на Слухача. Використовуйте приманку."
+  "gameplay.listener-flash-immune": "Спалахи не діють на Слухача. Використовуйте приманку.",
+  "rogue.search-supply-cabinet": "Шафа з припасами · E — обшукати",
+  "gameplay.task-box-empty": "Ящик порожній"
 }

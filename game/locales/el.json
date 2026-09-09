@@ -247,7 +247,6 @@
   "rogue.pursuit": "Καταδίωξη",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Απόκρυψη · Πατήστε E για να φύγετε. Η αναπνοή σας σας αποκαλύπτει μετά από 8 δευτερόλεπτα",
   "rogue.supply-cabinet-empty": "Συρραφίδα · Κενή",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Συρραφίδα · Πατήστε E για να συλλέξετε ένα αντικείμενο",
   "rogue.shortcut-opened": "Εκκέντρωση ανοίχτηκε",
   "rogue.hold-e-to-crank-generator-noise-attracts": "Κρατήστε το E για να περιστρέψετε τον γεννήτορα: {percent}%. Ο θόρυβος προσελκύει εχθρούς",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "Πατήστε E για να ξεκινήσετε τον θορυβώδη μηχανισμό · Αποσπά την προσοχή των διώκτων για 10 δευτερόλεπτα",
@@ -343,5 +342,7 @@
   "menu.night-title": "Νύχτα {night, number} · {area}",
   "menu.night": "Νύχτα {night, number}",
   "menu.shift-date": "Ημερομηνία βάρδιας: {date} · {weekday, select, d0 {Κυρ} d1 {Δευ} d2 {Τρί} d3 {Τετ} d4 {Πέμ} d5 {Παρ} d6 {Σάβ} other {}}",
-  "gameplay.listener-flash-immune": "Οι λάμψεις δεν επηρεάζουν τον Ακροατή. Χρησιμοποίησε δόλωμα."
+  "gameplay.listener-flash-immune": "Οι λάμψεις δεν επηρεάζουν τον Ακροατή. Χρησιμοποίησε δόλωμα.",
+  "rogue.search-supply-cabinet": "Ντουλάπι προμηθειών · E για έρευνα",
+  "gameplay.task-box-empty": "Το κιβώτιο είναι άδειο"
 }

@@ -247,7 +247,6 @@
   "rogue.pursuit": "追跡中",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "隠れている · E で脱出。呼吸すると 8 秒後に発覚する",
   "rogue.supply-cabinet-empty": "資材庫 · 空",
-  "rogue.supply-cabinet-e-to-collect-one-item": "補給棚 · E で道具を一つ入手",
   "rogue.shortcut-opened": "ショートカットが開いた",
   "rogue.hold-e-to-crank-generator-noise-attracts": "E を押して発電機を回す：{percent}%。音は敵を惹きつける",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E で騒音を出す機械を起動 · 追跡者を 10 秒間引きつける",
@@ -343,5 +342,7 @@
   "menu.night-title": "第{night, number}夜 · {area}",
   "menu.night": "第{night, number}夜",
   "menu.shift-date": "当直日: {date} · {weekday, select, d0 {日} d1 {月} d2 {火} d3 {水} d4 {木} d5 {金} d6 {土} other {}}",
-  "gameplay.listener-flash-immune": "閃光は聞き耳を立てる者には効きません。囮を使いましょう。"
+  "gameplay.listener-flash-immune": "閃光は聞き耳を立てる者には効きません。囮を使いましょう。",
+  "rogue.search-supply-cabinet": "補給箱 · Eで調べる",
+  "gameplay.task-box-empty": "箱の中は空だ"
 }

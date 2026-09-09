@@ -247,7 +247,6 @@
   "rogue.pursuit": "Đang truy đuổi",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Ẩn nấp · Nhấn E để rời đi. Việc thở sẽ lộ vị trí của bạn sau 8 giây",
   "rogue.supply-cabinet-empty": "Tủ dụng cụ · Rỗng",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Tủ dụng cụ · Nhấn E để lấy một món đồ",
   "rogue.shortcut-opened": "Đường tắt đã mở",
   "rogue.hold-e-to-crank-generator-noise-attracts": "Nhấn giữ E để quay máy phát: {percent}%. Tiếng ồn sẽ thu hút kẻ thù",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "Nhấn E để khởi động máy móc ồn ào · Làm phân tán kẻ truy đuổi trong 10 giây",
@@ -343,5 +342,7 @@
   "menu.night-title": "Đêm {night, number} · {area}",
   "menu.night": "Đêm {night, number}",
   "menu.shift-date": "Ngày trực: {date} · {weekday, select, d0 {CN} d1 {Thứ 2} d2 {Thứ 3} d3 {Thứ 4} d4 {Thứ 5} d5 {Thứ 6} d6 {Thứ 7} other {}}",
-  "gameplay.listener-flash-immune": "Ánh chớp không ảnh hưởng đến Kẻ Lắng Nghe. Hãy dùng mồi nhử."
+  "gameplay.listener-flash-immune": "Ánh chớp không ảnh hưởng đến Kẻ Lắng Nghe. Hãy dùng mồi nhử.",
+  "rogue.search-supply-cabinet": "Tủ tiếp tế · E để lục tìm",
+  "gameplay.task-box-empty": "Hộp đã trống"
 }

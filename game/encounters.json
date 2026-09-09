@@ -4,8 +4,8 @@
   "patrolSight": 240,
   "patrolSearchSeconds": 5,
   "weeper": {
-    "firstRound": 2,
-    "chance": 0.85,
+    "firstRound": 3,
+    "chance": 0.75,
     "alertRadius": 110,
     "touchRadius": 32,
     "alertSeconds": 1.2,

@@ -247,7 +247,6 @@
   "rogue.pursuit": "Prześcig",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Ukrywanie · E, aby wyjść. Oddech ujawnia Cię po 8 sekundach",
   "rogue.supply-cabinet-empty": "Szafka z zapasami · Pusta",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Szafka z zapasami · E, aby zebrać jeden przedmiot",
   "rogue.shortcut-opened": "Otwarta droga skrótowa",
   "rogue.hold-e-to-crank-generator-noise-attracts": "Trzymaj E, aby uruchomić generator: {percent}%. Hałas przyciąga wrogów",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E, aby uruchomić głośną maszynę · Odwraca uwagę prześladowców na 10 sekund",
@@ -343,5 +342,7 @@
   "menu.night-title": "Noc {night, number} · {area}",
   "menu.night": "Noc {night, number}",
   "menu.shift-date": "Data dyżuru: {date} · {weekday, select, d0 {niedz.} d1 {pon.} d2 {wt.} d3 {śr.} d4 {czw.} d5 {pt.} d6 {sob.} other {}}",
-  "gameplay.listener-flash-immune": "Błyski nie działają na Słuchacza. Użyj wabika."
+  "gameplay.listener-flash-immune": "Błyski nie działają na Słuchacza. Użyj wabika.",
+  "rogue.search-supply-cabinet": "Szafka z zapasami · E, aby przeszukać",
+  "gameplay.task-box-empty": "Skrzynia jest pusta"
 }

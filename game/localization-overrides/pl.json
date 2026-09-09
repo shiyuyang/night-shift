@@ -8,5 +8,7 @@
   "event.power": "Wahania i zaniki prądu",
   "menu.anomaly": "{threat}\n{event}",
   "stage.0": "Opuszczony oddział",
-  "menu.start": "Rozpocznij →"
+  "menu.start": "Rozpocznij →",
+  "rogue.search-supply-cabinet": "Szafka z zapasami · E, aby przeszukać",
+  "gameplay.task-box-empty": "Skrzynia jest pusta"
 }

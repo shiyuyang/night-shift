@@ -13,5 +13,7 @@
   "event.quiet": "추격 간격 증가",
   "event.supply": "추가 보급: 섬광 +1",
   "event.power": "전력 불안정·정전 주의",
-  "menu.anomaly": "{threat}\n{event}"
+  "menu.anomaly": "{threat}\n{event}",
+  "rogue.search-supply-cabinet": "보급함 · E로 수색",
+  "gameplay.task-box-empty": "상자가 비어 있습니다"
 }

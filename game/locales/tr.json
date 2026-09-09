@@ -247,7 +247,6 @@
   "rogue.pursuit": "Peşinde Koşma",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Sığınma · E ile çık. Nefes almak 8 saniye sonra sizi ortaya çıkarır",
   "rogue.supply-cabinet-empty": "Malzeme dolabı · Boş",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Malzeme dolabı · E'ye basarak bir eşya topla",
   "rogue.shortcut-opened": "Kısayol açıldı",
   "rogue.hold-e-to-crank-generator-noise-attracts": "Jeneratörü çevirmek için E'ye basılı tut: {percent}%. Gürültü düşmanları çeker",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E'ye basarak gürültülü makineyi başlat · Takipçileri 10 saniye için dağıtır",
@@ -343,5 +342,7 @@
   "menu.night-title": "{night, number}. Gece · {area}",
   "menu.night": "{night, number}. Gece",
   "menu.shift-date": "Nöbet tarihi: {date} · {weekday, select, d0 {Paz} d1 {Pzt} d2 {Sal} d3 {Çar} d4 {Per} d5 {Cum} d6 {Cmt} other {}}",
-  "gameplay.listener-flash-immune": "Flaşlar Dinleyiciyi etkilemez. Yem kullan."
+  "gameplay.listener-flash-immune": "Flaşlar Dinleyiciyi etkilemez. Yem kullan.",
+  "rogue.search-supply-cabinet": "Malzeme dolabı · Aramak için E",
+  "gameplay.task-box-empty": "Kutu boş"
 }

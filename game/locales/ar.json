@@ -247,7 +247,6 @@
   "rogue.pursuit": "مطاردة",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "الختباء · اضغط E للخروج. التنفس يكشفك بعد 8 ثوانٍ",
   "rogue.supply-cabinet-empty": "خزان الإمدادات · فارغ",
-  "rogue.supply-cabinet-e-to-collect-one-item": "خزان الإمدادات · اضغط E لجمع عنصر واحد",
   "rogue.shortcut-opened": "فُتح الطريق المختصر",
   "rogue.hold-e-to-crank-generator-noise-attracts": "اضغط بـ E لتشغيل المولد: {percent}%. الضوضاء تجذب الأعداء",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "اضغط E لتشغيل الآلة الصاخبة · تشتت المطاردات لمدة 10 ثوانٍ",
@@ -343,5 +342,7 @@
   "menu.night-title": "الليلة {night, number} · {area}",
   "menu.night": "الليلة {night, number}",
   "menu.shift-date": "تاريخ المناوبة: {date} · {weekday, select, d0 {الأحد} d1 {الاثنين} d2 {الثلاثاء} d3 {الأربعاء} d4 {الخميس} d5 {الجمعة} d6 {السبت} other {}}",
-  "gameplay.listener-flash-immune": "الومضات لا تؤثر في المستمع. استخدم طُعمًا."
+  "gameplay.listener-flash-immune": "الومضات لا تؤثر في المستمع. استخدم طُعمًا.",
+  "rogue.search-supply-cabinet": "خزانة الإمدادات · E للتفتيش",
+  "gameplay.task-box-empty": "الصندوق فارغ"
 }

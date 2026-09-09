@@ -10,5 +10,7 @@
   "event.quiet": "Jeda pengejaran lebih lama",
   "event.supply": "Bekal ekstra: +1 kilatan",
   "event.power": "Listrik labil; rawan padam",
-  "menu.anomaly": "{threat}\n{event}"
+  "menu.anomaly": "{threat}\n{event}",
+  "rogue.search-supply-cabinet": "Lemari persediaan · E untuk mencari",
+  "gameplay.task-box-empty": "Kotak kosong"
 }

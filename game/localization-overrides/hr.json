@@ -8,5 +8,7 @@
   "event.supply": "Zalihe: +1 bljesak",
   "event.power": "Nestabilna struja; prekidi",
   "menu.anomaly": "{threat}\n{event}",
-  "menu.start": "Započni →"
+  "menu.start": "Započni →",
+  "rogue.search-supply-cabinet": "Ormarić sa zalihama · E za pretragu",
+  "gameplay.task-box-empty": "Kutija je prazna"
 }

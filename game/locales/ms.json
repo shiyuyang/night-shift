@@ -247,7 +247,6 @@
   "rogue.pursuit": "Kejaran",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Menyembunyi · Tekan E untuk keluar. Bernafas mendedahkan anda selepas 8 saat",
   "rogue.supply-cabinet-empty": "Kabinet bekalan · Kosong",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Kabinet bekalan · Tekan E untuk mengambil satu barang",
   "rogue.shortcut-opened": "Laluan pintas dibuka",
   "rogue.hold-e-to-crank-generator-noise-attracts": "Tahan E untuk memutar penjana: {percent}%. Bunyi menarik musuh",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "Tekan E untuk memulakan mesin bising · Mengalihkan pengejar selama 10 saat",
@@ -343,5 +342,7 @@
   "menu.night-title": "Malam {night, number} · {area}",
   "menu.night": "Malam {night, number}",
   "menu.shift-date": "Tarikh bertugas: {date} · {weekday, select, d0 {Ahd} d1 {Isn} d2 {Sel} d3 {Rab} d4 {Kha} d5 {Jum} d6 {Sab} other {}}",
-  "gameplay.listener-flash-immune": "Kilatan tidak menjejaskan Pendengar. Gunakan umpan."
+  "gameplay.listener-flash-immune": "Kilatan tidak menjejaskan Pendengar. Gunakan umpan.",
+  "rogue.search-supply-cabinet": "Almari bekalan · E untuk mencari",
+  "gameplay.task-box-empty": "Kotak kosong"
 }

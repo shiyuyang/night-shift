@@ -247,7 +247,6 @@
   "rogue.pursuit": "Poursuite",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Se cacher · E pour sortir. Respirer vous expose après 8 secondes",
   "rogue.supply-cabinet-empty": "Armoire de fournitures · Vide",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Armoire de fournitures · E pour récupérer un objet",
   "rogue.shortcut-opened": "Raccourci ouvert",
   "rogue.hold-e-to-crank-generator-noise-attracts": "Maintenez E pour faire tourner le générateur : {percent} %. Le bruit attire les ennemis",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E pour démarrer la machine bruyante · Distrait les poursuivants pendant 10 secondes",
@@ -343,5 +342,7 @@
   "menu.night-title": "Nuit {night, number} · {area}",
   "menu.night": "Nuit {night, number}",
   "menu.shift-date": "Date de garde: {date} · {weekday, select, d0 {dim.} d1 {lun.} d2 {mar.} d3 {mer.} d4 {jeu.} d5 {ven.} d6 {sam.} other {}}",
-  "gameplay.listener-flash-immune": "Les flashs sont sans effet sur l’Écouteur. Utilisez un leurre."
+  "gameplay.listener-flash-immune": "Les flashs sont sans effet sur l’Écouteur. Utilisez un leurre.",
+  "rogue.search-supply-cabinet": "Armoire à provisions · E pour fouiller",
+  "gameplay.task-box-empty": "La caisse est vide"
 }

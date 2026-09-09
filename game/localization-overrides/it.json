@@ -10,5 +10,7 @@
   "event.power": "Corrente instabile; blackout",
   "menu.anomaly": "{threat}\n{event}",
   "stage.0": "Reparto dismesso",
-  "menu.start": "Inizia giro →"
+  "menu.start": "Inizia giro →",
+  "rogue.search-supply-cabinet": "Armadietto scorte · E per cercare",
+  "gameplay.task-box-empty": "La cassa è vuota"
 }

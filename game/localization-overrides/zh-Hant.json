@@ -6,5 +6,7 @@
   "event.quiet": "追逐間隔較長",
   "event.supply": "額外補給：閃光 +1",
   "event.power": "供電不穩，間歇停電",
-  "menu.anomaly": "{threat}\n{event}"
+  "menu.anomaly": "{threat}\n{event}",
+  "rogue.search-supply-cabinet": "補給箱 · E 搜索",
+  "gameplay.task-box-empty": "箱內已空"
 }

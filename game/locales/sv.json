@@ -247,7 +247,6 @@
   "rogue.pursuit": "Jakt",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Döljning · E för att lämna. Andning avslöjar dig efter 8 sekunder",
   "rogue.supply-cabinet-empty": "Förrådsrum · Tomt",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Förrådsrum · E för att hämta ett objekt",
   "rogue.shortcut-opened": "Genväg öppnad",
   "rogue.hold-e-to-crank-generator-noise-attracts": "Håll E för att vrida generator: {percent}%. Ljud lockar fiender",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E för att starta bullrig maskin · Avleds fiender i 10 sekunder",
@@ -343,5 +342,7 @@
   "menu.night-title": "Natt {night, number} · {area}",
   "menu.night": "Natt {night, number}",
   "menu.shift-date": "Passdatum: {date} · {weekday, select, d0 {sön} d1 {mån} d2 {tis} d3 {ons} d4 {tors} d5 {fre} d6 {lör} other {}}",
-  "gameplay.listener-flash-immune": "Blixtar påverkar inte Lyssnaren. Använd ett lockbete."
+  "gameplay.listener-flash-immune": "Blixtar påverkar inte Lyssnaren. Använd ett lockbete.",
+  "rogue.search-supply-cabinet": "Förrådsskåp · E för att söka",
+  "gameplay.task-box-empty": "Lådan är tom"
 }

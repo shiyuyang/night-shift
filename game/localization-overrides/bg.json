@@ -7,5 +7,7 @@
   "event.supply": "Запаси: +1 проблясък",
   "event.power": "Нестабилен ток; прекъсвания",
   "menu.anomaly": "{threat}\n{event}",
-  "menu.start": "Започни →"
+  "menu.start": "Започни →",
+  "rogue.search-supply-cabinet": "Шкаф с припаси · E за претърсване",
+  "gameplay.task-box-empty": "Сандъкът е празен"
 }

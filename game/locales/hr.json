@@ -247,7 +247,6 @@
   "rogue.pursuit": "Pronađena vas",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Skrivanje · E za izlazak. Disanje vas izdaje nakon 8 sekundi",
   "rogue.supply-cabinet-empty": "Kabinet s opremom · Prazno",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Kabinet s opremom · E za prikupljanje jednog predmeta",
   "rogue.shortcut-opened": "Otvorena je skraćenica",
   "rogue.hold-e-to-crank-generator-noise-attracts": "Držite E za pokretanje generatora: {percent}%. Buka privlači neprijatelje",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E za pokretanje bučne mašine · Ometa pronalaznike 10 sekundi",
@@ -343,5 +342,7 @@
   "menu.night-title": "Noć {night, number} · {area}",
   "menu.night": "Noć {night, number}",
   "menu.shift-date": "Datum smjene: {date} · {weekday, select, d0 {ned} d1 {pon} d2 {uto} d3 {sri} d4 {čet} d5 {pet} d6 {sub} other {}}",
-  "gameplay.listener-flash-immune": "Bljeskovi ne djeluju na Slušača. Upotrijebi mamac."
+  "gameplay.listener-flash-immune": "Bljeskovi ne djeluju na Slušača. Upotrijebi mamac.",
+  "rogue.search-supply-cabinet": "Ormarić sa zalihama · E za pretragu",
+  "gameplay.task-box-empty": "Kutija je prazna"
 }

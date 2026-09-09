@@ -6,5 +6,7 @@
   "event.quiet": "Təqiblər daha seyrəkdir",
   "event.supply": "Əlavə ehtiyat: +1 işıq partlayışı",
   "event.power": "Elektrik qeyri-sabitdir",
-  "menu.anomaly": "{threat}\n{event}"
+  "menu.anomaly": "{threat}\n{event}",
+  "rogue.search-supply-cabinet": "Təchizat dolabı · Axtarmaq üçün E",
+  "gameplay.task-box-empty": "Qutu boşdur"
 }

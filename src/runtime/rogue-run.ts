@@ -1,7 +1,7 @@
 import {t as msg} from '../i18n.ts';
 import type {Position,Box} from '../collision.ts';
 import {center,type Feature} from './rogue-content.ts';
-export type RogueEvent={type:'message';text:string}|{type:'sound';id:string}|{type:'loot';item:'flash'|'decoy'|'bandage';at:Position;full?:boolean}|{type:'alarm';at:Position}|{type:'damage';amount:number}|{type:'shortcut';gate:Box};
+export type RogueEvent={type:'box-search'}|{type:'noise'}|{type:'message';text:string}|{type:'sound';id:string}|{type:'loot';item:'flash'|'decoy'|'bandage';at:Position;full?:boolean}|{type:'alarm';at:Position}|{type:'damage';amount:number}|{type:'shortcut';gate:Box};
 export function cacheOutcome(roll:number){return {loot:roll<.9,alarm:roll>=.6};}
 export function waterPhase(time:number,offset=0){const t=(time+offset)%10;return t<2?'warning':t<5?'live':'safe';}
 export class PressureDirector{
@@ -15,15 +15,17 @@ export class RogueRun{
  director=new PressureDirector();stats={cachesOpened:0,alarms:0,shortcuts:0,hazardsHit:0,hides:0,viewerAccepted:0,viewerRejected:0};
  features:Feature[];
  constructor(features:Feature[]=[]){this.features=features;}
- near(p:Position){return this.features.filter(f=>!['glass','water','steam','blocker'].includes(f.kind)&&Math.hypot(center(f).x-p.x,center(f).y-p.y)<38).sort((a,b)=>Math.hypot(center(a).x-p.x,center(a).y-p.y)-Math.hypot(center(b).x-p.x,center(b).y-p.y))[0];}
- hint(p:Position){if(this.hidden)return msg("rogue.hiding-e-to-leave-breathing-exposes-you");const f=this.near(p);if(!f)return '';if(f.kind==='cache')return this.opened.has(f.id)?msg("rogue.supply-cabinet-empty"):msg("rogue.supply-cabinet-e-to-collect-one-item");if(f.kind==='generator')return this.opened.has(f.id)?msg("rogue.shortcut-opened"):msg("rogue.hold-e-to-crank-generator-noise-attracts", {percent:Math.floor(this.generatorCharge/2.5*100)});if(f.kind==='machine')return msg("rogue.e-to-start-noisy-machinery-distracts-pursuers");return msg("rogue.e-to-hide-maximum-seconds-cannot-hide");}
+ near(p:Position){return this.features.filter(f=>!['glass','water','steam','blocker'].includes(f.kind)&&Math.hypot(center(f).x-p.x,center(f).y-p.y)<(f.kind==='empty-task'?44:38)).sort((a,b)=>Math.hypot(center(a).x-p.x,center(a).y-p.y)-Math.hypot(center(b).x-p.x,center(b).y-p.y))[0];}
+ hint(p:Position){if(this.hidden)return msg("rogue.hiding-e-to-leave-breathing-exposes-you");const f=this.near(p);if(!f)return '';if(f.kind==='empty-task')return this.opened.has(f.id)?msg('gameplay.task-box-empty'):msg('gameplay.e-search-unlocked-box');if(f.kind==='cache')return this.opened.has(f.id)?msg("rogue.supply-cabinet-empty"):msg("rogue.search-supply-cabinet");if(f.kind==='generator')return this.opened.has(f.id)?msg("rogue.shortcut-opened"):msg("rogue.hold-e-to-crank-generator-noise-attracts", {percent:Math.floor(this.generatorCharge/2.5*100)});if(f.kind==='machine')return msg("rogue.e-to-start-noisy-machinery-distracts-pursuers");return msg("rogue.e-to-hide-maximum-seconds-cannot-hide");}
  interact(p:Position,watched:boolean,inventory?:Record<'flash'|'decoy'|'bandage',number>):RogueEvent[]{
  if(this.hidden){this.hidden='';return [{type:'message',text:msg("rogue.left-the-locker")}];}
  const f=this.near(p);if(!f)return [];
+ if(f.kind==='empty-task'&&!this.opened.has(f.id)){this.opened.add(f.id);return [{type:'sound',id:'pickup'},{type:'box-search'},{type:'message',text:msg('gameplay.task-box-empty')}];}
  if(f.kind==='cache'&&!this.opened.has(f.id)){
+  if(f.hasLoot===false){this.opened.add(f.id);this.stats.cachesOpened++;return [{type:'sound',id:'metal'},{type:'noise'},{type:'message',text:msg("rogue.supply-cabinet-empty")}];}
   if(inventory&&inventory[f.reward]>=3)return [{type:'loot',item:f.reward,at:center(f),full:true}];
   this.opened.add(f.id);this.stats.cachesOpened++;
-  return [{type:'sound',id:'metal'},{type:'loot',item:f.reward,at:center(f)}];
+  return [{type:'sound',id:'metal'},{type:'noise'},{type:'loot',item:f.reward,at:center(f)}];
  }
  if(f.kind==='machine'){this.runningMachine=f.id;this.machineTime=10;return [{type:'sound',id:'metal'},{type:'message',text:msg("rogue.the-machine-starts-it-attracts-pursuers-for")}];}
  if(f.kind==='locker'){if(watched)return [{type:'message',text:msg("rogue.it-saw-you-gain-distance-before-hiding")}];this.hidden=f.id;this.hideTime=0;this.stats.hides++;return [{type:'sound',id:'metal'},{type:'message',text:msg("rogue.hold-your-breath-leave-within-seconds-press")}];}return [];

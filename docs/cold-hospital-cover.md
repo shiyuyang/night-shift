@@ -55,3 +55,19 @@ The Listener is immune to flash stun and knockback. The first-night tutorial ski
 ### Implemented monster item roles
 
 Listener remains sound-driven and immune to flash. Light-Shy prioritizes a visible player over all decoy/distraction sources; breaking sight makes sound diversion possible again. Its existing flashlight recoil and recovery protection remain, and flash stun is now four seconds. Patrollers (including the exit interceptor) receive two seconds of flash stun. They investigate a sound only within 180 world pixels, move at most 120 from their original position, and spend at most two seconds investigating before returning. The same continuing sound cannot restart the investigation; a six-second recovery also prevents rapid replacement sounds from chaining diversions. The item still makes sound for eight seconds, which the Listener can continue following. Tutorial and threat hints cover these distinctions in all required catalogs, with locale-formatted stun durations and draft translation status.
+
+### Supply cabinet searches
+
+Each generated night targets 4–6 supply cabinets across side rooms, with exactly two containing one item each; the rest are empty. Positions and contents are fixed at level creation, with a stable tutorial layout on night 1. Industrial placement also uses the edges of the larger service/utility rooms, with full key-chain, monster-access and cabinet-front reachability checks after each placement. One hiding locker is retained.
+
+Searching any unopened cabinet makes metal/search noise that uses ordinary monster hearing. Empty cabinets become exhausted after one search; stocked cabinets retain their item when that inventory slot is full. Mission boxes and their guaranteed progression rewards are unchanged. Search prompts use the same semantic key in HUD and world labels, translated into all 29 required locales with draft review status.
+
+### Empty unlocked task boxes
+
+Add 2–3 empty task-shaped boxes to ordinary seeded nights and one to the tutorial's locked-room area, reached after obtaining the red key from the first real box. They share the unlocked chest renderer, interaction radius and immediate E interaction. Opening one plays the normal box cue and starts/extends ordinary search pursuit, then leaves the lid open with a localized empty message. It never consumes keys, grants loot/fuses, triggers finale power/blink, or changes the three-box mission chain. Searches cannot be repeated.
+
+Placement keeps at least 120 world pixels from real task boxes and checks all existing cabinet fronts, the key chain and monster access. Empty task interactions additionally reject rays through walls, furniture and closed doors. Tests cover seeded placement, tutorial access order, repeated interactions, progression isolation and all required locales in the browser.
+
+### Difficulty progression supersedes the early-night defaults above
+
+See [difficulty-progression.md](difficulty-progression.md) and src/runtime/difficulty.ts for current per-night settings. Earlier entries describing universal final-box blink/interceptors, second-night patients, or 2-second early-night door breaches describe the pre-progression version. Current gates: fixed patients on nights 3–4, random roaming from night 5, interceptor from night 4, blink and automatic outages from night 5; protected item supplies and simpler opening searches on nights 1–2.

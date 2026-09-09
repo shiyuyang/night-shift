@@ -17,7 +17,7 @@ test('ward random searches stay in functional rooms on both sides of the old bou
   assert.ok([z.WardOneZone,z.WardTwoZone].some(b=>inside(l.boxes[0],b)));
   assert.ok([z.TreatmentZone,z.LinenZone].some(b=>inside(l.boxes[1],b)));
   assert.ok(inside(l.boxes[2],z.IsolationZone));
-  assert.ok(l.features.every(f=>[z.NurseZone,z.WardOneZone,z.WardTwoZone,z.TreatmentZone,z.LinenZone].some(b=>inside({x:f.x+f.width/2,y:f.y+f.height/2},b))));
+  assert.ok(l.features.filter(f=>f.kind!=='empty-task').every(f=>[z.NurseZone,z.WardOneZone,z.WardTwoZone,z.TreatmentZone,z.LinenZone].some(b=>inside({x:f.x+f.width/2,y:f.y+f.height/2},b))));
   layouts.add(JSON.stringify([l.key,l.boxes]));
  }
  assert.ok(layouts.size>1);
@@ -29,9 +29,9 @@ test('industrial searches preserve room purpose and cabinets stay off transit ai
   for(let seed=0;seed<12;seed++){
    const l=makeLevel(round,seed),points=[l.key,...l.boxes];
    points.forEach((p,i)=>assert.ok(rooms[i].some(id=>inside(p,l.zones[id])),JSON.stringify({round,seed,i,p})));
-   assert.deepEqual(l.features.map(f=>f.kind),['cache','locker']);
-   const optional=Object.entries(l.zones).filter(([id])=>id.startsWith('Optional')).map(([,b])=>b);
-   for(const f of l.features)assert.ok(optional.some(b=>inside({x:f.x+f.width/2,y:f.y+f.height/2},b)));
+   assert.ok(l.features.filter(f=>f.kind==='cache').length>=4);assert.equal(l.features.filter(f=>f.kind==='locker').length,1);
+   const optional=Object.entries(l.zones).filter(([id])=>id.startsWith('Optional')||(l.theme===1&&['ReceivingZone','DispatchZone','ColdStoreZone'].includes(id))||(l.theme===2&&['ControlZone','ToolZone','PanelZone','PumpZone','ServiceEastZone','ServiceSouthZone'].includes(id))).map(([,b])=>b);
+   for(const f of l.features.filter(f=>f.kind!=='empty-task'))assert.ok(optional.some(b=>inside({x:f.x+f.width/2,y:f.y+f.height/2},b)));
   }
  }
 });
@@ -40,12 +40,13 @@ test('clinical searches stay within their assigned functional rooms',()=>{
  const inside=(p,b)=>p.x>b.x&&p.x<b.x+b.width&&p.y>b.y&&p.y<b.y+b.height;
  for(const [round,rooms]of [[2,['RegistrationZone','ConsultationZone','ExaminationZone','TreatmentZone']],[5,['PreparationZone','ScrubZone','OperatingZone','SterileZone']]])for(let seed=0;seed<12;seed++){
   const l=makeLevel(round,seed);[l.key,...l.boxes].forEach((p,i)=>assert.ok(inside(p,l.zones[rooms[i]]),`${round} ${seed} ${i}`));
-  const optional=Object.entries(l.zones).filter(([id])=>id.startsWith('Optional')).map(([,b])=>b);
-  for(const f of l.features)assert.ok(optional.some(b=>inside({x:f.x+f.width/2,y:f.y+f.height/2},b)));
+  const optional=Object.entries(l.zones).filter(([id])=>id.startsWith('Optional')||(l.theme===1&&['ReceivingZone','DispatchZone','ColdStoreZone'].includes(id))||(l.theme===2&&['ControlZone','ToolZone','PanelZone','PumpZone','ServiceEastZone','ServiceSouthZone'].includes(id))).map(([,b])=>b);
+  for(const f of l.features.filter(f=>f.kind!=='empty-task'))assert.ok(optional.some(b=>inside({x:f.x+f.width/2,y:f.y+f.height/2},b)));
  }
 });
 
 function assertOpeningSearch(level){
+ if(level.round<=2){assert.ok(Math.hypot(level.key.x-level.boxes[0].x,level.key.y-level.boxes[0].y)>=180);return;}
  const solids=[...level.walls,...level.props,level.door];
  assert.equal(clearContact(level.spawn,level.key,solids),false,'Opening key must require searching past cover');
  assert.equal(clearContact(level.spawn,level.boxes[0],solids),false,'First box must not face spawn');

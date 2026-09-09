@@ -7,5 +7,7 @@
   "event.quiet": "Längre pauser mellan jakter",
   "event.supply": "Extra förråd: +1 blixt",
   "event.power": "Instabil ström; avbrott",
-  "menu.anomaly": "{threat}\n{event}"
+  "menu.anomaly": "{threat}\n{event}",
+  "rogue.search-supply-cabinet": "Förrådsskåp · E för att söka",
+  "gameplay.task-box-empty": "Lådan är tom"
 }

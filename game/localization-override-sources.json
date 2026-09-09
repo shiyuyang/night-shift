@@ -66,7 +66,6 @@
   "note.1": "One extra crate in the count. Something drags behind the shelves.",
   "note.2": "The lights go out. The knocking in the pipes continues.",
   "rogue.shortcut-opened": "Shortcut opened",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Supply cabinet · E to collect one item",
   "rogue.the-gatekeeper-is-looking-up-avoid-the": "The gatekeeper is looking up! Avoid the bloodstains at its feet.",
   "rogue.the-shutter-rises-shortcut-opened": "The shutter rises. Shortcut opened!",
   "settings.fullscreen": "Fullscreen",
@@ -127,5 +126,7 @@
   "ui.t-to-toggle-only-seconds": "T to toggle · Only {seconds} seconds",
   "ui.t-to-toggle-seconds-left": "T to toggle · {seconds} seconds left",
   "ui.toggle-flashlight-t": "Toggle flashlight (T)",
-  "ui.wasd-arrows-to-move-shift-to-sprint": "WASD / arrows to move. Shift to sprint. E to pick up, search and operate doors. After exhaustion, recover 30% stamina before sprinting again."
+  "ui.wasd-arrows-to-move-shift-to-sprint": "WASD / arrows to move. Shift to sprint. E to pick up, search and operate doors. After exhaustion, recover 30% stamina before sprinting again.",
+  "rogue.search-supply-cabinet": "Supply cabinet · E to search",
+  "gameplay.task-box-empty": "Box is empty"
 }

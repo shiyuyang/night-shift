@@ -23,7 +23,7 @@ export class BoxBlink {
   if(w.blocked){this.warning=0;this.landing=null;return null;}
   this.warning=Math.max(0,this.warning-dt);if(this.warning>0)return null;
   const p=this.landing;this.landing=null;
-  if(w.visible(p)||Math.hypot(p.x-w.player.x,p.y-w.player.y)<220||w.solids.some(b=>overlaps(monsterFeetAt(p.x,p.y),b)))return null;
+  if(w.forbidden.some(b=>overlaps(monsterFeetAt(p.x,p.y),b))||w.visible(p)||Math.hypot(p.x-w.player.x,p.y-w.player.y)<220||w.solids.some(b=>overlaps(monsterFeetAt(p.x,p.y),b)))return null;
   const path=patrolPath(p,w.player,w.solids,w.bounds,monsterFeetAt),end=path.at(-1);
   return end&&Math.hypot(end.x-w.player.x,end.y-w.player.y)<35?p:null;
  }

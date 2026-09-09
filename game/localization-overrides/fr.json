@@ -9,5 +9,7 @@
   "menu.anomaly": "{threat}\n{event}",
   "note.1": "Une caisse en trop. Un bruit derrière les rayons.",
   "stage.1": "Réserve médicale",
-  "menu.start": "Commencer →"
+  "menu.start": "Commencer →",
+  "rogue.search-supply-cabinet": "Armoire à provisions · E pour fouiller",
+  "gameplay.task-box-empty": "La caisse est vide"
 }

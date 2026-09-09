@@ -247,7 +247,6 @@
   "rogue.pursuit": "Vânătoare",
   "rogue.hiding-e-to-leave-breathing-exposes-you": "Ascunzere · E pentru a ieși. Respirația te expune după 8 secunde",
   "rogue.supply-cabinet-empty": "Gardina de aprovizionare · Golă",
-  "rogue.supply-cabinet-e-to-collect-one-item": "Gardina de aprovizionare · E pentru a colecta un obiect",
   "rogue.shortcut-opened": "Trecere deschisă",
   "rogue.hold-e-to-crank-generator-noise-attracts": "Ține E pentru a porni generatorul: {percent}%. Zgomotul atrage inamicii",
   "rogue.e-to-start-noisy-machinery-distracts-pursuers": "E pentru a porni echipamentele zgomotoase · Distrage inamicii pentru 10 secunde",
@@ -343,5 +342,7 @@
   "menu.night-title": "Noaptea {night, number} · {area}",
   "menu.night": "Noaptea {night, number}",
   "menu.shift-date": "Data turei: {date} · {weekday, select, d0 {dum.} d1 {lun.} d2 {mar.} d3 {mie.} d4 {joi} d5 {vin.} d6 {sâm.} other {}}",
-  "gameplay.listener-flash-immune": "Blițurile nu afectează Ascultătorul. Folosește o momeală."
+  "gameplay.listener-flash-immune": "Blițurile nu afectează Ascultătorul. Folosește o momeală.",
+  "rogue.search-supply-cabinet": "Dulap cu provizii · E pentru a căuta",
+  "gameplay.task-box-empty": "Cutia este goală"
 }

@@ -37,5 +37,7 @@
   "rogue.the-shutter-rises-shortcut-opened": "يرتفع الحاجز. فُتح الطريق المختصر!",
   "event.quiet": "فواصل أطول بين المطاردات",
   "event.supply": "إمدادات: ومضة +1",
-  "event.power": "كهرباء متذبذبة؛ انقطاعات"
+  "event.power": "كهرباء متذبذبة؛ انقطاعات",
+  "rogue.search-supply-cabinet": "خزانة الإمدادات · E للتفتيش",
+  "gameplay.task-box-empty": "الصندوق فارغ"
 }
