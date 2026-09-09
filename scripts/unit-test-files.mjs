@@ -14,6 +14,7 @@ export const unitTestFiles=[
   "tests/audio.test.mjs",
   "tests/audio-pack.test.mjs",
   "tests/random-level.test.mjs",
+  "tests/level-validation-grid.test.mjs",
   "tests/rogue.test.mjs",
   "tests/morgue.test.mjs",
   "tests/garden.test.mjs",

@@ -27,4 +27,14 @@ The full matrix remains seeds 0–199 × nights 2–8, exactly once each. Per-la
 
 Workers report assertion failures with the original stack, night, seed and reproduction command. Duplicate/missing batch results, early worker exit, IPC errors and a five-minute batch timeout fail the suite and stop the pool. Progress is logged approximately every 15 seconds when batches finish. Ctrl-C/SIGTERM stops the pool; on macOS/Linux the main runner forwards signals to the complete phase process group.
 
+## Reachability performance
+
+The shared runtime validator rasterizes built-in actor footprints into a byte grid before breadth-first search. Exact overlap checks preserve edge-touching behavior, and neighbor order remains right/left/down/up so seeded placement retains its point ordering. The integer queue is allocated once per search. Grids are not cached across calls: doors, boxes and extended morgue drawers can change collision geometry. Custom footprints retain direct collision evaluation.
+
+`tests/level-validation-grid.test.mjs` compares full ordered point arrays against the frozen pre-optimization implementation in `tests/helpers/reference-reachability.mjs`, including fractional coordinates, both actor sizes, custom footprints, closed doors, blocked spawns and geometry edits. The full layout sweep still validates every original seed and all global assertions.
+
+Local measurement (Ryzen 9950X, DDR5-6000 EXPO, Node 26.8.1, 13 workers): the full layout phase dropped from 160.6 s to 24.06 s; all 1,400 layouts passed with zero fallbacks and 949 unique layouts. The complete two-phase CPU suite passed in 50.2 s, excluding preparation. A 448-layout subset dropped from 50.58 s to 8.39 s. These are individual runs, not statistical performance guarantees.
+
+For that subset, core PMU DRAM-to-L2 fill counts fell from a historical 23.596 billion to 3.300 billion (about 86% fewer). The historical counter baseline used DDR5-4800, so it is supporting evidence rather than an EXPO-controlled counter comparison. At 64 bytes per fill this estimates total read traffic, not memory-controller read/write utilization; average estimated traffic per second remained around 25 GB/s. The optimization reduces work and total traffic, not necessarily instantaneous bandwidth demand.
+
 `tests/test-workers.test.mjs` checks budgeting (including a simulated 32-CPU machine), complete sample coverage, deterministic ordering, crash handling and timeout cleanup using fast fixture workers. Actual map assertions live in `tests/helpers/layout-worker.mjs`; the shared opening-search assertions remain in `tests/helpers/layout-assertions.mjs`.

@@ -5,10 +5,47 @@ export function reachablePositions(level:Level,open:boolean,footprint:Footprint=
  const solids=[...level.walls,...level.props,...level.boxes.map(b=>({x:b.x-13,y:b.y-9,width:26,height:21})),...(open?[]:[level.door])];
  const {bounds,spawn}=level,step=8,cols=Math.ceil(bounds.width/step)+2,rows=Math.ceil(bounds.height/step)+2;
  const x0=spawn.x-Math.floor((spawn.x-bounds.x)/step)*step,y0=spawn.y-Math.floor((spawn.y-bounds.y)/step)*step;
- const valid=(x:number,y:number)=>x>=bounds.x&&x<=bounds.x+bounds.width&&y>=bounds.y&&y<=bounds.y+bounds.height&&!solids.some(s=>overlaps(footprint(x,y),s));
- if(!valid(spawn.x,spawn.y))return [];
- const seen=new Uint8Array(cols*rows),queue:number[]=[Math.round((spawn.y-y0)/step)*cols+Math.round((spawn.x-x0)/step)],points:Position[]=[];seen[queue[0]]=1;
- for(let i=0;i<queue.length;i++){const at=queue[i],cx=at%cols,cy=Math.floor(at/cols);points.push({x:x0+cx*step,y:y0+cy*step});for(const [dx,dy]of [[1,0],[-1,0],[0,1],[0,-1]]){const nx=cx+dx,ny=cy+dy,n=ny*cols+nx;if(nx<0||ny<0||nx>=cols||ny>=rows||seen[n])continue;seen[n]=1;if(valid(x0+nx*step,y0+ny*step))queue.push(n);}}
+ // Rasterize built-in footprints once instead of scanning every obstacle at every BFS cell.
+ // Keep exact overlap checks at the edges: touching an obstacle remains passable.
+ const blocked=new Uint8Array(cols*rows);
+ if(footprint===feetAt||footprint===monsterFeetAt){
+  const f=footprint(0,0);
+  for(const solid of solids){
+   const left=Math.max(0,Math.floor((solid.x-f.x-f.width-x0)/step));
+   const right=Math.min(cols-1,Math.ceil((solid.x+solid.width-f.x-x0)/step));
+   const top=Math.max(0,Math.floor((solid.y-f.y-f.height-y0)/step));
+   const bottom=Math.min(rows-1,Math.ceil((solid.y+solid.height-f.y-y0)/step));
+   for(let cy=top;cy<=bottom;cy++)for(let cx=left;cx<=right;cx++){
+    const n=cy*cols+cx;
+    if(!blocked[n]&&overlaps(footprint(x0+cx*step,y0+cy*step),solid))blocked[n]=1;
+   }
+  }
+ }else{
+  // Custom footprints can depend on position; retain their original semantics.
+  for(let cy=0;cy<rows;cy++)for(let cx=0;cx<cols;cx++){
+   const f=footprint(x0+cx*step,y0+cy*step);
+   if(solids.some(s=>overlaps(f,s)))blocked[cy*cols+cx]=1;
+  }
+ }
+ const valid=(cx:number,cy:number)=>{
+  const x=x0+cx*step,y=y0+cy*step;
+  return x>=bounds.x&&x<=bounds.x+bounds.width&&y>=bounds.y&&y<=bounds.y+bounds.height&&!blocked[cy*cols+cx];
+ };
+ const sx=Math.round((spawn.x-x0)/step),sy=Math.round((spawn.y-y0)/step);
+ if(!valid(sx,sy))return [];
+ const seen=new Uint8Array(cols*rows),queue=new Int32Array(cols*rows),points:Position[]=[];
+ let tail=1;queue[0]=sy*cols+sx;seen[queue[0]]=1;
+ const visit=(cx:number,cy:number)=>{
+  if(cx<0||cy<0||cx>=cols||cy>=rows)return;
+  const n=cy*cols+cx;if(seen[n])return;seen[n]=1;
+  if(valid(cx,cy))queue[tail++]=n;
+ };
+ for(let i=0;i<tail;i++){
+  const at=queue[i],cx=at%cols,cy=Math.floor(at/cols);
+  points.push({x:x0+cx*step,y:y0+cy*step});
+  // Preserve traversal order because seeded placement selects from this array.
+  visit(cx+1,cy);visit(cx-1,cy);visit(cx,cy+1);visit(cx,cy-1);
+ }
  return points;
 }
 /** Shortest walking distance between valid final-box and exit interaction positions. */
