@@ -4,8 +4,8 @@ export class DoorBreach {
  tick(dt:number,pushing:boolean){
   if(dt<=0||this.broken)return;
   if(!pushing){this.progress=0;this.beat=0;return;}
-  const old=this.beat;this.progress+=dt;this.beat=Math.floor(this.progress);
-  if(this.progress>=5){this.broken=true;return 'door-breach';}
+  const old=this.beat;this.progress+=dt;this.beat=Math.floor(this.progress/.65);
+  if(this.progress>=2){this.broken=true;return 'door-breach';}
   if(this.beat!==old||this.progress===dt)return 'door-batter';
  }
 }

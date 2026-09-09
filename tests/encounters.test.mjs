@@ -5,7 +5,7 @@ import {flashlightDrain,flashlightRemaining} from '../src/runtime/flashlight.ts'
 import {makeLevel} from '../src/levels.ts';
 import {monsterArchitecture,monsterFeetAt,overlaps} from '../src/collision.ts';
 import {validatePlayableLevel} from '../src/runtime/level-validation.ts';
-import {detectsPlayer,hearsPlayer} from '../src/run-rules.ts';
+import {detectsPlayer,hearsPlayer,hearsWalking} from '../src/run-rules.ts';
 const input=(overrides={})=>({player:{x:145,y:150},hidden:false,angle:Math.PI,light:true,sprinting:false,noise:false,solids:[],architecture:[],bounds:{x:20,y:20,width:400,height:400},immune:false,...overrides});
 test('silent visible player does not reveal position to listener; distant noise distinguishes pursuers',()=>{
  assert.equal(detectsPlayer('listener',40,true),false);
@@ -145,3 +145,5 @@ test('pursuit routes around a wall and retries when a closed route opens',()=>{
  for(let i=0;i<200;i++)if(waiting.tick(.05,{...target,solids:[],architecture:[]}).includes('dash')){resumed=true;break;}
  assert.ok(resumed,'replans after the door opens');
 });
+
+test('listener hears nearby walking while loud actions carry farther',()=>{assert.equal(hearsWalking('listener',199),true);assert.equal(hearsWalking('listener',200),false);assert.equal(hearsPlayer('listener',220),true);for(const threat of ['light-shy','patroller'])assert.equal(hearsWalking(threat,30),false);});

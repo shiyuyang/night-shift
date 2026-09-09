@@ -4,7 +4,7 @@
   "domain": "night-shift-assets.liveinteractivegame.com",
   "zoneId": "30badb66445e606e10540be49d75e584",
   "prefix": "games/night-shift",
-  "version": "36f823f612661583",
+  "version": "47392642ec5a5eee",
   "files": [
     {
       "file": "assets/archive-garden-v1.q95.webp",
@@ -257,14 +257,14 @@
       "sha256": "205d4836b1c457981ca9a6edb2aa494b1a24573c68cdcb7a524819fc5a701a05"
     },
     {
-      "file": "fonts/locale-ja-9f270388d2.woff2",
-      "bytes": 259292,
-      "sha256": "9f270388d2d3591cb9d40847d929fdf42992020422314f8f2faf5ba4c34b3fb5"
+      "file": "fonts/locale-ja-e8f196ce09.woff2",
+      "bytes": 259892,
+      "sha256": "e8f196ce09bd37d7b21df6de6d8656fc215a8122ae8495a65350f3e4facf043b"
     },
     {
-      "file": "fonts/locale-ko-726c13d48a.woff2",
-      "bytes": 106884,
-      "sha256": "726c13d48a5f076c9aab8095dc4af41a7a102de3ec0c32d1ef335b3a8ffddf64"
+      "file": "fonts/locale-ko-ca926e38f3.woff2",
+      "bytes": 106752,
+      "sha256": "ca926e38f313c2c1f8b77b3f71e6efb6c59fc4027afbba406f32165cd2b345b9"
     },
     {
       "file": "fonts/locale-latin-84536a0a4d.woff2",
@@ -342,6 +342,6 @@
       "sha256": "d113cd651f212760397282b77588d331a6079268e539375b784992fb97ecd320"
     }
   ],
-  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/36f823f612661583/",
-  "verifiedAt": "2026-09-09T08:42:24.303Z"
+  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/47392642ec5a5eee/",
+  "verifiedAt": "2026-09-09T10:57:00.256Z"
 }

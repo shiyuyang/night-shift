@@ -35,17 +35,17 @@
     "missing": "→♫勤夜棟病"
   },
   "ja": {
-    "file": "/fonts/locale-ja-9f270388d2.woff2",
+    "file": "/fonts/locale-ja-e8f196ce09.woff2",
     "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
     "license": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansjp/OFL.txt",
-    "bytes": 259292,
+    "bytes": 259892,
     "missing": ""
   },
   "ko": {
-    "file": "/fonts/locale-ko-726c13d48a.woff2",
+    "file": "/fonts/locale-ko-ca926e38f3.woff2",
     "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf",
     "license": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanskr/OFL.txt",
-    "bytes": 106884,
+    "bytes": 106752,
     "missing": ""
   },
   "zh-Hans": {

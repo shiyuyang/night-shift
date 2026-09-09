@@ -12,8 +12,8 @@ test('quiet proximity does not pin a roaming patient or silence it forever',()=>
  assert.ok(moved&&cry);assert.equal(w.anger,0);
 });
 test('door battering has warning beats, freezes on pause and is interrupted before breaking',()=>{
- const d=new DoorBreach();assert.equal(d.tick(.1,false),undefined);assert.equal(d.tick(.1,true),'door-batter');d.tick(0,true);assert.equal(d.progress,.1);d.tick(3,true);d.tick(.1,false);assert.equal(d.progress,0);
- d.tick(4.9,true);assert.equal(d.broken,false);assert.equal(d.tick(.2,true),'door-breach');assert.equal(d.broken,true);assert.equal(d.tick(30,true),undefined);
+ const d=new DoorBreach();assert.equal(d.tick(.1,false),undefined);assert.equal(d.tick(.1,true),'door-batter');d.tick(0,true);assert.equal(d.progress,.1);d.tick(1,true);d.tick(.1,false);assert.equal(d.progress,0);
+ d.tick(1.9,true);assert.equal(d.broken,false);assert.equal(d.tick(.2,true),'door-breach');assert.equal(d.broken,true);assert.equal(d.tick(30,true),undefined);
 });
 test('finale plans a forward intersection including warning, never visible or adjacent spawns',()=>{
  const r=chooseFinaleEntry([{x:500,y:350},{x:50,y:150},{x:400,y:150}],{x:100,y:150},{x:1000,y:150},[],{x:0,y:0,width:1200,height:600},117,p=>p.y===150);

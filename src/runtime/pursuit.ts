@@ -2,9 +2,10 @@ import {monsterFeetAt,overlaps,type Box,type Position} from '../collision.ts';
 import {patrolPath} from '../patrol.ts';
 export function routeLength(from:Position,route:Position[]){let n=0,p=from;for(const q of route){n+=Math.hypot(q.x-p.x,q.y-p.y);p=q;}return n;}
 /** Entry selection uses walking distance, never a straight-line shortcut through walls. */
-export function choosePursuitEntry(entries:Position[],player:Position,solids:Box[],bounds:Box,speed:number,visible:(p:Position)=>boolean){
+export function choosePursuitEntry(entries:Position[],player:Position,solids:Box[],bounds:Box,speed:number,visible:(p:Position)=>boolean,breachableDoor?:Box){
+ const walking=breachableDoor?solids.filter(b=>b.x!==breachableDoor.x||b.y!==breachableDoor.y||b.width!==breachableDoor.width||b.height!==breachableDoor.height):solids;
  const candidates=entries.filter(p=>Math.hypot(p.x-player.x,p.y-player.y)>=180&&!visible(p)&&!solids.some(b=>overlaps(monsterFeetAt(p.x,p.y),b))).map(p=>{
-  const route=patrolPath(p,player,solids,bounds,monsterFeetAt);return {position:p,route,seconds:routeLength(p,route)/speed};
+  const route=patrolPath(p,player,walking,bounds,monsterFeetAt);return {position:p,route,seconds:routeLength(p,route)/speed};
  }).filter(p=>p.route.length&&p.route.at(-1)&&Math.hypot(p.route.at(-1)!.x-player.x,p.route.at(-1)!.y-player.y)<35);
  return candidates.sort((a,b)=>Math.abs(a.seconds-3.5)-Math.abs(b.seconds-3.5))[0];
 }

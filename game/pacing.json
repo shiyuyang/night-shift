@@ -11,5 +11,6 @@
   "contactDamage": 20,
   "staminaDrain": 28,
   "staminaRecovery": 20,
-  "staminaRecoveryDelay": 1.2
+  "staminaRecoveryDelay": 1.2,
+  "listenerMinSpeed": 103
 }

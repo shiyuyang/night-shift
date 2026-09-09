@@ -27,3 +27,27 @@
 通过 `npm run assets:publish` 上传不可变 R2 版本并公开 GET 核验 SHA-256，再以 `npm run deploy:cloudflare` 发布当前分支。部署检查覆盖实际闪烁透明度变化、开始巡查、媒体解码和Chrome Opus 音频（不再保留 MP3 回退）。
 
 登记簿标题下增加值班日期和星期的本地预览，以 1998-10-14 为第一夜，按所选夜数逐日递增。日期使用当前语言的数字日期格式，星期采用本地化短名；HUD 和结算仍只显示夜数与场景。该起始日为待确认的故事日期。
+
+
+第一夜终局关门等待回归：入口选择允许规划经过可破坏的房门，但候选出生点仍以真实障碍和可见性筛选；实际移动保留关门碰撞，由现有撞门流程破门。修复关门时所有追击入口被排除、倒计时结束仍无怪物来袭的问题。`npm run test:browser:ward-finale` 检查完整倒计时、门外接近、破门和入室接触，教学暂停在受控场景中显式关闭。
+
+听声者近距脚步修复：普通行走的落脚声每约 0.45 秒提供一次线索，半径 200；疾跑及开箱等大声动作仍使用 260 半径。收到声音立即清除旧拦截点并重算路线。近处静止和远处轻走不产生新线索，普通脚步不激怒哭泣病人，其他怪物的听觉规则保持不变。`npm run test:browser:listener` 使用真实方向键验证从旧箱子位置转向近处脚步、静止与远距轻走不更新目标。
+
+压力调校：破门连续撞击时长由 5 秒缩为 2 秒；听声者最低追赶速度为 103，高于步行 83、低于疾跑 125。普通脚步听觉半径扩至 200，疾跑仍为 260。真实按键连续步行 4 秒的回归要求怪物至少追回 45 距离单位。
+
+
+### Patrol density
+
+Current patrol density: every night uses one ordinary patrol during search. When the alarm starts, one additional interceptor enters from the exit side (within 224 world pixels of the exit and at least 180 from the player). Any existing crying patient remains independent. The exit interceptor holds its entry for six simulation seconds before advancing, and reacts immediately if a visible player comes within 260 world pixels; pause freezes this guard period. The ordinary patrol can roam across the map after losing its clue; the interceptor advances to a forward checkpoint on the return route, refreshed every 1.2 seconds. Hiding and decoys suspend player-clue refresh. The interceptor uses speed 115 (player walk 83, sprint 125). Doors, flash, decoys and shared contact invulnerability still apply. The density browser test checks zero extra patrols before the alarm and exactly one afterwards across all seven maps, plus the garden closed-door regression.
+
+### Opening search placement
+
+- Night 1 retains the authored tutorial route. Later seeded nights choose key/first-box pairs from functional room pools, with both occluded from spawn, at least 300 world pixels apart, and no direct ray between them through the architecture/furniture.
+- Added search points beside existing furnishings in registration, gatehouse, scrub and morgue rooms. Random fallback retains the same opening-search constraints and validates collisions, reachability and fixed-patient clearance.
+- `tests/random-level.test.mjs` checks the opening constraints across its 1,400 seeded layouts and forced fallback. `node tests/opening-search.browser.mjs` checks real keyboard traversal and pickup in nights 1, 2 and 6, with sanctuary assistance to isolate placement from combat.
+
+### Final-box blink and Listener immunity
+
+The final fuse may trigger one blink for the primary pursuer only when its physical approach exceeds six seconds. A 0.8-second signal/opacity warning precedes relocation to a reachable side/rear approach, approximately 2.5–4.5 walking seconds away. Landing excludes the player's final room, the exit area and visible positions; visibility, clearance and reachability are checked again on arrival. Stun, recent successful flash knockback, hiding and distraction prevent or cancel the blink. Exit interceptors keep their existing guard behavior.
+
+The Listener is immune to flash stun and knockback. The first-night tutorial skips the flash exercise and introduces the decoy instead. Other enemies retain their current flash response. All 29 catalogs include the exception in the Listener lesson, gameplay help and relevant command descriptions; translations remain drafts. Tests: `tests/box-blink.test.mjs`, `tests/box-blink.browser.mjs`, `tests/listener-localization.browser.mjs` and the updated tutorial browser flow.

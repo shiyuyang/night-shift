@@ -344,4 +344,5 @@ export interface MessageValues{
 "menu.night-title":{"night":number;"area":string|number}
 "menu.night":{"night":number}
 "menu.shift-date":{"date":string|number;"weekday":string|number}
+"gameplay.listener-flash-immune":{}
 }

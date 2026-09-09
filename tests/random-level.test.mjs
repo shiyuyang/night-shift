@@ -1,8 +1,9 @@
 import test from 'node:test';import assert from 'node:assert/strict';
+import {clearContact} from '../src/collision.ts';
 import {makeLevel} from '../src/levels.ts';import {randomizeLevel} from '../src/runtime/random-level.ts';import {validatePlayableLevel,escapeRouteLength} from '../src/runtime/level-validation.ts';
 test('tutorial remains authored; seeded searches reproduce while authored rooms remain intact',()=>{assert.deepEqual(makeLevel(1,10),makeLevel(1,20));assert.deepEqual(makeLevel(2,10),makeLevel(2,10));assert.deepEqual(makeLevel(2,10).walls,makeLevel(2).walls);assert.deepEqual(makeLevel(2,20).props,makeLevel(2).props);assert.notDeepEqual(makeLevel(2,10).boxes,makeLevel(2,20).boxes);});
-test('1400 generated layouts preserve the entire key chain, locked room and monster access',()=>{let fallback=0;const layouts=new Set();for(let seed=0;seed<200;seed++)for(const round of [2,3,4,5,6,7,8]){const level=makeLevel(round,seed);assert.equal(validatePlayableLevel(level).valid,true,JSON.stringify({round,seed}));fallback+=Number(level.generation.fallback);assert.deepEqual(level.walls,makeLevel(round).walls);assert.deepEqual(level.props,makeLevel(round).props);assert.ok(Math.hypot(level.boxes[2].x-(level.door.x+level.door.width/2),level.boxes[2].y-(level.door.y+level.door.height/2))>=90);layouts.add(JSON.stringify([level.key,level.boxes]));}assert.ok(fallback<6,`too many fallbacks: ${fallback}`);assert.ok(layouts.size>150,`low diversity: ${layouts.size}`);console.log({generated:1400,fallback,uniqueLayouts:layouts.size});});
-test('bounded retries return a validated authored fallback',()=>{for(const round of [2,3,4,5,6,7,8]){const base=makeLevel(round),fallback=randomizeLevel(base,1,0);assert.equal(fallback.generation.fallback,true);assert.deepEqual(fallback.walls,base.walls);assert.ok(validatePlayableLevel(fallback).valid);}});
+test('1400 generated layouts preserve the entire key chain, locked room and monster access',()=>{let fallback=0;const layouts=new Set();for(let seed=0;seed<200;seed++)for(const round of [2,3,4,5,6,7,8]){const level=makeLevel(round,seed);assert.equal(validatePlayableLevel(level).valid,true,JSON.stringify({round,seed}));assertOpeningSearch(level);fallback+=Number(level.generation.fallback);assert.deepEqual(level.walls,makeLevel(round).walls);assert.deepEqual(level.props,makeLevel(round).props);assert.ok(Math.hypot(level.boxes[2].x-(level.door.x+level.door.width/2),level.boxes[2].y-(level.door.y+level.door.height/2))>=90);layouts.add(JSON.stringify([level.key,level.boxes]));}assert.ok(fallback<6,`too many fallbacks: ${fallback}`);assert.ok(layouts.size>150,`low diversity: ${layouts.size}`);console.log({generated:1400,fallback,uniqueLayouts:layouts.size});});
+test('bounded retries return a validated authored fallback',()=>{for(const round of [2,3,4,5,6,7,8]){const base=makeLevel(round),fallback=randomizeLevel(base,1,0);assert.equal(fallback.generation.fallback,true);assertOpeningSearch(fallback);assert.deepEqual(fallback.walls,base.walls);assert.ok(validatePlayableLevel(fallback).valid);}});
 test('validator rejects sealed exit, inaccessible keys and locked-room bypass',()=>{const l=makeLevel(2,12);const sealed=structuredClone(l);sealed.walls.push({x:l.key.x-48,y:l.key.y-48,width:96,height:96});assert.equal(validatePlayableLevel(sealed).valid,false);const bypass=structuredClone(l);bypass.boxes[2]={...l.spawn};assert.equal(validatePlayableLevel(bypass).valid,false);const exit=structuredClone(l);exit.exit={x:-300,y:-300};assert.equal(validatePlayableLevel(exit).valid,false);});
 
 test('final-box escape crosses the map and rejects a nearby exit',()=>{for(let round=1;round<=7;round++){const l=makeLevel(round);assert.ok(escapeRouteLength(l)>=600);const shortcut=structuredClone(l);shortcut.exit={x:l.boxes[2].x,y:l.boxes[2].y+28};assert.ok(validatePlayableLevel(shortcut).errors.some(e=>e.includes('escape route')));}});
@@ -43,3 +44,11 @@ test('clinical searches stay within their assigned functional rooms',()=>{
   for(const f of l.features)assert.ok(optional.some(b=>inside({x:f.x+f.width/2,y:f.y+f.height/2},b)));
  }
 });
+
+function assertOpeningSearch(level){
+ const solids=[...level.walls,...level.props,level.door];
+ assert.equal(clearContact(level.spawn,level.key,solids),false,'Opening key must require searching past cover');
+ assert.equal(clearContact(level.spawn,level.boxes[0],solids),false,'First box must not face spawn');
+ assert.ok(Math.hypot(level.key.x-level.boxes[0].x,level.key.y-level.boxes[0].y)>=300);
+ assert.equal(clearContact(level.key,level.boxes[0],solids),false,'Key and box must require turning through the map');
+}

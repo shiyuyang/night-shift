@@ -31,3 +31,14 @@ test('one roaming patient walks around walls, stops to cry, and never crosses a 
  for(let i=0;i<550;i++){w.tick(.05,state);moved ||=w.roaming;arrived ||=Math.hypot(w.position.x-330,w.position.y-200)<8;assert.equal(overlaps(monsterFeetAt(w.position.x,w.position.y),wall),false);assert.equal(w.dangerous,false);}
  assert.ok(moved&&arrived);const at={...w.position};w.tick(0,state);assert.deepEqual(w.position,at);
 });
+
+ test('finale entry may approach a breachable door while ordinary pursuit still requires an open route',()=>{
+  const l=makeLevel(1),door=monsterArchitecture(l.door),target={x:l.boxes[2].x,y:l.boxes[2].y+24};
+  const solids=[...l.walls.map(monsterArchitecture),...l.props,...l.boxes.map(b=>({x:b.x-13,y:b.y-9,width:26,height:21})),door];
+  const entries=[...l.monsterSpawns,...l.monsterEntries];
+  assert.equal(choosePursuitEntry(entries,target,solids,l.bounds,111,()=>false),undefined);
+  const entry=choosePursuitEntry(entries,target,solids,l.bounds,111,()=>false,door);
+  assert.ok(entry);assert.ok(!solids.some(b=>overlaps(monsterFeetAt(entry.position.x,entry.position.y),b)));
+  assert.ok(Math.hypot(entry.route.at(-1).x-target.x,entry.route.at(-1).y-target.y)<35);
+  assert.equal(choosePursuitEntry(entries,target,solids,l.bounds,111,()=>true,door),undefined);
+ });
