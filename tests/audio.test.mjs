@@ -33,17 +33,20 @@ test('Opus delivery reports decode failure without requesting another codec',asy
 test('music loudness compensation brings source tracks to a consistent reference',()=>{
  for(const track of music)assert.ok(Math.abs(track.measuredLufs+20*Math.log10(track.mixGain)+21.5)<.01,track.id);
 });
-test('patient cues duck only music, overlap retains priority, and stop or pause releases it',async()=>{
+test('crying preserves music volume and follows distance; attack cues keep priority',async()=>{
  const {Ambience}=await import('../src/ambience.ts'),sources=[];
  const param=()=>({value:0,setTargetAtTime(value,time,constant){Object.assign(this,{value,time,constant});}});
  const gain=()=>({gain:param(),connect(target){this.destination=target;return target},disconnect(){}});
  const ctx={currentTime:5,createGain:gain,createStereoPanner(){return {...gain(),pan:param()};},createBufferSource(){const source={playbackRate:param(),connect(target){this.destination=target;return target},start(){},stop(){this.stopped=true},disconnect(){}};sources.push(source);return source;}};
- const a=new Ambience();a.context=ctx;a.master=gain();a.musicBus=gain();a.enabled=true;a.setRunning(true);
+ const a=new Ambience();a.context=ctx;a.master=gain();a.musicBus=gain();a.musicBus.gain.value=1;a.enabled=true;a.setRunning(true);
  for(const id of ['patient-cry','patient-rise','patient-lunge','step'])a.effects.set(id,{});
- a.cue('patient-cry');assert.equal(a.musicBus.gain.value,.2);assert.equal(a.musicBus.gain.constant,.035);assert.equal(sources[0].destination.destination.destination,a.master);
+ a.cue('patient-cry',0,1);assert.equal(a.musicBus.gain.value,1);assert.equal(sources[0].destination.destination.destination,a.master);
+ const cryGain=sources[0].destination.gain,base=cryGain.value;
+ a.cue('patient-position',.8,.25);assert.equal(cryGain.value,base*.25);assert.equal(sources[0].destination.destination.pan.value,.8);assert.equal(a.musicBus.gain.value,1);
+ a.cue('patient-position',0,0);assert.equal(cryGain.value,0);a.cue('patient-position',0,1);assert.equal(cryGain.value,base);
  a.cue('step');a.cue('patient-rise');sources[0].onended();assert.equal(a.musicBus.gain.value,.2);sources[2].onended();assert.equal(a.musicBus.gain.value,1);assert.equal(a.musicBus.gain.constant,1.1);
  a.cue('patient-cry');a.cue('patient-stop');assert.equal(a.musicBus.gain.value,1);assert.ok(sources.at(-1).stopped);
- a.cue('patient-cry');a.setRunning(false);assert.equal(a.musicBus.gain.value,1);assert.equal(a.patientVoices.size,0);a.setRunning(true);assert.equal(a.musicDucked,false);a.cue('patient-lunge');assert.equal(a.musicBus.gain.value,.2);assert.equal(a.musicBus.gain.constant,.01);a.cue('patient-stop');
+ a.cue('patient-cry');a.setRunning(false);assert.equal(a.musicBus.gain.value,1);assert.equal(a.patientVoices.size,0);assert.equal(a.cries.size,0);a.setRunning(true);assert.equal(a.musicDucked,false);a.cue('patient-lunge');assert.equal(a.musicBus.gain.value,.2);assert.equal(a.musicBus.gain.constant,.01);a.cue('patient-stop');
 });
 
 test('every level plays both scene themes as searching escalates, without cycling on each fuse',async()=>{

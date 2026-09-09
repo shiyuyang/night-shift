@@ -11,6 +11,8 @@ export class Ambience {
   private effects=new Map<string,AudioBuffer>();
   private voices=new Set<AudioBufferSourceNode>();
   private patientVoices=new Set<AudioBufferSourceNode>();
+  private patientWarnings=new Set<AudioBufferSourceNode>();
+  private cries=new Map<AudioBufferSourceNode,{gain:GainNode;stereo:StereoPannerNode}>();
   private context?: AudioContext;
   private master?: GainNode;
   private musicBus?: GainNode;
@@ -160,26 +162,32 @@ export class Ambience {
     if(this.context.state==='running')this.schedule();
   }
   private updateMusicDucking(){
-    const ducked=this.patientVoices.size>0&&this.running&&this.enabled;
+    const ducked=this.patientWarnings.size>0&&this.running&&this.enabled;
     if(!this.musicBus||!this.context||ducked===this.musicDucked)return;
     this.musicDucked=ducked;
-    // Patient cues bypass this bus. Full reverb tails keep priority until onended.
+    // Only attack/suppression cues duck music. Ambient crying never changes the music bus.
     this.musicBus.gain.setTargetAtTime(ducked?.2:1,this.context.currentTime,ducked?.035:1.1);
   }
   setRunning(running: boolean) {
     this.running = running;
-    if(!running){for(const voice of this.patientVoices)voice.stop();this.patientVoices.clear();}
+    if(!running){for(const voice of this.patientVoices)voice.stop();this.patientVoices.clear();this.patientWarnings.clear();this.cries.clear();}
     this.updateMusicDucking();this.syncPower();
     if (this.context && this.master) this.master.gain.setTargetAtTime(this.enabled && running ? this.volume : 0,this.context.currentTime,.12);
   }
   cue(kind: string, pan = 0, volume = 1) {
-    if(kind==='patient-stop'){for(const voice of this.patientVoices)voice.stop();this.patientVoices.clear();this.updateMusicDucking();return;}
+    if(kind==='patient-stop'){for(const voice of this.patientVoices)voice.stop();this.patientVoices.clear();this.patientWarnings.clear();this.cries.clear();this.updateMusicDucking();return;}
+    if(kind==='patient-position'){
+      if(!this.context)return;
+      const base=effects.find(effect=>effect.id==='patient-cry')!.gain;
+      for(const voice of this.cries.values()){voice.gain.gain.setTargetAtTime(base*Math.max(0,Math.min(1,volume)),this.context.currentTime,.1);voice.stereo.pan.setTargetAtTime(Math.max(-1,Math.min(1,pan)),this.context.currentTime,.1);}
+      return;
+    }
     if(kind==='sting')kind='impact';
     if(!this.enabled||!this.running||!this.context||!this.master)return;
     const buffer=this.effects.get(kind),definition=effects.find(effect=>effect.id===kind);if(!buffer||!definition)return;
     // Bound overlapping footsteps and gift bursts without synthesizing fallback sounds.
     if(this.voices.size>=12){const oldest=this.voices.values().next().value;oldest?.stop();if(oldest)this.voices.delete(oldest);}
-    const ctx=this.context,source=ctx.createBufferSource(),gain=ctx.createGain(),stereo=ctx.createStereoPanner();source.buffer=buffer;source.playbackRate.value=kind==='step'?.96+Math.random()*.08:1;gain.gain.value=definition.gain*Math.max(0,Math.min(1,volume));stereo.pan.value=Math.max(-1,Math.min(1,pan));source.connect(gain).connect(stereo).connect(this.master);this.voices.add(source);if(kind.startsWith('patient-')){this.patientVoices.add(source);this.updateMusicDucking();if(kind==='patient-lunge')this.musicBus?.gain.setTargetAtTime(.2,ctx.currentTime,.01);}source.start();source.onended=()=>{this.patientVoices.delete(source);this.updateMusicDucking();this.voices.delete(source);source.disconnect();gain.disconnect();stereo.disconnect();};
+    const ctx=this.context,source=ctx.createBufferSource(),gain=ctx.createGain(),stereo=ctx.createStereoPanner();source.buffer=buffer;source.playbackRate.value=kind==='step'?.96+Math.random()*.08:1;gain.gain.value=definition.gain*Math.max(0,Math.min(1,volume));stereo.pan.value=Math.max(-1,Math.min(1,pan));source.connect(gain).connect(stereo).connect(this.master);this.voices.add(source);if(kind.startsWith('patient-')){this.patientVoices.add(source);if(kind==='patient-cry')this.cries.set(source,{gain,stereo});else this.patientWarnings.add(source);this.updateMusicDucking();if(kind==='patient-lunge')this.musicBus?.gain.setTargetAtTime(.2,ctx.currentTime,.01);}source.start();source.onended=()=>{this.patientVoices.delete(source);this.patientWarnings.delete(source);this.cries.delete(source);this.updateMusicDucking();this.voices.delete(source);source.disconnect();gain.disconnect();stereo.disconnect();};
   }
   dispose() {if(this.scheduler)clearInterval(this.scheduler);void this.context?.close();}
 }
