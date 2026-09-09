@@ -1,4 +1,4 @@
-/** Upload and verify an immutable media release before making it deployable. */
+/** Upload an immutable media release; remote verification is explicit opt-in. */
 import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {spawn,spawnSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
@@ -19,8 +19,9 @@ async function upload(item){
 }
 // Disjoint immutable keys can be uploaded concurrently.
 const queue=[...manifest.files];await Promise.all(Array.from({length:4},async()=>{while(queue.length)await upload(queue.shift());}));
+const verify=process.argv.includes('--verify');
 const checks=[];
-for(const item of manifest.files){
+if(verify)for(const item of manifest.files){
  let failure;
  for(let attempt=0;attempt<4;attempt++){
   try{
@@ -35,8 +36,8 @@ for(const item of manifest.files){
  }
  if(failure)throw Error('Public verification failed for '+item.file+': '+failure);
 }
-const release={...config,...manifest,assetBaseUrl,verifiedAt:new Date().toISOString()};
+const release={...config,...manifest,assetBaseUrl,publishedAt:new Date().toISOString(),...(verify?{verifiedAt:new Date().toISOString()}:{})};
 mkdirSync('/tmp/night-shift-r2',{recursive:true});
 writeFileSync(new URL('../deploy/r2-release.json',import.meta.url),JSON.stringify(release,null,2)+'\n');
-writeFileSync('/tmp/night-shift-r2/upload-checks.json',JSON.stringify(checks,null,2));
-console.log(`Verified ${checks.length} R2 objects by public GET and SHA-256: ${assetBaseUrl}`);
+writeFileSync('/tmp/night-shift-r2/upload-checks.json',JSON.stringify({verification:verify?'passed':'skipped',checks},null,2));
+console.log(verify?`Verified ${checks.length} R2 objects by public GET and SHA-256: ${assetBaseUrl}`:`Uploaded ${manifest.files.length} R2 objects; remote verification skipped: ${assetBaseUrl}`);

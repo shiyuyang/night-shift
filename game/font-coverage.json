@@ -42,10 +42,10 @@
     "missing": ""
   },
   "ko": {
-    "file": "/fonts/locale-ko-ca926e38f3.woff2",
+    "file": "/fonts/locale-ko-9beb35c95d.woff2",
     "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf",
     "license": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanskr/OFL.txt",
-    "bytes": 106752,
+    "bytes": 106980,
     "missing": ""
   },
   "zh-Hans": {

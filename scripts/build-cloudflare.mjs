@@ -1,4 +1,4 @@
-/** Publish only code here; media must already be verified in R2. */
+/** Publish only code here; media must already be uploaded to R2. */
 import {readFileSync,writeFileSync,mkdirSync,rmSync,copyFileSync} from 'node:fs';
 import {dirname} from 'node:path';
 import {execFileSync} from 'node:child_process';

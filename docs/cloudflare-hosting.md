@@ -38,3 +38,7 @@
 构建、TypeScript 检查、Wrangler dry-run、本地游戏启动通过。线上 Chrome 在主动阻断 API 域名与 Linode IP 的条件下，正常音频与强制 MP3 回退均通过：游戏启动、16 张图片解码、9 首音乐和 1 个音效包就绪，原始素材路径返回 404。线上四份游戏代码文件的 SHA-256 与构建清单一致，并包含 Cloudflare 静态托管标识。根路径及 `/index.html` 的 404、游戏直达链接与旧链接重定向另行做 HTTP 检查。没有关闭 Linode 来进行故障演练，未验证所有移动浏览器。
 
 参考：[Static Assets](https://developers.cloudflare.com/workers/static-assets/)、[Custom Domains](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/)、[静态资源计费](https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/)。静态资源请求免费且不限量；旧入口重定向执行 Worker 代码，受 Worker 套餐用量约束；R2 仍按自身规则计费。
+
+## R2 upload policy
+
+R2 upload success is sufficient to proceed. By default, do not run remote SHA-256 checks, public GET/HEAD reachability probes, or bulk image fetch/decode checks after upload. Only run `npm run assets:publish -- --verify` or deployment checks with `VERIFY_R2=1` when the user explicitly requests R2 verification. Local immutable-manifest consistency and ordinary application smoke tests remain enabled. Release metadata uses `publishedAt`; `verifiedAt` is present only after requested verification passes.

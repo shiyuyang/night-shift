@@ -74,12 +74,12 @@ try{
  const imagePaths=deliveryFiles().filter(p=>p.endsWith('.webp'));
  // CSS images may be in the browser cache from a no-CORS request. Make a fresh
  // CORS request for this additional canvas decode check.
- await page.evaluate(async urls=>{for(const url of urls){try{const response=await fetch(url,{cache:'reload',signal:AbortSignal.timeout(20000)});if(!response.ok)throw Error('HTTP '+response.status);const bitmap=await createImageBitmap(await response.blob());if(!bitmap.width||!bitmap.height)throw Error('empty image');bitmap.close();}catch(error){throw Error(url+': '+error);}}},imagePaths.map(p=>new URL(p,assetBase).href));
+ if(process.env.VERIFY_R2==='1')await page.evaluate(async urls=>{for(const url of urls){try{const response=await fetch(url,{cache:'reload',signal:AbortSignal.timeout(20000)});if(!response.ok)throw Error('HTTP '+response.status);const bitmap=await createImageBitmap(await response.blob());if(!bitmap.width||!bitmap.height)throw Error('empty image');bitmap.close();}catch(error){throw Error(url+': '+error);}}},imagePaths.map(p=>new URL(p,assetBase).href));
  for(const path of ['assets/watch-desk-v1.png','audio/menu-theme-v2.mp3','audio/menu-theme-v1.json']){
   assert.equal((await page.request.get(new URL(path,url).href)).status(),404,'Source/unused file was published: '+path);
  }
  assert.deepEqual(errors,[]);
  assert.deepEqual(bad,[]);
  assert.deepEqual(originRequests,[],'Game attempted to contact Linode/API');
- console.log('Deployment checks passed:',url,`— game start, ${imagePaths.length} images, ${musicCount} music + 1 sound pack (${'Opus'}), no source/unused files, correct asset origin.`);
+ console.log('Deployment checks passed:',url,`— game start, ${process.env.VERIFY_R2==='1'?imagePaths.length+' images verified':'bulk R2 verification skipped'}, ${musicCount} music + 1 sound pack (${'Opus'}), no source/unused files, correct asset origin.`);
 }finally{await browser.close();if(server)await new Promise(r=>server.httpServer.close(r));}

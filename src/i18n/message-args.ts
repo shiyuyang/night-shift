@@ -80,7 +80,7 @@ export interface MessageValues{
 "tutorial.monster-light-shyTitle":{}
 "tutorial.monster-light-shyText":{}
 "tutorial.monster-patrollerTitle":{}
-"tutorial.monster-patrollerText":{}
+"tutorial.monster-patrollerText":{"seconds":number}
 "tutorial.monster-weeperTitle":{}
 "tutorial.monster-weeperText":{}
 "tutorial.monsterContinue":{}
@@ -238,7 +238,7 @@ export interface MessageValues{
 "gameplay.stage-brass-keys-open-brass-boxes-the":{"stage":string|number;"area":string|number;"stunSeconds":string|number;"decoySeconds":string|number}
 "gameplay.it-cannot-see-sprinting-and-searching-reveal":{}
 "gameplay.light-makes-it-recoil-turn-and-run":{}
-"gameplay.it-pursues-on-sight-turn-corners-and":{}
+"gameplay.it-pursues-on-sight-turn-corners-and":{"seconds":number}
 "gameplay.quiet-patrol-longer-pursuit-intervals":{}
 "gameplay.extra-supplies-one-additional-flash-per-stage":{}
 "gameplay.power-maintenance-intermittent-second-outages-after-searching":{}

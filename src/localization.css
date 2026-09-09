@@ -5,7 +5,7 @@
 @font-face{font-family:LocaleThai;src:url('/fonts/locale-th-9f5ad7c0da.woff2') format('woff2');font-display:swap}
 @font-face{font-family:LocaleMyanmar;src:url('/fonts/locale-my-e774f8c07e.woff2') format('woff2');font-display:swap}
 @font-face{font-family:LocaleJapanese;src:url('/fonts/locale-ja-e8f196ce09.woff2') format('woff2');font-display:swap}
-@font-face{font-family:LocaleKorean;src:url('/fonts/locale-ko-ca926e38f3.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleKorean;src:url('/fonts/locale-ko-9beb35c95d.woff2') format('woff2');font-display:swap}
 @font-face{font-family:LocaleHans;src:url('/fonts/locale-zh-Hans-e3c1c63d4d.woff2') format('woff2');font-display:swap}
 @font-face{font-family:LocaleHant;src:url('/fonts/locale-zh-Hant-687cb3feaa.woff2') format('woff2');font-display:swap}
 :root{--locale-font:LocaleLatin;--locale-note:var(--locale-font)}

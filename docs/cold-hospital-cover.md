@@ -24,7 +24,7 @@
 
 实心印章源图仍有浅色底，页面用 SVG 颜色矩阵移除，矩阵保留原有透明度，避免黑边。状态文字保持 HTML 渲染；按钮正常态空心，按下态实心。
 
-通过 `npm run assets:publish` 上传不可变 R2 版本并公开 GET 核验 SHA-256，再以 `npm run deploy:cloudflare` 发布当前分支。部署检查覆盖实际闪烁透明度变化、开始巡查、媒体解码和Chrome Opus 音频（不再保留 MP3 回退）。
+通过 `npm run assets:publish` 上传不可变 R2 版本并默认不做远程哈希或可达性校验（仅在用户明确要求时执行），再以 `npm run deploy:cloudflare` 发布当前分支。部署检查覆盖实际闪烁透明度变化、开始巡查、媒体解码和Chrome Opus 音频（不再保留 MP3 回退）。
 
 登记簿标题下增加值班日期和星期的本地预览，以 1998-10-14 为第一夜，按所选夜数逐日递增。日期使用当前语言的数字日期格式，星期采用本地化短名；HUD 和结算仍只显示夜数与场景。该起始日为待确认的故事日期。
 
@@ -51,3 +51,7 @@ Current patrol density: every night uses one ordinary patrol during search. When
 The final fuse may trigger one blink for the primary pursuer only when its physical approach exceeds six seconds. A 0.8-second signal/opacity warning precedes relocation to a reachable side/rear approach, approximately 2.5–4.5 walking seconds away. Landing excludes the player's final room, the exit area and visible positions; visibility, clearance and reachability are checked again on arrival. Stun, recent successful flash knockback, hiding and distraction prevent or cancel the blink. Exit interceptors keep their existing guard behavior.
 
 The Listener is immune to flash stun and knockback. The first-night tutorial skips the flash exercise and introduces the decoy instead. Other enemies retain their current flash response. All 29 catalogs include the exception in the Listener lesson, gameplay help and relevant command descriptions; translations remain drafts. Tests: `tests/box-blink.test.mjs`, `tests/box-blink.browser.mjs`, `tests/listener-localization.browser.mjs` and the updated tutorial browser flow.
+
+### Implemented monster item roles
+
+Listener remains sound-driven and immune to flash. Light-Shy prioritizes a visible player over all decoy/distraction sources; breaking sight makes sound diversion possible again. Its existing flashlight recoil and recovery protection remain, and flash stun is now four seconds. Patrollers (including the exit interceptor) receive two seconds of flash stun. They investigate a sound only within 180 world pixels, move at most 120 from their original position, and spend at most two seconds investigating before returning. The same continuing sound cannot restart the investigation; a six-second recovery also prevents rapid replacement sounds from chaining diversions. The item still makes sound for eight seconds, which the Listener can continue following. Tutorial and threat hints cover these distinctions in all required catalogs, with locale-formatted stun durations and draft translation status.

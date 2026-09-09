@@ -11,3 +11,7 @@ When changing copy, update all required catalogs, preserve placeholder names/typ
 Keep core/catalog/font policy changes separate from cover layout changes. Main and `codex/cold-hospital-cover` must consume the same keys and runtime. Do not merge cover artwork or release manifests as part of localization.
 
 Ledger copy must fit the fixed page without scrolling, clipping, shrinking photographs, or language-dependent font scaling. Use concise native document labels for stamps. Preserve the seal image’s intrinsic aspect ratio with contain sizing and keep its fixed header slot. Check every supported locale in the browser; shorten overflowing translations rather than stretching the stamp or moving the action. Regenerate annotation glyphs with `uv run --with fonttools --with brotli python scripts/i18n/stamp-font.py` when these labels change.
+
+# R2 release policy
+
+After successful R2 uploads, do not run remote hash verification, public GET/HEAD reachability probes, or bulk asset download/decode checks unless the user explicitly requests them. Upload command success is sufficient to proceed with deployment. `npm run assets:publish` must skip these checks by default; use `npm run assets:publish -- --verify` only on explicit request. Likewise, set `VERIFY_R2=1` for deployment inventory checks only on explicit request. Keep local manifest/version consistency checks and normal application smoke tests. Record an unverified upload as published, never as remotely verified. This policy supersedes older release-skill instructions requiring post-upload R2 verification.

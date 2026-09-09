@@ -1,3 +1,4 @@
+import {itemRules} from '../run-rules.ts';
 import {tuning} from './pacing.ts';
 import {t as msg} from '../i18n.ts';
 export const MONSTER_LESSONS_KEY='night-shift-monster-lessons-v1';
@@ -7,7 +8,7 @@ export function isMonsterLesson(id:string|null):id is MonsterLesson{return monst
 export const lessons={
  'monster-listener':{get title(){return msg("tutorial.monster-listenerTitle")},get text(){return msg("tutorial.monster-listenerText")},target:'world'},
  'monster-light-shy':{get title(){return msg("tutorial.monster-light-shyTitle")},get text(){return msg("tutorial.monster-light-shyText")},target:'world'},
- 'monster-patroller':{get title(){return msg("tutorial.monster-patrollerTitle")},get text(){return msg("tutorial.monster-patrollerText")},target:'world'},
+ 'monster-patroller':{get title(){return msg("tutorial.monster-patrollerTitle")},get text(){return msg("tutorial.monster-patrollerText",{seconds:itemRules.flashDuration})},target:'world'},
  'monster-weeper':{get title(){return msg("tutorial.monster-weeperTitle")},get text(){return msg("tutorial.monster-weeperText")},target:'world'},
  health:{get title(){return msg("tutorial.healthTitle")},get text(){return msg("tutorial.healthText")},target:'health'},
  flashlight:{get title(){return msg("tutorial.flashlightTitle")},get text(){return msg("tutorial.flashlightText")},target:'light'},

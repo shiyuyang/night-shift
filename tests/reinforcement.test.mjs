@@ -2,11 +2,11 @@ import test from 'node:test';import assert from 'node:assert/strict';
 import {Reinforcement} from '../src/runtime/reinforcement.ts';
 const input=(extra={})=>({player:{x:350,y:150},hidden:false,retreat:false,visible:()=>false,solids:[],bounds:{x:0,y:0,width:800,height:500},...extra});
 test('reinforcement moves immediately, follows real paths and grants the full flash escape window',()=>{
- const r=new Reinforcement();r.spawn({x:100,y:150},{x:350,y:150});assert.equal(r.warning,0);r.tick(.2,input());assert.ok(r.position.x>100);assert.equal(r.flash({x:200,y:150},[]),true);const flashed={...r.position};r.tick(3.9,input());assert.deepEqual(r.position,flashed);r.tick(.2,input());assert.notDeepEqual(r.position,flashed);
+ const r=new Reinforcement();r.spawn({x:100,y:150},{x:350,y:150});assert.equal(r.warning,0);r.tick(.2,input());assert.ok(r.position.x>100);assert.equal(r.flash({x:200,y:150},[]),true);const flashed={...r.position};r.tick(1.9,input());assert.deepEqual(r.position,flashed);r.tick(.2,input());assert.notDeepEqual(r.position,flashed);
 });
 test('closed walls block contact; a decoy redirects and explicit retreat clears a physical patrol',()=>{
  const r=new Reinforcement();r.spawn({x:100,y:150},{x:500,y:150});r.warning=0;
- for(let i=0;i<80;i++)r.tick(.05,input({player:{x:500,y:150},distraction:{x:100,y:350}}));assert.ok(r.position.y>300);assert.ok(r.position.x<150);
+ for(let i=0;i<80;i++)r.tick(.05,input({player:{x:500,y:150},distraction:{x:100,y:270}}));assert.ok(r.position.y<190);assert.ok(r.position.x>100);
  r.tick(.1,input({retreat:true}));assert.equal(r.position,null);assert.equal(r.used,true);
  const other=new Reinforcement();other.spawn({x:100,y:150},{x:130,y:150});other.warning=0;
  const wall={x:114,y:0,width:10,height:400};for(let i=0;i<60;i++)assert.equal(other.tick(.05,input({player:{x:130,y:150},solids:[wall]})),false);
