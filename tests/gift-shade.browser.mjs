@@ -16,6 +16,11 @@ try{
  await p.evaluate(()=>{const s=window.__nightshiftScene;s.setPaused(true);s.giftShade.tear=.29;s.showGifts();});await p.waitForTimeout(100);
  const colors=await p.locator('.gift-screen-fx').evaluate(c=>{const data=c.getContext('2d').getImageData(0,0,c.width,c.height).data,colors=new Set();for(let i=0;i<data.length;i+=4)if(data[i+3]>0)colors.add(`${data[i]},${data[i+1]},${data[i+2]}`);return colors.size;});
  assert.ok(colors>12,'signal slices must contain rendered scenery rather than empty WebGL black strips');
+ // The actual darkness canvas must reveal a subtle pool even with the flashlight off.
+ const glow=await p.evaluate(()=>{const s=window.__nightshiftScene;s.flashlightOn=false;s.giftShade.tear=0;s.shadeSprite.setAlpha(.85);const x=Math.round(s.shadeSprite.x/2),y=Math.round((s.giftShade.position.y+12)/2);const sample=()=>{s.light();return s.canvas.context.getImageData(x,y,1,1).data[3];};s.shadeSprite.setVisible(false);const off=sample();s.shadeSprite.setVisible(true);const on=sample();s.shadeSprite.setAlpha(.15);const flicker=sample();s.shadeSprite.setAlpha(.85);s.light();return {off,on,flicker};});
+ assert.ok(glow.on<glow.off-10,`shade glow must visibly lift darkness: ${JSON.stringify(glow)}`);
+ assert.ok(glow.flicker>glow.on,'glow must dim with apparition flicker');
+ await mkdir('output/shade-rework',{recursive:true});await p.screenshot({path:'output/shade-rework/faint-glow.png'});
  await p.evaluate(()=>{const s=window.__nightshiftScene;s.giftShade.tear=0;s.setPaused(false);});
  await p.keyboard.press('a',{delay:50});await mkdir('output/shade-rework',{recursive:true});await p.screenshot({path:'output/shade-rework/nearby.png'});
  await p.evaluate(runId=>{const s=window.__nightshiftScene;s.setPaused(true);s.receiveGift({id:'shade-test-2',runId,giftId:'59319',count:2,comboId:'one',viewer:'Sakura',userId:'sakura'});},runId);
