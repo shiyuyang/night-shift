@@ -344,5 +344,7 @@
   "menu.shift-date": "Datum smjene: {date} · {weekday, select, d0 {ned} d1 {pon} d2 {uto} d3 {sri} d4 {čet} d5 {pet} d6 {sub} other {}}",
   "gameplay.listener-flash-immune": "Bljeskovi ne djeluju na Slušača. Upotrijebi mamac.",
   "rogue.search-supply-cabinet": "Ormarić sa zalihama · E za pretragu",
-  "gameplay.task-box-empty": "Kutija je prazna"
+  "gameplay.task-box-empty": "Kutija je prazna",
+  "desktop.saveError": "Spremanje nije moguće. Provjeri prostor na disku i dozvole datoteka pa ponovno pokreni igru.",
+  "desktop.startupError": "Igra se ne može učitati. Pokreni je ponovno."
 }

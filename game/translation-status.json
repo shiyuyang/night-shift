@@ -201,7 +201,7 @@
       "sourceHash": "616779bcb0e7b5839b33ed8c3f635d0127544935350ad4bdb89ce86ab0ffcf3d"
     }
   },
-  "sourceHash": "616779bcb0e7b5839b33ed8c3f635d0127544935350ad4bdb89ce86ab0ffcf3d",
+  "sourceHash": "9d93e9efe432053dba719095ba3f87e60548c5b1405cb950646d62ebb384841d",
   "note": "Machine translation drafts with explicit editorial overrides; no native-speaker review claimed.",
   "giftRevision": {
     "keys": "gift.*",
@@ -224,5 +224,45 @@
     "translator": "Codex",
     "status": "draft",
     "nativeReviewed": false
+  },
+  "desktopSaveError": {
+    "status": "draft",
+    "nativeReviewed": false,
+    "keys": [
+      "desktop.saveError",
+      "desktop.startupError"
+    ],
+    "method": "assistant translation",
+    "locales": [
+      "en",
+      "zh-CN",
+      "zh-Hant",
+      "ja",
+      "ko",
+      "id",
+      "es",
+      "ar",
+      "vi",
+      "fr",
+      "th",
+      "pt",
+      "tr",
+      "ru",
+      "de",
+      "it",
+      "ro",
+      "ms",
+      "uk",
+      "az",
+      "pl",
+      "nl",
+      "el",
+      "bg",
+      "my",
+      "hu",
+      "he",
+      "hr",
+      "sv"
+    ]
   }
 }

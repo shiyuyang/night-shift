@@ -344,5 +344,7 @@
   "menu.shift-date": "วันที่เข้าเวร: {date} · {weekday, select, d0 {อาทิตย์} d1 {จันทร์} d2 {อังคาร} d3 {พุธ} d4 {พฤหัส} d5 {ศุกร์} d6 {เสาร์} other {}}",
   "gameplay.listener-flash-immune": "แสงแฟลชไม่มีผลต่อผู้ฟัง ใช้เหยื่อล่อแทน",
   "rogue.search-supply-cabinet": "ตู้เสบียง · E เพื่อค้นหา",
-  "gameplay.task-box-empty": "กล่องว่างเปล่า"
+  "gameplay.task-box-empty": "กล่องว่างเปล่า",
+  "desktop.saveError": "บันทึกไม่ได้ โปรดตรวจสอบพื้นที่ดิสก์และสิทธิ์เข้าถึงไฟล์ แล้วเริ่มใหม่",
+  "desktop.startupError": "โหลดเกมไม่ได้ โปรดเริ่มใหม่"
 }

@@ -344,5 +344,7 @@
   "menu.shift-date": "תאריך משמרת: {date} · {weekday, select, d0 {יום א׳} d1 {יום ב׳} d2 {יום ג׳} d3 {יום ד׳} d4 {יום ה׳} d5 {יום ו׳} d6 {שבת} other {}}",
   "gameplay.listener-flash-immune": "הבזקים לא משפיעים על המאזין. השתמשו בפיתיון.",
   "rogue.search-supply-cabinet": "ארון אספקה · E לחיפוש",
-  "gameplay.task-box-empty": "הארגז ריק"
+  "gameplay.task-box-empty": "הארגז ריק",
+  "desktop.saveError": "לא ניתן לשמור. יש לבדוק את שטח הדיסק ואת הרשאות הקבצים ולהפעיל מחדש.",
+  "desktop.startupError": "לא ניתן לטעון את המשחק. יש להפעיל מחדש."
 }

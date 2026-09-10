@@ -344,5 +344,7 @@
   "menu.shift-date": "Data do plantão: {date} · {weekday, select, d0 {dom.} d1 {seg.} d2 {ter.} d3 {qua.} d4 {qui.} d5 {sex.} d6 {sáb.} other {}}",
   "gameplay.listener-flash-immune": "Os clarões não afetam o Ouvinte. Use uma isca.",
   "rogue.search-supply-cabinet": "Armário de suprimentos · E para vasculhar",
-  "gameplay.task-box-empty": "A caixa está vazia"
+  "gameplay.task-box-empty": "A caixa está vazia",
+  "desktop.saveError": "Não foi possível salvar. Verifique o espaço em disco e as permissões dos arquivos e reinicie.",
+  "desktop.startupError": "Não foi possível carregar o jogo. Reinicie."
 }

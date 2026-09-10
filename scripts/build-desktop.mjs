@@ -5,7 +5,7 @@ import {prepareDelivery} from './prepare-delivery.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 // Explicit empty values also override Vite's .env files.
-const env = {...process.env, GAME_BASE_PATH: '/', VITE_ASSET_BASE_URL: '', VITE_EVENTS_URL: ''};
+const env = {...process.env, GAME_BASE_PATH: './', VITE_ASSET_BASE_URL: '', VITE_EVENTS_URL: ''};
 const npm = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 for (const args of [
   ['run', 'content:check'],

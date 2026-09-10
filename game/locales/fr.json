@@ -344,5 +344,7 @@
   "menu.shift-date": "Date de garde: {date} · {weekday, select, d0 {dim.} d1 {lun.} d2 {mar.} d3 {mer.} d4 {jeu.} d5 {ven.} d6 {sam.} other {}}",
   "gameplay.listener-flash-immune": "Les flashs sont sans effet sur l’Écouteur. Utilisez un leurre.",
   "rogue.search-supply-cabinet": "Armoire à provisions · E pour fouiller",
-  "gameplay.task-box-empty": "La caisse est vide"
+  "gameplay.task-box-empty": "La caisse est vide",
+  "desktop.saveError": "Sauvegarde impossible. Vérifiez l’espace disque et les permissions des fichiers, puis redémarrez.",
+  "desktop.startupError": "Le jeu n’a pas pu se charger. Veuillez redémarrer."
 }

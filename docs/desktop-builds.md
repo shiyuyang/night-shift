@@ -1,6 +1,6 @@
 # Windows / macOS 桌面测试版
 
-桌面端使用 Tauri 2，复用游戏代码和全部语言资源。运行资源内置在应用中，不需要启动本地服务器，也不连接网站 CDN。直播事件接口不包含在离线版中。
+桌面端使用 Tauri 2，复用游戏代码和全部语言资源。运行资源内置在应用中，不需要启动本地服务器，也不连接网站 CDN。传入 LIVE Studio 本地会话参数时通过原生 WebSocket 接收互动；无参数时作为单机游戏运行。
 
 ## 平台范围
 
@@ -68,3 +68,17 @@ npm run test:browser:desktop
 浏览器测试不等于原生安装测试。macOS 还应打开最终 `.app` 检查菜单、实际游戏画面、原生全屏和音频就绪状态；Windows 必须在真机或虚拟机上检查安装、WebView2 补装和游戏运行。
 
 当前配置用于本地测试版，不包含 Windows 代码签名或 Apple Developer ID 签名、公证。对外分发前需要配置对应签名流程；本地能打开不能证明其他电脑没有系统拦截。
+
+## 0.4.1 本地协议与文件存档
+
+- 原生层读取 `--ws-port`、`--session-id`、`--auth-token`、`--play-id`、`--language`（支持空格和等号形式），仅连接本机高位端口。令牌只用于本次 AUTH，不落盘，不自动复用重连。
+- 六个 instruction 使用 `game/live-studio-instructions.json`。ID 全部保留字符串；一次消息的 count 为增量，支持 1–100。重复 interaction_id 不重复执行，完成后重发原 ACK；每会话最多记住 4096 个 ID，达到上限断开，需新会话。
+- 电池、闪光、治疗和幽影在状态更新后 ACK；故障在整个效果结束后 ACK；鬼打墙在移动完成并结束过场后 ACK。多个 count 全部执行后才成功。最多 64 条未完成消息，每条等待最多 120 秒，超时取消剩余效果并失败回执。
+- 菜单、结算、暂停、教学或正在位移时拒绝新效果；旧局退出、断开时取消尚未完成的本地效果。未知指令、错误 play_id、非法 count 不执行。
+- 存档范围：解锁、语言和音量/声音设置、最近 30 局历史、本夜编号和地图种子、已学怪物教学。中途退出重新选中本夜，从相同地图的开头重玩，状态和未完成互动不恢复。
+- 按 **play_id** 隔离全部文件数据，目录为 `应用数据目录/plays/SHA256(play_id)/`；不带会话参数的单机启动使用应用数据根目录。macOS 根目录为 `~/Library/Application Support/com.hospitalnightshift.game`，Windows 为系统 `%APPDATA%`（RoamingAppData）下应用标识目录（以 Tauri app_data_dir 为准）。
+- 不做 localStorage 或旧版存档迁移。新范围从新进度开始。文件包含 schema 版本，未来未知版本拒绝覆盖。
+- 通过临时文件落盘并同步、主文件与备份轮换、每范围独占文件锁来保护存档。主文件损坏时读取备份；两份都损坏时提示错误并保留文件。
+- LIVE Studio 的 language 只设本次会话初始语言；用户主动切换才更新长期语言设置。
+
+验证：`cargo test --manifest-path src-tauri/Cargo.toml`；启动 Vite 5194 后运行 `node tests/desktop-live.browser.mjs`。浏览器测试用契约桩替代 IPC，执行真实游戏逻辑；原生包联调另外记录，不混同为 Windows 实机验证。

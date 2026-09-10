@@ -344,5 +344,7 @@
   "menu.shift-date": "Shift date: {date} · {weekday, select, d0 {Sun} d1 {Mon} d2 {Tue} d3 {Wed} d4 {Thu} d5 {Fri} d6 {Sat} other {}}",
   "gameplay.listener-flash-immune": "Flashes do not affect the Listener. Use a decoy.",
   "rogue.search-supply-cabinet": "Supply cabinet · E to search",
-  "gameplay.task-box-empty": "Box is empty"
+  "gameplay.task-box-empty": "Box is empty",
+  "desktop.saveError": "Save unavailable. Check disk space and file permissions, then restart.",
+  "desktop.startupError": "Game resources could not load. Please restart."
 }

@@ -344,5 +344,7 @@
   "menu.shift-date": "Növbə tarixi: {date} · {weekday, select, d0 {B.} d1 {B.E.} d2 {Ç.A.} d3 {Ç.} d4 {C.A.} d5 {C.} d6 {Ş.} other {}}",
   "gameplay.listener-flash-immune": "İşıq parıltısı Dinləyiciyə təsir etmir. Yem istifadə edin.",
   "rogue.search-supply-cabinet": "Təchizat dolabı · Axtarmaq üçün E",
-  "gameplay.task-box-empty": "Qutu boşdur"
+  "gameplay.task-box-empty": "Qutu boşdur",
+  "desktop.saveError": "Yadda saxlamaq mümkün deyil. Disk yerini və fayl icazələrini yoxlayıb yenidən başladın.",
+  "desktop.startupError": "Oyun yüklənmədi. Yenidən başladın."
 }

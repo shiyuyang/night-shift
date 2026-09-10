@@ -344,5 +344,7 @@
   "menu.shift-date": "Data turei: {date} · {weekday, select, d0 {dum.} d1 {lun.} d2 {mar.} d3 {mie.} d4 {joi} d5 {vin.} d6 {sâm.} other {}}",
   "gameplay.listener-flash-immune": "Blițurile nu afectează Ascultătorul. Folosește o momeală.",
   "rogue.search-supply-cabinet": "Dulap cu provizii · E pentru a căuta",
-  "gameplay.task-box-empty": "Cutia este goală"
+  "gameplay.task-box-empty": "Cutia este goală",
+  "desktop.saveError": "Salvarea nu este disponibilă. Verifică spațiul pe disc și permisiunile fișierelor, apoi repornește.",
+  "desktop.startupError": "Jocul nu s-a putut încărca. Repornește."
 }

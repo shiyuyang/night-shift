@@ -346,4 +346,6 @@ export interface MessageValues{
 "gameplay.listener-flash-immune":{}
 "rogue.search-supply-cabinet":{}
 "gameplay.task-box-empty":{}
+"desktop.saveError":{}
+"desktop.startupError":{}
 }

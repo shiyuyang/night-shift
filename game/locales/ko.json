@@ -344,5 +344,7 @@
   "menu.shift-date": "당직일: {date} · {weekday, select, d0 {일} d1 {월} d2 {화} d3 {수} d4 {목} d5 {금} d6 {토} other {}}",
   "gameplay.listener-flash-immune": "섬광은 청취자에게 통하지 않습니다. 미끼를 사용하세요.",
   "rogue.search-supply-cabinet": "보급함 · E로 수색",
-  "gameplay.task-box-empty": "상자가 비어 있습니다"
+  "gameplay.task-box-empty": "상자가 비어 있습니다",
+  "desktop.saveError": "저장할 수 없습니다. 디스크 공간과 파일 권한을 확인한 후 다시 시작하세요.",
+  "desktop.startupError": "게임을 불러오지 못했습니다. 다시 시작하세요."
 }

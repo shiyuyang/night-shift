@@ -344,5 +344,7 @@
   "menu.shift-date": "Data dyżuru: {date} · {weekday, select, d0 {niedz.} d1 {pon.} d2 {wt.} d3 {śr.} d4 {czw.} d5 {pt.} d6 {sob.} other {}}",
   "gameplay.listener-flash-immune": "Błyski nie działają na Słuchacza. Użyj wabika.",
   "rogue.search-supply-cabinet": "Szafka z zapasami · E, aby przeszukać",
-  "gameplay.task-box-empty": "Skrzynia jest pusta"
+  "gameplay.task-box-empty": "Skrzynia jest pusta",
+  "desktop.saveError": "Nie można zapisać. Sprawdź miejsce na dysku i uprawnienia do plików, a potem uruchom grę ponownie.",
+  "desktop.startupError": "Nie udało się wczytać gry. Uruchom ją ponownie."
 }

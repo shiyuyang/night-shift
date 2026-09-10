@@ -344,5 +344,7 @@
   "menu.shift-date": "Tanggal jaga: {date} · {weekday, select, d0 {Min} d1 {Sen} d2 {Sel} d3 {Rab} d4 {Kam} d5 {Jum} d6 {Sab} other {}}",
   "gameplay.listener-flash-immune": "Kilat tidak memengaruhi Pendengar. Gunakan umpan.",
   "rogue.search-supply-cabinet": "Lemari persediaan · E untuk mencari",
-  "gameplay.task-box-empty": "Kotak kosong"
+  "gameplay.task-box-empty": "Kotak kosong",
+  "desktop.saveError": "Tidak dapat menyimpan. Periksa ruang disk dan izin berkas, lalu mulai ulang.",
+  "desktop.startupError": "Gagal memuat game. Silakan mulai ulang."
 }

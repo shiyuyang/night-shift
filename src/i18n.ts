@@ -1,3 +1,4 @@
+import {storage as persistentStorage,desktopLaunch} from './runtime/storage.ts';
 import {IntlMessageFormat} from 'intl-messageformat';
 import en from '../game/locales/en.json' with {type:'json'};
 import zh from '../game/locales/zh-CN.json' with {type:'json'};
@@ -13,9 +14,10 @@ const messages:Partial<Record<Locale,Partial<Record<MessageKey,string>>>>={en,'z
 import {catalogs} from './i18n/catalogs.ts';
 Object.assign(messages,catalogs);
 let locale:Locale='en';
-try{locale=resolveLocale(globalThis.localStorage?.getItem(LANGUAGE_KEY)??globalThis.navigator?.language??'en');}catch{}
+let sessionLanguage=!!desktopLaunch.language;
+try{locale=resolveLocale(desktopLaunch.language??persistentStorage?.getItem(LANGUAGE_KEY)??globalThis.navigator?.language??'en');}catch{}
 export const getLocale=()=>locale;
-export function setLocale(value:string){locale=resolveLocale(value);try{globalThis.localStorage?.setItem(LANGUAGE_KEY,locale);}catch{}if(typeof document!=='undefined'){document.documentElement.lang=locale;document.documentElement.dir=direction(locale);document.documentElement.dataset.script=['zh-Hans','zh-Hant','ja','ko'].includes(locale)?'cjk':['ar','he','th','my'].includes(locale)?'complex':'latin';}}
+export function setLocale(value:string,persist=false){locale=resolveLocale(value);if(persist)sessionLanguage=false;try{if(!sessionLanguage)persistentStorage?.setItem(LANGUAGE_KEY,locale);}catch{}if(typeof document!=='undefined'){document.documentElement.lang=locale;document.documentElement.dir=direction(locale);document.documentElement.dataset.script=['zh-Hans','zh-Hant','ja','ko'].includes(locale)?'cjk':['ar','he','th','my'].includes(locale)?'complex':'latin';}}
 const formats=new Map<string,IntlMessageFormat>();
 export function formatMessage(pattern:string,values:Record<string,string|number|Date>={},language:string=getLocale()):string{
  const id=language+'\0'+pattern;let f=formats.get(id);if(!f){f=new IntlMessageFormat(pattern,language,undefined,{ignoreTag:true});formats.set(id,f);}

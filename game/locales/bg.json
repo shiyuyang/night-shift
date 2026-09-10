@@ -344,5 +344,7 @@
   "menu.shift-date": "Дата на смяната: {date} · {weekday, select, d0 {нд} d1 {пн} d2 {вт} d3 {ср} d4 {чт} d5 {пт} d6 {сб} other {}}",
   "gameplay.listener-flash-immune": "Проблясъците не влияят на Слушателя. Използвай примамка.",
   "rogue.search-supply-cabinet": "Шкаф с припаси · E за претърсване",
-  "gameplay.task-box-empty": "Сандъкът е празен"
+  "gameplay.task-box-empty": "Сандъкът е празен",
+  "desktop.saveError": "Неуспешно запазване. Проверете мястото на диска и правата за файловете, след което рестартирайте.",
+  "desktop.startupError": "Играта не може да се зареди. Рестартирайте."
 }

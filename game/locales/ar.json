@@ -344,5 +344,7 @@
   "menu.shift-date": "تاريخ المناوبة: {date} · {weekday, select, d0 {الأحد} d1 {الاثنين} d2 {الثلاثاء} d3 {الأربعاء} d4 {الخميس} d5 {الجمعة} d6 {السبت} other {}}",
   "gameplay.listener-flash-immune": "الومضات لا تؤثر في المستمع. استخدم طُعمًا.",
   "rogue.search-supply-cabinet": "خزانة الإمدادات · E للتفتيش",
-  "gameplay.task-box-empty": "الصندوق فارغ"
+  "gameplay.task-box-empty": "الصندوق فارغ",
+  "desktop.saveError": "تعذر الحفظ. تحقق من مساحة القرص وأذونات الملفات، ثم أعد التشغيل.",
+  "desktop.startupError": "تعذر تحميل اللعبة. يرجى إعادة التشغيل."
 }

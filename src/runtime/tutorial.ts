@@ -1,3 +1,4 @@
+import {storage as persistentStorage} from './storage.ts';
 import {itemRules} from '../run-rules.ts';
 import {tuning} from './pacing.ts';
 import {t as msg} from '../i18n.ts';
@@ -27,7 +28,7 @@ export class Tutorial {
  private storage?:Pick<Storage,'getItem'|'setItem'>;
  private learnedMonsters=new Set<MonsterLesson>();
  constructor(storage?:Pick<Storage,'getItem'|'setItem'>){
-  try{this.storage=storage??globalThis.localStorage;const saved=JSON.parse(this.storage?.getItem(MONSTER_LESSONS_KEY)??'[]');if(Array.isArray(saved))for(const id of saved)if(isMonsterLesson(id))this.learnedMonsters.add(id);}catch{/* Missing or unavailable storage keeps session progress. */}
+  try{this.storage=storage??persistentStorage;const saved=JSON.parse(this.storage?.getItem(MONSTER_LESSONS_KEY)??'[]');if(Array.isArray(saved))for(const id of saved)if(isMonsterLesson(id))this.learnedMonsters.add(id);}catch{/* Missing or unavailable storage keeps session progress. */}
  }
  completed=new Set<Lesson>();shown=new Set<Lesson>();prompt:Lesson|null=null;enabled=false;practiceSkipped=false;
  start(round:number){this.enabled=round===1;this.completed.clear();this.shown.clear();this.prompt=null;this.practiceSkipped=false;}

@@ -344,5 +344,7 @@
   "menu.shift-date": "Nöbet tarihi: {date} · {weekday, select, d0 {Paz} d1 {Pzt} d2 {Sal} d3 {Çar} d4 {Per} d5 {Cum} d6 {Cmt} other {}}",
   "gameplay.listener-flash-immune": "Flaşlar Dinleyiciyi etkilemez. Yem kullan.",
   "rogue.search-supply-cabinet": "Malzeme dolabı · Aramak için E",
-  "gameplay.task-box-empty": "Kutu boş"
+  "gameplay.task-box-empty": "Kutu boş",
+  "desktop.saveError": "Kayıt yapılamıyor. Disk alanını ve dosya izinlerini kontrol edip yeniden başlatın.",
+  "desktop.startupError": "Oyun yüklenemedi. Lütfen yeniden başlatın."
 }

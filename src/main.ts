@@ -1,3 +1,5 @@
+import {storage,flushSave} from './runtime/storage';
+import {connectDesktop} from './runtime/desktop-live';
 import {ShadeScare} from './ui/shade-scare';
 import {toggleFullscreen} from './runtime/fullscreen';
 import {GiftPanel} from './ui/gift-panel';
@@ -12,17 +14,6 @@ import {roundRules,itemRules} from './run-rules';
 import {bootGame,type Command} from './endless';
 import {Ambience} from './ambience';
 import commandCatalog from '../game/commands.json' with {type:'json'};
-import './style.css';
-import './game-ui.css';
-import './immersive.css';
-import './presentation.css';
-import './hud-feedback.css';
-import './watch-desk.css';
-import './field-hud.css';
-import './result-screen.css';
-import './tutorial-ui.css';
-import './localization.css';
-import './ui/game-ui-scale.css';
 import {drawSurvey} from './ui/survey';
 import {fitDesk} from './ui/fit-desk';
 import {mountDeskLamp} from './ui/desk-lamp';
@@ -75,10 +66,13 @@ function renderMessage(){
   if(lines.length>1){const detail=document.createElement('span');detail.className='message-detail';detail.textContent=lines.slice(1).join(' ');copy.append(detail);}el.append(copy);
  }
 }
+function resumeNight(){try{const n=JSON.parse(storage.getItem('night-shift-current-run-v1')??'null')?.night;return campaign.canPlay(n)?n:campaign.unlocked;}catch{return campaign.unlocked;}}
 const STAGES_PER_PAGE=7;
-let previousHealth=100;let lastFeedbackTime=0;let barHealth=100;let teaching:Lesson|null=null;let giftQueue:{command:Command;viewer:string}[]=[];let nextGiftAt=0;let running=false,paused=false,audioOn=true,selectedNight=campaign.unlocked,stagePage=Math.floor((selectedNight-1)/STAGES_PER_PAGE),toastTimer:ReturnType<typeof setTimeout>;
+let previousHealth=100;let lastFeedbackTime=0;let barHealth=100;let teaching:Lesson|null=null;let giftQueue:{command:Command;viewer:string}[]=[];let nextGiftAt=0;let running=false,paused=false,audioOn=true,selectedNight=resumeNight(),stagePage=Math.floor((selectedNight-1)/STAGES_PER_PAGE),toastTimer:ReturnType<typeof setTimeout>;
 document.body.dataset.ui='title';
 const ambience=new Ambience();
+try{const settings=JSON.parse(storage.getItem('night-shift-settings-v1')??'{}');audioOn=settings.audioOn!==false;void ambience.setEnabled(audioOn).catch(console.error);if(typeof settings.volume==='number'){ambience.setVolume(settings.volume);(document.querySelector('#music-volume') as HTMLInputElement).value=String(settings.volume*100);}}catch{}
+function saveSettings(){storage.setItem('night-shift-settings-v1',JSON.stringify({audioOn,volume:Number((document.querySelector('#music-volume') as HTMLInputElement).value)/100}));}
 mountDeskLamp($('.desk-scene'),(delay,depth)=>ambience.coverApparition(delay,depth));
 let currentTrack='menu',currentChase=false;
 const trackNames:Record<string,string>={menu:msg("ui.night-reception"),ward:msg("music.ward"), 'ward-alt':msg("music.ward-alt"),warehouse:msg("music.warehouse"),'warehouse-alt':msg("music.warehouse-alt"),plant:msg("music.plant"),'plant-alt':msg("music.plant-alt")};
@@ -115,7 +109,7 @@ $('#flashlight-toggle').onclick=()=>game.toggleFlashlight();let signing=false;$(
 $('#pause').onclick=()=>menu($('#pause-menu').hidden);$('#resume').onclick=()=>menu(false);
 $('#book-guide').onclick=()=>document.querySelector<HTMLDialogElement>('#guide-dialog')!.showModal();
 $('#guide').onclick=()=>document.querySelector<HTMLDialogElement>('#guide-dialog')!.showModal();$('#close-guide').onclick=()=>document.querySelector<HTMLDialogElement>('#guide-dialog')!.close();
-$('#sound').onclick=()=>{audioOn=!audioOn;void ambience.setEnabled(audioOn).catch(()=>toast(msg("ui.could-not-enable-audio-please-retry")));};ambience.onStatus=status=>{$('#music-status').dataset.status=status;$('#music-status').textContent=audioStatus(status);audioOn=ambience.enabled;$('#sound').textContent=t(audioOn?'settings.soundOn':'settings.soundOff');};$('#music-volume').oninput=e=>ambience.setVolume(Number((e.target as HTMLInputElement).value)/100);$('#desk-settings').onclick=()=>menu(true);$('#start-layer').addEventListener('pointerdown',()=>{if(audioOn)enterAudio();},{once:true});
+$('#sound').onclick=()=>{audioOn=!audioOn;saveSettings();void ambience.setEnabled(audioOn).catch(()=>toast(msg("ui.could-not-enable-audio-please-retry")));};ambience.onStatus=status=>{$('#music-status').dataset.status=status;$('#music-status').textContent=audioStatus(status);audioOn=ambience.enabled;$('#sound').textContent=t(audioOn?'settings.soundOn':'settings.soundOff');};$('#music-volume').oninput=e=>{ambience.setVolume(Number((e.target as HTMLInputElement).value)/100);saveSettings();};$('#desk-settings').onclick=()=>menu(true);$('#start-layer').addEventListener('pointerdown',()=>{if(audioOn)enterAudio();},{once:true});
 $('#fullscreen').onclick=()=>{void toggleFullscreen($('#game-wrap')).catch(()=>toast(msg("ui.this-browser-does-not-support-fullscreen")));};
 function renderStages(){
  const pages=Math.ceil((campaign.unlocked+1)/STAGES_PER_PAGE);stagePage=Math.max(0,Math.min(stagePage,pages-1));
@@ -135,7 +129,7 @@ function renderStages(){
  drawSurvey(document.querySelector<HTMLCanvasElement>('#survey')!,level);
  document.querySelectorAll<HTMLButtonElement>('[data-night]').forEach(b=>b.onclick=()=>{selectedNight=Number(b.dataset.night);renderStages();document.querySelector<HTMLButtonElement>(`[data-night="${selectedNight}"]`)?.focus({preventScroll:true});ambience.setScene(-2,0,0);});
 }
-function title(){game.clearGifts();ambience.setScene(-2,0,0);giftQueue=[];running=false;paused=false;game.setPaused(true);menu(false);document.body.dataset.ui='title';$('#result-screen').hidden=true;$('#game-wrap').classList.remove('run-ended');$('#start-layer').classList.remove('hidden');selectedNight=campaign.unlocked;stagePage=Math.floor((selectedNight-1)/STAGES_PER_PAGE);applyMenuLanguage();ambience.setRunning(true);}
+function title(){storage.removeItem('night-shift-current-run-v1');game.clearGifts();ambience.setScene(-2,0,0);giftQueue=[];running=false;paused=false;game.setPaused(true);menu(false);document.body.dataset.ui='title';$('#result-screen').hidden=true;$('#game-wrap').classList.remove('run-ended');$('#start-layer').classList.remove('hidden');selectedNight=resumeNight();stagePage=Math.floor((selectedNight-1)/STAGES_PER_PAGE);applyMenuLanguage();ambience.setRunning(true);}
 $('#menu-stages').onclick=title;$('#result-menu').onclick=title;$('#stage-prev').onclick=()=>{stagePage--;turnPage();};$('#stage-next').onclick=()=>{stagePage++;turnPage();};applyMenuLanguage();
 $('#next-night').onclick=()=>{if(!game.continueRun())return;ambience.beginRun(makeLevel(selectedNight+1).theme,selectedNight+1);running=true;paused=false;document.body.dataset.ui='playing';$('#result-screen').hidden=true;$('#game-wrap').classList.remove('run-ended');ambience.setRunning(true);};
 document.querySelectorAll<HTMLButtonElement>('[data-item]').forEach(b=>b.onclick=()=>{if(running&&!paused)game.useItem(b.dataset.item as 'F'|'R'|'Q');b.blur();});
@@ -162,7 +156,7 @@ function applyMenuLanguage(){
  $('#sound').textContent=t(audioOn?'settings.soundOn':'settings.soundOff');$('#music-status').textContent=audioStatus($('#music-status').dataset.status??'');ambience.onTrack(currentTrack,currentChase);
  (document.querySelector('#menu-language') as HTMLSelectElement).value=getLocale();renderStages();
 }
-$('#menu-language').onchange=()=>{setLocale((document.querySelector('#menu-language') as HTMLSelectElement).value);window.location.reload();};
+$('#menu-language').onchange=async()=>{setLocale((document.querySelector('#menu-language') as HTMLSelectElement).value,true);sessionStorage.setItem('night-shift-session-language',document.body.dataset.liveSession??'');try{await flushSave();window.location.reload();}catch{toast(msg('desktop.saveError'));}};
 
 if(DEV){
  const box=document.createElement('div');box.id='gift-test-controls';box.style.cssText='display:flex;flex-wrap:wrap;gap:5px;margin-top:10px';
@@ -170,3 +164,7 @@ if(DEV){
  document.querySelector('#console-toggle')?.parentElement?.append(box);
  const update=()=>{box.hidden=document.querySelector('.workspace')!.classList.contains('console-closed');};document.querySelector('#console-toggle')?.addEventListener('click',update);update();
 }
+
+connectDesktop(game);
+
+window.addEventListener('nightshift:save-error',()=>{game.setPaused(true);toast(msg('desktop.saveError'));});

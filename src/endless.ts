@@ -1,10 +1,12 @@
+import {GiftReceipts} from './runtime/gift-receipts';
+import {storage} from './runtime/storage';
 import {deathPresentation,type MonsterDeathKind} from './runtime/death-presentation';
 import {difficultyForNight} from './runtime/difficulty';
 import {DistractionResponse} from './runtime/distraction-response';
 import {BoxBlink} from './runtime/box-blink';
 import {exitEntries,returnCheckpoints} from './runtime/patrol-density';
 import {Reinforcement} from './runtime/reinforcement';
-import {LiveGifts,type GiftEvent,type GiftView} from './runtime/live-gifts';
+import {giftDefinitions,LiveGifts,type GiftEvent,type GiftView} from './runtime/live-gifts';
 import {GiftShade} from './runtime/gift-shade';
 import {giftLanding} from './runtime/gift-placement';
 import {doorApproach} from './runtime/door-approach';
@@ -130,7 +132,7 @@ export function bootGame(h:Hooks){
    if((import.meta as unknown as {env:{DEV:boolean}}).env.DEV)(window as unknown as {__nightshift:()=>unknown}).__nightshift=()=>this.snapshot();
    if((import.meta as unknown as {env:{DEV:boolean}}).env.DEV&&new URLSearchParams(location.search).has('playtest'))(window as unknown as {__nightshiftScene:unknown}).__nightshiftScene=this;
   }
-  startRun(round=1){if(!campaign.canPlay(round))return;this.round=Math.max(1,Math.floor(round));this.mapSeed=crypto.getRandomValues(new Uint32Array(1))[0];this.pending=true;this.scene.restart();}
+  startRun(round=1){if(!campaign.canPlay(round))return;this.round=Math.max(1,Math.floor(round));this.mapSeed=crypto.getRandomValues(new Uint32Array(1))[0];try{const saved=JSON.parse(storage.getItem('night-shift-current-run-v1')??'null');if(saved?.night===this.round&&Number.isSafeInteger(saved.seed)&&saved.seed>=0)this.mapSeed=saved.seed;}catch{}storage.setItem('night-shift-current-run-v1',JSON.stringify({night:this.round,seed:this.mapSeed}));this.pending=true;this.scene.restart();}
   continueRun(){if(this.active||!campaign.canPlay(this.round+1))return false;this.startRun(this.round+1);return true;}
   get difficulty(){return difficultyForNight(this.round);}
   weeperIntroRemaining=0;weeperIntroUsed=false;
@@ -359,7 +361,19 @@ export function bootGame(h:Hooks){
   }
   canFailGift(){return this.state?.battery>0&&this.blackout<=0&&this.blackouts.warning<=0&&!(this.state.fuses===3&&this.exitStartup>0);}
   showGifts(){h.onGifts?.(this.gifts.view(this.canFailGift(),this.paused||!!this.tutorial.prompt),{warp:this.gifts.warping?2-this.gifts.active!.remaining:-1,tear:this.giftShade.tear,reserve:this.batteryReserve,shade:this.giftShade.position?{x:(this.giftShade.position.x-this.cameras.main.worldView.x)*this.cameras.main.zoom/this.scale.width,y:(this.giftShade.position.y-this.cameras.main.worldView.y)*this.cameras.main.zoom/this.scale.height}:undefined,player:this.player?{x:(this.player.x-this.cameras.main.worldView.x)*this.cameras.main.zoom/this.scale.width,y:(this.player.y-this.cameras.main.worldView.y)*this.cameras.main.zoom/this.scale.height}:undefined});}
-  clearGifts(){this.gifts.clear();this.giftShade.reset();this.shadeSprite?.setVisible(false);this.batteryReserve=0;this.warpTarget=undefined;this.showGifts();}
+  receipts=new GiftReceipts();
+  localKeys=new Set<string>();
+  cancelGift(id:string){this.gifts.queue=this.gifts.queue.filter(e=>e.key!==id);if(this.gifts.active?.entry.key===id){this.gifts.active=null;this.warpTarget=undefined;}}
+  cancelLocal(){for(const id of this.localKeys)this.cancelGift(id);this.receipts.clear();this.localKeys.clear();}
+  async localGift(event:Omit<GiftEvent,'runId'>){
+   if(!this.active||this.paused||this.tutorial.prompt||this.gifts.warping)return false;
+   const runId=this.gifts.runId;this.localKeys.add(event.id);
+   const result=this.receipts.wait(event.id,event.count,()=>this.cancelGift(event.id));
+   if(!this.receiveGift({...event,runId}))this.receipts.fail(event.id);
+   else if(!['failure','warp'].includes(giftDefinitions[event.giftId].kind)){for(let i=0;i<event.count;i++)this.receipts.complete(event.id);}
+   const done=await result;this.localKeys.delete(event.id);return done;
+  }
+  clearGifts(){this.cancelLocal();this.gifts.clear();this.giftShade.reset();this.shadeSprite?.setVisible(false);this.batteryReserve=0;this.warpTarget=undefined;this.showGifts();}
   receiveGift(event:GiftEvent){
    if(!this.active)return false;
    const e=this.gifts.receive(event);if(!e)return false;
@@ -376,7 +390,8 @@ export function bootGame(h:Hooks){
    this.sprintInput.clear();this.input.keyboard?.resetKeys();h.onCue('metal',0,.5);
   }
   updateGifts(dt:number){
-   const wasWarp=this.gifts.warping,cue=this.gifts.tick(dt,this.canFailGift());
+   const completed=this.gifts.active;const wasWarp=this.gifts.warping,cue=this.gifts.tick(dt,this.canFailGift());
+   if(completed&&!this.gifts.active){if(completed.entry.kind!=='warp'||this.warpMoved)this.receipts.complete(completed.entry.key);else this.receipts.fail(completed.entry.key);}
    if(cue==='warp')this.beginGiftWarp();if(cue==='failure')h.onCue('plant-breaker-arc',0,.55);
    if(this.gifts.warping||wasWarp){
     if(!this.warpMoved&&this.warpTarget&&(!this.gifts.active||this.gifts.active.remaining<=1)){
@@ -469,8 +484,8 @@ export function bootGame(h:Hooks){
    if(this.messageUntil<this.state.elapsed)h.onMessage('');
    if(this.state.health<=0)this.finish(false);
   }if((import.meta as unknown as {env:{DEV:boolean}}).env.DEV&&new URLSearchParams(location.search).has('debug')){this.debug.clear();this.debug.lineStyle(1,0x59c9a3,.65);for(const b of this.solids())this.debug.strokeRect(b.x,b.y,b.width,b.height);this.debug.lineStyle(1,0xe2ac59,.8);for(const b of Object.values(this.level.zones))this.debug.strokeRect(b.x,b.y,b.width,b.height);for(const n of this.route)this.debug.strokeCircle(n.x,n.y,2);}this.signal.update(this.state.elapsed,this.active&&!this.paused, this.boxBlink.warning>0?1:this.ghost.visible?Math.max(0,1-Math.hypot(p.x-this.ghost.x,p.y-this.ghost.y)/220):0,this.blackout>0,this.crtStrength>.5);this.player.setDepth(2+(p.y+16)/100);this.ghost.setDepth(2+(this.ghost.y+17)/100);this.draw();this.drawBodyFeedback();if(this.frame++%2===0)this.light();this.syncTime+=dt;if(this.syncTime>.12){this.syncTime=0;this.sync();}}
-  finish(won:boolean,killer?:MonsterDeathKind){if(!this.active)return;this.boxBlink=new BoxBlink();this.flashSafety=0;this.distractionResponse=new DistractionResponse();this.reserves=[new Reinforcement()];this.patrolIndex=0;this.patrolCircuit.reset();this.interceptClock=0;this.interceptTargets=[];this.reserveSprites.forEach(sprite=>sprite.setVisible(false));this.clearGifts();this.atmosphereColors=new AtmosphereColors();this.bloodMoon.reset();h.onCue('patient-stop');recordRun({night:this.round,seed:this.level.generation?.seed,won,elapsed:this.state.elapsed,health:this.state.health,flashes:this.flashes,decoys:this.decoys,bandages:this.bandages,...this.rogue.stats});this.blocker.setVisible(false);this.interactionLabel.setVisible(false);this.rogueVisual.clear();this.torso.clearTint();this.legs.clearTint();this.feedback.reset();this.tutorial.prompt=null;this.eventRuntime.reset();this.environment.reset();this.interference.reset();this.exitStartup=0;this.crtStrength=.36;if(won)campaign.complete(this.round);this.active=false;this.pose(false);this.sync();h.onEnd({won,night:this.round,elapsed:this.state.elapsed,health:this.state.health,fuses:this.state.fuses,cabinet:this.opened[1],barrier:this.door,powered:this.state.fuses===3,map:this.level.name,rogue:{...this.rogue.stats}});if(!won&&killer){const presentation=deathPresentation[killer];h.onCue(presentation.cue);h.onMonsterDeath?.(this.textures.get(presentation.texture).getSourceImage() as HTMLImageElement|HTMLCanvasElement,killer);}}
+  finish(won:boolean,killer?:MonsterDeathKind){if(!this.active)return;storage.removeItem('night-shift-current-run-v1');this.boxBlink=new BoxBlink();this.flashSafety=0;this.distractionResponse=new DistractionResponse();this.reserves=[new Reinforcement()];this.patrolIndex=0;this.patrolCircuit.reset();this.interceptClock=0;this.interceptTargets=[];this.reserveSprites.forEach(sprite=>sprite.setVisible(false));this.clearGifts();this.atmosphereColors=new AtmosphereColors();this.bloodMoon.reset();h.onCue('patient-stop');recordRun({night:this.round,seed:this.level.generation?.seed,won,elapsed:this.state.elapsed,health:this.state.health,flashes:this.flashes,decoys:this.decoys,bandages:this.bandages,...this.rogue.stats});this.blocker.setVisible(false);this.interactionLabel.setVisible(false);this.rogueVisual.clear();this.torso.clearTint();this.legs.clearTint();this.feedback.reset();this.tutorial.prompt=null;this.eventRuntime.reset();this.environment.reset();this.interference.reset();this.exitStartup=0;this.crtStrength=.36;if(won)campaign.complete(this.round);this.active=false;this.pose(false);this.sync();h.onEnd({won,night:this.round,elapsed:this.state.elapsed,health:this.state.health,fuses:this.state.fuses,cabinet:this.opened[1],barrier:this.door,powered:this.state.fuses===3,map:this.level.name,rogue:{...this.rogue.stats}});if(!won&&killer){const presentation=deathPresentation[killer];h.onCue(presentation.cue);h.onMonsterDeath?.(this.textures.get(presentation.texture).getSourceImage() as HTMLImageElement|HTMLCanvasElement,killer);}}
  }
  const scene=new Shift('Endless');const app=new Phaser.Game({type:Phaser.AUTO,parent:'game',width:PIXELS.width,height:PIXELS.height,backgroundColor:'#0b1118',pixelArt:true,roundPixels:true,antialias:false,scale:{mode:Phaser.Scale.NONE,autoCenter:Phaser.Scale.CENTER_BOTH},scene:[scene],audio:{noAudio:true}});app.events.on(Phaser.Core.Events.POST_RENDER,()=>h.onGiftFrame?.());app.events.once(Phaser.Core.Events.READY,()=>attachPixelScale(app,document.querySelector<HTMLElement>('#game')!));
- return {gift:(e:GiftEvent)=>scene.receiveGift(e),clearGifts:()=>scene.clearGifts(),toggleFlashlight:()=>scene.toggleFlashlight(),resumeTutorial:(practice=true)=>scene.resumeTutorial(practice),skipTutorial:()=>scene.skipTutorial(),useItem:(key:'F'|'R'|'Q')=>scene.useItem(key),continueRun:()=>scene.continueRun(),startRun:(n=1)=>scene.startRun(n),setPaused:(v:boolean)=>scene.setPaused(v),command:(c:Command)=>scene.command(c)};
+ return {localGift:(e:Omit<GiftEvent,'runId'>)=>scene.localGift(e),cancelLocal:()=>scene.cancelLocal(),gift:(e:GiftEvent)=>scene.receiveGift(e),clearGifts:()=>scene.clearGifts(),toggleFlashlight:()=>scene.toggleFlashlight(),resumeTutorial:(practice=true)=>scene.resumeTutorial(practice),skipTutorial:()=>scene.skipTutorial(),useItem:(key:'F'|'R'|'Q')=>scene.useItem(key),continueRun:()=>scene.continueRun(),startRun:(n=1)=>scene.startRun(n),setPaused:(v:boolean)=>scene.setPaused(v),command:(c:Command)=>scene.command(c)};
 }

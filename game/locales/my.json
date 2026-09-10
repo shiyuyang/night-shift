@@ -344,5 +344,7 @@
   "menu.shift-date": "တာဝန်ကျရက်: {date} · {weekday, select, d0 {တနင်္ဂနွေ} d1 {တနင်္လာ} d2 {အင်္ဂါ} d3 {ဗုဒ္ဓဟူး} d4 {ကြာသပတေး} d5 {သောကြာ} d6 {စနေ} other {}}",
   "gameplay.listener-flash-immune": "နားထောင်သူကို အလင်းပြက်ဖြင့် မတားနိုင်ပါ။ အာရုံလွှဲပစ္စည်းကို သုံးပါ။",
   "rogue.search-supply-cabinet": "ရိက္ခာဗီရို · ရှာဖွေရန် E",
-  "gameplay.task-box-empty": "သေတ္တာအလွတ်ဖြစ်သည်"
+  "gameplay.task-box-empty": "သေတ္တာအလွတ်ဖြစ်သည်",
+  "desktop.saveError": "သိမ်းဆည်း၍မရပါ။ ဒစ်ခ်နေရာနှင့် ဖိုင်ခွင့်ပြုချက်များကို စစ်ဆေးပြီး ပြန်စတင်ပါ။",
+  "desktop.startupError": "ဂိမ်းကို ဖွင့်၍မရပါ။ ပြန်စတင်ပါ။"
 }

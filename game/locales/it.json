@@ -344,5 +344,7 @@
   "menu.shift-date": "Data del turno: {date} · {weekday, select, d0 {dom} d1 {lun} d2 {mar} d3 {mer} d4 {gio} d5 {ven} d6 {sab} other {}}",
   "gameplay.listener-flash-immune": "I lampi non hanno effetto sull’Ascoltatore. Usa un’esca.",
   "rogue.search-supply-cabinet": "Armadietto scorte · E per cercare",
-  "gameplay.task-box-empty": "La cassa è vuota"
+  "gameplay.task-box-empty": "La cassa è vuota",
+  "desktop.saveError": "Salvataggio non disponibile. Controlla lo spazio su disco e i permessi dei file, poi riavvia.",
+  "desktop.startupError": "Impossibile caricare il gioco. Riavvia."
 }

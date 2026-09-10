@@ -344,5 +344,7 @@
   "menu.shift-date": "值班日期: {date} · {weekday, select, d0 {周日} d1 {周一} d2 {周二} d3 {周三} d4 {周四} d5 {周五} d6 {周六} other {}}",
   "gameplay.listener-flash-immune": "闪光对听声者无效，请使用诱饵。",
   "rogue.search-supply-cabinet": "补给箱 · E 搜索",
-  "gameplay.task-box-empty": "箱内已空"
+  "gameplay.task-box-empty": "箱内已空",
+  "desktop.saveError": "无法存档。请检查磁盘空间和文件权限，然后重启游戏。",
+  "desktop.startupError": "游戏资源加载失败，请重启游戏。"
 }

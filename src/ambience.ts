@@ -1,3 +1,4 @@
+import {storage as persistentStorage} from './runtime/storage.ts';
 import {tuning} from './runtime/pacing.ts';
 import {decodeAudioAsset} from './runtime/audio-asset.ts';
 import {decodeSoundEffects} from './runtime/audio-pack.ts';
@@ -31,14 +32,14 @@ export class Ambience {
   private runTheme?:number;
   private runVariant=0;
   private previousThemes:Record<string,string>={};
-  constructor(){try{const saved=JSON.parse(localStorage.getItem('night-shift-music-rotation-v1')??'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved))this.previousThemes=Object.fromEntries(Object.entries(saved).filter(([,value])=>typeof value==='string')) as Record<string,string>;}catch{}}
+  constructor(){try{const saved=JSON.parse(persistentStorage.getItem('night-shift-music-rotation-v1')??'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved))this.previousThemes=Object.fromEntries(Object.entries(saved).filter(([,value])=>typeof value==='string')) as Record<string,string>;}catch{}}
   beginRun(theme:number,night:number){
     theme=musicTheme(theme);
     const variants=music.filter(track=>track.theme===theme);if(!variants.length)return;
     const choices=variants.filter(track=>track.id!==this.previousThemes[theme]);
     const selected=choices.length?choices[Math.floor(Math.random()*choices.length)]:variants[0];
     this.runTheme=theme;this.runVariant=variants.indexOf(selected);this.previousThemes[theme]=selected.id;
-    try{localStorage.setItem('night-shift-music-rotation-v1',JSON.stringify(this.previousThemes));}catch{}
+    try{persistentStorage.setItem('night-shift-music-rotation-v1',JSON.stringify(this.previousThemes));}catch{}
     this.setScene(theme,0,0,night,0);
   }
   private bloodMoon=0;

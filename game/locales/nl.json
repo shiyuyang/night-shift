@@ -344,5 +344,7 @@
   "menu.shift-date": "Dienstdatum: {date} · {weekday, select, d0 {zo} d1 {ma} d2 {di} d3 {wo} d4 {do} d5 {vr} d6 {za} other {}}",
   "gameplay.listener-flash-immune": "Flitsen hebben geen effect op de Luisteraar. Gebruik een lokmiddel.",
   "rogue.search-supply-cabinet": "Voorraadkast · E om te doorzoeken",
-  "gameplay.task-box-empty": "De kist is leeg"
+  "gameplay.task-box-empty": "De kist is leeg",
+  "desktop.saveError": "Opslaan niet mogelijk. Controleer de schijfruimte en bestandsrechten en start opnieuw.",
+  "desktop.startupError": "Het spel kon niet laden. Start opnieuw."
 }

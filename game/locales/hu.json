@@ -344,5 +344,7 @@
   "menu.shift-date": "Műszak dátuma: {date} · {weekday, select, d0 {V} d1 {H} d2 {K} d3 {Sze} d4 {Cs} d5 {P} d6 {Szo} other {}}",
   "gameplay.listener-flash-immune": "A villanások nem hatnak a Hallgatózóra. Használj csalit.",
   "rogue.search-supply-cabinet": "Készletszekrény · E a kereséshez",
-  "gameplay.task-box-empty": "A láda üres"
+  "gameplay.task-box-empty": "A láda üres",
+  "desktop.saveError": "Nem lehet menteni. Ellenőrizd a lemezterületet és a fájljogosultságokat, majd indítsd újra.",
+  "desktop.startupError": "A játék nem tölthető be. Indítsd újra."
 }

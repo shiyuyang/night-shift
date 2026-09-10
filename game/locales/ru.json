@@ -344,5 +344,7 @@
   "menu.shift-date": "Дата смены: {date} · {weekday, select, d0 {вс} d1 {пн} d2 {вт} d3 {ср} d4 {чт} d5 {пт} d6 {сб} other {}}",
   "gameplay.listener-flash-immune": "Вспышки не действуют на Слушателя. Используйте приманку.",
   "rogue.search-supply-cabinet": "Шкаф с припасами · E — обыскать",
-  "gameplay.task-box-empty": "Ящик пуст"
+  "gameplay.task-box-empty": "Ящик пуст",
+  "desktop.saveError": "Не удалось сохранить. Проверьте место на диске и права доступа к файлам, затем перезапустите игру.",
+  "desktop.startupError": "Не удалось загрузить игру. Перезапустите её."
 }

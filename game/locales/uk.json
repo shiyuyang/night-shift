@@ -344,5 +344,7 @@
   "menu.shift-date": "Дата зміни: {date} · {weekday, select, d0 {нд} d1 {пн} d2 {вт} d3 {ср} d4 {чт} d5 {пт} d6 {сб} other {}}",
   "gameplay.listener-flash-immune": "Спалахи не діють на Слухача. Використовуйте приманку.",
   "rogue.search-supply-cabinet": "Шафа з припасами · E — обшукати",
-  "gameplay.task-box-empty": "Ящик порожній"
+  "gameplay.task-box-empty": "Ящик порожній",
+  "desktop.saveError": "Не вдалося зберегти. Перевірте місце на диску й права доступу до файлів, потім перезапустіть гру.",
+  "desktop.startupError": "Не вдалося завантажити гру. Перезапустіть її."
 }
