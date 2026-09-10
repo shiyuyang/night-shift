@@ -12,10 +12,10 @@ test('closed walls block contact; a decoy redirects and explicit retreat clears 
  const wall={x:114,y:0,width:10,height:400};for(let i=0;i<60;i++)assert.equal(other.tick(.05,input({player:{x:130,y:150},solids:[wall]})),false);
 });
 
-test('explicit intercept target stays ahead rather than becoming a periodic tail chase',()=>{
+test('interceptor searches locally after reaching the fixed checkpoint',()=>{
  const r=new Reinforcement();r.spawn({x:100,y:150},{x:300,y:150});
  for(let i=0;i<120;i++)r.tick(.05,input({player:{x:700,y:350},goal:{x:300,y:150},speed:115}));
- assert.ok(Math.hypot(r.position.x-300,r.position.y-150)<1);assert.ok(Math.abs(r.position.y-150)<.001);
+ assert.ok(r.searchAnchor);assert.ok(Math.hypot(r.searchAnchor.x-300,r.searchAnchor.y-150)<1);assert.ok(Math.hypot(r.position.x-300,r.position.y-150)>10);assert.ok(Math.hypot(r.position.x-300,r.position.y-150)<=100);assert.deepEqual(r.target,{x:300,y:150});
 });
 
 import {exitEntries,returnCheckpoints} from '../src/runtime/patrol-density.ts';
@@ -61,4 +61,22 @@ test('exit patroller slows while searching after sight is broken',()=>{
  r.tick(.8,input({hidden:true}));assert.equal(r.sightLock.searching,true);
  const before={...r.position};r.tick(.1,input({hidden:true}));
  assert.ok(Math.abs(Math.hypot(r.position.x-before.x,r.position.y-before.y)-107*.65*.1)<.001);
+});
+
+
+test('unreachable checkpoint becomes a local search instead of a permanent stop',()=>{
+ const r=new Reinforcement();r.spawn({x:100,y:150},{x:500,y:150});const wall={x:250,y:-50,width:20,height:650};
+ const options=input({player:{x:700,y:400},goal:{x:500,y:150},solids:[wall]});
+ for(let i=0;i<260;i++)r.tick(.05,options);
+ assert.ok(r.searchAnchor);assert.ok(r.searchAnchor.x<250);assert.ok(r.searchGoal);assert.ok(r.position.x<250);assert.ok(!overlaps(monsterFeetAt(r.position.x,r.position.y),wall));
+ const before={...r.position},idle=r.idle;r.tick(0,options);assert.deepEqual(r.position,before);assert.equal(r.idle,idle);
+ // A new, now reachable checkpoint invalidates the old local search.
+ r.tick(.05,{...options,goal:{x:600,y:150},solids:[]});assert.equal(r.searchAnchor,null);
+});
+
+test('local search yields to a spotted player and flash keeps its full stun',()=>{
+ const r=new Reinforcement();r.spawn({x:100,y:150},{x:100,y:150});
+ for(let i=0;i<140;i++)r.tick(.05,input({hidden:true}));assert.ok(r.searchAnchor);
+ const player={x:r.position.x+30,y:r.position.y};r.tick(.05,input({player}));assert.equal(r.searchAnchor,null);assert.deepEqual(r.target,player);
+ assert.equal(r.flash(player,[]),true);const before={...r.position};r.tick(1.9,input({player}));assert.deepEqual(r.position,before);
 });
