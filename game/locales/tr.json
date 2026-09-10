@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "Malzeme dolabı · Aramak için E",
   "gameplay.task-box-empty": "Kutu boş",
   "desktop.saveError": "Kayıt yapılamıyor. Disk alanını ve dosya izinlerini kontrol edip yeniden başlatın.",
-  "desktop.startupError": "Oyun yüklenemedi. Lütfen yeniden başlatın."
+  "desktop.startupError": "Oyun yüklenemedi. Lütfen yeniden başlatın.",
+  "desktop.disconnected": "Canlı etkileşim bağlantısı kesildi ({code}). Yeniden bağlanmak için oyunu LIVE Studio üzerinden yeniden başlatın."
 }

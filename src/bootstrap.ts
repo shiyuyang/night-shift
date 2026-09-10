@@ -13,4 +13,4 @@ import {invoke,isTauri} from '@tauri-apps/api/core';
 import {initializeStorage} from './runtime/storage';
 let storageReady=false;
 try {await initializeStorage();storageReady=true;await import('./main');}
-catch(error){console.error('Desktop startup failed',error);if(isTauri())void invoke('desktop_diagnostic',{error:String(error)});const {t}=await import('./i18n');const p=document.createElement('p');p.textContent=t(storageReady?'desktop.startupError':'desktop.saveError');document.querySelector('#app')!.replaceChildren(p);}
+catch(error){console.error('Desktop startup failed',error);if(isTauri()){void invoke('desktop_diagnostic',{error:String(error)});void invoke('desktop_event',{event:'GAME_ERROR',data:{code:storageReady?'STARTUP_FAILED':'SAVE_INIT_FAILED'}}).catch(()=>{});}const {t}=await import('./i18n');const p=document.createElement('p');p.textContent=t(storageReady?'desktop.startupError':'desktop.saveError');document.querySelector('#app')!.replaceChildren(p);}

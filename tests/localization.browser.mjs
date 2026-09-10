@@ -29,6 +29,10 @@ try{for(const locale of (process.env.I18N_LOCALES?.split(',')??['en','zh-Hans','
  for(let stage=0;stage<3;stage++){await page.locator('#stage-list button').nth(stage).click();await assertCover();assert.ok(await page.locator('.file-stamp').evaluate(e=>{const s=getComputedStyle(e);return s.color==='rgb(141, 68, 73)'&&s.borderTopWidth==='0px'&&s.boxShadow==='none'}),'Status seal must stay red without a rectangular border');}
  await page.locator('#stage-list button').first().click();
  const metrics=await measure();assert.deepEqual(metrics.filter(m=>m.overflow),[],locale+' horizontal clipping');await page.screenshot({path:`output/localization/${locale}.png`});
+ await page.evaluate(()=>window.dispatchEvent(new CustomEvent('nightshift:live-disconnected',{detail:{code:103}})));
+ assert.equal(await page.locator('#toast').textContent(),expected['desktop.disconnected'].replace('{code}','103'));
+ assert.ok(await page.locator('#toast').evaluate(e=>e.scrollWidth<=e.clientWidth+1),'Disconnect message must wrap');
+ await page.screenshot({path:`output/localization/${locale}-disconnect.png`});
  await page.locator('#book-guide').click();assert.ok(await page.locator('#guide-dialog').evaluate(e=>e.open));await page.locator('#close-guide').click();
  await page.locator('#desk-settings').click();await page.locator('#resume').click();assert.ok(await page.locator('#pause-menu').evaluate(e=>e.hidden));
  for(const viewport of [{width:540,height:960},{width:1920,height:800}]){await page.setViewportSize(viewport);await page.waitForTimeout(80);const ratio=await page.locator('#start-layer').evaluate(e=>{const r=e.getBoundingClientRect();return r.width/r.height;});assert.ok(Math.abs(ratio-16/9)<.001);}

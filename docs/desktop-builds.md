@@ -69,12 +69,12 @@ npm run test:browser:desktop
 
 当前配置用于本地测试版，不包含 Windows 代码签名或 Apple Developer ID 签名、公证。对外分发前需要配置对应签名流程；本地能打开不能证明其他电脑没有系统拦截。
 
-## 0.4.1 本地协议与文件存档
+## 0.4.3 本地协议与文件存档
 
 - 原生层读取 `--ws-port`、`--session-id`、`--auth-token`、`--play-id`、`--language`（支持空格和等号形式），仅连接本机高位端口。令牌只用于本次 AUTH，不落盘，不自动复用重连。
-- 六个 instruction 使用 `game/live-studio-instructions.json`。ID 全部保留字符串；一次消息的 count 为增量，支持 1–100。重复 interaction_id 不重复执行，完成后重发原 ACK；每会话最多记住 4096 个 ID，达到上限断开，需新会话。
-- 电池、闪光、治疗和幽影在状态更新后 ACK；故障在整个效果结束后 ACK；鬼打墙在移动完成并结束过场后 ACK。多个 count 全部执行后才成功。最多 64 条未完成消息，每条等待最多 120 秒，超时取消剩余效果并失败回执。
-- 菜单、结算、暂停、教学或正在位移时拒绝新效果；旧局退出、断开时取消尚未完成的本地效果。未知指令、错误 play_id、非法 count 不执行。
+- 六个 instruction 使用 `game/live-studio-instructions.json`。ID 全部保留字符串；count 为增量，支持 JavaScript 可安全表示的正整数。重复 interaction_id 不重复执行，完成后重发原 ACK；记录保留到会话结束，不再限制累计互动次数。
+- 电池、闪光、治疗和幽影在状态更新后 ACK；故障在整个效果结束后 ACK；鬼打墙在移动完成并结束过场后 ACK。多个 count 全部执行后才成功。排队可跨暂停等待，不再设置固定 120 秒超时；本局结束或断开时取消并返回失败。渲染端停止轮询超过 180 秒视为异常。
+- 菜单、结算、暂停、教学或正在位移时拒绝新效果；旧局退出、断开时清理生效及排队效果，包括幽影与备用电量。未知指令、错误 play_id、非法 count 不执行。
 - 存档范围：解锁、语言和音量/声音设置、最近 30 局历史、本夜编号和地图种子、已学怪物教学。中途退出重新选中本夜，从相同地图的开头重玩，状态和未完成互动不恢复。
 - 按 **play_id** 隔离全部文件数据，目录为 `应用数据目录/plays/SHA256(play_id)/`；不带会话参数的单机启动使用应用数据根目录。macOS 根目录为 `~/Library/Application Support/com.hospitalnightshift.game`，Windows 为系统 `%APPDATA%`（RoamingAppData）下应用标识目录（以 Tauri app_data_dir 为准）。
 - 不做 localStorage 或旧版存档迁移。新范围从新进度开始。文件包含 schema 版本，未来未知版本拒绝覆盖。
@@ -82,3 +82,12 @@ npm run test:browser:desktop
 - LIVE Studio 的 language 只设本次会话初始语言；用户主动切换才更新长期语言设置。
 
 验证：`cargo test --manifest-path src-tauri/Cargo.toml`；启动 Vite 5194 后运行 `node tests/desktop-live.browser.mjs`。浏览器测试用契约桩替代 IPC，执行真实游戏逻辑；原生包联调另外记录，不混同为 Windows 实机验证。
+
+### 生命周期
+
+- 正常关闭窗口先完成存档、取消效果并等待回执，然后发送 `DISCONNECT / GAME_EXIT (101)` 和 WebSocket Close，最后退出。应用菜单退出也由原生层发送通知；强制终止进程仍由宿主检测。
+- 保留宿主的断开原因码，清理互动后继续游戏；不会切换存档范围。提示连接错误或断开原因码，重新连接需从 LIVE Studio 启动新会话，不复用令牌。
+- 就绪、等待、游戏中、暂停、结算分别通过 `GAME_READY` 和 `GAME_STATE_CHANGED` 上报；启动、存档和运行错误通过 `GAME_ERROR` 上报分类码，不上报令牌或本地路径。
+- `GAME_EFFECT_MODE_CHANGED` 初始上报默认空字符串；`setDesktopEffectMode` 接受平台约定的字符串，包括空字符串。当前游戏没有额外玩法模式，不自行定义 power 模式。
+- 观众头像使用消息中的 HTTPS 地址，加载失败显示昵称占位图；只有图片 CSP 开放 HTTPS。
+- 去重记录保留整个会话；不设置累计互动次数上限，相关内存随会话互动数量增长，在进程结束时释放。

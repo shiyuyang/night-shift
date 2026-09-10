@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "Voorraadkast · E om te doorzoeken",
   "gameplay.task-box-empty": "De kist is leeg",
   "desktop.saveError": "Opslaan niet mogelijk. Controleer de schijfruimte en bestandsrechten en start opnieuw.",
-  "desktop.startupError": "Het spel kon niet laden. Start opnieuw."
+  "desktop.startupError": "Het spel kon niet laden. Start opnieuw.",
+  "desktop.disconnected": "Live-interactie verbroken ({code}). Start het spel opnieuw vanuit LIVE Studio om opnieuw te verbinden."
 }

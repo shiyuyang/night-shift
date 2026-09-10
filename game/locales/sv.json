@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "Förrådsskåp · E för att söka",
   "gameplay.task-box-empty": "Lådan är tom",
   "desktop.saveError": "Det går inte att spara. Kontrollera diskutrymme och filbehörigheter och starta om.",
-  "desktop.startupError": "Spelet kunde inte laddas. Starta om."
+  "desktop.startupError": "Spelet kunde inte laddas. Starta om.",
+  "desktop.disconnected": "Liveinteraktionen kopplades från ({code}). Starta om spelet från LIVE Studio för att ansluta igen."
 }

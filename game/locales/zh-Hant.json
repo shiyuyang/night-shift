@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "補給箱 · E 搜索",
   "gameplay.task-box-empty": "箱內已空",
   "desktop.saveError": "無法存檔。請檢查磁碟空間和檔案權限，然後重新啟動遊戲。",
-  "desktop.startupError": "遊戲資源載入失敗，請重新啟動遊戲。"
+  "desktop.startupError": "遊戲資源載入失敗，請重新啟動遊戲。",
+  "desktop.disconnected": "直播互動已中斷（{code}）。請從 LIVE Studio 重新啟動遊戲以連線。"
 }

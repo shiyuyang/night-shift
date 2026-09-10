@@ -348,4 +348,5 @@ export interface MessageValues{
 "gameplay.task-box-empty":{}
 "desktop.saveError":{}
 "desktop.startupError":{}
+"desktop.disconnected":{"code":string|number}
 }

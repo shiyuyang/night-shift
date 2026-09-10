@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "Vorratsschrank · E zum Durchsuchen",
   "gameplay.task-box-empty": "Die Kiste ist leer",
   "desktop.saveError": "Speichern nicht möglich. Prüfe Speicherplatz und Dateiberechtigungen und starte neu.",
-  "desktop.startupError": "Das Spiel konnte nicht geladen werden. Bitte starte neu."
+  "desktop.startupError": "Das Spiel konnte nicht geladen werden. Bitte starte neu.",
+  "desktop.disconnected": "Live-Interaktion getrennt ({code}). Starte das Spiel über LIVE Studio neu, um die Verbindung wiederherzustellen."
 }

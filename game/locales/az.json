@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "Təchizat dolabı · Axtarmaq üçün E",
   "gameplay.task-box-empty": "Qutu boşdur",
   "desktop.saveError": "Yadda saxlamaq mümkün deyil. Disk yerini və fayl icazələrini yoxlayıb yenidən başladın.",
-  "desktop.startupError": "Oyun yüklənmədi. Yenidən başladın."
+  "desktop.startupError": "Oyun yüklənmədi. Yenidən başladın.",
+  "desktop.disconnected": "Canlı qarşılıqlı əlaqə kəsildi ({code}). Yenidən qoşulmaq üçün oyunu LIVE Studio vasitəsilə yenidən başladın."
 }

@@ -370,7 +370,7 @@ export function bootGame(h:Hooks){
    const runId=this.gifts.runId;this.localKeys.add(event.id);
    const result=this.receipts.wait(event.id,event.count,()=>this.cancelGift(event.id));
    if(!this.receiveGift({...event,runId}))this.receipts.fail(event.id);
-   else if(!['failure','warp'].includes(giftDefinitions[event.giftId].kind)){for(let i=0;i<event.count;i++)this.receipts.complete(event.id);}
+   else if(!['failure','warp'].includes(giftDefinitions[event.giftId].kind)){this.receipts.complete(event.id,event.count);}
    const done=await result;this.localKeys.delete(event.id);return done;
   }
   clearGifts(){this.cancelLocal();this.gifts.clear();this.giftShade.reset();this.shadeSprite?.setVisible(false);this.batteryReserve=0;this.warpTarget=undefined;this.showGifts();}

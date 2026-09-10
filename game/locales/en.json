@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "Supply cabinet · E to search",
   "gameplay.task-box-empty": "Box is empty",
   "desktop.saveError": "Save unavailable. Check disk space and file permissions, then restart.",
-  "desktop.startupError": "Game resources could not load. Please restart."
+  "desktop.startupError": "Game resources could not load. Please restart.",
+  "desktop.disconnected": "Live interaction disconnected ({code}). Restart the game from LIVE Studio to reconnect."
 }

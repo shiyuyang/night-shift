@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "ארון אספקה · E לחיפוש",
   "gameplay.task-box-empty": "הארגז ריק",
   "desktop.saveError": "לא ניתן לשמור. יש לבדוק את שטח הדיסק ואת הרשאות הקבצים ולהפעיל מחדש.",
-  "desktop.startupError": "לא ניתן לטעון את המשחק. יש להפעיל מחדש."
+  "desktop.startupError": "לא ניתן לטעון את המשחק. יש להפעיל מחדש.",
+  "desktop.disconnected": "החיבור לאינטראקציה בשידור נותק ({code}). יש להפעיל מחדש את המשחק דרך LIVE Studio כדי להתחבר שוב."
 }

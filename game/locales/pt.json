@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "Armário de suprimentos · E para vasculhar",
   "gameplay.task-box-empty": "A caixa está vazia",
   "desktop.saveError": "Não foi possível salvar. Verifique o espaço em disco e as permissões dos arquivos e reinicie.",
-  "desktop.startupError": "Não foi possível carregar o jogo. Reinicie."
+  "desktop.startupError": "Não foi possível carregar o jogo. Reinicie.",
+  "desktop.disconnected": "Interação ao vivo desconectada ({code}). Reinicie o jogo pelo LIVE Studio para reconectar."
 }

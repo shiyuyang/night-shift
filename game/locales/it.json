@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "Armadietto scorte · E per cercare",
   "gameplay.task-box-empty": "La cassa è vuota",
   "desktop.saveError": "Salvataggio non disponibile. Controlla lo spazio su disco e i permessi dei file, poi riavvia.",
-  "desktop.startupError": "Impossibile caricare il gioco. Riavvia."
+  "desktop.startupError": "Impossibile caricare il gioco. Riavvia.",
+  "desktop.disconnected": "Interazione dal vivo disconnessa ({code}). Riavvia il gioco da LIVE Studio per riconnetterti."
 }

@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "ตู้เสบียง · E เพื่อค้นหา",
   "gameplay.task-box-empty": "กล่องว่างเปล่า",
   "desktop.saveError": "บันทึกไม่ได้ โปรดตรวจสอบพื้นที่ดิสก์และสิทธิ์เข้าถึงไฟล์ แล้วเริ่มใหม่",
-  "desktop.startupError": "โหลดเกมไม่ได้ โปรดเริ่มใหม่"
+  "desktop.startupError": "โหลดเกมไม่ได้ โปรดเริ่มใหม่",
+  "desktop.disconnected": "การโต้ตอบไลฟ์ถูกตัดการเชื่อมต่อ ({code}) เปิดเกมใหม่จาก LIVE Studio เพื่อเชื่อมต่ออีกครั้ง"
 }

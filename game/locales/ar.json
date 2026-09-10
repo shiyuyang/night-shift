@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "خزانة الإمدادات · E للتفتيش",
   "gameplay.task-box-empty": "الصندوق فارغ",
   "desktop.saveError": "تعذر الحفظ. تحقق من مساحة القرص وأذونات الملفات، ثم أعد التشغيل.",
-  "desktop.startupError": "تعذر تحميل اللعبة. يرجى إعادة التشغيل."
+  "desktop.startupError": "تعذر تحميل اللعبة. يرجى إعادة التشغيل.",
+  "desktop.disconnected": "انقطع الاتصال بالتفاعل المباشر ({code}). أعد تشغيل اللعبة من LIVE Studio لإعادة الاتصال."
 }

@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "Tủ tiếp tế · E để lục tìm",
   "gameplay.task-box-empty": "Hộp đã trống",
   "desktop.saveError": "Không thể lưu. Kiểm tra dung lượng ổ đĩa và quyền truy cập tệp, rồi khởi động lại.",
-  "desktop.startupError": "Không thể tải trò chơi. Vui lòng khởi động lại."
+  "desktop.startupError": "Không thể tải trò chơi. Vui lòng khởi động lại.",
+  "desktop.disconnected": "Tương tác trực tiếp đã ngắt kết nối ({code}). Khởi động lại trò chơi từ LIVE Studio để kết nối lại."
 }

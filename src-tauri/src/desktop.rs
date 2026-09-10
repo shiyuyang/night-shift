@@ -70,6 +70,9 @@ fn launch(args: Vec<String>) -> Result<Option<(Launch, u16, String)>, String> {
 struct Inbox {
     status: String,
     messages: VecDeque<Value>,
+    reason: Option<String>,
+    reason_code: Option<u16>,
+    last_poll: Option<Instant>,
 }
 #[derive(Serialize, Deserialize, Default)]
 struct Save {
@@ -156,11 +159,16 @@ fn save_scope(base: PathBuf, play: Option<&str>) -> PathBuf {
         None => base,
     }
 }
+enum Outbound {
+    Ack(String, bool),
+    Event(String, Value),
+    Shutdown(mpsc::Sender<()>),
+}
 pub struct Desktop {
     disk: Mutex<Disk>,
     launch: Launch,
     inbox: Arc<Mutex<Inbox>>,
-    ack: mpsc::Sender<(String, bool)>,
+    ack: mpsc::Sender<Outbound>,
 }
 impl Desktop {
     pub fn new(dir: PathBuf) -> Result<Self, Box<dyn std::error::Error>> {
@@ -187,8 +195,10 @@ impl Desktop {
                 let shared = inbox.clone();
                 shared.lock().unwrap().status = "connecting".into();
                 std::thread::spawn(move || {
-                    if run_socket(l, port, token, shared.clone(), rx).is_err() {
-                        shared.lock().unwrap().status = "disconnected".into();
+                    if let Err(error) = run_socket(l, port, token, shared.clone(), rx) {
+                        let mut q = shared.lock().unwrap();
+                        q.status = "disconnected".into();
+                        q.reason = Some(error.to_string());
                     }
                     shared.lock().unwrap().messages.clear();
                 });
@@ -224,14 +234,55 @@ pub fn desktop_save(
 #[tauri::command]
 pub fn desktop_poll(state: tauri::State<Desktop>) -> Value {
     let mut q = state.inbox.lock().unwrap();
-    json!({"status":q.status,"messages":q.messages.drain(..).collect::<Vec<_>>()})
+    q.last_poll = Some(Instant::now());
+    json!({"status":q.status,"reason":q.reason,"reason_code":q.reason_code,"messages":q.messages.drain(..).collect::<Vec<_>>()})
 }
 #[tauri::command]
 pub fn desktop_ack(state: tauri::State<Desktop>, id: String, result: bool) -> Result<(), String> {
     state
         .ack
-        .send((id, result))
+        .send(Outbound::Ack(id, result))
         .map_err(|_| "Disconnected".into())
+}
+impl Desktop {
+    pub fn shutdown(&self) {
+        let (tx, rx) = mpsc::channel();
+        if self.ack.send(Outbound::Shutdown(tx)).is_ok() {
+            let _ = rx.recv_timeout(Duration::from_secs(3));
+        }
+    }
+}
+#[tauri::command]
+pub async fn desktop_shutdown(state: tauri::State<'_, Desktop>) -> Result<(), String> {
+    state.shutdown();
+    Ok(())
+}
+#[tauri::command]
+pub fn desktop_event(
+    state: tauri::State<Desktop>,
+    event: String,
+    data: Value,
+) -> Result<(), String> {
+    if ![
+        "GAME_READY",
+        "GAME_STATE_CHANGED",
+        "GAME_ERROR",
+        "GAME_EFFECT_MODE_CHANGED",
+    ]
+    .contains(&event.as_str())
+    {
+        return Err("Unsupported event".into());
+    }
+    if event == "GAME_EFFECT_MODE_CHANGED" && !data["mode"].is_string() {
+        return Err("Mode must be a string".into());
+    }
+    state
+        .ack
+        .send(Outbound::Event(event, data))
+        .map_err(|_| "Disconnected".into())
+}
+fn event_message(event: &str, data: Value) -> Value {
+    json!({"type":"GAME_EVENT","message_id":uuid::Uuid::new_v4().to_string(),"timestamp":now(),"version":"1.0.0","payload":{"event":event,"data":data}})
 }
 fn ack(id: &str, play: &str, result: bool) -> Value {
     json!({"type":"GAME_EVENT","message_id":uuid::Uuid::new_v4().to_string(),"timestamp":now(),"version":"1.0.0","payload":{"event":"GAME_TRIGGER_ACK","data":{"play_id":play,"ack_data":{"interaction_id":id,"result":result,"ack_timestamp":now().to_string()}}}})
@@ -241,7 +292,26 @@ fn run_socket(
     port: u16,
     token: String,
     inbox: Arc<Mutex<Inbox>>,
-    rx: mpsc::Receiver<(String, bool)>,
+    rx: mpsc::Receiver<Outbound>,
+) -> Result<(), Box<dyn std::error::Error>> {
+    run_socket_with_limits(
+        l,
+        port,
+        token,
+        inbox,
+        rx,
+        Duration::from_secs(5),
+        Duration::from_secs(90),
+    )
+}
+fn run_socket_with_limits(
+    l: Launch,
+    port: u16,
+    token: String,
+    inbox: Arc<Mutex<Inbox>>,
+    rx: mpsc::Receiver<Outbound>,
+    auth_timeout: Duration,
+    heartbeat_timeout: Duration,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let addr: SocketAddr = format!("127.0.0.1:{port}").parse()?;
     let tcp = TcpStream::connect_timeout(&addr, Duration::from_secs(3))?;
@@ -257,26 +327,48 @@ fn run_socket(
     let started = Instant::now();
     let mut last = Instant::now();
     let mut authed = false;
-    // Never evict deduplication entries within a session; reject new traffic on saturation.
+    // Retain deduplication for the whole session without a lifetime interaction quota.
     let mut seen: HashMap<String, Option<bool>> = HashMap::new();
     let mut waiting: HashMap<String, Instant> = HashMap::new();
     loop {
-        for (id, result) in rx.try_iter() {
-            if seen.get(&id) == Some(&None) {
-                seen.insert(id.clone(), Some(result));
-                waiting.remove(&id);
-                ws.send(Message::Text(ack(&id, &l.play, result).to_string().into()))?;
+        for outgoing in rx.try_iter() {
+            match outgoing {
+                Outbound::Ack(id, result) if seen.get(&id) == Some(&None) => {
+                    seen.insert(id.clone(), Some(result));
+                    waiting.remove(&id);
+                    ws.send(Message::Text(ack(&id, &l.play, result).to_string().into()))?;
+                }
+                Outbound::Event(event, data) if authed => {
+                    ws.send(Message::Text(
+                        event_message(&event, data).to_string().into(),
+                    ))?;
+                }
+                Outbound::Shutdown(done) => {
+                    for id in waiting.keys() {
+                        let _ = ws.send(Message::Text(ack(id, &l.play, false).to_string().into()));
+                    }
+                    let notice = json!({"type":"DISCONNECT","reason_code":101,"reason":"GAME_EXIT","timestamp":now()});
+                    let _ = ws.send(Message::Text(notice.to_string().into()));
+                    let _ = ws.close(None);
+                    let _ = ws.flush();
+                    inbox.lock().unwrap().status = "disconnected".into();
+                    let _ = done.send(());
+                    return Ok(());
+                }
+                _ => {}
             }
         }
-        if !authed && started.elapsed() > Duration::from_secs(10) {
+        if !authed && started.elapsed() > auth_timeout {
             return Err("AUTH timeout".into());
         }
-        if authed && last.elapsed() > Duration::from_secs(90) {
+        if authed && last.elapsed() > heartbeat_timeout {
             return Err("Host heartbeat timeout".into());
         }
-        if waiting
-            .values()
-            .any(|t| t.elapsed() > Duration::from_secs(180))
+        if inbox
+            .lock()
+            .unwrap()
+            .last_poll
+            .is_some_and(|t| t.elapsed() > Duration::from_secs(180))
         {
             return Err("Renderer stalled".into());
         }
@@ -307,12 +399,23 @@ fn run_socket(
                 match m["type"].as_str() {
                     Some("AUTH_RESULT") => {
                         if authed || m["success"] != true || m["session_id"] != l.session {
-                            return Err("AUTH rejected".into());
+                            return Err(format!(
+                                "AUTH rejected: {}",
+                                m["error_code"].as_str().unwrap_or("INVALID_FORMAT")
+                            )
+                            .into());
                         }
                         authed = true;
                         inbox.lock().unwrap().status = "authenticated".into();
                     }
-                    Some("DISCONNECT") => break,
+                    Some("DISCONNECT") => {
+                        let mut q = inbox.lock().unwrap();
+                        q.reason = m["reason"].as_str().map(str::to_owned);
+                        q.reason_code = m["reason_code"]
+                            .as_u64()
+                            .and_then(|n| u16::try_from(n).ok());
+                        break;
+                    }
                     Some("GAME_COMMAND") if authed => {
                         let d = &m["payload"]["data"];
                         let Some(id) = d["interaction_id"]
@@ -329,13 +432,11 @@ fn run_socket(
                             }
                             continue;
                         }
-                        if seen.len() >= 4096 {
-                            return Err("Session interaction limit".into());
-                        }
                         let valid = m["payload"]["command"] == "TRIGGER_EFFECT"
                             && d["play_id"] == l.play
-                            && d["count"].as_u64().is_some_and(|n| n > 0 && n <= 100)
-                            && waiting.len() < 64;
+                            && d["count"]
+                                .as_u64()
+                                .is_some_and(|n| n > 0 && n <= 9_007_199_254_740_991);
                         if !valid {
                             seen.insert(id.to_string(), Some(false));
                             ws.send(Message::Text(ack(id, &l.play, false).to_string().into()))?;
@@ -441,7 +542,7 @@ mod tests {
         }
         std::thread::sleep(Duration::from_millis(100));
         assert_eq!(inbox.lock().unwrap().messages.len(), 1);
-        tx.send(("interaction".into(), true)).unwrap();
+        tx.send(Outbound::Ack("interaction".into(), true)).unwrap();
         let first: Value = serde_json::from_str(server.read().unwrap().to_text().unwrap()).unwrap();
         assert_eq!(first["payload"]["data"]["ack_data"]["result"], true);
         server
@@ -464,6 +565,136 @@ mod tests {
         assert!(client_thread.join().unwrap().is_ok());
     }
 
+    fn fixture(
+        auth_timeout: Duration,
+        heartbeat_timeout: Duration,
+    ) -> (
+        tungstenite::WebSocket<TcpStream>,
+        mpsc::Sender<Outbound>,
+        Arc<Mutex<Inbox>>,
+        std::thread::JoinHandle<Result<(), String>>,
+    ) {
+        let listener = std::net::TcpListener::bind("127.0.0.1:0").unwrap();
+        let port = listener.local_addr().unwrap().port();
+        let inbox = Arc::new(Mutex::new(Inbox::default()));
+        let shared = inbox.clone();
+        let (tx, rx) = mpsc::channel();
+        let thread = std::thread::spawn(move || {
+            run_socket_with_limits(
+                Launch {
+                    session: "session".into(),
+                    play: "play".into(),
+                    language: None,
+                },
+                port,
+                "token".into(),
+                shared,
+                rx,
+                auth_timeout,
+                heartbeat_timeout,
+            )
+            .map_err(|e| e.to_string())
+        });
+        let (tcp, _) = listener.accept().unwrap();
+        tcp.set_read_timeout(Some(Duration::from_secs(3))).unwrap();
+        let mut server = tungstenite::accept(tcp).unwrap();
+        assert_eq!(
+            serde_json::from_str::<Value>(server.read().unwrap().to_text().unwrap()).unwrap()
+                ["type"],
+            "AUTH"
+        );
+        (server, tx, inbox, thread)
+    }
+    fn authenticate(server: &mut tungstenite::WebSocket<TcpStream>) {
+        server
+            .send(Message::Text(
+                json!({"type":"AUTH_RESULT","success":true,"session_id":"session"})
+                    .to_string()
+                    .into(),
+            ))
+            .unwrap();
+    }
+    #[test]
+    fn normal_exit_notifies_before_close_and_flushes_pending_ack() {
+        let (mut server, tx, inbox, thread) =
+            fixture(Duration::from_secs(2), Duration::from_secs(3));
+        authenticate(&mut server);
+        server.send(Message::Text(json!({"type":"GAME_COMMAND","payload":{"command":"TRIGGER_EFFECT","data":{"interaction_id":"pending","play_id":"play","count":101}}}).to_string().into())).unwrap();
+        let start = Instant::now();
+        while inbox.lock().unwrap().messages.is_empty() {
+            assert!(start.elapsed() < Duration::from_secs(2));
+            std::thread::sleep(Duration::from_millis(5));
+        }
+        tx.send(Outbound::Event(
+            "GAME_EFFECT_MODE_CHANGED".into(),
+            json!({"mode":""}),
+        ))
+        .unwrap();
+        let (done, finished) = mpsc::channel();
+        tx.send(Outbound::Shutdown(done)).unwrap();
+        let mode: Value = serde_json::from_str(server.read().unwrap().to_text().unwrap()).unwrap();
+        assert_eq!(mode["payload"]["data"]["mode"], "");
+        let ack: Value = serde_json::from_str(server.read().unwrap().to_text().unwrap()).unwrap();
+        assert_eq!(ack["payload"]["data"]["ack_data"]["result"], false);
+        let exit: Value = serde_json::from_str(server.read().unwrap().to_text().unwrap()).unwrap();
+        assert_eq!(exit["reason_code"], 101);
+        assert_eq!(exit["reason"], "GAME_EXIT");
+        assert!(matches!(server.read().unwrap(), Message::Close(_)));
+        finished.recv_timeout(Duration::from_secs(2)).unwrap();
+        assert!(thread.join().unwrap().is_ok());
+    }
+    #[test]
+    fn auth_errors_timeouts_and_transport_loss() {
+        for code in ["INVALID_TOKEN", "TOKEN_EXPIRED", "TOKEN_USED"] {
+            let (mut server, _, _, thread) =
+                fixture(Duration::from_secs(2), Duration::from_secs(3));
+            server
+                .send(Message::Text(
+                    json!({"type":"AUTH_RESULT","success":false,"error_code":code})
+                        .to_string()
+                        .into(),
+                ))
+                .unwrap();
+            assert!(thread.join().unwrap().unwrap_err().contains(code));
+        }
+        let (_server, _, _, thread) = fixture(Duration::from_millis(100), Duration::from_secs(3));
+        assert!(thread.join().unwrap().unwrap_err().contains("AUTH timeout"));
+        let (mut server, _, _, thread) =
+            fixture(Duration::from_secs(2), Duration::from_millis(150));
+        authenticate(&mut server);
+        assert!(thread
+            .join()
+            .unwrap()
+            .unwrap_err()
+            .contains("heartbeat timeout"));
+        let (mut server, _, _, thread) = fixture(Duration::from_secs(2), Duration::from_secs(3));
+        authenticate(&mut server);
+        drop(server);
+        assert!(thread.join().unwrap().is_err());
+    }
+    #[test]
+    fn disconnect_preserves_each_host_reason() {
+        for (code, reason) in [
+            (100, "USER_INITIATED"),
+            (103, "APP_EXIT"),
+            (500, "SERVER_ERROR"),
+        ] {
+            let (mut server, _, inbox, thread) =
+                fixture(Duration::from_secs(2), Duration::from_secs(3));
+            authenticate(&mut server);
+            server
+                .send(Message::Text(
+                    json!({"type":"DISCONNECT","reason_code":code,"reason":reason})
+                        .to_string()
+                        .into(),
+                ))
+                .unwrap();
+            assert!(thread.join().unwrap().is_ok());
+            let q = inbox.lock().unwrap();
+            assert_eq!(q.reason_code, Some(code));
+            assert_eq!(q.reason.as_deref(), Some(reason));
+        }
+    }
     #[test]
     fn play_saves_are_isolated() {
         let base = std::env::temp_dir().join(uuid::Uuid::new_v4().to_string());

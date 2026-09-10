@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "Készletszekrény · E a kereséshez",
   "gameplay.task-box-empty": "A láda üres",
   "desktop.saveError": "Nem lehet menteni. Ellenőrizd a lemezterületet és a fájljogosultságokat, majd indítsd újra.",
-  "desktop.startupError": "A játék nem tölthető be. Indítsd újra."
+  "desktop.startupError": "A játék nem tölthető be. Indítsd újra.",
+  "desktop.disconnected": "Az élő interakció megszakadt ({code}). Az újracsatlakozáshoz indítsd újra a játékot a LIVE Studio alkalmazásból."
 }

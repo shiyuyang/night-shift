@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "补给箱 · E 搜索",
   "gameplay.task-box-empty": "箱内已空",
   "desktop.saveError": "无法存档。请检查磁盘空间和文件权限，然后重启游戏。",
-  "desktop.startupError": "游戏资源加载失败，请重启游戏。"
+  "desktop.startupError": "游戏资源加载失败，请重启游戏。",
+  "desktop.disconnected": "直播互动已断开（{code}）。请从 LIVE Studio 重新启动游戏以连接。"
 }

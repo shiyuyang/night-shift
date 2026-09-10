@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "Almari bekalan · E untuk mencari",
   "gameplay.task-box-empty": "Kotak kosong",
   "desktop.saveError": "Tidak dapat menyimpan. Semak ruang cakera dan kebenaran fail, kemudian mulakan semula.",
-  "desktop.startupError": "Gagal memuatkan permainan. Sila mulakan semula."
+  "desktop.startupError": "Gagal memuatkan permainan. Sila mulakan semula.",
+  "desktop.disconnected": "Interaksi langsung terputus ({code}). Mulakan semula permainan melalui LIVE Studio untuk menyambung semula."
 }

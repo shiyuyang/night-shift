@@ -13,8 +13,15 @@ fn main() {
             desktop::desktop_save,
             desktop::desktop_poll,
             desktop::desktop_ack,
+            desktop::desktop_event,
+            desktop::desktop_shutdown,
             desktop::desktop_diagnostic
         ])
-        .run(tauri::generate_context!())
-        .expect("Desktop runtime failed");
+        .build(tauri::generate_context!())
+        .expect("Desktop runtime failed")
+        .run(|app, event| {
+            if let tauri::RunEvent::ExitRequested { .. } = event {
+                app.state::<desktop::Desktop>().shutdown();
+            }
+        });
 }

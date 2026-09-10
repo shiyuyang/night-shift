@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "보급함 · E로 수색",
   "gameplay.task-box-empty": "상자가 비어 있습니다",
   "desktop.saveError": "저장할 수 없습니다. 디스크 공간과 파일 권한을 확인한 후 다시 시작하세요.",
-  "desktop.startupError": "게임을 불러오지 못했습니다. 다시 시작하세요."
+  "desktop.startupError": "게임을 불러오지 못했습니다. 다시 시작하세요.",
+  "desktop.disconnected": "라이브 연동이 끊겼습니다({code}). 다시 연결하려면 LIVE Studio에서 게임을 다시 시작하세요."
 }

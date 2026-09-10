@@ -346,5 +346,6 @@
   "rogue.search-supply-cabinet": "Ormarić sa zalihama · E za pretragu",
   "gameplay.task-box-empty": "Kutija je prazna",
   "desktop.saveError": "Spremanje nije moguće. Provjeri prostor na disku i dozvole datoteka pa ponovno pokreni igru.",
-  "desktop.startupError": "Igra se ne može učitati. Pokreni je ponovno."
+  "desktop.startupError": "Igra se ne može učitati. Pokreni je ponovno.",
+  "desktop.disconnected": "Interakcija uživo je prekinuta ({code}). Ponovno pokrenite igru iz LIVE Studija za ponovno povezivanje."
 }
