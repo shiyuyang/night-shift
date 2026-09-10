@@ -169,4 +169,4 @@ connectDesktop(game);
 
 window.addEventListener('nightshift:save-error',()=>{game.setPaused(true);void desktopEvent('GAME_ERROR',{code:'SAVE_FAILED'});toast(msg('desktop.saveError'));});
 
-window.addEventListener('nightshift:live-disconnected',event=>{const {code,reason}=(event as CustomEvent).detail??{};const detail=code??(String(reason).match(/AUTH rejected: ([A-Z_]+)/)?.[1])??(String(reason).includes('timeout')?'TIMEOUT':'CONNECTION_LOST');toast(t('desktop.disconnected',{code:String(detail)}));});
+window.addEventListener('nightshift:live-disconnected',event=>{const {code,reason}=(event as CustomEvent).detail??{};if(String(reason).includes('TOKEN_EXPIRED')){window.alert(t('desktop.tokenExpired'));return;}const detail=code??(String(reason).match(/AUTH rejected: ([A-Z_]+)/)?.[1])??(String(reason).includes('timeout')?'TIMEOUT':'CONNECTION_LOST');toast(t('desktop.disconnected',{code:String(detail)}));});

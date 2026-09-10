@@ -347,5 +347,8 @@
   "gameplay.task-box-empty": "La cassa è vuota",
   "desktop.saveError": "Salvataggio non disponibile. Controlla lo spazio su disco e i permessi dei file, poi riavvia.",
   "desktop.startupError": "Impossibile caricare il gioco. Riavvia.",
-  "desktop.disconnected": "Interazione dal vivo disconnessa ({code}). Riavvia il gioco da LIVE Studio per riconnetterti."
+  "desktop.disconnected": "Interazione dal vivo disconnessa ({code}). Riavvia il gioco da LIVE Studio per riconnetterti.",
+  "desktop.webviewInstalling": "Installazione di WebView2. Attendi.",
+  "desktop.webviewInstallError": "Impossibile installare WebView2. Controlla la connessione o installalo da {url}, poi riapri il gioco.",
+  "desktop.tokenExpired": "La credenziale di avvio è scaduta. Chiudi il gioco e riaprilo da LIVE Studio."
 }

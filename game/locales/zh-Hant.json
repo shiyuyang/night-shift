@@ -347,5 +347,8 @@
   "gameplay.task-box-empty": "箱內已空",
   "desktop.saveError": "無法存檔。請檢查磁碟空間和檔案權限，然後重新啟動遊戲。",
   "desktop.startupError": "遊戲資源載入失敗，請重新啟動遊戲。",
-  "desktop.disconnected": "直播互動已中斷（{code}）。請從 LIVE Studio 重新啟動遊戲以連線。"
+  "desktop.disconnected": "直播互動已中斷（{code}）。請從 LIVE Studio 重新啟動遊戲以連線。",
+  "desktop.webviewInstalling": "正在安裝 WebView2，請稍候。",
+  "desktop.webviewInstallError": "WebView2 安裝失敗。請檢查網路，或從 {url} 安裝後重新開啟遊戲。",
+  "desktop.tokenExpired": "啟動憑證已過期。請關閉遊戲，並從 LIVE Studio 重新開啟。"
 }

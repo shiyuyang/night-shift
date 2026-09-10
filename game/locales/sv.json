@@ -347,5 +347,8 @@
   "gameplay.task-box-empty": "Lådan är tom",
   "desktop.saveError": "Det går inte att spara. Kontrollera diskutrymme och filbehörigheter och starta om.",
   "desktop.startupError": "Spelet kunde inte laddas. Starta om.",
-  "desktop.disconnected": "Liveinteraktionen kopplades från ({code}). Starta om spelet från LIVE Studio för att ansluta igen."
+  "desktop.disconnected": "Liveinteraktionen kopplades från ({code}). Starta om spelet från LIVE Studio för att ansluta igen.",
+  "desktop.webviewInstalling": "Installerar WebView2. Vänta.",
+  "desktop.webviewInstallError": "WebView2 kunde inte installeras. Kontrollera anslutningen eller installera från {url} och öppna sedan spelet igen.",
+  "desktop.tokenExpired": "Startuppgifterna har gått ut. Stäng spelet och öppna det igen från LIVE Studio."
 }

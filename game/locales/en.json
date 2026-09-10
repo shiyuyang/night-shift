@@ -347,5 +347,8 @@
   "gameplay.task-box-empty": "Box is empty",
   "desktop.saveError": "Save unavailable. Check disk space and file permissions, then restart.",
   "desktop.startupError": "Game resources could not load. Please restart.",
-  "desktop.disconnected": "Live interaction disconnected ({code}). Restart the game from LIVE Studio to reconnect."
+  "desktop.disconnected": "Live interaction disconnected ({code}). Restart the game from LIVE Studio to reconnect.",
+  "desktop.webviewInstalling": "Installing WebView2. Please wait.",
+  "desktop.webviewInstallError": "WebView2 could not be installed. Check your connection or install it from {url}, then reopen the game.",
+  "desktop.tokenExpired": "The launch credential has expired. Close the game and reopen it from LIVE Studio."
 }

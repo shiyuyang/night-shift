@@ -347,5 +347,8 @@
   "gameplay.task-box-empty": "Kotak kosong",
   "desktop.saveError": "Tidak dapat menyimpan. Periksa ruang disk dan izin berkas, lalu mulai ulang.",
   "desktop.startupError": "Gagal memuat game. Silakan mulai ulang.",
-  "desktop.disconnected": "Interaksi siaran terputus ({code}). Mulai ulang game dari LIVE Studio untuk terhubung kembali."
+  "desktop.disconnected": "Interaksi siaran terputus ({code}). Mulai ulang game dari LIVE Studio untuk terhubung kembali.",
+  "desktop.webviewInstalling": "Memasang WebView2. Harap tunggu.",
+  "desktop.webviewInstallError": "WebView2 gagal dipasang. Periksa koneksi atau pasang dari {url}, lalu buka kembali game.",
+  "desktop.tokenExpired": "Kredensial peluncuran kedaluwarsa. Tutup game dan buka kembali dari LIVE Studio."
 }

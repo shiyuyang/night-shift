@@ -33,6 +33,9 @@ try{for(const locale of (process.env.I18N_LOCALES?.split(',')??['en','zh-Hans','
  assert.equal(await page.locator('#toast').textContent(),expected['desktop.disconnected'].replace('{code}','103'));
  assert.ok(await page.locator('#toast').evaluate(e=>e.scrollWidth<=e.clientWidth+1),'Disconnect message must wrap');
  await page.screenshot({path:`output/localization/${locale}-disconnect.png`});
+ const expiryDialog=page.waitForEvent('dialog');
+ const expiryDispatch=page.evaluate(()=>window.dispatchEvent(new CustomEvent('nightshift:live-disconnected',{detail:{reason:'AUTH rejected: TOKEN_EXPIRED'}})));
+ const dialog=await expiryDialog;assert.equal(dialog.message(),expected['desktop.tokenExpired']);await dialog.accept();await expiryDispatch;
  await page.locator('#book-guide').click();assert.ok(await page.locator('#guide-dialog').evaluate(e=>e.open));await page.locator('#close-guide').click();
  await page.locator('#desk-settings').click();await page.locator('#resume').click();assert.ok(await page.locator('#pause-menu').evaluate(e=>e.hidden));
  for(const viewport of [{width:540,height:960},{width:1920,height:800}]){await page.setViewportSize(viewport);await page.waitForTimeout(80);const ratio=await page.locator('#start-layer').evaluate(e=>{const r=e.getBoundingClientRect();return r.width/r.height;});assert.ok(Math.abs(ratio-16/9)<.001);}

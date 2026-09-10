@@ -1,13 +1,13 @@
 /* Independent of cover artwork: text follows locale; the fixed stage never mirrors. */
-@font-face{font-family:LocaleLatin;src:url('/fonts/locale-latin-3528947646.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleLatin;src:url('/fonts/locale-latin-e847303ddd.woff2') format('woff2');font-display:swap}
 @font-face{font-family:LocaleArabic;src:url('/fonts/locale-ar-b37007c412.woff2') format('woff2');font-display:swap}
 @font-face{font-family:LocaleHebrew;src:url('/fonts/locale-he-205d4836b1.woff2') format('woff2');font-display:swap}
 @font-face{font-family:LocaleThai;src:url('/fonts/locale-th-9f5ad7c0da.woff2') format('woff2');font-display:swap}
 @font-face{font-family:LocaleMyanmar;src:url('/fonts/locale-my-e774f8c07e.woff2') format('woff2');font-display:swap}
-@font-face{font-family:LocaleJapanese;src:url('/fonts/locale-ja-6a5ead39fd.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleJapanese;src:url('/fonts/locale-ja-883c534def.woff2') format('woff2');font-display:swap}
 @font-face{font-family:LocaleKorean;src:url('/fonts/locale-ko-9beb35c95d.woff2') format('woff2');font-display:swap}
-@font-face{font-family:LocaleHans;src:url('/fonts/locale-zh-Hans-150d8d5ea1.woff2') format('woff2');font-display:swap}
-@font-face{font-family:LocaleHant;src:url('/fonts/locale-zh-Hant-5667b1b73c.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleHans;src:url('/fonts/locale-zh-Hans-485efd839a.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleHant;src:url('/fonts/locale-zh-Hant-2e9e6d5819.woff2') format('woff2');font-display:swap}
 :root{--locale-font:LocaleLatin;--locale-note:var(--locale-font)}
 :lang(ar){--locale-font:LocaleArabic}:lang(he){--locale-font:LocaleHebrew}:lang(th){--locale-font:LocaleThai}:lang(my){--locale-font:LocaleMyanmar}:lang(ja){--locale-font:LocaleJapanese}:lang(ko){--locale-font:LocaleKorean}:lang(zh-Hans){--locale-font:LocaleHans;--locale-note:PhotoNote,LocaleHans}:lang(zh-Hant){--locale-font:LocaleHant}
 body,button,select,option,kbd,dialog,body h1,body h2,body h3,body b,body small,body p,body span,body label,body i{font-family:var(--locale-font),LocaleLatin,NightPixel,sans-serif!important;text-shadow:none;font-weight:400}

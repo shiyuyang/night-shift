@@ -347,5 +347,8 @@
   "gameplay.task-box-empty": "De kist is leeg",
   "desktop.saveError": "Opslaan niet mogelijk. Controleer de schijfruimte en bestandsrechten en start opnieuw.",
   "desktop.startupError": "Het spel kon niet laden. Start opnieuw.",
-  "desktop.disconnected": "Live-interactie verbroken ({code}). Start het spel opnieuw vanuit LIVE Studio om opnieuw te verbinden."
+  "desktop.disconnected": "Live-interactie verbroken ({code}). Start het spel opnieuw vanuit LIVE Studio om opnieuw te verbinden.",
+  "desktop.webviewInstalling": "WebView2 wordt geïnstalleerd. Even geduld.",
+  "desktop.webviewInstallError": "WebView2 kon niet worden geïnstalleerd. Controleer de verbinding of installeer via {url} en open het spel opnieuw.",
+  "desktop.tokenExpired": "De startreferentie is verlopen. Sluit het spel en open het opnieuw vanuit LIVE Studio."
 }

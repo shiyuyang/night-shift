@@ -1,7 +1,12 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 mod desktop;
+mod webview_setup;
 use tauri::Manager;
 fn main() {
+    #[cfg(windows)]
+    if !webview_setup::ensure() {
+        return;
+    }
     tauri::Builder::default()
         .setup(|app| {
             let state = desktop::Desktop::new(app.path().app_data_dir()?)?;

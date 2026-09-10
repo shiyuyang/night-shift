@@ -347,5 +347,8 @@
   "gameplay.task-box-empty": "الصندوق فارغ",
   "desktop.saveError": "تعذر الحفظ. تحقق من مساحة القرص وأذونات الملفات، ثم أعد التشغيل.",
   "desktop.startupError": "تعذر تحميل اللعبة. يرجى إعادة التشغيل.",
-  "desktop.disconnected": "انقطع الاتصال بالتفاعل المباشر ({code}). أعد تشغيل اللعبة من LIVE Studio لإعادة الاتصال."
+  "desktop.disconnected": "انقطع الاتصال بالتفاعل المباشر ({code}). أعد تشغيل اللعبة من LIVE Studio لإعادة الاتصال.",
+  "desktop.webviewInstalling": "جارٍ تثبيت WebView2. يرجى الانتظار.",
+  "desktop.webviewInstallError": "تعذر تثبيت WebView2. تحقق من الاتصال أو ثبته من {url} ثم أعد فتح اللعبة.",
+  "desktop.tokenExpired": "انتهت صلاحية بيانات التشغيل. أغلق اللعبة وأعد فتحها من LIVE Studio."
 }

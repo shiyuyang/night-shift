@@ -12,7 +12,11 @@
 
 macOS 最低版本取决于游戏使用的 Ogg/Opus 解码支持，不能只按 Tauri 框架的最低版本判断。依据：[WebKit Safari 18.4 更新](https://webkit.org/blog/16574/webkit-features-in-safari-18-4/)。
 
-WebView2 运行库不计入游戏安装包；缺少运行库的 Windows 电脑首次安装需要额外下载，因此本方案不保证全新系统可以完全离线安装。依据：[Tauri Windows 分发说明](https://v2.tauri.app/distribute/windows-installer/)。
+WebView2 运行库不计入游戏安装包。自 0.4.4 起，绿色 ZIP 的 `night-shift.exe` 在创建 Tauri 窗口前通过 WebView2 Loader 检测运行库；缺失时自动下载微软 Bootstrapper，验证有效的 Microsoft Corporation 签名，再执行 `/silent /install` 并重新检测。已有运行库时不下载。依据：[微软运行库分发说明](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution)。
+
+安装使用系统 Windows PowerShell 和原生进度窗口，可取消；下载超时为 120 秒，整个安装等待上限为 10 分钟。并发启动不会重复安装。失败时显示官方手动安装地址，不进入依赖 WebView2 的窗口。运行库安装需要联网；PowerShell 被企业策略禁用时可手动安装。取消或失败后再次启动会重新检测，不复用不完整下载。
+
+安装后按原启动参数连接 LIVE Studio，以宿主返回的 `TOKEN_EXPIRED` 判断凭证过期，显示“关闭游戏并从 LIVE Studio 重新打开”的确认弹窗；不会用本机计时猜测令牌是否有效，也不会复用旧令牌重连。当前平台有效期按用户提供的 90 秒规则理解。
 
 ## 构建
 

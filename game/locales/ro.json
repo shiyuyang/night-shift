@@ -347,5 +347,8 @@
   "gameplay.task-box-empty": "Cutia este goală",
   "desktop.saveError": "Salvarea nu este disponibilă. Verifică spațiul pe disc și permisiunile fișierelor, apoi repornește.",
   "desktop.startupError": "Jocul nu s-a putut încărca. Repornește.",
-  "desktop.disconnected": "Interacțiunea live s-a deconectat ({code}). Repornește jocul din LIVE Studio pentru reconectare."
+  "desktop.disconnected": "Interacțiunea live s-a deconectat ({code}). Repornește jocul din LIVE Studio pentru reconectare.",
+  "desktop.webviewInstalling": "Se instalează WebView2. Așteaptă.",
+  "desktop.webviewInstallError": "WebView2 nu a putut fi instalat. Verifică conexiunea sau instalează-l de la {url}, apoi redeschide jocul.",
+  "desktop.tokenExpired": "Datele de autentificare pentru pornire au expirat. Închide jocul și redeschide-l din LIVE Studio."
 }

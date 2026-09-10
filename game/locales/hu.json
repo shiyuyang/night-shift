@@ -347,5 +347,8 @@
   "gameplay.task-box-empty": "A láda üres",
   "desktop.saveError": "Nem lehet menteni. Ellenőrizd a lemezterületet és a fájljogosultságokat, majd indítsd újra.",
   "desktop.startupError": "A játék nem tölthető be. Indítsd újra.",
-  "desktop.disconnected": "Az élő interakció megszakadt ({code}). Az újracsatlakozáshoz indítsd újra a játékot a LIVE Studio alkalmazásból."
+  "desktop.disconnected": "Az élő interakció megszakadt ({code}). Az újracsatlakozáshoz indítsd újra a játékot a LIVE Studio alkalmazásból.",
+  "desktop.webviewInstalling": "WebView2 telepítése. Kérjük, várj.",
+  "desktop.webviewInstallError": "A WebView2 telepítése sikertelen. Ellenőrizd a kapcsolatot, vagy telepítsd innen: {url}, majd nyisd meg újra a játékot.",
+  "desktop.tokenExpired": "Az indítási hitelesítő adat lejárt. Zárd be a játékot, és nyisd meg újra a LIVE Studio alkalmazásból."
 }

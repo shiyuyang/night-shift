@@ -347,5 +347,8 @@
   "gameplay.task-box-empty": "Kutija je prazna",
   "desktop.saveError": "Spremanje nije moguće. Provjeri prostor na disku i dozvole datoteka pa ponovno pokreni igru.",
   "desktop.startupError": "Igra se ne može učitati. Pokreni je ponovno.",
-  "desktop.disconnected": "Interakcija uživo je prekinuta ({code}). Ponovno pokrenite igru iz LIVE Studija za ponovno povezivanje."
+  "desktop.disconnected": "Interakcija uživo je prekinuta ({code}). Ponovno pokrenite igru iz LIVE Studija za ponovno povezivanje.",
+  "desktop.webviewInstalling": "Instaliranje WebView2. Pričekajte.",
+  "desktop.webviewInstallError": "WebView2 se nije mogao instalirati. Provjerite vezu ili ga instalirajte s {url}, pa ponovno otvorite igru.",
+  "desktop.tokenExpired": "Vjerodajnica za pokretanje je istekla. Zatvorite igru i ponovno je otvorite iz LIVE Studija."
 }

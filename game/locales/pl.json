@@ -347,5 +347,8 @@
   "gameplay.task-box-empty": "Skrzynia jest pusta",
   "desktop.saveError": "Nie można zapisać. Sprawdź miejsce na dysku i uprawnienia do plików, a potem uruchom grę ponownie.",
   "desktop.startupError": "Nie udało się wczytać gry. Uruchom ją ponownie.",
-  "desktop.disconnected": "Interakcja na żywo rozłączona ({code}). Uruchom grę ponownie z LIVE Studio, aby się połączyć."
+  "desktop.disconnected": "Interakcja na żywo rozłączona ({code}). Uruchom grę ponownie z LIVE Studio, aby się połączyć.",
+  "desktop.webviewInstalling": "Instalowanie WebView2. Proszę czekać.",
+  "desktop.webviewInstallError": "Nie udało się zainstalować WebView2. Sprawdź połączenie lub zainstaluj go z {url}, a potem otwórz grę ponownie.",
+  "desktop.tokenExpired": "Dane uwierzytelniające uruchomienia wygasły. Zamknij grę i otwórz ją ponownie z LIVE Studio."
 }
