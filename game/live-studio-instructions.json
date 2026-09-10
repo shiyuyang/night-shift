@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "gameId": "7682641099949034247",
+  "protocolVersion": "1.0.0",
+  "command": "TRIGGER_EFFECT",
+  "instructions": [
+    {"instruction": "gift_battery", "effect": "battery", "labelKey": "gift.battery"},
+    {"instruction": "gift_flash", "effect": "flash", "labelKey": "gift.flash"},
+    {"instruction": "gift_heal", "effect": "heal", "labelKey": "gift.heal"},
+    {"instruction": "gift_failure", "effect": "failure", "labelKey": "gift.failure"},
+    {"instruction": "gift_warp", "effect": "warp", "labelKey": "gift.warp"},
+    {"instruction": "gift_shade", "effect": "shade", "labelKey": "gift.shade"}
+  ]
+}

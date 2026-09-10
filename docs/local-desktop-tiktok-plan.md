@@ -55,7 +55,7 @@ flowchart LR
 5. macOS 保留 Apple Silicon / Intel 分包和 macOS 15.4 最低版本。Mac 可做单机与模拟协议测试；目前参考文档不能证明真实 LIVE Studio 本地启动链路支持 macOS。
 6. 存档、临时文件和日志放在稳定的用户数据目录，不放在 EXE 旁边。替换程序目录、版本更新或移动 ZIP 解压目录不应丢失存档。
 
-新增 `scripts/package-desktop.mjs` 负责根目录 ZIP、文件列表、字节数、SHA-256 与构建来源记录。平台 `game_id` 必须来自正式注册配置，禁止用示例 `game_001` 作为正式值。
+新增 `scripts/package-desktop.mjs` 负责根目录 ZIP、文件列表、字节数、SHA-256 与构建来源记录。用户已确认平台 `game_id` 为字符串 `7682641099949034247`，配置在 `game/live-studio-instructions.json`，后续 AUTH 与交付配置共用此来源，不经过 JavaScript Number 转换。
 
 ### 平台资源规范的适用边界
 
@@ -167,7 +167,9 @@ Rust 尽早建立连接，首条消息为 `AUTH`，在连接后的 5 秒窗口�
 | `trigger_avatar_url` | 首版可不加载头像；后续通过受限缓存加载，不扩大页面 CSP 到任意远端 |
 | `count` | 正整数，需确认是增量还是连击累计值后再接到 LiveGifts |
 
-现有 8 个 command 与 6 种礼物效果均可复用，但平台 `instruction` 的正式值没有在本项目或参考示例中明确给出。建立 `game/live-studio-instructions.json` 作为受版本控制的映射，由正式注册信息填充；禁止拿 giftId、示例 `game_trigger_1` 或中文名称猜平台指令。
+用户已确认由游戏侧定义 instruction，再由用户配置到 TT 后台。首批按当前 6 种礼物效果定义，唯一来源为 `game/live-studio-instructions.json`，配置表见 [TT 后台指令配置](./tt-instruction-mapping.md)。指令值分别为 `gift_battery`、`gift_flash`、`gift_heal`、`gift_failure`、`gift_warp`、`gift_shade`；大小写固定，已发布指令不得改名或复用于另一种效果。
+
+现有 8 个 command 保留原用途，未列入首批 TT 后台配置。平台礼物由后台绑定 instruction；配置文件不将当前代码中的 giftId 当成跨地区平台礼物映射。适配器后续按 effect 对接已有玩法实现。当前仅完成配置定义，通信消费和效果回调仍待实现。
 
 游戏局内仍生成自己的 `runId`。适配器在接收时关联当前局，禁止旧局尚未执行的消息在新局开始后重新生效。菜单/结算阶段不自动开局；对不能执行的指令返回明确失败。暂停和教学期间，先按现有排队规则设计有限等待，不能立刻报成功。
 
@@ -212,7 +214,7 @@ Rust 尽早建立连接，首条消息为 `AUTH`，在连接后的 5 秒窗口�
 | 资源交付 | 第 3 章标“仅参考”，manifest 又说明平台构建系统生成 | 首版只做 ZIP 与本地校验报告，不承担平台分块/更新器 |
 | WebView2 / Mac | 未明确 LS 管理运行库或支持 macOS 本地启动 | Windows 真机确认依赖；Mac 不宣称已接通真实 LS |
 
-实施通信前至少取得正式 `game_id`、instruction 映射及真实指令/ACK 样本。完整平台联调还需要可启动本地游戏的 LIVE Studio 测试版本。这些缺失不阻止先完成存档和模拟器，但不能用模拟通过替代正式联调。
+正式 `game_id` 和首批 instruction 已确定，后续可按此开发存档、通信适配器和模拟器，不再等待平台提供映射。真实指令/ACK 样本及可启动本地游戏的 LIVE Studio 测试版本用于冻结剩余协议细节和完成平台联调；不能用模拟通过替代正式联调。
 
 ## 开发拆分与验收
 
