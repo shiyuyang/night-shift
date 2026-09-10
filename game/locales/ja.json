@@ -348,7 +348,6 @@
   "desktop.saveError": "保存できません。空き容量とファイルの権限を確認し、ゲームを再起動してください。",
   "desktop.startupError": "ゲームの読み込みに失敗しました。再起動してください。",
   "desktop.disconnected": "ライブ連携が切断されました（{code}）。再接続するには LIVE Studio からゲームを起動し直してください。",
-  "desktop.webviewInstalling": "WebView2 をインストール中です。お待ちください。",
-  "desktop.webviewInstallError": "WebView2 をインストールできませんでした。接続を確認するか、{url} からインストールしてゲームを開き直してください。",
-  "desktop.tokenExpired": "起動用の認証情報の有効期限が切れました。ゲームを閉じ、LIVE Studio から開き直してください。"
+  "desktop.tokenExpired": "起動用の認証情報の有効期限が切れました。ゲームを閉じ、LIVE Studio から開き直してください。",
+  "desktop.bundledRuntimeError": "同梱のランタイムを使用できません。ZIP 全体を書き込み可能なローカルフォルダーに展開し、night-shift.exe の隣に WebView2 フォルダーを残してゲームを開き直してください。"
 }

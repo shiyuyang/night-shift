@@ -348,7 +348,6 @@
   "desktop.saveError": "No se puede guardar. Revisa el espacio en disco y los permisos de archivos y reinicia.",
   "desktop.startupError": "No se pudo cargar el juego. Reinícialo.",
   "desktop.disconnected": "Interacción en directo desconectada ({code}). Reinicia el juego desde LIVE Studio para reconectar.",
-  "desktop.webviewInstalling": "Instalando WebView2. Espera, por favor.",
-  "desktop.webviewInstallError": "No se pudo instalar WebView2. Revisa la conexión o instálalo desde {url} y vuelve a abrir el juego.",
-  "desktop.tokenExpired": "La credencial de inicio ha caducado. Cierra el juego y vuelve a abrirlo desde LIVE Studio."
+  "desktop.tokenExpired": "La credencial de inicio ha caducado. Cierra el juego y vuelve a abrirlo desde LIVE Studio.",
+  "desktop.bundledRuntimeError": "El entorno incluido no está disponible. Extrae todo el ZIP en una carpeta local con permiso de escritura, conserva WebView2 junto a night-shift.exe y vuelve a abrir el juego."
 }

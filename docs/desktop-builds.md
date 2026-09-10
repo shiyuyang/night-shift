@@ -6,17 +6,17 @@
 
 | 平台 | 输出 | 运行要求 |
 | --- | --- | --- |
-| Windows x64 | NSIS `-setup.exe` | Windows 10 / 11 和 WebView2；安装器检测运行库，仅在缺少时联网下载安装 |
+| Windows x64 | 绿色 ZIP / NSIS `-setup.exe` | Windows 10 / 11 x64；内置固定版 WebView2 |
 | macOS Apple Silicon | `.app` / `.dmg` | macOS 15.4 及以上，使用系统 WKWebView |
 | macOS Intel | 单独的 `.app` / `.dmg` | macOS 15.4 及以上；单独打包以免每位用户下载两种架构 |
 
 macOS 最低版本取决于游戏使用的 Ogg/Opus 解码支持，不能只按 Tauri 框架的最低版本判断。依据：[WebKit Safari 18.4 更新](https://webkit.org/blog/16574/webkit-features-in-safari-18-4/)。
 
-WebView2 运行库不计入游戏安装包。自 0.4.4 起，绿色 ZIP 的 `night-shift.exe` 在创建 Tauri 窗口前通过 WebView2 Loader 检测运行库；缺失时自动下载微软 Bootstrapper，验证有效的 Microsoft Corporation 签名，再执行 `/silent /install` 并重新检测。已有运行库时不下载。依据：[微软运行库分发说明](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution)。
+自 0.4.5 起，Windows ZIP 和安装器内置完整 WebView2 Fixed Version 152.0.4191.62 x64。`night-shift.exe` 只使用同目录 `WebView2/`，不下载、不安装系统运行库，也不回退到系统版本。请完整解压到可写的本地目录；不要单独复制 EXE 或从网络共享目录启动。
 
-安装使用系统 Windows PowerShell 和原生进度窗口，可取消；下载超时为 120 秒，整个安装等待上限为 10 分钟。并发启动不会重复安装。失败时显示官方手动安装地址，不进入依赖 WebView2 的窗口。运行库安装需要联网；PowerShell 被企业策略禁用时可手动安装。取消或失败后再次启动会重新检测，不复用不完整下载。
+启动前检查运行库及 Loader；Windows 10 按微软要求为运行库目录授予两个 AppContainer 组读取/执行权限，保持沙箱开启。缺失或权限失败时显示本地化原生错误。保留微软全部运行文件和许可证；固定版本不会自动更新，安全更新随游戏重新打包。依据：[微软运行库分发说明](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution)。
 
-安装后按原启动参数连接 LIVE Studio，以宿主返回的 `TOKEN_EXPIRED` 判断凭证过期，显示“关闭游戏并从 LIVE Studio 重新打开”的确认弹窗；不会用本机计时猜测令牌是否有效，也不会复用旧令牌重连。当前平台有效期按用户提供的 90 秒规则理解。
+游戏按原启动参数连接 LIVE Studio，以宿主返回的 `TOKEN_EXPIRED` 判断凭证过期，显示“关闭游戏并从 LIVE Studio 重新打开”的确认弹窗；不会用本机计时猜测令牌是否有效，也不会复用旧令牌重连。当前平台有效期按用户提供的 90 秒规则理解。
 
 ## 构建
 
@@ -25,6 +25,9 @@ WebView2 运行库不计入游戏安装包。自 0.4.4 起，绿色 ZIP 的 `nig
 ```sh
 # 独立构建完整离线前端；不覆盖网站 dist/，不上传 R2
 npm run build:desktop
+
+# 从微软 Fixed Version 页面下载锁定版本 CAB，先还原运行库
+python3 scripts/restore-webview2.py /path/to/Microsoft.WebView2.FixedVersionRuntime.152.0.4191.62.x64.cab
 
 # Windows 电脑构建 x64 安装器
 rustup target add x86_64-pc-windows-msvc
@@ -58,7 +61,7 @@ macOS 构建脚本使用 `--ci`，避免制作 DMG 时依赖前台 Finder 的交
 - 前端输出到 `dist-desktop/`，明确清空 CDN 和直播事件地址，避免 `.env` 中的网站配置进入离线包。
 - 使用与网站相同的发布资源清单和本地哈希校验，排除原始 PNG、备用音频、预览图等。保留所有必需语言和字体。
 - Rust Release 开启 LTO、体积优化和符号移除；Windows 安装器使用 LZMA。图标使用现有游戏 icon（磨砂玻璃后的人影），原图保存在 `src-tauri/icon-source.png`，转换为 ICO、ICNS 和对应 PNG 尺寸。
-- 不随应用分发 Chromium 或 Node.js，也不内置完整 WebView2 运行库。
+- Windows 包包含完整 WebView2，优先保证兼容性；不分发 Node.js。macOS 继续使用系统 WKWebView。
 
 ## 验证与分发边界
 
@@ -69,7 +72,7 @@ npm run test:browser:desktop
 
 测试在 Chromium / WebKit 中加载 `dist-desktop/`，应用桌面 CSP，阻断并检查外部请求，验证菜单、语言持久化、进入游戏、暂停恢复，并逐一解码所有已发布音乐和音效。Chromium 还验证网页全屏回退。截图保存在 `output/desktop/`。
 
-浏览器测试不等于原生安装测试。macOS 还应打开最终 `.app` 检查菜单、实际游戏画面、原生全屏和音频就绪状态；Windows 必须在真机或虚拟机上检查安装、WebView2 补装和游戏运行。
+浏览器测试不等于原生安装测试。macOS 还应打开最终 `.app` 检查菜单、实际游戏画面、原生全屏和音频就绪状态；Windows 必须在真机或虚拟机上检查安装、离线启动、运行库目录权限、中文/空格路径和游戏运行。
 
 当前配置用于本地测试版，不包含 Windows 代码签名或 Apple Developer ID 签名、公证。对外分发前需要配置对应签名流程；本地能打开不能证明其他电脑没有系统拦截。
 
@@ -95,3 +98,7 @@ npm run test:browser:desktop
 - `GAME_EFFECT_MODE_CHANGED` 初始上报默认空字符串；`setDesktopEffectMode` 接受平台约定的字符串，包括空字符串。当前游戏没有额外玩法模式，不自行定义 power 模式。
 - 观众头像使用消息中的 HTTPS 地址，加载失败显示昵称占位图；只有图片 CSP 开放 HTTPS。
 - 去重记录保留整个会话；不设置累计互动次数上限，相关内存随会话互动数量增长，在进程结束时释放。
+
+`tauri.windows.conf.json` 显式将 `WebView2/` 纳入安装器资源，避免交叉构建时只复制到 release 目录而漏入 NSIS；该资源配置只对 Windows 生效。
+
+Windows 运行库锁定版本、CAB SHA-256 和完整文件哈希在 `scripts/webview2-runtime.json`；二进制目录不进入 Git。使用 `scripts/package-windows.py OUTPUT.zip` 生成并校验绿色 ZIP。Windows 真机验证仍需覆盖没有系统 WebView2、断网、Windows 10/11、中文/空格路径，以及 LIVE Studio 带参启动。

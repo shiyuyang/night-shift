@@ -349,7 +349,6 @@ export interface MessageValues{
 "desktop.saveError":{}
 "desktop.startupError":{}
 "desktop.disconnected":{"code":string|number}
-"desktop.webviewInstalling":{}
-"desktop.webviewInstallError":{"url":string|number}
 "desktop.tokenExpired":{}
+"desktop.bundledRuntimeError":{}
 }

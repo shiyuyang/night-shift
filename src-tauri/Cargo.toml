@@ -1,6 +1,6 @@
 [package]
 name = "night-shift"
-version = "0.4.4"
+version = "0.4.5"
 edition = "2021"
 rust-version = "1.77.2"
 publish = false
@@ -29,4 +29,4 @@ opt-level = "s"
 strip = true
 
 [target.'cfg(windows)'.dependencies]
-windows-sys = { version = "0.61", features = ["Win32_UI_WindowsAndMessaging", "Win32_Globalization"] }
+windows-sys = { version = "0.61", features = ["Win32_UI_WindowsAndMessaging", "Win32_Globalization", "Win32_System_SystemInformation"] }

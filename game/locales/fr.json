@@ -348,7 +348,6 @@
   "desktop.saveError": "Sauvegarde impossible. Vérifiez l’espace disque et les permissions des fichiers, puis redémarrez.",
   "desktop.startupError": "Le jeu n’a pas pu se charger. Veuillez redémarrer.",
   "desktop.disconnected": "Interaction en direct déconnectée ({code}). Relancez le jeu depuis LIVE Studio pour vous reconnecter.",
-  "desktop.webviewInstalling": "Installation de WebView2. Veuillez patienter.",
-  "desktop.webviewInstallError": "Impossible d’installer WebView2. Vérifiez la connexion ou installez-le depuis {url}, puis relancez le jeu.",
-  "desktop.tokenExpired": "L’identifiant de lancement a expiré. Fermez le jeu et relancez-le depuis LIVE Studio."
+  "desktop.tokenExpired": "L’identifiant de lancement a expiré. Fermez le jeu et relancez-le depuis LIVE Studio.",
+  "desktop.bundledRuntimeError": "Le moteur inclus est indisponible. Extrayez tout le ZIP dans un dossier local accessible en écriture, gardez WebView2 à côté de night-shift.exe, puis relancez le jeu."
 }

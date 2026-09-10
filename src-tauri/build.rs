@@ -7,7 +7,7 @@ fn main() {
             let source: serde_json::Value =
                 serde_json::from_slice(&std::fs::read(&path).unwrap()).unwrap();
             let mut messages = serde_json::Map::new();
-            for key in ["desktop.webviewInstalling", "desktop.webviewInstallError"] {
+            for key in ["desktop.bundledRuntimeError"] {
                 messages.insert(key.into(), source[key].clone());
             }
             catalogs.insert(

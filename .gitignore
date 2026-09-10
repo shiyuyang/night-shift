@@ -35,3 +35,6 @@ output/clinical-maps/
 output/morgue/
 
 output/garden/
+
+# Bundled Microsoft runtime; restored from pinned CAB before Windows builds
+src-tauri/WebView2/

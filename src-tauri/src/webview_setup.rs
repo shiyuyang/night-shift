@@ -1,15 +1,11 @@
 //! Runs before Tauri creates a window. No WebView, JS or network crate required.
 #[cfg(windows)]
 mod windows {
-    use fs2::FileExt;
-    use std::{
-        fs::{self, OpenOptions},
-        os::windows::process::CommandExt,
-        process::Command,
-        time::{Duration, Instant},
+    use std::{os::windows::process::CommandExt, process::Command};
+    use windows_sys::Win32::{
+        Globalization::GetUserDefaultLocaleName, System::SystemInformation::OSVERSIONINFOW,
+        UI::WindowsAndMessaging::*,
     };
-    use windows_sys::Win32::{Globalization::GetUserDefaultLocaleName, UI::WindowsAndMessaging::*};
-    const WEBSITE: &str = "https://developer.microsoft.com/microsoft-edge/webview2/";
     fn wide(s: &str) -> Vec<u16> {
         s.encode_utf16().chain(Some(0)).collect()
     }
@@ -33,148 +29,66 @@ mod windows {
             "en".into()
         }
     }
-    fn message(key: &str) -> String {
-        super::message(&language(), key).replace("{url}", WEBSITE)
+    #[link(name = "ntdll")]
+    extern "system" {
+        fn RtlGetVersion(info: *mut OSVERSIONINFOW) -> i32;
     }
-    fn installed() -> bool {
+    fn needs_acl() -> bool {
+        let mut info: OSVERSIONINFOW = unsafe { std::mem::zeroed() };
+        info.dwOSVersionInfoSize = std::mem::size_of::<OSVERSIONINFOW>() as u32;
+        (unsafe { RtlGetVersion(&mut info) }) != 0 || info.dwBuildNumber < 22000
+    }
+    fn configure() -> bool {
+        let Ok(exe) = std::env::current_exe() else {
+            return false;
+        };
+        let Some(parent) = exe.parent() else {
+            return false;
+        };
+        let runtime = parent.join("WebView2");
+        if !["msedgewebview2.exe", "msedge.dll", "icudtl.dat"]
+            .iter()
+            .all(|name| runtime.join(name).is_file())
+        {
+            return false;
+        }
+        if needs_acl() {
+            // Fixed Version 120+ needs both AppContainer groups on unpackaged Windows 10.
+            // Grant read/execute only to this runtime directory; never disable the sandbox.
+            let icacls = std::env::var_os("SystemRoot")
+                .map(std::path::PathBuf::from)
+                .unwrap_or_else(|| "C:\\Windows".into())
+                .join("System32/icacls.exe");
+            let status = Command::new(icacls)
+                .arg(&runtime)
+                .args([
+                    "/grant",
+                    "*S-1-15-2-2:(OI)(CI)(RX)",
+                    "*S-1-15-2-1:(OI)(CI)(RX)",
+                ])
+                .creation_flags(0x08000000)
+                .status();
+            if !status.is_ok_and(|s| s.success()) {
+                return false;
+            }
+        }
+        std::env::set_var("WEBVIEW2_BROWSER_EXECUTABLE_FOLDER", &runtime);
         tauri::webview_version().is_ok_and(|v| !v.trim().is_empty() && v != "0.0.0.0")
     }
-    fn error() {
+    pub fn ensure() -> bool {
+        if configure() {
+            return true;
+        }
+        let text = super::message(&language(), "desktop.bundledRuntimeError");
         unsafe {
             MessageBoxW(
                 std::ptr::null_mut(),
-                wide(&message("desktop.webviewInstallError")).as_ptr(),
+                wide(&text).as_ptr(),
                 wide("夜勤病棟").as_ptr(),
                 MB_OK | MB_ICONERROR,
             );
         }
-    }
-    pub fn ensure() -> bool {
-        if installed() {
-            return true;
-        }
-        let result = install();
-        if result && installed() {
-            true
-        } else {
-            error();
-            false
-        }
-    }
-    fn install() -> bool {
-        let root = std::env::temp_dir();
-        let Ok(lock) = OpenOptions::new()
-            .create(true)
-            .truncate(false)
-            .read(true)
-            .write(true)
-            .open(root.join("night-shift-webview2.lock"))
-        else {
-            return false;
-        };
-        // A second launch waits for the first installation rather than starting another installer.
-        let start = Instant::now();
-        while lock.try_lock_exclusive().is_err() {
-            if installed() {
-                return true;
-            }
-            if start.elapsed() > Duration::from_secs(600) {
-                return false;
-            }
-            std::thread::sleep(Duration::from_millis(250));
-        }
-        if installed() {
-            return true;
-        }
-        let dir = root.join(format!("night-shift-webview2-{}", uuid::Uuid::new_v4()));
-        if fs::create_dir(&dir).is_err() {
-            return false;
-        }
-        let exe = dir.join("MicrosoftEdgeWebview2Setup.exe");
-        // Execute a constant script; paths are environment data, never interpolated shell code.
-        let powershell = std::env::var_os("SystemRoot")
-            .map(std::path::PathBuf::from)
-            .unwrap_or_else(|| "C:\\Windows".into())
-            .join("System32/WindowsPowerShell/v1.0/powershell.exe");
-        let child = Command::new(powershell)
-            .args([
-                "-NoLogo",
-                "-NoProfile",
-                "-NonInteractive",
-                "-Command",
-                include_str!("install-webview.ps1"),
-            ])
-            .env("NIGHTSHIFT_BOOTSTRAPPER", &exe)
-            .creation_flags(0x08000000)
-            .spawn();
-        let success = if let Ok(mut child) = child {
-            unsafe {
-                let window = CreateWindowExW(
-                    0,
-                    wide("STATIC").as_ptr(),
-                    wide("夜勤病棟").as_ptr(),
-                    WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_VISIBLE,
-                    CW_USEDEFAULT,
-                    CW_USEDEFAULT,
-                    680,
-                    170,
-                    std::ptr::null_mut(),
-                    std::ptr::null_mut(),
-                    std::ptr::null_mut(),
-                    std::ptr::null(),
-                );
-                CreateWindowExW(
-                    0,
-                    wide("STATIC").as_ptr(),
-                    wide(&message("desktop.webviewInstalling")).as_ptr(),
-                    WS_CHILD | WS_VISIBLE,
-                    20,
-                    25,
-                    620,
-                    90,
-                    window,
-                    std::ptr::null_mut(),
-                    std::ptr::null_mut(),
-                    std::ptr::null(),
-                );
-                let began = Instant::now();
-                let result = loop {
-                    let mut msg: MSG = std::mem::zeroed();
-                    while PeekMessageW(&mut msg, std::ptr::null_mut(), 0, 0, PM_REMOVE) != 0 {
-                        TranslateMessage(&msg);
-                        DispatchMessageW(&msg);
-                    }
-                    match child.try_wait() {
-                        Ok(Some(status)) => break status.success() || status.code() == Some(3010),
-                        Err(_) => break false,
-                        _ => {}
-                    }
-                    if IsWindow(window) == 0 || began.elapsed() > Duration::from_secs(600) {
-                        // Also stop the installer's descendants on cancellation/timeout.
-                        let taskkill = std::env::var_os("SystemRoot")
-                            .map(std::path::PathBuf::from)
-                            .unwrap_or_else(|| "C:\\Windows".into())
-                            .join("System32/taskkill.exe");
-                        let _ = Command::new(taskkill)
-                            .args(["/PID", &child.id().to_string(), "/T", "/F"])
-                            .creation_flags(0x08000000)
-                            .status();
-                        let _ = child.kill();
-                        let _ = child.wait();
-                        break false;
-                    }
-                    std::thread::sleep(Duration::from_millis(50));
-                };
-                if IsWindow(window) != 0 {
-                    DestroyWindow(window);
-                }
-                result
-            }
-        } else {
-            false
-        };
-        let _ = fs::remove_dir_all(&dir);
-        success
+        false
     }
 }
 #[cfg(windows)]
@@ -218,8 +132,8 @@ mod tests {
             ("zz", "en"),
         ] {
             assert_eq!(
-                super::message(input, "desktop.webviewInstalling"),
-                super::message(locale, "desktop.webviewInstalling")
+                super::message(input, "desktop.bundledRuntimeError"),
+                super::message(locale, "desktop.bundledRuntimeError")
             );
         }
     }

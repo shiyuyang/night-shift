@@ -201,7 +201,7 @@
       "sourceHash": "616779bcb0e7b5839b33ed8c3f635d0127544935350ad4bdb89ce86ab0ffcf3d"
     }
   },
-  "sourceHash": "690f93f322bfaf4a707f96ee3eb1ec01b4fcc453b36b905d76ff52d8bf1bf907",
+  "sourceHash": "76f09291ab36d3032f6de783b1cb4f6e66035c1137a4e2124b456628d929fad4",
   "note": "Machine translation drafts with explicit editorial overrides; no native-speaker review claimed.",
   "giftRevision": {
     "keys": "gift.*",
@@ -308,11 +308,48 @@
     "status": "draft",
     "nativeReviewed": false,
     "keys": [
-      "desktop.webviewInstalling",
-      "desktop.webviewInstallError",
       "desktop.tokenExpired"
     ],
     "method": "assistant translation",
+    "locales": [
+      "en",
+      "zh-CN",
+      "zh-Hant",
+      "ja",
+      "ko",
+      "id",
+      "es",
+      "ar",
+      "vi",
+      "fr",
+      "th",
+      "pt",
+      "tr",
+      "ru",
+      "de",
+      "it",
+      "ro",
+      "ms",
+      "uk",
+      "az",
+      "pl",
+      "nl",
+      "el",
+      "bg",
+      "my",
+      "hu",
+      "he",
+      "hr",
+      "sv"
+    ]
+  },
+  "bundledRuntime": {
+    "status": "draft",
+    "nativeReviewed": false,
+    "method": "assistant translation",
+    "keys": [
+      "desktop.bundledRuntimeError"
+    ],
     "locales": [
       "en",
       "zh-CN",
