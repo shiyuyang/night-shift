@@ -349,5 +349,7 @@
   "desktop.startupError": "Oyun yüklenemedi. Lütfen yeniden başlatın.",
   "desktop.disconnected": "Canlı etkileşim bağlantısı kesildi ({code}). Yeniden bağlanmak için oyunu LIVE Studio üzerinden yeniden başlatın.",
   "desktop.tokenExpired": "Başlatma kimlik bilgisinin süresi doldu. Oyunu kapatıp LIVE Studio üzerinden yeniden açın.",
-  "desktop.bundledRuntimeError": "Paketlenmiş çalışma ortamı kullanılamıyor. ZIP dosyasının tamamını yazılabilir yerel bir klasöre çıkarın, WebView2 klasörünü night-shift.exe yanında tutup oyunu yeniden açın."
+  "desktop.bundledRuntimeError": "Paketlenmiş çalışma ortamı kullanılamıyor. ZIP dosyasının tamamını yazılabilir yerel bir klasöre çıkarın, WebView2 klasörünü night-shift.exe yanında tutup oyunu yeniden açın.",
+  "desktop.webviewInstalling": "WebView2 yükleniyor. Lütfen bekleyin.",
+  "desktop.webviewInstallError": "WebView2 yüklenemedi. Bağlantıyı kontrol edin veya {url} adresinden yükleyip oyunu yeniden açın."
 }

@@ -349,5 +349,7 @@
   "desktop.startupError": "تعذر تحميل اللعبة. يرجى إعادة التشغيل.",
   "desktop.disconnected": "انقطع الاتصال بالتفاعل المباشر ({code}). أعد تشغيل اللعبة من LIVE Studio لإعادة الاتصال.",
   "desktop.tokenExpired": "انتهت صلاحية بيانات التشغيل. أغلق اللعبة وأعد فتحها من LIVE Studio.",
-  "desktop.bundledRuntimeError": "بيئة التشغيل المرفقة غير متاحة. فك ضغط ZIP بالكامل في مجلد محلي قابل للكتابة، واحتفظ بمجلد WebView2 بجانب night-shift.exe ثم أعد فتح اللعبة."
+  "desktop.bundledRuntimeError": "بيئة التشغيل المرفقة غير متاحة. فك ضغط ZIP بالكامل في مجلد محلي قابل للكتابة، واحتفظ بمجلد WebView2 بجانب night-shift.exe ثم أعد فتح اللعبة.",
+  "desktop.webviewInstalling": "جارٍ تثبيت WebView2. يرجى الانتظار.",
+  "desktop.webviewInstallError": "تعذر تثبيت WebView2. تحقق من الاتصال أو ثبته من {url} ثم أعد فتح اللعبة."
 }

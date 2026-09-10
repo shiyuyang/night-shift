@@ -349,5 +349,7 @@
   "desktop.startupError": "Jocul nu s-a putut încărca. Repornește.",
   "desktop.disconnected": "Interacțiunea live s-a deconectat ({code}). Repornește jocul din LIVE Studio pentru reconectare.",
   "desktop.tokenExpired": "Datele de autentificare pentru pornire au expirat. Închide jocul și redeschide-l din LIVE Studio.",
-  "desktop.bundledRuntimeError": "Mediul inclus nu este disponibil. Extrage întregul ZIP într-un folder local cu drept de scriere, păstrează WebView2 lângă night-shift.exe și redeschide jocul."
+  "desktop.bundledRuntimeError": "Mediul inclus nu este disponibil. Extrage întregul ZIP într-un folder local cu drept de scriere, păstrează WebView2 lângă night-shift.exe și redeschide jocul.",
+  "desktop.webviewInstalling": "Se instalează WebView2. Așteaptă.",
+  "desktop.webviewInstallError": "WebView2 nu a putut fi instalat. Verifică conexiunea sau instalează-l de la {url}, apoi redeschide jocul."
 }

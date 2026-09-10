@@ -349,5 +349,7 @@
   "desktop.startupError": "Impossibile caricare il gioco. Riavvia.",
   "desktop.disconnected": "Interazione dal vivo disconnessa ({code}). Riavvia il gioco da LIVE Studio per riconnetterti.",
   "desktop.tokenExpired": "La credenziale di avvio è scaduta. Chiudi il gioco e riaprilo da LIVE Studio.",
-  "desktop.bundledRuntimeError": "Il runtime incluso non è disponibile. Estrai tutto lo ZIP in una cartella locale scrivibile, mantieni WebView2 accanto a night-shift.exe e riapri il gioco."
+  "desktop.bundledRuntimeError": "Il runtime incluso non è disponibile. Estrai tutto lo ZIP in una cartella locale scrivibile, mantieni WebView2 accanto a night-shift.exe e riapri il gioco.",
+  "desktop.webviewInstalling": "Installazione di WebView2. Attendi.",
+  "desktop.webviewInstallError": "Impossibile installare WebView2. Controlla la connessione o installalo da {url}, poi riapri il gioco."
 }

@@ -76,6 +76,14 @@ mod windows {
         tauri::webview_version().is_ok_and(|v| !v.trim().is_empty() && v != "0.0.0.0")
     }
     pub fn ensure() -> bool {
+        let bundled = std::env::current_exe()
+            .ok()
+            .and_then(|p| p.parent().map(|p| p.join("WebView2").exists()))
+            .unwrap_or(false);
+        if !bundled {
+            std::env::remove_var("WEBVIEW2_BROWSER_EXECUTABLE_FOLDER");
+            return crate::webview_download::ensure();
+        }
         if configure() {
             return true;
         }

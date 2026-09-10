@@ -52,7 +52,7 @@ flowchart LR
 
 1. Windows 首版使用 x64 ZIP，EXE、游戏 icon 和所需文件放在 ZIP 根目录。前一次提供的手动测试 ZIP 带了一层父目录，平台交付脚本需要去掉这层。
 2. 程序继续内置 WebP、Opus、字体和全部必需语言。构建输出独立的 `dist-desktop/`，清空 CDN 和 SSE 配置，保留本地资源一致性校验。
-3. 0.4.5 起 Windows ZIP 和 NSIS 均内置固定版 WebView2 x64；启动不下载运行库。完整解压后使用包内版本，Windows 10 启动前配置所需 AppContainer 读取/执行权限。构建与验证边界见 desktop-builds.md。
+3. 0.4.6 起 Windows ZIP 可选完整或精简版：完整版内置固定版 WebView2 x64；精简版检测系统运行库，缺失时下载并安装微软运行库。Windows 10 启动包内版本前配置所需 AppContainer 读取/执行权限。NSIS 继续内置运行库。构建与验证边界见 desktop-builds.md。
 4. 如果平台不负责运行库，后续可增加包含 Fixed Version Runtime 的专用包。把 Evergreen 离线安装器放进 ZIP 仍需执行安装，不满足严格的完全免安装要求。
 5. macOS 保留 Apple Silicon / Intel 分包和 macOS 15.4 最低版本。Mac 可做单机与模拟协议测试；目前参考文档不能证明真实 LIVE Studio 本地启动链路支持 macOS。
 6. 存档、临时文件和日志放在稳定的用户数据目录，不放在 EXE 旁边。替换程序目录、版本更新或移动 ZIP 解压目录不应丢失存档。

@@ -349,5 +349,7 @@
   "desktop.startupError": "Das Spiel konnte nicht geladen werden. Bitte starte neu.",
   "desktop.disconnected": "Live-Interaktion getrennt ({code}). Starte das Spiel über LIVE Studio neu, um die Verbindung wiederherzustellen.",
   "desktop.tokenExpired": "Die Startberechtigung ist abgelaufen. Schließe das Spiel und öffne es erneut über LIVE Studio.",
-  "desktop.bundledRuntimeError": "Die mitgelieferte Laufzeit ist nicht verfügbar. Entpacke die gesamte ZIP in einen beschreibbaren lokalen Ordner, behalte WebView2 neben night-shift.exe und öffne das Spiel erneut."
+  "desktop.bundledRuntimeError": "Die mitgelieferte Laufzeit ist nicht verfügbar. Entpacke die gesamte ZIP in einen beschreibbaren lokalen Ordner, behalte WebView2 neben night-shift.exe und öffne das Spiel erneut.",
+  "desktop.webviewInstalling": "WebView2 wird installiert. Bitte warten.",
+  "desktop.webviewInstallError": "WebView2 konnte nicht installiert werden. Prüfe die Verbindung oder installiere es über {url} und öffne das Spiel erneut."
 }

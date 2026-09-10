@@ -349,5 +349,7 @@
   "desktop.startupError": "โหลดเกมไม่ได้ โปรดเริ่มใหม่",
   "desktop.disconnected": "การโต้ตอบไลฟ์ถูกตัดการเชื่อมต่อ ({code}) เปิดเกมใหม่จาก LIVE Studio เพื่อเชื่อมต่ออีกครั้ง",
   "desktop.tokenExpired": "ข้อมูลยืนยันการเปิดเกมหมดอายุแล้ว ปิดเกมแล้วเปิดใหม่จาก LIVE Studio",
-  "desktop.bundledRuntimeError": "ไม่สามารถใช้รันไทม์ที่มาพร้อมเกมได้ แตกไฟล์ ZIP ทั้งหมดลงในโฟลเดอร์ภายในเครื่องที่เขียนได้ เก็บโฟลเดอร์ WebView2 ไว้ข้าง night-shift.exe แล้วเปิดเกมใหม่"
+  "desktop.bundledRuntimeError": "ไม่สามารถใช้รันไทม์ที่มาพร้อมเกมได้ แตกไฟล์ ZIP ทั้งหมดลงในโฟลเดอร์ภายในเครื่องที่เขียนได้ เก็บโฟลเดอร์ WebView2 ไว้ข้าง night-shift.exe แล้วเปิดเกมใหม่",
+  "desktop.webviewInstalling": "กำลังติดตั้ง WebView2 โปรดรอสักครู่",
+  "desktop.webviewInstallError": "ติดตั้ง WebView2 ไม่สำเร็จ ตรวจสอบการเชื่อมต่อหรือติดตั้งจาก {url} แล้วเปิดเกมใหม่"
 }

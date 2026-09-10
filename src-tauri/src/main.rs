@@ -1,5 +1,7 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 mod desktop;
+#[cfg(windows)]
+mod webview_download;
 mod webview_setup;
 use tauri::Manager;
 fn main() {

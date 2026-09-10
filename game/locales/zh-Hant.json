@@ -349,5 +349,7 @@
   "desktop.startupError": "遊戲資源載入失敗，請重新啟動遊戲。",
   "desktop.disconnected": "直播互動已中斷（{code}）。請從 LIVE Studio 重新啟動遊戲以連線。",
   "desktop.tokenExpired": "啟動憑證已過期。請關閉遊戲，並從 LIVE Studio 重新開啟。",
-  "desktop.bundledRuntimeError": "無法使用包內執行環境。請將整個 ZIP 解壓縮到可寫入的本機資料夾，保留 night-shift.exe 旁的 WebView2 資料夾，再重新開啟遊戲。"
+  "desktop.bundledRuntimeError": "無法使用包內執行環境。請將整個 ZIP 解壓縮到可寫入的本機資料夾，保留 night-shift.exe 旁的 WebView2 資料夾，再重新開啟遊戲。",
+  "desktop.webviewInstalling": "正在安裝 WebView2，請稍候。",
+  "desktop.webviewInstallError": "WebView2 安裝失敗。請檢查網路，或從 {url} 安裝後重新開啟遊戲。"
 }

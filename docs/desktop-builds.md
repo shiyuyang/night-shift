@@ -12,9 +12,14 @@
 
 macOS 最低版本取决于游戏使用的 Ogg/Opus 解码支持，不能只按 Tauri 框架的最低版本判断。依据：[WebKit Safari 18.4 更新](https://webkit.org/blog/16574/webkit-features-in-safari-18-4/)。
 
-自 0.4.5 起，Windows ZIP 和安装器内置完整 WebView2 Fixed Version 152.0.4191.62 x64。`night-shift.exe` 只使用同目录 `WebView2/`，不下载、不安装系统运行库，也不回退到系统版本。请完整解压到可写的本地目录；不要单独复制 EXE 或从网络共享目录启动。
+自 0.4.6 起，Windows 提供两个绿色 ZIP，使用同一个 Release EXE：
 
-启动前检查运行库及 Loader；Windows 10 按微软要求为运行库目录授予两个 AppContainer 组读取/执行权限，保持沙箱开启。缺失或权限失败时显示本地化原生错误。保留微软全部运行文件和许可证；固定版本不会自动更新，安全更新随游戏重新打包。依据：[微软运行库分发说明](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution)。
+- `full.zip`：完整内置 WebView2 Fixed Version 152.0.4191.62 x64，正常启动不联网准备运行库。完整解压到可写本地目录，保留 EXE 旁的 `WebView2/`。
+- `lite.zip`：只有游戏 EXE，使用已安装的 WebView2；缺失时自动下载微软 Bootstrapper、验证 Microsoft Corporation Authenticode 签名并执行 `/silent /install`。原生窗口显示安装状态，可取消；失败时显示微软手动下载地址。下载限时 120 秒，安装等待上限 10 分钟，并发启动通过文件锁避免重复安装。
+
+启动器发现 `WebView2/` 时只使用包内版本，文件缺失或权限失败会提示错误。没有该目录时才进入系统检测及在线补装。Tauri 使用 `webviewInstallMode: skip`，由启动器负责运行库选择，避免框架强制固定路径导致精简版无法启动。Windows 专用资源配置仍将完整运行库纳入 NSIS。
+
+Windows 10 按微软要求为包内目录授予两个 AppContainer 组读取/执行权限，保持沙箱开启。固定版保留全部文件与许可证，更新需要重新打包；精简版运行库由微软更新。依据：[微软运行库分发说明](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution)。
 
 游戏按原启动参数连接 LIVE Studio，以宿主返回的 `TOKEN_EXPIRED` 判断凭证过期，显示“关闭游戏并从 LIVE Studio 重新打开”的确认弹窗；不会用本机计时猜测令牌是否有效，也不会复用旧令牌重连。当前平台有效期按用户提供的 90 秒规则理解。
 
@@ -102,3 +107,17 @@ npm run test:browser:desktop
 `tauri.windows.conf.json` 显式将 `WebView2/` 纳入安装器资源，避免交叉构建时只复制到 release 目录而漏入 NSIS；该资源配置只对 Windows 生效。
 
 Windows 运行库锁定版本、CAB SHA-256 和完整文件哈希在 `scripts/webview2-runtime.json`；二进制目录不进入 Git。使用 `scripts/package-windows.py OUTPUT.zip` 生成并校验绿色 ZIP。Windows 真机验证仍需覆盖没有系统 WebView2、断网、Windows 10/11、中文/空格路径，以及 LIVE Studio 带参启动。
+
+## ZIP 输出选项
+
+```sh
+# 先构建 Release EXE（不生成安装器）
+npm exec -- tauri build --target x86_64-pc-windows-msvc --no-bundle --runner cargo-xwin
+# 同时生成 full / lite
+python3 scripts/package-windows.py output/desktop/0.4.6 --runtime both
+# 只生成某一类
+python3 scripts/package-windows.py output/desktop/full.zip --runtime full
+python3 scripts/package-windows.py output/desktop/lite.zip --runtime lite
+```
+
+默认 `--runtime full`。精简 ZIP 的打包步骤不读取运行库；Windows 构建仍需还原运行库供资源配置使用。两个 ZIP 都校验 PE x64、ZIP CRC 和每个文件 SHA-256。0.4.6 还包含幽影随显隐变化的淡冷白微光。

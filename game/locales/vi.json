@@ -349,5 +349,7 @@
   "desktop.startupError": "Không thể tải trò chơi. Vui lòng khởi động lại.",
   "desktop.disconnected": "Tương tác trực tiếp đã ngắt kết nối ({code}). Khởi động lại trò chơi từ LIVE Studio để kết nối lại.",
   "desktop.tokenExpired": "Thông tin xác thực khởi chạy đã hết hạn. Đóng trò chơi và mở lại từ LIVE Studio.",
-  "desktop.bundledRuntimeError": "Không dùng được bộ chạy đi kèm. Giải nén toàn bộ ZIP vào thư mục cục bộ có quyền ghi, giữ thư mục WebView2 cạnh night-shift.exe rồi mở lại trò chơi."
+  "desktop.bundledRuntimeError": "Không dùng được bộ chạy đi kèm. Giải nén toàn bộ ZIP vào thư mục cục bộ có quyền ghi, giữ thư mục WebView2 cạnh night-shift.exe rồi mở lại trò chơi.",
+  "desktop.webviewInstalling": "Đang cài đặt WebView2. Vui lòng chờ.",
+  "desktop.webviewInstallError": "Không thể cài đặt WebView2. Kiểm tra kết nối hoặc cài từ {url}, rồi mở lại trò chơi."
 }

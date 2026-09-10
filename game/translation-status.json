@@ -201,7 +201,7 @@
       "sourceHash": "616779bcb0e7b5839b33ed8c3f635d0127544935350ad4bdb89ce86ab0ffcf3d"
     }
   },
-  "sourceHash": "76f09291ab36d3032f6de783b1cb4f6e66035c1137a4e2124b456628d929fad4",
+  "sourceHash": "bb7a76ceb14799efec2d764b7214ee40de70fc34d0aa0e20729ce89b67d17417",
   "note": "Machine translation drafts with explicit editorial overrides; no native-speaker review claimed.",
   "giftRevision": {
     "keys": "gift.*",
@@ -308,7 +308,9 @@
     "status": "draft",
     "nativeReviewed": false,
     "keys": [
-      "desktop.tokenExpired"
+      "desktop.tokenExpired",
+      "desktop.webviewInstalling",
+      "desktop.webviewInstallError"
     ],
     "method": "assistant translation",
     "locales": [

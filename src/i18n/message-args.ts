@@ -351,4 +351,6 @@ export interface MessageValues{
 "desktop.disconnected":{"code":string|number}
 "desktop.tokenExpired":{}
 "desktop.bundledRuntimeError":{}
+"desktop.webviewInstalling":{}
+"desktop.webviewInstallError":{"url":string|number}
 }

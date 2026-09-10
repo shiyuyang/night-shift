@@ -1,9 +1,9 @@
 {
   "latin": {
-    "file": "/fonts/locale-latin-3528947646.woff2",
+    "file": "/fonts/locale-latin-e847303ddd.woff2",
     "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosans/NotoSans%5Bwdth%2Cwght%5D.ttf",
     "license": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosans/OFL.txt",
-    "bytes": 117296,
+    "bytes": 117420,
     "missing": "→♫勤夜棟病"
   },
   "ar": {
@@ -49,17 +49,17 @@
     "missing": ""
   },
   "zh-Hans": {
-    "file": "/fonts/locale-zh-Hans-b35e385a39.woff2",
+    "file": "/fonts/locale-zh-Hans-593fa2c2b4.woff2",
     "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
     "license": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/OFL.txt",
-    "bytes": 213692,
+    "bytes": 214564,
     "missing": ""
   },
   "zh-Hant": {
-    "file": "/fonts/locale-zh-Hant-ccf833c169.woff2",
+    "file": "/fonts/locale-zh-Hant-0c98a128e1.woff2",
     "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstc/NotoSansTC%5Bwght%5D.ttf",
     "license": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstc/OFL.txt",
-    "bytes": 233680,
+    "bytes": 234460,
     "missing": ""
   }
 }

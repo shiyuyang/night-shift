@@ -349,5 +349,7 @@
   "desktop.startupError": "A játék nem tölthető be. Indítsd újra.",
   "desktop.disconnected": "Az élő interakció megszakadt ({code}). Az újracsatlakozáshoz indítsd újra a játékot a LIVE Studio alkalmazásból.",
   "desktop.tokenExpired": "Az indítási hitelesítő adat lejárt. Zárd be a játékot, és nyisd meg újra a LIVE Studio alkalmazásból.",
-  "desktop.bundledRuntimeError": "A mellékelt futtatókörnyezet nem érhető el. Csomagold ki a teljes ZIP fájlt egy írható helyi mappába, hagyd a WebView2 mappát a night-shift.exe mellett, majd nyisd meg újra a játékot."
+  "desktop.bundledRuntimeError": "A mellékelt futtatókörnyezet nem érhető el. Csomagold ki a teljes ZIP fájlt egy írható helyi mappába, hagyd a WebView2 mappát a night-shift.exe mellett, majd nyisd meg újra a játékot.",
+  "desktop.webviewInstalling": "WebView2 telepítése. Kérjük, várj.",
+  "desktop.webviewInstallError": "A WebView2 telepítése sikertelen. Ellenőrizd a kapcsolatot, vagy telepítsd innen: {url}, majd nyisd meg újra a játékot."
 }

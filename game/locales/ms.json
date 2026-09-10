@@ -349,5 +349,7 @@
   "desktop.startupError": "Gagal memuatkan permainan. Sila mulakan semula.",
   "desktop.disconnected": "Interaksi langsung terputus ({code}). Mulakan semula permainan melalui LIVE Studio untuk menyambung semula.",
   "desktop.tokenExpired": "Bukti kelayakan pelancaran telah tamat tempoh. Tutup permainan dan buka semula melalui LIVE Studio.",
-  "desktop.bundledRuntimeError": "Runtime yang disertakan tidak tersedia. Ekstrak seluruh ZIP ke folder setempat yang boleh ditulis, kekalkan WebView2 di sebelah night-shift.exe dan buka semula permainan."
+  "desktop.bundledRuntimeError": "Runtime yang disertakan tidak tersedia. Ekstrak seluruh ZIP ke folder setempat yang boleh ditulis, kekalkan WebView2 di sebelah night-shift.exe dan buka semula permainan.",
+  "desktop.webviewInstalling": "Sedang memasang WebView2. Sila tunggu.",
+  "desktop.webviewInstallError": "WebView2 tidak dapat dipasang. Semak sambungan atau pasang dari {url}, kemudian buka semula permainan."
 }

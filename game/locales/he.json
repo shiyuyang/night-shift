@@ -349,5 +349,7 @@
   "desktop.startupError": "לא ניתן לטעון את המשחק. יש להפעיל מחדש.",
   "desktop.disconnected": "החיבור לאינטראקציה בשידור נותק ({code}). יש להפעיל מחדש את המשחק דרך LIVE Studio כדי להתחבר שוב.",
   "desktop.tokenExpired": "תוקף פרטי האימות להפעלה פג. יש לסגור את המשחק ולפתוח אותו מחדש דרך LIVE Studio.",
-  "desktop.bundledRuntimeError": "סביבת הריצה המצורפת אינה זמינה. יש לחלץ את כל קובץ ZIP לתיקייה מקומית הניתנת לכתיבה, להשאיר את WebView2 לצד night-shift.exe ולפתוח את המשחק מחדש."
+  "desktop.bundledRuntimeError": "סביבת הריצה המצורפת אינה זמינה. יש לחלץ את כל קובץ ZIP לתיקייה מקומית הניתנת לכתיבה, להשאיר את WebView2 לצד night-shift.exe ולפתוח את המשחק מחדש.",
+  "desktop.webviewInstalling": "מתקין את WebView2. נא להמתין.",
+  "desktop.webviewInstallError": "לא ניתן להתקין את WebView2. יש לבדוק את החיבור או להתקין דרך {url}, ואז לפתוח את המשחק מחדש."
 }

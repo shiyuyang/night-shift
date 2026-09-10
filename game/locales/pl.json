@@ -349,5 +349,7 @@
   "desktop.startupError": "Nie udało się wczytać gry. Uruchom ją ponownie.",
   "desktop.disconnected": "Interakcja na żywo rozłączona ({code}). Uruchom grę ponownie z LIVE Studio, aby się połączyć.",
   "desktop.tokenExpired": "Dane uwierzytelniające uruchomienia wygasły. Zamknij grę i otwórz ją ponownie z LIVE Studio.",
-  "desktop.bundledRuntimeError": "Dołączone środowisko jest niedostępne. Rozpakuj cały ZIP do lokalnego folderu z prawem zapisu, zachowaj WebView2 obok night-shift.exe i otwórz grę ponownie."
+  "desktop.bundledRuntimeError": "Dołączone środowisko jest niedostępne. Rozpakuj cały ZIP do lokalnego folderu z prawem zapisu, zachowaj WebView2 obok night-shift.exe i otwórz grę ponownie.",
+  "desktop.webviewInstalling": "Instalowanie WebView2. Proszę czekać.",
+  "desktop.webviewInstallError": "Nie udało się zainstalować WebView2. Sprawdź połączenie lub zainstaluj go z {url}, a potem otwórz grę ponownie."
 }
