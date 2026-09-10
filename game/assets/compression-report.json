@@ -146,10 +146,10 @@
   {
     "file": "assets/yakin-byoutou-title-v4.webp",
     "source": "assets/yakin-byoutou-title-v4.png",
-    "source_bytes": 785217,
-    "bytes": 491356,
-    "source_sha256": "1f4ec914f91d1ca2c0c5e213612ef4b60c8aac965bbe45aaa9783f0d5e837ca6",
-    "sha256": "1f955f252a8522041cad1bea30cdff79235d7f4b5ee3b56d2585905f2fc66744",
+    "source_bytes": 779000,
+    "bytes": 527184,
+    "source_sha256": "3079ecadc65353476418ca49c691017e8f8115367c3b1afd0aa395e98875feb5",
+    "sha256": "b60f6eff6e2b5eb4efeb82607ba5740547f2358a2e4d5c82bf8a160adc82e40e",
     "encoding": "lossless"
   },
   {

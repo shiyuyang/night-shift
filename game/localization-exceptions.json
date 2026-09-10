@@ -11,6 +11,10 @@
     {
       "text": "● REC",
       "reason": "Existing camera recording indicator, not a gameplay instruction."
+    },
+    {
+      "text": "HOSPITAL NIGHT SHIFT",
+      "reason": "User-approved English brand subtitle, added to the existing global title image; preserve this brand spelling in every locale."
     }
   ]
 }
