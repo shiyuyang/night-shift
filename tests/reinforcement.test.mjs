@@ -56,12 +56,9 @@ test('interceptor keeps last clue across a wall instead of learning the hidden r
  assert.deepEqual(r.target,clue);assert.equal(r.clueClock,0);assert.ok(r.position.x<220);
 });
 
-test('lost interceptor returns repeatedly through exit checkpoints without tracking the distant player',()=>{
- const r=new Reinforcement();r.spawn({x:100,y:150},{x:200,y:150});r.clueClock=0;
- const points=[{x:100,y:150},{x:270,y:150}],visits=[];
- for(let i=0;i<400;i++){
-  r.tick(.05,input({player:{x:750,y:450},patrolPoints:points}));
-  for(let j=0;j<points.length;j++)if(Math.hypot(r.position.x-points[j].x,r.position.y-points[j].y)<30&&visits.at(-1)!==j)visits.push(j);
- }
- assert.ok(visits.length>=5);assert.deepEqual(r.target,{x:200,y:150});assert.equal(r.clueClock,0);
+test('exit patroller slows while searching after sight is broken',()=>{
+ const r=new Reinforcement();r.spawn({x:100,y:150},{x:350,y:150});
+ r.tick(.8,input({hidden:true}));assert.equal(r.sightLock.searching,true);
+ const before={...r.position};r.tick(.1,input({hidden:true}));
+ assert.ok(Math.abs(Math.hypot(r.position.x-before.x,r.position.y-before.y)-107*.65*.1)<.001);
 });

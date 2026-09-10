@@ -22,16 +22,31 @@ try{
  });
  assert.deepEqual(result.quiet,result.clue);assert.equal(result.unchanged,true);assert.deepEqual(result.lastKnown,result.clue);assert.equal(result.memory,0);assert.equal(result.active,true);
 
- const patrol=await p.evaluate(()=>{
-  const s=window.__nightshiftScene;s.round=2;s.state.fuses=1;s.opened=[true,false,false];s.door=true;s.memory=0;s.ghostTime=30;s.ghostDelay=0;s.stun=0;s.protection=999;s.ghost.setPosition(s.level.spawn.x,s.level.spawn.y);s.lastKnown={x:s.ghost.x,y:s.ghost.y};s.pursuitSearch.reset();s.pursuitSearch.tick(.01,s.ghost,s.lastKnown,s.monsterSolids(),s.level.bounds);s.pursuitSearch.remaining=0;s.patrolCircuit.reset();
-  const daily=s.pressurePatrolPoints();s.state.fuses=3;const finale=s.pressurePatrolPoints();s.state.fuses=1;
-  const targets=new Set();let moved=0,previous={x:s.ghost.x,y:s.ghost.y};
-  s.setPaused(false);for(let i=0;i<1000;i++){s.update(i*50,50);if(s.patrolCircuit.target)targets.add(JSON.stringify(s.patrolCircuit.target));moved+=Math.hypot(s.ghost.x-previous.x,s.ghost.y-previous.y);previous={x:s.ghost.x,y:s.ghost.y};}s.setPaused(true);
-  return {daily,finale,exit:s.level.exit,boxes:s.level.boxes,targets:targets.size,moved,health:s.state.health};
+
+ const corner=await p.evaluate(async()=>{
+  const s=window.__nightshiftScene;
+  const {monsterFeetAt,overlaps}=await import('/src/collision.ts');
+  const {patrolPath}=await import('/src/patrol.ts');
+  const solids=s.monsterSolids(),b=s.level.bounds;let pair;
+  const free=p=>p.x>b.x+20&&p.x<b.x+b.width-20&&p.y>b.y+20&&p.y<b.y+b.height-20&&!solids.some(w=>overlaps(monsterFeetAt(p.x,p.y),w));
+  for(const wall of solids){
+   const candidates=wall.height>wall.width?
+    Array.from({length:Math.ceil(wall.height/30)},(_,i)=>[{x:wall.x-30,y:wall.y+i*30},{x:wall.x+wall.width+30,y:wall.y+i*30}]):
+    Array.from({length:Math.ceil(wall.width/30)},(_,i)=>[{x:wall.x+i*30,y:wall.y-40},{x:wall.x+i*30,y:wall.y+wall.height+25}]);
+   for(const [a,c] of candidates){if(!free(a)||!free(c)||Math.hypot(a.x-c.x,a.y-c.y)>100||s.canSee(a,c))continue;
+    const route=patrolPath(a,c,solids,b,monsterFeetAt),end=route.at(-1);if(!end||Math.hypot(end.x-c.x,end.y-c.y)>30)continue;
+    let d=0,prev=a;for(const n of route){d+=Math.hypot(n.x-prev.x,n.y-prev.y);prev=n;}
+    if(d>300){pair={a,c};break;}
+   }if(pair)break;
+  }
+  if(!pair)throw Error('No reachable corner fixture');
+  s.round=3;s.rules={...s.rules,threat:'patroller'};s.state.fuses=1;s.opened=[true,false,false];s.ghost.setPosition(pair.a.x,pair.a.y);s.player.setPosition(pair.c.x,pair.c.y);s.ghostTime=30;s.ghostDelay=0;s.stun=0;s.memory=2.5;s.lastKnown={...pair.a};s.route=[];s.routeTimer=0;s.sightLock.reset();s.flashlightOn=false;s.patrolRetreat=false;
+  s.hear(3,false,true);const afterRunning={...s.lastKnown};s.hear();const afterLoud={...s.lastKnown};
+  // Real scene frames behind a real wall: no direct lock/position updates from the test.
+  s.setPaused(false);for(let i=0;i<18;i++)s.update(i*50,50);s.setPaused(true);
+  return {pair,afterRunning,afterLoud,lastKnown:s.lastKnown,searching:s.sightLock.searching};
  });
- assert.ok(patrol.daily.some(p=>p.x===patrol.boxes[1].x&&p.y===patrol.boxes[1].y));
- assert.ok(!patrol.daily.some(p=>p.x===patrol.boxes[0].x&&p.y===patrol.boxes[0].y));
- assert.deepEqual(patrol.finale.at(-1),patrol.exit);assert.ok(patrol.targets>=2);assert.ok(patrol.moved>500);
- console.log('Scene objective patrol checked:',{targets:patrol.targets,moved:Math.round(patrol.moved)});
+ assert.deepEqual(corner.afterRunning,corner.pair.a);assert.deepEqual(corner.afterLoud,corner.pair.a);assert.deepEqual(corner.lastKnown,corner.pair.a);assert.equal(corner.searching,true);
+ console.log('Real-wall patroller escape checks passed');
  assert.deepEqual(errors,[]);console.log('Browser escape checks passed:',result);
 }finally{await browser.close();}

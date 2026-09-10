@@ -48,8 +48,8 @@ import {hearsWalking,hearsPlayer} from '../src/run-rules.ts';
 test('corners break visual lock; sustained sight or close contact can reacquire',()=>{
  const lock=new SightLock();assert.equal(lock.tick(.1,true,150),true);
  lock.tick(2.1,false,150);assert.equal(lock.tick(.2,true,150),false);
- lock.tick(.1,false,150);assert.equal(lock.tick(.4,true,150),false);assert.equal(lock.tick(.21,true,150),true);
- lock.tick(3,false,150);assert.equal(lock.tick(.01,true,50),true);
+ lock.tick(.1,false,150);assert.equal(lock.tick(.4,true,150),false);assert.equal(lock.tick(.51,true,150),true);
+ lock.tick(3,false,150);assert.equal(lock.tick(.01,true,30),true);
 });
 test('quiet steps escape listener hearing outside nearby range; running still reveals',()=>{
  assert.equal(hearsWalking('listener',100),false);assert.equal(hearsWalking('listener',60),true);
@@ -57,16 +57,17 @@ test('quiet steps escape listener hearing outside nearby range; running still re
  assert.equal(hearsPlayer('listener',200),true);
 });
 
-import {PatrolCircuit} from '../src/runtime/patrol-circuit.ts';
-import {followPatrolPath,patrolPath} from '../src/patrol.ts';
-test('objective circuit revisits task areas and skips an unreachable objective',()=>{
- const circuit=new PatrolCircuit(),wall={x:500,y:-50,width:20,height:700};
- const points=[{x:600,y:150},{x:250,y:150},{x:100,y:300}];let position={x:100,y:150};const visits=[];
- for(let i=0;i<400;i++){
-  const goal=circuit.tick(.05,position,points,[wall],bounds);
-  position=followPatrolPath(position,patrolPath(position,goal,[wall],bounds,monsterFeetAt),110*.05,[wall]).position;
-  for(let j=1;j<points.length;j++)if(Math.hypot(position.x-points[j].x,position.y-points[j].y)<30&&visits.at(-1)!==j)visits.push(j);
- }
- assert.ok(visits.length>=4);assert.deepEqual(visits.slice(0,4),[1,2,1,2]);assert.ok(position.x<500);
- const previous={...circuit.target},elapsed=circuit.elapsed;circuit.tick(0,position,points,[wall],bounds);assert.deepEqual(circuit.target,previous);assert.equal(circuit.elapsed,elapsed);
+import {hearsRunning} from '../src/run-rules.ts';
+test('patroller cannot refresh a hidden runner clue through footsteps or a wall',()=>{
+ assert.equal(hearsRunning('patroller',30,true),false);
+ assert.equal(hearsRunning('patroller',30,false),false);
+ assert.equal(hearsPlayer('patroller',60,false),false);
+ assert.equal(hearsPlayer('patroller',60,true),true);
+ assert.equal(hearsRunning('listener',200,false),true);
+});
+test('short corner occlusion enters search; brief glimpses do not restore full pursuit',()=>{
+ const lock=new SightLock();lock.tick(.1,true,90);lock.tick(.8,false,90);assert.equal(lock.searching,true);
+ assert.equal(lock.tick(.5,true,90),false);assert.equal(lock.searching,true);
+ lock.tick(.1,false,90);assert.equal(lock.tick(.5,true,90),false);
+ assert.equal(lock.tick(.41,true,90),true);assert.equal(lock.searching,false);
 });
