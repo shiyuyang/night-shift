@@ -47,3 +47,21 @@ test('exit guard holds six seconds, freezes on pause and responds to a visible a
  const hidden=new Reinforcement();hidden.spawn({x:100,y:150},{x:500,y:150},6);
  hidden.tick(.05,input({player:{x:200,y:150},hidden:true}));assert.ok(hidden.guard>5);
 });
+
+test('interceptor keeps last clue across a wall instead of learning the hidden route',()=>{
+ const r=new Reinforcement();r.spawn({x:100,y:150},{x:180,y:150});
+ r.tick(.05,input({player:{x:180,y:150}}));const clue={...r.target};
+ const wall={x:220,y:0,width:20,height:500};
+ for(let i=0;i<100;i++)r.tick(.05,input({player:{x:500,y:300},solids:[wall],goal:{x:150,y:250}}));
+ assert.deepEqual(r.target,clue);assert.equal(r.clueClock,0);assert.ok(r.position.x<220);
+});
+
+test('lost interceptor returns repeatedly through exit checkpoints without tracking the distant player',()=>{
+ const r=new Reinforcement();r.spawn({x:100,y:150},{x:200,y:150});r.clueClock=0;
+ const points=[{x:100,y:150},{x:270,y:150}],visits=[];
+ for(let i=0;i<400;i++){
+  r.tick(.05,input({player:{x:750,y:450},patrolPoints:points}));
+  for(let j=0;j<points.length;j++)if(Math.hypot(r.position.x-points[j].x,r.position.y-points[j].y)<30&&visits.at(-1)!==j)visits.push(j);
+ }
+ assert.ok(visits.length>=5);assert.deepEqual(r.target,{x:200,y:150});assert.equal(r.clueClock,0);
+});

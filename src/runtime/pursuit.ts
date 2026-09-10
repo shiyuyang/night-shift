@@ -14,7 +14,7 @@ export class PursuitSearch {
  points:Position[]=[];index=0;remaining=0;private anchor?:Position;
  reset(){this.points=[];this.index=0;this.remaining=0;this.anchor=undefined;}
  begin(last:Position,from:Position,solids:Box[],bounds:Box){
-  this.anchor={...last};this.remaining=12;this.index=0;
+  this.anchor={...last};this.remaining=5;this.index=0;
   const heading=Math.atan2(last.y-from.y,last.x-from.x);
   const approach=patrolPath(from,last,solids,bounds,monsterFeetAt).at(-1)??from;
   this.points=[{...approach}];last=approach;

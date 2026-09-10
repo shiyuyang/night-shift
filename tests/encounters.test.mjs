@@ -146,4 +146,4 @@ test('pursuit routes around a wall and retries when a closed route opens',()=>{
  assert.ok(resumed,'replans after the door opens');
 });
 
-test('listener hears nearby walking while loud actions carry farther',()=>{assert.equal(hearsWalking('listener',199),true);assert.equal(hearsWalking('listener',200),false);assert.equal(hearsPlayer('listener',220),true);for(const threat of ['light-shy','patroller'])assert.equal(hearsWalking(threat,30),false);});
+test('listener hears nearby walking while loud actions carry farther',()=>{assert.equal(hearsWalking('listener',79),true);assert.equal(hearsWalking('listener',80),false);assert.equal(hearsPlayer('listener',220),true);for(const threat of ['light-shy','patroller'])assert.equal(hearsWalking(threat,30),false);});

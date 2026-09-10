@@ -1,18 +1,20 @@
+import {PatrolCircuit} from './patrol-circuit.ts';
+import {SightLock} from './sight-lock.ts';
 import {DistractionResponse} from './distraction-response.ts';
 import {monsterFeetAt,clearContact,moveWithCollision,type Box,type Position} from '../collision.ts';
 import {patrolPath,followPatrolPath} from '../patrol.ts';
 /** Physical patrol shared by resident and exit-side enemies. */
 export class Reinforcement {
  position:Position|null=null;entry:Position|null=null;target:Position|null=null;route:Position[]=[];
- distractionResponse=new DistractionResponse();
+ distractionResponse=new DistractionResponse();sightLock=new SightLock();patrol=new PatrolCircuit();
  warning=0;stun=0;routeClock=0;clueClock=0;stride=0;angle=0;used=false;retry=0;guard=0;
- spawn(position:Position,target:Position,guardSeconds=0){this.used=true;this.entry={...position};this.position={...position};this.target={...target};this.warning=0;this.clueClock=4;this.routeClock=0;this.guard=guardSeconds;}
+ spawn(position:Position,target:Position,guardSeconds=0){this.sightLock.reset();this.patrol.reset();this.used=true;this.entry={...position};this.position={...position};this.target={...target};this.warning=0;this.clueClock=4;this.routeClock=0;this.guard=guardSeconds;}
  flash(player:Position,solids:Box[]){
   if(!this.position||this.warning>0||Math.hypot(player.x-this.position.x,player.y-this.position.y)>=190||!clearContact(player,this.position,solids))return false;
   this.stun=2;const a=Math.atan2(this.position.y-player.y,this.position.x-player.x);
   this.position=moveWithCollision(this.position,Math.cos(a)*65,Math.sin(a)*65,solids,monsterFeetAt);this.route=[];this.routeClock=0;return true;
  }
- tick(dt:number,input:{player:Position;hidden:boolean;distraction?:Position;doorTarget?:Position;goal?:Position;speed?:number;retreat:boolean;visible:(p:Position)=>boolean;solids:Box[];bounds:Box}){
+ tick(dt:number,input:{player:Position;hidden:boolean;distraction?:Position;doorTarget?:Position;goal?:Position;patrolPoints?:Position[];speed?:number;retreat:boolean;visible:(p:Position)=>boolean;solids:Box[];bounds:Box}){
   if(dt<=0||!this.position)return false;
   this.warning=Math.max(0,this.warning-dt);this.stun=Math.max(0,this.stun-dt);
   const guarding=this.guard>0;
@@ -21,10 +23,12 @@ export class Reinforcement {
   if(guarding&&this.guard===0){this.route=[];this.routeClock=0;}
   if(input.retreat&&this.entry&&!input.visible(this.position)){this.position=null;return false;}
   if(this.warning>0||this.stun>0)return false;
-  this.clueClock-=dt;
-  if(!input.goal&&this.clueClock<=0&&!input.hidden&&!input.distraction){this.target={...input.player};this.clueClock=4;this.routeClock=0;}
+  this.clueClock=Math.max(0,this.clueClock-dt);
+  const seen=this.sightLock.tick(dt,approaching,Math.hypot(this.position.x-input.player.x,this.position.y-input.player.y));
+  if(seen&&!input.distraction){this.target={...input.player};this.clueClock=2.5;this.routeClock=Math.min(this.routeClock,.2);}
   const distraction=this.distractionResponse.tick(dt,'patroller',input.distraction,approaching,this.position);if(this.distractionResponse.changed)this.routeClock=0;
-  const goal=input.retreat?this.entry:distraction??(this.guard>0?this.entry:input.doorTarget??(guarding&&approaching?input.player:input.goal??this.target));
+  const patrolGoal=this.guard<=0&&this.clueClock<=0&&!input.doorTarget&&!distraction&&input.patrolPoints?.length?this.patrol.tick(dt,this.position,input.patrolPoints,input.solids,input.bounds):input.goal;
+  const goal=input.retreat?this.entry:distraction??(this.guard>0?this.entry:input.doorTarget??(this.clueClock>0?this.target:patrolGoal??this.entry));
   if(!goal)return false;
   this.routeClock-=dt;if(this.routeClock<=0){this.route=patrolPath(this.position,goal,input.solids,input.bounds,monsterFeetAt);this.routeClock=.6;}
   const before=this.position,movement=followPatrolPath(before,this.route,(input.speed??107)*dt,input.solids);this.position=movement.position;
