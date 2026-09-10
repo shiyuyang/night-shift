@@ -4,7 +4,7 @@
   "domain": "night-shift-assets.liveinteractivegame.com",
   "zoneId": "30badb66445e606e10540be49d75e584",
   "prefix": "games/night-shift",
-  "version": "be547e44db49c725",
+  "version": "29c848d992a06119",
   "files": [
     {
       "file": "assets/archive-garden-v1.q95.webp",
@@ -158,8 +158,8 @@
     },
     {
       "file": "assets/yakin-byoutou-title-v4.webp",
-      "bytes": 491356,
-      "sha256": "1f955f252a8522041cad1bea30cdff79235d7f4b5ee3b56d2585905f2fc66744"
+      "bytes": 527184,
+      "sha256": "b60f6eff6e2b5eb4efeb82607ba5740547f2358a2e4d5c82bf8a160adc82e40e"
     },
     {
       "file": "audio/garden-blood-moon-v1.ogg",
@@ -342,6 +342,6 @@
       "sha256": "d113cd651f212760397282b77588d331a6079268e539375b784992fb97ecd320"
     }
   ],
-  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/be547e44db49c725/",
-  "publishedAt": "2026-09-09T12:51:33.818Z"
+  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/29c848d992a06119/",
+  "publishedAt": "2026-09-10T06:34:16.849Z"
 }
