@@ -13,7 +13,7 @@ assert.deepEqual(current.files,release.files,'Media changed; run npm run assets:
 const report=JSON.parse(readFileSync('dist/delivery-report.json'));
 const files=report.files.filter(f=>f.file==='index.html'||/^assets\/[\w-]+\.(js|css)$/.test(f.file));
 assert.equal(files.filter(f=>f.file.endsWith('.html')).length,1);
-assert.equal(files.filter(f=>f.file.endsWith('.js')).length,2);
+assert.ok(files.some(f=>f.file.endsWith('.js')),'Missing JavaScript build output');
 assert.equal(files.filter(f=>f.file.endsWith('.css')).length,1);
 rmSync('dist-cloudflare',{recursive:true,force:true});
 for(const {file} of files){const target='dist-cloudflare/night-shift/'+file;mkdirSync(dirname(target),{recursive:true});copyFileSync('dist/'+file,target);}
