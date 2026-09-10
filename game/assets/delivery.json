@@ -3,172 +3,181 @@
     {
       "source": "/assets/watchman-sheet-v4.png",
       "file": "/assets/watchman-sheet-v4.webp",
-      "encoding": "lossless"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/patient-sheet-v4.png",
       "file": "/assets/patient-sheet-v4.webp",
-      "encoding": "lossless"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/bed-overhead-v4.png",
       "file": "/assets/bed-overhead-v4.webp",
-      "encoding": "lossless"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/weeping-patient-v1.png",
       "file": "/assets/weeping-patient-v1.webp",
-      "encoding": "lossless"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/hospital-listener-v1.png",
       "file": "/assets/hospital-listener-v1.webp",
-      "encoding": "lossless"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/hospital-light-shy-v1.png",
       "file": "/assets/hospital-light-shy-v1.webp",
-      "encoding": "lossless"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/hospital-patroller-v1.png",
       "file": "/assets/hospital-patroller-v1.webp",
-      "encoding": "lossless"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/hospital-corridor-v2.png",
       "file": "/assets/hospital-corridor-v2.q95.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/hospital-floor-v2.png",
       "file": "/assets/hospital-floor-v2.q95.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/hospital-wall-v2.png",
       "file": "/assets/hospital-wall-v2.q95.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/watch-desk-v1.png",
       "file": "/assets/watch-desk-v1.q95.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/watch-desk-painted-v2.png",
       "file": "/assets/watch-desk-painted-v2.q95.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/patrol-book-pixel-v1.png",
       "file": "/assets/patrol-book-pixel-v1.webp",
-      "encoding": "lossless"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/archive-ward-v1.png",
       "file": "/assets/archive-ward-v1.q95.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/archive-warehouse-v1.png",
       "file": "/assets/archive-warehouse-v1.q95.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/archive-plant-v1.png",
       "file": "/assets/archive-plant-v1.q95.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/yakin-byoutou-title-v4.png",
       "file": "/assets/yakin-byoutou-title-v4.webp",
-      "encoding": "lossless"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/watch-desk-cold-night-v1.png",
       "file": "/assets/watch-desk-cold-night-v1.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/hospital-register-selected-v1.png",
       "file": "/assets/hospital-register-selected-v1.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/stamp-button-normal-v1.png",
       "file": "/assets/stamp-button-normal-v1.webp",
-      "encoding": "lossless"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/stamp-button-pressed-v1.png",
       "file": "/assets/stamp-button-pressed-v1.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/hospital-seal-oval-v1.png",
       "file": "/assets/hospital-seal-oval-v1.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/morgue-shrouded-body-v1.png",
       "file": "/assets/morgue-shrouded-body-v1.webp",
-      "encoding": "lossless"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/garden-pine-v1.png",
       "file": "/assets/garden-pine-v1.webp",
-      "encoding": "lossless"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/gift-shade-walk-v1.png",
       "file": "/assets/gift-shade-walk-v1.webp",
-      "encoding": "lossless"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/gift-shade-contact-v1.png",
       "file": "/assets/gift-shade-contact-v1.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/archive-outpatient-v1.png",
       "file": "/assets/archive-outpatient-v1.q95.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/archive-surgery-v1.png",
       "file": "/assets/archive-surgery-v1.q95.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/archive-morgue-v1.png",
       "file": "/assets/archive-morgue-v1.q95.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/archive-garden-v1.png",
       "file": "/assets/archive-garden-v1.q95.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/death-listener-v2.png",
       "file": "/assets/death-listener-v2.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/death-light-shy-v2.png",
       "file": "/assets/death-light-shy-v2.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/death-patroller-v1.png",
       "file": "/assets/death-patroller-v1.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
     },
     {
       "source": "/assets/death-weeper-v2.png",
       "file": "/assets/death-weeper-v2.webp",
-      "encoding": "webp-q95"
+      "encoding": "webp-q80"
+    },
+    {
+      "source": "/assets/desk-yurei-v1.png",
+      "file": "/assets/desk-yurei-v1.webp",
+      "encoding": "webp-q80",
+      "resize": [
+        320,
+        480
+      ]
     }
   ],
   "staticFiles": [
@@ -187,7 +196,6 @@
     "/fonts/notosansjp-OFL.txt",
     "/fonts/notosanskr-OFL.txt",
     "/fonts/notosansmyanmar-OFL.txt",
-    "/assets/desk-yurei-v1.webp",
     "/fonts/hospital-handwriting-f4b06c07ab.woff2",
     "/fonts/locale-latin-84536a0a4d.woff2",
     "/fonts/locale-ar-b37007c412.woff2",

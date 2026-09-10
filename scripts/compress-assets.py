@@ -16,30 +16,36 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def derivative(source, target, encoding, options):
+def derivative(source, target, encoding, options, resize=None):
     src, dst = public / source.lstrip('/'), public / target.lstrip('/')
     source_hash = digest(src)
     previous = old.get(target.lstrip('/'), {})
     # Preserve pre-existing lossless/Opus derivatives during the initial migration.
-    legacy = not previous.get('source_sha256') and encoding != 'webp-q95'
+    legacy = not previous.get('source_sha256') and not encoding.startswith('webp-q')
     current = (previous.get('source_sha256') == source_hash
                and previous.get('encoding') == encoding
+               and previous.get('resize') == resize
                and dst.exists() and previous.get('sha256') == digest(dst))
     if not dst.exists() or not (current or legacy):
-        if encoding == 'webp-q95':
-            subprocess.run(['cwebp', '-quiet', '-q', '95', '-m', '6',
-                            '-alpha_q', '100', str(src), '-o', str(dst)], check=True)
+        if encoding.startswith('webp-q'):
+            quality = int(encoding.removeprefix('webp-q'))
+            assert 0 <= quality <= 100, f'Invalid WebP quality: {quality}'
+            sizing = ['-resize', *map(str, resize)] if resize else []
+            subprocess.run(['cwebp', '-quiet', '-q', str(quality), '-m', '6',
+                            '-alpha_q', '100', *sizing, str(src), '-o', str(dst)], check=True)
         else:
             subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', str(src),
                             *options, str(dst)], check=True)
     report.append(dict(file=target.lstrip('/'), source=source.lstrip('/'),
                        source_bytes=src.stat().st_size, bytes=dst.stat().st_size,
-                       source_sha256=source_hash, sha256=digest(dst), encoding=encoding))
+                       source_sha256=source_hash, sha256=digest(dst), encoding=encoding,
+                       **({'resize': resize} if resize else {})))
 
 
 for item in config['images']:
     derivative(item['source'], item['file'], item['encoding'],
-               ['-c:v', 'libwebp', '-lossless', '1', '-compression_level', '6'])
+               ['-c:v', 'libwebp', '-lossless', '1', '-compression_level', '6'],
+               item.get('resize'))
 
 for catalog, rate in [('music', '64k'), ('audio-sfx', '40k')]:
     for item in json.loads((root / f'game/{catalog}.json').read_text()):

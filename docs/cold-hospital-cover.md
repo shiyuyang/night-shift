@@ -14,7 +14,7 @@
 
 从源 PNG 生成 WebP，背景、登记簿、实心印章使用 Q95；空心印章保持无损透明。四张新增图片合计约 1.2 MiB。源 PNG 和未采用的试稿不进入线上交付清单。
 
-鬼影使用独立透明素材 `desk-yurei-v1.webp`，由源 PNG 以 `cwebp -q 90 -resize 320 0` 生成，约 27 KiB。可运行 `node tests/desk-apparition.browser.mjs` 检查两种灯闪节奏、桌面和手机尺寸、减少动态效果与开始游戏；设置 `DEPLOY_URL` 可对线上版本执行相同检查。
+鬼影使用独立透明素材 `desk-yurei-v1.webp`，由源 PNG 以 统一压缩流程以 WebP Q80、320×480 尺寸生成，透明通道保持质量 100。可运行 `node tests/desk-apparition.browser.mjs` 检查两种灯闪节奏、桌面和手机尺寸、减少动态效果与开始游戏；设置 `DEPLOY_URL` 可对线上版本执行相同检查。
 
 鬼影置于灯光衰减层下方，与墙面一起变暗；降低衣裙亮度并染入冷青灰色，轻微软化边缘，衣摆逐渐隐入地面暗部，脚下保留淡接触阴影，避免完整白色轮廓像贴在背景上。
 
@@ -71,3 +71,7 @@ Placement keeps at least 120 world pixels from real task boxes and checks all ex
 ### Difficulty progression supersedes the early-night defaults above
 
 See [difficulty-progression.md](difficulty-progression.md) and src/runtime/difficulty.ts for current per-night settings. Earlier entries describing universal final-box blink/interceptors, second-night patients, or 2-second early-night door breaches describe the pre-progression version. Current gates: fixed patients on nights 3–4, random roaming from night 5, interceptor from night 4, blink and automatic outages from night 5; protected item supplies and simpler opening searches on nights 1–2.
+
+## 图片交付质量
+
+所有交付图片（含击杀特效）统一使用 WebP Q80，透明通道质量为 100；源 PNG 保留。通过 `npm run assets:compress` 从源文件重建，质量与缩放以 `game/assets/delivery.json` 为准。历史文件名中的 `.q95.webp` 仅保留为兼容路径，实际编码质量以清单和压缩报告为准。
