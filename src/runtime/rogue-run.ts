@@ -1,7 +1,7 @@
 import {t as msg} from '../i18n.ts';
 import type {Position,Box} from '../collision.ts';
 import {center,type Feature} from './rogue-content.ts';
-export type RogueEvent={type:'box-search'}|{type:'noise'}|{type:'message';text:string}|{type:'sound';id:string}|{type:'loot';item:'flash'|'decoy'|'bandage';at:Position;full?:boolean}|{type:'alarm';at:Position}|{type:'damage';amount:number}|{type:'shortcut';gate:Box};
+export type RogueEvent={type:'box-search'}|{type:'noise'}|{type:'message';text:string}|{type:'sound';id:string}|{type:'loot';item:'flash'|'decoy'|'bandage';at:Position}|{type:'alarm';at:Position}|{type:'damage';amount:number}|{type:'shortcut';gate:Box};
 export function waterPhase(time:number,offset=0){const t=(time+offset)%10;return t<2?'warning':t<5?'live':'safe';}
 export class PressureDirector{
  recovery=0;tokens=2;refill=0;phase=msg("rogue.explore");
@@ -22,7 +22,6 @@ export class RogueRun{
  if(f.kind==='empty-task'&&!this.opened.has(f.id)){this.opened.add(f.id);return [{type:'sound',id:'pickup'},{type:'box-search'},{type:'message',text:msg('gameplay.task-box-empty')}];}
  if(f.kind==='cache'&&!this.opened.has(f.id)){
   if(f.hasLoot===false){this.opened.add(f.id);this.stats.cachesOpened++;return [{type:'sound',id:'metal'},{type:'noise'},{type:'message',text:msg("rogue.supply-cabinet-empty")}];}
-  if(inventory&&inventory[f.reward]>=3)return [{type:'loot',item:f.reward,at:center(f),full:true}];
   this.opened.add(f.id);this.stats.cachesOpened++;
   return [{type:'sound',id:'metal'},{type:'noise'},{type:'loot',item:f.reward,at:center(f)}];
  }

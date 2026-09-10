@@ -101,10 +101,10 @@ test('flash gives a full escape window but patient remains watchful after recove
 
 test('turning away preserves escape window without allowing repeated light to extend it',async()=>{
  const {LightFear}=await import('../src/runtime/light-fear.ts');const f=new LightFear();
- assert.equal(f.tick(.05,true),-.65);f.tick(.7,true);f.tick(.05,false);assert.equal(f.recovery,2);
+ assert.equal(f.tick(.05,true),-.65);f.tick(.7,true);f.tick(.05,false);assert.equal(f.recovery,2.5);
  const remaining=f.recovery;f.tick(0,false);assert.equal(f.recovery,remaining);
- for(let i=0;i<30;i++)f.tick(.05,i%2===0);assert.ok(f.recovery<.6);assert.ok(f.recovery>0);
- f.tick(.3,false);assert.equal(f.loweringArms,true);assert.equal(f.tick(.3,false),1);assert.equal(f.suppressed,false);
+ for(let i=0;i<30;i++)f.tick(.05,i%2===0);assert.ok(f.recovery<1.1);assert.ok(f.recovery>0);
+ f.tick(.8,false);assert.equal(f.loweringArms,true);assert.equal(f.tick(.3,false),1);assert.equal(f.suppressed,false);
  assert.equal(f.tick(.05,true),.28);assert.equal(f.suppressed,false);
  f.tick(7,false);assert.equal(f.tick(.05,true),-.65);
 });
@@ -146,4 +146,4 @@ test('pursuit routes around a wall and retries when a closed route opens',()=>{
  assert.ok(resumed,'replans after the door opens');
 });
 
-test('listener hears nearby walking while loud actions carry farther',()=>{assert.equal(hearsWalking('listener',79),true);assert.equal(hearsWalking('listener',80),false);assert.equal(hearsPlayer('listener',220),true);for(const threat of ['light-shy','patroller'])assert.equal(hearsWalking(threat,30),false);});
+test('listener hears nearby walking while loud actions carry farther',()=>{assert.equal(hearsWalking('listener',54),true);assert.equal(hearsWalking('listener',55),false);assert.equal(hearsPlayer('listener',220),true);for(const threat of ['light-shy','patroller'])assert.equal(hearsWalking(threat,30),false);});

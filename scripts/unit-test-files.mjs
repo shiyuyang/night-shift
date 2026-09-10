@@ -3,6 +3,7 @@ export const unitTestFiles=[
   "tests/collision.test.mjs",
   "tests/encounters.test.mjs",
   "tests/pursuit.test.mjs",
+  "tests/pursuit-transitions.test.mjs",
   "tests/levels.test.mjs",
   "tests/run-rules.test.mjs",
   "tests/campaign.test.mjs",

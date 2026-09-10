@@ -1,3 +1,4 @@
+import {lightFearEscapeSeconds} from './light-fear.ts';
 import {storage as persistentStorage} from './storage.ts';
 import {itemRules} from '../run-rules.ts';
 import {tuning} from './pacing.ts';
@@ -8,7 +9,7 @@ export type MonsterLesson=typeof monsterLessons[number];
 export function isMonsterLesson(id:string|null):id is MonsterLesson{return monsterLessons.some(value=>value===id);}
 export const lessons={
  'monster-listener':{get title(){return msg("tutorial.monster-listenerTitle")},get text(){return msg("tutorial.monster-listenerText")},target:'world'},
- 'monster-light-shy':{get title(){return msg("tutorial.monster-light-shyTitle")},get text(){return msg("tutorial.monster-light-shyText")},target:'world'},
+ 'monster-light-shy':{get title(){return msg("tutorial.monster-light-shyTitle")},get text(){return msg("tutorial.monster-light-shyText",{seconds:lightFearEscapeSeconds})},target:'world'},
  'monster-patroller':{get title(){return msg("tutorial.monster-patrollerTitle")},get text(){return msg("tutorial.monster-patrollerText",{seconds:itemRules.flashDuration})},target:'world'},
  'monster-weeper':{get title(){return msg("tutorial.monster-weeperTitle")},get text(){return msg("tutorial.monster-weeperText")},target:'world'},
  health:{get title(){return msg("tutorial.healthTitle")},get text(){return msg("tutorial.healthText")},target:'health'},

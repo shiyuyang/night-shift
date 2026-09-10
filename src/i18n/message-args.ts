@@ -78,7 +78,7 @@ export interface MessageValues{
 "tutorial.monster-listenerTitle":{}
 "tutorial.monster-listenerText":{}
 "tutorial.monster-light-shyTitle":{}
-"tutorial.monster-light-shyText":{}
+"tutorial.monster-light-shyText":{"seconds":number}
 "tutorial.monster-patrollerTitle":{}
 "tutorial.monster-patrollerText":{"seconds":number}
 "tutorial.monster-weeperTitle":{}
@@ -117,7 +117,6 @@ export interface MessageValues{
 "ui.f-repels-nearby-monsters-r-drops-a":{}
 "ui.t-or-the-battery-icon-toggles-the":{}
 "ui.searching-raises-danger-the-final-fuse-starts":{}
-"ui.from-stage-carry-one-flash-decoy-and":{}
 "ui.escape-preparations":{}
 "ui.vital-signs":{}
 "ui.patrol-duration":{}
@@ -343,7 +342,6 @@ export interface MessageValues{
 "menu.night-title":{"night":number;"area":string|number}
 "menu.night":{"night":number}
 "menu.shift-date":{"date":string|number;"weekday":string|number}
-"gameplay.listener-flash-immune":{}
 "rogue.search-supply-cabinet":{}
 "gameplay.task-box-empty":{}
 "desktop.saveError":{}
@@ -353,4 +351,6 @@ export interface MessageValues{
 "desktop.bundledRuntimeError":{}
 "desktop.webviewInstalling":{}
 "desktop.webviewInstallError":{"url":string|number}
+"gameplay.listener-flash-interrupt":{}
+"guide.startingSupplies":{}
 }

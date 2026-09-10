@@ -6,9 +6,9 @@ export function hearsPlayer(threat:Threat,distance:number,unobstructed=true){ret
 /** Footsteps cannot continuously reveal a runner to the sight-led patroller. */
 export function hearsRunning(threat:Threat,distance:number,unobstructed=true){return threat!=='patroller'&&hearsPlayer(threat,distance,unobstructed);}
 /** Quiet walking remains audible to the listener nearby; loud actions use hearsPlayer. */
-export function hearsWalking(threat:Threat,distance:number,unobstructed=true){return threat==='listener'&&distance<(unobstructed?80:40);}
+export function hearsWalking(threat:Threat,distance:number,unobstructed=true){return threat==='listener'&&distance<(unobstructed?55:25);}
 export function roundRules(round:number){const index=round-1;const threat=(['listener','light-shy','patroller'] as const)[(index+Math.floor(index/3))%3];const randomEvent=(['quiet','supply','power'] as const)[(Math.floor(index/2)+(index%2)*2+Math.floor(index/3))%3];
  const event=round<=4?'quiet':randomEvent;
  return {threat,event,threatName:{listener:msg("threat.listener"), 'light-shy':msg("threat.light-shy"),patroller:msg("threat.patroller")}[threat],hint:{listener:msg("gameplay.it-cannot-see-sprinting-and-searching-reveal"), 'light-shy':msg("gameplay.light-makes-it-recoil-turn-and-run"),patroller:msg("gameplay.it-pursues-on-sight-turn-corners-and",{seconds:itemRules.flashDuration})}[threat],eventName:{quiet:msg("gameplay.quiet-patrol-longer-pursuit-intervals"),supply:msg("gameplay.extra-supplies-one-additional-flash-per-stage"),power:msg("gameplay.power-maintenance-intermittent-second-outages-after-searching")}[event]};}
-export const itemRules={flashDuration:2,decoyDuration:8,bandages:1} as const;
+export const itemRules={flashDuration:2,decoyDuration:8,bandages:2} as const;
 export function lightSlows(angle:number,dx:number,dy:number,battery:number,unobstructed=true){return unobstructed&&battery>0&&Math.hypot(dx,dy)<(battery<20?190:250)&&Math.abs(Math.atan2(Math.sin(Math.atan2(dy,dx)-angle),Math.cos(Math.atan2(dy,dx)-angle)))<.5;}

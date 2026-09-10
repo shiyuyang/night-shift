@@ -1,6 +1,6 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import {choosePursuitEntry,PursuitSearch,routeLength} from '../src/runtime/pursuit.ts';
-import {makeLevel} from '../src/levels.ts';import {monsterArchitecture,monsterFeetAt,overlaps} from '../src/collision.ts';
+import {makeLevel} from '../src/levels.ts';import {monsterArchitecture,monsterFeetAt,overlaps,clearContact} from '../src/collision.ts';
 import {Weeper} from '../src/runtime/weeper.ts';
 const bounds={x:0,y:0,width:800,height:600};
 test('entry selection rejects visible and sealed entries and ranks the actual walking route',()=>{
@@ -52,8 +52,8 @@ test('corners break visual lock; sustained sight or close contact can reacquire'
  lock.tick(3,false,150);assert.equal(lock.tick(.01,true,30),true);
 });
 test('quiet steps escape listener hearing outside nearby range; running still reveals',()=>{
- assert.equal(hearsWalking('listener',100),false);assert.equal(hearsWalking('listener',60),true);
- assert.equal(hearsWalking('listener',60,false),false);assert.equal(hearsWalking('listener',30,false),true);
+ assert.equal(hearsWalking('listener',100),false);assert.equal(hearsWalking('listener',40),true);
+ assert.equal(hearsWalking('listener',60,false),false);assert.equal(hearsWalking('listener',24,false),true);
  assert.equal(hearsPlayer('listener',200),true);
 });
 
@@ -70,4 +70,16 @@ test('short corner occlusion enters search; brief glimpses do not restore full p
  assert.equal(lock.tick(.5,true,90),false);assert.equal(lock.searching,true);
  lock.tick(.1,false,90);assert.equal(lock.tick(.5,true,90),false);
  assert.equal(lock.tick(.41,true,90),true);assert.equal(lock.searching,false);
+});
+
+test('opening patrol entries are hidden, reachable and separated from the player spawn across campaign maps',()=>{
+ for(let night=2;night<=7;night++)for(const seed of [0,1,7,19]){
+  const l=makeLevel(night,seed),solids=[...l.walls.map(monsterArchitecture),...l.props,monsterArchitecture(l.door),...l.boxes.map(b=>({x:b.x-13,y:b.y-9,width:26,height:21}))];
+  const e=choosePursuitEntry([...l.monsterSpawns,...l.monsterEntries],l.spawn,solids,l.bounds,117,p=>clearContact(l.spawn,p,solids),undefined,{spawn:l.spawn});
+  assert.ok(e,JSON.stringify({night,seed}));assert.ok(e.seconds>=6);assert.ok(Math.hypot(e.position.x-l.spawn.x,e.position.y-l.spawn.y)>=400);assert.equal(clearContact(l.spawn,e.position,solids),false);
+ }
+});
+test('opening safety never falls back to a nearby or visible entry',()=>{
+ assert.equal(choosePursuitEntry([{x:220,y:100}],{x:100,y:100},[],bounds,117,()=>false,undefined,{spawn:{x:100,y:100}}),undefined);
+ assert.equal(choosePursuitEntry([{x:700,y:100}],{x:100,y:100},[],bounds,117,()=>true,undefined,{spawn:{x:100,y:100}}),undefined);
 });

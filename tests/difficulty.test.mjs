@@ -13,3 +13,4 @@ test('nights 3 and 4 remain fixed; night 5 has both absent and roaming seeded ou
  for(let seed=0;seed<32;seed++){const w=chooseWeeper(l,seed);if(!w)absent++;else{roaming++;assert.ok(weeperRoamPoints(l,w).length>0);}}
  assert.ok(absent>0&&roaming>0,{absent,roaming});
 });
+test('starting supplies offer one extra flash and decoy on every night',()=>{for(let n=1;n<=12;n++){assert.equal(d(n).startingFlashes,n<=2?4:2);assert.equal(d(n).startingDecoys,n<=2?4:2);}});

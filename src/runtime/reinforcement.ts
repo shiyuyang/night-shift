@@ -40,8 +40,8 @@ export class Reinforcement {
   if(this.warning>0||this.stun>0)return false;
   this.clueClock=Math.max(0,this.clueClock-dt);
   const seen=this.sightLock.tick(dt,approaching,Math.hypot(this.position.x-input.player.x,this.position.y-input.player.y));
-  if(seen&&!input.distraction){this.target={...input.player};this.clueClock=2.5;this.routeClock=Math.min(this.routeClock,.2);}
-  const distraction=this.distractionResponse.tick(dt,'patroller',input.distraction,approaching,this.position);if(this.distractionResponse.changed)this.routeClock=0;
+  if(seen){this.target={...input.player};this.clueClock=2.5;this.routeClock=Math.min(this.routeClock,.2);}
+  const distraction=this.distractionResponse.tick(dt,'patroller',input.distraction,seen,this.position);if(this.distractionResponse.changed)this.routeClock=0;if(this.distractionResponse.hesitation>0)return false;
 
   let goal=input.retreat?this.entry:distraction??(this.guard>0?this.entry:input.doorTarget??(this.clueClock>0?this.target:input.goal??this.entry));
   if(!goal)return false;
