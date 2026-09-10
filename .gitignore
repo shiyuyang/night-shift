@@ -1,5 +1,10 @@
 node_modules/
 dist/
+dist-desktop/
+src-tauri/target/
+src-tauri/gen/
+src-tauri/.xwin-cache/
+output/desktop/
 .env
 .env.*
 !.env.example

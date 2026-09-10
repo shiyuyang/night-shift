@@ -51,15 +51,23 @@
     "test:browser:listener": "node tests/listener-footsteps.browser.mjs",
     "test:browser:density": "node tests/reinforcement.browser.mjs",
     "test:layouts": "npm run content:check && node scripts/test-layouts.mjs",
-    "test:browser:deaths": "node tests/monster-death.browser.mjs"
+    "test:browser:deaths": "node tests/monster-death.browser.mjs",
+    "build:desktop": "node scripts/build-desktop.mjs",
+    "desktop:dev": "tauri dev",
+    "desktop:windows": "tauri build --target x86_64-pc-windows-msvc --bundles nsis",
+    "desktop:macos": "tauri build --ci --bundles app,dmg",
+    "desktop:macos:intel": "tauri build --ci --target x86_64-apple-darwin --bundles app,dmg",
+    "test:browser:desktop": "node tests/desktop.browser.mjs"
   },
   "dependencies": {
     "@formatjs/icu-messageformat-parser": "^3.5.17",
+    "@tauri-apps/api": "2.11.1",
     "intl-messageformat": "^11.2.14",
     "phaser": "^3.90.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0",
+    "@tauri-apps/cli": "2.11.4",
     "@types/node": "^24.0.0",
     "ajv": "^8.20.0",
     "fontkit": "^2.0.4",

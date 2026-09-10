@@ -1,4 +1,5 @@
 import {ShadeScare} from './ui/shade-scare';
+import {toggleFullscreen} from './runtime/fullscreen';
 import {GiftPanel} from './ui/gift-panel';
 import {giftDefinitions,type GiftEvent} from './runtime/live-gifts';
 import {tuning} from './runtime/pacing';
@@ -115,7 +116,7 @@ $('#pause').onclick=()=>menu($('#pause-menu').hidden);$('#resume').onclick=()=>m
 $('#book-guide').onclick=()=>document.querySelector<HTMLDialogElement>('#guide-dialog')!.showModal();
 $('#guide').onclick=()=>document.querySelector<HTMLDialogElement>('#guide-dialog')!.showModal();$('#close-guide').onclick=()=>document.querySelector<HTMLDialogElement>('#guide-dialog')!.close();
 $('#sound').onclick=()=>{audioOn=!audioOn;void ambience.setEnabled(audioOn).catch(()=>toast(msg("ui.could-not-enable-audio-please-retry")));};ambience.onStatus=status=>{$('#music-status').dataset.status=status;$('#music-status').textContent=audioStatus(status);audioOn=ambience.enabled;$('#sound').textContent=t(audioOn?'settings.soundOn':'settings.soundOff');};$('#music-volume').oninput=e=>ambience.setVolume(Number((e.target as HTMLInputElement).value)/100);$('#desk-settings').onclick=()=>menu(true);$('#start-layer').addEventListener('pointerdown',()=>{if(audioOn)enterAudio();},{once:true});
-$('#fullscreen').onclick=()=>{if(document.fullscreenElement)void document.exitFullscreen();else void $('#game-wrap').requestFullscreen().catch(()=>toast(msg("ui.this-browser-does-not-support-fullscreen")));};
+$('#fullscreen').onclick=()=>{void toggleFullscreen($('#game-wrap')).catch(()=>toast(msg("ui.this-browser-does-not-support-fullscreen")));};
 function renderStages(){
  const pages=Math.ceil((campaign.unlocked+1)/STAGES_PER_PAGE);stagePage=Math.max(0,Math.min(stagePage,pages-1));
  $('#stage-progress').textContent=t('menu.archive',{count:String(campaign.unlocked-1).padStart(2,'0')});

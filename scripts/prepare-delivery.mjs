@@ -24,8 +24,8 @@ function walk(dir) {
   return readdirSync(dir, {withFileTypes: true}).flatMap(e =>
     e.isDirectory() ? walk(resolve(dir, e.name)) : [resolve(dir, e.name)]);
 }
-export function prepareDelivery() {
-  const publicDir = resolve(root, 'public'), dist = resolve(root, 'dist');
+export function prepareDelivery({distDir = 'dist'} = {}) {
+  const publicDir = resolve(root, 'public'), dist = resolve(root, distDir);
   const allowed = new Set(deliveryFiles());
   for (const row of read('game/assets/compression-report.json')) {
     for (const [name, expected] of [[row.source, row.source_sha256], [row.file, row.sha256]]) {
