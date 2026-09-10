@@ -50,7 +50,8 @@
     "test:browser:ward-finale": "node tests/ward-finale.browser.mjs",
     "test:browser:listener": "node tests/listener-footsteps.browser.mjs",
     "test:browser:density": "node tests/reinforcement.browser.mjs",
-    "test:layouts": "npm run content:check && node scripts/test-layouts.mjs"
+    "test:layouts": "npm run content:check && node scripts/test-layouts.mjs",
+    "test:browser:deaths": "node tests/monster-death.browser.mjs"
   },
   "dependencies": {
     "@formatjs/icu-messageformat-parser": "^3.5.17",

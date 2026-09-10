@@ -270,6 +270,42 @@
     "encoding": "webp-q95"
   },
   {
+    "file": "assets/death-listener-v2.webp",
+    "source": "assets/death-listener-v2.png",
+    "source_bytes": 2232593,
+    "bytes": 309758,
+    "source_sha256": "541a85835d8e3e1e0b3877b3bfec2d1ad233828d9fe3c3ec0098be3b8d375a6c",
+    "sha256": "44ec3be4339c1979576e6b7e69b0c0cb6bcf9bcdf567e255b876549b971aa8bd",
+    "encoding": "webp-q95"
+  },
+  {
+    "file": "assets/death-light-shy-v2.webp",
+    "source": "assets/death-light-shy-v2.png",
+    "source_bytes": 2073364,
+    "bytes": 263636,
+    "source_sha256": "346974199989e7a5c881c360bdd4b2837d15eca947c3a4a7543397a7f0824668",
+    "sha256": "732158b82658ff619c9ec8e03be9bd967e46de54d8d8803692e2584b1edc44fd",
+    "encoding": "webp-q95"
+  },
+  {
+    "file": "assets/death-patroller-v1.webp",
+    "source": "assets/death-patroller-v1.png",
+    "source_bytes": 1945501,
+    "bytes": 314564,
+    "source_sha256": "246adfb81d856ec1eb7b60d16bf6d2dbdcd3092615f8256b3311ce21dae6ba79",
+    "sha256": "0985ce353b9823eb33887facd1a28133eebd064d38580fcdea47acd9e233ef7f",
+    "encoding": "webp-q95"
+  },
+  {
+    "file": "assets/death-weeper-v2.webp",
+    "source": "assets/death-weeper-v2.png",
+    "source_bytes": 2147054,
+    "bytes": 309676,
+    "source_sha256": "7d02f3b9a9068c4e82969463a92fec205b83dd43a2dee46e6b5496973926a0e2",
+    "sha256": "8b65683a4e86c367494aa78a3660b944134b76c595a94ad46e82311b07765ed9",
+    "encoding": "webp-q95"
+  },
+  {
     "file": "audio/ward-exploration-v3.opus",
     "source": "audio/ward-exploration-v3.mp3",
     "source_bytes": 641194,

@@ -149,6 +149,26 @@
       "source": "/assets/archive-garden-v1.png",
       "file": "/assets/archive-garden-v1.q95.webp",
       "encoding": "webp-q95"
+    },
+    {
+      "source": "/assets/death-listener-v2.png",
+      "file": "/assets/death-listener-v2.webp",
+      "encoding": "webp-q95"
+    },
+    {
+      "source": "/assets/death-light-shy-v2.png",
+      "file": "/assets/death-light-shy-v2.webp",
+      "encoding": "webp-q95"
+    },
+    {
+      "source": "/assets/death-patroller-v1.png",
+      "file": "/assets/death-patroller-v1.webp",
+      "encoding": "webp-q95"
+    },
+    {
+      "source": "/assets/death-weeper-v2.png",
+      "file": "/assets/death-weeper-v2.webp",
+      "encoding": "webp-q95"
     }
   ],
   "staticFiles": [
