@@ -4,162 +4,182 @@
   "domain": "night-shift-assets.liveinteractivegame.com",
   "zoneId": "30badb66445e606e10540be49d75e584",
   "prefix": "games/night-shift",
-  "version": "29c848d992a06119",
+  "version": "6b47a0e1b656d3bd",
   "files": [
     {
       "file": "assets/archive-garden-v1.q95.webp",
-      "bytes": 451350,
-      "sha256": "b98ecee671ffb750309594a0eab8b185c47333266cb9ba0b4af4b4ad5a7375b4"
+      "bytes": 168164,
+      "sha256": "049e637b951e8095cd1f68e22ac05a001cb955e22ebaefec4347983581dc712b"
     },
     {
       "file": "assets/archive-morgue-v1.q95.webp",
-      "bytes": 346762,
-      "sha256": "a080b2fa04f9ced6dd07f342b5f566416ff64c716eb77a8cba38e03acf0143c3"
+      "bytes": 125214,
+      "sha256": "7d56c77b71bda6157c9aea29615c99ecc31bc921dd67a07ac2f3d96b1a90c823"
     },
     {
       "file": "assets/archive-outpatient-v1.q95.webp",
-      "bytes": 349576,
-      "sha256": "c4f95fd701b7570f5528edd778cdf66ce320f75b00adec8c5e31d5537b7eccea"
+      "bytes": 123772,
+      "sha256": "7f9060c4fc7c7c23bea0ac491bf3811831993c4e03edd3134798ac59d381e0af"
     },
     {
       "file": "assets/archive-plant-v1.q95.webp",
-      "bytes": 310896,
-      "sha256": "b747b0189f6ebd5ba8d83397ce198aececcdb52c94a462d6637c052358d859fb"
+      "bytes": 100130,
+      "sha256": "c9494bcef052634af5dcae0ac44c61cfba0b5b316d47f9a7b840a9ccaac283e4"
     },
     {
       "file": "assets/archive-surgery-v1.q95.webp",
-      "bytes": 314400,
-      "sha256": "d2c3f1def200b4a32bed0ad7ee6152d8e928d3714599590f545baa6e8642dd83"
+      "bytes": 114598,
+      "sha256": "54f4c6f5cbb76f2de90478a1bed561246736a66ef4a1ad559a4ff684fe1ebdb0"
     },
     {
       "file": "assets/archive-ward-v1.q95.webp",
-      "bytes": 286658,
-      "sha256": "e419e7b474f44fdb7f0669a48edad9c87acfa91e2000f6fe3a721b7d9391509a"
+      "bytes": 102020,
+      "sha256": "e235fa88b32ba3604edbc7f2cfd8af493f0e36e9967790c097f18c94fb8737b1"
     },
     {
       "file": "assets/archive-warehouse-v1.q95.webp",
-      "bytes": 340696,
-      "sha256": "c27c4587b5974352864f900e3a5f2e57aa43da00caac31b5060ddc376f8b1560"
+      "bytes": 110914,
+      "sha256": "c455cb1e953fdea3dad997fe79ab2669470adf1b8259d78623fc73171e062bd6"
     },
     {
       "file": "assets/bed-overhead-v4.webp",
-      "bytes": 458760,
-      "sha256": "a7f81c18983279366befb17b0b1da8963d28dc559052b82ed85585fb6289ba51"
+      "bytes": 61440,
+      "sha256": "e7919b127bff02f9a2063b9baa5676d370e4005d91a156a61b53e7cbed859b11"
+    },
+    {
+      "file": "assets/death-light-shy-v2.webp",
+      "bytes": 98414,
+      "sha256": "24624c4b8af0b07b30283ec6064407fb268aaa71eb11a8442e613b6fef211a4d"
+    },
+    {
+      "file": "assets/death-listener-v2.webp",
+      "bytes": 120524,
+      "sha256": "e8b9595e110d856593faace6903d9312d48cf99d85971f9957029ff30f35b03b"
+    },
+    {
+      "file": "assets/death-patroller-v1.webp",
+      "bytes": 110630,
+      "sha256": "83851fe3933d430a2a1b47179ad358f5e604810b86f850e4826da42a88faa807"
+    },
+    {
+      "file": "assets/death-weeper-v2.webp",
+      "bytes": 106302,
+      "sha256": "b71af9ab61433a050339f25a43074a0a6fd2fcc175536821f2bfcbff5cb87721"
     },
     {
       "file": "assets/desk-yurei-v1.webp",
-      "bytes": 27194,
-      "sha256": "15845780818de2abcbfc68d18af43a774582369bea9e278f54570d72450ee751"
+      "bytes": 19290,
+      "sha256": "4e60125e9a5f44fd21a5a56bf1c5c53349f2e239b14aab7aaa328eda6d47cfe7"
     },
     {
       "file": "assets/garden-pine-v1.webp",
-      "bytes": 624694,
-      "sha256": "4a4d6dd9a0bc715e565919ffe132bb0d770863a487d812a0dfc11a1d36667420"
+      "bytes": 171006,
+      "sha256": "4fc3c3253d2822cace234bb9687a124a02bddeac7112190a20273bcdf584d342"
     },
     {
       "file": "assets/gift-shade-contact-v1.webp",
-      "bytes": 249690,
-      "sha256": "42d6131cbc73e9b65a81a6359f9f9660d11cca7d7fc630b56760d3b3cf42032d"
+      "bytes": 88510,
+      "sha256": "d48d204b96db3a917659c5832a5472bd3908771c6d3f259cad66bdf142e04f52"
     },
     {
       "file": "assets/gift-shade-walk-v1.webp",
-      "bytes": 47038,
-      "sha256": "3e8ac09c13cc358c992defadcb02f7e29c8f97a2e76c487b4282a95053557a17"
+      "bytes": 20560,
+      "sha256": "41e35aaf54ff9671960ccd11eeea8bcddb8629c9a67b8f096fd3df6565a20080"
     },
     {
       "file": "assets/hospital-corridor-v2.q95.webp",
-      "bytes": 280544,
-      "sha256": "b04933bdc200c6373b28100adfc0c4c9d1c5ba4ebc698d93f59249488e1ee2cf"
+      "bytes": 95768,
+      "sha256": "ec9e9210b3f68818a70bc5493b9bff3101df3ac1cf8658b60faddc6e2a5bbf33"
     },
     {
       "file": "assets/hospital-floor-v2.q95.webp",
-      "bytes": 408898,
-      "sha256": "aba52280f139899d5c49ad49a2035f1ee525b1bc58af7e854efac4827a722552"
+      "bytes": 156970,
+      "sha256": "9e7cf35c1f2caf6c7dd33d27ecbb49980ab0a5fd0954cb405739bdd99f43c9e0"
     },
     {
       "file": "assets/hospital-light-shy-v1.webp",
-      "bytes": 822152,
-      "sha256": "2f6ec34c7849481d449088ecdf1ff03dc35a85ad6b0530245547ea68c48cc0e7"
+      "bytes": 273910,
+      "sha256": "2a6e1499b26a73096b7a8f56cf9dcb5d62f3960283eba907896286f2c6e5e1db"
     },
     {
       "file": "assets/hospital-listener-v1.webp",
-      "bytes": 840216,
-      "sha256": "b0cf7b3e227cd1547df84517198555b5807cc37a936d811abef47a528944545a"
+      "bytes": 306116,
+      "sha256": "8eec14e60f817511057b99300dc5c06d602a0d17cd18b0e806e37fc6e5577839"
     },
     {
       "file": "assets/hospital-patroller-v1.webp",
-      "bytes": 834208,
-      "sha256": "7393cb63d8f78819a26356ecf9e317676bedf27f2ee3acd6d8dd4f3909b1d3ed"
+      "bytes": 300880,
+      "sha256": "109b05e2aeac4ec9f6be5947d4b0d8398211ed2590e94ae3aabc04c94fa217e3"
     },
     {
       "file": "assets/hospital-register-selected-v1.webp",
-      "bytes": 571216,
-      "sha256": "054e5fa98826311416bb7bf89b29e4e9fbb1870a7625aaae59a961a450db29a6"
+      "bytes": 286376,
+      "sha256": "85ecea48e254d79245786aed6d3fcd49cd55a5bf8588fbbbef874a43316efd27"
     },
     {
       "file": "assets/hospital-seal-oval-v1.webp",
-      "bytes": 350056,
-      "sha256": "8e867b3afcf4dcd8517729f64f3434a9c01bb289debbd643c0fe3753ab5d8930"
+      "bytes": 254414,
+      "sha256": "3fa5382b1ef1436b2bd45134c5e2a9f3be5f7ab2bb18875c6c7bda5e6bb81dbd"
     },
     {
       "file": "assets/hospital-wall-v2.q95.webp",
-      "bytes": 608880,
-      "sha256": "a5523afb3a7c412c704683b55865a80b1aae92137837fdd7a997c4d0293343cb"
+      "bytes": 236948,
+      "sha256": "66a7052aa6a82be16e53d827d06a5e75f4f3ff5ce89f35b42a964c3c88e266e5"
     },
     {
       "file": "assets/morgue-shrouded-body-v1.webp",
-      "bytes": 414116,
-      "sha256": "baba78bd4a5caa8363de90c9560d341d801d5002246fb70735e3396dd9a86741"
+      "bytes": 70716,
+      "sha256": "8691dd096af90956e3590586731bdd0eb2a884389e9f97500f9c3a0fbca3e9ff"
     },
     {
       "file": "assets/patient-sheet-v4.webp",
-      "bytes": 852950,
-      "sha256": "12fc209228c8c962be94dc9d29c3243673a0f562d3d5c71f817dd21c3b8b3adb"
+      "bytes": 318230,
+      "sha256": "49c00e3ec17d98ad5cb71456067b3e6eaabd74bf703d85af28f85dd34f7f24c0"
     },
     {
       "file": "assets/patrol-book-pixel-v1.webp",
-      "bytes": 1272988,
-      "sha256": "298fcbbbf76ee4e3c35a8971e3f20ebee34404f9b9efd014df21e2f53abf118b"
+      "bytes": 183236,
+      "sha256": "f18a19655d645125d3f51040f13241bf52423e9540ac3da4e7e4bd3cd919fe6d"
     },
     {
       "file": "assets/stamp-button-normal-v1.webp",
-      "bytes": 317858,
-      "sha256": "1918a7e904ea8a474ac03c2914bc7fa3a5c47252398af8c0a1a51828de8b9c25"
+      "bytes": 169944,
+      "sha256": "bb84a618c9aae19eeeb6e2e88b4a10475a6c958bd00402177106a2a62f40bd4e"
     },
     {
       "file": "assets/stamp-button-pressed-v1.webp",
-      "bytes": 143786,
-      "sha256": "31f052758989e4ad5539379bda6ed626a00f600d03d325df2438023e38aafc2c"
+      "bytes": 56778,
+      "sha256": "7cfc78b9571ab8f6b06e9be03adb0bc922fbbe0b3eb1ec3d54c9beee6451d32d"
     },
     {
       "file": "assets/watch-desk-cold-night-v1.webp",
-      "bytes": 184588,
-      "sha256": "7228852655ab5b72189ff92c04602102d726b04c12760ff0ab2427062c789d68"
+      "bytes": 48214,
+      "sha256": "769f374aef787e6ba44854e26b07839f58452a156b640e0aa4b1ec8e1f8c3ab9"
     },
     {
       "file": "assets/watch-desk-painted-v2.q95.webp",
-      "bytes": 467268,
-      "sha256": "122b313730f4d1fc5a15edd57c06083d176d61103ae6edfeb8c06f4c38fbe4b3"
+      "bytes": 139376,
+      "sha256": "51febe08282282f44e5e4c987efa9e202982ef7d78b13b3f3f3977e36260a229"
     },
     {
       "file": "assets/watch-desk-v1.q95.webp",
-      "bytes": 282364,
-      "sha256": "2b594c15789c88e8499ab3e453d6fe8b84d356ca839f163e4796bfdc78b4a314"
+      "bytes": 84784,
+      "sha256": "5b265f49c647c70b817776e52bf3ca620ca4232172c009b645e9abc92d6e17a1"
     },
     {
       "file": "assets/watchman-sheet-v4.webp",
-      "bytes": 665826,
-      "sha256": "5e672d200c09db0444b6b7731ddb20c38436c5b43f28dc0dec4beea63e20dcad"
+      "bytes": 170386,
+      "sha256": "b05c6f957fb5bc15bcab8cc5983e23458948b6653db6fe62167a434c1c0f3067"
     },
     {
       "file": "assets/weeping-patient-v1.webp",
-      "bytes": 960314,
-      "sha256": "8fae864e2a1efc1390c25efe17520953d4b51f89503d1a7b6e40c0b19f8777b7"
+      "bytes": 327298,
+      "sha256": "eb03a9aa8272215e49dfdaa2d20dde30a5ae6a6597015f1833208f4f98dd0991"
     },
     {
       "file": "assets/yakin-byoutou-title-v4.webp",
-      "bytes": 527184,
-      "sha256": "b60f6eff6e2b5eb4efeb82607ba5740547f2358a2e4d5c82bf8a160adc82e40e"
+      "bytes": 55634,
+      "sha256": "828bd54766cf9531dfd3d3db9ad0a5e345d0899624555b873aef7110bffbd484"
     },
     {
       "file": "audio/garden-blood-moon-v1.ogg",
@@ -342,6 +362,6 @@
       "sha256": "d113cd651f212760397282b77588d331a6079268e539375b784992fb97ecd320"
     }
   ],
-  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/29c848d992a06119/",
-  "publishedAt": "2026-09-10T06:34:16.849Z"
+  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/6b47a0e1b656d3bd/",
+  "publishedAt": "2026-09-10T06:44:39.518Z"
 }
