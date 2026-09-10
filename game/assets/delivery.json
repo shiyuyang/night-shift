@@ -82,8 +82,8 @@
     },
     {
       "source": "/assets/yakin-byoutou-title-v4.png",
-      "file": "/assets/yakin-byoutou-title-v4.webp",
-      "encoding": "webp-q80"
+      "file": "/assets/yakin-byoutou-title-alpha-v1.webp",
+      "encoding": "webp-luminance-alpha"
     },
     {
       "source": "/assets/watch-desk-cold-night-v1.png",

@@ -144,13 +144,13 @@
     "encoding": "webp-q80"
   },
   {
-    "file": "assets/yakin-byoutou-title-v4.webp",
+    "file": "assets/yakin-byoutou-title-alpha-v1.webp",
     "source": "assets/yakin-byoutou-title-v4.png",
     "source_bytes": 779000,
-    "bytes": 55634,
+    "bytes": 536580,
     "source_sha256": "3079ecadc65353476418ca49c691017e8f8115367c3b1afd0aa395e98875feb5",
-    "sha256": "828bd54766cf9531dfd3d3db9ad0a5e345d0899624555b873aef7110bffbd484",
-    "encoding": "webp-q80"
+    "sha256": "92f666521f86da9f0771d8d36c4cf279f308aab228375e11c2b3614d118bc08e",
+    "encoding": "webp-luminance-alpha"
   },
   {
     "file": "assets/watch-desk-cold-night-v1.webp",

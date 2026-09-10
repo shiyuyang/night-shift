@@ -30,7 +30,7 @@ try{
  assert.equal(await page.title(),'夜勤病棟');
  const brand=page.locator('.game-brand img');
  assert.equal(await brand.getAttribute('alt'),'夜勤病棟');
- assert.equal(new URL(await brand.getAttribute('src'),url).href,assetBase+'assets/yakin-byoutou-title-v4.webp?cors=anonymous');
+ assert.equal(new URL(await brand.getAttribute('src'),url).href,assetBase+'assets/yakin-byoutou-title-alpha-v1.webp?cors=anonymous');
  assert.ok(await brand.evaluate(image=>image.complete&&image.naturalWidth>0),'Title image must load');
  assert.equal(await page.locator('.desk-title p').textContent(),'今晚的病人，比名册上多一位。');
  // Verify the cover's lamp actually changes opacity.

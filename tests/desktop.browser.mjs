@@ -32,6 +32,20 @@ try {
       await page.goto(origin);
       await page.locator('#start:enabled').waitFor({timeout: 30000});
       await page.waitForFunction(() => document.querySelector('#survey').dataset.loaded === 'true');
+      const brand = page.locator('.game-brand img');
+      await brand.evaluate(image => image.decode());
+      assert.equal(await brand.evaluate(image => getComputedStyle(image).maskImage), 'none', 'Native title must not depend on a URL mask');
+      const pixels = await brand.evaluate(image => {
+        const canvas = document.createElement('canvas');
+        canvas.width = image.naturalWidth; canvas.height = image.naturalHeight;
+        const ctx = canvas.getContext('2d'); ctx.drawImage(image, 0, 0);
+        const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+        let ink = 0, clear = 0;
+        for (let i = 3; i < data.length; i += 4) {if (data[i] > 100) ink++; if (data[i] === 0) clear++;}
+        return {ink, clear};
+      });
+      assert.ok(pixels.ink > 10000 && pixels.clear > 10000, 'Title needs visible glyphs and transparent backing');
+      await brand.screenshot({path: `output/desktop/${engine.name()}-wordmark.png`});
       for (const locale of ['zh-Hans', 'en', 'ja']) {
         await Promise.all([page.waitForEvent('load'), page.locator('#menu-language').selectOption(locale)]);
         await page.locator('#start:enabled').waitFor();

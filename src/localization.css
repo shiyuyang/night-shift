@@ -61,9 +61,9 @@ html[data-script=complex] *{letter-spacing:normal!important;text-transform:none!
 #start-layer .archive-sheet{min-height:0;max-height:none;padding-bottom:8px;overflow:hidden}
 #start-layer .book-footer{margin-top:10px;border-top:0;border-bottom:1px solid #42585c44;padding:0 4px 10px;align-items:flex-end}
 #start-layer #start{top:0;flex-shrink:0}
-/* Keep a visible image, with CORS-compatible luminance masking for its black backing. */
+/* Render the transparent wordmark directly, including native local protocols. */
 #start-layer .game-brand{aspect-ratio:8/3;isolation:auto}
-#start-layer .game-brand img{opacity:1;mask-image:var(--brand-source);mask-mode:luminance;mask-size:100% 100%;mask-repeat:no-repeat}
+#start-layer .game-brand img{opacity:1}
 #start-layer .game-brand::after{display:none}
 
 /* The stamp has its own fixed slot, so translated labels cannot push down the record. */

@@ -21,7 +21,7 @@ try{
  await page.unroute(fixture);
  // Deliberately keep the real browser cache enabled. R2's no-Origin response
  // has no ACAO header and must not poison later CORS image/canvas requests.
- const paths=['yakin-byoutou-title-v4.webp','archive-ward-v1.q95.webp'];
+ const paths=['yakin-byoutou-title-alpha-v1.webp','archive-ward-v1.q95.webp'];
  await page.evaluate(async urls=>{for(const url of urls)await new Promise((resolve,reject)=>{
   const image=new Image();image.onload=resolve;image.onerror=()=>reject(Error('Cache priming failed: '+url));image.src=url;document.body.append(image);
  });},paths.map(p=>assetBase+'assets/'+p));

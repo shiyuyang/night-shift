@@ -27,7 +27,10 @@ def derivative(source, target, encoding, options, resize=None):
                and previous.get('resize') == resize
                and dst.exists() and previous.get('sha256') == digest(dst))
     if not dst.exists() or not (current or legacy):
-        if encoding.startswith('webp-q'):
+        if encoding == 'webp-luminance-alpha':
+            subprocess.run(['uv', 'run', '--with', 'pillow', 'python',
+                            str(root / 'scripts/prepare-wordmark.py')], check=True)
+        elif encoding.startswith('webp-q'):
             quality = int(encoding.removeprefix('webp-q'))
             assert 0 <= quality <= 100, f'Invalid WebP quality: {quality}'
             sizing = ['-resize', *map(str, resize)] if resize else []

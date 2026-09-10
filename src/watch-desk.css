@@ -156,8 +156,7 @@ html[lang=en] #start-layer .night-select button b{font-size:15px}
 @container desk-stage (max-width:700px){#start-layer .desk-content{width:calc(100% - 32px)}}
 @container desk-stage (min-width:701px) and (max-width:1100px){#start-layer #start{width:140px}}
 
-/* DNT wordmark: luminance mask discards the black source background.
-   The source remains RGB; subtitle stays live localized text. */
+/* DNT wordmark has baked alpha so local WebViews need no CSS image mask. */
 .desk-title .game-brand{width:min(360px,80%);margin:3px 0 0;line-height:0;letter-spacing:0;text-shadow:none;position:relative}
 .game-brand img{display:block;width:100%;height:auto;image-rendering:pixelated}
 .desk-title p{max-width:36ch}
@@ -165,8 +164,6 @@ html[lang=en] #start-layer .night-select button b{font-size:15px}
 @container desk-stage (max-width:700px){.desk-title .game-brand{width:min(300px,95%)}.desk-title{margin-bottom:34px}}
 @container desk-stage (max-height:650px) and (min-width:701px){.desk-title .game-brand{width:270px}.desk-title{margin-bottom:28px}}
 
-.game-brand::after{content:"";position:absolute;inset:0;background:#dedbc9;mask-image:var(--brand-source);mask-mode:luminance;mask-size:100% 100%;mask-repeat:no-repeat;pointer-events:none}
-.game-brand img{opacity:0}
 
 @container desk-stage (min-width:701px){.desk-title p{max-width:none}html[lang=en] .desk-title p{font-size:15px;letter-spacing:0}}
 
@@ -174,7 +171,6 @@ html[lang=en] #start-layer .night-select button b{font-size:15px}
 .patrol-book{background-image:none}
 .patrol-book::before{display:block;inset:0;z-index:-1;border-radius:0;box-shadow:none;background-image:url('/assets/hospital-register-selected-v1.webp');background-position:inherit;background-size:inherit;background-repeat:no-repeat;filter:brightness(.86)}
 .desk-kicker,.desk-title p,.desk-footnote{color:#b0bdc0;text-shadow:1px 2px #080f13}
-.game-brand::after{background:#d5e0df}
 .book-header{color:#26383d;border-color:#344c5055}
 #stage-progress,.index-label,.file-code{color:#40565b}
 #start-layer .night-select button{border-bottom-color:#40575b33;color:#273c41}
