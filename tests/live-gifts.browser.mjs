@@ -32,8 +32,8 @@ try{
  await page.evaluate(()=>{const s=window.__nightshiftScene;s.setPaused(false);for(let i=0;i<45;i++)s.update(0,50);s.setPaused(true);});const pos=await page.evaluate(()=>window.__nightshift().player);assert.ok(Math.hypot(pos.x-old.x,pos.y-old.y)>50);
  await page.screenshot({path:out+'/warp-awake.png'});
  // Show the actual four directional frames and prove items do not alter shade state.
- await page.evaluate(async()=>{const s=window.__nightshiftScene,{giftLanding}=await import('/src/runtime/gift-placement.ts');s.giftShade.position=giftLanding(s.player,s.solids(),s.level.bounds,90,[],Math.PI);s.giftShade.tear=0;s.giftShade.teleportWait=3;s.showGifts();});
- for(let row=0;row<4;row++){await page.evaluate(row=>{const s=window.__nightshiftScene,p=s.giftShade.position;s.shadeSprite.setPosition(p.x,p.y+16).setVisible(true).setAlpha(.9).setFrame(row*4+1);},row);await page.screenshot({path:`${out}/shade-direction-${row}.png`});}
+ await page.evaluate(async()=>{const s=window.__nightshiftScene,{giftLanding}=await import('/src/runtime/gift-placement.ts');s.giftShade.position=giftLanding(s.player,s.solids(),s.level.bounds,90,[],Math.PI);s.giftShade.tear=0;s.giftShade.teleportWait=3;const p=s.giftShade.position;s.cameras.main.stopFollow();s.cameras.main.centerOn((s.player.x+p.x)/2,(s.player.y+p.y)/2);s.showGifts();});
+ for(let row=0;row<4;row++){await page.evaluate(row=>{const s=window.__nightshiftScene,p=s.giftShade.position;s.shadeSprite.setPosition(p.x,p.y+5).setVisible(true).setAlpha(.95).setFrame(row);s.sync();},row);await page.waitForTimeout(50);await page.screenshot({path:`${out}/shade-direction-${row}.png`});}
  await page.evaluate(()=>{const s=window.__nightshiftScene;s.setPaused(false);s.protection=9999;s.flashes=10;s.decoys=10;s.bandages=10;});
  const prior=await page.evaluate(()=>window.__nightshift().gifts.shade);for(const key of ['F','R','Q'])await page.evaluate(key=>window.__nightshiftScene.useItem(key),key);
  assert.ok(await page.evaluate(()=>window.__nightshift().gifts.shade)>prior-3);

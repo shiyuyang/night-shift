@@ -4,7 +4,7 @@
   "domain": "night-shift-assets.liveinteractivegame.com",
   "zoneId": "30badb66445e606e10540be49d75e584",
   "prefix": "games/night-shift",
-  "version": "420858bf018c02bb",
+  "version": "dae9e9da2c11574f",
   "files": [
     {
       "file": "assets/archive-garden-v1.q95.webp",
@@ -82,9 +82,9 @@
       "sha256": "d48d204b96db3a917659c5832a5472bd3908771c6d3f259cad66bdf142e04f52"
     },
     {
-      "file": "assets/gift-shade-walk-v1.webp",
-      "bytes": 20560,
-      "sha256": "41e35aaf54ff9671960ccd11eeea8bcddb8629c9a67b8f096fd3df6565a20080"
+      "file": "assets/gift-shade-float-v2.webp",
+      "bytes": 2528,
+      "sha256": "de36da8822877cfc1cfc1563ab671e703484a5dad2fb1a6dadef875d43b058be"
     },
     {
       "file": "assets/hospital-corridor-v2.q95.webp",
@@ -362,6 +362,6 @@
       "sha256": "d113cd651f212760397282b77588d331a6079268e539375b784992fb97ecd320"
     }
   ],
-  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/420858bf018c02bb/",
-  "publishedAt": "2026-09-11T08:40:39.975Z"
+  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/dae9e9da2c11574f/",
+  "publishedAt": "2026-09-11T09:35:41.996Z"
 }

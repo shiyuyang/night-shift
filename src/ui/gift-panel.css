@@ -6,7 +6,7 @@
 .gift-photo{position:relative}.gift-photo img{position:absolute;inset:0}.gift-name{font-family:inherit,system-ui,sans-serif}
 
 /* Match the floating HUD: spacing and soft text shadows define groups without panels. */
-.gift-panel{filter:none;text-shadow:0 1px 3px #000,0 0 9px #000b}
+.gift-panel{filter:none;text-shadow:0 1px 3px #000,0 0 9px #000b;transform:scale(1.12);transform-origin:top left}
 .gift-panel section{background:none;border:0;box-shadow:none;margin-bottom:20px;transition:opacity 160ms ease-out}
 .gift-receipt{padding:8px 10px;overflow:visible}
 .gift-receipt:after,.gift-receipt-rule{display:none}

@@ -216,12 +216,12 @@
     "encoding": "webp-q80"
   },
   {
-    "file": "assets/gift-shade-walk-v1.webp",
-    "source": "assets/gift-shade-walk-v1.png",
-    "source_bytes": 74705,
-    "bytes": 20560,
-    "source_sha256": "e41cc3ad4e080cd3ec382585fde64cb010879b7ba1635300b1ca79ffc33f5094",
-    "sha256": "41e35aaf54ff9671960ccd11eeea8bcddb8629c9a67b8f096fd3df6565a20080",
+    "file": "assets/gift-shade-float-v2.webp",
+    "source": "assets/gift-shade-float-v2.png",
+    "source_bytes": 13318,
+    "bytes": 2528,
+    "source_sha256": "cca4b9415eefb76d34c3bb12380c3cfe9005f749b301940301dda46d4905b809",
+    "sha256": "de36da8822877cfc1cfc1563ab671e703484a5dad2fb1a6dadef875d43b058be",
     "encoding": "webp-q80"
   },
   {
