@@ -4,7 +4,7 @@
   "domain": "night-shift-assets.liveinteractivegame.com",
   "zoneId": "30badb66445e606e10540be49d75e584",
   "prefix": "games/night-shift",
-  "version": "adf534606fc942d9",
+  "version": "420858bf018c02bb",
   "files": [
     {
       "file": "assets/archive-garden-v1.q95.webp",
@@ -277,14 +277,14 @@
       "sha256": "205d4836b1c457981ca9a6edb2aa494b1a24573c68cdcb7a524819fc5a701a05"
     },
     {
-      "file": "fonts/locale-ja-142c8faba8.woff2",
-      "bytes": 262728,
-      "sha256": "142c8faba8fc9bfa57f8229dd22f1def08b92acb0d8abe29244c650606e45bdc"
+      "file": "fonts/locale-ja-05c49a0437.woff2",
+      "bytes": 262260,
+      "sha256": "05c49a0437fd376ecab6370b10d6a0ca4dcaeb91f94e1bbdc55ff7a299b08264"
     },
     {
-      "file": "fonts/locale-ko-fa87fdf265.woff2",
-      "bytes": 107636,
-      "sha256": "fa87fdf265555c7e2b25fafdc57eecdc5c2f8538761ca44aa0e9d293fd27af2e"
+      "file": "fonts/locale-ko-bb4ae26ebf.woff2",
+      "bytes": 107640,
+      "sha256": "bb4ae26ebf4984c83c910ea6630f536b1de40fdeb65f1b5c1711ee960467f423"
     },
     {
       "file": "fonts/locale-latin-e847303ddd.woff2",
@@ -302,14 +302,14 @@
       "sha256": "9f5ad7c0dafb6259a11e1b82c57a296f65bd26283ca20ba03ce0ea6791bc3c36"
     },
     {
-      "file": "fonts/locale-zh-Hans-bf33761e0c.woff2",
-      "bytes": 212576,
-      "sha256": "bf33761e0c8f360429fd4727e95827429efd920af032918074f8caf3ade75864"
+      "file": "fonts/locale-zh-Hans-f4e5be3cd7.woff2",
+      "bytes": 213084,
+      "sha256": "f4e5be3cd793f4f841715f8fbdd2be131c185b917c535469208707d2560ee03a"
     },
     {
-      "file": "fonts/locale-zh-Hant-7f95ab4a7e.woff2",
-      "bytes": 232048,
-      "sha256": "7f95ab4a7e4bec9b68f6cb52362648509a06a6afbabbfae1d8114cc4644db3c2"
+      "file": "fonts/locale-zh-Hant-1d2125f095.woff2",
+      "bytes": 232008,
+      "sha256": "1d2125f095d86c4e693b33d9bc74858f779965961e8759c6ebb244ce183f35db"
     },
     {
       "file": "fonts/notosans-OFL.txt",
@@ -362,6 +362,6 @@
       "sha256": "d113cd651f212760397282b77588d331a6079268e539375b784992fb97ecd320"
     }
   ],
-  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/adf534606fc942d9/",
-  "publishedAt": "2026-09-10T15:53:03.798Z"
+  "assetBaseUrl": "https://night-shift-assets.liveinteractivegame.com/games/night-shift/420858bf018c02bb/",
+  "publishedAt": "2026-09-11T08:40:39.975Z"
 }
