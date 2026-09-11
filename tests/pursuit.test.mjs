@@ -43,7 +43,7 @@ test('one roaming patient walks around walls, stops to cry, and never crosses a 
   assert.equal(choosePursuitEntry(entries,target,solids,l.bounds,111,()=>true,door),undefined);
  });
 
-import {SightLock} from '../src/runtime/sight-lock.ts';
+import {SightLock,patrollerSightBreak} from '../src/runtime/sight-lock.ts';
 import {hearsWalking,hearsPlayer} from '../src/run-rules.ts';
 test('corners break visual lock; sustained sight or close contact can reacquire',()=>{
  const lock=new SightLock();assert.equal(lock.tick(.1,true,150),true);
@@ -82,4 +82,13 @@ test('opening patrol entries are hidden, reachable and separated from the player
 test('opening safety never falls back to a nearby or visible entry',()=>{
  assert.equal(choosePursuitEntry([{x:220,y:100}],{x:100,y:100},[],bounds,117,()=>false,undefined,{spawn:{x:100,y:100}}),undefined);
  assert.equal(choosePursuitEntry([{x:700,y:100}],{x:100,y:100},[],bounds,117,()=>true,undefined,{spawn:{x:100,y:100}}),undefined);
+});
+
+test('patroller rack occlusion breaks lock early while other visual monsters retain their threshold',()=>{
+ const patroller=new SightLock(patrollerSightBreak),other=new SightLock();
+ for(const lock of [patroller,other]){lock.tick(.1,true,80);lock.tick(.4,false,80);}
+ assert.equal(patroller.searching,true);assert.equal(other.searching,false);
+ assert.equal(patroller.tick(.5,true,80),false);assert.equal(patroller.tick(.41,true,80),true);
+ patroller.tick(.4,false,30);assert.equal(patroller.tick(.05,true,30),true);
+ patroller.reset();assert.equal(patroller.searching,false);
 });

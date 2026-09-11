@@ -1,6 +1,6 @@
 import {ExitPatrol} from './exit-patrol.ts';
 import {AttackRecovery} from './attack-recovery.ts';
-import {SightLock} from './sight-lock.ts';
+import {SightLock,patrollerSightBreak} from './sight-lock.ts';
 import {DistractionResponse,type SoundReception} from './distraction-response.ts';
 import {monsterFeetAt,clearContact,moveWithCollision,type Box,type Position} from '../collision.ts';
 import {patrolPath,followPatrolPath} from '../patrol.ts';
@@ -10,7 +10,7 @@ export class Reinforcement {
  diagnosticsEnabled=false;diagnostics:{mode:string;reason:string;seen:boolean;blocked:boolean;target?:Position}={mode:"absent",reason:"not-spawned",seen:false,blocked:false};
  position:Position|null=null;entry:Position|null=null;target:Position|null=null;route:Position[]=[];
  exitPatrol=new ExitPatrol();patrolIntent:Position|undefined;private routeFailed=false;
- attackRecovery=new AttackRecovery();distractionResponse=new DistractionResponse();sightLock=new SightLock();
+ attackRecovery=new AttackRecovery();distractionResponse=new DistractionResponse();sightLock=new SightLock(patrollerSightBreak);
  searchAnchor:Position|null=null;searchGoal:Position|null=null;searchIndex=0;idle=0;private checkpoint:Position|null=null;private idlePosition:Position|null=null;
  resetSearch(){this.searchAnchor=null;this.searchGoal=null;this.checkpoint=null;this.searchIndex=0;this.idle=0;this.idlePosition=null;}
  /** Short reachable legs around the checkpoint/nearest reachable approach, never the player. */
