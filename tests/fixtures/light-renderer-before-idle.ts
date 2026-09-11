@@ -1,7 +1,7 @@
-import type {Box,Position} from './collision';
-import {shadowHull} from './lighting';
+// Frozen pre-cache renderer from 354b6ef, used only as a pixel parity oracle.
+import type {Box,Position} from '../../src/collision';
+import {shadowHull} from '../../src/lighting';
 export interface Lamp extends Position {radius:number;strength:number;color:string;colorStrength?:number;angle?:number}
-interface LightMask {x:number;y:number;mask:HTMLCanvasElement;tint:HTMLCanvasElement;color:string}
 /** Exact ray/AABB entry, including parallel rays and a source inside a wall. */
 export function rayDistance(source:Position,dx:number,dy:number,box:Box,max:number){
  let entry=0,exit=max;
@@ -14,26 +14,14 @@ export function rayDistance(source:Position,dx:number,dy:number,box:Box,max:numb
 export function beamFalloff(relativeAngle:number){const a=Math.abs(Math.atan2(Math.sin(relativeAngle),Math.cos(relativeAngle)));const x=Math.max(0,Math.min(1,(.62-a)/.36));return x*x*(3-2*x);}
 export class LightRenderer {
  private layer=document.createElement('canvas');private beam=document.createElement('canvas');
- private geometry='';private masks=new Map<string,LightMask>();
  constructor(){this.layer.width=480;this.layer.height=288;this.beam.width=256;this.beam.height=256;const ctx=this.beam.getContext('2d')!,data=ctx.createImageData(256,256);
   for(let y=0;y<256;y++)for(let x=0;x<256;x++){const dx=(x-128)/128,dy=(y-128)/128,r=Math.hypot(dx,dy),radial=Math.max(0,1-r);const i=(y*256+x)*4;data.data[i]=data.data[i+1]=data.data[i+2]=255;data.data[i+3]=255*Math.pow(radial,.85)*beamFalloff(Math.atan2(dy,dx));}ctx.putImageData(data,0,0);
  }
  render(ctx:CanvasRenderingContext2D,lamps:Lamp[],walls:Box[],props:Box[],player:Position,blackout:boolean){
  if(this.layer.width!==ctx.canvas.width||this.layer.height!==ctx.canvas.height){this.layer.width=ctx.canvas.width;this.layer.height=ctx.canvas.height;}
- // Value-based invalidation also catches doors and geometry edited in place.
- const boxes=(values:Box[])=>values.map(b=>`${b.x},${b.y},${b.width},${b.height}`).join(';');
- const geometry=`${ctx.canvas.width},${ctx.canvas.height}|${boxes(walls)}|${boxes(props)}`;
- if(geometry!==this.geometry){this.masks.clear();this.geometry=geometry;}
- // Retain only this frame's sources: moving lights cannot accumulate a trail of canvases.
- const current=new Map<string,LightMask>();
- const keys=lamps.map(light=>`${light.x},${light.y},${light.radius},${light.angle??'radial'}`),needed=new Set(keys);
- const spare=[...this.masks].filter(([key])=>!needed.has(key)).map(([,mask])=>mask);
  ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);ctx.globalCompositeOperation='source-over';ctx.fillStyle=blackout?'rgba(3,6,10,.97)':'rgba(4,8,13,.94)';ctx.fillRect(0,0,ctx.canvas.width,ctx.canvas.height);
  const layer=this.layer.getContext('2d')!;
- for(const [index,light] of lamps.entries()){
-  const key=keys[index];
-  let cached=current.get(key)??this.masks.get(key);
-  if(!cached){
+ for(const light of lamps){
   layer.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);layer.save();layer.globalCompositeOperation='source-over';
   const angles=Array.from({length:96},(_,i)=>i*Math.PI*2/96);
   for(const b of walls)for(const [x,y] of [[b.x,b.y],[b.x+b.width,b.y],[b.x,b.y+b.height],[b.x+b.width,b.y+b.height]]){const a=Math.atan2(y-light.y,x-light.x);angles.push(...[a-.0001,a,a+.0001].map(v=>(v+Math.PI*2)%(Math.PI*2)));}angles.sort((a,b)=>a-b);
@@ -45,24 +33,9 @@ export class LightRenderer {
   for(const b of props){if(light.x>=b.x&&light.x<=b.x+b.width&&light.y>=b.y&&light.y<=b.y+b.height)continue;if(Math.hypot(b.x+b.width/2-light.x,b.y+b.height/2-light.y)>light.radius+60)continue;
    for(const [length,alpha] of [[light.radius,.32],[light.radius*.65,.36],[light.radius*.3,.4]]){const hull=shadowHull(b,light,length);layer.beginPath();hull.forEach((p,i)=>i?layer.lineTo(p.x/2,p.y/2):layer.moveTo(p.x/2,p.y/2));layer.closePath();layer.rect(b.x/2,b.y/2,b.width/2,b.height/2);layer.fillStyle=`rgba(0,0,0,${alpha})`;layer.fill('evenodd');}
   }
-  layer.restore();
-  // Store a tightly cropped mask, using integer coordinates to preserve rasterization.
-  const x=Math.max(0,Math.min(ctx.canvas.width-1,Math.floor((light.x-light.radius)/2)-1));
-  const y=Math.max(0,Math.min(ctx.canvas.height-1,Math.floor((light.y-light.radius)/2)-1));
-  const width=Math.max(1,Math.min(ctx.canvas.width,Math.ceil((light.x+light.radius)/2)+1)-x);
-  const height=Math.max(1,Math.min(ctx.canvas.height,Math.ceil((light.y+light.radius)/2)+1)-y);
-  // Reuse departed sources' storage, so a moving torch does not allocate canvases every frame.
-  const previous=spare.pop(),mask=previous?.mask??document.createElement('canvas'),tint=previous?.tint??document.createElement('canvas');
-  for(const canvas of [mask,tint]){if(canvas.width!==width)canvas.width=width;if(canvas.height!==height)canvas.height=height;}
-  const maskContext=mask.getContext('2d')!;maskContext.globalCompositeOperation='copy';maskContext.drawImage(this.layer,x,y,width,height,0,0,width,height);
-  cached={x,y,mask,tint,color:''};
-  }
-  if(cached.color!==light.color){const tint=cached.tint.getContext('2d')!;tint.globalCompositeOperation='copy';tint.drawImage(cached.mask,0,0);tint.globalCompositeOperation='source-in';tint.fillStyle=light.color;tint.fillRect(0,0,cached.tint.width,cached.tint.height);cached.color=light.color;}
-  current.set(key,cached);
-  ctx.globalCompositeOperation='destination-out';ctx.globalAlpha=light.strength;ctx.drawImage(cached.mask,cached.x,cached.y);
-  ctx.globalCompositeOperation='source-over';ctx.globalAlpha=light.colorStrength??.035;ctx.drawImage(cached.tint,cached.x,cached.y);ctx.globalAlpha=1;
+  layer.restore();ctx.globalCompositeOperation='destination-out';ctx.globalAlpha=light.strength;ctx.drawImage(this.layer,0,0);
+  layer.globalCompositeOperation='source-in';layer.fillStyle=light.color;layer.fillRect(0,0,ctx.canvas.width,ctx.canvas.height);ctx.globalCompositeOperation='source-over';ctx.globalAlpha=light.colorStrength??.035;ctx.drawImage(this.layer,0,0);ctx.globalAlpha=1;
  }
- this.masks=current;
  // Small contact shadows anchor props without painting opaque long wedges over other lights.
  ctx.globalCompositeOperation='source-over';for(const b of props){const g=ctx.createLinearGradient(0,(b.y+b.height)/2,0,(b.y+b.height+8)/2);g.addColorStop(0,'rgba(0,3,6,.3)');g.addColorStop(1,'rgba(0,3,6,0)');ctx.fillStyle=g;ctx.fillRect(b.x/2,(b.y+b.height)/2,b.width/2,4);}
  // Preserve the sprite itself; the surrounding floor is lit by the occluded lamps above.

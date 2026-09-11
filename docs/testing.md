@@ -6,6 +6,8 @@ For the optimization sequence, correctness strategy, hardware-counter interpreta
 
 For in-game movement stutters, use `npm run profile:runtime -- --replay FILE --out DIR` against a running Vite server. It replays recorded inputs with real rendering, checks every state hash, and saves Chrome CPU profiles and update timings. See the [runtime pathfinding investigation](performance/2026-09-runtime-pathfinding.md) for setup, measurements and limits. Run profiling separately from CPU tests and builds.
 
+For idle CPU usage, run `npm run profile:idle -- output/idle-profile/check` against Vite on port 5174 (`BASE_URL` overrides it). It measures title, stationary gameplay, pause and a monster lesson sequentially, checks that each fixture entered the requested state, and records per-process CPU time plus Chrome profiles. Run it alone, without builds or other tests. `npm run test:browser:idle` checks frozen-screen lifecycle and cached lighting against the frozen original renderer; `BROWSER=webkit npm run test:browser:idle` repeats it in WebKit. See the [idle rendering investigation](performance/2026-09-idle-rendering.md) for interpretation and platform limits.
+
 The runner uses one resource budget in two sequential phases:
 1. Ordinary unit/regression files run with Node's `--test-concurrency`.
 2. The 1,400-layout sweep runs in a fixed child-process pool. Each job contains 14 seed/night pairs; free workers immediately take the next job. This phase does not overlap the first phase.
