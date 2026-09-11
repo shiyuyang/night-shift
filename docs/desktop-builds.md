@@ -14,7 +14,7 @@ macOS 最低版本取决于游戏使用的 Ogg/Opus 解码支持，不能只按 
 
 自 0.4.6 起，Windows 提供两个绿色 ZIP，使用同一个 Release EXE：
 
-- `full.zip`：完整内置 WebView2 Fixed Version 152.0.4191.62 x64，正常启动不联网准备运行库。完整解压到可写本地目录，保留 EXE 旁的 `WebView2/`。
+- `full.zip`：完整内置 WebView2 Fixed Version 152.0.4191.62 x64，正常启动不联网准备运行库。默认使用 ZIP Stored（不压缩），省去解压时的 Deflate 解码，优先解压速度，下载体积会增大。完整解压到可写本地目录，保留 EXE 旁的 `WebView2/`。
 - `lite.zip`：只有游戏 EXE，使用已安装的 WebView2；缺失时自动下载微软 Bootstrapper、验证 Microsoft Corporation Authenticode 签名并执行 `/silent /install`。原生窗口显示安装状态，可取消；失败时显示微软手动下载地址。下载限时 120 秒，安装等待上限 10 分钟，并发启动通过文件锁避免重复安装。
 
 启动器发现 `WebView2/` 时只使用包内版本，文件缺失或权限失败会提示错误。没有该目录时才进入系统检测及在线补装。Tauri 使用 `webviewInstallMode: skip`，由启动器负责运行库选择，避免框架强制固定路径导致精简版无法启动。Windows 专用资源配置仍将完整运行库纳入 NSIS。
@@ -118,6 +118,10 @@ python3 scripts/package-windows.py output/desktop/0.4.6 --runtime both
 # 只生成某一类
 python3 scripts/package-windows.py output/desktop/full.zip --runtime full
 python3 scripts/package-windows.py output/desktop/lite.zip --runtime lite
+# 完整版需要优先减小下载体积时，显式选择 Deflate
+python3 scripts/package-windows.py output/desktop/full-small.zip --runtime full --full-compression deflate
 ```
 
-默认 `--runtime full`。精简 ZIP 的打包步骤不读取运行库；Windows 构建仍需还原运行库供资源配置使用。两个 ZIP 都校验 PE x64、ZIP CRC 和每个文件 SHA-256。0.4.6 还包含幽影随显隐变化的淡冷白微光。
+默认 `--runtime full --full-compression stored`；`--runtime both` 也采用完整包 Stored、精简包 Deflate 的组合。`--full-compression` 仅控制完整包；精简包继续使用 Deflate 9。降低 Deflate 压缩级别主要减少打包耗时，不能据此保证解压更快。
+
+精简 ZIP 的打包步骤不读取运行库；Windows 构建仍需还原运行库供资源配置使用。两个 ZIP 都校验 PE x64、ZIP CRC 和每个文件 SHA-256，输出记录包含所用压缩方式。0.4.6 还包含幽影随显隐变化的淡冷白微光。
