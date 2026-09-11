@@ -1,4 +1,4 @@
-import {feetAt,monsterFeetAt,overlaps,type Footprint,type Position} from '../collision.ts';
+import {feetAt,monsterFeetAt,monsterArchitecture,clearContact,overlaps,type Footprint,type Position} from '../collision.ts';
 import type {Level} from '../levels.ts';
 interface ReachableGrid {x0:number;y0:number;cols:number;rows:number;cells:Uint8Array;queue:Int32Array;count:number;}
 function gridPositions(grid:ReachableGrid):Position[]{
@@ -102,14 +102,20 @@ export function validatePlayableLevel(level:Level,checkDrawer=true):{valid:boole
 export function analyzePlayableLevel(level:Level,checkDrawer=true){
  const closed=reachableGrid(level,false),open=reachableGrid(level,true),closedNear=gridQuery(closed),openNear=gridQuery(open);
  const errors:string[]=[];
+ const openOccluders=[...level.walls,...level.props],closedOccluders=[...openOccluders,level.door];
  // Explicit dependency chain: free box -> ward key -> door; brass -> box 1 -> seal -> box 2.
- for(const [name,p,r] of [['brass',level.key,30],['free-box',level.boxes[0],38],['brass-box',level.boxes[1],38],['door',level.doorUse,38]] as const)if(!closedNear(p,r))errors.push(name+' inaccessible before unlock');
+ for(const [name,p,r] of [['brass',level.key,30],['free-box',level.boxes[0],38],['brass-box',level.boxes[1],38],['door',level.doorUse,38]] as const)if(!closedNear(p,r,q=>clearContact(q,p,closedOccluders)))errors.push(name+' inaccessible before unlock');
  if(closedNear(level.boxes[2],44))errors.push('locked room bypass');
- for(const [i,p]of level.boxes.entries())if(!openNear(p,38))errors.push('box '+i+' inaccessible after unlock');
+ for(const [i,p]of level.boxes.entries())if(!openNear(p,38,q=>clearContact(q,p,openOccluders)))errors.push('box '+i+' inaccessible after unlock');
  if(!openNear(level.exit,30))errors.push('exit inaccessible');
  const escape=escapeGridLength(level,open);if(!Number.isFinite(escape)||escape<600)errors.push('escape route must be reachable and at least 600 units');
- const monsters=reachableGrid(level,true,monsterFeetAt),monsterNear=gridQuery(monsters);
+ // Runtime patrols use an origin-aligned grid and keep head/shoulders clear of
+ // architecture. Player connectivity alone can admit furniture that seals a
+ // monster's return route, especially after the morgue drawer extends.
+ const monsterLevel={...level,walls:level.walls.map(monsterArchitecture),spawn:{x:Math.round(level.spawn.x/8)*8,y:Math.round(level.spawn.y/8)*8}};
+ const monsters=reachableGrid(monsterLevel,true,monsterFeetAt),monsterNear=gridQuery(monsters);
  for(const p of level.monsterSpawns)if(!monsterNear(p,12))errors.push('monster spawn disconnected');
+ for(const [i,p] of level.boxes.entries())if(!monsterNear(p,44))errors.push('monster cannot approach box '+i);
  const drawer=level.zones.MorgueDrawerZone;if(checkDrawer&&drawer){const blocked={...level,props:[...level.props,{...drawer,kind:'machine' as const}]};errors.push(...validatePlayableLevel(blocked,false).errors.map(e=>'extended drawer: '+e));}
  return {valid:errors.length===0,errors,closedNear,openNear};
 }
@@ -117,10 +123,10 @@ export function analyzePlayableLevel(level:Level,checkDrawer=true){
 /** The reachable marker is already a spatial index; only visit cells inside the query radius. */
 function gridQuery(grid:ReachableGrid){
  const {x0,y0,cols,rows,cells}=grid;
- return (p:Position,radius:number)=>{
+ return (p:Position,radius:number,accept?:(q:Position)=>boolean)=>{
   const left=Math.max(0,Math.floor((p.x-radius-x0)/8)),right=Math.min(cols-1,Math.ceil((p.x+radius-x0)/8));
   const top=Math.max(0,Math.floor((p.y-radius-y0)/8)),bottom=Math.min(rows-1,Math.ceil((p.y+radius-y0)/8));
-  for(let y=top;y<=bottom;y++)for(let x=left;x<=right;x++)if(cells[y*cols+x]===2&&Math.hypot(x0+x*8-p.x,y0+y*8-p.y)<radius)return true;
+  for(let y=top;y<=bottom;y++)for(let x=left;x<=right;x++)if(cells[y*cols+x]===2&&Math.hypot(x0+x*8-p.x,y0+y*8-p.y)<radius&&(!accept||accept({x:x0+x*8,y:y0+y*8})))return true;
   return false;
  };
 }

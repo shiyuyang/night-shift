@@ -80,3 +80,12 @@ test('local search yields to a spotted player and flash keeps its full stun',()=
  const player={x:r.position.x+30,y:r.position.y};r.tick(.05,input({player}));assert.equal(r.searchAnchor,null);assert.deepEqual(r.target,player);
  assert.equal(r.flash(player,[]),true);const before={...r.position};r.tick(1.9,input({player}));assert.deepEqual(r.position,before);
 });
+
+test('landed-hit recovery pauses only its attacker, retains sight, freezes on pause and overlaps flash',()=>{
+ const a=new Reinforcement(),b=new Reinforcement();a.spawn({x:100,y:150},{x:180,y:150});b.spawn({x:100,y:150},{x:180,y:150});
+ a.attackRecovery.hit();const start={...a.position};const seen=input({player:{x:180,y:150}});
+ a.tick(.6,seen);b.tick(.6,seen);assert.deepEqual(a.position,start);assert.ok(b.position.x>100);assert.deepEqual(a.target,seen.player);
+ const remaining=a.attackRecovery.remaining;a.tick(0,seen);assert.equal(a.attackRecovery.remaining,remaining);
+ assert.ok(a.flash(seen.player,[]));const flashed={...a.position};a.tick(.2,seen);assert.equal(a.attackRecovery.active,false);assert.deepEqual(a.position,flashed);a.tick(1.7,seen);assert.deepEqual(a.position,flashed);a.tick(.2,seen);assert.notDeepEqual(a.position,flashed);
+ a.attackRecovery.hit();a.spawn({x:100,y:150},{x:180,y:150});assert.equal(a.attackRecovery.active,false);
+});

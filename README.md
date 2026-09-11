@@ -73,4 +73,6 @@ TypeScript + Phaser + Vite。地图通过 `game/levels.json` 注册，布局源�
 
 第二夜起保留 LDtk 房间与家具，在合法搜寻区内生成物资。当前附加交互包括补给柜、藏身柜和空任务箱。`maps/rooms/` 中的实验模块暂不参与随机生成。
 
+难度测试使用 `npm run test:balance`，支持固定种子、三种操作策略、异常记录、精确重放和版本对照，见 [难度测试说明](docs/pursuit-balance-testing.md)。
+
 CPU 测试自动使用多核。完整运行、并发限制和指定种子复现见 [测试说明](docs/testing.md)。浏览器测试的并发独立管理。

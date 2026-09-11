@@ -10,8 +10,8 @@ export function difficultyForNight(night:number){
   emptyTaskMin:n<=2?1:2,emptyTaskMax:n<=2?1:n===3?2:3,
   safeUntilFirstBox:n===1,openingGrace:n===1?24:n===2?18:0,
   startingFlashes:n<=2?4:2,startingDecoys:n<=2?4:2,
-  speedCap:n===1?103:n===2?109:n===3?113:117,
-  finaleSpeed:n===1?103:n===2?109:n===3?113:117,
+  speedCap:n===1?103:n<=3?109:117,
+  finaleSpeed:n===1?103:n<=3?109:117,
   finaleRush:n>=5,
   searchMemory:n<=2?4:5,openingSeparation:n<=2?180:300,hiddenOpening:n>2,
   // Gentle endless nights do not remove learned mechanics or alter item counters.

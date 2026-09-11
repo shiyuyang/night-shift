@@ -12,3 +12,9 @@ test('an irrelevant distant noise cannot make a visible-player interceptor turn 
  }
  assert.deepEqual(paths[0],paths[1]);
 });
+test('interceptor diagnostics retain coordinates without copying a Phaser target object',()=>{
+ const r=new Reinforcement();r.diagnosticsEnabled=true;
+ r.spawn({x:100,y:150},{x:280,y:150,callback(){}});
+ r.tick(.05,{player:{x:800,y:500},hidden:true,retreat:false,visible:()=>false,solids:[],bounds:{x:0,y:0,width:900,height:600}});
+ assert.deepEqual(structuredClone(r.diagnostics).target,{x:280,y:150});
+});

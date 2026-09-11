@@ -10,7 +10,7 @@ export class PressureDirector{
  hurt(){this.recovery=Math.max(this.recovery,7);}
 }
 export class RogueRun{
- time=0;opened=new Set<string>();generatorCharge=0;generatorId='';runningMachine='';machineTime=0;hidden='';hideTime=0;noiseCooldown=0;hurtCooldown=0;blockerPhase:'idle'|'warning'|'active'='idle';blockerClock=0;blockerStun=0;viewerCooldown=0;
+ time=0;opened=new Set<string>();generatorCharge=0;generatorId='';runningMachine='';machineTime=0;machineEmission=0;hidden='';hideTime=0;noiseCooldown=0;hurtCooldown=0;blockerPhase:'idle'|'warning'|'active'='idle';blockerClock=0;blockerStun=0;viewerCooldown=0;
  director=new PressureDirector();stats={cachesOpened:0,alarms:0,shortcuts:0,hazardsHit:0,hides:0,viewerAccepted:0,viewerRejected:0};
  features:Feature[];
  constructor(features:Feature[]=[]){this.features=features;}
@@ -25,7 +25,7 @@ export class RogueRun{
   this.opened.add(f.id);this.stats.cachesOpened++;
   return [{type:'sound',id:'metal'},{type:'noise'},{type:'loot',item:f.reward,at:center(f)}];
  }
- if(f.kind==='machine'){this.runningMachine=f.id;this.machineTime=10;return [{type:'sound',id:'metal'},{type:'message',text:msg("rogue.the-machine-starts-it-attracts-pursuers-for")}];}
+ if(f.kind==='machine'){this.runningMachine=f.id;this.machineTime=10;this.machineEmission++;return [{type:'sound',id:'metal'},{type:'message',text:msg("rogue.the-machine-starts-it-attracts-pursuers-for")}];}
  if(f.kind==='locker'){if(watched)return [{type:'message',text:msg("rogue.it-saw-you-gain-distance-before-hiding")}];this.hidden=f.id;this.hideTime=0;this.stats.hides++;return [{type:'sound',id:'metal'},{type:'message',text:msg("rogue.hold-your-breath-leave-within-seconds-press")}];}return [];
  }
  tick(dt:number,p:Position,moving:boolean,sprinting:boolean,holding:boolean,danger:boolean):RogueEvent[]{

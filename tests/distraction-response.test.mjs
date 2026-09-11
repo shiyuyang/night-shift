@@ -15,3 +15,31 @@ test('fresh sight cancels both investigation and return, without rearming the sa
   assert.equal(d.tick(.1,'patroller',source,false,{x:220,y:100}),undefined);
  }
 });
+
+test('each species must hear an emission before it can alter pursuit, and can enter range later',()=>{
+ for(const threat of ['listener','light-shy','patroller']){
+  const d=new DistractionResponse(),far={x:600,y:100},near={x:200,y:100};
+  assert.equal(d.tick(.05,threat,far,false,p,{id:'a',remaining:5}),undefined);assert.equal(d.heard,false);
+  assert.ok(d.tick(.05,threat,far,false,{x:500,y:100},{id:'a',remaining:3}));assert.equal(d.heard,true);
+  d.tick(.05,threat,far,false,near,{id:'a',remaining:2.9});assert.equal(d.heard,false);assert.ok(d.target);
+  d.tick(.05,threat,far,false,near,{id:'a',remaining:0});assert.equal(d.heard,false);
+  if(threat!=='patroller')assert.equal(d.target,undefined);
+ }
+});
+test('occlusion and deafness reject new emissions without consuming them, same-position new emissions rearm',()=>{
+ for(const threat of ['listener','light-shy','patroller']){
+  const d=new DistractionResponse();
+  d.tick(.05,threat,source,true,p,{id:'a',remaining:8,audible:false});assert.equal(d.heard,false);
+  d.tick(.05,threat,source,true,p,{id:'a',remaining:7,deaf:true});assert.equal(d.heard,false);
+  d.tick(.05,threat,source,true,p,{id:'a',remaining:6});assert.equal(d.heard,true);
+  for(let i=0;i<130;i++)d.tick(.05,threat,source,true,p,{id:'a',remaining:1});assert.equal(d.heard,false);assert.equal(d.hesitation,0);
+  d.tick(.05,threat,source,true,p,{id:'b',remaining:8});assert.equal(d.heard,true);
+  if(threat!=='listener')assert.equal(d.hesitation,.65);
+ }
+});
+test('latched positions contain only coordinates and a late listener never exceeds source expiry',()=>{
+ const d=new DistractionResponse(),emitter={x:250,y:100,scene:()=>{}};
+ assert.deepEqual(d.tick(.1,'listener',emitter,false,p,{id:'a',remaining:.2}),{x:250,y:100});emitter.x=500;
+ assert.deepEqual(d.tick(.1,'listener',emitter,false,p,{id:'a',remaining:.1}),{x:250,y:100});
+ assert.equal(d.tick(.1,'listener',emitter,false,p,{id:'a',remaining:0}),undefined);
+});

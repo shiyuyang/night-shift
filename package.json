@@ -48,7 +48,7 @@
     "test:browser:gifts": "node tests/live-gifts.browser.mjs",
     "test:browser:finale": "node tests/finale-pressure.browser.mjs",
     "test:browser:ward-finale": "node tests/ward-finale.browser.mjs",
-    "test:browser:listener": "node tests/listener-footsteps.browser.mjs",
+    "test:browser:listener": "node tests/listener-light-focus.browser.mjs",
     "test:browser:density": "node tests/reinforcement.browser.mjs",
     "test:layouts": "npm run content:check && node scripts/test-layouts.mjs",
     "test:browser:deaths": "node tests/monster-death.browser.mjs",
@@ -57,7 +57,9 @@
     "desktop:windows": "tauri build --target x86_64-pc-windows-msvc --bundles nsis",
     "desktop:macos": "tauri build --ci --bundles app,dmg",
     "desktop:macos:intel": "tauri build --ci --target x86_64-apple-darwin --bundles app,dmg",
-    "test:browser:desktop": "node tests/desktop.browser.mjs"
+    "test:browser:desktop": "node tests/desktop.browser.mjs",
+    "test:balance": "node scripts/balance/run.mjs",
+    "test:balance:regression": "node tests/monster-balance-optimization.browser.mjs && node tests/exit-duty.browser.mjs && node tests/pursuit-transitions.browser.mjs && node tests/item-balance.browser.mjs && node tests/interceptor-search.browser.mjs && node tests/balance-weeper.browser.mjs && node tests/balance-counters.browser.mjs && node tests/listener-light-focus.browser.mjs && node tests/difficulty.browser.mjs && node tests/clue-arrival.browser.mjs && node tests/interaction-access.browser.mjs && node tests/balance-search.browser.mjs && node tests/endless-continuity.browser.mjs"
   },
   "dependencies": {
     "@formatjs/icu-messageformat-parser": "^3.5.17",
