@@ -12,5 +12,11 @@
   "stage.0": "Reparto dismesso",
   "menu.start": "Inizia giro →",
   "rogue.search-supply-cabinet": "Armadietto scorte · E per cercare",
-  "gameplay.task-box-empty": "La cassa è vuota"
+  "gameplay.task-box-empty": "La cassa è vuota",
+  "gift.battery": "Carica batteria",
+  "gift.flash": "Aggiungi flash",
+  "gift.heal": "Primo soccorso",
+  "gift.failure": "Guasto alla torcia",
+  "gift.warp": "Passaggio perduto",
+  "gift.shade": "Ombra pallida"
 }

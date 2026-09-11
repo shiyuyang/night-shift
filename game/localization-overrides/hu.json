@@ -11,5 +11,11 @@
   "menu.anomaly": "{threat}\n{event}",
   "menu.start": "Indítás →",
   "rogue.search-supply-cabinet": "Készletszekrény · E a kereséshez",
-  "gameplay.task-box-empty": "A láda üres"
+  "gameplay.task-box-empty": "A láda üres",
+  "gift.battery": "Akkumulátor töltése",
+  "gift.flash": "Villanófény hozzáadása",
+  "gift.heal": "Elsősegély",
+  "gift.failure": "Zseblámpa meghibásodása",
+  "gift.warp": "Elveszett átjáró",
+  "gift.shade": "Sápadt árny"
 }

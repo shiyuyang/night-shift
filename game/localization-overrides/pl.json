@@ -10,5 +10,11 @@
   "stage.0": "Opuszczony oddział",
   "menu.start": "Rozpocznij →",
   "rogue.search-supply-cabinet": "Szafka z zapasami · E, aby przeszukać",
-  "gameplay.task-box-empty": "Skrzynia jest pusta"
+  "gameplay.task-box-empty": "Skrzynia jest pusta",
+  "gift.battery": "Naładuj baterię",
+  "gift.flash": "Dodaj błysk",
+  "gift.heal": "Pierwsza pomoc",
+  "gift.failure": "Awaria latarki",
+  "gift.warp": "Zagubione przejście",
+  "gift.shade": "Blady cień"
 }

@@ -128,5 +128,11 @@
   "ui.wasd-arrows-to-move-shift-to-sprint": "WASD / arrows to move. Shift to sprint. E to pick up, search and operate doors. After exhaustion, recover 30% stamina before sprinting again.",
   "rogue.search-supply-cabinet": "Supply cabinet · E to search",
   "gameplay.task-box-empty": "Box is empty",
-  "guide.startingSupplies": "Supplies are replenished each night. There is no item carrying limit."
+  "guide.startingSupplies": "Supplies are replenished each night. There is no item carrying limit.",
+  "gift.battery": "Charge Battery",
+  "gift.flash": "Add Flash",
+  "gift.heal": "First Aid",
+  "gift.failure": "Flashlight Failure",
+  "gift.warp": "Lost Passage",
+  "gift.shade": "Pale Shadow"
 }

@@ -10,5 +10,11 @@
   "event.power": "ไฟไม่เสถียร ระวังไฟดับ",
   "menu.anomaly": "{threat}\n{event}",
   "rogue.search-supply-cabinet": "ตู้เสบียง · E เพื่อค้นหา",
-  "gameplay.task-box-empty": "กล่องว่างเปล่า"
+  "gameplay.task-box-empty": "กล่องว่างเปล่า",
+  "gift.battery": "ชาร์จแบตเตอรี่",
+  "gift.flash": "เพิ่มแฟลช",
+  "gift.heal": "ปฐมพยาบาล",
+  "gift.failure": "ไฟฉายขัดข้อง",
+  "gift.warp": "เส้นทางที่สาบสูญ",
+  "gift.shade": "เงาซีดเซียว"
 }

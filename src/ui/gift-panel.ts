@@ -12,7 +12,7 @@ function identity(e:GiftEntry){return `${portrait(e)}<bdi class="gift-name" titl
 export class GiftPanel {
  private frameFx:{warp:number;tear:number;shade?:{x:number;y:number}}={warp:-1,tear:0};
  private host=document.createElement('aside');private fx=document.createElement('canvas');private signature='';private serial=0;private reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
- constructor(parent:HTMLElement){this.host.className='gift-panel';this.fx.className='gift-screen-fx';this.fx.setAttribute('aria-hidden','true');parent.append(this.host,this.fx);this.host.addEventListener('load',event=>{const img=event.target;if(!(img instanceof HTMLImageElement)||!img.naturalWidth)return;const canvas=document.createElement('canvas');canvas.width=18;canvas.height=20;canvas.setAttribute('aria-hidden','true');const ctx=canvas.getContext('2d')!;const scale=Math.max(18/img.naturalWidth,20/img.naturalHeight);ctx.drawImage(img,(18-img.naturalWidth*scale)/2,(20-img.naturalHeight*scale)/2,img.naturalWidth*scale,img.naturalHeight*scale);img.replaceWith(canvas);},true);this.host.addEventListener('error',event=>{const img=event.target;if(img instanceof HTMLImageElement){const slot=img.parentElement!;img.remove();slot.textContent='◈';}},true);}
+ constructor(parent:HTMLElement){this.host.className='gift-panel';this.fx.className='gift-screen-fx';this.fx.setAttribute('aria-hidden','true');const stage=document.createElement('div');stage.className='gift-overlay-stage';stage.append(this.host);parent.append(stage,this.fx);this.host.addEventListener('load',event=>{const img=event.target;if(!(img instanceof HTMLImageElement)||!img.naturalWidth)return;const canvas=document.createElement('canvas');canvas.width=18;canvas.height=20;canvas.setAttribute('aria-hidden','true');const ctx=canvas.getContext('2d')!;const scale=Math.max(18/img.naturalWidth,20/img.naturalHeight);ctx.drawImage(img,(18-img.naturalWidth*scale)/2,(20-img.naturalHeight*scale)/2,img.naturalWidth*scale,img.naturalHeight*scale);img.replaceWith(canvas);},true);this.host.addEventListener('error',event=>{const img=event.target;if(img instanceof HTMLImageElement){const slot=img.parentElement!;img.remove();slot.textContent='◈';}},true);}
  render(view:GiftView,fx:{warp:number;tear:number;reserve:number;shade?:{x:number;y:number};player?:{x:number;y:number}}){
   this.host.style.fontFamily=canvasFont()+', system-ui, sans-serif';this.host.dir=document.documentElement.dir;
   const signature=JSON.stringify([getLocale(),view.notice,view.active&&[view.active.entry,Math.ceil(view.active.remaining)],Math.ceil(view.shade),view.shadeOwner,view.queue,view.pending,Math.ceil(view.wait),view.reason,Math.ceil(fx.reserve)]);
@@ -39,11 +39,11 @@ export class GiftPanel {
   }
   const canvas=document.querySelector<HTMLCanvasElement>('#game canvas');
   if(canvas&&fx.player){
-   const rect=canvas.getBoundingClientRect(),x=rect.left+fx.player.x*rect.width,y=rect.top+fx.player.y*rect.height;
+   const rect=canvas.getBoundingClientRect(),scale=rect.width/1280,x=rect.left+fx.player.x*rect.width,y=rect.top+fx.player.y*rect.height;
    for(const section of Array.from(this.host.querySelectorAll<HTMLElement>('section'))){
     const box=section.getBoundingClientRect();
     const distance=Math.hypot(Math.max(box.left-x,0,x-box.right),Math.max(box.top-y,0,y-box.bottom));
-    section.style.opacity=String(.16+.84*Math.min(1,Math.max(0,(distance-32)/80)));
+    section.style.opacity=String(.16+.84*Math.min(1,Math.max(0,(distance/scale-32)/80)));
    }
   }
   this.frameFx=fx;

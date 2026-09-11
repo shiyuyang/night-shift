@@ -11,5 +11,11 @@
   "menu.anomaly": "{threat}\n{event}",
   "menu.start": "Tuần tra →",
   "rogue.search-supply-cabinet": "Tủ tiếp tế · E để lục tìm",
-  "gameplay.task-box-empty": "Hộp đã trống"
+  "gameplay.task-box-empty": "Hộp đã trống",
+  "gift.battery": "Sạc pin",
+  "gift.flash": "Thêm đèn flash",
+  "gift.heal": "Sơ cứu",
+  "gift.failure": "Hỏng đèn pin",
+  "gift.warp": "Hành lang lạc lối",
+  "gift.shade": "Bóng ma nhợt nhạt"
 }

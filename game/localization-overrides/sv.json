@@ -9,5 +9,11 @@
   "event.power": "Instabil ström; avbrott",
   "menu.anomaly": "{threat}\n{event}",
   "rogue.search-supply-cabinet": "Förrådsskåp · E för att söka",
-  "gameplay.task-box-empty": "Lådan är tom"
+  "gameplay.task-box-empty": "Lådan är tom",
+  "gift.battery": "Ladda batteriet",
+  "gift.flash": "Lägg till blixt",
+  "gift.heal": "Första hjälpen",
+  "gift.failure": "Fel på ficklampan",
+  "gift.warp": "Förlorad passage",
+  "gift.shade": "Blek skugga"
 }

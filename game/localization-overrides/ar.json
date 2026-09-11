@@ -39,5 +39,11 @@
   "event.supply": "إمدادات: ومضة +1",
   "event.power": "كهرباء متذبذبة؛ انقطاعات",
   "rogue.search-supply-cabinet": "خزانة الإمدادات · E للتفتيش",
-  "gameplay.task-box-empty": "الصندوق فارغ"
+  "gameplay.task-box-empty": "الصندوق فارغ",
+  "gift.battery": "شحن البطارية",
+  "gift.flash": "إضافة ومضة",
+  "gift.heal": "الإسعافات الأولية",
+  "gift.failure": "تعطل المصباح اليدوي",
+  "gift.warp": "الممر المفقود",
+  "gift.shade": "الظل الشاحب"
 }

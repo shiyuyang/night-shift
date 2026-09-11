@@ -8,5 +8,11 @@
   "event.power": "供電不穩，間歇停電",
   "menu.anomaly": "{threat}\n{event}",
   "rogue.search-supply-cabinet": "補給箱 · E 搜索",
-  "gameplay.task-box-empty": "箱內已空"
+  "gameplay.task-box-empty": "箱內已空",
+  "gift.battery": "電池充電",
+  "gift.flash": "新增閃光",
+  "gift.heal": "急救",
+  "gift.failure": "手電筒故障",
+  "gift.warp": "迷失通道",
+  "gift.shade": "蒼白陰影"
 }

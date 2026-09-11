@@ -11,5 +11,11 @@
   "stage.0": "Заброшенная палата",
   "menu.start": "Начать обход →",
   "rogue.search-supply-cabinet": "Шкаф с припасами · E — обыскать",
-  "gameplay.task-box-empty": "Ящик пуст"
+  "gameplay.task-box-empty": "Ящик пуст",
+  "gift.battery": "Зарядить батарею",
+  "gift.flash": "Добавить вспышку",
+  "gift.heal": "Первая помощь",
+  "gift.failure": "Отказ фонарика",
+  "gift.warp": "Затерянный проход",
+  "gift.shade": "Бледная тень"
 }

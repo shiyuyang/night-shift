@@ -10,5 +10,11 @@
   "menu.anomaly": "{threat}\n{event}",
   "menu.start": "Begin ronde →",
   "rogue.search-supply-cabinet": "Voorraadkast · E om te doorzoeken",
-  "gameplay.task-box-empty": "De kist is leeg"
+  "gameplay.task-box-empty": "De kist is leeg",
+  "gift.battery": "Batterij opladen",
+  "gift.flash": "Flits toevoegen",
+  "gift.heal": "Eerste hulp",
+  "gift.failure": "Zaklampstoring",
+  "gift.warp": "Verloren doorgang",
+  "gift.shade": "Bleke schaduw"
 }

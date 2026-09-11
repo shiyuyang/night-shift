@@ -13,5 +13,11 @@
   "menu.record": "ОБХІД / {number}",
   "note.2": "Світло згасло. Стукіт у трубах не стихає.",
   "rogue.search-supply-cabinet": "Шафа з припасами · E — обшукати",
-  "gameplay.task-box-empty": "Ящик порожній"
+  "gameplay.task-box-empty": "Ящик порожній",
+  "gift.battery": "Зарядити акумулятор",
+  "gift.flash": "Додати спалах",
+  "gift.heal": "Перша допомога",
+  "gift.failure": "Несправність ліхтарика",
+  "gift.warp": "Загублений прохід",
+  "gift.shade": "Бліда тінь"
 }

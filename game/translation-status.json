@@ -5,206 +5,221 @@
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "ar": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "de": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "fr": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "es": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "id": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "vi": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "th": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "pt": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "tr": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "ru": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "it": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "ro": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "ms": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "ko": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "uk": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "az": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "pl": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "nl": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "el": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "bg": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "my": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "hu": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "he": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "hr": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "sv": {
       "model": "mlx-community/Qwen3.5-9B-4bit",
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "en": {
       "status": "source",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "zh-Hant": {
       "status": "draft",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     },
     "zh-Hans": {
       "status": "source",
       "nativeReviewed": false,
       "translatedKeys": 353,
-      "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012"
+      "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68"
     }
   },
-  "sourceHash": "639b51d4e7a9323ed17647c048064aec52d04c355d57d60dab7951816cb71012",
-  "note": "Machine translation drafts with explicit editorial overrides; no native-speaker review claimed.",
+  "sourceHash": "da27938b3cfd3caf2db24e1fd392df56ea7adcb5c5fdd7463d7f77efcd865b68",
+  "note": "Machine translation drafts with explicit editorial overrides and six officially supplied LIVE instruction names per locale; no additional native-speaker review claimed.",
   "giftRevision": {
-    "keys": "gift.*",
+    "keys": [
+      "gift.record",
+      "gift.active",
+      "gift.pending",
+      "gift.queued",
+      "gift.started",
+      "gift.delivered",
+      "gift.paused",
+      "gift.power",
+      "gift.interval",
+      "gift.added",
+      "gift.more",
+      "gift.remaining",
+      "gift.reserve",
+      "gift.quantity"
+    ],
     "translator": "Codex",
     "status": "draft",
     "nativeReviewed": false
@@ -383,5 +398,167 @@
       "hr",
       "sv"
     ]
+  },
+  "officialGiftNames": {
+    "status": "official-import",
+    "nativeReviewed": false,
+    "method": "Exact names from the user-provided official LIVE client export; no new native review claimed.",
+    "bundle": "live_client_ocm4514i_20260911_035425",
+    "resource": "Migrated: LS - Interactive Games - Hospital Night Shift.json",
+    "keys": {
+      "gift.battery": "ttlive_ls_interactiveGames_hospitalNightShift_battery",
+      "gift.flash": "ttlive_ls_interactiveGames_hospitalNightShift_flash",
+      "gift.heal": "ttlive_ls_interactiveGames_hospitalNightShift_heal",
+      "gift.failure": "ttlive_ls_interactiveGames_hospitalNightShift_failure",
+      "gift.warp": "ttlive_ls_interactiveGames_hospitalNightShift_warp",
+      "gift.shade": "ttlive_ls_interactiveGames_hospitalNightShift_shade"
+    },
+    "sources": {
+      "en": {
+        "locale": "en",
+        "fileSha256": "b1362b66e5fd585db8283e27b31a27fce0d61901ba5fa2f404af09cda0a98626",
+        "namesSha256": "c36f1fe82a69536091a2caed385bf877b6647cebbe61d462e60664d5601b3191"
+      },
+      "id": {
+        "locale": "id-ID",
+        "fileSha256": "401712bfd4a2c5f8226a9e134f43db8ee00e9788e4f1b5d7156cc31cf59f689e",
+        "namesSha256": "74e30e3e6ec28d93c9470067ec3a885d88662e6305aa7d804e20d482be6f97f9"
+      },
+      "es": {
+        "locale": "es",
+        "fileSha256": "392fb0e859bd0fb44076d8f96afded6c103fddce1ce65ffc0a43eeeac85af329",
+        "namesSha256": "a8be6af920272a5160fcc69afb3d0e850fcda17e840bbcf0a047fd67e44e669d"
+      },
+      "ar": {
+        "locale": "ar",
+        "fileSha256": "c302db8409f300618f3aff2d17245c8de9dfeedf530ff64f521faed0afb13eb8",
+        "namesSha256": "06d1d059dbef03196f3e5d70749a80ac6776f803bf9bd0f1569bd255599b0559"
+      },
+      "vi": {
+        "locale": "vi-VN",
+        "fileSha256": "74cd9c2cc6bc267fc6d84e5c56306f5d545a79e30c8fa4935224db791962f41d",
+        "namesSha256": "f0e9695c2a399e77b7ddb33b9ee9ef394097e5464e6a8fff8a28bf20726ad6ec"
+      },
+      "fr": {
+        "locale": "fr",
+        "fileSha256": "96e2017811a67f32de5927f3546525e684af6232c98e07b050aafca8dc175d09",
+        "namesSha256": "44a3eb4b499d0f73b25c202e009b348856730b5726d398039d1feebb2779a4f2"
+      },
+      "th": {
+        "locale": "th-TH",
+        "fileSha256": "20aa54d5ddfb6ee744c2997f1c7f31088084fc624850f76c26726f221c658baf",
+        "namesSha256": "ea04023bfc94d7a27297bebb10990011371fde2762eddec6812765016d7b36f6"
+      },
+      "pt": {
+        "locale": "pt",
+        "fileSha256": "a0fef7939ec0329d4e8f6711f350684126f3033808d6e61f1e0b9aa37a05dc9e",
+        "namesSha256": "935dc1639699970467a5ba25ea78c14357e3018559575df563bcc0a5248debb0"
+      },
+      "tr": {
+        "locale": "tr-TR",
+        "fileSha256": "e9ff740ce98facf7c6325bd4a0f0264d3e11a771fc514b618c38669d23552a12",
+        "namesSha256": "c2a8bf6b4e40a58326e64a046b51ea84ba8ee85cbb4aff33a79a7a751adc02e6"
+      },
+      "ru": {
+        "locale": "ru-RU",
+        "fileSha256": "d421084830331346c78f406e0d1a01f39636db47f165baeb0157c7add156e614",
+        "namesSha256": "0d188537dbb49173c3849679a120cde218e06fe16aeacaa9aab93ab1ba7fd1f3"
+      },
+      "ja": {
+        "locale": "ja-JP",
+        "fileSha256": "a00a264da5b856d6adcd4cc1496aa3fc4eb39e9485e1f80c0543ad9965ff225f",
+        "namesSha256": "b4402e2bff4fb234c8416ce3928d6b76c3ef0591790e25c53644b065f1cdc114"
+      },
+      "de": {
+        "locale": "de-DE",
+        "fileSha256": "984ac963864a5f87e18fadbf7a49668ded95e9ddc81060af2f0d9f10c4d87dc1",
+        "namesSha256": "426f060ed855904858d14ad7193bf29a37d16c0e2e178e607cc26dd3ced93cc8"
+      },
+      "it": {
+        "locale": "it-IT",
+        "fileSha256": "514a4770f25a34f28c0a4f6f8f5e3a12e2f75f04978128b0e177e8ffa40151cf",
+        "namesSha256": "456168242d95de4910ef7d0880896127d8e35525cc95acea10872c7ca1e6f97c"
+      },
+      "ro": {
+        "locale": "ro-RO",
+        "fileSha256": "d1db736fb938fb135ee65ea22249f323d01cfd21de57d27f5094f70ea7e6830e",
+        "namesSha256": "374784fa1429a9722eadfb1ac3cd0b81a171e1eed6059976b383ba38d390f2b0"
+      },
+      "ms": {
+        "locale": "ms-MY",
+        "fileSha256": "0b79f237b8c2ce5d705ef5ab2d9ab090c715b8ec5ca1675e6343a2cfca81b1d9",
+        "namesSha256": "fad57382cce47a96b789cdfde623fbc09a6fc670449d544a6dcfa039916ea7bf"
+      },
+      "zh-Hant": {
+        "locale": "zh-Hant-TW",
+        "fileSha256": "e1ef6b5c5764694aaddc05c75b36109c25eebef62ccf0bdfae06c2d79a3db05f",
+        "namesSha256": "b7435d9ec31e5eec20fb649ec943ff408852d27a27b8b44f45535d0ed0300f9f"
+      },
+      "ko": {
+        "locale": "ko-KR",
+        "fileSha256": "927c7ebaec34e0f73422e853f7538c9c81546e89547a15092ef6a2dc8728a261",
+        "namesSha256": "8f39dbddcafe26e7700dfdd92a595d0e31841f9bb346d3c3487bad807d7317b1"
+      },
+      "uk": {
+        "locale": "uk-UA",
+        "fileSha256": "c93f5a62f51602e6bc01dcf8be5ef06c3187f7a3d5a33095bc2e21df9c210b7b",
+        "namesSha256": "7340fa41c8e70935c3695b7b262de55fb1e20d867d4b6d027411c5dd97e65aa8"
+      },
+      "az": {
+        "locale": "az",
+        "fileSha256": "e3762d655a7da5cb891ec6895cdbee7cbd52b9a1e78c7d7d866c4cb0972c031c",
+        "namesSha256": "074ec8a261a0465f434bce82d7ef464d2b266e37459e45c6e3c7e3b6787420c0"
+      },
+      "pl": {
+        "locale": "pl-PL",
+        "fileSha256": "cd0d91197ad5333d2c3434f2ba1645fbd6be42a303e4c332b19b613cf1ba8db6",
+        "namesSha256": "a30d226884e7eaf7e68d1e9f3aded8b0d5d8f50fc6ec733342ddda05856ae810"
+      },
+      "nl": {
+        "locale": "nl-NL",
+        "fileSha256": "04f4c59793716f3eb752e789bc82e8c47eb64ae950e517b3bce4fe232a93a776",
+        "namesSha256": "1e34ecaf244fc3c856b45d99b48919ab4fcbdf119c37d538ca43ce357cd2d0d6"
+      },
+      "el": {
+        "locale": "el-GR",
+        "fileSha256": "0131648149211c26640c6e17bf5bf1bb1ce26d2f220de2ab625902f6d830323d",
+        "namesSha256": "f20406cca97991a08531404b61da4fadebdef64c32e156a15ad228228190cd5e"
+      },
+      "bg": {
+        "locale": "bg",
+        "fileSha256": "01e00335095ac9bd23a63bbc96b3b50f4531d2bdde689624ae9ec2b15595336c",
+        "namesSha256": "e588dc02d124b0949501c231a4e47d8874ffa1302c5f86c8e0366a211417a1d0"
+      },
+      "my": {
+        "locale": "my-MM",
+        "fileSha256": "58f7f7ecce9435c302bf4207c914595006eb31861d600a5889dfe11dd4a3a90b",
+        "namesSha256": "15818fb3da16c325abe6b017e281a7afeefc358b568eb785cc90c540ca0c903c"
+      },
+      "hu": {
+        "locale": "hu-HU",
+        "fileSha256": "f059844f75d90cbf482cedd7e430fe7f523881c15960bc9d15fd8ce11ca07106",
+        "namesSha256": "a2d31ab797c78d275227116b7714c6534b8e163affd5ff20af227975ba1ab6cf"
+      },
+      "he": {
+        "locale": "he-IL",
+        "fileSha256": "7332ec767acffe11aac54748b4ce37567a8126fcc944f14ecbf69552c2c2b580",
+        "namesSha256": "4050aa9f9abf3e98ae3e7894370b1f64ddaef4777b27534b45dc3304f033af38"
+      },
+      "hr": {
+        "locale": "hr",
+        "fileSha256": "5159c6192d2ffce1c5c27e2eea1f4c67c81d462a4c580f6e568f5eb61f9b7cba",
+        "namesSha256": "3a7fcfb1ffb6e3aaf2ea6d03b18bb9348f107557d2fb75205b9b5d22feb4d9a4"
+      },
+      "sv": {
+        "locale": "sv-SE",
+        "fileSha256": "534890b42dfb9a4e444da3b0c90143f5e02c55bcfe28d0cdd5a781936f961730",
+        "namesSha256": "1f4c7a5f4430f9f0f1e2b04b8072d0af21370b0ea7603b057d16921e3624f77d"
+      },
+      "zh-Hans": {
+        "locale": "zh-Hans",
+        "fileSha256": "bc345e8b50ab7b37b86c5bdc736f51859999a02a7094944991fdbe4c231ff382",
+        "namesSha256": "a35a9669c4ee9b85f91a10d516620c3d1918513ac2eb3ed8caab0f673e56461a"
+      }
+    }
   }
 }

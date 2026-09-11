@@ -11,5 +11,11 @@
   "stage.1": "Réserve médicale",
   "menu.start": "Commencer →",
   "rogue.search-supply-cabinet": "Armoire à provisions · E pour fouiller",
-  "gameplay.task-box-empty": "La caisse est vide"
+  "gameplay.task-box-empty": "La caisse est vide",
+  "gift.battery": "Recharger la batterie",
+  "gift.flash": "Ajouter un flash",
+  "gift.heal": "Premiers secours",
+  "gift.failure": "Panne de lampe torche",
+  "gift.warp": "Passage perdu",
+  "gift.shade": "Ombre pâle"
 }

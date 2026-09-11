@@ -8,5 +8,11 @@
   "event.power": "Elektrik qeyri-sabitdir",
   "menu.anomaly": "{threat}\n{event}",
   "rogue.search-supply-cabinet": "Təchizat dolabı · Axtarmaq üçün E",
-  "gameplay.task-box-empty": "Qutu boşdur"
+  "gameplay.task-box-empty": "Qutu boşdur",
+  "gift.battery": "Batareyanı doldurun",
+  "gift.flash": "Flaş əlavə edin",
+  "gift.heal": "İlk yardım",
+  "gift.failure": "Fənər nasazlığı",
+  "gift.warp": "İtirilmiş keçid",
+  "gift.shade": "Solğun kölgə"
 }

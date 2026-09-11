@@ -9,5 +9,11 @@
   "menu.anomaly": "{threat}\n{event}",
   "menu.start": "Iniciar →",
   "rogue.search-supply-cabinet": "Armário de suprimentos · E para vasculhar",
-  "gameplay.task-box-empty": "A caixa está vazia"
+  "gameplay.task-box-empty": "A caixa está vazia",
+  "gift.battery": "Carregar Bateria",
+  "gift.flash": "Adicionar Flash",
+  "gift.heal": "Primeiros Socorros",
+  "gift.failure": "Falha da Lanterna",
+  "gift.warp": "Passagem Perdida",
+  "gift.shade": "Sombra Pálida"
 }

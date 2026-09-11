@@ -11,5 +11,11 @@
   "menu.anomaly": "{threat}\n{event}",
   "menu.start": "Începe tura →",
   "rogue.search-supply-cabinet": "Dulap cu provizii · E pentru a căuta",
-  "gameplay.task-box-empty": "Cutia este goală"
+  "gameplay.task-box-empty": "Cutia este goală",
+  "gift.battery": "Încarcă bateria",
+  "gift.flash": "Adaugă flash",
+  "gift.heal": "Prim ajutor",
+  "gift.failure": "Defectarea lanternei",
+  "gift.warp": "Pasaj pierdut",
+  "gift.shade": "Umbră palidă"
 }

@@ -10,5 +10,11 @@
   "menu.anomaly": "{threat}\n{event}",
   "menu.start": "Έναρξη →",
   "rogue.search-supply-cabinet": "Ντουλάπι προμηθειών · E για έρευνα",
-  "gameplay.task-box-empty": "Το κιβώτιο είναι άδειο"
+  "gameplay.task-box-empty": "Το κιβώτιο είναι άδειο",
+  "gift.battery": "Φόρτιση μπαταρίας",
+  "gift.flash": "Προσθήκη φλας",
+  "gift.heal": "Πρώτες βοήθειες",
+  "gift.failure": "Βλάβη φακού",
+  "gift.warp": "Χαμένο πέρασμα",
+  "gift.shade": "Χλωμή σκιά"
 }

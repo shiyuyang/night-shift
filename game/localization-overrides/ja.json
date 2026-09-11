@@ -121,5 +121,11 @@
   "ui.archived-footage-not-live": "病棟閉鎖前",
   "rogue.search-supply-cabinet": "補給箱 · Eで調べる",
   "gameplay.task-box-empty": "箱の中は空だ",
-  "guide.startingSupplies": "毎晩、初期アイテムが補充されます。所持数に上限はありません。"
+  "guide.startingSupplies": "毎晩、初期アイテムが補充されます。所持数に上限はありません。",
+  "gift.battery": "バッテリー充電",
+  "gift.flash": "フラッシュを追加",
+  "gift.heal": "応急処置",
+  "gift.failure": "懐中電灯の故障",
+  "gift.warp": "失われた通路",
+  "gift.shade": "ペイルシャドウ"
 }

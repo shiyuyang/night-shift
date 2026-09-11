@@ -10,5 +10,11 @@
   "menu.anomaly": "{threat}\n{event}",
   "menu.start": "Rundgang →",
   "rogue.search-supply-cabinet": "Vorratsschrank · E zum Durchsuchen",
-  "gameplay.task-box-empty": "Die Kiste ist leer"
+  "gameplay.task-box-empty": "Die Kiste ist leer",
+  "gift.battery": "Batterie aufladen",
+  "gift.flash": "Blitz hinzufügen",
+  "gift.heal": "Erste Hilfe",
+  "gift.failure": "Taschenlampenausfall",
+  "gift.warp": "Verlorene Passage",
+  "gift.shade": "Blasser Schatten"
 }

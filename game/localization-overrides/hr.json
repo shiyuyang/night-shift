@@ -10,5 +10,11 @@
   "menu.anomaly": "{threat}\n{event}",
   "menu.start": "Započni →",
   "rogue.search-supply-cabinet": "Ormarić sa zalihama · E za pretragu",
-  "gameplay.task-box-empty": "Kutija je prazna"
+  "gameplay.task-box-empty": "Kutija je prazna",
+  "gift.battery": "Napuni bateriju",
+  "gift.flash": "Dodaj bljeskalicu",
+  "gift.heal": "Prva pomoć",
+  "gift.failure": "Kvar svjetiljke",
+  "gift.warp": "Izgubljeni prolaz",
+  "gift.shade": "Blijeda sjena"
 }

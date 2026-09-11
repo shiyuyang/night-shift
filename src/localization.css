@@ -4,10 +4,10 @@
 @font-face{font-family:LocaleHebrew;src:url('/fonts/locale-he-205d4836b1.woff2') format('woff2');font-display:swap}
 @font-face{font-family:LocaleThai;src:url('/fonts/locale-th-9f5ad7c0da.woff2') format('woff2');font-display:swap}
 @font-face{font-family:LocaleMyanmar;src:url('/fonts/locale-my-e774f8c07e.woff2') format('woff2');font-display:swap}
-@font-face{font-family:LocaleJapanese;src:url('/fonts/locale-ja-142c8faba8.woff2') format('woff2');font-display:swap}
-@font-face{font-family:LocaleKorean;src:url('/fonts/locale-ko-fa87fdf265.woff2') format('woff2');font-display:swap}
-@font-face{font-family:LocaleHans;src:url('/fonts/locale-zh-Hans-bf33761e0c.woff2') format('woff2');font-display:swap}
-@font-face{font-family:LocaleHant;src:url('/fonts/locale-zh-Hant-7f95ab4a7e.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleJapanese;src:url('/fonts/locale-ja-05c49a0437.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleKorean;src:url('/fonts/locale-ko-bb4ae26ebf.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleHans;src:url('/fonts/locale-zh-Hans-f4e5be3cd7.woff2') format('woff2');font-display:swap}
+@font-face{font-family:LocaleHant;src:url('/fonts/locale-zh-Hant-1d2125f095.woff2') format('woff2');font-display:swap}
 :root{--locale-font:LocaleLatin;--locale-note:var(--locale-font)}
 :lang(ar){--locale-font:LocaleArabic}:lang(he){--locale-font:LocaleHebrew}:lang(th){--locale-font:LocaleThai}:lang(my){--locale-font:LocaleMyanmar}:lang(ja){--locale-font:LocaleJapanese}:lang(ko){--locale-font:LocaleKorean}:lang(zh-Hans){--locale-font:LocaleHans;--locale-note:PhotoNote,LocaleHans}:lang(zh-Hant){--locale-font:LocaleHant}
 body,button,select,option,kbd,dialog,body h1,body h2,body h3,body b,body small,body p,body span,body label,body i{font-family:var(--locale-font),LocaleLatin,NightPixel,sans-serif!important;text-shadow:none;font-weight:400}

@@ -8,5 +8,11 @@
   "event.power": "חשמל לא יציב; הפסקות",
   "menu.anomaly": "{threat}\n{event}",
   "rogue.search-supply-cabinet": "ארון אספקה · E לחיפוש",
-  "gameplay.task-box-empty": "הארגז ריק"
+  "gameplay.task-box-empty": "הארגז ריק",
+  "gift.battery": "טעינת סוללה",
+  "gift.flash": "הוספת הבזק",
+  "gift.heal": "עזרה ראשונה",
+  "gift.failure": "תקלת פנס",
+  "gift.warp": "מעבר אבוד",
+  "gift.shade": "צל חיוור"
 }

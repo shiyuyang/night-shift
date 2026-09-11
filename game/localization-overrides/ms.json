@@ -10,5 +10,11 @@
   "event.power": "Bekalan elektrik tak stabil",
   "menu.anomaly": "{threat}\n{event}",
   "rogue.search-supply-cabinet": "Almari bekalan · E untuk mencari",
-  "gameplay.task-box-empty": "Kotak kosong"
+  "gameplay.task-box-empty": "Kotak kosong",
+  "gift.battery": "Cas Bateri",
+  "gift.flash": "Tambah Denyaran",
+  "gift.heal": "Pertolongan Cemas",
+  "gift.failure": "Kerosakan Lampu Suluh",
+  "gift.warp": "Laluan Sesat",
+  "gift.shade": "Bayang Pucat"
 }

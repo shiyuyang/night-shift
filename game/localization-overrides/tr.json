@@ -10,5 +10,11 @@
   "event.power": "Elektrik kararsız; kesintiler",
   "menu.anomaly": "{threat}\n{event}",
   "rogue.search-supply-cabinet": "Malzeme dolabı · Aramak için E",
-  "gameplay.task-box-empty": "Kutu boş"
+  "gameplay.task-box-empty": "Kutu boş",
+  "gift.battery": "Pili şarj et",
+  "gift.flash": "Flaş ekle",
+  "gift.heal": "İlk yardım",
+  "gift.failure": "El feneri arızası",
+  "gift.warp": "Kayıp geçit",
+  "gift.shade": "Solgun gölge"
 }

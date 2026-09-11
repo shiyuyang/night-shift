@@ -9,5 +9,11 @@
   "menu.anomaly": "{threat}\n{event}",
   "menu.start": "Започни →",
   "rogue.search-supply-cabinet": "Шкаф с припаси · E за претърсване",
-  "gameplay.task-box-empty": "Сандъкът е празен"
+  "gameplay.task-box-empty": "Сандъкът е празен",
+  "gift.battery": "Зареждане на батерията",
+  "gift.flash": "Добавяне на светкавица",
+  "gift.heal": "Първа помощ",
+  "gift.failure": "Повреда на фенерчето",
+  "gift.warp": "Изгубен проход",
+  "gift.shade": "Бледа сянка"
 }

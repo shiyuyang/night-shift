@@ -12,5 +12,11 @@
   "event.power": "Listrik labil; rawan padam",
   "menu.anomaly": "{threat}\n{event}",
   "rogue.search-supply-cabinet": "Lemari persediaan · E untuk mencari",
-  "gameplay.task-box-empty": "Kotak kosong"
+  "gameplay.task-box-empty": "Kotak kosong",
+  "gift.battery": "Isi Daya Baterai",
+  "gift.flash": "Tambah Flash",
+  "gift.heal": "P3K",
+  "gift.failure": "Senter Rusak",
+  "gift.warp": "Lorong Hilang",
+  "gift.shade": "Bayangan Pucat"
 }

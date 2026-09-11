@@ -1,6 +1,7 @@
 /* One 1280 × 768 coordinate space for all game text and hit targets. */
-#game-wrap #play-hud,.game-overlay-stage{position:absolute;inset:auto;left:var(--play-left,0);top:var(--play-top,0);width:1280px;height:768px;transform:scale(var(--game-ui-scale,1));transform-origin:top left;--game-ui-size:1.25;--hud-factor:var(--game-ui-size);pointer-events:none}
+#game-wrap #play-hud,.game-overlay-stage,.gift-overlay-stage{position:absolute;inset:auto;left:var(--play-left,0);top:var(--play-top,0);width:1280px;height:768px;transform:scale(var(--game-ui-scale,1));transform-origin:top left;--game-ui-size:1.25;--hud-factor:var(--game-ui-size);pointer-events:none}
 .game-overlay-stage{z-index:42;direction:ltr}
+.gift-overlay-stage{z-index:25}
 .game-overlay-stage>section{pointer-events:auto}
 #game-wrap #play-hud .screen-heading{top:6%;left:8%;right:8%;font-size:calc(12px * var(--game-ui-size))}
 #game-wrap #play-hud .screen-heading button{font-size:calc(12px * var(--game-ui-size));padding:calc(7px * var(--game-ui-size)) calc(10px * var(--game-ui-size))}
