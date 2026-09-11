@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {makeLevel} from '../../src/levels.ts';
 import {validatePlayableLevel} from '../../src/runtime/level-validation.ts';
-import {assertOpeningSearch} from './layout-assertions.mjs';
+import {assertOpeningSearch,assertContainerPlacement} from './layout-assertions.mjs';
 import {featureSafetyBox} from '../../src/runtime/rogue-content.ts';
 import {difficultyForNight} from '../../src/runtime/difficulty.ts';
 const bases=new Map();
@@ -12,6 +12,7 @@ process.on('message',job=>{
    const level=makeLevel(round,seed);
    assert.equal(validatePlayableLevel(level).valid,true,JSON.stringify({round,seed}));
    assertOpeningSearch(level);
+   assertContainerPlacement(level);
    const content={...level,props:[...level.props,...level.features.map(f=>({...featureSafetyBox(f),kind:'crate'}))]};
    const contentValidation=validatePlayableLevel(content);
    assert.ok(contentValidation.valid,JSON.stringify({round,seed,errors:contentValidation.errors}));

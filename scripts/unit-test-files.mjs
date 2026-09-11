@@ -1,6 +1,7 @@
 export const unitTestFiles=[
   "server/events.test.mjs",
   "tests/collision.test.mjs",
+  "tests/patrol-grid.test.mjs",
   "tests/encounters.test.mjs",
   "tests/pursuit.test.mjs",
   "tests/pursuit-transitions.test.mjs",

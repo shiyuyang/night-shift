@@ -4,6 +4,8 @@ Use Node.js 24 or newer and run `npm test`. Content export and audio packing run
 
 For the optimization sequence, correctness strategy, hardware-counter interpretation and reusable investigation workflow, see the [September 2026 performance retrospective](performance/2026-09-map-validation-retrospective.md).
 
+For in-game movement stutters, use `npm run profile:runtime -- --replay FILE --out DIR` against a running Vite server. It replays recorded inputs with real rendering, checks every state hash, and saves Chrome CPU profiles and update timings. See the [runtime pathfinding investigation](performance/2026-09-runtime-pathfinding.md) for setup, measurements and limits. Run profiling separately from CPU tests and builds.
+
 The runner uses one resource budget in two sequential phases:
 1. Ordinary unit/regression files run with Node's `--test-concurrency`.
 2. The 1,400-layout sweep runs in a fixed child-process pool. Each job contains 14 seed/night pairs; free workers immediately take the next job. This phase does not overlap the first phase.

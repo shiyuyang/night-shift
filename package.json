@@ -59,6 +59,8 @@
     "desktop:macos:intel": "tauri build --ci --target x86_64-apple-darwin --bundles app,dmg",
     "test:browser:desktop": "node tests/desktop.browser.mjs",
     "test:balance": "node scripts/balance/run.mjs",
+    "profile:runtime": "node scripts/profile-runtime.mjs",
+    "test:browser:containers": "node tests/container-placement.browser.mjs",
     "test:balance:regression": "node tests/patroller-corners.browser.mjs && node tests/finale-room.browser.mjs && node tests/monster-balance-optimization.browser.mjs && node tests/exit-duty.browser.mjs && node tests/pursuit-transitions.browser.mjs && node tests/item-balance.browser.mjs && node tests/interceptor-search.browser.mjs && node tests/balance-weeper.browser.mjs && node tests/balance-counters.browser.mjs && node tests/listener-light-focus.browser.mjs && node tests/difficulty.browser.mjs && node tests/clue-arrival.browser.mjs && node tests/interaction-access.browser.mjs && node tests/balance-search.browser.mjs && node tests/endless-continuity.browser.mjs"
   },
   "dependencies": {
