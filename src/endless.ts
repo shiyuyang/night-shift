@@ -93,7 +93,7 @@ export function bootGame(h:Hooks){
    this.balanceDiagnostics=(import.meta as unknown as {env:{DEV:boolean}}).env.DEV&&new URLSearchParams(location.search).has("balance");
    this.dailyPatrol=new DailyPatrol();this.dailyRouteFailed=false;this.attackRecovery=new AttackRecovery();this.boxBlink=new BoxBlink();this.flashSafety=0;this.distractionResponse=new DistractionResponse();this.reserves=[new Reinforcement()];this.patrolIndex=0;this.interceptClock=0;this.interceptTargets=[];this.interceptGeometry='';
    this.doorTarget=undefined;this.doorAttacker=undefined;this.doorPlanClock=0;this.ghostStride=0;this.doorBreach=new DoorBreach(this.difficulty.breachSeconds);this.openingSpawnUsed=false;this.weeperIntroRemaining=0;this.weeperIntroUsed=false;this.finaleTarget=undefined;this.sceneAudio=new SceneAudio();this.atmosphereColors=new AtmosphereColors();this.bloodFlicker=false;this.pursuitSearch.reset();this.sightLock=new SightLock(roundRules(this.round).threat==='patroller'?patrollerSightBreak:.75);this.lastThreatAt=0;this.bloodMoon.reset();this.flashlightPracticeOff=false;this.exitTour='none';this.lightFear.reset();this.flashlightOn=true;this.weeperIntroduced=false;this.weeperNoise=0;this.patrolRetreat=false;this.patrolUnseen=0;this.sprintInput.clear();this.feedback.reset();this.breathAt=0;this.tutorial.start(this.round);this.trainingHeal=false;this.trainingLure=false;this.itemQueue.clear();this.stamina.reset();this.exitStartup=0;this.level=makeLevel(this.round,this.mapSeed);this.morgueDrawer=new MorgueDrawer(this.level.zones.MorgueDrawerZone);this.rogue=new RogueRun(this.level.features??[]);this.environment.reset();this.interference.reset();this.crtStrength=.36;this.eventRuntime=new EventRuntime(this.level.events,action=>{if(action.type==='sound'){const source=this.level.lamps.find(l=>l.id===action.source);h.onCue(action.id,source?Phaser.Math.Clamp((source.x-(this.player?.x??this.level.spawn.x))/300,-1,1):action.pan);}else if(action.type==='blood-moon'){if(this.level.theme===6)this.bloodMoon.target=action.strength;}else if(action.type==='message')this.say(msg(action.text as import('./i18n').MessageKey),4);else if(action.type==='light'){this.environment.setLight(action.target,action.strength);if(action.target==='crt')this.crtStrength=action.strength;}});this.rules=roundRules(this.round);this.memory=0;this.route=[];this.routeTimer=0;this.blackouts.reset();this.ambienceAt=18+(this.round%3)*3;this.echoAt=0;this.ambienceIndex=0;this.locks=new Locks();this.key=false;this.door=false;this.opened=[false,false,false];this.bandages=itemRules.bandages;this.decoys=this.difficulty.startingDecoys;this.flashes=this.difficulty.startingFlashes+(this.rules.event==='supply'?1:0);this.angle=0;this.distance=0;this.moving=false;this.ghostTime=0;this.ghostDelay=0;this.stun=0;this.hit=0;this.cooldown=this.difficulty.openingGrace;this.protection=0;this.reveal=0;this.flare=0;this.lure=0;this.step=0;this.pulse=0;this.messageUntil=0;this.syncTime=0;this.frame=0;this.helpCooldown=0;
-   this.gifts.begin(crypto.randomUUID());this.giftShade.reset();this.batteryReserve=0;this.warpTarget=undefined;this.warpMoved=false;
+   this.cancelLocal();this.gifts.begin(crypto.randomUUID());this.giftShade.reset();this.batteryReserve=0;this.warpTarget=undefined;this.warpMoved=false;
    this.state={bloodMoon:0,exitTour:'none',lightSeconds:120,flashlightBlocked:false,flashlightOn:true,theme:this.level.theme,feedback:this.feedback.view,exitStartup:0,exhausted:false,tutorialPracticing:false,tutorial:null,flashes:3,decoys:3,bandages:1,keyCount:0,keyNames:'',stamina:100,phase:msg("ui.search"),health:100,battery:100,fuses:0,elapsed:0,fear:8,pressure:0,noise:0,inventory:'',objective:'',night:this.round,map:this.level.name,rule:''};
    const pa=registerPixelAtlas(this,'watchman',4,4,assetManifest.sprites.watchman.framePixels,assetManifest.sprites.watchman.sourceRows),ph=pa.height;registerAtlas(this,'bed-v4',1,1);registerAtlas(this,'morgue-body',1,1);registerAtlas(this,'garden-pine',1,1);
    this.geometry=this.add.graphics();const g=this.geometry,r=(x:number,y:number,w:number,hh:number,c:number)=>{g.fillStyle(c);g.fillRect(x,y,w,hh);};
@@ -396,15 +396,26 @@ export function bootGame(h:Hooks){
   showGifts(){h.onGifts?.(this.gifts.view(this.canFailGift(),this.paused||!!this.tutorial.prompt),{warp:this.gifts.warping?2-this.gifts.active!.remaining:-1,tear:this.giftShade.tear,reserve:this.batteryReserve,shade:this.giftShade.position?{x:(this.giftShade.position.x-this.cameras.main.worldView.x)*this.cameras.main.zoom/this.scale.width,y:(this.giftShade.position.y-this.cameras.main.worldView.y)*this.cameras.main.zoom/this.scale.height}:undefined,player:this.player?{x:(this.player.x-this.cameras.main.worldView.x)*this.cameras.main.zoom/this.scale.width,y:(this.player.y-this.cameras.main.worldView.y)*this.cameras.main.zoom/this.scale.height}:undefined});}
   receipts=new GiftReceipts();
   localKeys=new Set<string>();
-  cancelGift(id:string){this.gifts.queue=this.gifts.queue.filter(e=>e.key!==id);if(this.gifts.active?.entry.key===id){this.gifts.active=null;this.warpTarget=undefined;}}
-  cancelLocal(){for(const id of this.localKeys)this.cancelGift(id);this.receipts.clear();this.localKeys.clear();}
+  localQueue:GiftEvent[]=[];
+  cancelGift(id:string){this.localQueue=this.localQueue.filter(e=>e.id!==id);this.gifts.queue=this.gifts.queue.filter(e=>e.key!==id);if(this.gifts.active?.entry.key===id){this.gifts.active=null;this.warpTarget=undefined;}}
+  cancelLocal(){this.localQueue=[];for(const id of this.localKeys)this.cancelGift(id);this.receipts.clear();this.localKeys.clear();}
   async localGift(event:Omit<GiftEvent,'runId'>){
-   if(!this.active||this.paused||this.tutorial.prompt||this.gifts.warping)return false;
+   if(!this.active||!this.gifts.runId)return false;
    const runId=this.gifts.runId;this.localKeys.add(event.id);
    const result=this.receipts.wait(event.id,event.count,()=>this.cancelGift(event.id));
-   if(!this.receiveGift({...event,runId}))this.receipts.fail(event.id);
-   else if(!['failure','warp'].includes(giftDefinitions[event.giftId].kind)){this.receipts.complete(event.id,event.count);}
+   this.localQueue.push({...event,runId});this.flushLocalGifts();
    const done=await result;this.localKeys.delete(event.id);return done;
+  }
+  flushLocalGifts(){
+   // Keep the original run and recheck readiness after each effect: a warp can
+   // suspend the remaining commands from the very same IPC batch.
+   while(this.active&&!this.paused&&!this.tutorial.prompt&&!this.gifts.warping&&this.localQueue.length){
+    const event=this.localQueue.shift()!;
+    try{
+     if(event.runId!==this.gifts.runId||!this.receiveGift(event))this.receipts.fail(event.id);
+     else if(!['failure','warp'].includes(giftDefinitions[event.giftId].kind))this.receipts.complete(event.id,event.count);
+    }catch(error){this.receipts.fail(event.id);console.error('Local interaction failed',error);}
+   }
   }
   clearGifts(){this.cancelLocal();this.gifts.clear();this.giftShade.reset();this.shadeSprite?.setVisible(false);this.batteryReserve=0;this.warpTarget=undefined;this.showGifts();}
   receiveGift(event:GiftEvent){
@@ -423,6 +434,7 @@ export function bootGame(h:Hooks){
    this.sprintInput.clear();this.input.keyboard?.resetKeys();h.onCue('metal',0,.5);
   }
   updateGifts(dt:number){
+   this.flushLocalGifts();
    const completed=this.gifts.active;const wasWarp=this.gifts.warping,cue=this.gifts.tick(dt,this.canFailGift());
    if(completed&&!this.gifts.active){if(completed.entry.kind!=='warp'||this.warpMoved)this.receipts.complete(completed.entry.key);else this.receipts.fail(completed.entry.key);}
    if(cue==='warp')this.beginGiftWarp();if(cue==='failure')h.onCue('plant-breaker-arc',0,.55);
